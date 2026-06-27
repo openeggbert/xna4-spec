@@ -61,6 +61,22 @@ spec/
 Converted from the XNA 4.0 HTML documentation originally published at
 `learn.microsoft.com/en-us/previous-versions/windows/xna/`.
 
+## Disclaimer
+
+The API names, descriptions, and all other content in this repository are derived
+from Microsoft's XNA 4.0 documentation and are the intellectual property of
+**Microsoft Corporation** (© Microsoft). This repository is an unofficial,
+community-maintained conversion of that documentation into a machine-readable
+format, intended solely for non-commercial, informational, and educational use.
+
+Microsoft XNA is a registered trademark of Microsoft Corporation. This project is
+not affiliated with, endorsed by, or sponsored by Microsoft.
+
+Use of this content is subject to the
+[Microsoft Terms of Use](https://learn.microsoft.com/en-us/legal/termsofuse).
+If you are the rights holder and believe this repository violates your rights,
+please open an issue or contact the repository owner.
+
 ## Related
 
 - [openeggbert/sharp-runtime](https://github.com/openeggbert/sharp-runtime) — C++ XNA 4.0 reimplementation being audited against this spec
