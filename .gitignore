@@ -16,3 +16,6 @@ __pycache__/
 # Temporary files
 *.tmp
 *.bak
+
+# Generated web output
+web/
