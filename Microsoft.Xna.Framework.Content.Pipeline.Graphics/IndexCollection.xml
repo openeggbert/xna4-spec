@@ -33,7 +33,7 @@
          IEnumerable&lt;int&gt; indices
 )]]></syntax>
           <parameters>
-            <parameter name="indices" type="Object"><![CDATA[Index into the Positions member of the parent.]]></parameter>
+            <parameter name="indices" type="IEnumerable&lt;int&gt;"><![CDATA[Index into the Positions member of the parent.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows XP SP2</platform>

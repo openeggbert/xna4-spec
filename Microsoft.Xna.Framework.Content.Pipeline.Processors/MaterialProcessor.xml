@@ -101,7 +101,7 @@ public virtual bool PremultiplyTextureAlpha { get; set; }]]></syntax>
          ContentProcessorContext context
 )]]></syntax>
           <parameters>
-            <parameter name="effect" type="Object"><![CDATA[An external reference to the effect content.]]></parameter>
+            <parameter name="effect" type="ExternalReference&lt;EffectContent&gt;"><![CDATA[An external reference to the effect content.]]></parameter>
             <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
           </parameters>
           <returns><![CDATA[A platform-specific compiled binary effect.]]></returns>
@@ -125,7 +125,7 @@ public virtual bool PremultiplyTextureAlpha { get; set; }]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="textureName" type="string"><![CDATA[The name of the texture. This should correspond to the key used to store the texture in Textures .]]></parameter>
-            <parameter name="texture" type="Object"><![CDATA[The asset to build. This should be a member of Textures .]]></parameter>
+            <parameter name="texture" type="ExternalReference&lt;TextureContent&gt;"><![CDATA[The asset to build. This should be a member of Textures .]]></parameter>
             <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
           </parameters>
           <returns><![CDATA[The built texture content.]]></returns>

@@ -111,7 +111,7 @@ public struct Ray : IEquatable&lt;Ray&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with.]]></parameter>
-            <parameter name="result" type="Nullable"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingBox or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;Single&gt;"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingBox or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -140,7 +140,7 @@ public struct Ray : IEquatable&lt;Ray&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingBox or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;float&gt;"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingBox or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -156,7 +156,7 @@ public struct Ray : IEquatable&lt;Ray&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with.]]></parameter>
-            <parameter name="result" type="Nullable"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;Single&gt;"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -170,7 +170,7 @@ public struct Ray : IEquatable&lt;Ray&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;float&gt;"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -201,7 +201,7 @@ public struct Ray : IEquatable&lt;Ray&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="plane" type="Plane"><![CDATA[The Plane with which to calculate this Ray 's intersection.]]></parameter>
-            <parameter name="result" type="Nullable"><![CDATA[&lt; Single &gt; [ OutAttribute ] The distance at which this Ray intersects the specified Plane , or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;Single&gt;"><![CDATA[&lt; Single &gt; [ OutAttribute ] The distance at which this Ray intersects the specified Plane , or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -215,7 +215,7 @@ public struct Ray : IEquatable&lt;Ray&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="plane" type="Plane"><![CDATA[The Plane with which to calculate this Ray 's intersection.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The distance at which this Ray intersects the specified Plane , or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;float&gt;"><![CDATA[[ OutAttribute ] The distance at which this Ray intersects the specified Plane , or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>

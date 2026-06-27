@@ -159,7 +159,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
          IEnumerable&lt;Vector3&gt; points
 )]]></syntax>
           <parameters>
-            <parameter name="points" type="Object"><![CDATA[A list of points the BoundingBox should contain.]]></parameter>
+            <parameter name="points" type="IEnumerable&lt;Vector3&gt;"><![CDATA[A list of points the BoundingBox should contain.]]></parameter>
           </parameters>
           <returns><![CDATA[The created BoundingBox.]]></returns>
           <platforms>
@@ -446,7 +446,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingBox , or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;float&gt;"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingBox , or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -462,7 +462,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
-            <parameter name="result" type="Nullable"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingBox , or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;Single&gt;"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingBox , or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

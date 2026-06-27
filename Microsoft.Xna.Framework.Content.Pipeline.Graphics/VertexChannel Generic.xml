@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexChannel Generic" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="VertexChannel"
+          interfaces="IList&amp;lt;T&amp;gt;, ICollection&amp;lt;T&amp;gt;, IEnumerable&amp;lt;T&amp;gt;, IEnumerable">
+  <summary><![CDATA[Provides methods and properties for maintaining a vertex channel.]]></summary>
+  <syntax><![CDATA[public sealed class VertexChannel&lt;T&gt; : VertexChannel, IList&lt;T&gt;, ICollection&lt;T&gt;, IEnumerable&lt;T&gt;, IEnumerable]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

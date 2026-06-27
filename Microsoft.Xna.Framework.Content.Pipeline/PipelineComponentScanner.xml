@@ -108,8 +108,8 @@
          IEnumerable&lt;string&gt; pipelineAssemblyDependencies
 )]]></syntax>
           <parameters>
-            <parameter name="pipelineAssemblies" type="IEnumerable"><![CDATA[&lt; String &gt; Enumerated list of available assemblies.]]></parameter>
-            <parameter name="pipelineAssemblyDependencies" type="IEnumerable"><![CDATA[&lt; String &gt; Enumerated list of dependent assemblies.]]></parameter>
+            <parameter name="pipelineAssemblies" type="IEnumerable&lt;String&gt;"><![CDATA[&lt; String &gt; Enumerated list of available assemblies.]]></parameter>
+            <parameter name="pipelineAssemblyDependencies" type="IEnumerable&lt;String&gt;"><![CDATA[&lt; String &gt; Enumerated list of dependent assemblies.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if an actual scan was required, indicating the collection contents may have changed. false if no assembly changes were detected since the previous call.]]></returns>
           <platforms>

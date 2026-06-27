@@ -394,7 +394,7 @@ public class BoundingFrustum : IEquatable&lt;BoundingFrustum&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
-            <parameter name="result" type="Nullable"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingFrustum or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;Single&gt;"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingFrustum or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -440,7 +440,7 @@ public class BoundingFrustum : IEquatable&lt;BoundingFrustum&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingFrustum or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;float&gt;"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingFrustum or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>

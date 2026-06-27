@@ -191,7 +191,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <parameter name="objectPosition" type="Vector3"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
             <parameter name="cameraPosition" type="Vector3"><![CDATA[Position of the camera.]]></parameter>
             <parameter name="cameraUpVector" type="Vector3"><![CDATA[The up vector of the camera.]]></parameter>
-            <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
+            <parameter name="cameraForwardVector" type="Nullable&lt;Vector3&gt;"><![CDATA[Optional forward vector of the camera.]]></parameter>
           </parameters>
           <returns><![CDATA[The created billboard matrix.]]></returns>
           <remarks><![CDATA[This method computes the facing direction of the billboard from the object position and camera position. When the object and camera positions are too close, the matrix will not be accurate. To avoid this problem, the method uses the optional camera forward vector if the positions are too close.]]></remarks>
@@ -214,7 +214,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <parameter name="objectPosition" type="Vector3"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
             <parameter name="cameraPosition" type="Vector3"><![CDATA[Position of the camera.]]></parameter>
             <parameter name="cameraUpVector" type="Vector3"><![CDATA[The up vector of the camera.]]></parameter>
-            <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
+            <parameter name="cameraForwardVector" type="Nullable&lt;Vector3&gt;"><![CDATA[Optional forward vector of the camera.]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created billboard matrix.]]></parameter>
           </parameters>
           <remarks><![CDATA[This method computes the facing direction of the billboard from the object position and camera position. When the object and camera positions are too close, the matrix will not be accurate. To avoid this problem, the method uses the optional camera forward vector if the positions are too close.]]></remarks>
@@ -243,8 +243,8 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <parameter name="objectPosition" type="Vector3"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
             <parameter name="cameraPosition" type="Vector3"><![CDATA[Position of the camera.]]></parameter>
             <parameter name="rotateAxis" type="Vector3"><![CDATA[Axis to rotate the billboard around.]]></parameter>
-            <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
-            <parameter name="objectForwardVector" type="Object"><![CDATA[Optional forward vector of the object.]]></parameter>
+            <parameter name="cameraForwardVector" type="Nullable&lt;Vector3&gt;"><![CDATA[Optional forward vector of the camera.]]></parameter>
+            <parameter name="objectForwardVector" type="Nullable&lt;Vector3&gt;"><![CDATA[Optional forward vector of the object.]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created billboard matrix.]]></parameter>
           </parameters>
           <remarks><![CDATA[This method computes the facing direction of the billboard from the object position and camera position. When the object and camera positions are too close, the matrix will not be accurate. To avoid this problem, the method uses the optional camera forward vector if the positions are too close.]]></remarks>
@@ -267,8 +267,8 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <parameter name="objectPosition" type="Vector3"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
             <parameter name="cameraPosition" type="Vector3"><![CDATA[Position of the camera.]]></parameter>
             <parameter name="rotateAxis" type="Vector3"><![CDATA[Axis to rotate the billboard around.]]></parameter>
-            <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
-            <parameter name="objectForwardVector" type="Object"><![CDATA[Optional forward vector of the object.]]></parameter>
+            <parameter name="cameraForwardVector" type="Nullable&lt;Vector3&gt;"><![CDATA[Optional forward vector of the camera.]]></parameter>
+            <parameter name="objectForwardVector" type="Nullable&lt;Vector3&gt;"><![CDATA[Optional forward vector of the object.]]></parameter>
           </parameters>
           <returns><![CDATA[The created billboard matrix.]]></returns>
           <remarks><![CDATA[This method computes the facing direction of the billboard from the object position and camera position. When the object and camera positions are too close, the matrix will not be accurate. To avoid this problem, the method uses the optional camera forward vector if the positions are too close.]]></remarks>

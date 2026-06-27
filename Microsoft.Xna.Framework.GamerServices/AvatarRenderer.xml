@@ -203,7 +203,7 @@
          AvatarExpression expression
 )]]></syntax>
           <parameters>
-            <parameter name="bones" type="Object"><![CDATA[Collection of current bone transforms for the avatar. The transforms are in local bone space relative to their parent.]]></parameter>
+            <parameter name="bones" type="IList&lt;Matrix&gt;"><![CDATA[Collection of current bone transforms for the avatar. The transforms are in local bone space relative to their parent.]]></parameter>
             <parameter name="expression" type="AvatarExpression"><![CDATA[Current expression textures for the avatar.]]></parameter>
           </parameters>
           <remarks><![CDATA[If any avatar assets are not loaded, the standard loading effect is displayed (determined by the renderer's constructor call). Determine the current loading state by checking the value of the State property. The avatar model is always rendered as if FillMode.Solid is the current fill mode value. Note The AvatarRenderer class requires each bone transformation to be decomposable. Passing a bone transformation matrix that is not decomposable to AvatarRenderer.Draw will result in a InvalidOperationException exception. Use Decompose on each matrix to ensure each matrix in the bone matrix collection is decomposable. If the matrix in question is not decomposable, Decompose will return false.]]></remarks>

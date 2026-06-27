@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """XNA 4.0 spec XML generator — one namespace per invocation."""
-import re, os, sys, argparse, xml.sax.saxutils as sax, xml.etree.ElementTree as ET
+import re, os, sys, argparse, html as _html, xml.sax.saxutils as sax, xml.etree.ElementTree as ET
 from collections import defaultdict
 
 HTML_DIR = "/rv/tmp/xna_learn.microsoft.com/https___learn.microsoft.com_en-us_previous-versions_windows_xna_bb200104(v=xnagamestudio.41)/learn.microsoft.com/en-us/previous-versions/windows/xna/"
@@ -62,8 +62,8 @@ def get_returns(c):
 def get_params(c):
     m = re.search(r'<h4[^>]*id="parameters"[^>]*>.*?</h4>(.*?)(?=<h[24]|$)',c,re.DOTALL)
     if not m: return []
-    # Build type map from C# syntax (handles ref/out/params keywords)
-    syn = get_syntax(c); tmap = {}
+    # Decode HTML entities in syntax so Nullable&lt;Rectangle&gt; → Nullable<Rectangle>
+    syn = _html.unescape(get_syntax(c)); tmap = {}
     for line in syn.split('\n'):
         line = line.strip().rstrip(',)').rstrip()
         tm = re.match(r'^(?:(?:ref|out|params)\s+)?([A-Za-z][\w<>\[\]?,\s]*?)\s+(\w+)\s*$', line)
@@ -74,12 +74,18 @@ def get_params(c):
         nm = re.search(r'<em>(.*?)</em>',li)
         if not nm: continue
         pn = clean(nm.group(1))
-        # Primary: type from anchor link "Type: <a ...>TypeName</a>"
-        type_lnk = re.search(r'Type:\s*<a[^>]*>([^<]+)</a>', li)
+        # Primary: type from anchor link, incl. generic args e.g. Nullable<Rectangle>
+        type_lnk = re.search(r'Type:\s*<a[^>]*>([^<]+)</a>((?:\s*&lt;\s*(?:<a[^>]*>[^<]+</a>|[\w.]+)\s*&gt;)?)', li)
         if type_lnk:
-            pt = clean(type_lnk.group(1))
+            base = clean(type_lnk.group(1))
+            generic_raw = type_lnk.group(2).strip()
+            if generic_raw:
+                inner = _html.unescape(re.sub(r'<[^>]+>','',generic_raw)).strip('<>').strip()
+                pt = f"{base}<{inner}>" if inner else base
+            else:
+                pt = base
         else:
-            # Secondary: plain-text "Type: TypeName" (no link, e.g. basic types)
+            # Secondary: plain-text "Type: TypeName" or fall back to tmap
             li_plain = re.sub(r'<[^>]+>',' ', li)
             type_txt = re.search(r'Type:\s+([A-Za-z][\w<>\[\]?]*)', li_plain)
             pt = type_txt.group(1) if type_txt else tmap.get(pn,'Object')

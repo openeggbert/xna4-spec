@@ -164,7 +164,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="leaderboardId" type="LeaderboardIdentity"><![CDATA[The leaderboard identity of the leaderboard to read.]]></parameter>
-            <parameter name="gamers" type="Object"><![CDATA[A collection of gamers that should be included in the leaderboard results. This parameter is ignored on Windows Phone.]]></parameter>
+            <parameter name="gamers" type="IEnumerable&lt;Gamer&gt;"><![CDATA[A collection of gamers that should be included in the leaderboard results. This parameter is ignored on Windows Phone.]]></parameter>
             <parameter name="pivotGamer" type="Gamer"><![CDATA[The gamer of interest in the leaderboard. The current page is set so that this gamer appears on the page.]]></parameter>
             <parameter name="pageSize" type="int"><![CDATA[The number of leaderboard entries per page.]]></parameter>
             <parameter name="callback" type="AsyncCallback"><![CDATA[An AsyncCallback representing the method to call when the leaderboard information is read.]]></parameter>
@@ -409,7 +409,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="leaderboardId" type="LeaderboardIdentity"><![CDATA[The leaderboard identity of the leaderboard to read.]]></parameter>
-            <parameter name="gamers" type="Object"><![CDATA[A collection of gamers to be included in the leaderboard results. This parameter is ignored on Windows Phone.]]></parameter>
+            <parameter name="gamers" type="IEnumerable&lt;Gamer&gt;"><![CDATA[A collection of gamers to be included in the leaderboard results. This parameter is ignored on Windows Phone.]]></parameter>
             <parameter name="pivotGamer" type="Gamer"><![CDATA[The gamer of interest in the leaderboard. The current page will be set so that this gamer will appear on the page.]]></parameter>
             <parameter name="pageSize" type="int"><![CDATA[The number of leaderboard entries per page.]]></parameter>
           </parameters>

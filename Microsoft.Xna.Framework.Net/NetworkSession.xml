@@ -308,7 +308,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="sessionType" type="NetworkSessionType"><![CDATA[Type of session being created.]]></parameter>
-            <parameter name="localGamers" type="Object"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
+            <parameter name="localGamers" type="IEnumerable&lt;SignedInGamer&gt;"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
             <parameter name="maxGamers" type="int"><![CDATA[Maximum number of players allowed in this network session. For Windows- or Xbox 360-based games, this value must be between 2 and 31; 31 is the maximum number of players supported in a session. For Zune-based games, this value must be between 2 and 8; 8 is the maximum number of players supported in the session.]]></parameter>
             <parameter name="privateGamerSlots" type="int"><![CDATA[Number of reserved private session slots created for the session. This value must be less than maximumGamers .]]></parameter>
             <parameter name="sessionProperties" type="NetworkSessionProperties"><![CDATA[Properties of the session being created.]]></parameter>
@@ -340,7 +340,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="sessionType" type="NetworkSessionType"><![CDATA[Type of session sought.]]></parameter>
-            <parameter name="localGamers" type="Object"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
+            <parameter name="localGamers" type="IEnumerable&lt;SignedInGamer&gt;"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
             <parameter name="searchProperties" type="NetworkSessionProperties"><![CDATA[Optional session properties to match during the search. If this argument is null , the query results will not be filtered based on the session properties of available sessions. If any of the search property values in are specified, only sessions with matching properties will be returned by the query. null items in the collection will match to any value for that session property.]]></parameter>
             <parameter name="callback" type="AsyncCallback"><![CDATA[Method to be called once the asynchronous operation has finished.]]></parameter>
             <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
@@ -436,7 +436,7 @@
          Object asyncState
 )]]></syntax>
           <parameters>
-            <parameter name="localGamers" type="Object"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
+            <parameter name="localGamers" type="IEnumerable&lt;SignedInGamer&gt;"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
             <parameter name="callback" type="AsyncCallback"><![CDATA[Method to be called at the conclusion of the asynchronous operation.]]></parameter>
             <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
@@ -486,7 +486,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="sessionType" type="NetworkSessionType"><![CDATA[Type of session being hosted.]]></parameter>
-            <parameter name="localGamers" type="Object"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
+            <parameter name="localGamers" type="IEnumerable&lt;SignedInGamer&gt;"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
             <parameter name="maxGamers" type="int"><![CDATA[Maximum number of players allowed in this network session. For Windows- or Xbox 360-based games, this value must be between 2 and 31; 31 is the maximum number of players supported in a session. For Zune-based games, this value must be between 2 and 8; 8 is the maximum number of players supported in the session.]]></parameter>
             <parameter name="privateGamerSlots" type="int"><![CDATA[Number of reserved private session slots created for the session. This value must be less than maxGamers .]]></parameter>
             <parameter name="sessionProperties" type="NetworkSessionProperties"><![CDATA[Properties of the session being created.]]></parameter>
@@ -690,7 +690,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="sessionType" type="NetworkSessionType"><![CDATA[Type of session sought.]]></parameter>
-            <parameter name="localGamers" type="Object"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
+            <parameter name="localGamers" type="IEnumerable&lt;SignedInGamer&gt;"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
             <parameter name="searchProperties" type="NetworkSessionProperties"><![CDATA[Optional session properties to match during the search. If this argument is null , the query results will not be filtered based on the session properties of available sessions. If any of the search property values in are specified, only sessions with matching properties will be returned by the query. null items in the collection will match to any value for that session property.]]></parameter>
           </parameters>
           <returns><![CDATA[Collection of available network multiplayer sessions.]]></returns>
@@ -755,7 +755,7 @@
          IEnumerable&lt;SignedInGamer&gt; localGamers
 )]]></syntax>
           <parameters>
-            <parameter name="localGamers" type="Object"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
+            <parameter name="localGamers" type="IEnumerable&lt;SignedInGamer&gt;"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
           </parameters>
           <returns><![CDATA[The network session.]]></returns>
           <remarks><![CDATA[This method blocks until the operation has completed. For an asynchronous version of this method, see BeginJoinInvited . Note When someone accepts an invitation for Xbox LIVE Community Games, but the game is not installed already on his or her computer, the invited player will be taken to the game offer. The offer enables the invited player to download the game and accept the invitation to start the game. For creator games still waiting to pass peer review, the game invitation will be sent over the Xbox LIVE service to the other player. If the game is not installed the invited player will be prompted with a message indicating that he or she can get the game from the game creator.]]></remarks>

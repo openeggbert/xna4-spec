@@ -335,7 +335,7 @@
          List&lt;GraphicsDeviceInformation&gt; foundDevices
 )]]></syntax>
           <parameters>
-            <parameter name="foundDevices" type="Object"><![CDATA[The list of devices to rank.]]></parameter>
+            <parameter name="foundDevices" type="List&lt;GraphicsDeviceInformation&gt;"><![CDATA[The list of devices to rank.]]></parameter>
           </parameters>
           <remarks><![CDATA[RankDevices orders the provided list so that devices earlier in the list are preferred over devices later in the list. This method can remove devices from the list if they do not satisfy some custom criteria.]]></remarks>
           <platforms>

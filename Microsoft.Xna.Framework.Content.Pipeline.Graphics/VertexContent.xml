@@ -78,7 +78,7 @@
          IEnumerable&lt;int&gt; positionIndexCollection
 )]]></syntax>
           <parameters>
-            <parameter name="positionIndexCollection" type="Object"><![CDATA[Index into the Positions member of the parent.]]></parameter>
+            <parameter name="positionIndexCollection" type="IEnumerable&lt;int&gt;"><![CDATA[Index into the Positions member of the parent.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -133,7 +133,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="index" type="int"><![CDATA[Vertex index to be inserted.]]></parameter>
-            <parameter name="positionIndexCollection" type="Object"><![CDATA[Position of the first element of the inserted range in the collection.]]></parameter>
+            <parameter name="positionIndexCollection" type="IEnumerable&lt;int&gt;"><![CDATA[Position of the first element of the inserted range in the collection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows XP SP2</platform>

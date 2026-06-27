@@ -208,7 +208,7 @@ public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="material" type="MaterialContent"><![CDATA[A material used in the scene.]]></parameter>
-            <parameter name="geometryCollection" type="Object"><![CDATA[A collection of all the geometry using the specified material.]]></parameter>
+            <parameter name="geometryCollection" type="IEnumerable&lt;GeometryContent&gt;"><![CDATA[A collection of all the geometry using the specified material.]]></parameter>
             <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
           </parameters>
           <remarks><![CDATA[This function will be called for each material used by geometry in the input mesh, passing in a collection of all the geometry that is using the specified material. T he default implementation replaces null materials with a default BasicMaterialContent , validates that the geometry contains texture coordinates if a BasicMaterialContent has a texture, and sets the VertexColorEnabled property depending on whether the geometry contains vertex color data.]]></remarks>

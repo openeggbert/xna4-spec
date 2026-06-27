@@ -287,7 +287,7 @@
           <parameters>
             <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
             <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
-            <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
             <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the sprite around the origin.]]></parameter>
             <parameter name="origin" type="Vector2"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>
@@ -330,7 +330,7 @@
           <parameters>
             <parameter name="texture" type="Texture2D"><![CDATA[A texture.]]></parameter>
             <parameter name="position" type="Vector2"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="sourceRectangle" type="Nullable"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
@@ -353,7 +353,7 @@
           <parameters>
             <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
             <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle specifying, in screen coordinates, where the sprite will be drawn. If this rectangle is not the same size as sourcerectangle , the sprite is scaled to fit.]]></parameter>
-            <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
             <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the sprite around the origin.]]></parameter>
             <parameter name="origin" type="Vector2"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>
@@ -378,7 +378,7 @@
           <parameters>
             <parameter name="texture" type="Texture2D"><![CDATA[A texture.]]></parameter>
             <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle that specifies (in screen coordinates) the destination for drawing the sprite. If this rectangle is not the same size as the source rectangle, the sprite will be scaled to fit.]]></parameter>
-            <parameter name="sourceRectangle" type="Nullable"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
@@ -397,7 +397,7 @@
           <parameters>
             <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
             <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle specifying, in screen coordinates, where the sprite will be drawn. If this rectangle is not the same size as sourcerectangle the sprite will be scaled to fit.]]></parameter>
-            <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
@@ -423,7 +423,7 @@
           <parameters>
             <parameter name="texture" type="Texture2D"><![CDATA[A texture.]]></parameter>
             <parameter name="position" type="Vector2"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="sourceRectangle" type="Nullable"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
             <parameter name="rotation" type="Single"><![CDATA[Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
             <parameter name="origin" type="Vector2"><![CDATA[The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
@@ -452,7 +452,7 @@
           <parameters>
             <parameter name="texture" type="Texture2D"><![CDATA[A texture.]]></parameter>
             <parameter name="position" type="Vector2"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="sourceRectangle" type="Nullable"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
             <parameter name="rotation" type="Single"><![CDATA[Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
             <parameter name="origin" type="Vector2"><![CDATA[The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
@@ -476,7 +476,7 @@
           <parameters>
             <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
             <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
-            <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
@@ -518,7 +518,7 @@
           <parameters>
             <parameter name="texture" type="Texture2D"><![CDATA[A texture.]]></parameter>
             <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle that specifies (in screen coordinates) the destination for drawing the sprite. If this rectangle is not the same size as the source rectangle, the sprite will be scaled to fit.]]></parameter>
-            <parameter name="sourceRectangle" type="Nullable"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
             <parameter name="rotation" type="Single"><![CDATA[Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
             <parameter name="origin" type="Vector2"><![CDATA[The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
@@ -565,7 +565,7 @@
           <parameters>
             <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
             <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
-            <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
             <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the sprite around the origin.]]></parameter>
             <parameter name="origin" type="Vector2"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>

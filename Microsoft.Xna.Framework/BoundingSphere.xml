@@ -213,7 +213,7 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
          IEnumerable&lt;Vector3&gt; points
 )]]></syntax>
           <parameters>
-            <parameter name="points" type="Object"><![CDATA[List of points the BoundingSphere must contain.]]></parameter>
+            <parameter name="points" type="IEnumerable&lt;Vector3&gt;"><![CDATA[List of points the BoundingSphere must contain.]]></parameter>
           </parameters>
           <returns><![CDATA[The created BoundingSphere.]]></returns>
           <platforms>
@@ -325,7 +325,7 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;float&gt;"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -356,7 +356,7 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
-            <parameter name="result" type="Nullable"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
+            <parameter name="result" type="Nullable&lt;Single&gt;"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

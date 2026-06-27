@@ -63,7 +63,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="key" type="string"><![CDATA[Name of the key being modified.]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Value being set.]]></parameter>
+            <parameter name="value" type="ExternalReference&lt;TextureContent&gt;"><![CDATA[Value being set.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows XP SP2</platform>
