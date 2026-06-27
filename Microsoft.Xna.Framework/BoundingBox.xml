@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BoundingBox"
+          kind="struct"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IEquatable&lt;BoundingBox&gt;">
+
+  <summary><![CDATA[Defines an axis-aligned box-shaped 3D volume.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.BoundingBoxConverter)")]
+[SerializableAttribute]
+public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
+  <remarks><![CDATA[The BoundingBox Structure represents the space occupied by a box. The bounding box class is axis aligned. Each face of the bounding box is perpendicular to the x-axis, the y-axis, or the z-axis. There are several benefits of using the bounding box for collision detection. The bounding box class fits rectangular shapes aligned with the axis very well. Compared to the bounding sphere class, the bounding box class provides a much tighter fit for non-rotated rectangular objects. Because the bounding box class is axis aligned, you can make certain assumptions that result in collision checks between bounding boxes being quicker than a bounding box that can be rotated. There are a few drawbacks of using the bounding box for collision detection. Rotating a bounding box causes it to no longer be axis aligned. Because of this, if you rotate a model being bounded, you will need to recreate the bounding box. Doing so can be slow, since all the points in an object are iterated through to get the bounding box. If the model has not changed orientation, you can translate the bounding box instead of recreating it. If the model being bounded is not aligned to the axis, the bounding box will have some empty space. The amount of empty space will be greatest when the object is rotated 45 degrees from an axis. Empty space in the bounding box can result in false positives when checking for collision.]]></remarks>
+  <constructors>
+    <constructor signature="BoundingBox(Vector3, Vector3)">
+      <summary><![CDATA[Creates an instance of BoundingBox.]]></summary>
+      <syntax><![CDATA[public BoundingBox (
+         Vector3 min,
+         Vector3 max
+)]]></syntax>
+      <remarks><![CDATA[The BoundingBox Structure represents the space occupied by a box. The bounding box class is axis aligned. Each face of the bounding box is perpendicular to the x-axis, the y-axis, or the z-axis. There are several benefits of using the bounding box for collision detection. The bounding box class fits rectangular shapes aligned with the axis very well. Compared to the bounding sphere class, the bounding box class provides a much tighter fit for non-rotated rectangular objects. Because the bounding box class is axis aligned, you can make certain assumptions that result in collision checks between bounding boxes being quicker than a bounding box that can be rotated. There are a few drawbacks of using the bounding box for collision detection. Rotating a bounding box causes it to no longer be axis aligned. Because of this, if you rotate a model being bounded, you will need to recreate the bounding box. Doing so can be slow, since all the points in an object are iterated through to get the bounding box. If the model has not changed orientation, you can translate the bounding box instead of recreating it. If the model being bounded is not aligned to the axis, the bounding box will have some empty space. The amount of empty space will be greatest when the object is rotated 45 degrees from an axis. Empty space in the bounding box can result in false positives when checking for collision.]]></remarks>
+    </constructor>
+  </constructors>
+  <fields>
+    <field name="Min" type="Vector3">
+      <summary><![CDATA[The minimum point the BoundingBox contains.]]></summary>
+      <syntax><![CDATA[public Vector3 Min]]></syntax>
+      <remarks><![CDATA[The minimum point is the point with components that are less than or equal to the components of every other point within the BoundingBox . Since a BoundingBox is axis aligned the minimum point is the lower-left corner of the back face of the BoundingBox when looking at it from the positive z direction.]]></remarks>
+    </field>
+    <field name="Max" type="Vector3">
+      <summary><![CDATA[The maximum point the BoundingBox contains.]]></summary>
+      <syntax><![CDATA[public Vector3 Max]]></syntax>
+      <remarks><![CDATA[The maximum point is the point with components that are greater than or equal to the components of every other point within the BoundingBox . Since a BoundingBox is axis aligned the maximum point is the upper-right corner of the front face of the BoundingBox when looking at it from the positive z direction.]]></remarks>
+    </field>
+    <field name="CornerCount" type="Int32" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[Specifies the total number of corners (8) in the BoundingBox.]]></summary>
+      <syntax><![CDATA[public const int CornerCount]]></syntax>
+    </field>
+  </fields>
+  <methods>
+    <method name="Contains" returnType="ContainmentType">
+      <summary><![CDATA[Tests whether the BoundingBox contains another BoundingBox.]]></summary>
+      <overloads>
+        <overload signature="Contains(BoundingBox)">
+          <summary><![CDATA[Tests whether the BoundingBox contains another BoundingBox.]]></summary>
+          <syntax><![CDATA[public ContainmentType Contains (
+         BoundingBox box
+)]]></syntax>
+        </overload>
+        <overload signature="Contains(BoundingBox, ContainmentType)">
+          <summary><![CDATA[Tests whether the BoundingBox contains a BoundingBox.]]></summary>
+          <syntax><![CDATA[public void Contains (
+         ref BoundingBox box,
+         out ContainmentType result
+)]]></syntax>
+        </overload>
+        <overload signature="Contains(BoundingFrustum)">
+          <summary><![CDATA[Tests whether the BoundingBox contains a BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public ContainmentType Contains (
+         BoundingFrustum frustum
+)]]></syntax>
+        </overload>
+        <overload signature="Contains(BoundingSphere)">
+          <summary><![CDATA[Tests whether the BoundingBox contains a BoundingSphere.]]></summary>
+          <syntax><![CDATA[public ContainmentType Contains (
+         BoundingSphere sphere
+)]]></syntax>
+        </overload>
+        <overload signature="Contains(BoundingSphere, ContainmentType)">
+          <summary><![CDATA[Tests whether the BoundingBox contains a BoundingSphere.]]></summary>
+          <syntax><![CDATA[public void Contains (
+         ref BoundingSphere sphere,
+         out ContainmentType result
+)]]></syntax>
+        </overload>
+        <overload signature="Contains(Vector3)">
+          <summary><![CDATA[Tests whether the BoundingBox contains a point.]]></summary>
+          <syntax><![CDATA[public ContainmentType Contains (
+         Vector3 point
+)]]></syntax>
+        </overload>
+        <overload signature="Contains(Vector3, ContainmentType)">
+          <summary><![CDATA[Tests whether the BoundingBox contains a point.]]></summary>
+          <syntax><![CDATA[public void Contains (
+         ref Vector3 point,
+         out ContainmentType result
+)]]></syntax>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateFromPoints" returnType="BoundingBox" isStatic="true">
+      <summary><![CDATA[Creates the smallest BoundingBox that will contain a group of points.]]></summary>
+      <overloads>
+        <overload signature="CreateFromPoints(IEnumerable&lt;Vector3&gt;)">
+          <summary><![CDATA[Creates the smallest BoundingBox that will contain a group of points.]]></summary>
+          <syntax><![CDATA[public static BoundingBox CreateFromPoints (
+         IEnumerable&lt;Vector3&gt; points
+)]]></syntax>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateFromSphere" returnType="BoundingBox" isStatic="true">
+      <summary><![CDATA[Creates the smallest BoundingBox that will contain the specified BoundingSphere.]]></summary>
+      <overloads>
+        <overload signature="CreateFromSphere(BoundingSphere)">
+          <summary><![CDATA[Creates the smallest BoundingBox that will contain the specified BoundingSphere.]]></summary>
+          <syntax><![CDATA[public static BoundingBox CreateFromSphere (
+         BoundingSphere sphere
+)]]></syntax>
+        </overload>
+        <overload signature="CreateFromSphere(BoundingSphere, BoundingBox)">
+          <summary><![CDATA[Creates the smallest BoundingBox that will contain the specified BoundingSphere.]]></summary>
+          <syntax><![CDATA[public static void CreateFromSphere (
+         ref BoundingSphere sphere,
+         out BoundingBox result
+)]]></syntax>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateMerged" returnType="BoundingBox" isStatic="true">
+      <summary><![CDATA[Creates the smallest BoundingBox that contains the two specified BoundingBox instances.]]></summary>
+      <overloads>
+        <overload signature="CreateMerged(BoundingBox, BoundingBox)">
+          <summary><![CDATA[Creates the smallest BoundingBox that contains the two specified BoundingBox instances.]]></summary>
+          <syntax><![CDATA[public static BoundingBox CreateMerged (
+         BoundingBox original,
+         BoundingBox additional
+)]]></syntax>
+        </overload>
+        <overload signature="CreateMerged(BoundingBox, BoundingBox, BoundingBox)">
+          <summary><![CDATA[Creates the smallest BoundingBox that contains the two specified BoundingBox instances.]]></summary>
+          <syntax><![CDATA[public static void CreateMerged (
+         ref BoundingBox original,
+         ref BoundingBox additional,
+         out BoundingBox result
+)]]></syntax>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="Boolean">
+      <summary><![CDATA[Determines whether two instances of BoundingBox are equal.]]></summary>
+      <overloads>
+        <overload signature="Equals(BoundingBox)">
+          <summary><![CDATA[Determines whether two instances of BoundingBox are equal.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         BoundingBox other
+)]]></syntax>
+        </overload>
+        <overload signature="Equals(Object)">
+          <summary><![CDATA[Determines whether two instances of BoundingBox are equal.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetCorners" returnType="Vector3[]">
+      <summary><![CDATA[Gets an array of points that make up the corners of the BoundingBox.]]></summary>
+      <overloads>
+        <overload signature="GetCorners()">
+          <summary><![CDATA[Gets an array of points that make up the corners of the BoundingBox.]]></summary>
+          <syntax><![CDATA[public Vector3[] GetCorners ()]]></syntax>
+          <remarks><![CDATA[The points returned correspond to the corners of the BoundingBox faces that are perpendicular to the z-axis. The near face is the face with the larger z value, and the far face is the face with the smaller z value. Points 0 to 3 correspond to the near face in a clockwise order starting at its upper-left corner when looking toward the origin from the positive z direction. Points 4 to 7 correspond to the far face in a clockwise order starting at its upper-left corner when looking toward the origin from the positive z direction.]]></remarks>
+        </overload>
+        <overload signature="GetCorners(Vector3[])">
+          <summary><![CDATA[Gets the array of points that make up the corners of the BoundingBox.]]></summary>
+          <syntax><![CDATA[public void GetCorners (
+         Vector3[] corners
+)]]></syntax>
+          <remarks><![CDATA[The points returned correspond to the corners of the BoundingBox faces that are perpendicular to the z-axis. The near face is the face with the larger z value, and the far face is the face with the smaller z value. Points 0 to 3 correspond to the near face in a clockwise order starting at its upper-left corner when looking toward the origin from the positive z direction. Points 4 to 7 correspond to the far face in a clockwise order starting at its upper-left corner when looking toward the origin from the positive z direction.]]></remarks>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="Int32">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Intersects" returnType="Boolean">
+      <summary><![CDATA[Checks whether the current BoundingBox intersects another BoundingBox.]]></summary>
+      <overloads>
+        <overload signature="Intersects(BoundingBox)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects another BoundingBox.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         BoundingBox box
+)]]></syntax>
+        </overload>
+        <overload signature="Intersects(BoundingBox, Boolean)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects another BoundingBox.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingBox box,
+         out bool result
+)]]></syntax>
+        </overload>
+        <overload signature="Intersects(BoundingFrustum)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects a BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         BoundingFrustum frustum
+)]]></syntax>
+        </overload>
+        <overload signature="Intersects(BoundingSphere)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects a BoundingSphere.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         BoundingSphere sphere
+)]]></syntax>
+        </overload>
+        <overload signature="Intersects(BoundingSphere, Boolean)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects a BoundingSphere.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingSphere sphere,
+         out bool result
+)]]></syntax>
+        </overload>
+        <overload signature="Intersects(Plane)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects a Plane.]]></summary>
+          <syntax><![CDATA[public PlaneIntersectionType Intersects (
+         Plane plane
+)]]></syntax>
+        </overload>
+        <overload signature="Intersects(Plane, PlaneIntersectionType)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects a Plane.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref Plane plane,
+         out PlaneIntersectionType result
+)]]></syntax>
+        </overload>
+        <overload signature="Intersects(Ray)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects a Ray.]]></summary>
+          <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
+         Ray ray
+)]]></syntax>
+        </overload>
+        <overload signature="Intersects(Ray, Nullable&lt;Single&gt;)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects a Ray.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref Ray ray,
+         out Nullable&lt;float&gt; result
+)]]></syntax>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="Boolean" isStatic="true">
+      <summary><![CDATA[Determines whether two instances of BoundingBox are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality(BoundingBox, BoundingBox)">
+          <summary><![CDATA[Determines whether two instances of BoundingBox are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         BoundingBox a,
+         BoundingBox b
+)]]></syntax>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="Boolean" isStatic="true">
+      <summary><![CDATA[Determines whether two instances of BoundingBox are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality(BoundingBox, BoundingBox)">
+          <summary><![CDATA[Determines whether two instances of BoundingBox are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         BoundingBox a,
+         BoundingBox b
+)]]></syntax>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="String">
+      <summary><![CDATA[Returns a String that represents the current BoundingBox.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a String that represents the current BoundingBox.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+</xna-type>
