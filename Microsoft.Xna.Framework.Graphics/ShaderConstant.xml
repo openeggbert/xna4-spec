@@ -118,7 +118,7 @@
     <method name="SetValue" returnType="void">
       <summary><![CDATA[Sets the value of a ShaderConstant to an array of Boolean objects.]]></summary>
       <overloads>
-        <overload signature="GraphicsDevice, Boolean ">
+        <overload signature="SetValue(GraphicsDevice, Boolean )">
           <summary><![CDATA[Sets the value of a ShaderConstant to an array of Boolean objects.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -134,7 +134,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Single">
+        <overload signature="SetValue(GraphicsDevice, Single)">
           <summary><![CDATA[Sets the value of a ShaderConstant to a Single.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -150,7 +150,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Vector3 ">
+        <overload signature="SetValue(GraphicsDevice, Vector3 )">
           <summary><![CDATA[Sets the value of a ShaderConstant to an array of Vector3 objects.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -166,7 +166,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Vector2">
+        <overload signature="SetValue(GraphicsDevice, Vector2)">
           <summary><![CDATA[Sets the value of a ShaderConstant to a Vector2]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -182,7 +182,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Boolean">
+        <overload signature="SetValue(GraphicsDevice, Boolean)">
           <summary><![CDATA[Sets the value of a ShaderConstant to a Boolean.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -198,7 +198,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Single ">
+        <overload signature="SetValue(GraphicsDevice, Single )">
           <summary><![CDATA[Sets the value of a ShaderConstant to an array of Single objects.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -214,7 +214,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Vector2 ">
+        <overload signature="SetValue(GraphicsDevice, Vector2 )">
           <summary><![CDATA[Sets the value of a ShaderConstant to an array of Vector2 objects.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -230,7 +230,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Int32">
+        <overload signature="SetValue(GraphicsDevice, Int32)">
           <summary><![CDATA[Sets the value of a ShaderConstant to an Int32.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -246,7 +246,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Matrix ">
+        <overload signature="SetValue(GraphicsDevice, Matrix )">
           <summary><![CDATA[Sets the value of a ShaderConstant to an array of Matrix objects.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -262,7 +262,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Vector3">
+        <overload signature="SetValue(GraphicsDevice, Vector3)">
           <summary><![CDATA[Sets the value of a ShaderConstant to a Vector3.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -278,7 +278,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Int32 ">
+        <overload signature="SetValue(GraphicsDevice, Int32 )">
           <summary><![CDATA[Sets the value of a ShaderConstant to an array of Int32 objects.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -294,7 +294,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Quaternion ">
+        <overload signature="SetValue(GraphicsDevice, Quaternion )">
           <summary><![CDATA[Sets the value of a ShaderConstant to an array of Quaternion objects.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -310,7 +310,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Quaternion">
+        <overload signature="SetValue(GraphicsDevice, Quaternion)">
           <summary><![CDATA[Sets the value of a ShaderConstant to a Quaternion.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -326,7 +326,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Vector4 ">
+        <overload signature="SetValue(GraphicsDevice, Vector4 )">
           <summary><![CDATA[Sets the value of a ShaderConstant to an array of Vector4 objects.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -342,7 +342,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Vector4">
+        <overload signature="SetValue(GraphicsDevice, Vector4)">
           <summary><![CDATA[Sets the value of a ShaderConstant to a Vector4.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -358,7 +358,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Matrix">
+        <overload signature="SetValue(GraphicsDevice, Matrix)">
           <summary><![CDATA[Sets the value of a ShaderConstant to a Matrix.]]></summary>
           <syntax><![CDATA[public void SetValue (
          GraphicsDevice graphicsDevice,
@@ -379,7 +379,7 @@
     <method name="SetValueTranspose" returnType="void">
       <summary><![CDATA[Sets the value of a ShaderConstant to an matrix.]]></summary>
       <overloads>
-        <overload signature="GraphicsDevice, Matrix">
+        <overload signature="SetValueTranspose(GraphicsDevice, Matrix)">
           <summary><![CDATA[Sets the value of a ShaderConstant to an matrix.]]></summary>
           <syntax><![CDATA[public void SetValueTranspose (
          GraphicsDevice graphicsDevice,
@@ -395,7 +395,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Matrix ">
+        <overload signature="SetValueTranspose(GraphicsDevice, Matrix )">
           <summary><![CDATA[Sets the value of a ShaderConstant to an array of matrices.]]></summary>
           <syntax><![CDATA[public void SetValueTranspose (
          GraphicsDevice graphicsDevice,

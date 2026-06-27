@@ -25,29 +25,27 @@
     </property>
   </properties>
   <methods>
-    <method name="Equals" returnType="void">
+    <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified AudioCategory is equal to this AudioCategory.]]></summary>
       <overloads>
-        <overload signature="AudioCategory">
+        <overload signature="Equals(AudioCategory)">
           <summary><![CDATA[Determines whether the specified AudioCategory is equal to this AudioCategory.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Function Equals ( _
-         other As AudioCategory _
-) As Boolean]]></syntax>
+          <syntax><![CDATA[public bool Equals (
+         AudioCategory other
+)]]></syntax>
           <parameters>
-            <parameter name="other" type="Object"><![CDATA[Type: AudioCategory AudioCategory to compare with this instance.]]></parameter>
+            <parameter name="other" type="AudioCategory"><![CDATA[Type: AudioCategory AudioCategory to compare with this instance.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if the objects are equal; false otherwise.]]></returns>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Determines whether the specified Object is equal to this AudioCategory.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Overrides Function Equals ( _
-         obj As Object _
-) As Boolean]]></syntax>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
           <parameters>
             <parameter name="obj" type="Object"><![CDATA[Type: Object Object to compare with this instance.]]></parameter>
           </parameters>
@@ -161,14 +159,13 @@ Public Overrides Function Equals ( _
       <overloads>
         <overload signature="op_Equality()">
           <summary><![CDATA[Determines whether the specified AudioCategory instances are equal.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function op_Equality ( _
-         value1 As AudioCategory, _
-         value2 As AudioCategory _
-) As Boolean]]></syntax>
+          <syntax><![CDATA[public static bool op_Equality (
+         AudioCategory value1,
+         AudioCategory value2
+)]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Type: AudioCategory Object to the left of the equality operator.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Type: AudioCategory Object to the right of the equality operator.]]></parameter>
+            <parameter name="value1" type="AudioCategory"><![CDATA[Type: AudioCategory Object to the left of the equality operator.]]></parameter>
+            <parameter name="value2" type="AudioCategory"><![CDATA[Type: AudioCategory Object to the right of the equality operator.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if the objects are equal; false otherwise.]]></returns>
           <platforms>
@@ -182,14 +179,13 @@ Public Shared Function op_Equality ( _
       <overloads>
         <overload signature="op_Inequality()">
           <summary><![CDATA[Determines whether the specified AudioCategory instances are not equal.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function op_Inequality ( _
-         value1 As AudioCategory, _
-         value2 As AudioCategory _
-) As Boolean]]></syntax>
+          <syntax><![CDATA[public static bool op_Inequality (
+         AudioCategory value1,
+         AudioCategory value2
+)]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Type: AudioCategory Object to the left of the inequality operator.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Type: AudioCategory Object to the right of the inequality operator.]]></parameter>
+            <parameter name="value1" type="AudioCategory"><![CDATA[Type: AudioCategory Object to the left of the inequality operator.]]></parameter>
+            <parameter name="value2" type="AudioCategory"><![CDATA[Type: AudioCategory Object to the right of the inequality operator.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if the objects are not equal; false otherwise.]]></returns>
           <platforms>

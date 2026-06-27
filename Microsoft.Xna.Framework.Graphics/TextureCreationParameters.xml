@@ -140,7 +140,7 @@ public struct TextureCreationParameters]]></syntax>
     <method name="Equals" returnType="bool">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj

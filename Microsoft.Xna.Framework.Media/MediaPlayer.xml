@@ -184,7 +184,7 @@
     <method name="Play" returnType="void" isStatic="true">
       <summary><![CDATA[Plays a SongCollection.]]></summary>
       <overloads>
-        <overload signature="SongCollection">
+        <overload signature="Play(SongCollection)">
           <summary><![CDATA[Plays a SongCollection.]]></summary>
           <syntax><![CDATA[public static void Play (
          SongCollection songs
@@ -200,7 +200,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="SongCollection, Int32">
+        <overload signature="Play(SongCollection, Int32)">
           <summary><![CDATA[Plays a SongCollection, starting with the Song at the specified index.]]></summary>
           <syntax><![CDATA[public static void Play (
          SongCollection songs,
@@ -218,7 +218,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Song">
+        <overload signature="Play(Song)">
           <summary><![CDATA[Plays a Song.]]></summary>
           <syntax><![CDATA[public static void Play (
          Song song

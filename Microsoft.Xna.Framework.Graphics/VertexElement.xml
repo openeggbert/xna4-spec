@@ -38,20 +38,19 @@ public struct VertexElement]]></syntax>
         <platform>Windows Vista</platform>
       </platforms>
     </constructor>
-    <constructor signature="VertexElement(Object, Object, Object, Object)">
+    <constructor signature="VertexElement(int, VertexElementFormat, VertexElementUsage, int)">
       <summary><![CDATA[Initializes a new instance of the VertexElement class.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         offset As Integer, _
-         elementFormat As VertexElementFormat, _
-         elementUsage As VertexElementUsage, _
-         usageIndex As Integer _
+      <syntax><![CDATA[public VertexElement (
+         int offset,
+         VertexElementFormat elementFormat,
+         VertexElementUsage elementUsage,
+         int usageIndex
 )]]></syntax>
       <parameters>
-        <parameter name="offset" type="Object"><![CDATA[Type: Int32 Offset (if any) from the beginning of the stream to the beginning of the vertex data.]]></parameter>
-        <parameter name="elementFormat" type="Object"><![CDATA[Type: VertexElementFormat One of several predefined types that define the vertex data size.]]></parameter>
-        <parameter name="elementUsage" type="Object"><![CDATA[Type: VertexElementUsage The intended use of the vertex data.]]></parameter>
-        <parameter name="usageIndex" type="Object"><![CDATA[Type: Int32 Modifies the usage data to allow the user to specify multiple usage types.]]></parameter>
+        <parameter name="offset" type="int"><![CDATA[Type: Int32 Offset (if any) from the beginning of the stream to the beginning of the vertex data.]]></parameter>
+        <parameter name="elementFormat" type="VertexElementFormat"><![CDATA[Type: VertexElementFormat One of several predefined types that define the vertex data size.]]></parameter>
+        <parameter name="elementUsage" type="VertexElementUsage"><![CDATA[Type: VertexElementUsage The intended use of the vertex data.]]></parameter>
+        <parameter name="usageIndex" type="int"><![CDATA[Type: Int32 Modifies the usage data to allow the user to specify multiple usage types.]]></parameter>
       </parameters>
       <remarks><![CDATA[Vertex data is defined using an array of VertexElement structures.]]></remarks>
       <platforms>
@@ -120,7 +119,7 @@ Public Sub New ( _
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj

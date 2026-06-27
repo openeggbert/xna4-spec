@@ -54,7 +54,7 @@
     <method name="Contains" returnType="bool">
       <summary><![CDATA[Determines whether the specified element is in the channel.]]></summary>
       <overloads>
-        <overload signature="T">
+        <overload signature="Contains(T)">
           <summary><![CDATA[Determines whether the specified element is in the channel.]]></summary>
           <syntax><![CDATA[public bool Contains (
          T item
@@ -73,7 +73,7 @@
     <method name="CopyTo" returnType="void">
       <summary><![CDATA[Copies the elements of the channel to an array, starting at the specified index.]]></summary>
       <overloads>
-        <overload signature="T , Int32">
+        <overload signature="CopyTo(T , Int32)">
           <summary><![CDATA[Copies the elements of the channel to an array, starting at the specified index.]]></summary>
           <syntax><![CDATA[public void CopyTo (
          T[] array,
@@ -108,7 +108,7 @@
     <method name="IndexOf" returnType="int">
       <summary><![CDATA[Gets the index of the specified item.]]></summary>
       <overloads>
-        <overload signature="T">
+        <overload signature="IndexOf(T)">
           <summary><![CDATA[Gets the index of the specified item.]]></summary>
           <syntax><![CDATA[public int IndexOf (
          T item

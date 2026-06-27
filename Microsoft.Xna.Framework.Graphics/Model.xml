@@ -127,16 +127,15 @@
       <overloads>
         <overload signature="Draw()">
           <summary><![CDATA[Render a model after applying the matrix transformations.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Sub Draw ( _
-         world As Matrix, _
-         view As Matrix, _
-         projection As Matrix _
+          <syntax><![CDATA[public void Draw (
+         Matrix world,
+         Matrix view,
+         Matrix projection
 )]]></syntax>
           <parameters>
-            <parameter name="world" type="Object"><![CDATA[Type: Matrix A world transformation matrix.]]></parameter>
-            <parameter name="view" type="Object"><![CDATA[Type: Matrix A view transformation matrix.]]></parameter>
-            <parameter name="projection" type="Object"><![CDATA[Type: Matrix A projection transformation matrix.]]></parameter>
+            <parameter name="world" type="Matrix"><![CDATA[Type: Matrix A world transformation matrix.]]></parameter>
+            <parameter name="view" type="Matrix"><![CDATA[Type: Matrix A view transformation matrix.]]></parameter>
+            <parameter name="projection" type="Matrix"><![CDATA[Type: Matrix A projection transformation matrix.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

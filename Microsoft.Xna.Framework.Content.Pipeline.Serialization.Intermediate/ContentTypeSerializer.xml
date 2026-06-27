@@ -91,18 +91,17 @@
     <method name="Deserialize" returnType="void">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="IntermediateReader, ContentSerializerAttribute, T">
+        <overload signature="Deserialize(IntermediateReader, ContentSerializerAttribute, T)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal MustOverride Function Deserialize ( _
-         input As IntermediateReader, _
-         format As ContentSerializerAttribute, _
-         existingInstance As T _
-) As T]]></syntax>
+          <syntax><![CDATA[protected internal abstract T Deserialize (
+         IntermediateReader input,
+         ContentSerializerAttribute format,
+         T existingInstance
+)]]></syntax>
           <parameters>
-            <parameter name="input" type="Object"><![CDATA[Type: IntermediateReader Location of the intermediate XML and various deserialization helpers.]]></parameter>
-            <parameter name="format" type="Object"><![CDATA[Type: ContentSerializerAttribute Specifies the intermediate source XML format.]]></parameter>
-            <parameter name="existingInstance" type="Object"><![CDATA[Type: T The strongly typed object containing the received data, or null if the deserializer should construct a new instance.]]></parameter>
+            <parameter name="input" type="IntermediateReader"><![CDATA[Type: IntermediateReader Location of the intermediate XML and various deserialization helpers.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[Type: ContentSerializerAttribute Specifies the intermediate source XML format.]]></parameter>
+            <parameter name="existingInstance" type="T"><![CDATA[Type: T The strongly typed object containing the received data, or null if the deserializer should construct a new instance.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: T The object type of the deserialized object.]]></returns>
           <platforms>
@@ -111,17 +110,16 @@ Protected Internal MustOverride Function Deserialize ( _
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="IntermediateReader, ContentSerializerAttribute, Object">
+        <overload signature="Deserialize(IntermediateReader, ContentSerializerAttribute, Object)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal Overrides Function Deserialize ( _
-         input As IntermediateReader, _
-         format As ContentSerializerAttribute, _
-         existingInstance As Object _
-) As Object]]></syntax>
+          <syntax><![CDATA[protected internal override Object Deserialize (
+         IntermediateReader input,
+         ContentSerializerAttribute format,
+         Object existingInstance
+)]]></syntax>
           <parameters>
-            <parameter name="input" type="Object"><![CDATA[Type: IntermediateReader Location of the intermediate XML and various deserialization helpers.]]></parameter>
-            <parameter name="format" type="Object"><![CDATA[Type: ContentSerializerAttribute Specifies the intermediate source XML format.]]></parameter>
+            <parameter name="input" type="IntermediateReader"><![CDATA[Type: IntermediateReader Location of the intermediate XML and various deserialization helpers.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[Type: ContentSerializerAttribute Specifies the intermediate source XML format.]]></parameter>
             <parameter name="existingInstance" type="Object"><![CDATA[Type: Object The object containing the received data, or null if the deserializer should construct a new instance.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Object The object after deserialization.]]></returns>
@@ -138,12 +136,11 @@ Protected Internal Overrides Function Deserialize ( _
       <overloads>
         <overload signature="Initialize()">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal Overridable Sub Initialize ( _
-         serializer As IntermediateSerializer _
+          <syntax><![CDATA[protected internal virtual void Initialize (
+         IntermediateSerializer serializer
 )]]></syntax>
           <parameters>
-            <parameter name="serializer" type="Object"><![CDATA[Type: IntermediateSerializer The content serializer.]]></parameter>
+            <parameter name="serializer" type="IntermediateSerializer"><![CDATA[Type: IntermediateSerializer The content serializer.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>
@@ -156,7 +153,7 @@ Protected Internal Overridable Sub Initialize ( _
     <method name="ObjectIsEmpty" returnType="bool">
       <summary><![CDATA[Queries whether an object contains data to be serialized.]]></summary>
       <overloads>
-        <overload signature="T">
+        <overload signature="ObjectIsEmpty(T)">
           <summary><![CDATA[Queries whether an object contains data to be serialized.]]></summary>
           <syntax><![CDATA[public virtual bool ObjectIsEmpty (
          T value
@@ -170,7 +167,7 @@ Protected Internal Overridable Sub Initialize ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Object">
+        <overload signature="ObjectIsEmpty(Object)">
           <summary><![CDATA[Queries whether a strongly-typed object contains data to be serialized.]]></summary>
           <syntax><![CDATA[public override bool ObjectIsEmpty (
          Object value
@@ -189,17 +186,16 @@ Protected Internal Overridable Sub Initialize ( _
     <method name="ScanChildren" returnType="void">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="IntermediateSerializer, ChildCallback, Object">
+        <overload signature="ScanChildren(IntermediateSerializer, ChildCallback, Object)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal Overrides Sub ScanChildren ( _
-         serializer As IntermediateSerializer, _
-         callback As ChildCallback, _
-         value As Object _
+          <syntax><![CDATA[protected internal override void ScanChildren (
+         IntermediateSerializer serializer,
+         ChildCallback callback,
+         Object value
 )]]></syntax>
           <parameters>
-            <parameter name="serializer" type="Object"><![CDATA[Type: IntermediateSerializer The content serializer.]]></parameter>
-            <parameter name="callback" type="Object"><![CDATA[Type: ChildCallback The method to be called for each examined child.]]></parameter>
+            <parameter name="serializer" type="IntermediateSerializer"><![CDATA[Type: IntermediateSerializer The content serializer.]]></parameter>
+            <parameter name="callback" type="ChildCallback"><![CDATA[Type: ChildCallback The method to be called for each examined child.]]></parameter>
             <parameter name="value" type="Object"><![CDATA[Type: Object The object whose children are being scanned.]]></parameter>
           </parameters>
           <platforms>
@@ -208,18 +204,17 @@ Protected Internal Overrides Sub ScanChildren ( _
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="IntermediateSerializer, ChildCallback, T">
+        <overload signature="ScanChildren(IntermediateSerializer, ChildCallback, T)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal Overridable Sub ScanChildren ( _
-         serializer As IntermediateSerializer, _
-         callback As ChildCallback, _
-         value As T _
+          <syntax><![CDATA[protected internal virtual void ScanChildren (
+         IntermediateSerializer serializer,
+         ChildCallback callback,
+         T value
 )]]></syntax>
           <parameters>
-            <parameter name="serializer" type="Object"><![CDATA[Type: IntermediateSerializer The content serializer.]]></parameter>
-            <parameter name="callback" type="Object"><![CDATA[Type: ChildCallback The method to be called for each examined child.]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Type: T The strongly typed object whose children are being scanned.]]></parameter>
+            <parameter name="serializer" type="IntermediateSerializer"><![CDATA[Type: IntermediateSerializer The content serializer.]]></parameter>
+            <parameter name="callback" type="ChildCallback"><![CDATA[Type: ChildCallback The method to be called for each examined child.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[Type: T The strongly typed object whose children are being scanned.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>
@@ -232,18 +227,17 @@ Protected Internal Overridable Sub ScanChildren ( _
     <method name="Serialize" returnType="void">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="IntermediateWriter, Object, ContentSerializerAttribute">
+        <overload signature="Serialize(IntermediateWriter, Object, ContentSerializerAttribute)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal Overrides Sub Serialize ( _
-         output As IntermediateWriter, _
-         value As Object, _
-         format As ContentSerializerAttribute _
+          <syntax><![CDATA[protected internal override void Serialize (
+         IntermediateWriter output,
+         Object value,
+         ContentSerializerAttribute format
 )]]></syntax>
           <parameters>
-            <parameter name="output" type="Object"><![CDATA[Type: IntermediateWriter Specifies the intermediate XML location, and provides various serialization helpers.]]></parameter>
+            <parameter name="output" type="IntermediateWriter"><![CDATA[Type: IntermediateWriter Specifies the intermediate XML location, and provides various serialization helpers.]]></parameter>
             <parameter name="value" type="Object"><![CDATA[Type: Object The object to be serialized.]]></parameter>
-            <parameter name="format" type="Object"><![CDATA[Type: ContentSerializerAttribute Specifies the content format for this object.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[Type: ContentSerializerAttribute Specifies the content format for this object.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>
@@ -251,18 +245,17 @@ Protected Internal Overrides Sub Serialize ( _
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="IntermediateWriter, T, ContentSerializerAttribute">
+        <overload signature="Serialize(IntermediateWriter, T, ContentSerializerAttribute)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal MustOverride Sub Serialize ( _
-         output As IntermediateWriter, _
-         value As T, _
-         format As ContentSerializerAttribute _
+          <syntax><![CDATA[protected internal abstract void Serialize (
+         IntermediateWriter output,
+         T value,
+         ContentSerializerAttribute format
 )]]></syntax>
           <parameters>
-            <parameter name="output" type="Object"><![CDATA[Type: IntermediateWriter Specifies the intermediate XML location, and provides various serialization helpers.]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Type: T The strongly typed object to be serialized.]]></parameter>
-            <parameter name="format" type="Object"><![CDATA[Type: ContentSerializerAttribute Specifies the content format for this object.]]></parameter>
+            <parameter name="output" type="IntermediateWriter"><![CDATA[Type: IntermediateWriter Specifies the intermediate XML location, and provides various serialization helpers.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[Type: T The strongly typed object to be serialized.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[Type: ContentSerializerAttribute Specifies the content format for this object.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>

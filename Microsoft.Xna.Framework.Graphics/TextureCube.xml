@@ -37,20 +37,19 @@
         <platform>Windows Vista</platform>
       </platforms>
     </constructor>
-    <constructor signature="TextureCube(Object, Object, Object, Object)">
+    <constructor signature="TextureCube(GraphicsDevice, int, bool, SurfaceFormat)">
       <summary><![CDATA[Creates a new instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         graphicsDevice As GraphicsDevice, _
-         size As Integer, _
-         mipMap As Boolean, _
-         format As SurfaceFormat _
+      <syntax><![CDATA[public TextureCube (
+         GraphicsDevice graphicsDevice,
+         int size,
+         bool mipMap,
+         SurfaceFormat format
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The device.]]></parameter>
-        <parameter name="size" type="Object"><![CDATA[Type: Int32 The size (in pixels) of the top-level faces of the cube texture. Subsequent levels of each face will be the truncated value of half of the previous level's pixel dimension (independently). Each dimension is clamped to a minimum of 1 pixel.]]></parameter>
-        <parameter name="mipMap" type="Object"><![CDATA[Type: Boolean [ MarshalAsAttribute (U1)] True to generate a full mipmap chain, false otherwise.]]></parameter>
-        <parameter name="format" type="Object"><![CDATA[Type: SurfaceFormat Surface data format.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The device.]]></parameter>
+        <parameter name="size" type="int"><![CDATA[Type: Int32 The size (in pixels) of the top-level faces of the cube texture. Subsequent levels of each face will be the truncated value of half of the previous level's pixel dimension (independently). Each dimension is clamped to a minimum of 1 pixel.]]></parameter>
+        <parameter name="mipMap" type="bool"><![CDATA[Type: Boolean [ MarshalAsAttribute (U1)] True to generate a full mipmap chain, false otherwise.]]></parameter>
+        <parameter name="format" type="SurfaceFormat"><![CDATA[Type: SurfaceFormat Surface data format.]]></parameter>
       </parameters>
       <remarks><![CDATA[To initialize the resource from an existing file, use ContentManager.Load .]]></remarks>
       <platforms>
@@ -127,7 +126,7 @@ Public Sub New ( _
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Releases the unmanaged resources used by the TextureCube and optionally releases the managed resources.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Releases the unmanaged resources used by the TextureCube and optionally releases the managed resources.]]></summary>
           <syntax><![CDATA[protected override void Dispose (
          bool 
@@ -144,7 +143,7 @@ Public Sub New ( _
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified Object is equal to the TextureCube.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Determines whether the specified Object is equal to the TextureCube.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -179,7 +178,7 @@ Public Sub New ( _
     <method name="FromFile" returnType="TextureCube" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="GraphicsDevice, Stream, Int32">
+        <overload signature="FromFile(GraphicsDevice, Stream, Int32)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureCube FromFile (
          GraphicsDevice graphicsDevice,
@@ -198,7 +197,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream">
+        <overload signature="FromFile(GraphicsDevice, Stream)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureCube FromFile (
          GraphicsDevice graphicsDevice,
@@ -215,7 +214,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream, TextureCreationParameters">
+        <overload signature="FromFile(GraphicsDevice, Stream, TextureCreationParameters)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureCube FromFile (
          GraphicsDevice graphicsDevice,
@@ -234,7 +233,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream, Int32, TextureCreationParameters">
+        <overload signature="FromFile(GraphicsDevice, Stream, Int32, TextureCreationParameters)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureCube FromFile (
          GraphicsDevice graphicsDevice,
@@ -255,7 +254,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, String">
+        <overload signature="FromFile(GraphicsDevice, String)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureCube FromFile (
          GraphicsDevice graphicsDevice,
@@ -272,7 +271,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, String, Int32">
+        <overload signature="FromFile(GraphicsDevice, String, Int32)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureCube FromFile (
          GraphicsDevice graphicsDevice,
@@ -291,7 +290,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, String, TextureCreationParameters">
+        <overload signature="FromFile(GraphicsDevice, String, TextureCreationParameters)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureCube FromFile (
          GraphicsDevice graphicsDevice,
@@ -345,7 +344,7 @@ Public Sub New ( _
     <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified cube textures are equal.]]></summary>
       <overloads>
-        <overload signature="TextureCube, TextureCube">
+        <overload signature="op_Equality(TextureCube, TextureCube)">
           <summary><![CDATA[Determines whether the specified cube textures are equal.]]></summary>
           <syntax><![CDATA[public static bool op_Equality (
          TextureCube left,
@@ -367,7 +366,7 @@ Public Sub New ( _
     <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified cube textures are not equal.]]></summary>
       <overloads>
-        <overload signature="TextureCube, TextureCube">
+        <overload signature="op_Inequality(TextureCube, TextureCube)">
           <summary><![CDATA[Determines whether the specified cube textures are not equal.]]></summary>
           <syntax><![CDATA[public static bool op_Inequality (
          TextureCube left,

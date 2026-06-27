@@ -18,19 +18,18 @@
   <constructors>
     <constructor signature="TouchLocation(Int32, TouchLocationState, Vector2, TouchLocationState, Vector2)">
       <summary><![CDATA[Initializes a new TouchLocation with an ID, and a set of both current and previous state, position, and pressure values.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         id As Integer, _
-         state As TouchLocationState, _
-         position As Vector2, _
-         previousState As TouchLocationState, _
-         previousPosition As Vector2 _
+      <syntax><![CDATA[public TouchLocation (
+         int id,
+         TouchLocationState state,
+         Vector2 position,
+         TouchLocationState previousState,
+         Vector2 previousPosition
 )]]></syntax>
       <parameters>
-        <parameter name="id" type="Object"><![CDATA[Type: Int32 ID of the new touch location.]]></parameter>
-        <parameter name="state" type="Object"><![CDATA[Type: TouchLocationState State of the new touch location.]]></parameter>
+        <parameter name="id" type="int"><![CDATA[Type: Int32 ID of the new touch location.]]></parameter>
+        <parameter name="state" type="TouchLocationState"><![CDATA[Type: TouchLocationState State of the new touch location.]]></parameter>
         <parameter name="position" type="Object"><![CDATA[Type: Vector2 Position, in screen coordinates, of the new touch location.]]></parameter>
-        <parameter name="previousState" type="Object"><![CDATA[Type: TouchLocationState Previous state for the new touch location.]]></parameter>
+        <parameter name="previousState" type="TouchLocationState"><![CDATA[Type: TouchLocationState Previous state for the new touch location.]]></parameter>
         <parameter name="previousPosition" type="Object"><![CDATA[Type: Vector2 Previous position for the new touch location.]]></parameter>
       </parameters>
       <platforms>
@@ -39,15 +38,14 @@ Public Sub New ( _
     </constructor>
     <constructor signature="TouchLocation(Int32, TouchLocationState, Vector2)">
       <summary><![CDATA[Initializes a new TouchLocation with an ID, state, position, and pressure.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         id As Integer, _
-         state As TouchLocationState, _
-         position As Vector2 _
+      <syntax><![CDATA[public TouchLocation (
+         int id,
+         TouchLocationState state,
+         Vector2 position
 )]]></syntax>
       <parameters>
-        <parameter name="id" type="Object"><![CDATA[Type: Int32 ID of the new touch location.]]></parameter>
-        <parameter name="state" type="Object"><![CDATA[Type: TouchLocationState State of the new touch location.]]></parameter>
+        <parameter name="id" type="int"><![CDATA[Type: Int32 ID of the new touch location.]]></parameter>
+        <parameter name="state" type="TouchLocationState"><![CDATA[Type: TouchLocationState State of the new touch location.]]></parameter>
         <parameter name="position" type="Object"><![CDATA[Type: Vector2 Position, in screen coordinates, of the new touch location.]]></parameter>
       </parameters>
       <platforms>
@@ -94,7 +92,7 @@ Public Sub New ( _
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the current TouchLocation is equal to the specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Determines whether the current TouchLocation is equal to the specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -111,7 +109,7 @@ Public Sub New ( _
             <platform>Windows Phone 7</platform>
           </platforms>
         </overload>
-        <overload signature="TouchLocation">
+        <overload signature="Equals(TouchLocation)">
           <summary><![CDATA[Determines whether the current TouchLocation is equal to the specified TouchLocation.]]></summary>
           <syntax><![CDATA[public bool Equals (
          TouchLocation other

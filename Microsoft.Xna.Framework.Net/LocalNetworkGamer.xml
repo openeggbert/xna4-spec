@@ -64,7 +64,7 @@
     <method name="ReceiveData" returnType="int">
       <summary><![CDATA[Reads the next incoming packet using the specified values.]]></summary>
       <overloads>
-        <overload signature="Byte , Int32, NetworkGamer">
+        <overload signature="ReceiveData(Byte , Int32, NetworkGamer)">
           <summary><![CDATA[Reads the next incoming packet using the specified values.]]></summary>
           <syntax><![CDATA[public int ReceiveData (
          byte[] data,
@@ -85,7 +85,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="PacketReader, NetworkGamer">
+        <overload signature="ReceiveData(PacketReader, NetworkGamer)">
           <summary><![CDATA[Reads the next incoming packet and copies the packet data into the specified reader object.]]></summary>
           <syntax><![CDATA[public int ReceiveData (
          PacketReader data,
@@ -104,7 +104,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Byte , NetworkGamer">
+        <overload signature="ReceiveData(Byte , NetworkGamer)">
           <summary><![CDATA[Reads the next incoming packet using the specified values.]]></summary>
           <syntax><![CDATA[public int ReceiveData (
          byte[] data,
@@ -128,7 +128,7 @@
     <method name="SendData" returnType="void">
       <summary><![CDATA[Sends a byte array to all gamers in a session. This includes the gamer sending the packet.]]></summary>
       <overloads>
-        <overload signature="Byte , SendDataOptions">
+        <overload signature="SendData(Byte , SendDataOptions)">
           <summary><![CDATA[Sends a byte array to all gamers in a session. This includes the gamer sending the packet.]]></summary>
           <syntax><![CDATA[public void SendData (
          byte[] data,
@@ -145,7 +145,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Byte , SendDataOptions, NetworkGamer">
+        <overload signature="SendData(Byte , SendDataOptions, NetworkGamer)">
           <summary><![CDATA[Sends a byte array to the specified gamer.]]></summary>
           <syntax><![CDATA[public void SendData (
          byte[] data,
@@ -164,7 +164,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="PacketWriter, SendDataOptions, NetworkGamer">
+        <overload signature="SendData(PacketWriter, SendDataOptions, NetworkGamer)">
           <summary><![CDATA[Sends a network packet to the specified gamer in a session.]]></summary>
           <syntax><![CDATA[public void SendData (
          PacketWriter data,
@@ -183,7 +183,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Byte , Int32, Int32, SendDataOptions, NetworkGamer">
+        <overload signature="SendData(Byte , Int32, Int32, SendDataOptions, NetworkGamer)">
           <summary><![CDATA[Sends a selected portion of a byte array to the specified gamer.]]></summary>
           <syntax><![CDATA[public void SendData (
          byte[] data,
@@ -206,7 +206,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Byte , Int32, Int32, SendDataOptions">
+        <overload signature="SendData(Byte , Int32, Int32, SendDataOptions)">
           <summary><![CDATA[Sends a selected portion of a byte array to all gamers in a session. This includes the gamer sending the packet.]]></summary>
           <syntax><![CDATA[public void SendData (
          byte[] data,
@@ -227,7 +227,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="PacketWriter, SendDataOptions">
+        <overload signature="SendData(PacketWriter, SendDataOptions)">
           <summary><![CDATA[Sends a network packet to all gamers in a session. This includes the gamer sending the packet.]]></summary>
           <syntax><![CDATA[public void SendData (
          PacketWriter data,

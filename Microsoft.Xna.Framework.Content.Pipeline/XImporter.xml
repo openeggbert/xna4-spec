@@ -35,7 +35,7 @@ public class XImporter : ContentImporter&lt;NodeContent&gt;, IDisposable]]></syn
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Immediately releases the managed and/or unmanaged resources used by this object.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Immediately releases the managed and/or unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[protected virtual void Dispose (
          bool 
@@ -48,7 +48,7 @@ public class XImporter : ContentImporter&lt;NodeContent&gt;, IDisposable]]></syn
             <platform>and Windows XP.</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Dispose()">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[public void Dispose ()]]></syntax>
           <platforms>

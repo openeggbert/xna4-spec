@@ -91,7 +91,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
     <method name="Dot" returnType="float">
       <summary><![CDATA[Calculates the dot product of a specified Vector4 and this Plane.]]></summary>
       <overloads>
-        <overload signature="Vector4">
+        <overload signature="Dot(Vector4)">
           <summary><![CDATA[Calculates the dot product of a specified Vector4 and this Plane.]]></summary>
           <syntax><![CDATA[public float Dot (
          Vector4 value
@@ -106,7 +106,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector4, Single">
+        <overload signature="Dot(Vector4, Single)">
           <summary><![CDATA[Calculates the dot product of a specified Vector4 and this Plane.]]></summary>
           <syntax><![CDATA[public void Dot (
          ref Vector4 value,
@@ -127,7 +127,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
     <method name="DotCoordinate" returnType="void">
       <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane plus the distance (D) value of the Plane.]]></summary>
       <overloads>
-        <overload signature="Vector3, Single">
+        <overload signature="DotCoordinate(Vector3, Single)">
           <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane plus the distance (D) value of the Plane.]]></summary>
           <syntax><![CDATA[public void DotCoordinate (
          ref Vector3 value,
@@ -143,7 +143,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3">
+        <overload signature="DotCoordinate(Vector3)">
           <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane plus the distance (D) value of the Plane.]]></summary>
           <syntax><![CDATA[public float DotCoordinate (
          Vector3 value
@@ -163,7 +163,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
     <method name="DotNormal" returnType="void">
       <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane.]]></summary>
       <overloads>
-        <overload signature="Vector3, Single">
+        <overload signature="DotNormal(Vector3, Single)">
           <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane.]]></summary>
           <syntax><![CDATA[public void DotNormal (
          ref Vector3 value,
@@ -179,7 +179,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3">
+        <overload signature="DotNormal(Vector3)">
           <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane.]]></summary>
           <syntax><![CDATA[public float DotNormal (
          Vector3 value
@@ -199,7 +199,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified Plane is equal to the Plane.]]></summary>
       <overloads>
-        <overload signature="Plane">
+        <overload signature="Equals(Plane)">
           <summary><![CDATA[Determines whether the specified Plane is equal to the Plane.]]></summary>
           <syntax><![CDATA[public bool Equals (
          Plane other
@@ -214,7 +214,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Determines whether the specified Object is equal to the Plane.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -249,7 +249,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
     <method name="Intersects" returnType="PlaneIntersectionType">
       <summary><![CDATA[Checks whether the current Plane intersects a specified BoundingSphere.]]></summary>
       <overloads>
-        <overload signature="BoundingSphere">
+        <overload signature="Intersects(BoundingSphere)">
           <summary><![CDATA[Checks whether the current Plane intersects a specified BoundingSphere.]]></summary>
           <syntax><![CDATA[public PlaneIntersectionType Intersects (
          BoundingSphere sphere
@@ -264,7 +264,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="BoundingSphere, PlaneIntersectionType">
+        <overload signature="Intersects(BoundingSphere, PlaneIntersectionType)">
           <summary><![CDATA[Checks whether the current Plane intersects a BoundingSphere.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref BoundingSphere sphere,
@@ -280,7 +280,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="BoundingBox">
+        <overload signature="Intersects(BoundingBox)">
           <summary><![CDATA[Checks whether the current Plane intersects a specified BoundingBox.]]></summary>
           <syntax><![CDATA[public PlaneIntersectionType Intersects (
          BoundingBox box
@@ -295,7 +295,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="BoundingFrustum">
+        <overload signature="Intersects(BoundingFrustum)">
           <summary><![CDATA[Checks whether the current Plane intersects a specified BoundingFrustum.]]></summary>
           <syntax><![CDATA[public PlaneIntersectionType Intersects (
          BoundingFrustum frustum
@@ -310,7 +310,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="BoundingBox, PlaneIntersectionType">
+        <overload signature="Intersects(BoundingBox, PlaneIntersectionType)">
           <summary><![CDATA[Checks whether the current Plane intersects a BoundingBox.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref BoundingBox box,
@@ -331,7 +331,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
     <method name="Normalize" returnType="void">
       <summary><![CDATA[Changes the coefficients of the Normal vector of this Plane to make it of unit length.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="Normalize()">
           <summary><![CDATA[Changes the coefficients of the Normal vector of this Plane to make it of unit length.]]></summary>
           <syntax><![CDATA[public void Normalize ()]]></syntax>
           <platforms>
@@ -340,7 +340,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Plane">
+        <overload signature="Normalize(Plane)">
           <summary><![CDATA[Changes the coefficients of the Normal vector of a Plane to make it of unit length.]]></summary>
           <syntax><![CDATA[public static Plane Normalize (
          Plane value
@@ -355,7 +355,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Plane, Plane">
+        <overload signature="Normalize(Plane, Plane)">
           <summary><![CDATA[Changes the coefficients of the Normal vector of a Plane to make it of unit length.]]></summary>
           <syntax><![CDATA[public static void Normalize (
          ref Plane value,
@@ -391,7 +391,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
     <method name="Transform" returnType="Plane" isStatic="true">
       <summary><![CDATA[Transforms a normalized Plane by a Matrix.]]></summary>
       <overloads>
-        <overload signature="Plane, Matrix">
+        <overload signature="Transform(Plane, Matrix)">
           <summary><![CDATA[Transforms a normalized Plane by a Matrix.]]></summary>
           <syntax><![CDATA[public static Plane Transform (
          Plane plane,
@@ -408,7 +408,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Plane, Quaternion">
+        <overload signature="Transform(Plane, Quaternion)">
           <summary><![CDATA[Transforms a normalized Plane by a Quaternion rotation.]]></summary>
           <syntax><![CDATA[public static Plane Transform (
          Plane plane,
@@ -425,7 +425,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Plane, Matrix, Plane">
+        <overload signature="Transform(Plane, Matrix, Plane)">
           <summary><![CDATA[Transforms a normalized Plane by a Matrix.]]></summary>
           <syntax><![CDATA[public static void Transform (
          ref Plane plane,
@@ -443,7 +443,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Plane, Quaternion, Plane">
+        <overload signature="Transform(Plane, Quaternion, Plane)">
           <summary><![CDATA[Transforms a normalized Plane by a Quaternion rotation.]]></summary>
           <syntax><![CDATA[public static void Transform (
          ref Plane plane,

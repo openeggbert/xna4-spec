@@ -3,27 +3,25 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="UIElementRenderer" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IDisposable">
   <summary><![CDATA[An object for rendering a Silverlight UIElement into a texture.]]></summary>
-  <syntax><![CDATA['Declaration
-Public Class UIElementRenderer
-         Implements IDisposable]]></syntax>
+  <syntax><![CDATA[public class UIElementRenderer : IDisposable]]></syntax>
   <platforms>
     <platform>Windows Phone</platform>
   </platforms>
   <constructors>
-    <constructor signature="UIElementRenderer(Object, Object, Object)">
+    <constructor signature="UIElementRenderer(UIElement, int, int)">
       <summary><![CDATA[Creates an instance of a UIElementRenderer object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         rootElement As UIElement, _
-         textureWidth As Integer, _
-         textureHeight As Integer _
+      <syntax><![CDATA[public UIElementRenderer (
+         UIElement rootElement,
+         int textureWidth,
+         int textureHeight
 )]]></syntax>
       <parameters>
-        <parameter name="rootElement" type="Object"><![CDATA[Type: UIElement The UIElement to be rendered.]]></parameter>
-        <parameter name="textureWidth" type="Object"><![CDATA[Type: Int32 The width of the texture to be rendered into.]]></parameter>
-        <parameter name="textureHeight" type="Object"><![CDATA[Type: Int32 The height of the texture to be rendered into.]]></parameter>
+        <parameter name="rootElement" type="UIElement"><![CDATA[Type: UIElement The UIElement to be rendered.]]></parameter>
+        <parameter name="textureWidth" type="int"><![CDATA[Type: Int32 The width of the texture to be rendered into.]]></parameter>
+        <parameter name="textureHeight" type="int"><![CDATA[Type: Int32 The height of the texture to be rendered into.]]></parameter>
       </parameters>
       <remarks><![CDATA[Use a UIElementRenderer object to render a Silverlight UIElement into an XNA Texture2D .]]></remarks>
       <platforms>
@@ -32,18 +30,16 @@ Public Sub New ( _
     </constructor>
   </constructors>
   <properties>
-    <property name="Element" type="Object" access="get">
+    <property name="Element" type="UIElement" access="get">
       <summary><![CDATA[A UIElement for rendering.]]></summary>
-      <syntax><![CDATA['Declaration
-Public ReadOnly Property Element As UIElement]]></syntax>
+      <syntax><![CDATA[public UIElement Element { get; }]]></syntax>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
     </property>
-    <property name="Texture" type="Object" access="get">
+    <property name="Texture" type="Texture2D" access="get">
       <summary><![CDATA[Texture which contains a rendered UIElement.]]></summary>
-      <syntax><![CDATA['Declaration
-Public ReadOnly Property Texture As Texture2D]]></syntax>
+      <syntax><![CDATA[public Texture2D Texture { get; }]]></syntax>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -53,23 +49,21 @@ Public ReadOnly Property Texture As Texture2D]]></syntax>
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Releases the unmanaged resources used by the UIElementRenderer and optionally releases the managed resources.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Releases the unmanaged resources used by the UIElementRenderer and optionally releases the managed resources.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Overridable Sub Dispose ( _
-         disposing As Boolean _
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool disposing
 )]]></syntax>
           <parameters>
-            <parameter name="disposing" type="Object"><![CDATA[Type: Boolean Indicates whether an object has been disposed.]]></parameter>
+            <parameter name="disposing" type="bool"><![CDATA[Type: Boolean Indicates whether an object has been disposed.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Dispose()">
           <summary><![CDATA[Releases the unmanaged resources used by the UIElementRenderer.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Sub Dispose]]></syntax>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
@@ -81,8 +75,7 @@ Public Sub Dispose]]></syntax>
       <overloads>
         <overload signature="Render()">
           <summary><![CDATA[Renders a Silverlight UIElement into an XNA Framework Texture2D object.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Sub Render]]></syntax>
+          <syntax><![CDATA[public void Render ()]]></syntax>
           <remarks><![CDATA[When using Render , Silverlight will change the currently active RenderTarget2D and render to it. By default, RenderTarget2D contents are not preserved when switching between RenderTargets. Developers should take care to issue drawing commands to a RenderTarget without using Render in the middle of the set of drawing commands, as this will change the active rendertarget, discarding the contents of that render target by default. Render sets the current active RenderTarget2D to null upon completion.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>

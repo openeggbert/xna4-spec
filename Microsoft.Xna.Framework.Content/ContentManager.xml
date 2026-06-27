@@ -70,7 +70,7 @@
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Releases the unmanaged resources used by the ContentManager and optionally releases the managed resources.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Releases the unmanaged resources used by the ContentManager and optionally releases the managed resources.]]></summary>
           <syntax><![CDATA[protected virtual void Dispose (
          bool disposing
@@ -84,7 +84,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Dispose()">
           <summary><![CDATA[Releases all resources used by the ContentManager class.]]></summary>
           <syntax><![CDATA[public void Dispose ()]]></syntax>
           <platforms>

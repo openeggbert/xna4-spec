@@ -27,7 +27,7 @@
     <method name="ConvertFrom" returnType="Object">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="ITypeDescriptorContext, CultureInfo, Object">
+        <overload signature="ConvertFrom(ITypeDescriptorContext, CultureInfo, Object)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public override Object ConvertFrom (
          ITypeDescriptorContext context,
@@ -50,7 +50,7 @@
     <method name="ConvertTo" returnType="Object">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="ITypeDescriptorContext, CultureInfo, Object, Type">
+        <overload signature="ConvertTo(ITypeDescriptorContext, CultureInfo, Object, Type)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public override Object ConvertTo (
          ITypeDescriptorContext context,
@@ -75,7 +75,7 @@
     <method name="CreateInstance" returnType="Object">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="ITypeDescriptorContext, IDictionary">
+        <overload signature="CreateInstance(ITypeDescriptorContext, IDictionary)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public override Object CreateInstance (
          ITypeDescriptorContext context,

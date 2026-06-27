@@ -71,7 +71,7 @@
     <method name="BeginShowKeyboardInput" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Begins the process for displaying a dialog for keyboard input from a gamer. The display operation is performed asynchronously.]]></summary>
       <overloads>
-        <overload signature="PlayerIndex, String, String, String, AsyncCallback, Object, Boolean">
+        <overload signature="BeginShowKeyboardInput(PlayerIndex, String, String, String, AsyncCallback, Object, Boolean)">
           <summary><![CDATA[Begins the process for displaying asynchronously the software keyboard interface for a gamer by using the password mode if it is specified.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowKeyboardInput (
          PlayerIndex player,
@@ -105,7 +105,7 @@
     <method name="BeginShowMessageBox" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Begins the process of displaying a message box with the specified parameters. The display operation is performed asynchronously.]]></summary>
       <overloads>
-        <overload signature="String, String, Generic IEnumerable, Int32, MessageBoxIcon, AsyncCallback, Object">
+        <overload signature="BeginShowMessageBox(String, String, Generic IEnumerable, Int32, MessageBoxIcon, AsyncCallback, Object)">
           <summary><![CDATA[Begins the process of displaying a message box to which any user on the system can respond.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowMessageBox (
          string title,
@@ -140,7 +140,7 @@
     <method name="BeginShowStorageDeviceSelector" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Begins the process for displaying the storage device selector user interface. The display operation is performed asynchronously.]]></summary>
       <overloads>
-        <overload signature="AsyncCallback, Object">
+        <overload signature="BeginShowStorageDeviceSelector(AsyncCallback, Object)">
           <summary><![CDATA[Begins the process for displaying the storage device selector user interface. The display operation is performed asynchronously.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceSelector (
          AsyncCallback callback,
@@ -158,7 +158,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="PlayerIndex, AsyncCallback, Object">
+        <overload signature="BeginShowStorageDeviceSelector(PlayerIndex, AsyncCallback, Object)">
           <summary><![CDATA[Begins the process for displaying the storage device selector user interface, specifying the index of the player to be shown the user interface. The display operation is performed asynchronously.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceSelector (
          PlayerIndex player,
@@ -178,7 +178,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Int32, Int32, AsyncCallback, Object">
+        <overload signature="BeginShowStorageDeviceSelector(Int32, Int32, AsyncCallback, Object)">
           <summary><![CDATA[Begins the process for displaying the storage device selector user interface, specifying the size of the data to be written to the storage device. The display operation is performed asynchronously.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceSelector (
          int sizeInBytes,
@@ -200,7 +200,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="PlayerIndex, Int32, Int32, AsyncCallback, Object">
+        <overload signature="BeginShowStorageDeviceSelector(PlayerIndex, Int32, Int32, AsyncCallback, Object)">
           <summary><![CDATA[Begins the process for displaying the storage device selector user interface, specifying the index of the player to be shown the user interface, as well as the size of the data to be written to the storage device. The display operation is performed asynchronously.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceSelector (
          PlayerIndex player,
@@ -387,7 +387,7 @@
     <method name="ShowGameInvite" returnType="void" isStatic="true">
       <summary><![CDATA[Displays the game invitation user interface.]]></summary>
       <overloads>
-        <overload signature="String">
+        <overload signature="ShowGameInvite(String)">
           <summary><![CDATA[Displays the game invitation user interface, taking a session ID.]]></summary>
           <syntax><![CDATA[public static void ShowGameInvite (
          string sessionId
@@ -472,12 +472,11 @@
       <overloads>
         <overload signature="ShowParty()">
           <summary><![CDATA[Shows the Xbox LIVE Party screen.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Sub ShowParty ( _
-         player As PlayerIndex _
+          <syntax><![CDATA[public static void ShowParty (
+         PlayerIndex player
 )]]></syntax>
           <parameters>
-            <parameter name="player" type="Object"><![CDATA[Type: PlayerIndex The player index for whom to bring up the Xbox LIVE Party screen.]]></parameter>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Type: PlayerIndex The player index for whom to bring up the Xbox LIVE Party screen.]]></parameter>
           </parameters>
           <remarks><![CDATA[Windows Phone Specific Information This method cannot be used on Windows Phone. If called, it throws a NotSupportedException . Shows the Xbox LIVE Party screen, which allows players to invite others to the party, to invite party members to the current game session, or to chat with party members.]]></remarks>
           <platforms>
@@ -491,12 +490,11 @@ Public Shared Sub ShowParty ( _
       <overloads>
         <overload signature="ShowPartySessions()">
           <summary><![CDATA[Shows the Play with Party Member screen.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Sub ShowPartySessions ( _
-         player As PlayerIndex _
+          <syntax><![CDATA[public static void ShowPartySessions (
+         PlayerIndex player
 )]]></syntax>
           <parameters>
-            <parameter name="player" type="Object"><![CDATA[Type: PlayerIndex The player index for whom the list of game sessions with party members is shown.]]></parameter>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Type: PlayerIndex The player index for whom the list of game sessions with party members is shown.]]></parameter>
           </parameters>
           <remarks><![CDATA[Windows Phone Specific Information This method cannot be used on Windows Phone. If called, it throws a NotSupportedException . This method brings up the Play with Party Member screen, which allows players to join game sessions with fellow party members in the current title. If the player is not currently in a party, or if the platform lacks Xbox LIVE Party support, this method shows the Friends screen instead.]]></remarks>
           <platforms>

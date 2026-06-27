@@ -15,12 +15,11 @@ public struct Viewport]]></syntax>
   <constructors>
     <constructor signature="Viewport(Rectangle)">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         bounds As Rectangle _
+      <syntax><![CDATA[public Viewport (
+         Rectangle bounds
 )]]></syntax>
       <parameters>
-        <parameter name="bounds" type="Object"><![CDATA[Type: Rectangle A bounding box that defines the location and size of the viewport in a render target.]]></parameter>
+        <parameter name="bounds" type="Rectangle"><![CDATA[Type: Rectangle A bounding box that defines the location and size of the viewport in a render target.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -28,18 +27,17 @@ Public Sub New ( _
     </constructor>
     <constructor signature="Viewport(Int32, Int32, Int32, Int32)">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         x As Integer, _
-         y As Integer, _
-         width As Integer, _
-         height As Integer _
+      <syntax><![CDATA[public Viewport (
+         int x,
+         int y,
+         int width,
+         int height
 )]]></syntax>
       <parameters>
-        <parameter name="x" type="Object"><![CDATA[Type: Int32 The x coordinate of the upper-left corner of the viewport in pixels.]]></parameter>
-        <parameter name="y" type="Object"><![CDATA[Type: Int32 The y coordinate of the upper-left corner of the viewport in pixels.]]></parameter>
-        <parameter name="width" type="Object"><![CDATA[Type: Int32 The width of the viewport in pixels.]]></parameter>
-        <parameter name="height" type="Object"><![CDATA[Type: Int32 The height of the viewport in pixels.]]></parameter>
+        <parameter name="x" type="int"><![CDATA[Type: Int32 The x coordinate of the upper-left corner of the viewport in pixels.]]></parameter>
+        <parameter name="y" type="int"><![CDATA[Type: Int32 The y coordinate of the upper-left corner of the viewport in pixels.]]></parameter>
+        <parameter name="width" type="int"><![CDATA[Type: Int32 The width of the viewport in pixels.]]></parameter>
+        <parameter name="height" type="int"><![CDATA[Type: Int32 The height of the viewport in pixels.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

@@ -246,7 +246,7 @@
     <method name="GetDirectoryNames" returnType="string[]">
       <summary><![CDATA[Enumerates the directories in the root of a StorageContainer.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="GetDirectoryNames()">
           <summary><![CDATA[Enumerates the directories in the root of a StorageContainer.]]></summary>
           <syntax><![CDATA[public string[] GetDirectoryNames ()]]></syntax>
           <returns><![CDATA[An array of relative paths of directories in the root of the StorageContainer. A zero-length array specifies that there are no directories in the root.]]></returns>
@@ -257,7 +257,7 @@
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="String">
+        <overload signature="GetDirectoryNames(String)">
           <summary><![CDATA[Enumerates the directories in the root of a StorageContainer that conform to a search pattern.]]></summary>
           <syntax><![CDATA[public string[] GetDirectoryNames (
          string searchPattern
@@ -278,7 +278,7 @@
     <method name="GetFileNames" returnType="string[]">
       <summary><![CDATA[Enumerates files in the root directory of a StorageContainer that match a given pattern.]]></summary>
       <overloads>
-        <overload signature="String">
+        <overload signature="GetFileNames(String)">
           <summary><![CDATA[Enumerates files in the root directory of a StorageContainer that match a given pattern.]]></summary>
           <syntax><![CDATA[public string[] GetFileNames (
          string searchPattern
@@ -295,7 +295,7 @@
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="GetFileNames()">
           <summary><![CDATA[Enumerates files in the root directory of a StorageContainer.]]></summary>
           <syntax><![CDATA[public string[] GetFileNames ()]]></syntax>
           <returns><![CDATA[An array of relative paths of files in the root directory of StorageContainer scope. A zero-length array specifies that there are no files.]]></returns>
@@ -312,7 +312,7 @@
     <method name="OpenFile" returnType="Stream">
       <summary><![CDATA[Opens a file in the StorageContainer in the designated mode with the specified read/write access.]]></summary>
       <overloads>
-        <overload signature="String, FileMode, FileAccess">
+        <overload signature="OpenFile(String, FileMode, FileAccess)">
           <summary><![CDATA[Opens a file in the StorageContainer in the designated mode with the specified read/write access.]]></summary>
           <syntax><![CDATA[public Stream OpenFile (
          string file,
@@ -332,7 +332,7 @@
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="String, FileMode">
+        <overload signature="OpenFile(String, FileMode)">
           <summary><![CDATA[Opens a file in the StorageContainer.]]></summary>
           <syntax><![CDATA[public Stream OpenFile (
          string file,
@@ -350,7 +350,7 @@
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="String, FileMode, FileAccess, FileShare">
+        <overload signature="OpenFile(String, FileMode, FileAccess, FileShare)">
           <summary><![CDATA[Opens a file in the StorageContainer in the designated mode with the specified read/write access and sharing permission.]]></summary>
           <syntax><![CDATA[public Stream OpenFile (
          string file,

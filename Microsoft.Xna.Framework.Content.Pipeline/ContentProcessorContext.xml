@@ -117,12 +117,11 @@
       <overloads>
         <overload signature="AddOutputFile()">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Public MustOverride Sub AddOutputFile ( _
-         filename As String _
+          <syntax><![CDATA[public abstract void AddOutputFile (
+         string filename
 )]]></syntax>
           <parameters>
-            <parameter name="filename" type="Object"><![CDATA[Type: String The name of the file.]]></parameter>
+            <parameter name="filename" type="string"><![CDATA[Type: String The name of the file.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>

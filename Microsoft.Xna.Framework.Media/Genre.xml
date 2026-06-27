@@ -80,7 +80,7 @@
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified Object is equal to this Genre.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Determines whether the specified Object is equal to this Genre.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -96,7 +96,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Genre">
+        <overload signature="Equals(Genre)">
           <summary><![CDATA[Determines whether the specified Genre is equal to this Genre.]]></summary>
           <syntax><![CDATA[public bool Equals (
          Genre other

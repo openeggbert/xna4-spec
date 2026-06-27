@@ -126,7 +126,7 @@
     <method name="SubmitBuffer" returnType="void">
       <summary><![CDATA[Submits an audio buffer for playback. Playback begins at the specifed offset, and the byte count determines the size of the sample played.]]></summary>
       <overloads>
-        <overload signature="Byte , Int32, Int32">
+        <overload signature="SubmitBuffer(Byte , Int32, Int32)">
           <summary><![CDATA[Submits an audio buffer for playback. Playback begins at the specifed offset, and the byte count determines the size of the sample played.]]></summary>
           <syntax><![CDATA[public void SubmitBuffer (
          byte[] buffer,
@@ -147,7 +147,7 @@
             <platform>Windows Phone 7</platform>
           </platforms>
         </overload>
-        <overload signature="Byte ">
+        <overload signature="SubmitBuffer(Byte )">
           <summary><![CDATA[Submits an audio buffer for playback. Playback starts at the beginning, and the buffer is played in its entirety.]]></summary>
           <syntax><![CDATA[public void SubmitBuffer (
          byte[] buffer

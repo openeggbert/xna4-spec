@@ -98,7 +98,7 @@
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified Picture is equal to this Picture.]]></summary>
       <overloads>
-        <overload signature="Picture">
+        <overload signature="Equals(Picture)">
           <summary><![CDATA[Determines whether the specified Picture is equal to this Picture.]]></summary>
           <syntax><![CDATA[public bool Equals (
          Picture other
@@ -114,7 +114,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Determines whether the specified Object is equal to this Picture.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj

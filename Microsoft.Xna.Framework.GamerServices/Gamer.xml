@@ -84,15 +84,14 @@
       <overloads>
         <overload signature="BeginGetFromGamertag()">
           <summary><![CDATA[Begins the process of getting a Gamer object for a specified gamertag.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function BeginGetFromGamertag ( _
-         gamertag As String, _
-         callback As AsyncCallback, _
-         asyncState As Object _
-) As IAsyncResult]]></syntax>
+          <syntax><![CDATA[public static IAsyncResult BeginGetFromGamertag (
+         string gamertag,
+         AsyncCallback callback,
+         Object asyncState
+)]]></syntax>
           <parameters>
-            <parameter name="gamertag" type="Object"><![CDATA[Type: String The Xbox LIVE gamertag for the gamer requested.]]></parameter>
-            <parameter name="callback" type="Object"><![CDATA[Type: AsyncCallback The method to call once the asynchronous operation is finished.]]></parameter>
+            <parameter name="gamertag" type="string"><![CDATA[Type: String The Xbox LIVE gamertag for the gamer requested.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[Type: AsyncCallback The method to call once the asynchronous operation is finished.]]></parameter>
             <parameter name="asyncState" type="Object"><![CDATA[Type: Object State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the method. Call EndGetFromGamertag to access these results.]]></returns>
@@ -108,15 +107,14 @@ Public Shared Function BeginGetFromGamertag ( _
       <overloads>
         <overload signature="BeginGetPartnerToken()">
           <summary><![CDATA[Begins the asynchronous process of getting the partner token for this gamer.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function BeginGetPartnerToken ( _
-         audienceUri As String, _
-         callback As AsyncCallback, _
-         asyncState As Object _
-) As IAsyncResult]]></syntax>
+          <syntax><![CDATA[public static IAsyncResult BeginGetPartnerToken (
+         string audienceUri,
+         AsyncCallback callback,
+         Object asyncState
+)]]></syntax>
           <parameters>
-            <parameter name="audienceUri" type="Object"><![CDATA[Type: String URI associated with the service to use with this token. This cannot be null .]]></parameter>
-            <parameter name="callback" type="Object"><![CDATA[Type: AsyncCallback Method to call once the asynchronous operation is finished.]]></parameter>
+            <parameter name="audienceUri" type="string"><![CDATA[Type: String URI associated with the service to use with this token. This cannot be null .]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[Type: AsyncCallback Method to call once the asynchronous operation is finished.]]></parameter>
             <parameter name="asyncState" type="Object"><![CDATA[Type: Object State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the method. Call EndGetPartnerToken to access these results.]]></returns>
@@ -201,12 +199,11 @@ Public Shared Function BeginGetPartnerToken ( _
       <overloads>
         <overload signature="EndGetProfile()">
           <summary><![CDATA[Ends an asynchronous profile read operation.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Function EndGetProfile ( _
-         result As IAsyncResult _
-) As GamerProfile]]></syntax>
+          <syntax><![CDATA[public GamerProfile EndGetProfile (
+         IAsyncResult result
+)]]></syntax>
           <parameters>
-            <parameter name="result" type="Object"><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the operation.]]></parameter>
+            <parameter name="result" type="IAsyncResult"><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the operation.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: GamerProfile The profile data for this gamer.]]></returns>
           <platforms>
@@ -220,12 +217,11 @@ Public Function EndGetProfile ( _
       <overloads>
         <overload signature="GetFromGamertag()">
           <summary><![CDATA[Returns a Gamer object for the specified gamertag.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function GetFromGamertag ( _
-         gamertag As String _
-) As Gamer]]></syntax>
+          <syntax><![CDATA[public static Gamer GetFromGamertag (
+         string gamertag
+)]]></syntax>
           <parameters>
-            <parameter name="gamertag" type="Object"><![CDATA[Type: String The Xbox LIVE gamertag for the gamer requested.]]></parameter>
+            <parameter name="gamertag" type="string"><![CDATA[Type: String The Xbox LIVE gamertag for the gamer requested.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Gamer A Gamer object for the specified gamertag.]]></returns>
           <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
@@ -240,12 +236,11 @@ Public Shared Function GetFromGamertag ( _
       <overloads>
         <overload signature="GetPartnerToken()">
           <summary><![CDATA[Gets the partner token for this gamer.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function GetPartnerToken ( _
-         audienceUri As String _
-) As String]]></syntax>
+          <syntax><![CDATA[public static string GetPartnerToken (
+         string audienceUri
+)]]></syntax>
           <parameters>
-            <parameter name="audienceUri" type="Object"><![CDATA[Type: String URI associated with the service that will be used with this token. This cannot be null .]]></parameter>
+            <parameter name="audienceUri" type="string"><![CDATA[Type: String URI associated with the service that will be used with this token. This cannot be null .]]></parameter>
           </parameters>
           <returns><![CDATA[Type: String The Xbox LIVE partner token for the gamer.]]></returns>
           <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. A partner token contains authentication information that identifies both the application and gamer for communication with Xbox LIVE.]]></remarks>

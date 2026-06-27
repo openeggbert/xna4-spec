@@ -73,12 +73,11 @@
       <overloads>
         <overload signature="Initialize()">
           <summary><![CDATA[Retrieves and caches nested type readers. Called by the framework at creation time.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal Overridable Sub Initialize ( _
-         manager As ContentTypeReaderManager _
+          <syntax><![CDATA[protected internal virtual void Initialize (
+         ContentTypeReaderManager manager
 )]]></syntax>
           <parameters>
-            <parameter name="manager" type="Object"><![CDATA[Type: ContentTypeReaderManager The content manager.]]></parameter>
+            <parameter name="manager" type="ContentTypeReaderManager"><![CDATA[Type: ContentTypeReaderManager The content manager.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -89,31 +88,29 @@ Protected Internal Overridable Sub Initialize ( _
     <method name="Read" returnType="void">
       <summary><![CDATA[Reads a strongly typed object from the current stream.]]></summary>
       <overloads>
-        <overload signature="ContentReader, T">
+        <overload signature="Read(ContentReader, T)">
           <summary><![CDATA[Reads a strongly typed object from the current stream.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal MustOverride Function Read ( _
-         input As ContentReader, _
-         existingInstance As T _
-) As T]]></syntax>
+          <syntax><![CDATA[protected internal abstract T Read (
+         ContentReader input,
+         T existingInstance
+)]]></syntax>
           <parameters>
-            <parameter name="input" type="Object"><![CDATA[Type: ContentReader The ContentReader used to read the object.]]></parameter>
-            <parameter name="existingInstance" type="Object"><![CDATA[Type: T An existing object to read into.]]></parameter>
+            <parameter name="input" type="ContentReader"><![CDATA[Type: ContentReader The ContentReader used to read the object.]]></parameter>
+            <parameter name="existingInstance" type="T"><![CDATA[Type: T An existing object to read into.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: T The type of object to read.]]></returns>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="ContentReader, Object">
+        <overload signature="Read(ContentReader, Object)">
           <summary><![CDATA[Reads an object from the current stream.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal Overrides Function Read ( _
-         input As ContentReader, _
-         existingInstance As Object _
-) As Object]]></syntax>
+          <syntax><![CDATA[protected internal override Object Read (
+         ContentReader input,
+         Object existingInstance
+)]]></syntax>
           <parameters>
-            <parameter name="input" type="Object"><![CDATA[Type: ContentReader The ContentReader used to read the object.]]></parameter>
+            <parameter name="input" type="ContentReader"><![CDATA[Type: ContentReader The ContentReader used to read the object.]]></parameter>
             <parameter name="existingInstance" type="Object"><![CDATA[Type: Object An existing object to read into.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Object The object that was read.]]></returns>

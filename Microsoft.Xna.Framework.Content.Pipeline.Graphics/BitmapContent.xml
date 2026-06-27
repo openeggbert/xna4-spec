@@ -59,7 +59,7 @@
     <method name="Copy" returnType="void" isStatic="true">
       <summary><![CDATA[Copies one bitmap into another.]]></summary>
       <overloads>
-        <overload signature="BitmapContent, Rectangle, BitmapContent, Rectangle">
+        <overload signature="Copy(BitmapContent, Rectangle, BitmapContent, Rectangle)">
           <summary><![CDATA[Copies one bitmap into another.]]></summary>
           <syntax><![CDATA[public static void Copy (
          BitmapContent sourceBitmap,
@@ -78,7 +78,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="BitmapContent, BitmapContent">
+        <overload signature="Copy(BitmapContent, BitmapContent)">
           <summary><![CDATA[Copies one bitmap into another.]]></summary>
           <syntax><![CDATA[public static void Copy (
          BitmapContent sourceBitmap,

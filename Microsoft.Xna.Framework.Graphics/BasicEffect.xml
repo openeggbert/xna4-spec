@@ -47,12 +47,11 @@
     </constructor>
     <constructor signature="BasicEffect(GraphicsDevice)">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         device As GraphicsDevice _
+      <syntax><![CDATA[public BasicEffect (
+         GraphicsDevice device
 )]]></syntax>
       <parameters>
-        <parameter name="device" type="Object"><![CDATA[Type: GraphicsDevice A device.]]></parameter>
+        <parameter name="device" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice A device.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -60,12 +59,11 @@ Public Sub New ( _
     </constructor>
     <constructor signature="BasicEffect(BasicEffect)">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Protected Sub New ( _
-         cloneSource As BasicEffect _
+      <syntax><![CDATA[protected BasicEffect (
+         BasicEffect cloneSource
 )]]></syntax>
       <parameters>
-        <parameter name="cloneSource" type="Object"><![CDATA[Type: BasicEffect An instance of a object to copy initialization data from.]]></parameter>
+        <parameter name="cloneSource" type="BasicEffect"><![CDATA[Type: BasicEffect An instance of a object to copy initialization data from.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

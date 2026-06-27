@@ -27,7 +27,7 @@
     <method name="Dispose" returnType="void">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[protected virtual void Dispose (
          bool 
@@ -37,7 +37,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Dispose()">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public void Dispose ()]]></syntax>
           <platforms>

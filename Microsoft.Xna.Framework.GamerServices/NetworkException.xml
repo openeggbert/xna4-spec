@@ -17,14 +17,13 @@
   <constructors>
     <constructor signature="NetworkException(String, Exception)">
       <summary><![CDATA[Initializes a new instance of NetworkException with the specified error message and the inner exception.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         message As String, _
-         innerException As Exception _
+      <syntax><![CDATA[public NetworkException (
+         string message,
+         Exception innerException
 )]]></syntax>
       <parameters>
-        <parameter name="message" type="Object"><![CDATA[Type: String A message that describes the error.]]></parameter>
-        <parameter name="innerException" type="Object"><![CDATA[Type: Exception The inner exception related to this exception.]]></parameter>
+        <parameter name="message" type="string"><![CDATA[Type: String A message that describes the error.]]></parameter>
+        <parameter name="innerException" type="Exception"><![CDATA[Type: Exception The inner exception related to this exception.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -32,12 +31,11 @@ Public Sub New ( _
     </constructor>
     <constructor signature="NetworkException(String)">
       <summary><![CDATA[Initializes a new instance of NetworkException with the specified error message.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         message As String _
+      <syntax><![CDATA[public NetworkException (
+         string message
 )]]></syntax>
       <parameters>
-        <parameter name="message" type="Object"><![CDATA[Type: String A message that describes the error.]]></parameter>
+        <parameter name="message" type="string"><![CDATA[Type: String A message that describes the error.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

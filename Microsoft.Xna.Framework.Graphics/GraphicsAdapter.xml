@@ -217,7 +217,7 @@
     <method name="CheckDeviceFormat" returnType="bool">
       <summary><![CDATA[Verifies whether a depth buffer format is available as a specified resource type and can be used as a texture, depth-stencil buffer, render target, or any combination of the three, on a device representing the current adapter.]]></summary>
       <overloads>
-        <overload signature="DeviceType, SurfaceFormat, ResourceUsage, QueryUsages, ResourceType, DepthFormat">
+        <overload signature="CheckDeviceFormat(DeviceType, SurfaceFormat, ResourceUsage, QueryUsages, ResourceType, DepthFormat)">
           <summary><![CDATA[Verifies whether a depth buffer format is available as a specified resource type and can be used as a texture, depth-stencil buffer, render target, or any combination of the three, on a device representing the current adapter.]]></summary>
           <syntax><![CDATA[public bool CheckDeviceFormat (
          DeviceType deviceType,
@@ -243,7 +243,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="DeviceType, SurfaceFormat, ResourceUsage, QueryUsages, ResourceType, SurfaceFormat">
+        <overload signature="CheckDeviceFormat(DeviceType, SurfaceFormat, ResourceUsage, QueryUsages, ResourceType, SurfaceFormat)">
           <summary><![CDATA[Verifies whether a surface buffer format is available as a specified resource type and can be used as a texture, depth-stencil buffer, render target, or any combination of the three, on a device representing the current adapter.]]></summary>
           <syntax><![CDATA[public bool CheckDeviceFormat (
          DeviceType deviceType,
@@ -299,7 +299,7 @@
     <method name="CheckDeviceMultiSampleType" returnType="bool">
       <summary><![CDATA[Verifies whether a multisample technique is available on a specified device, optionally returning the number of quality stops available for the specified technique.]]></summary>
       <overloads>
-        <overload signature="DeviceType, SurfaceFormat, Boolean, MultiSampleType, Int32">
+        <overload signature="CheckDeviceMultiSampleType(DeviceType, SurfaceFormat, Boolean, MultiSampleType, Int32)">
           <summary><![CDATA[Verifies whether a multisample technique is available on a specified device, optionally returning the number of quality stops available for the specified technique.]]></summary>
           <syntax><![CDATA[public bool CheckDeviceMultiSampleType (
          DeviceType deviceType,
@@ -322,7 +322,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="DeviceType, SurfaceFormat, Boolean, MultiSampleType">
+        <overload signature="CheckDeviceMultiSampleType(DeviceType, SurfaceFormat, Boolean, MultiSampleType)">
           <summary><![CDATA[Verifies whether a multisample technique is available on a specified device.]]></summary>
           <syntax><![CDATA[public bool CheckDeviceMultiSampleType (
          DeviceType deviceType,
@@ -390,7 +390,7 @@
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified Object is equal to the GraphicsAdapter.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Determines whether the specified Object is equal to the GraphicsAdapter.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj

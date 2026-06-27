@@ -15,12 +15,11 @@
   <constructors>
     <constructor signature="VertexDeclaration(VertexElement )">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         elements As VertexElement() _
+      <syntax><![CDATA[public VertexDeclaration (
+         params VertexElement[] elements
 )]]></syntax>
       <parameters>
-        <parameter name="elements" type="Object"><![CDATA[Type: VertexElement [ ParamArrayAttribute ] An array of per-vertex elements.]]></parameter>
+        <parameter name="elements" type="params VertexElement[]"><![CDATA[Type: VertexElement [ ParamArrayAttribute ] An array of per-vertex elements.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -28,14 +27,13 @@ Public Sub New ( _
     </constructor>
     <constructor signature="VertexDeclaration(Int32, VertexElement )">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         vertexStride As Integer, _
-         elements As VertexElement() _
+      <syntax><![CDATA[public VertexDeclaration (
+         int vertexStride,
+         params VertexElement[] elements
 )]]></syntax>
       <parameters>
-        <parameter name="vertexStride" type="Object"><![CDATA[Type: Int32 The number of bytes per element.]]></parameter>
-        <parameter name="elements" type="Object"><![CDATA[Type: VertexElement [ ParamArrayAttribute ] An array of per-vertex elements.]]></parameter>
+        <parameter name="vertexStride" type="int"><![CDATA[Type: Int32 The number of bytes per element.]]></parameter>
+        <parameter name="elements" type="params VertexElement[]"><![CDATA[Type: VertexElement [ ParamArrayAttribute ] An array of per-vertex elements.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -111,7 +109,7 @@ Public Sub New ( _
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[protected virtual void Dispose (
          bool 
@@ -123,7 +121,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Dispose()">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[public void Dispose ()]]></syntax>
           <remarks><![CDATA[Call Dispose when you are finished using the VertexDeclaration . The Dispose method leaves the VertexDeclaration in an unusable state. After calling Dispose , you must release all references to the VertexDeclaration so the garbage collector can reclaim the memory that the VertexDeclaration was occupying. Note Always call Dispose before you release your last reference to the VertexDeclaration . Otherwise, the resources it is using will not be freed until the garbage collector calls the VertexDeclaration object's Finalize method.]]></remarks>
@@ -138,7 +136,7 @@ Public Sub New ( _
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -203,7 +201,7 @@ Public Sub New ( _
     <method name="GetVertexStrideSize" returnType="int" isStatic="true">
       <summary><![CDATA[Gets the size of a vertex from the vertex declaration.]]></summary>
       <overloads>
-        <overload signature="VertexElement , Int32">
+        <overload signature="GetVertexStrideSize(VertexElement , Int32)">
           <summary><![CDATA[Gets the size of a vertex from the vertex declaration.]]></summary>
           <syntax><![CDATA[public static int GetVertexStrideSize (
          VertexElement[] elements,
@@ -220,7 +218,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Int32">
+        <overload signature="GetVertexStrideSize(Int32)">
           <summary><![CDATA[Gets the size of a vertex from the vertex declaration.]]></summary>
           <syntax><![CDATA[public int GetVertexStrideSize (
          int stream

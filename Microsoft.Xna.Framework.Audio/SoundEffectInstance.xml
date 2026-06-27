@@ -83,7 +83,7 @@
     <method name="Apply3D" returnType="void">
       <summary><![CDATA[Applys 3D position to the sound using multiple listeners.]]></summary>
       <overloads>
-        <overload signature="AudioListener , AudioEmitter">
+        <overload signature="Apply3D(AudioListener , AudioEmitter)">
           <summary><![CDATA[Applys 3D position to the sound using multiple listeners.]]></summary>
           <syntax><![CDATA[public void Apply3D (
          AudioListener[] listeners,
@@ -100,7 +100,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="AudioListener, AudioEmitter">
+        <overload signature="Apply3D(AudioListener, AudioEmitter)">
           <summary><![CDATA[Applys 3D positioning to the sound using a single listener.]]></summary>
           <syntax><![CDATA[public void Apply3D (
          AudioListener listener,
@@ -122,7 +122,7 @@
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Releases the resources used by the Dispose.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Releases the unmanaged resources held by this SoundEffectInstance, and optionally releases the managed resources.]]></summary>
           <syntax><![CDATA[protected virtual void Dispose (
          bool disposing
@@ -206,7 +206,7 @@
     <method name="Stop" returnType="void">
       <summary><![CDATA[Immediately stops playing a SoundEffectInstance.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="Stop()">
           <summary><![CDATA[Immediately stops playing a SoundEffectInstance.]]></summary>
           <syntax><![CDATA[public void Stop ()]]></syntax>
           <platforms>
@@ -216,7 +216,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Boolean">
+        <overload signature="Stop(Boolean)">
           <summary><![CDATA[Stops playing a SoundEffectInstance, either immediately or as authored.]]></summary>
           <syntax><![CDATA[public void Stop (
          bool immediate

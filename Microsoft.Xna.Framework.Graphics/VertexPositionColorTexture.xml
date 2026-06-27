@@ -13,17 +13,16 @@ public struct VertexPositionColorTexture]]></syntax>
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="VertexPositionColorTexture(Object, Object, Object)">
+    <constructor signature="VertexPositionColorTexture(Object, Color, Object)">
       <summary><![CDATA[Initializes a new instance of the VertexPositionColorTexture class.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         position As Vector3, _
-         color As Color, _
-         textureCoordinate As Vector2 _
+      <syntax><![CDATA[public VertexPositionColorTexture (
+         Vector3 position,
+         Color color,
+         Vector2 textureCoordinate
 )]]></syntax>
       <parameters>
         <parameter name="position" type="Object"><![CDATA[Type: Vector3 Position of the vertex.]]></parameter>
-        <parameter name="color" type="Object"><![CDATA[Type: Color Color of the vertex.]]></parameter>
+        <parameter name="color" type="Color"><![CDATA[Type: Color Color of the vertex.]]></parameter>
         <parameter name="textureCoordinate" type="Object"><![CDATA[Type: Vector2 Texture coordinate of the vertex.]]></parameter>
       </parameters>
       <platforms>
@@ -64,7 +63,7 @@ Public Sub New ( _
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj

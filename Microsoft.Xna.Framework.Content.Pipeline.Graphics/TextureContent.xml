@@ -77,7 +77,7 @@
     <method name="Validate" returnType="void">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Validate(Boolean)">
           <summary><![CDATA[Verifies that all contents of this texture are present and correct.]]></summary>
           <syntax><![CDATA[protected void Validate (
          bool facesMustHaveSameMipCount
@@ -91,7 +91,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Validate()">
           <summary><![CDATA[Verifies that all contents of this texture are present and correct.]]></summary>
           <syntax><![CDATA[public virtual void Validate ()]]></syntax>
           <remarks><![CDATA[If texture verification fails, InvalidContentException is thrown. The base implementation of this method calls Validate with a value of true .]]></remarks>

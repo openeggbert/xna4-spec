@@ -100,7 +100,7 @@
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -553,7 +553,7 @@
     <method name="SetValue" returnType="void">
       <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
       <overloads>
-        <overload signature="Quaternion">
+        <overload signature="SetValue(Quaternion)">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          Quaternion value
@@ -568,7 +568,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3">
+        <overload signature="SetValue(Vector3)">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          Vector3 value
@@ -583,7 +583,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Boolean">
+        <overload signature="SetValue(Boolean)">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          bool value
@@ -598,7 +598,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix ">
+        <overload signature="SetValue(Matrix )">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          Matrix[] value
@@ -613,7 +613,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Texture">
+        <overload signature="SetValue(Texture)">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          Texture value
@@ -628,7 +628,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion ">
+        <overload signature="SetValue(Quaternion )">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          Quaternion[] value
@@ -643,7 +643,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Int32 ">
+        <overload signature="SetValue(Int32 )">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          int[] value
@@ -658,7 +658,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single">
+        <overload signature="SetValue(Single)">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          float value
@@ -673,7 +673,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector4">
+        <overload signature="SetValue(Vector4)">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          Vector4 value
@@ -688,7 +688,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single ">
+        <overload signature="SetValue(Single )">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          float[] value
@@ -703,7 +703,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix">
+        <overload signature="SetValue(Matrix)">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          Matrix value
@@ -718,7 +718,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector4 ">
+        <overload signature="SetValue(Vector4 )">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          Vector4[] value
@@ -733,7 +733,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="String">
+        <overload signature="SetValue(String)">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          string value
@@ -748,7 +748,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector2">
+        <overload signature="SetValue(Vector2)">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          Vector2 value
@@ -763,7 +763,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3 ">
+        <overload signature="SetValue(Vector3 )">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          Vector3[] value
@@ -778,7 +778,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Int32">
+        <overload signature="SetValue(Int32)">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          int value
@@ -793,7 +793,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector2 ">
+        <overload signature="SetValue(Vector2 )">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          Vector2[] value
@@ -808,7 +808,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Boolean ">
+        <overload signature="SetValue(Boolean )">
           <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
           <syntax><![CDATA[public void SetValue (
          bool[] value
@@ -828,7 +828,7 @@
     <method name="SetValueTranspose" returnType="void">
       <summary><![CDATA[Sets the value of the EffectParameter to the transpose of a Matrix.]]></summary>
       <overloads>
-        <overload signature="Matrix">
+        <overload signature="SetValueTranspose(Matrix)">
           <summary><![CDATA[Sets the value of the EffectParameter to the transpose of a Matrix.]]></summary>
           <syntax><![CDATA[public void SetValueTranspose (
          Matrix value
@@ -843,7 +843,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix ">
+        <overload signature="SetValueTranspose(Matrix )">
           <summary><![CDATA[Sets the value of the EffectParameter to the transpose of a Matrix.]]></summary>
           <syntax><![CDATA[public void SetValueTranspose (
          Matrix[] value

@@ -78,7 +78,7 @@
     <method name="Write" returnType="void">
       <summary><![CDATA[Writes additional data into the vertex buffer. Writing begins at the specified byte offset, and each value is spaced according to the specified stride value (in bytes).]]></summary>
       <overloads>
-        <overload signature="Int32, Int32, Type, IEnumerable">
+        <overload signature="Write(Int32, Int32, Type, IEnumerable)">
           <summary><![CDATA[Writes additional data into the vertex buffer. Writing begins at the specified byte offset, and each value is spaced according to the specified stride value (in bytes).]]></summary>
           <syntax><![CDATA[public void Write (
          int offset,

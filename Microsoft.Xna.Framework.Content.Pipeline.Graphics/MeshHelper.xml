@@ -124,7 +124,7 @@
     <method name="MergeDuplicateVertices" returnType="void" isStatic="true">
       <summary><![CDATA[Processes the PositionIndices and VertexChannel data of the specified geometry batch, merging any duplicate vertices.]]></summary>
       <overloads>
-        <overload signature="GeometryContent">
+        <overload signature="MergeDuplicateVertices(GeometryContent)">
           <summary><![CDATA[Processes the PositionIndices and VertexChannel data of the specified geometry batch, merging any duplicate vertices.]]></summary>
           <syntax><![CDATA[public static void MergeDuplicateVertices (
          GeometryContent geometry
@@ -137,7 +137,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="MeshContent">
+        <overload signature="MergeDuplicateVertices(MeshContent)">
           <summary><![CDATA[Processes the PositionIndices and VertexChannel data of the specified mesh, merging any duplicate vertices.]]></summary>
           <syntax><![CDATA[public static void MergeDuplicateVertices (
          MeshContent mesh

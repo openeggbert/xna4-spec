@@ -66,7 +66,7 @@
     <method name="Write" returnType="void">
       <summary><![CDATA[Writes a Double value to an outgoing network packet.]]></summary>
       <overloads>
-        <overload signature="Double">
+        <overload signature="Write(Double)">
           <summary><![CDATA[Writes a Double value to an outgoing network packet.]]></summary>
           <syntax><![CDATA[public override void Write (
          double value
@@ -81,7 +81,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Color">
+        <overload signature="Write(Color)">
           <summary><![CDATA[Writes a Color value to an outgoing network packet.]]></summary>
           <syntax><![CDATA[public void Write (
          Color value
@@ -96,7 +96,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3">
+        <overload signature="Write(Vector3)">
           <summary><![CDATA[Writes a Vector3 value to an outgoing network packet.]]></summary>
           <syntax><![CDATA[public void Write (
          Vector3 value
@@ -111,7 +111,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Color">
+        <overload signature="Write(Color)">
           <summary><![CDATA[Writes a Color value to an outgoing network packet.]]></summary>
           <syntax><![CDATA[public void Write (
          Color value
@@ -126,7 +126,7 @@
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion">
+        <overload signature="Write(Quaternion)">
           <summary><![CDATA[Writes a Quaternion value to an outgoing network packet.]]></summary>
           <syntax><![CDATA[public void Write (
          Quaternion value
@@ -141,7 +141,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Vector2">
+        <overload signature="Write(Vector2)">
           <summary><![CDATA[Writes a Vector2 value to an outgoing network packet.]]></summary>
           <syntax><![CDATA[public void Write (
          Vector2 value
@@ -156,7 +156,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Single">
+        <overload signature="Write(Single)">
           <summary><![CDATA[Writes a Single value to an outgoing network packet.]]></summary>
           <syntax><![CDATA[public override void Write (
          float value
@@ -171,7 +171,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Vector4">
+        <overload signature="Write(Vector4)">
           <summary><![CDATA[Writes a Vector4 value to an outgoing network packet.]]></summary>
           <syntax><![CDATA[public void Write (
          Vector4 value
@@ -186,7 +186,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix">
+        <overload signature="Write(Matrix)">
           <summary><![CDATA[Writes a Matrix value to an outgoing network packet.]]></summary>
           <syntax><![CDATA[public void Write (
          Matrix value

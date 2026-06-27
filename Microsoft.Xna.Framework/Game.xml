@@ -168,7 +168,7 @@
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="Dispose()">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[public void Dispose ()]]></syntax>
           <platforms>
@@ -177,7 +177,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Releases all resources used by the Game class.]]></summary>
           <syntax><![CDATA[protected virtual void Dispose (
          bool disposing
@@ -439,12 +439,11 @@
       <overloads>
         <overload signature="ShowMissingRequirementMessage()">
           <summary><![CDATA[This is used to display an error message if there is no suitable graphics device or sound card.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Overridable Function ShowMissingRequirementMessage ( _
-         exception As Exception _
-) As Boolean]]></syntax>
+          <syntax><![CDATA[protected virtual bool ShowMissingRequirementMessage (
+         Exception exception
+)]]></syntax>
           <parameters>
-            <parameter name="exception" type="Object"><![CDATA[Type: Exception The exception to display.]]></parameter>
+            <parameter name="exception" type="Exception"><![CDATA[Type: Exception The exception to display.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if an error was displayed, otherwise false.]]></returns>
           <remarks><![CDATA[Games are not expected to call this method directly. This method will be called automatically if the game throws an unhandled exception of type NoSuitableGraphicsDeviceException or NoAudioHardwareException . You may override this method to add messages for additional exception types, or to provide localized versions of the error message text.]]></remarks>

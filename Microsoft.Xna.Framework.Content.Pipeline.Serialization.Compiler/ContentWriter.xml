@@ -37,7 +37,7 @@
     <method name="Write" returnType="void">
       <summary><![CDATA[Writes a Vector2 value.]]></summary>
       <overloads>
-        <overload signature="Vector2">
+        <overload signature="Write(Vector2)">
           <summary><![CDATA[Writes a Vector2 value.]]></summary>
           <syntax><![CDATA[public void Write (
          Vector2 value
@@ -50,7 +50,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector4">
+        <overload signature="Write(Vector4)">
           <summary><![CDATA[Writes a Vector4 value.]]></summary>
           <syntax><![CDATA[public void Write (
          Vector4 value
@@ -63,7 +63,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix">
+        <overload signature="Write(Matrix)">
           <summary><![CDATA[Writes a Matrix value.]]></summary>
           <syntax><![CDATA[public void Write (
          Matrix value
@@ -76,14 +76,13 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Color">
+        <overload signature="Write(Color)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Sub Write ( _
-         value As Color _
+          <syntax><![CDATA[public void Write (
+         Color value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Type: Color Value of a color using Red, Green, Blue, and Alpha values to write.]]></parameter>
+            <parameter name="value" type="Color"><![CDATA[Type: Color Value of a color using Red, Green, Blue, and Alpha values to write.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>
@@ -91,7 +90,7 @@ Public Sub Write ( _
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion">
+        <overload signature="Write(Quaternion)">
           <summary><![CDATA[Writes a Quaternion value.]]></summary>
           <syntax><![CDATA[public void Write (
          Quaternion value
@@ -104,7 +103,7 @@ Public Sub Write ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3">
+        <overload signature="Write(Vector3)">
           <summary><![CDATA[Writes a Vector3 value.]]></summary>
           <syntax><![CDATA[public void Write (
          Vector3 value

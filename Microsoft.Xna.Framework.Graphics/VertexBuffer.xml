@@ -75,18 +75,17 @@
     </constructor>
     <constructor signature="VertexBuffer(GraphicsDevice, Type, Int32, BufferUsage)">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         graphicsDevice As GraphicsDevice, _
-         vertexType As Type, _
-         vertexCount As Integer, _
-         usage As BufferUsage _
+      <syntax><![CDATA[public VertexBuffer (
+         GraphicsDevice graphicsDevice,
+         Type vertexType,
+         int vertexCount,
+         BufferUsage usage
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The graphics device.]]></parameter>
-        <parameter name="vertexType" type="Object"><![CDATA[Type: Type The data type.]]></parameter>
-        <parameter name="vertexCount" type="Object"><![CDATA[Type: Int32 The number of vertices.]]></parameter>
-        <parameter name="usage" type="Object"><![CDATA[Type: BufferUsage Behavior options; it is good practice for this to match the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The graphics device.]]></parameter>
+        <parameter name="vertexType" type="Type"><![CDATA[Type: Type The data type.]]></parameter>
+        <parameter name="vertexCount" type="int"><![CDATA[Type: Int32 The number of vertices.]]></parameter>
+        <parameter name="usage" type="BufferUsage"><![CDATA[Type: BufferUsage Behavior options; it is good practice for this to match the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -114,18 +113,17 @@ Public Sub New ( _
     </constructor>
     <constructor signature="VertexBuffer(GraphicsDevice, VertexDeclaration, Int32, BufferUsage)">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         graphicsDevice As GraphicsDevice, _
-         vertexDeclaration As VertexDeclaration, _
-         vertexCount As Integer, _
-         usage As BufferUsage _
+      <syntax><![CDATA[public VertexBuffer (
+         GraphicsDevice graphicsDevice,
+         VertexDeclaration vertexDeclaration,
+         int vertexCount,
+         BufferUsage usage
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The graphics device.]]></parameter>
-        <parameter name="vertexDeclaration" type="Object"><![CDATA[Type: VertexDeclaration The vertex declaration, which describes per-vertex data.]]></parameter>
-        <parameter name="vertexCount" type="Object"><![CDATA[Type: Int32 The number of vertices.]]></parameter>
-        <parameter name="usage" type="Object"><![CDATA[Type: BufferUsage Behavior options; it is good practice for this to match the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The graphics device.]]></parameter>
+        <parameter name="vertexDeclaration" type="VertexDeclaration"><![CDATA[Type: VertexDeclaration The vertex declaration, which describes per-vertex data.]]></parameter>
+        <parameter name="vertexCount" type="int"><![CDATA[Type: Int32 The number of vertices.]]></parameter>
+        <parameter name="usage" type="BufferUsage"><![CDATA[Type: BufferUsage Behavior options; it is good practice for this to match the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -196,7 +194,7 @@ Public Sub New ( _
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[protected override void Dispose (
          bool 
@@ -213,7 +211,7 @@ Public Sub New ( _
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -263,7 +261,7 @@ Public Sub New ( _
     <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
-        <overload signature="VertexBuffer, VertexBuffer">
+        <overload signature="op_Equality(VertexBuffer, VertexBuffer)">
           <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
           <syntax><![CDATA[public static bool op_Equality (
          VertexBuffer left,
@@ -285,7 +283,7 @@ Public Sub New ( _
     <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
-        <overload signature="VertexBuffer, VertexBuffer">
+        <overload signature="op_Inequality(VertexBuffer, VertexBuffer)">
           <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
           <syntax><![CDATA[public static bool op_Inequality (
          VertexBuffer left,

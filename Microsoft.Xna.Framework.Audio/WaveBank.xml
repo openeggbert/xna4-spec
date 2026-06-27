@@ -86,7 +86,7 @@
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="Dispose()">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[public void Dispose ()]]></syntax>
           <platforms>
@@ -95,7 +95,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[protected virtual void Dispose (
          bool 
@@ -111,7 +111,7 @@
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj

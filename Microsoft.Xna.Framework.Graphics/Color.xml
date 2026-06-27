@@ -1410,7 +1410,7 @@ public UInt32 PackedValue { get; set; }]]></syntax>
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -1425,7 +1425,7 @@ public UInt32 PackedValue { get; set; }]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Color">
+        <overload signature="Equals(Color)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public bool Equals (
          Color other

@@ -46,7 +46,7 @@
     <method name="Create" returnType="LeaderboardIdentity" isStatic="true">
       <summary><![CDATA[Creates a leaderboard identity from a leaderboard key.]]></summary>
       <overloads>
-        <overload signature="LeaderboardKey">
+        <overload signature="Create(LeaderboardKey)">
           <summary><![CDATA[Creates a leaderboard identity from a leaderboard key.]]></summary>
           <syntax><![CDATA[public static LeaderboardIdentity Create (
          LeaderboardKey key
@@ -64,7 +64,7 @@
             <platform>Windows Phone 7</platform>
           </platforms>
         </overload>
-        <overload signature="LeaderboardKey, Int32">
+        <overload signature="Create(LeaderboardKey, Int32)">
           <summary><![CDATA[Creates a new LeaderboardIdentity from a leaderboard key and game mode value.]]></summary>
           <syntax><![CDATA[public static LeaderboardIdentity Create (
          LeaderboardKey key,

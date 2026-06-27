@@ -19,7 +19,7 @@
     <method name="GetState" returnType="KeyboardState" isStatic="true">
       <summary><![CDATA[Returns the current keyboard state.]]></summary>
       <overloads>
-        <overload signature="PlayerIndex">
+        <overload signature="GetState(PlayerIndex)">
           <summary><![CDATA[Returns the current Chatpad state for the specified player.]]></summary>
           <syntax><![CDATA[public static KeyboardState GetState (
          PlayerIndex playerIndex

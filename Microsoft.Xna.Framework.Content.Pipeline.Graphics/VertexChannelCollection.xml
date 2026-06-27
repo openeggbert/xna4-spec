@@ -37,7 +37,7 @@
     <method name="Add" returnType="VertexChannel">
       <summary><![CDATA[Adds a new vertex channel to the end of the collection.]]></summary>
       <overloads>
-        <overload signature="String, Type, IEnumerable">
+        <overload signature="Add(String, Type, IEnumerable)">
           <summary><![CDATA[Adds a new vertex channel to the end of the collection.]]></summary>
           <syntax><![CDATA[public VertexChannel Add (
          string name,
@@ -73,7 +73,7 @@
     <method name="Contains" returnType="bool">
       <summary><![CDATA[Determines whether the collection contains the specified vertex channel.]]></summary>
       <overloads>
-        <overload signature="VertexChannel">
+        <overload signature="Contains(VertexChannel)">
           <summary><![CDATA[Determines whether the collection contains the specified vertex channel.]]></summary>
           <syntax><![CDATA[public bool Contains (
          VertexChannel item
@@ -87,7 +87,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="String">
+        <overload signature="Contains(String)">
           <summary><![CDATA[Determines whether the collection contains the specified vertex channel.]]></summary>
           <syntax><![CDATA[public bool Contains (
          string name
@@ -120,7 +120,7 @@
     <method name="IndexOf" returnType="int">
       <summary><![CDATA[Determines the index of the specified vertex channel.]]></summary>
       <overloads>
-        <overload signature="VertexChannel">
+        <overload signature="IndexOf(VertexChannel)">
           <summary><![CDATA[Determines the index of the specified vertex channel.]]></summary>
           <syntax><![CDATA[public int IndexOf (
          VertexChannel item
@@ -134,7 +134,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="String">
+        <overload signature="IndexOf(String)">
           <summary><![CDATA[Determines the index of a vertex channel with the specified name.]]></summary>
           <syntax><![CDATA[public int IndexOf (
          string name
@@ -153,7 +153,7 @@
     <method name="Insert" returnType="VertexChannel">
       <summary><![CDATA[Inserts a new vertex channel at the specified position.]]></summary>
       <overloads>
-        <overload signature="Int32, String, Type, IEnumerable">
+        <overload signature="Insert(Int32, String, Type, IEnumerable)">
           <summary><![CDATA[Inserts a new vertex channel at the specified position.]]></summary>
           <syntax><![CDATA[public VertexChannel Insert (
          int index,
@@ -178,7 +178,7 @@
     <method name="Remove" returnType="bool">
       <summary><![CDATA[Removes the specified vertex channel from the collection.]]></summary>
       <overloads>
-        <overload signature="String">
+        <overload signature="Remove(String)">
           <summary><![CDATA[Removes the specified vertex channel from the collection.]]></summary>
           <syntax><![CDATA[public bool Remove (
          string name
@@ -192,7 +192,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="VertexChannel">
+        <overload signature="Remove(VertexChannel)">
           <summary><![CDATA[Removes the specified vertex channel from the collection.]]></summary>
           <syntax><![CDATA[public bool Remove (
          VertexChannel item

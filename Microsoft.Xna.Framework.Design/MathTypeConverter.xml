@@ -27,7 +27,7 @@
     <method name="CanConvertFrom" returnType="bool">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="ITypeDescriptorContext, Type">
+        <overload signature="CanConvertFrom(ITypeDescriptorContext, Type)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public override bool CanConvertFrom (
          ITypeDescriptorContext context,
@@ -48,7 +48,7 @@
     <method name="CanConvertTo" returnType="bool">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="ITypeDescriptorContext, Type">
+        <overload signature="CanConvertTo(ITypeDescriptorContext, Type)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public override bool CanConvertTo (
          ITypeDescriptorContext context,
@@ -69,7 +69,7 @@
     <method name="GetCreateInstanceSupported" returnType="bool">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="ITypeDescriptorContext">
+        <overload signature="GetCreateInstanceSupported(ITypeDescriptorContext)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public override bool GetCreateInstanceSupported (
          ITypeDescriptorContext context
@@ -88,7 +88,7 @@
     <method name="GetProperties" returnType="PropertyDescriptorCollection">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="ITypeDescriptorContext, Object, Attribute ">
+        <overload signature="GetProperties(ITypeDescriptorContext, Object, Attribute )">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public override PropertyDescriptorCollection GetProperties (
          ITypeDescriptorContext context,
@@ -111,7 +111,7 @@
     <method name="GetPropertiesSupported" returnType="bool">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="ITypeDescriptorContext">
+        <overload signature="GetPropertiesSupported(ITypeDescriptorContext)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public override bool GetPropertiesSupported (
          ITypeDescriptorContext context

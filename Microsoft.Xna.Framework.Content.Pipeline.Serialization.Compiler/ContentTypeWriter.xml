@@ -85,12 +85,11 @@
       <overloads>
         <overload signature="GetRuntimeType()">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Overridable Function GetRuntimeType ( _
-         targetPlatform As TargetPlatform _
-) As String]]></syntax>
+          <syntax><![CDATA[public virtual string GetRuntimeType (
+         TargetPlatform targetPlatform
+)]]></syntax>
           <parameters>
-            <parameter name="targetPlatform" type="Object"><![CDATA[Type: TargetPlatform The target platform.]]></parameter>
+            <parameter name="targetPlatform" type="TargetPlatform"><![CDATA[Type: TargetPlatform The target platform.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: String The qualified name.]]></returns>
           <platforms>
@@ -144,16 +143,15 @@ Public Overridable Function GetRuntimeType ( _
     <method name="Write" returnType="void">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="ContentWriter, T">
+        <overload signature="Write(ContentWriter, T)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal MustOverride Sub Write ( _
-         output As ContentWriter, _
-         value As T _
+          <syntax><![CDATA[protected internal abstract void Write (
+         ContentWriter output,
+         T value
 )]]></syntax>
           <parameters>
-            <parameter name="output" type="Object"><![CDATA[Type: ContentWriter The content writer serializing the value.]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Type: T The value to write.]]></parameter>
+            <parameter name="output" type="ContentWriter"><![CDATA[Type: ContentWriter The content writer serializing the value.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[Type: T The value to write.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>
@@ -161,15 +159,14 @@ Protected Internal MustOverride Sub Write ( _
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="ContentWriter, Object">
+        <overload signature="Write(ContentWriter, Object)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal Overrides Sub Write ( _
-         output As ContentWriter, _
-         value As Object _
+          <syntax><![CDATA[protected internal override void Write (
+         ContentWriter output,
+         Object value
 )]]></syntax>
           <parameters>
-            <parameter name="output" type="Object"><![CDATA[Type: ContentWriter The content writer serializing the value.]]></parameter>
+            <parameter name="output" type="ContentWriter"><![CDATA[Type: ContentWriter The content writer serializing the value.]]></parameter>
             <parameter name="value" type="Object"><![CDATA[Type: Object The value to write.]]></parameter>
           </parameters>
           <platforms>

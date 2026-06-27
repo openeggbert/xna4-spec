@@ -72,7 +72,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Tests an object to see if it is equal to this object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Tests an object to see if it is equal to this object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -89,7 +89,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
             <platform>Windows Phone 7</platform>
           </platforms>
         </overload>
-        <overload signature="Bgra4444">
+        <overload signature="Equals(Bgra4444)">
           <summary><![CDATA[Tests an object to see if it is equal to this object.]]></summary>
           <syntax><![CDATA[public bool Equals (
          Bgra4444 other

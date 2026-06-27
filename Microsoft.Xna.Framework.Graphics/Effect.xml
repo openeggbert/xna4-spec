@@ -15,14 +15,13 @@
   <constructors>
     <constructor signature="Effect(GraphicsDevice, Byte )">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         graphicsDevice As GraphicsDevice, _
-         effectCode As Byte() _
+      <syntax><![CDATA[public Effect (
+         GraphicsDevice graphicsDevice,
+         byte[] effectCode
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The device.]]></parameter>
-        <parameter name="effectCode" type="Object"><![CDATA[Type: Byte The effect code.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The device.]]></parameter>
+        <parameter name="effectCode" type="byte[]"><![CDATA[Type: Byte The effect code.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -111,12 +110,11 @@ Public Sub New ( _
     </constructor>
     <constructor signature="Effect(Effect)">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Protected Sub New ( _
-         cloneSource As Effect _
+      <syntax><![CDATA[protected Effect (
+         Effect cloneSource
 )]]></syntax>
       <parameters>
-        <parameter name="cloneSource" type="Object"><![CDATA[Type: Effect An object to copy.]]></parameter>
+        <parameter name="cloneSource" type="Effect"><![CDATA[Type: Effect An object to copy.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -224,7 +222,7 @@ Protected Sub New ( _
     <method name="Begin" returnType="void">
       <summary><![CDATA[Begins application of the active technique.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="Begin()">
           <summary><![CDATA[Begins application of the active technique.]]></summary>
           <syntax><![CDATA[public void Begin ()]]></syntax>
           <platforms>
@@ -233,7 +231,7 @@ Protected Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="SaveStateMode">
+        <overload signature="Begin(SaveStateMode)">
           <summary><![CDATA[Begins application of the active technique, specifying options for saving state.]]></summary>
           <syntax><![CDATA[public void Begin (
          SaveStateMode saveStateMode
@@ -284,7 +282,7 @@ Protected Sub New ( _
     <method name="CompileEffectFromFile" returnType="CompiledEffect" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="String, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+        <overload signature="CompileEffectFromFile(String, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static CompiledEffect CompileEffectFromFile (
          string effectFile,
@@ -306,7 +304,7 @@ Protected Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Stream, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+        <overload signature="CompileEffectFromFile(Stream, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static CompiledEffect CompileEffectFromFile (
          Stream effectFileStream,
@@ -328,7 +326,7 @@ Protected Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Stream, Int32, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+        <overload signature="CompileEffectFromFile(Stream, Int32, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static CompiledEffect CompileEffectFromFile (
          Stream effectFileStream,
@@ -384,7 +382,7 @@ Protected Sub New ( _
     <method name="Disassemble" returnType="string" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="Effect, Boolean">
+        <overload signature="Disassemble(Effect, Boolean)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static string Disassemble (
          Effect effect,
@@ -400,7 +398,7 @@ Protected Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Boolean">
+        <overload signature="Disassemble(Boolean)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public string Disassemble (
          bool enableColorCode
@@ -419,7 +417,7 @@ Protected Sub New ( _
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Releases the unmanaged resources used by the Effect and optionally releases the managed resources.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Releases the unmanaged resources used by the Effect and optionally releases the managed resources.]]></summary>
           <syntax><![CDATA[protected virtual void Dispose (
          bool 
@@ -431,7 +429,7 @@ Protected Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Dispose()">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[public void Dispose ()]]></syntax>
           <platforms>
@@ -459,7 +457,7 @@ Protected Sub New ( _
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Gets a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Gets a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj

@@ -33,20 +33,19 @@
     </constructor>
     <constructor signature="FontDescription(String, Single, Single, FontDescriptionStyle, Boolean)">
       <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         fontName As String, _
-         size As Single, _
-         spacing As Single, _
-         fontStyle As FontDescriptionStyle, _
-         useKerning As Boolean _
+      <syntax><![CDATA[public FontDescription (
+         string fontName,
+         float size,
+         float spacing,
+         FontDescriptionStyle fontStyle,
+         bool useKerning
 )]]></syntax>
       <parameters>
-        <parameter name="fontName" type="Object"><![CDATA[Type: String The name of the font, such as Times New Roman .]]></parameter>
-        <parameter name="size" type="Object"><![CDATA[Type: Single The size, in points, of the font.]]></parameter>
-        <parameter name="spacing" type="Object"><![CDATA[Type: Single The amount of space, in pixels, to insert between letters in a string.]]></parameter>
-        <parameter name="fontStyle" type="Object"><![CDATA[Type: FontDescriptionStyle The font style for the font.]]></parameter>
-        <parameter name="useKerning" type="Object"><![CDATA[Type: Boolean true if kerning information is used when drawing characters; false otherwise.]]></parameter>
+        <parameter name="fontName" type="string"><![CDATA[Type: String The name of the font, such as Times New Roman .]]></parameter>
+        <parameter name="size" type="float"><![CDATA[Type: Single The size, in points, of the font.]]></parameter>
+        <parameter name="spacing" type="float"><![CDATA[Type: Single The amount of space, in pixels, to insert between letters in a string.]]></parameter>
+        <parameter name="fontStyle" type="FontDescriptionStyle"><![CDATA[Type: FontDescriptionStyle The font style for the font.]]></parameter>
+        <parameter name="useKerning" type="bool"><![CDATA[Type: Boolean true if kerning information is used when drawing characters; false otherwise.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows 7</platform>

@@ -5,10 +5,7 @@
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics">
   <summary><![CDATA[System.Object &nbsp;&nbsp;Microsoft.Xna.Framework.Graphics.GraphicsDeviceExtensions]]></summary>
-  <syntax><![CDATA['Declaration
-
-&lt;ExtensionAttribute&gt; _
-Public NotInheritable Class GraphicsDeviceExtensions]]></syntax>
+  <syntax><![CDATA[public static class GraphicsDeviceExtensions]]></syntax>
   <constructors>
   </constructors>
   <properties>
@@ -19,15 +16,14 @@ Public NotInheritable Class GraphicsDeviceExtensions]]></syntax>
       <overloads>
         <overload signature="SetSharingMode()">
           <summary><![CDATA[Enables or disables sharing a graphics device between Silverlight and XNA.]]></summary>
-          <syntax><![CDATA['Declaration
-&lt;ExtensionAttribute&gt; _
-Public Shared Sub SetSharingMode ( _
-         device As GraphicsDevice, _
-         enabled As Boolean _
+          <syntax><![CDATA[[ExtensionAttribute]
+public static void SetSharingMode (
+         GraphicsDevice device,
+         bool enabled
 )]]></syntax>
           <parameters>
-            <parameter name="device" type="Object"><![CDATA[Type: GraphicsDevice The graphics device to share.]]></parameter>
-            <parameter name="enabled" type="Object"><![CDATA[Type: Boolean Set to true to enable, and false to disable XNA rendering within a Silverlight application. XNA rendering is disabled by default for Silverlight applications.]]></parameter>
+            <parameter name="device" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The graphics device to share.]]></parameter>
+            <parameter name="enabled" type="bool"><![CDATA[Type: Boolean Set to true to enable, and false to disable XNA rendering within a Silverlight application. XNA rendering is disabled by default for Silverlight applications.]]></parameter>
           </parameters>
           <remarks><![CDATA[SetSharingMode should be set to true before attempting to render with XNA, and should be set to false when rendering is completed, returning control of the graphics device to Silverlight.]]></remarks>
           <platforms>

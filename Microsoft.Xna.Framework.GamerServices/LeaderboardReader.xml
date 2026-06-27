@@ -152,7 +152,7 @@
     <method name="BeginRead" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Begins an asynchronous read of leaderboard data, taking a leaderboard identity, a collection of gamers, a pivot gamer, and a page size.]]></summary>
       <overloads>
-        <overload signature="LeaderboardIdentity, Generic IEnumerable, Gamer, Int32, AsyncCallback, Object">
+        <overload signature="BeginRead(LeaderboardIdentity, Generic IEnumerable, Gamer, Int32, AsyncCallback, Object)">
           <summary><![CDATA[Begins an asynchronous read of leaderboard data, taking a leaderboard identity, a collection of gamers, a pivot gamer, and a page size.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginRead (
          LeaderboardIdentity leaderboardId,
@@ -180,7 +180,7 @@
             <platform>Windows Phone 7</platform>
           </platforms>
         </overload>
-        <overload signature="LeaderboardIdentity, Int32, Int32, AsyncCallback, Object">
+        <overload signature="BeginRead(LeaderboardIdentity, Int32, Int32, AsyncCallback, Object)">
           <summary><![CDATA[Begins reading a leaderboard asynchronously, and specifies a leaderboard identity, the start page, and the page size.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginRead (
          LeaderboardIdentity leaderboardId,
@@ -206,7 +206,7 @@
             <platform>Windows Phone 7</platform>
           </platforms>
         </overload>
-        <overload signature="LeaderboardIdentity, Gamer, Int32, AsyncCallback, Object">
+        <overload signature="BeginRead(LeaderboardIdentity, Gamer, Int32, AsyncCallback, Object)">
           <summary><![CDATA[Begins reading a leaderboard asynchronously, and specifies a leaderboard identity, pivot gamer, and page size.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginRead (
          LeaderboardIdentity leaderboardId,
@@ -355,7 +355,7 @@
     <method name="Read" returnType="LeaderboardReader" isStatic="true">
       <summary><![CDATA[Reads a leaderboard synchronously, specifying a leaderboard identity, pivot gamer, and page size.]]></summary>
       <overloads>
-        <overload signature="LeaderboardIdentity, Gamer, Int32">
+        <overload signature="Read(LeaderboardIdentity, Gamer, Int32)">
           <summary><![CDATA[Reads a leaderboard synchronously, specifying a leaderboard identity, pivot gamer, and page size.]]></summary>
           <syntax><![CDATA[public static LeaderboardReader Read (
          LeaderboardIdentity leaderboardId,
@@ -377,7 +377,7 @@
             <platform>Windows Phone 7</platform>
           </platforms>
         </overload>
-        <overload signature="LeaderboardIdentity, Int32, Int32">
+        <overload signature="Read(LeaderboardIdentity, Int32, Int32)">
           <summary><![CDATA[Begins reading a leaderboard synchronously, specifying a leaderboard identity, the start page, and the page size.]]></summary>
           <syntax><![CDATA[public static LeaderboardReader Read (
          LeaderboardIdentity leaderboardId,
@@ -399,7 +399,7 @@
             <platform>Windows Phone 7</platform>
           </platforms>
         </overload>
-        <overload signature="LeaderboardIdentity, Generic IEnumerable, Gamer, Int32">
+        <overload signature="Read(LeaderboardIdentity, Generic IEnumerable, Gamer, Int32)">
           <summary><![CDATA[Reads a leaderboard synchronously, specifying a leaderboard identity, collection of gamers, pivot gamer, and page size.]]></summary>
           <syntax><![CDATA[public static LeaderboardReader Read (
          LeaderboardIdentity leaderboardId,

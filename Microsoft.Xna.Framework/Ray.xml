@@ -38,7 +38,7 @@ public struct Ray : IEquatable&lt;Ray&gt;]]></syntax>
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether two instances of Ray are equal.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Determines whether two instances of Ray are equal.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -53,7 +53,7 @@ public struct Ray : IEquatable&lt;Ray&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Ray">
+        <overload signature="Equals(Ray)">
           <summary><![CDATA[Determines whether the specified Ray is equal to the current Ray.]]></summary>
           <syntax><![CDATA[public bool Equals (
          Ray other
@@ -88,7 +88,7 @@ public struct Ray : IEquatable&lt;Ray&gt;]]></syntax>
     <method name="Intersects" returnType="Nullable&amp;lt;float&amp;gt;">
       <summary><![CDATA[Checks whether the Ray intersects a specified BoundingBox.]]></summary>
       <overloads>
-        <overload signature="BoundingBox">
+        <overload signature="Intersects(BoundingBox)">
           <summary><![CDATA[Checks whether the Ray intersects a specified BoundingBox.]]></summary>
           <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
          BoundingBox box
@@ -103,22 +103,21 @@ public struct Ray : IEquatable&lt;Ray&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="BoundingBox, Nullable&amp;lt;Single&amp;gt;">
+        <overload signature="Intersects(BoundingBox, Nullable&amp;lt;Single&amp;gt;)">
           <summary><![CDATA[Checks whether the current Ray intersects a BoundingBox.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Sub Intersects ( _
-         ref box As BoundingBox, _
-         out result As Nullable(Of Single) _
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingBox box,
+         out Nullable&lt;float&gt; result
 )]]></syntax>
           <parameters>
-            <parameter name="box" type="Object"><![CDATA[Type: BoundingBox The BoundingBox to check for intersection with.]]></parameter>
+            <parameter name="box" type="BoundingBox"><![CDATA[Type: BoundingBox The BoundingBox to check for intersection with.]]></parameter>
             <parameter name="result" type="Object"><![CDATA[Type: Nullable &lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingBox or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Plane">
+        <overload signature="Intersects(Plane)">
           <summary><![CDATA[Determines whether this Ray intersects a specified Plane.]]></summary>
           <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
          Plane plane
@@ -133,7 +132,7 @@ Public Sub Intersects ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="BoundingBox, Nullable&amp;lt;Single&amp;gt;">
+        <overload signature="Intersects(BoundingBox, Nullable&amp;lt;Single&amp;gt;)">
           <summary><![CDATA[Checks whether the current Ray intersects a BoundingBox.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref BoundingBox box,
@@ -149,22 +148,21 @@ Public Sub Intersects ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="BoundingSphere, Nullable&amp;lt;Single&amp;gt;">
+        <overload signature="Intersects(BoundingSphere, Nullable&amp;lt;Single&amp;gt;)">
           <summary><![CDATA[Checks whether the current Ray intersects a BoundingSphere.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Sub Intersects ( _
-         ref sphere As BoundingSphere, _
-         out result As Nullable(Of Single) _
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingSphere sphere,
+         out Nullable&lt;float&gt; result
 )]]></syntax>
           <parameters>
-            <parameter name="sphere" type="Object"><![CDATA[Type: BoundingSphere The BoundingSphere to check for intersection with.]]></parameter>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[Type: BoundingSphere The BoundingSphere to check for intersection with.]]></parameter>
             <parameter name="result" type="Object"><![CDATA[Type: Nullable &lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="BoundingSphere, Nullable&amp;lt;Single&amp;gt;">
+        <overload signature="Intersects(BoundingSphere, Nullable&amp;lt;Single&amp;gt;)">
           <summary><![CDATA[Checks whether the current Ray intersects a BoundingSphere.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref BoundingSphere sphere,
@@ -180,7 +178,7 @@ Public Sub Intersects ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="BoundingFrustum">
+        <overload signature="Intersects(BoundingFrustum)">
           <summary><![CDATA[Checks whether the Ray intersects a specified BoundingFrustum.]]></summary>
           <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
          BoundingFrustum frustum
@@ -195,22 +193,21 @@ Public Sub Intersects ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Plane, Nullable&amp;lt;Single&amp;gt;">
+        <overload signature="Intersects(Plane, Nullable&amp;lt;Single&amp;gt;)">
           <summary><![CDATA[Determines whether this Ray intersects a specified Plane.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Sub Intersects ( _
-         ref plane As Plane, _
-         out result As Nullable(Of Single) _
+          <syntax><![CDATA[public void Intersects (
+         ref Plane plane,
+         out Nullable&lt;float&gt; result
 )]]></syntax>
           <parameters>
-            <parameter name="plane" type="Object"><![CDATA[Type: Plane The Plane with which to calculate this Ray 's intersection.]]></parameter>
+            <parameter name="plane" type="Plane"><![CDATA[Type: Plane The Plane with which to calculate this Ray 's intersection.]]></parameter>
             <parameter name="result" type="Object"><![CDATA[Type: Nullable &lt; Single &gt; [ OutAttribute ] The distance at which this Ray intersects the specified Plane , or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Plane, Nullable&amp;lt;Single&amp;gt;">
+        <overload signature="Intersects(Plane, Nullable&amp;lt;Single&amp;gt;)">
           <summary><![CDATA[Determines whether this Ray intersects a specified Plane.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref Plane plane,
@@ -226,7 +223,7 @@ Public Sub Intersects ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="BoundingSphere">
+        <overload signature="Intersects(BoundingSphere)">
           <summary><![CDATA[Checks whether the Ray intersects a specified BoundingSphere.]]></summary>
           <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
          BoundingSphere sphere

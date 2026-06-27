@@ -148,7 +148,7 @@
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified Object is equal to this Song.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Determines whether the specified Object is equal to this Song.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -164,7 +164,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Song">
+        <overload signature="Equals(Song)">
           <summary><![CDATA[Determines whether the specified Song is equal to this Song.]]></summary>
           <syntax><![CDATA[public bool Equals (
          Song other
@@ -203,14 +203,13 @@
       <overloads>
         <overload signature="FromUri()">
           <summary><![CDATA[Constructs a new Song object based on the specified URI.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function FromUri ( _
-         name As String, _
-         uri As Uri _
-) As Song]]></syntax>
+          <syntax><![CDATA[public static Song FromUri (
+         string name,
+         Uri uri
+)]]></syntax>
           <parameters>
-            <parameter name="name" type="Object"><![CDATA[Type: String Name of the song.]]></parameter>
-            <parameter name="uri" type="Object"><![CDATA[Type: Uri Uri object that represents the URI.]]></parameter>
+            <parameter name="name" type="string"><![CDATA[Type: String Name of the song.]]></parameter>
+            <parameter name="uri" type="Uri"><![CDATA[Type: Uri Uri object that represents the URI.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Song Song object that can be used to play the song remotely.]]></returns>
           <platforms>

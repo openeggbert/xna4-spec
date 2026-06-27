@@ -72,7 +72,7 @@
     <method name="BeginShowSelector" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Begins the process for displaying the storage device selector user interface, for specifying the player who requested the save operation, for setting the size of data to be written to the storage device, and for naming the callback implemented when the player chooses a device.]]></summary>
       <overloads>
-        <overload signature="PlayerIndex, Int32, Int32, AsyncCallback, Object">
+        <overload signature="BeginShowSelector(PlayerIndex, Int32, Int32, AsyncCallback, Object)">
           <summary><![CDATA[Begins the process for displaying the storage device selector user interface, for specifying the player who requested the save operation, for setting the size of data to be written to the storage device, and for naming the callback implemented when the player chooses a device.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowSelector (
          PlayerIndex player,
@@ -96,7 +96,7 @@
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="AsyncCallback, Object">
+        <overload signature="BeginShowSelector(AsyncCallback, Object)">
           <summary><![CDATA[Begins the process for displaying the storage device selector user interface, and for specifying a callback implemented when the player chooses a device.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowSelector (
          AsyncCallback callback,
@@ -114,7 +114,7 @@
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="PlayerIndex, AsyncCallback, Object">
+        <overload signature="BeginShowSelector(PlayerIndex, AsyncCallback, Object)">
           <summary><![CDATA[Begins the process for displaying the storage device selector user interface; specifies the callback implemented when the player chooses a device.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowSelector (
          PlayerIndex player,
@@ -134,7 +134,7 @@
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="Int32, Int32, AsyncCallback, Object">
+        <overload signature="BeginShowSelector(Int32, Int32, AsyncCallback, Object)">
           <summary><![CDATA[Begins the process for displaying the storage device selector user interface, and for specifying the size of the data to be written to the storage device and the callback implemented when the player chooses a device.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowSelector (
          int sizeInBytes,
@@ -161,7 +161,7 @@
     <method name="BeginShowStorageDeviceGuide" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Asynchronously displays the device selection UI to allow users to select a device to save data. This method has no effect on Windows.]]></summary>
       <overloads>
-        <overload signature="PlayerIndex, AsyncCallback, Object">
+        <overload signature="BeginShowStorageDeviceGuide(PlayerIndex, AsyncCallback, Object)">
           <summary><![CDATA[Asynchronously displays the device selection UI to allow users to select a device to save data. This method has no effect on Windows.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceGuide (
          PlayerIndex playerIndex,
@@ -181,7 +181,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="AsyncCallback, Object">
+        <overload signature="BeginShowStorageDeviceGuide(AsyncCallback, Object)">
           <summary><![CDATA[Asynchronously displays the device selection UI to allow users to select a device to save data. This method has no effect on Windows.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceGuide (
          AsyncCallback callback,
@@ -309,7 +309,7 @@
     <method name="ShowStorageDeviceGuide" returnType="StorageDevice" isStatic="true">
       <summary><![CDATA[Displays the device selector UI to allow users to select a device to save data. Has no effect on Windows.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="ShowStorageDeviceGuide()">
           <summary><![CDATA[Displays the device selector UI to allow users to select a device to save data. Has no effect on Windows.]]></summary>
           <syntax><![CDATA[public static StorageDevice ShowStorageDeviceGuide ()]]></syntax>
           <returns><![CDATA[The storage device selected by the user.]]></returns>
@@ -320,7 +320,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="PlayerIndex">
+        <overload signature="ShowStorageDeviceGuide(PlayerIndex)">
           <summary><![CDATA[Displays the device selector UI to allow users to select a device to save data. Has no effect on Windows.]]></summary>
           <syntax><![CDATA[public static StorageDevice ShowStorageDeviceGuide (
          PlayerIndex playerIndex

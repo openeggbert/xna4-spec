@@ -28,7 +28,7 @@
     <method name="NormalizeWeights" returnType="void">
       <summary><![CDATA[Normalizes the contents of the bone weights list.]]></summary>
       <overloads>
-        <overload signature="Int32">
+        <overload signature="NormalizeWeights(Int32)">
           <summary><![CDATA[Normalizes the contents of the bone weights list.]]></summary>
           <syntax><![CDATA[public void NormalizeWeights (
          int maxWeights
@@ -42,7 +42,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="NormalizeWeights()">
           <summary><![CDATA[Normalizes the contents of the weights list.]]></summary>
           <syntax><![CDATA[public void NormalizeWeights ()]]></syntax>
           <remarks><![CDATA[Normalization does the following: Sorts weights such that the most significant weight is first. Removes zero-value entries. Adjusts values so the sum equals one. Throws InvalidContentException if all weights are zero.]]></remarks>

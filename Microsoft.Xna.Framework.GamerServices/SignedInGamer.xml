@@ -98,12 +98,11 @@
       <overloads>
         <overload signature="AwardAchievement()">
           <summary><![CDATA[[Deprecated] Awards the specified achievement to a locally signed-in gamer.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Sub AwardAchievement ( _
-         achievementKey As String _
+          <syntax><![CDATA[public void AwardAchievement (
+         string achievementKey
 )]]></syntax>
           <parameters>
-            <parameter name="achievementKey" type="Object"><![CDATA[Type: String Identifier specifying the achievement to award.]]></parameter>
+            <parameter name="achievementKey" type="string"><![CDATA[Type: String Identifier specifying the achievement to award.]]></parameter>
           </parameters>
           <remarks><![CDATA[Important This function is deprecated: use the asynchronous method BeginAwardAchievement to award an achievement, which also provides result information.]]></remarks>
           <platforms>
@@ -144,13 +143,12 @@ Public Sub AwardAchievement ( _
       <overloads>
         <overload signature="BeginGetAchievements()">
           <summary><![CDATA[Starts an asynchronous achievement query operation.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Function BeginGetAchievements ( _
-         callback As AsyncCallback, _
-         asyncState As Object _
-) As IAsyncResult]]></syntax>
+          <syntax><![CDATA[public IAsyncResult BeginGetAchievements (
+         AsyncCallback callback,
+         Object asyncState
+)]]></syntax>
           <parameters>
-            <parameter name="callback" type="Object"><![CDATA[Type: AsyncCallback The method to be called once the asynchronous operation is finished.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[Type: AsyncCallback The method to be called once the asynchronous operation is finished.]]></parameter>
             <parameter name="asyncState" type="Object"><![CDATA[Type: Object State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the method. Call EndGetAchievements to access these results.]]></returns>
@@ -265,12 +263,11 @@ Public Function BeginGetAchievements ( _
       <overloads>
         <overload signature="IsHeadset()">
           <summary><![CDATA[Determines if the passed microphone is a headset associated with this signed-in gamer. Use this method to determine if a specific microphone is a gamer-bound headset.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Function IsHeadset ( _
-         microphone As Microphone _
-) As Boolean]]></syntax>
+          <syntax><![CDATA[public bool IsHeadset (
+         Microphone microphone
+)]]></syntax>
           <parameters>
-            <parameter name="microphone" type="Object"><![CDATA[Type: Microphone The microphone to check against this signed-in gamer.]]></parameter>
+            <parameter name="microphone" type="Microphone"><![CDATA[Type: Microphone The microphone to check against this signed-in gamer.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if the microphone is associated with this signed-in gamer; false otherwise.]]></returns>
           <platforms>

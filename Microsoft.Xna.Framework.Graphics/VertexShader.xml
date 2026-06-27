@@ -72,7 +72,7 @@
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="Dispose()">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[public void Dispose ()]]></syntax>
           <remarks><![CDATA[Call Dispose when you are finished using the VertexShader . The Dispose method leaves the VertexShader in an unusable state. After calling Dispose , you must release all references to the VertexShader so the garbage collector can reclaim the memory that the VertexShader was occupying. Note Always call Dispose before you release your last reference to the VertexShader . Otherwise, the resources it is using will not be freed until the garbage collector calls the VertexShader object's Finalize method.]]></remarks>
@@ -82,7 +82,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[protected virtual void Dispose (
          bool 
@@ -99,7 +99,7 @@
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj

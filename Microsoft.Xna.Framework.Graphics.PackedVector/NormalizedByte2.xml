@@ -60,7 +60,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="NormalizedByte2">
+        <overload signature="Equals(NormalizedByte2)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public bool Equals (
          NormalizedByte2 other
@@ -75,7 +75,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj

@@ -39,7 +39,7 @@
     <method name="GetState" returnType="GamePadState" isStatic="true">
       <summary><![CDATA[Gets the current state of an Xbox 360 Controller.]]></summary>
       <overloads>
-        <overload signature="PlayerIndex">
+        <overload signature="GetState(PlayerIndex)">
           <summary><![CDATA[Gets the current state of an Xbox 360 Controller.]]></summary>
           <syntax><![CDATA[public static GamePadState GetState (
          PlayerIndex playerIndex
@@ -55,7 +55,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="PlayerIndex, GamePadDeadZone">
+        <overload signature="GetState(PlayerIndex, GamePadDeadZone)">
           <summary><![CDATA[Gets the current state of an Xbox 360 Controller, using a specified dead zone on analog stick positions.]]></summary>
           <syntax><![CDATA[public static GamePadState GetState (
          PlayerIndex playerIndex,

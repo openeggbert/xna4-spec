@@ -96,7 +96,7 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
     <method name="EndScreenDeviceChange" returnType="void">
       <summary><![CDATA[Completes a device transition.]]></summary>
       <overloads>
-        <overload signature="String">
+        <overload signature="EndScreenDeviceChange(String)">
           <summary><![CDATA[Completes a device transition.]]></summary>
           <syntax><![CDATA[public void EndScreenDeviceChange (
          string screenDeviceName
@@ -111,7 +111,7 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="String, Int32, Int32">
+        <overload signature="EndScreenDeviceChange(String, Int32, Int32)">
           <summary><![CDATA[Completes a device transition.]]></summary>
           <syntax><![CDATA[public virtual abstract void EndScreenDeviceChange (
          string screenDeviceName,
@@ -222,12 +222,11 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
       <overloads>
         <overload signature="SetSupportedOrientations()">
           <summary><![CDATA[Sets the supported display orientations.]]></summary>
-          <syntax><![CDATA['Declaration
-Protected Internal MustOverride Sub SetSupportedOrientations ( _
-         orientations As DisplayOrientation _
+          <syntax><![CDATA[protected internal abstract void SetSupportedOrientations (
+         DisplayOrientation orientations
 )]]></syntax>
           <parameters>
-            <parameter name="orientations" type="Object"><![CDATA[Type: DisplayOrientation A set of supported display orientations.]]></parameter>
+            <parameter name="orientations" type="DisplayOrientation"><![CDATA[Type: DisplayOrientation A set of supported display orientations.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

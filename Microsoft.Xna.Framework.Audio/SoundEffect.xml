@@ -198,12 +198,11 @@
       <overloads>
         <overload signature="FromStream()">
           <summary><![CDATA[Creates a SoundEffect object based on the specified data stream.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function FromStream ( _
-         stream As Stream _
-) As SoundEffect]]></syntax>
+          <syntax><![CDATA[public static SoundEffect FromStream (
+         Stream stream
+)]]></syntax>
           <parameters>
-            <parameter name="stream" type="Object"><![CDATA[Type: Stream Stream object that contains the data for this SoundEffect object.]]></parameter>
+            <parameter name="stream" type="Stream"><![CDATA[Type: Stream Stream object that contains the data for this SoundEffect object.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: SoundEffect SoundEffect object that this method creates.]]></returns>
           <remarks><![CDATA[The Stream object must point to the head of a valid PCM wave file. Also, this wave file must be in the RIFF bitstream format. The audio format has the following restrictions: Must be a PCM wave file Can only be mono or stereo Must be 8 or 16 bit Sample rate must be between 8,000 Hz and 48,000 Hz]]></remarks>
@@ -218,16 +217,15 @@ Public Shared Function FromStream ( _
       <overloads>
         <overload signature="GetSampleDuration()">
           <summary><![CDATA[Returns the sample duration based on the specified sample size and sample rate.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function GetSampleDuration ( _
-         sizeInBytes As Integer, _
-         sampleRate As Integer, _
-         channels As AudioChannels _
-) As TimeSpan]]></syntax>
+          <syntax><![CDATA[public static TimeSpan GetSampleDuration (
+         int sizeInBytes,
+         int sampleRate,
+         AudioChannels channels
+)]]></syntax>
           <parameters>
-            <parameter name="sizeInBytes" type="Object"><![CDATA[Type: Int32 Size, in bytes, of audio data.]]></parameter>
-            <parameter name="sampleRate" type="Object"><![CDATA[Type: Int32 Sample rate, in Hertz (Hz), of audio content. The must be between 8000 Hz and 48000 Hz.]]></parameter>
-            <parameter name="channels" type="Object"><![CDATA[Type: AudioChannels Number of channels in the audio data.]]></parameter>
+            <parameter name="sizeInBytes" type="int"><![CDATA[Type: Int32 Size, in bytes, of audio data.]]></parameter>
+            <parameter name="sampleRate" type="int"><![CDATA[Type: Int32 Sample rate, in Hertz (Hz), of audio content. The must be between 8000 Hz and 48000 Hz.]]></parameter>
+            <parameter name="channels" type="AudioChannels"><![CDATA[Type: AudioChannels Number of channels in the audio data.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: TimeSpan TimeSpan object that represents the calculated sample duration.]]></returns>
           <platforms>
@@ -241,16 +239,15 @@ Public Shared Function GetSampleDuration ( _
       <overloads>
         <overload signature="GetSampleSizeInBytes()">
           <summary><![CDATA[Returns the size of the audio sample based on duration, sample rate, and audio channels.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function GetSampleSizeInBytes ( _
-         duration As TimeSpan, _
-         sampleRate As Integer, _
-         channels As AudioChannels _
-) As Integer]]></syntax>
+          <syntax><![CDATA[public static int GetSampleSizeInBytes (
+         TimeSpan duration,
+         int sampleRate,
+         AudioChannels channels
+)]]></syntax>
           <parameters>
-            <parameter name="duration" type="Object"><![CDATA[Type: TimeSpan TimeSpan object that contains the sample duration.]]></parameter>
-            <parameter name="sampleRate" type="Object"><![CDATA[Type: Int32 Sample rate, in Hertz (Hz), of audio content. The parameter must be between 8,000 Hz and 48,000 Hz.]]></parameter>
-            <parameter name="channels" type="Object"><![CDATA[Type: AudioChannels Number of channels in the audio data.]]></parameter>
+            <parameter name="duration" type="TimeSpan"><![CDATA[Type: TimeSpan TimeSpan object that contains the sample duration.]]></parameter>
+            <parameter name="sampleRate" type="int"><![CDATA[Type: Int32 Sample rate, in Hertz (Hz), of audio content. The parameter must be between 8,000 Hz and 48,000 Hz.]]></parameter>
+            <parameter name="channels" type="AudioChannels"><![CDATA[Type: AudioChannels Number of channels in the audio data.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Int32 Size, in bytes, of audio sample.]]></returns>
           <platforms>
@@ -262,7 +259,7 @@ Public Shared Function GetSampleSizeInBytes ( _
     <method name="Play" returnType="SoundEffectInstance">
       <summary><![CDATA[Creates a new SoundEffectInstance and plays it using the specified volume, pitch, panning, and loop control.]]></summary>
       <overloads>
-        <overload signature="Single, Single, Single, Boolean">
+        <overload signature="Play(Single, Single, Single, Boolean)">
           <summary><![CDATA[Creates a new SoundEffectInstance and plays it using the specified volume, pitch, panning, and loop control.]]></summary>
           <syntax><![CDATA[public SoundEffectInstance Play (
          float volume,
@@ -285,7 +282,7 @@ Public Shared Function GetSampleSizeInBytes ( _
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Single">
+        <overload signature="Play(Single)">
           <summary><![CDATA[Creates a new SoundEffectInstance and plays it at the specified volume.]]></summary>
           <syntax><![CDATA[public SoundEffectInstance Play (
          float volume
@@ -301,18 +298,17 @@ Public Shared Function GetSampleSizeInBytes ( _
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single">
+        <overload signature="Play(Single, Single, Single)">
           <summary><![CDATA[Plays a sound based on specified volume, pitch, and panning.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Function Play ( _
-         volume As Single, _
-         pitch As Single, _
-         pan As Single _
-) As Boolean]]></syntax>
+          <syntax><![CDATA[public bool Play (
+         float volume,
+         float pitch,
+         float pan
+)]]></syntax>
           <parameters>
-            <parameter name="volume" type="Object"><![CDATA[Type: Single Volume, ranging from 0.0f (silence) to 1.0f (full volume). 1.0f is full volume relative to SoundEffect.MasterVolume .]]></parameter>
-            <parameter name="pitch" type="Object"><![CDATA[Type: Single Pitch adjustment, ranging from -1.0f (down one octave) to 1.0f (up one octave). 0.0f is unity (normal) pitch.]]></parameter>
-            <parameter name="pan" type="Object"><![CDATA[Type: Single Panning, ranging from -1.0f (full left) to 1.0f (full right). 0.0f is centered.]]></parameter>
+            <parameter name="volume" type="float"><![CDATA[Type: Single Volume, ranging from 0.0f (silence) to 1.0f (full volume). 1.0f is full volume relative to SoundEffect.MasterVolume .]]></parameter>
+            <parameter name="pitch" type="float"><![CDATA[Type: Single Pitch adjustment, ranging from -1.0f (down one octave) to 1.0f (up one octave). 0.0f is unity (normal) pitch.]]></parameter>
+            <parameter name="pan" type="float"><![CDATA[Type: Single Panning, ranging from -1.0f (full left) to 1.0f (full right). 0.0f is centered.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if the sound is playing back successfully; otherwise, false.]]></returns>
           <remarks><![CDATA[Play will return false if there too many sounds already are playing. To loop a sound or apply 3D effects, call CreateInstance instead of Play , and SoundEffectInstance.Play . Sounds play in a "fire and forget" fashion with Play ; therefore, the lifetime of these sounds is managed by the framework. These sounds will play once, and then stop. They cannot be looped or 3D positioned. Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. Play throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>
@@ -320,7 +316,7 @@ Public Function Play ( _
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Play()">
           <summary><![CDATA[Creates a new SoundEffectInstance and plays it.]]></summary>
           <syntax><![CDATA[public SoundEffectInstance Play ()]]></syntax>
           <returns><![CDATA[A new, playing, SoundEffectInstance.]]></returns>
@@ -337,7 +333,7 @@ Public Function Play ( _
     <method name="Play3D" returnType="SoundEffectInstance">
       <summary><![CDATA[Returns a playing SoundEffectInstance at the specified position using the specified values for volume, pitch, and looping.]]></summary>
       <overloads>
-        <overload signature="AudioListener, AudioEmitter, Single, Single, Boolean">
+        <overload signature="Play3D(AudioListener, AudioEmitter, Single, Single, Boolean)">
           <summary><![CDATA[Returns a playing SoundEffectInstance at the specified position using the specified values for volume, pitch, and looping.]]></summary>
           <syntax><![CDATA[public SoundEffectInstance Play3D (
          AudioListener listener,
@@ -361,7 +357,7 @@ Public Function Play ( _
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="AudioListener , AudioEmitter, Single, Single, Boolean">
+        <overload signature="Play3D(AudioListener , AudioEmitter, Single, Single, Boolean)">
           <summary><![CDATA[Returns a playing SoundEffectInstance at the specified positions using the specified values for volume, pitch, and looping.]]></summary>
           <syntax><![CDATA[public SoundEffectInstance Play3D (
          AudioListener[] listeners,
@@ -386,7 +382,7 @@ Public Function Play ( _
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="AudioListener, AudioEmitter">
+        <overload signature="Play3D(AudioListener, AudioEmitter)">
           <summary><![CDATA[Returns a playing SoundEffectInstance at the specified position with the default volume and pitch.]]></summary>
           <syntax><![CDATA[public SoundEffectInstance Play3D (
          AudioListener listener,

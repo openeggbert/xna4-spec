@@ -160,7 +160,7 @@ public class CurveKey : IEquatable&lt;CurveKey&gt;, IComparable&lt;CurveKey&gt;]
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -175,7 +175,7 @@ public class CurveKey : IEquatable&lt;CurveKey&gt;, IComparable&lt;CurveKey&gt;]
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="CurveKey">
+        <overload signature="Equals(CurveKey)">
           <summary><![CDATA[Determines whether the specified Object is equal to the CurveKey.]]></summary>
           <syntax><![CDATA[public bool Equals (
          CurveKey other

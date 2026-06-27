@@ -18,7 +18,7 @@
     <method name="AssembleFromFile" returnType="CompiledShader" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="String, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+        <overload signature="AssembleFromFile(String, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static CompiledShader AssembleFromFile (
          string shaderFileName,
@@ -40,7 +40,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Stream, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+        <overload signature="AssembleFromFile(Stream, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static CompiledShader AssembleFromFile (
          Stream shaderSourceCode,
@@ -62,7 +62,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Stream, Int32, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+        <overload signature="AssembleFromFile(Stream, Int32, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static CompiledShader AssembleFromFile (
          Stream shaderSourceCode,
@@ -118,7 +118,7 @@
     <method name="CompileFromFile" returnType="CompiledShader" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="Stream, Int32, CompilerMacro , CompilerIncludeHandler, CompilerOptions, String, ShaderProfile, TargetPlatform">
+        <overload signature="CompileFromFile(Stream, Int32, CompilerMacro , CompilerIncludeHandler, CompilerOptions, String, ShaderProfile, TargetPlatform)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static CompiledShader CompileFromFile (
          Stream shaderSourceCode,
@@ -146,7 +146,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="String, CompilerMacro , CompilerIncludeHandler, CompilerOptions, String, ShaderProfile, TargetPlatform">
+        <overload signature="CompileFromFile(String, CompilerMacro , CompilerIncludeHandler, CompilerOptions, String, ShaderProfile, TargetPlatform)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static CompiledShader CompileFromFile (
          string shaderFileName,
@@ -172,7 +172,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Stream, CompilerMacro , CompilerIncludeHandler, CompilerOptions, String, ShaderProfile, TargetPlatform">
+        <overload signature="CompileFromFile(Stream, CompilerMacro , CompilerIncludeHandler, CompilerOptions, String, ShaderProfile, TargetPlatform)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static CompiledShader CompileFromFile (
          Stream shaderSourceCode,

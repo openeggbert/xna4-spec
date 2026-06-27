@@ -121,7 +121,7 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
     <method name="Contains" returnType="bool">
       <summary><![CDATA[Determines whether this Rectangle contains a specified Point.]]></summary>
       <overloads>
-        <overload signature="Point">
+        <overload signature="Contains(Point)">
           <summary><![CDATA[Determines whether this Rectangle contains a specified Point.]]></summary>
           <syntax><![CDATA[public bool Contains (
          Point value
@@ -136,7 +136,7 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Rectangle">
+        <overload signature="Contains(Rectangle)">
           <summary><![CDATA[Determines whether this Rectangle entirely contains a specified Rectangle.]]></summary>
           <syntax><![CDATA[public bool Contains (
          Rectangle value
@@ -151,7 +151,7 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Point, Boolean">
+        <overload signature="Contains(Point, Boolean)">
           <summary><![CDATA[Determines whether this Rectangle contains a specified Point.]]></summary>
           <syntax><![CDATA[public void Contains (
          ref Point value,
@@ -167,7 +167,7 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Int32, Int32">
+        <overload signature="Contains(Int32, Int32)">
           <summary><![CDATA[Determines whether this Rectangle contains a specified point represented by its x- and y-coordinates.]]></summary>
           <syntax><![CDATA[public bool Contains (
          int x,
@@ -184,7 +184,7 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Rectangle, Boolean">
+        <overload signature="Contains(Rectangle, Boolean)">
           <summary><![CDATA[Determines whether this Rectangle entirely contains a specified Rectangle.]]></summary>
           <syntax><![CDATA[public void Contains (
          ref Rectangle value,
@@ -205,7 +205,7 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified Object is equal to the Rectangle.]]></summary>
       <overloads>
-        <overload signature="Rectangle">
+        <overload signature="Equals(Rectangle)">
           <summary><![CDATA[Determines whether the specified Object is equal to the Rectangle.]]></summary>
           <syntax><![CDATA[public bool Equals (
          Rectangle other
@@ -220,7 +220,7 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -274,19 +274,18 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Intersect" returnType="void">
+    <method name="Intersect" returnType="Rectangle" isStatic="true">
       <summary><![CDATA[Creates a Rectangle defining the area where one rectangle overlaps with another rectangle.]]></summary>
       <overloads>
-        <overload signature="Rectangle, Rectangle">
+        <overload signature="Intersect(Rectangle, Rectangle)">
           <summary><![CDATA[Creates a Rectangle defining the area where one rectangle overlaps with another rectangle.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function Intersect ( _
-         value1 As Rectangle, _
-         value2 As Rectangle _
-) As Rectangle]]></syntax>
+          <syntax><![CDATA[public static Rectangle Intersect (
+         Rectangle value1,
+         Rectangle value2
+)]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Type: Rectangle The first Rectangle to compare.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Type: Rectangle The second Rectangle to compare.]]></parameter>
+            <parameter name="value1" type="Rectangle"><![CDATA[Type: Rectangle The first Rectangle to compare.]]></parameter>
+            <parameter name="value2" type="Rectangle"><![CDATA[Type: Rectangle The second Rectangle to compare.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Rectangle The area where the two parameters overlap.]]></returns>
           <remarks><![CDATA[If the two rectangles do not overlap, the resulting Rectangle will be empty.]]></remarks>
@@ -294,18 +293,17 @@ Public Shared Function Intersect ( _
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Rectangle, Rectangle, Rectangle">
+        <overload signature="Intersect(Rectangle, Rectangle, Rectangle)">
           <summary><![CDATA[Creates a Rectangle defining the area where one rectangle overlaps with another rectangle.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Sub Intersect ( _
-         ref value1 As Rectangle, _
-         ref value2 As Rectangle, _
-         out result As Rectangle _
+          <syntax><![CDATA[public static void Intersect (
+         ref Rectangle value1,
+         ref Rectangle value2,
+         out Rectangle result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Type: Rectangle The first Rectangle to compare.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Type: Rectangle The second Rectangle to compare.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[Type: Rectangle [ OutAttribute ] The area where the two first parameters overlap.]]></parameter>
+            <parameter name="value1" type="Rectangle"><![CDATA[Type: Rectangle The first Rectangle to compare.]]></parameter>
+            <parameter name="value2" type="Rectangle"><![CDATA[Type: Rectangle The second Rectangle to compare.]]></parameter>
+            <parameter name="result" type="Rectangle"><![CDATA[Type: Rectangle [ OutAttribute ] The area where the two first parameters overlap.]]></parameter>
           </parameters>
           <remarks><![CDATA[If the two rectangles do not overlap, the resulting Rectangle will be empty.]]></remarks>
           <platforms>
@@ -317,7 +315,7 @@ Public Shared Sub Intersect ( _
     <method name="Intersects" returnType="void">
       <summary><![CDATA[Determines whether a specified Rectangle intersects with this Rectangle.]]></summary>
       <overloads>
-        <overload signature="Rectangle, Boolean">
+        <overload signature="Intersects(Rectangle, Boolean)">
           <summary><![CDATA[Determines whether a specified Rectangle intersects with this Rectangle.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref Rectangle value,
@@ -333,7 +331,7 @@ Public Shared Sub Intersect ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Rectangle">
+        <overload signature="Intersects(Rectangle)">
           <summary><![CDATA[Determines whether a specified Rectangle intersects with this Rectangle.]]></summary>
           <syntax><![CDATA[public bool Intersects (
          Rectangle value
@@ -353,7 +351,7 @@ Public Shared Sub Intersect ( _
     <method name="Offset" returnType="void">
       <summary><![CDATA[Changes the position of the Rectangle.]]></summary>
       <overloads>
-        <overload signature="Point">
+        <overload signature="Offset(Point)">
           <summary><![CDATA[Changes the position of the Rectangle.]]></summary>
           <syntax><![CDATA[public void Offset (
          Point offset
@@ -367,7 +365,7 @@ Public Shared Sub Intersect ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Int32, Int32">
+        <overload signature="Offset(Int32, Int32)">
           <summary><![CDATA[Changes the position of the Rectangle.]]></summary>
           <syntax><![CDATA[public void Offset (
          int offsetX,
@@ -400,36 +398,34 @@ Public Shared Sub Intersect ( _
         </overload>
       </overloads>
     </method>
-    <method name="Union" returnType="void">
+    <method name="Union" returnType="void" isStatic="true">
       <summary><![CDATA[Creates a new Rectangle that exactly contains two other rectangles.]]></summary>
       <overloads>
-        <overload signature="Rectangle, Rectangle, Rectangle">
+        <overload signature="Union(Rectangle, Rectangle, Rectangle)">
           <summary><![CDATA[Creates a new Rectangle that exactly contains two other rectangles.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Sub Union ( _
-         ref value1 As Rectangle, _
-         ref value2 As Rectangle, _
-         out result As Rectangle _
+          <syntax><![CDATA[public static void Union (
+         ref Rectangle value1,
+         ref Rectangle value2,
+         out Rectangle result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Type: Rectangle The first Rectangle to contain.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Type: Rectangle The second Rectangle to contain.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[Type: Rectangle [ OutAttribute ] The Rectangle that must be the union of the first two rectangles.]]></parameter>
+            <parameter name="value1" type="Rectangle"><![CDATA[Type: Rectangle The first Rectangle to contain.]]></parameter>
+            <parameter name="value2" type="Rectangle"><![CDATA[Type: Rectangle The second Rectangle to contain.]]></parameter>
+            <parameter name="result" type="Rectangle"><![CDATA[Type: Rectangle [ OutAttribute ] The Rectangle that must be the union of the first two rectangles.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Rectangle, Rectangle">
+        <overload signature="Union(Rectangle, Rectangle)">
           <summary><![CDATA[Creates a new Rectangle that exactly contains two other rectangles.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function Union ( _
-         value1 As Rectangle, _
-         value2 As Rectangle _
-) As Rectangle]]></syntax>
+          <syntax><![CDATA[public static Rectangle Union (
+         Rectangle value1,
+         Rectangle value2
+)]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Type: Rectangle The first Rectangle to contain.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Type: Rectangle The second Rectangle to contain.]]></parameter>
+            <parameter name="value1" type="Rectangle"><![CDATA[Type: Rectangle The first Rectangle to contain.]]></parameter>
+            <parameter name="value2" type="Rectangle"><![CDATA[Type: Rectangle The second Rectangle to contain.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Rectangle The union of the two Rectangle parameters.]]></returns>
           <platforms>

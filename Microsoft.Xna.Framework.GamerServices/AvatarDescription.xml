@@ -102,7 +102,7 @@
     <method name="CreateRandom" returnType="AvatarDescription" isStatic="true">
       <summary><![CDATA[Creates an avatar of random gender, features, and clothing.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="CreateRandom()">
           <summary><![CDATA[Creates an avatar of random gender, features, and clothing.]]></summary>
           <syntax><![CDATA[public static AvatarDescription CreateRandom ()]]></syntax>
           <returns><![CDATA[Description of the created avatar.]]></returns>
@@ -113,7 +113,7 @@
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="AvatarBodyType">
+        <overload signature="CreateRandom(AvatarBodyType)">
           <summary><![CDATA[Creates an avatar of the specified body type with random features and clothing.]]></summary>
           <syntax><![CDATA[public static AvatarDescription CreateRandom (
          AvatarBodyType bodyType

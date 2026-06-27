@@ -139,7 +139,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="Add" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Adds a matrix to another matrix.]]></summary>
       <overloads>
-        <overload signature="Matrix, Matrix">
+        <overload signature="Add(Matrix, Matrix)">
           <summary><![CDATA[Adds a matrix to another matrix.]]></summary>
           <syntax><![CDATA[public static Matrix Add (
          Matrix matrix1,
@@ -156,7 +156,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Matrix, Matrix">
+        <overload signature="Add(Matrix, Matrix, Matrix)">
           <summary><![CDATA[Adds a matrix to another matrix.]]></summary>
           <syntax><![CDATA[public static void Add (
          ref Matrix matrix1,
@@ -179,7 +179,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateBillboard" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a spherical billboard that rotates around a specified object position.]]></summary>
       <overloads>
-        <overload signature="Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;">
+        <overload signature="CreateBillboard(Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;)">
           <summary><![CDATA[Creates a spherical billboard that rotates around a specified object position.]]></summary>
           <syntax><![CDATA[public static Matrix CreateBillboard (
          Vector3 objectPosition,
@@ -201,7 +201,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Matrix">
+        <overload signature="CreateBillboard(Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Matrix)">
           <summary><![CDATA[Creates a spherical billboard that rotates around a specified object position.]]></summary>
           <syntax><![CDATA[public static void CreateBillboard (
          ref Vector3 objectPosition,
@@ -229,7 +229,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateConstrainedBillboard" returnType="void" isStatic="true">
       <summary><![CDATA[Creates a cylindrical billboard that rotates around a specified axis.]]></summary>
       <overloads>
-        <overload signature="Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Nullable&amp;lt;Vector3&amp;gt;, Matrix">
+        <overload signature="CreateConstrainedBillboard(Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Nullable&amp;lt;Vector3&amp;gt;, Matrix)">
           <summary><![CDATA[Creates a cylindrical billboard that rotates around a specified axis.]]></summary>
           <syntax><![CDATA[public static void CreateConstrainedBillboard (
          ref Vector3 objectPosition,
@@ -254,7 +254,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Nullable&amp;lt;Vector3&amp;gt;">
+        <overload signature="CreateConstrainedBillboard(Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Nullable&amp;lt;Vector3&amp;gt;)">
           <summary><![CDATA[Creates a cylindrical billboard that rotates around a specified axis.]]></summary>
           <syntax><![CDATA[public static Matrix CreateConstrainedBillboard (
          Vector3 objectPosition,
@@ -283,7 +283,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateFromAxisAngle" returnType="void" isStatic="true">
       <summary><![CDATA[Creates a new Matrix that rotates around an arbitrary vector.]]></summary>
       <overloads>
-        <overload signature="Vector3, Single, Matrix">
+        <overload signature="CreateFromAxisAngle(Vector3, Single, Matrix)">
           <summary><![CDATA[Creates a new Matrix that rotates around an arbitrary vector.]]></summary>
           <syntax><![CDATA[public static void CreateFromAxisAngle (
          ref Vector3 axis,
@@ -301,7 +301,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3, Single">
+        <overload signature="CreateFromAxisAngle(Vector3, Single)">
           <summary><![CDATA[Creates a new Matrix that rotates around an arbitrary vector.]]></summary>
           <syntax><![CDATA[public static Matrix CreateFromAxisAngle (
          Vector3 axis,
@@ -323,7 +323,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateFromQuaternion" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a rotation Matrix from a Quaternion.]]></summary>
       <overloads>
-        <overload signature="Quaternion">
+        <overload signature="CreateFromQuaternion(Quaternion)">
           <summary><![CDATA[Creates a rotation Matrix from a Quaternion.]]></summary>
           <syntax><![CDATA[public static Matrix CreateFromQuaternion (
          Quaternion quaternion
@@ -338,7 +338,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Matrix">
+        <overload signature="CreateFromQuaternion(Quaternion, Matrix)">
           <summary><![CDATA[Creates a rotation Matrix from a Quaternion.]]></summary>
           <syntax><![CDATA[public static void CreateFromQuaternion (
          ref Quaternion quaternion,
@@ -359,7 +359,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateFromYawPitchRoll" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a new rotation matrix from a specified yaw, pitch, and roll.]]></summary>
       <overloads>
-        <overload signature="Single, Single, Single">
+        <overload signature="CreateFromYawPitchRoll(Single, Single, Single)">
           <summary><![CDATA[Creates a new rotation matrix from a specified yaw, pitch, and roll.]]></summary>
           <syntax><![CDATA[public static Matrix CreateFromYawPitchRoll (
          float yaw,
@@ -378,7 +378,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single, Matrix">
+        <overload signature="CreateFromYawPitchRoll(Single, Single, Single, Matrix)">
           <summary><![CDATA[Fills in a rotation matrix from a specified yaw, pitch, and roll.]]></summary>
           <syntax><![CDATA[public static void CreateFromYawPitchRoll (
          float yaw,
@@ -403,7 +403,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateLookAt" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a view matrix.]]></summary>
       <overloads>
-        <overload signature="Vector3, Vector3, Vector3">
+        <overload signature="CreateLookAt(Vector3, Vector3, Vector3)">
           <summary><![CDATA[Creates a view matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreateLookAt (
          Vector3 cameraPosition,
@@ -423,7 +423,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3, Vector3, Vector3, Matrix">
+        <overload signature="CreateLookAt(Vector3, Vector3, Vector3, Matrix)">
           <summary><![CDATA[Creates a view matrix.]]></summary>
           <syntax><![CDATA[public static void CreateLookAt (
          ref Vector3 cameraPosition,
@@ -449,7 +449,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateOrthographic" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Builds an orthogonal projection matrix.]]></summary>
       <overloads>
-        <overload signature="Single, Single, Single, Single">
+        <overload signature="CreateOrthographic(Single, Single, Single, Single)">
           <summary><![CDATA[Builds an orthogonal projection matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreateOrthographic (
          float width,
@@ -471,7 +471,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single, Single, Matrix">
+        <overload signature="CreateOrthographic(Single, Single, Single, Single, Matrix)">
           <summary><![CDATA[Builds an orthogonal projection matrix.]]></summary>
           <syntax><![CDATA[public static void CreateOrthographic (
          float width,
@@ -499,7 +499,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateOrthographicOffCenter" returnType="void" isStatic="true">
       <summary><![CDATA[Builds a customized, orthogonal projection matrix.]]></summary>
       <overloads>
-        <overload signature="Single, Single, Single, Single, Single, Single, Matrix">
+        <overload signature="CreateOrthographicOffCenter(Single, Single, Single, Single, Single, Single, Matrix)">
           <summary><![CDATA[Builds a customized, orthogonal projection matrix.]]></summary>
           <syntax><![CDATA[public static void CreateOrthographicOffCenter (
          float left,
@@ -526,7 +526,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single, Single, Single, Single">
+        <overload signature="CreateOrthographicOffCenter(Single, Single, Single, Single, Single, Single)">
           <summary><![CDATA[Builds a customized, orthogonal projection matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreateOrthographicOffCenter (
          float left,
@@ -557,7 +557,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreatePerspective" returnType="void" isStatic="true">
       <summary><![CDATA[Builds a perspective projection matrix.]]></summary>
       <overloads>
-        <overload signature="Single, Single, Single, Single, Matrix">
+        <overload signature="CreatePerspective(Single, Single, Single, Single, Matrix)">
           <summary><![CDATA[Builds a perspective projection matrix.]]></summary>
           <syntax><![CDATA[public static void CreatePerspective (
          float width,
@@ -580,7 +580,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single, Single">
+        <overload signature="CreatePerspective(Single, Single, Single, Single)">
           <summary><![CDATA[Builds a perspective projection matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreatePerspective (
          float width,
@@ -607,7 +607,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreatePerspectiveFieldOfView" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Builds a perspective projection matrix based on a field of view.]]></summary>
       <overloads>
-        <overload signature="Single, Single, Single, Single">
+        <overload signature="CreatePerspectiveFieldOfView(Single, Single, Single, Single)">
           <summary><![CDATA[Builds a perspective projection matrix based on a field of view.]]></summary>
           <syntax><![CDATA[public static Matrix CreatePerspectiveFieldOfView (
          float fieldOfView,
@@ -629,7 +629,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single, Single, Matrix">
+        <overload signature="CreatePerspectiveFieldOfView(Single, Single, Single, Single, Matrix)">
           <summary><![CDATA[Builds a perspective projection matrix based on a field of view.]]></summary>
           <syntax><![CDATA[public static void CreatePerspectiveFieldOfView (
          float fieldOfView,
@@ -657,7 +657,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreatePerspectiveOffCenter" returnType="void" isStatic="true">
       <summary><![CDATA[Builds a customized, perspective projection matrix.]]></summary>
       <overloads>
-        <overload signature="Single, Single, Single, Single, Single, Single, Matrix">
+        <overload signature="CreatePerspectiveOffCenter(Single, Single, Single, Single, Single, Single, Matrix)">
           <summary><![CDATA[Builds a customized, perspective projection matrix.]]></summary>
           <syntax><![CDATA[public static void CreatePerspectiveOffCenter (
          float left,
@@ -684,7 +684,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single, Single, Single, Single">
+        <overload signature="CreatePerspectiveOffCenter(Single, Single, Single, Single, Single, Single)">
           <summary><![CDATA[Builds a customized, perspective projection matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreatePerspectiveOffCenter (
          float left,
@@ -715,7 +715,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateReflection" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a Matrix that reflects the coordinate system about a specified Plane.]]></summary>
       <overloads>
-        <overload signature="Plane">
+        <overload signature="CreateReflection(Plane)">
           <summary><![CDATA[Creates a Matrix that reflects the coordinate system about a specified Plane.]]></summary>
           <syntax><![CDATA[public static Matrix CreateReflection (
          Plane value
@@ -730,7 +730,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Plane, Matrix">
+        <overload signature="CreateReflection(Plane, Matrix)">
           <summary><![CDATA[Fills in an existing Matrix so that it reflects the coordinate system about a specified Plane.]]></summary>
           <syntax><![CDATA[public static void CreateReflection (
          ref Plane value,
@@ -751,7 +751,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateRotationX" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Returns an x-axis rotation matrix.]]></summary>
       <overloads>
-        <overload signature="Single">
+        <overload signature="CreateRotationX(Single)">
           <summary><![CDATA[Returns an x-axis rotation matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreateRotationX (
          float radians
@@ -766,7 +766,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Matrix">
+        <overload signature="CreateRotationX(Single, Matrix)">
           <summary><![CDATA[Returns an x-axis rotation matrix.]]></summary>
           <syntax><![CDATA[public static void CreateRotationX (
          float radians,
@@ -787,7 +787,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateRotationY" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Returns a y-axis rotation matrix.]]></summary>
       <overloads>
-        <overload signature="Single">
+        <overload signature="CreateRotationY(Single)">
           <summary><![CDATA[Returns a y-axis rotation matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreateRotationY (
          float radians
@@ -802,7 +802,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Matrix">
+        <overload signature="CreateRotationY(Single, Matrix)">
           <summary><![CDATA[Returns a y-axis rotation matrix.]]></summary>
           <syntax><![CDATA[public static void CreateRotationY (
          float radians,
@@ -823,7 +823,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateRotationZ" returnType="void" isStatic="true">
       <summary><![CDATA[Returns an z-axis rotation matrix.]]></summary>
       <overloads>
-        <overload signature="Single, Matrix">
+        <overload signature="CreateRotationZ(Single, Matrix)">
           <summary><![CDATA[Returns an z-axis rotation matrix.]]></summary>
           <syntax><![CDATA[public static void CreateRotationZ (
          float radians,
@@ -839,7 +839,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single">
+        <overload signature="CreateRotationZ(Single)">
           <summary><![CDATA[Returns a z-axis rotation matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreateRotationZ (
          float radians
@@ -859,7 +859,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateScale" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a scaling Matrix.]]></summary>
       <overloads>
-        <overload signature="Vector3">
+        <overload signature="CreateScale(Vector3)">
           <summary><![CDATA[Creates a scaling Matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreateScale (
          Vector3 scales
@@ -874,7 +874,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3, Matrix">
+        <overload signature="CreateScale(Vector3, Matrix)">
           <summary><![CDATA[Creates a scaling Matrix.]]></summary>
           <syntax><![CDATA[public static void CreateScale (
          ref Vector3 scales,
@@ -890,7 +890,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single, Matrix">
+        <overload signature="CreateScale(Single, Single, Single, Matrix)">
           <summary><![CDATA[Creates a scaling Matrix.]]></summary>
           <syntax><![CDATA[public static void CreateScale (
          float xScale,
@@ -910,7 +910,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single">
+        <overload signature="CreateScale(Single, Single, Single)">
           <summary><![CDATA[Creates a scaling Matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreateScale (
          float xScale,
@@ -929,7 +929,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single">
+        <overload signature="CreateScale(Single)">
           <summary><![CDATA[Creates a scaling Matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreateScale (
          float scale
@@ -944,7 +944,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Matrix">
+        <overload signature="CreateScale(Single, Matrix)">
           <summary><![CDATA[Creates a scaling Matrix.]]></summary>
           <syntax><![CDATA[public static void CreateScale (
          float scale,
@@ -965,7 +965,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateShadow" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a Matrix that flattens geometry into a specified Plane as if casting a shadow from a specified light source.]]></summary>
       <overloads>
-        <overload signature="Vector3, Plane">
+        <overload signature="CreateShadow(Vector3, Plane)">
           <summary><![CDATA[Creates a Matrix that flattens geometry into a specified Plane as if casting a shadow from a specified light source.]]></summary>
           <syntax><![CDATA[public static Matrix CreateShadow (
          Vector3 lightDirection,
@@ -982,7 +982,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3, Plane, Matrix">
+        <overload signature="CreateShadow(Vector3, Plane, Matrix)">
           <summary><![CDATA[Fills in a Matrix to flatten geometry into a specified Plane as if casting a shadow from a specified light source.]]></summary>
           <syntax><![CDATA[public static void CreateShadow (
          ref Vector3 lightDirection,
@@ -1005,7 +1005,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateTranslation" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a translation Matrix.]]></summary>
       <overloads>
-        <overload signature="Vector3">
+        <overload signature="CreateTranslation(Vector3)">
           <summary><![CDATA[Creates a translation Matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreateTranslation (
          Vector3 position
@@ -1020,7 +1020,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3, Matrix">
+        <overload signature="CreateTranslation(Vector3, Matrix)">
           <summary><![CDATA[Creates a translation Matrix.]]></summary>
           <syntax><![CDATA[public static void CreateTranslation (
          ref Vector3 position,
@@ -1036,7 +1036,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single, Matrix">
+        <overload signature="CreateTranslation(Single, Single, Single, Matrix)">
           <summary><![CDATA[Creates a translation Matrix.]]></summary>
           <syntax><![CDATA[public static void CreateTranslation (
          float xPosition,
@@ -1056,7 +1056,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single">
+        <overload signature="CreateTranslation(Single, Single, Single)">
           <summary><![CDATA[Creates a translation Matrix.]]></summary>
           <syntax><![CDATA[public static Matrix CreateTranslation (
          float xPosition,
@@ -1080,7 +1080,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateWorld" returnType="void" isStatic="true">
       <summary><![CDATA[Creates a world matrix with the specified parameters.]]></summary>
       <overloads>
-        <overload signature="Vector3, Vector3, Vector3, Matrix">
+        <overload signature="CreateWorld(Vector3, Vector3, Vector3, Matrix)">
           <summary><![CDATA[Creates a world matrix with the specified parameters.]]></summary>
           <syntax><![CDATA[public static void CreateWorld (
          ref Vector3 position,
@@ -1102,7 +1102,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3, Vector3, Vector3">
+        <overload signature="CreateWorld(Vector3, Vector3, Vector3)">
           <summary><![CDATA[Creates a world matrix with the specified parameters.]]></summary>
           <syntax><![CDATA[public static Matrix CreateWorld (
          Vector3 position,
@@ -1167,7 +1167,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="Divide" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Divides the components of a matrix by the corresponding components of another matrix.]]></summary>
       <overloads>
-        <overload signature="Matrix, Matrix">
+        <overload signature="Divide(Matrix, Matrix)">
           <summary><![CDATA[Divides the components of a matrix by the corresponding components of another matrix.]]></summary>
           <syntax><![CDATA[public static Matrix Divide (
          Matrix matrix1,
@@ -1184,7 +1184,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Single">
+        <overload signature="Divide(Matrix, Single)">
           <summary><![CDATA[Divides the components of a matrix by a scalar.]]></summary>
           <syntax><![CDATA[public static Matrix Divide (
          Matrix matrix1,
@@ -1201,7 +1201,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Matrix, Matrix">
+        <overload signature="Divide(Matrix, Matrix, Matrix)">
           <summary><![CDATA[Divides the components of a matrix by the corresponding components of another matrix.]]></summary>
           <syntax><![CDATA[public static void Divide (
          ref Matrix matrix1,
@@ -1219,7 +1219,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Single, Matrix">
+        <overload signature="Divide(Matrix, Single, Matrix)">
           <summary><![CDATA[Divides the components of a matrix by a scalar.]]></summary>
           <syntax><![CDATA[public static void Divide (
          ref Matrix matrix1,
@@ -1242,7 +1242,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified Object is equal to the Matrix.]]></summary>
       <overloads>
-        <overload signature="Matrix">
+        <overload signature="Equals(Matrix)">
           <summary><![CDATA[Determines whether the specified Object is equal to the Matrix.]]></summary>
           <syntax><![CDATA[public bool Equals (
          Matrix other
@@ -1257,7 +1257,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -1292,7 +1292,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="Invert" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Calculates the inverse of a matrix.]]></summary>
       <overloads>
-        <overload signature="Matrix">
+        <overload signature="Invert(Matrix)">
           <summary><![CDATA[Calculates the inverse of a matrix.]]></summary>
           <syntax><![CDATA[public static Matrix Invert (
          Matrix matrix
@@ -1307,7 +1307,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Matrix">
+        <overload signature="Invert(Matrix, Matrix)">
           <summary><![CDATA[Calculates the inverse of a matrix.]]></summary>
           <syntax><![CDATA[public static void Invert (
          ref Matrix matrix,
@@ -1328,7 +1328,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="Lerp" returnType="void" isStatic="true">
       <summary><![CDATA[Linearly interpolates between the corresponding values of two matrices.]]></summary>
       <overloads>
-        <overload signature="Matrix, Matrix, Single, Matrix">
+        <overload signature="Lerp(Matrix, Matrix, Single, Matrix)">
           <summary><![CDATA[Linearly interpolates between the corresponding values of two matrices.]]></summary>
           <syntax><![CDATA[public static void Lerp (
          ref Matrix matrix1,
@@ -1348,7 +1348,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Matrix, Single">
+        <overload signature="Lerp(Matrix, Matrix, Single)">
           <summary><![CDATA[Linearly interpolates between the corresponding values of two matrices.]]></summary>
           <syntax><![CDATA[public static Matrix Lerp (
          Matrix matrix1,
@@ -1372,7 +1372,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="Multiply" returnType="void" isStatic="true">
       <summary><![CDATA[Multiplies a matrix by another matrix.]]></summary>
       <overloads>
-        <overload signature="Matrix, Matrix, Matrix">
+        <overload signature="Multiply(Matrix, Matrix, Matrix)">
           <summary><![CDATA[Multiplies a matrix by another matrix.]]></summary>
           <syntax><![CDATA[public static void Multiply (
          ref Matrix matrix1,
@@ -1390,7 +1390,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Matrix">
+        <overload signature="Multiply(Matrix, Matrix)">
           <summary><![CDATA[Multiplies a matrix by another matrix.]]></summary>
           <syntax><![CDATA[public static Matrix Multiply (
          Matrix matrix1,
@@ -1407,7 +1407,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Single">
+        <overload signature="Multiply(Matrix, Single)">
           <summary><![CDATA[Multiplies a matrix by a scalar value.]]></summary>
           <syntax><![CDATA[public static Matrix Multiply (
          Matrix matrix1,
@@ -1424,7 +1424,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Single, Matrix">
+        <overload signature="Multiply(Matrix, Single, Matrix)">
           <summary><![CDATA[Multiplies a matrix by a scalar value.]]></summary>
           <syntax><![CDATA[public static void Multiply (
          ref Matrix matrix1,
@@ -1447,7 +1447,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="Negate" returnType="void" isStatic="true">
       <summary><![CDATA[Negates individual elements of a matrix.]]></summary>
       <overloads>
-        <overload signature="Matrix, Matrix">
+        <overload signature="Negate(Matrix, Matrix)">
           <summary><![CDATA[Negates individual elements of a matrix.]]></summary>
           <syntax><![CDATA[public static void Negate (
          ref Matrix matrix,
@@ -1463,7 +1463,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix">
+        <overload signature="Negate(Matrix)">
           <summary><![CDATA[Negates individual elements of a matrix.]]></summary>
           <syntax><![CDATA[public static Matrix Negate (
          Matrix matrix
@@ -1483,7 +1483,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="Subtract" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Subtracts matrices.]]></summary>
       <overloads>
-        <overload signature="Matrix, Matrix">
+        <overload signature="Subtract(Matrix, Matrix)">
           <summary><![CDATA[Subtracts matrices.]]></summary>
           <syntax><![CDATA[public static Matrix Subtract (
          Matrix matrix1,
@@ -1500,7 +1500,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Matrix, Matrix">
+        <overload signature="Subtract(Matrix, Matrix, Matrix)">
           <summary><![CDATA[Subtracts matrices.]]></summary>
           <syntax><![CDATA[public static void Subtract (
          ref Matrix matrix1,
@@ -1538,7 +1538,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="Transform" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Transforms a Matrix by applying a Quaternion rotation.]]></summary>
       <overloads>
-        <overload signature="Matrix, Quaternion">
+        <overload signature="Transform(Matrix, Quaternion)">
           <summary><![CDATA[Transforms a Matrix by applying a Quaternion rotation.]]></summary>
           <syntax><![CDATA[public static Matrix Transform (
          Matrix value,
@@ -1555,7 +1555,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Quaternion, Matrix">
+        <overload signature="Transform(Matrix, Quaternion, Matrix)">
           <summary><![CDATA[Transforms a Matrix by applying a Quaternion rotation.]]></summary>
           <syntax><![CDATA[public static void Transform (
          ref Matrix value,
@@ -1578,7 +1578,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="Transpose" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Transposes the rows and columns of a matrix.]]></summary>
       <overloads>
-        <overload signature="Matrix">
+        <overload signature="Transpose(Matrix)">
           <summary><![CDATA[Transposes the rows and columns of a matrix.]]></summary>
           <syntax><![CDATA[public static Matrix Transpose (
          Matrix matrix
@@ -1593,7 +1593,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Matrix">
+        <overload signature="Transpose(Matrix, Matrix)">
           <summary><![CDATA[Transposes the rows and columns of a matrix.]]></summary>
           <syntax><![CDATA[public static void Transpose (
          ref Matrix matrix,
@@ -1636,7 +1636,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="op_Division" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Divides the components of a matrix by a scalar.]]></summary>
       <overloads>
-        <overload signature="Matrix, Single">
+        <overload signature="op_Division(Matrix, Single)">
           <summary><![CDATA[Divides the components of a matrix by a scalar.]]></summary>
           <syntax><![CDATA[public static Matrix op_Division (
          Matrix matrix1,
@@ -1653,7 +1653,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Matrix">
+        <overload signature="op_Division(Matrix, Matrix)">
           <summary><![CDATA[Divides the components of a matrix by the corresponding components of another matrix.]]></summary>
           <syntax><![CDATA[public static Matrix op_Division (
          Matrix matrix1,
@@ -1719,7 +1719,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="op_Multiply" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Multiplies a matrix by another matrix.]]></summary>
       <overloads>
-        <overload signature="Matrix, Matrix">
+        <overload signature="op_Multiply(Matrix, Matrix)">
           <summary><![CDATA[Multiplies a matrix by another matrix.]]></summary>
           <syntax><![CDATA[public static Matrix op_Multiply (
          Matrix matrix1,
@@ -1736,7 +1736,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Matrix">
+        <overload signature="op_Multiply(Single, Matrix)">
           <summary><![CDATA[Multiplies a matrix by a scalar value.]]></summary>
           <syntax><![CDATA[public static Matrix op_Multiply (
          float scaleFactor,
@@ -1753,7 +1753,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Single">
+        <overload signature="op_Multiply(Matrix, Single)">
           <summary><![CDATA[Multiplies a matrix by a scalar value.]]></summary>
           <syntax><![CDATA[public static Matrix op_Multiply (
          Matrix matrix,

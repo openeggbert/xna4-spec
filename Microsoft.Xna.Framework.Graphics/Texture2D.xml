@@ -41,16 +41,15 @@
     </constructor>
     <constructor signature="Texture2D(GraphicsDevice, Int32, Int32)">
       <summary><![CDATA[Creates a new instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         graphicsDevice As GraphicsDevice, _
-         width As Integer, _
-         height As Integer _
+      <syntax><![CDATA[public Texture2D (
+         GraphicsDevice graphicsDevice,
+         int width,
+         int height
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The device.]]></parameter>
-        <parameter name="width" type="Object"><![CDATA[Type: Int32 Texture width.]]></parameter>
-        <parameter name="height" type="Object"><![CDATA[Type: Int32 Texture height.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The device.]]></parameter>
+        <parameter name="width" type="int"><![CDATA[Type: Int32 Texture width.]]></parameter>
+        <parameter name="height" type="int"><![CDATA[Type: Int32 Texture height.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -85,20 +84,19 @@ Public Sub New ( _
     </constructor>
     <constructor signature="Texture2D(GraphicsDevice, Int32, Int32, Boolean, SurfaceFormat)">
       <summary><![CDATA[Creates a new instance of this object.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         graphicsDevice As GraphicsDevice, _
-         width As Integer, _
-         height As Integer, _
-         mipMap As Boolean, _
-         format As SurfaceFormat _
+      <syntax><![CDATA[public Texture2D (
+         GraphicsDevice graphicsDevice,
+         int width,
+         int height,
+         bool mipMap,
+         SurfaceFormat format
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The device.]]></parameter>
-        <parameter name="width" type="Object"><![CDATA[Type: Int32 Texture width.]]></parameter>
-        <parameter name="height" type="Object"><![CDATA[Type: Int32 Texture height.]]></parameter>
-        <parameter name="mipMap" type="Object"><![CDATA[Type: Boolean [ MarshalAsAttribute (U1)] True to generate a full mipmap chain; false otherwise.]]></parameter>
-        <parameter name="format" type="Object"><![CDATA[Type: SurfaceFormat Texture data format.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The device.]]></parameter>
+        <parameter name="width" type="int"><![CDATA[Type: Int32 Texture width.]]></parameter>
+        <parameter name="height" type="int"><![CDATA[Type: Int32 Texture height.]]></parameter>
+        <parameter name="mipMap" type="bool"><![CDATA[Type: Boolean [ MarshalAsAttribute (U1)] True to generate a full mipmap chain; false otherwise.]]></parameter>
+        <parameter name="format" type="SurfaceFormat"><![CDATA[Type: SurfaceFormat Texture data format.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -168,7 +166,7 @@ Public Sub New ( _
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Releases the unmanaged resources used by the Texture2D and optionally releases the managed resources.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Releases the unmanaged resources used by the Texture2D and optionally releases the managed resources.]]></summary>
           <syntax><![CDATA[protected override void Dispose (
          bool 
@@ -185,7 +183,7 @@ Public Sub New ( _
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -220,7 +218,7 @@ Public Sub New ( _
     <method name="FromFile" returnType="Texture2D" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="GraphicsDevice, Stream, TextureCreationParameters">
+        <overload signature="FromFile(GraphicsDevice, Stream, TextureCreationParameters)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture2D FromFile (
          GraphicsDevice graphicsDevice,
@@ -239,7 +237,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream, Int32, TextureCreationParameters">
+        <overload signature="FromFile(GraphicsDevice, Stream, Int32, TextureCreationParameters)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture2D FromFile (
          GraphicsDevice graphicsDevice,
@@ -260,7 +258,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, String, TextureCreationParameters">
+        <overload signature="FromFile(GraphicsDevice, String, TextureCreationParameters)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture2D FromFile (
          GraphicsDevice graphicsDevice,
@@ -279,7 +277,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, String">
+        <overload signature="FromFile(GraphicsDevice, String)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture2D FromFile (
          GraphicsDevice graphicsDevice,
@@ -296,7 +294,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, String, Int32, Int32">
+        <overload signature="FromFile(GraphicsDevice, String, Int32, Int32)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture2D FromFile (
          GraphicsDevice graphicsDevice,
@@ -317,7 +315,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream, Int32">
+        <overload signature="FromFile(GraphicsDevice, Stream, Int32)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture2D FromFile (
          GraphicsDevice graphicsDevice,
@@ -336,7 +334,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream">
+        <overload signature="FromFile(GraphicsDevice, Stream)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture2D FromFile (
          GraphicsDevice graphicsDevice,
@@ -358,7 +356,7 @@ Public Sub New ( _
     <method name="FromStream" returnType="Texture2D" isStatic="true">
       <summary><![CDATA[Loads texture data from a stream.]]></summary>
       <overloads>
-        <overload signature="GraphicsDevice, Stream">
+        <overload signature="FromStream(GraphicsDevice, Stream)">
           <summary><![CDATA[Loads texture data from a stream.]]></summary>
           <syntax><![CDATA[public static Texture2D FromStream (
          GraphicsDevice graphicsDevice,
@@ -377,7 +375,7 @@ Public Sub New ( _
             <platform>Windows Phone 7</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream, Int32, Int32, Boolean">
+        <overload signature="FromStream(GraphicsDevice, Stream, Int32, Int32, Boolean)">
           <summary><![CDATA[Loads texture data from a stream.]]></summary>
           <syntax><![CDATA[public static Texture2D FromStream (
          GraphicsDevice graphicsDevice,
@@ -425,16 +423,15 @@ Public Sub New ( _
       <overloads>
         <overload signature="SaveAsJpeg()">
           <summary><![CDATA[Saves texture data as a .jpg.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Sub SaveAsJpeg ( _
-         stream As Stream, _
-         width As Integer, _
-         height As Integer _
+          <syntax><![CDATA[public void SaveAsJpeg (
+         Stream stream,
+         int width,
+         int height
 )]]></syntax>
           <parameters>
-            <parameter name="stream" type="Object"><![CDATA[Type: Stream Data stream number.]]></parameter>
-            <parameter name="width" type="Object"><![CDATA[Type: Int32 Image width.]]></parameter>
-            <parameter name="height" type="Object"><![CDATA[Type: Int32 Image height.]]></parameter>
+            <parameter name="stream" type="Stream"><![CDATA[Type: Stream Data stream number.]]></parameter>
+            <parameter name="width" type="int"><![CDATA[Type: Int32 Image width.]]></parameter>
+            <parameter name="height" type="int"><![CDATA[Type: Int32 Image height.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -447,16 +444,15 @@ Public Sub SaveAsJpeg ( _
       <overloads>
         <overload signature="SaveAsPng()">
           <summary><![CDATA[Saves texture data as a .png.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Sub SaveAsPng ( _
-         stream As Stream, _
-         width As Integer, _
-         height As Integer _
+          <syntax><![CDATA[public void SaveAsPng (
+         Stream stream,
+         int width,
+         int height
 )]]></syntax>
           <parameters>
-            <parameter name="stream" type="Object"><![CDATA[Type: Stream Data stream number.]]></parameter>
-            <parameter name="width" type="Object"><![CDATA[Type: Int32 Image width.]]></parameter>
-            <parameter name="height" type="Object"><![CDATA[Type: Int32 Image height.]]></parameter>
+            <parameter name="stream" type="Stream"><![CDATA[Type: Stream Data stream number.]]></parameter>
+            <parameter name="width" type="int"><![CDATA[Type: Int32 Image width.]]></parameter>
+            <parameter name="height" type="int"><![CDATA[Type: Int32 Image height.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -482,7 +478,7 @@ Public Sub SaveAsPng ( _
     <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
-        <overload signature="Texture2D, Texture2D">
+        <overload signature="op_Equality(Texture2D, Texture2D)">
           <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
           <syntax><![CDATA[public static bool op_Equality (
          Texture2D left,
@@ -504,7 +500,7 @@ Public Sub SaveAsPng ( _
     <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
-        <overload signature="Texture2D, Texture2D">
+        <overload signature="op_Inequality(Texture2D, Texture2D)">
           <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
           <syntax><![CDATA[public static bool op_Inequality (
          Texture2D left,

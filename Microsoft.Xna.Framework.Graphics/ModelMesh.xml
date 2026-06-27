@@ -94,7 +94,7 @@
     <method name="Draw" returnType="void">
       <summary><![CDATA[Draws all the ModelMeshPart objects in this mesh, using their current Effect settings, and specifying options for saving effect state.]]></summary>
       <overloads>
-        <overload signature="SaveStateMode">
+        <overload signature="Draw(SaveStateMode)">
           <summary><![CDATA[Draws all the ModelMeshPart objects in this mesh, using their current Effect settings, and specifying options for saving effect state.]]></summary>
           <syntax><![CDATA[public void Draw (
          SaveStateMode saveStateMode
@@ -108,7 +108,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Draw()">
           <summary><![CDATA[Draws all the ModelMeshPart objects in this mesh, using their current Effect settings.]]></summary>
           <syntax><![CDATA[public void Draw ()]]></syntax>
           <platforms>

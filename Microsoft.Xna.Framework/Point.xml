@@ -47,7 +47,7 @@ public struct Point : IEquatable&lt;Point&gt;]]></syntax>
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether two Point instances are equal.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Determines whether two Point instances are equal.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -62,7 +62,7 @@ public struct Point : IEquatable&lt;Point&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Point">
+        <overload signature="Equals(Point)">
           <summary><![CDATA[Determines whether two Point instances are equal.]]></summary>
           <syntax><![CDATA[public bool Equals (
          Point other

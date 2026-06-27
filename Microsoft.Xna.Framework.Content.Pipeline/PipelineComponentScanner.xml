@@ -98,16 +98,15 @@
     </property>
   </properties>
   <methods>
-    <method name="Update" returnType="void">
+    <method name="Update" returnType="bool">
       <summary><![CDATA[Updates the scanner object with the latest available assembly states.]]></summary>
       <overloads>
-        <overload signature="Generic IEnumerable, Generic IEnumerable">
+        <overload signature="Update(Generic IEnumerable, Generic IEnumerable)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Function Update ( _
-         pipelineAssemblies As IEnumerable(Of String), _
-         pipelineAssemblyDependencies As IEnumerable(Of String) _
-) As Boolean]]></syntax>
+          <syntax><![CDATA[public bool Update (
+         IEnumerable&lt;string&gt; pipelineAssemblies,
+         IEnumerable&lt;string&gt; pipelineAssemblyDependencies
+)]]></syntax>
           <parameters>
             <parameter name="pipelineAssemblies" type="Object"><![CDATA[Type: IEnumerable &lt; String &gt; Enumerated list of available assemblies.]]></parameter>
             <parameter name="pipelineAssemblyDependencies" type="Object"><![CDATA[Type: IEnumerable &lt; String &gt; Enumerated list of dependent assemblies.]]></parameter>

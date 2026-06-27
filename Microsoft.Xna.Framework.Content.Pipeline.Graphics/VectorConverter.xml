@@ -39,7 +39,7 @@
     <method name="TryGetVectorType" returnType="bool" isStatic="true">
       <summary><![CDATA[Searches for a managed vector type that corresponds to a GPU vertex format.]]></summary>
       <overloads>
-        <overload signature="VertexElementFormat, Type">
+        <overload signature="TryGetVectorType(VertexElementFormat, Type)">
           <summary><![CDATA[Searches for a managed vector type that corresponds to a GPU vertex format.]]></summary>
           <syntax><![CDATA[public static bool TryGetVectorType (
          VertexElementFormat vertexElementFormat,
@@ -55,7 +55,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="SurfaceFormat, Type">
+        <overload signature="TryGetVectorType(SurfaceFormat, Type)">
           <summary><![CDATA[Searches for a managed vector type that corresponds to a GPU texture format.]]></summary>
           <syntax><![CDATA[public static bool TryGetVectorType (
          SurfaceFormat surfaceFormat,

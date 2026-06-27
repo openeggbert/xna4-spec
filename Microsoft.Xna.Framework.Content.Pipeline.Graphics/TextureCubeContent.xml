@@ -27,7 +27,7 @@
     <method name="Validate" returnType="void">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="Validate()">
           <summary><![CDATA[Verifies that all contents of the cube map are present and correct.]]></summary>
           <syntax><![CDATA[public override void Validate ()]]></syntax>
           <platforms>

@@ -284,12 +284,11 @@
       <overloads>
         <overload signature="WrapAngle()">
           <summary><![CDATA[Reduces a given angle to a value between π and -π.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Shared Function WrapAngle ( _
-         angle As Single _
-) As Single]]></syntax>
+          <syntax><![CDATA[public static float WrapAngle (
+         float angle
+)]]></syntax>
           <parameters>
-            <parameter name="angle" type="Object"><![CDATA[Type: Single The angle to reduce, in radians.]]></parameter>
+            <parameter name="angle" type="float"><![CDATA[Type: Single The angle to reduce, in radians.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Single The new angle, in radians.]]></returns>
           <platforms>

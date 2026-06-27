@@ -34,16 +34,15 @@
     </constructor>
     <constructor signature="AudioEngine(String, TimeSpan, String)">
       <summary><![CDATA[Initializes a new instance of this class, using a settings file, a specific audio renderer, and a specific speaker configuration.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         settingsFile As String, _
-         lookAheadTime As TimeSpan, _
-         rendererId As String _
+      <syntax><![CDATA[public AudioEngine (
+         string settingsFile,
+         TimeSpan lookAheadTime,
+         string rendererId
 )]]></syntax>
       <parameters>
-        <parameter name="settingsFile" type="Object"><![CDATA[Type: String Path to a global settings file.]]></parameter>
-        <parameter name="lookAheadTime" type="Object"><![CDATA[Type: TimeSpan Interactive audio and branch event look-ahead time, in milliseconds.]]></parameter>
-        <parameter name="rendererId" type="Object"><![CDATA[Type: String A string that specifies the audio renderer to use.]]></parameter>
+        <parameter name="settingsFile" type="string"><![CDATA[Type: String Path to a global settings file.]]></parameter>
+        <parameter name="lookAheadTime" type="TimeSpan"><![CDATA[Type: TimeSpan Interactive audio and branch event look-ahead time, in milliseconds.]]></parameter>
+        <parameter name="rendererId" type="string"><![CDATA[Type: String A string that specifies the audio renderer to use.]]></parameter>
       </parameters>
       <remarks><![CDATA[The lookAheadTime parameter specifies how far ahead the audio engine will look when determining when to transition to another sound. For sounds linked to Play events that use a wave variation list, this parameter should be set to greater than 250 milliseconds. Doing so should give the audio engine enough time to prepare streamed data before it is needed for the loop iteration.]]></remarks>
       <platforms>
@@ -89,7 +88,7 @@ Public Sub New ( _
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[protected virtual void Dispose (
          bool 
@@ -100,7 +99,7 @@ Public Sub New ( _
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Dispose()">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[public void Dispose ()]]></syntax>
           <platforms>
@@ -114,7 +113,7 @@ Public Sub New ( _
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj

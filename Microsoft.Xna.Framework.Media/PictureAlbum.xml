@@ -90,7 +90,7 @@
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified Object is equal to this PictureAlbum.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Determines whether the specified Object is equal to this PictureAlbum.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -106,7 +106,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="PictureAlbum">
+        <overload signature="Equals(PictureAlbum)">
           <summary><![CDATA[Determines whether the specified PictureAlbum is equal to this PictureAlbum.]]></summary>
           <syntax><![CDATA[public bool Equals (
          PictureAlbum other

@@ -90,7 +90,7 @@
     <method name="GetData" returnType="int">
       <summary><![CDATA[Gets the latest recorded data from the microphone based on the audio capture buffer.]]></summary>
       <overloads>
-        <overload signature="Byte ">
+        <overload signature="GetData(Byte )">
           <summary><![CDATA[Gets the latest recorded data from the microphone based on the audio capture buffer.]]></summary>
           <syntax><![CDATA[public int GetData (
          byte[] buffer
@@ -108,7 +108,7 @@
             <platform>Windows Phone 7</platform>
           </platforms>
         </overload>
-        <overload signature="Byte , Int32, Int32">
+        <overload signature="GetData(Byte , Int32, Int32)">
           <summary><![CDATA[Gets the latest captured audio data from the microphone based on the specified offset and byte count.]]></summary>
           <syntax><![CDATA[public int GetData (
          byte[] buffer,

@@ -16,18 +16,17 @@
   <constructors>
     <constructor signature="DynamicIndexBuffer(GraphicsDevice, IndexElementSize, Int32, BufferUsage)">
       <summary><![CDATA[Create a new instance of this class.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         graphicsDevice As GraphicsDevice, _
-         indexElementSize As IndexElementSize, _
-         indexCount As Integer, _
-         usage As BufferUsage _
+      <syntax><![CDATA[public DynamicIndexBuffer (
+         GraphicsDevice graphicsDevice,
+         IndexElementSize indexElementSize,
+         int indexCount,
+         BufferUsage usage
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The associated graphics device.]]></parameter>
-        <parameter name="indexElementSize" type="Object"><![CDATA[Type: IndexElementSize Size of each index element.]]></parameter>
-        <parameter name="indexCount" type="Object"><![CDATA[Type: Int32 Number of indices in the buffer.]]></parameter>
-        <parameter name="usage" type="Object"><![CDATA[Type: BufferUsage Behavior options.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The associated graphics device.]]></parameter>
+        <parameter name="indexElementSize" type="IndexElementSize"><![CDATA[Type: IndexElementSize Size of each index element.]]></parameter>
+        <parameter name="indexCount" type="int"><![CDATA[Type: Int32 Number of indices in the buffer.]]></parameter>
+        <parameter name="usage" type="BufferUsage"><![CDATA[Type: BufferUsage Behavior options.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -89,7 +88,7 @@ Public Sub New ( _
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[protected override void Dispose (
          bool 

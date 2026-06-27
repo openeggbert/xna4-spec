@@ -12,28 +12,27 @@ public struct MouseState]]></syntax>
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="MouseState(Object, Object, Object, Object, Object, Object, Object, Object)">
+    <constructor signature="MouseState(int, int, int, ButtonState, ButtonState, ButtonState, ButtonState, ButtonState)">
       <summary><![CDATA[Initializes a new instance of the MouseState class.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         x As Integer, _
-         y As Integer, _
-         scrollWheel As Integer, _
-         leftButton As ButtonState, _
-         middleButton As ButtonState, _
-         rightButton As ButtonState, _
-         xButton1 As ButtonState, _
-         xButton2 As ButtonState _
+      <syntax><![CDATA[public MouseState (
+         int x,
+         int y,
+         int scrollWheel,
+         ButtonState leftButton,
+         ButtonState middleButton,
+         ButtonState rightButton,
+         ButtonState xButton1,
+         ButtonState xButton2
 )]]></syntax>
       <parameters>
-        <parameter name="x" type="Object"><![CDATA[Type: Int32 Horizontal mouse position.]]></parameter>
-        <parameter name="y" type="Object"><![CDATA[Type: Int32 Vertical mouse position.]]></parameter>
-        <parameter name="scrollWheel" type="Object"><![CDATA[Type: Int32 Mouse scroll wheel value.]]></parameter>
-        <parameter name="leftButton" type="Object"><![CDATA[Type: ButtonState Left mouse button state.]]></parameter>
-        <parameter name="middleButton" type="Object"><![CDATA[Type: ButtonState Middle mouse button state.]]></parameter>
-        <parameter name="rightButton" type="Object"><![CDATA[Type: ButtonState Right mouse button state.]]></parameter>
-        <parameter name="xButton1" type="Object"><![CDATA[Type: ButtonState XBUTTON1 state.]]></parameter>
-        <parameter name="xButton2" type="Object"><![CDATA[Type: ButtonState XBUTTON2 state.]]></parameter>
+        <parameter name="x" type="int"><![CDATA[Type: Int32 Horizontal mouse position.]]></parameter>
+        <parameter name="y" type="int"><![CDATA[Type: Int32 Vertical mouse position.]]></parameter>
+        <parameter name="scrollWheel" type="int"><![CDATA[Type: Int32 Mouse scroll wheel value.]]></parameter>
+        <parameter name="leftButton" type="ButtonState"><![CDATA[Type: ButtonState Left mouse button state.]]></parameter>
+        <parameter name="middleButton" type="ButtonState"><![CDATA[Type: ButtonState Middle mouse button state.]]></parameter>
+        <parameter name="rightButton" type="ButtonState"><![CDATA[Type: ButtonState Right mouse button state.]]></parameter>
+        <parameter name="xButton1" type="ButtonState"><![CDATA[Type: ButtonState XBUTTON1 state.]]></parameter>
+        <parameter name="xButton2" type="ButtonState"><![CDATA[Type: ButtonState XBUTTON2 state.]]></parameter>
       </parameters>
       <remarks><![CDATA[Games normally use GetState to get the true mouse state. This constructor is used instead to simulate mouse input for passing within the game's own input subsystem.]]></remarks>
       <platforms>
@@ -114,7 +113,7 @@ Public Sub New ( _
     <method name="Equals" returnType="bool">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj

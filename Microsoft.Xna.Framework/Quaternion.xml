@@ -68,7 +68,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Add" returnType="void" isStatic="true">
       <summary><![CDATA[Adds two Quaternions.]]></summary>
       <overloads>
-        <overload signature="Quaternion, Quaternion, Quaternion">
+        <overload signature="Add(Quaternion, Quaternion, Quaternion)">
           <summary><![CDATA[Adds two Quaternions.]]></summary>
           <syntax><![CDATA[public static void Add (
          ref Quaternion quaternion1,
@@ -86,7 +86,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Quaternion">
+        <overload signature="Add(Quaternion, Quaternion)">
           <summary><![CDATA[Adds two Quaternions.]]></summary>
           <syntax><![CDATA[public static Quaternion Add (
          Quaternion quaternion1,
@@ -108,7 +108,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Concatenate" returnType="void" isStatic="true">
       <summary><![CDATA[Concatenates two Quaternions; the result represents the value1 rotation followed by the value2 rotation.]]></summary>
       <overloads>
-        <overload signature="Quaternion, Quaternion, Quaternion">
+        <overload signature="Concatenate(Quaternion, Quaternion, Quaternion)">
           <summary><![CDATA[Concatenates two Quaternions; the result represents the value1 rotation followed by the value2 rotation.]]></summary>
           <syntax><![CDATA[public static void Concatenate (
          ref Quaternion value1,
@@ -126,7 +126,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Quaternion">
+        <overload signature="Concatenate(Quaternion, Quaternion)">
           <summary><![CDATA[Concatenates two Quaternions; the result represents the value1 rotation followed by the value2 rotation.]]></summary>
           <syntax><![CDATA[public static Quaternion Concatenate (
          Quaternion value1,
@@ -148,7 +148,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Conjugate" returnType="void">
       <summary><![CDATA[Transforms this Quaternion into its conjugate.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="Conjugate()">
           <summary><![CDATA[Transforms this Quaternion into its conjugate.]]></summary>
           <syntax><![CDATA[public void Conjugate ()]]></syntax>
           <platforms>
@@ -157,7 +157,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion">
+        <overload signature="Conjugate(Quaternion)">
           <summary><![CDATA[Returns the conjugate of a specified Quaternion.]]></summary>
           <syntax><![CDATA[public static Quaternion Conjugate (
          Quaternion value
@@ -172,7 +172,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Quaternion">
+        <overload signature="Conjugate(Quaternion, Quaternion)">
           <summary><![CDATA[Returns the conjugate of a specified Quaternion.]]></summary>
           <syntax><![CDATA[public static void Conjugate (
          ref Quaternion value,
@@ -193,7 +193,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="CreateFromAxisAngle" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Creates a Quaternion from a vector and an angle to rotate about the vector.]]></summary>
       <overloads>
-        <overload signature="Vector3, Single">
+        <overload signature="CreateFromAxisAngle(Vector3, Single)">
           <summary><![CDATA[Creates a Quaternion from a vector and an angle to rotate about the vector.]]></summary>
           <syntax><![CDATA[public static Quaternion CreateFromAxisAngle (
          Vector3 axis,
@@ -210,7 +210,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Vector3, Single, Quaternion">
+        <overload signature="CreateFromAxisAngle(Vector3, Single, Quaternion)">
           <summary><![CDATA[Creates a Quaternion from a vector and an angle to rotate about the vector.]]></summary>
           <syntax><![CDATA[public static void CreateFromAxisAngle (
          ref Vector3 axis,
@@ -233,7 +233,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="CreateFromRotationMatrix" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Creates a Quaternion from a rotation Matrix.]]></summary>
       <overloads>
-        <overload signature="Matrix">
+        <overload signature="CreateFromRotationMatrix(Matrix)">
           <summary><![CDATA[Creates a Quaternion from a rotation Matrix.]]></summary>
           <syntax><![CDATA[public static Quaternion CreateFromRotationMatrix (
          Matrix matrix
@@ -248,7 +248,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Matrix, Quaternion">
+        <overload signature="CreateFromRotationMatrix(Matrix, Quaternion)">
           <summary><![CDATA[Creates a Quaternion from a rotation Matrix.]]></summary>
           <syntax><![CDATA[public static void CreateFromRotationMatrix (
          ref Matrix matrix,
@@ -269,7 +269,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="CreateFromYawPitchRoll" returnType="void" isStatic="true">
       <summary><![CDATA[Creates a new Quaternion from specified yaw, pitch, and roll angles.]]></summary>
       <overloads>
-        <overload signature="Single, Single, Single, Quaternion">
+        <overload signature="CreateFromYawPitchRoll(Single, Single, Single, Quaternion)">
           <summary><![CDATA[Creates a new Quaternion from specified yaw, pitch, and roll angles.]]></summary>
           <syntax><![CDATA[public static void CreateFromYawPitchRoll (
          float yaw,
@@ -289,7 +289,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Single, Single, Single">
+        <overload signature="CreateFromYawPitchRoll(Single, Single, Single)">
           <summary><![CDATA[Creates a new Quaternion from specified yaw, pitch, and roll angles.]]></summary>
           <syntax><![CDATA[public static Quaternion CreateFromYawPitchRoll (
          float yaw,
@@ -313,7 +313,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Divide" returnType="void" isStatic="true">
       <summary><![CDATA[Divides a Quaternion by another Quaternion.]]></summary>
       <overloads>
-        <overload signature="Quaternion, Quaternion, Quaternion">
+        <overload signature="Divide(Quaternion, Quaternion, Quaternion)">
           <summary><![CDATA[Divides a Quaternion by another Quaternion.]]></summary>
           <syntax><![CDATA[public static void Divide (
          ref Quaternion quaternion1,
@@ -331,7 +331,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Quaternion">
+        <overload signature="Divide(Quaternion, Quaternion)">
           <summary><![CDATA[Divides a Quaternion by another Quaternion.]]></summary>
           <syntax><![CDATA[public static Quaternion Divide (
          Quaternion quaternion1,
@@ -353,7 +353,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Dot" returnType="void" isStatic="true">
       <summary><![CDATA[Calculates the dot product of two Quaternions.]]></summary>
       <overloads>
-        <overload signature="Quaternion, Quaternion, Single">
+        <overload signature="Dot(Quaternion, Quaternion, Single)">
           <summary><![CDATA[Calculates the dot product of two Quaternions.]]></summary>
           <syntax><![CDATA[public static void Dot (
          ref Quaternion quaternion1,
@@ -371,7 +371,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Quaternion">
+        <overload signature="Dot(Quaternion, Quaternion)">
           <summary><![CDATA[Calculates the dot product of two Quaternions.]]></summary>
           <syntax><![CDATA[public static float Dot (
          Quaternion quaternion1,
@@ -393,7 +393,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified Object is equal to the Quaternion.]]></summary>
       <overloads>
-        <overload signature="Quaternion">
+        <overload signature="Equals(Quaternion)">
           <summary><![CDATA[Determines whether the specified Object is equal to the Quaternion.]]></summary>
           <syntax><![CDATA[public bool Equals (
          Quaternion other
@@ -408,7 +408,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -443,7 +443,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Inverse" returnType="void" isStatic="true">
       <summary><![CDATA[Returns the inverse of a Quaternion.]]></summary>
       <overloads>
-        <overload signature="Quaternion, Quaternion">
+        <overload signature="Inverse(Quaternion, Quaternion)">
           <summary><![CDATA[Returns the inverse of a Quaternion.]]></summary>
           <syntax><![CDATA[public static void Inverse (
          ref Quaternion quaternion,
@@ -459,7 +459,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion">
+        <overload signature="Inverse(Quaternion)">
           <summary><![CDATA[Returns the inverse of a Quaternion.]]></summary>
           <syntax><![CDATA[public static Quaternion Inverse (
          Quaternion quaternion
@@ -509,7 +509,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Lerp" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Linearly interpolates between two quaternions.]]></summary>
       <overloads>
-        <overload signature="Quaternion, Quaternion, Single">
+        <overload signature="Lerp(Quaternion, Quaternion, Single)">
           <summary><![CDATA[Linearly interpolates between two quaternions.]]></summary>
           <syntax><![CDATA[public static Quaternion Lerp (
          Quaternion quaternion1,
@@ -528,7 +528,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Quaternion, Single, Quaternion">
+        <overload signature="Lerp(Quaternion, Quaternion, Single, Quaternion)">
           <summary><![CDATA[Linearly interpolates between two quaternions.]]></summary>
           <syntax><![CDATA[public static void Lerp (
          ref Quaternion quaternion1,
@@ -553,7 +553,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Multiply" returnType="void" isStatic="true">
       <summary><![CDATA[Multiplies a quaternion by a scalar value.]]></summary>
       <overloads>
-        <overload signature="Quaternion, Single, Quaternion">
+        <overload signature="Multiply(Quaternion, Single, Quaternion)">
           <summary><![CDATA[Multiplies a quaternion by a scalar value.]]></summary>
           <syntax><![CDATA[public static void Multiply (
          ref Quaternion quaternion1,
@@ -571,7 +571,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Quaternion">
+        <overload signature="Multiply(Quaternion, Quaternion)">
           <summary><![CDATA[Multiplies two quaternions.]]></summary>
           <syntax><![CDATA[public static Quaternion Multiply (
          Quaternion quaternion1,
@@ -588,7 +588,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Quaternion, Quaternion">
+        <overload signature="Multiply(Quaternion, Quaternion, Quaternion)">
           <summary><![CDATA[Multiplies two quaternions.]]></summary>
           <syntax><![CDATA[public static void Multiply (
          ref Quaternion quaternion1,
@@ -606,7 +606,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Single">
+        <overload signature="Multiply(Quaternion, Single)">
           <summary><![CDATA[Multiplies a quaternion by a scalar value.]]></summary>
           <syntax><![CDATA[public static Quaternion Multiply (
          Quaternion quaternion1,
@@ -628,7 +628,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Negate" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Flips the sign of each component of the quaternion.]]></summary>
       <overloads>
-        <overload signature="Quaternion">
+        <overload signature="Negate(Quaternion)">
           <summary><![CDATA[Flips the sign of each component of the quaternion.]]></summary>
           <syntax><![CDATA[public static Quaternion Negate (
          Quaternion quaternion
@@ -643,7 +643,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Quaternion">
+        <overload signature="Negate(Quaternion, Quaternion)">
           <summary><![CDATA[Flips the sign of each component of the quaternion.]]></summary>
           <syntax><![CDATA[public static void Negate (
          ref Quaternion quaternion,
@@ -664,7 +664,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Normalize" returnType="void" isStatic="true">
       <summary><![CDATA[Divides each component of the quaternion by the length of the quaternion.]]></summary>
       <overloads>
-        <overload signature="Quaternion, Quaternion">
+        <overload signature="Normalize(Quaternion, Quaternion)">
           <summary><![CDATA[Divides each component of the quaternion by the length of the quaternion.]]></summary>
           <syntax><![CDATA[public static void Normalize (
          ref Quaternion quaternion,
@@ -680,7 +680,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Normalize()">
           <summary><![CDATA[Divides each component of the quaternion by the length of the quaternion.]]></summary>
           <syntax><![CDATA[public void Normalize ()]]></syntax>
           <platforms>
@@ -689,7 +689,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion">
+        <overload signature="Normalize(Quaternion)">
           <summary><![CDATA[Divides each component of the quaternion by the length of the quaternion.]]></summary>
           <syntax><![CDATA[public static Quaternion Normalize (
          Quaternion quaternion
@@ -709,7 +709,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Slerp" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Interpolates between two quaternions, using spherical linear interpolation.]]></summary>
       <overloads>
-        <overload signature="Quaternion, Quaternion, Single">
+        <overload signature="Slerp(Quaternion, Quaternion, Single)">
           <summary><![CDATA[Interpolates between two quaternions, using spherical linear interpolation.]]></summary>
           <syntax><![CDATA[public static Quaternion Slerp (
          Quaternion quaternion1,
@@ -728,7 +728,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Quaternion, Single, Quaternion">
+        <overload signature="Slerp(Quaternion, Quaternion, Single, Quaternion)">
           <summary><![CDATA[Interpolates between two quaternions, using spherical linear interpolation.]]></summary>
           <syntax><![CDATA[public static void Slerp (
          ref Quaternion quaternion1,
@@ -753,7 +753,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="Subtract" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Subtracts a quaternion from another quaternion.]]></summary>
       <overloads>
-        <overload signature="Quaternion, Quaternion">
+        <overload signature="Subtract(Quaternion, Quaternion)">
           <summary><![CDATA[Subtracts a quaternion from another quaternion.]]></summary>
           <syntax><![CDATA[public static Quaternion Subtract (
          Quaternion quaternion1,
@@ -770,7 +770,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Quaternion, Quaternion">
+        <overload signature="Subtract(Quaternion, Quaternion, Quaternion)">
           <summary><![CDATA[Subtracts a quaternion from another quaternion.]]></summary>
           <syntax><![CDATA[public static void Subtract (
          ref Quaternion quaternion1,
@@ -896,7 +896,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
     <method name="op_Multiply" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Multiplies two quaternions.]]></summary>
       <overloads>
-        <overload signature="Quaternion, Quaternion">
+        <overload signature="op_Multiply(Quaternion, Quaternion)">
           <summary><![CDATA[Multiplies two quaternions.]]></summary>
           <syntax><![CDATA[public static Quaternion op_Multiply (
          Quaternion quaternion1,
@@ -913,7 +913,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Quaternion, Single">
+        <overload signature="op_Multiply(Quaternion, Single)">
           <summary><![CDATA[Multiplies a quaternion by a scalar value.]]></summary>
           <syntax><![CDATA[public static Quaternion op_Multiply (
          Quaternion quaternion1,

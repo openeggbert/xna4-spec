@@ -95,7 +95,7 @@
     <method name="EncodeName" returnType="string" isStatic="true">
       <summary><![CDATA[Combines a channel name stub and usage index into a string name.]]></summary>
       <overloads>
-        <overload signature="String, Int32">
+        <overload signature="EncodeName(String, Int32)">
           <summary><![CDATA[Combines a channel name stub and usage index into a string name.]]></summary>
           <syntax><![CDATA[public static string EncodeName (
          string baseName,
@@ -111,7 +111,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="VertexElementUsage, Int32">
+        <overload signature="EncodeName(VertexElementUsage, Int32)">
           <summary><![CDATA[Combines a vertex declaration usage and usage index into a string name.]]></summary>
           <syntax><![CDATA[public static string EncodeName (
          VertexElementUsage vertexElementUsage,
@@ -132,7 +132,7 @@
     <method name="Normal" returnType="string" isStatic="true">
       <summary><![CDATA[Gets the name of the primary normal channel.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="Normal()">
           <summary><![CDATA[Gets the name of the primary normal channel.]]></summary>
           <syntax><![CDATA[public static string Normal ()]]></syntax>
           <returns><![CDATA[Primary normal channel name.]]></returns>
@@ -141,7 +141,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Int32">
+        <overload signature="Normal(Int32)">
           <summary><![CDATA[Gets the name of the normal channel with the specified index.]]></summary>
           <syntax><![CDATA[public static string Normal (
          int usageIndex
@@ -219,7 +219,7 @@
     <method name="Weights" returnType="string" isStatic="true">
       <summary><![CDATA[Gets the name of the primary animation weights channel.]]></summary>
       <overloads>
-        <overload signature="">
+        <overload signature="Weights()">
           <summary><![CDATA[Gets the name of the primary animation weights channel.]]></summary>
           <syntax><![CDATA[public static string Weights ()]]></syntax>
           <returns><![CDATA[Name of the primary animation weights channel.]]></returns>
@@ -228,7 +228,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Int32">
+        <overload signature="Weights(Int32)">
           <summary><![CDATA[Gets the name of an animation weights channel at the specified index.]]></summary>
           <syntax><![CDATA[public static string Weights (
          int usageIndex

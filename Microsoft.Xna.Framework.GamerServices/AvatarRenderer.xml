@@ -154,7 +154,7 @@
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[protected virtual void Dispose (
          bool disposing
@@ -169,7 +169,7 @@
             <platform>Windows XP</platform>
           </platforms>
         </overload>
-        <overload signature="">
+        <overload signature="Dispose()">
           <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
           <syntax><![CDATA[public void Dispose ()]]></syntax>
           <platforms>
@@ -184,20 +184,19 @@
     <method name="Draw" returnType="void">
       <summary><![CDATA[Draws the avatar to the current render target.]]></summary>
       <overloads>
-        <overload signature="IAvatarAnimation">
+        <overload signature="Draw(IAvatarAnimation)">
           <summary><![CDATA[Draws the avatar to the current render target.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Sub Draw ( _
-         animation As IAvatarAnimation _
+          <syntax><![CDATA[public void Draw (
+         IAvatarAnimation animation
 )]]></syntax>
           <parameters>
-            <parameter name="animation" type="Object"><![CDATA[Type: IAvatarAnimation The animation to draw.]]></parameter>
+            <parameter name="animation" type="IAvatarAnimation"><![CDATA[Type: IAvatarAnimation The animation to draw.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Generic IList, AvatarExpression">
+        <overload signature="Draw(Generic IList, AvatarExpression)">
           <summary><![CDATA[Draws the avatar to the current render target.]]></summary>
           <syntax><![CDATA[public void Draw (
          IList&lt;Matrix&gt; bones,

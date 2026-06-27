@@ -241,7 +241,7 @@
     <method name="BeginCreate" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Starts hosting a new multiplayer session. The creation operation is performed asynchronously.]]></summary>
       <overloads>
-        <overload signature="NetworkSessionType, Int32, Int32, AsyncCallback, Object">
+        <overload signature="BeginCreate(NetworkSessionType, Int32, Int32, AsyncCallback, Object)">
           <summary><![CDATA[Starts hosting a new multiplayer session. The creation operation is performed asynchronously.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginCreate (
          NetworkSessionType sessionType,
@@ -266,7 +266,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="NetworkSessionType, Int32, Int32, Int32, NetworkSessionProperties, AsyncCallback, Object">
+        <overload signature="BeginCreate(NetworkSessionType, Int32, Int32, Int32, NetworkSessionProperties, AsyncCallback, Object)">
           <summary><![CDATA[Starts hosting a new multiplayer session. The creation operation is performed asynchronously.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginCreate (
          NetworkSessionType sessionType,
@@ -295,7 +295,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="NetworkSessionType, Generic IEnumerable, Int32, Int32, NetworkSessionProperties, AsyncCallback, Object">
+        <overload signature="BeginCreate(NetworkSessionType, Generic IEnumerable, Int32, Int32, NetworkSessionProperties, AsyncCallback, Object)">
           <summary><![CDATA[Starts hosting a new multiplayer session. The creation operation is performed asynchronously.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginCreate (
          NetworkSessionType sessionType,
@@ -329,7 +329,7 @@
     <method name="BeginFind" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Starts a matchmaking query to search for available multiplayer sessions, specifying a collection of local gamers to add to the network session. Call EndFind to access the results of this asynchronous call.]]></summary>
       <overloads>
-        <overload signature="NetworkSessionType, Generic IEnumerable, NetworkSessionProperties, AsyncCallback, Object">
+        <overload signature="BeginFind(NetworkSessionType, Generic IEnumerable, NetworkSessionProperties, AsyncCallback, Object)">
           <summary><![CDATA[Starts a matchmaking query to search for available multiplayer sessions, specifying a collection of local gamers to add to the network session. Call EndFind to access the results of this asynchronous call.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginFind (
          NetworkSessionType sessionType,
@@ -353,7 +353,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="NetworkSessionType, Int32, NetworkSessionProperties, AsyncCallback, Object">
+        <overload signature="BeginFind(NetworkSessionType, Int32, NetworkSessionProperties, AsyncCallback, Object)">
           <summary><![CDATA[Starts a matchmaking query to search for available multiplayer sessions. Call EndFind to access the results of this asynchronous call.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginFind (
          NetworkSessionType sessionType,
@@ -407,7 +407,7 @@
     <method name="BeginJoinInvited" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Starts joining an existing network session in response to an InviteAccepted notification event. Call EndJoinInvited to access the asynchronous method results.]]></summary>
       <overloads>
-        <overload signature="Int32, AsyncCallback, Object">
+        <overload signature="BeginJoinInvited(Int32, AsyncCallback, Object)">
           <summary><![CDATA[Starts joining an existing network session in response to an InviteAccepted notification event. Call EndJoinInvited to access the asynchronous method results.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginJoinInvited (
          int maxLocalGamers,
@@ -428,7 +428,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Generic IEnumerable, AsyncCallback, Object">
+        <overload signature="BeginJoinInvited(Generic IEnumerable, AsyncCallback, Object)">
           <summary><![CDATA[Starts joining an existing network session in response to an InviteAccepted notification event with the specified collection of local gamers. Call EndJoinInvited to access the asynchronous method results.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginJoinInvited (
          IEnumerable&lt;SignedInGamer&gt; localGamers,
@@ -454,7 +454,7 @@
     <method name="Create" returnType="NetworkSession" isStatic="true">
       <summary><![CDATA[Starts hosting a new multiplayer session. This method blocks until the operation has completed.]]></summary>
       <overloads>
-        <overload signature="NetworkSessionType, Int32, Int32">
+        <overload signature="Create(NetworkSessionType, Int32, Int32)">
           <summary><![CDATA[Starts hosting a new multiplayer session. This method blocks until the operation has completed.]]></summary>
           <syntax><![CDATA[public static NetworkSession Create (
          NetworkSessionType sessionType,
@@ -475,7 +475,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="NetworkSessionType, Generic IEnumerable, Int32, Int32, NetworkSessionProperties">
+        <overload signature="Create(NetworkSessionType, Generic IEnumerable, Int32, Int32, NetworkSessionProperties)">
           <summary><![CDATA[Starts hosting a new multiplayer session. This method blocks until the operation has completed.]]></summary>
           <syntax><![CDATA[public static NetworkSession Create (
          NetworkSessionType sessionType,
@@ -500,7 +500,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="NetworkSessionType, Int32, Int32, Int32, NetworkSessionProperties">
+        <overload signature="Create(NetworkSessionType, Int32, Int32, Int32, NetworkSessionProperties)">
           <summary><![CDATA[Starts hosting a new multiplayer session. This method blocks until the operation has completed.]]></summary>
           <syntax><![CDATA[public static NetworkSession Create (
          NetworkSessionType sessionType,
@@ -661,7 +661,7 @@
     <method name="Find" returnType="AvailableNetworkSessionCollection" isStatic="true">
       <summary><![CDATA[Issues a matchmaking query, searching for available multiplayer sessions. This method blocks until the operation has completed.]]></summary>
       <overloads>
-        <overload signature="NetworkSessionType, Int32, NetworkSessionProperties">
+        <overload signature="Find(NetworkSessionType, Int32, NetworkSessionProperties)">
           <summary><![CDATA[Issues a matchmaking query, searching for available multiplayer sessions. This method blocks until the operation has completed.]]></summary>
           <syntax><![CDATA[public static AvailableNetworkSessionCollection Find (
          NetworkSessionType sessionType,
@@ -681,7 +681,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="NetworkSessionType, Generic IEnumerable, NetworkSessionProperties">
+        <overload signature="Find(NetworkSessionType, Generic IEnumerable, NetworkSessionProperties)">
           <summary><![CDATA[Issues a matchmaking query, searching for available multiplayer sessions. This method blocks until the operation has completed.]]></summary>
           <syntax><![CDATA[public static AvailableNetworkSessionCollection Find (
          NetworkSessionType sessionType,
@@ -749,7 +749,7 @@
     <method name="JoinInvited" returnType="NetworkSession" isStatic="true">
       <summary><![CDATA[Joins an existing network session in response to an InviteAccepted notification event.]]></summary>
       <overloads>
-        <overload signature="Generic IEnumerable">
+        <overload signature="JoinInvited(Generic IEnumerable)">
           <summary><![CDATA[Joins an existing network session in response to an InviteAccepted notification event.]]></summary>
           <syntax><![CDATA[public static NetworkSession JoinInvited (
          IEnumerable&lt;SignedInGamer&gt; localGamers
@@ -766,7 +766,7 @@
             <platform>Zune</platform>
           </platforms>
         </overload>
-        <overload signature="Int32">
+        <overload signature="JoinInvited(Int32)">
           <summary><![CDATA[Joins an existing network session in response to an InviteAccepted notification event.]]></summary>
           <syntax><![CDATA[public static NetworkSession JoinInvited (
          int maxLocalGamers

@@ -183,12 +183,11 @@
       <overloads>
         <overload signature="GetPictureFromToken()">
           <summary><![CDATA[Retrieves a picture from the device's media library based on a picture token.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Function GetPictureFromToken ( _
-         token As String _
-) As Picture]]></syntax>
+          <syntax><![CDATA[public Picture GetPictureFromToken (
+         string token
+)]]></syntax>
           <parameters>
-            <parameter name="token" type="Object"><![CDATA[Type: String The picture token. This cannot be null]]></parameter>
+            <parameter name="token" type="string"><![CDATA[Type: String The picture token. This cannot be null]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Picture The Picture object that matches the supplied picture token.]]></returns>
           <platforms>
@@ -197,19 +196,18 @@ Public Function GetPictureFromToken ( _
         </overload>
       </overloads>
     </method>
-    <method name="SavePicture" returnType="void">
+    <method name="SavePicture" returnType="Picture">
       <summary><![CDATA[Saves the image to the media library, and then returns that saved image as a picture object.]]></summary>
       <overloads>
-        <overload signature="String, Byte ">
+        <overload signature="SavePicture(String, Byte )">
           <summary><![CDATA[Saves the image to the media library, and then returns that saved image as a picture object.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Function SavePicture ( _
-         name As String, _
-         imageBuffer As Byte() _
-) As Picture]]></syntax>
+          <syntax><![CDATA[public Picture SavePicture (
+         string name,
+         byte[] imageBuffer
+)]]></syntax>
           <parameters>
-            <parameter name="name" type="Object"><![CDATA[Type: String Name of the image file saved to the media library.]]></parameter>
-            <parameter name="imageBuffer" type="Object"><![CDATA[Type: Byte Buffer that contains the image in the required JPEG file format.]]></parameter>
+            <parameter name="name" type="string"><![CDATA[Type: String Name of the image file saved to the media library.]]></parameter>
+            <parameter name="imageBuffer" type="byte[]"><![CDATA[Type: Byte Buffer that contains the image in the required JPEG file format.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Picture The Picture object that represents the saved image.]]></returns>
           <remarks><![CDATA[Image data that is passed in must be in a JPEG file format. Additionally, SavePicture always saves the image in a JPEG file format.]]></remarks>
@@ -217,17 +215,16 @@ Public Function SavePicture ( _
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="String, Stream">
+        <overload signature="SavePicture(String, Stream)">
           <summary><![CDATA[Saves the image contained in the stream object to the media library, and then returns that saved image as a picture object.]]></summary>
-          <syntax><![CDATA['Declaration
-&lt;SecuritySafeCriticalAttribute&gt; _
-Public Function SavePicture ( _
-         name As String, _
-         source As Stream _
-) As Picture]]></syntax>
+          <syntax><![CDATA[[SecuritySafeCriticalAttribute]
+public Picture SavePicture (
+         string name,
+         Stream source
+)]]></syntax>
           <parameters>
-            <parameter name="name" type="Object"><![CDATA[Type: String Name of the image file that is saved to the media library.]]></parameter>
-            <parameter name="source" type="Object"><![CDATA[Type: Stream Stream object that contains the image information in the required JPEG file format.]]></parameter>
+            <parameter name="name" type="string"><![CDATA[Type: String Name of the image file that is saved to the media library.]]></parameter>
+            <parameter name="source" type="Stream"><![CDATA[Type: Stream Stream object that contains the image information in the required JPEG file format.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Picture The Picture object that represents the saved image.]]></returns>
           <remarks><![CDATA[Image data that is passed in must be in a JPEG file format. SavePicture always saves the image in a JPEG file format.]]></remarks>

@@ -48,7 +48,7 @@
     <method name="Dispose" returnType="void">
       <summary><![CDATA[Releases the unmanaged resources used by this object and optionally releases the managed resources.]]></summary>
       <overloads>
-        <overload signature="Boolean">
+        <overload signature="Dispose(Boolean)">
           <summary><![CDATA[Releases the unmanaged resources used by this object and optionally releases the managed resources.]]></summary>
           <syntax><![CDATA[protected override void Dispose (
          bool 
@@ -65,7 +65,7 @@
     <method name="Equals" returnType="bool">
       <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
       <overloads>
-        <overload signature="Object">
+        <overload signature="Equals(Object)">
           <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
           <syntax><![CDATA[public override bool Equals (
          Object obj
@@ -85,7 +85,7 @@
     <method name="FromFile" returnType="Texture" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="GraphicsDevice, String">
+        <overload signature="FromFile(GraphicsDevice, String)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture FromFile (
          GraphicsDevice graphicsDevice,
@@ -102,7 +102,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream, Int32">
+        <overload signature="FromFile(GraphicsDevice, Stream, Int32)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture FromFile (
          GraphicsDevice graphicsDevice,
@@ -121,7 +121,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, String, Int32, Int32, Int32">
+        <overload signature="FromFile(GraphicsDevice, String, Int32, Int32, Int32)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture FromFile (
          GraphicsDevice graphicsDevice,
@@ -144,7 +144,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream, Int32, TextureCreationParameters">
+        <overload signature="FromFile(GraphicsDevice, Stream, Int32, TextureCreationParameters)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture FromFile (
          GraphicsDevice graphicsDevice,
@@ -165,7 +165,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, String, TextureCreationParameters">
+        <overload signature="FromFile(GraphicsDevice, String, TextureCreationParameters)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture FromFile (
          GraphicsDevice graphicsDevice,
@@ -184,7 +184,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream">
+        <overload signature="FromFile(GraphicsDevice, Stream)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture FromFile (
          GraphicsDevice graphicsDevice,
@@ -201,7 +201,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream, TextureCreationParameters">
+        <overload signature="FromFile(GraphicsDevice, Stream, TextureCreationParameters)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static Texture FromFile (
          GraphicsDevice graphicsDevice,
@@ -245,7 +245,7 @@
     <method name="GetCreationParameters" returnType="TextureCreationParameters" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="GraphicsDevice, Stream">
+        <overload signature="GetCreationParameters(GraphicsDevice, Stream)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureCreationParameters GetCreationParameters (
          GraphicsDevice graphicsDevice,
@@ -261,7 +261,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, String">
+        <overload signature="GetCreationParameters(GraphicsDevice, String)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureCreationParameters GetCreationParameters (
          GraphicsDevice graphicsDevice,
@@ -277,7 +277,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GraphicsDevice, Stream, Int32">
+        <overload signature="GetCreationParameters(GraphicsDevice, Stream, Int32)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureCreationParameters GetCreationParameters (
          GraphicsDevice graphicsDevice,
@@ -315,7 +315,7 @@
     <method name="GetTextureInformation" returnType="TextureInformation" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
-        <overload signature="String">
+        <overload signature="GetTextureInformation(String)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureInformation GetTextureInformation (
          string filename
@@ -329,7 +329,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Stream">
+        <overload signature="GetTextureInformation(Stream)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureInformation GetTextureInformation (
          Stream textureStream
@@ -343,7 +343,7 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Stream, Int32">
+        <overload signature="GetTextureInformation(Stream, Int32)">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public static TextureInformation GetTextureInformation (
          Stream textureStream,
@@ -385,7 +385,7 @@
     <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
-        <overload signature="Texture, Texture">
+        <overload signature="op_Equality(Texture, Texture)">
           <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
           <syntax><![CDATA[public static bool op_Equality (
          Texture left,
@@ -407,7 +407,7 @@
     <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
-        <overload signature="Texture, Texture">
+        <overload signature="op_Inequality(Texture, Texture)">
           <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
           <syntax><![CDATA[public static bool op_Inequality (
          Texture left,

@@ -56,17 +56,16 @@
     </property>
   </properties>
   <methods>
-    <method name="MeasureString" returnType="void">
+    <method name="MeasureString" returnType="Vector2">
       <summary><![CDATA[Returns the height and width of a given string as a Vector2.]]></summary>
       <overloads>
-        <overload signature="StringBuilder">
+        <overload signature="MeasureString(StringBuilder)">
           <summary><![CDATA[Returns the width and height of a string as a Vector2.]]></summary>
-          <syntax><![CDATA['Declaration
-Public Function MeasureString ( _
-         text As StringBuilder _
-) As Vector2]]></syntax>
+          <syntax><![CDATA[public Vector2 MeasureString (
+         StringBuilder text
+)]]></syntax>
           <parameters>
-            <parameter name="text" type="Object"><![CDATA[Type: StringBuilder The string to measure.]]></parameter>
+            <parameter name="text" type="StringBuilder"><![CDATA[Type: StringBuilder The string to measure.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Vector2 The width and height, in pixels, of text, when it is rendered.]]></returns>
           <remarks><![CDATA[Use a StringBuilder argument in place of a String argument to measure dynamically formatted text.]]></remarks>

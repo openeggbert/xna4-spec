@@ -23,16 +23,15 @@
     </constructor>
     <constructor signature="GameTime(TimeSpan, TimeSpan, Boolean)">
       <summary><![CDATA[Creates a new instance of GameTime.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         totalGameTime As TimeSpan, _
-         elapsedGameTime As TimeSpan, _
-         isRunningSlowly As Boolean _
+      <syntax><![CDATA[public GameTime (
+         TimeSpan totalGameTime,
+         TimeSpan elapsedGameTime,
+         bool isRunningSlowly
 )]]></syntax>
       <parameters>
-        <parameter name="totalGameTime" type="Object"><![CDATA[Type: TimeSpan The amount of game time since the start of the game.]]></parameter>
-        <parameter name="elapsedGameTime" type="Object"><![CDATA[Type: TimeSpan The amount of elapsed game time since the last update.]]></parameter>
-        <parameter name="isRunningSlowly" type="Object"><![CDATA[Type: Boolean Whether the game is running multiple updates this frame.]]></parameter>
+        <parameter name="totalGameTime" type="TimeSpan"><![CDATA[Type: TimeSpan The amount of game time since the start of the game.]]></parameter>
+        <parameter name="elapsedGameTime" type="TimeSpan"><![CDATA[Type: TimeSpan The amount of elapsed game time since the last update.]]></parameter>
+        <parameter name="isRunningSlowly" type="bool"><![CDATA[Type: Boolean Whether the game is running multiple updates this frame.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -82,14 +81,13 @@ Public Sub New ( _
     </constructor>
     <constructor signature="GameTime(TimeSpan, TimeSpan)">
       <summary><![CDATA[Creates a new instance of GameTime.]]></summary>
-      <syntax><![CDATA['Declaration
-Public Sub New ( _
-         totalGameTime As TimeSpan, _
-         elapsedGameTime As TimeSpan _
+      <syntax><![CDATA[public GameTime (
+         TimeSpan totalGameTime,
+         TimeSpan elapsedGameTime
 )]]></syntax>
       <parameters>
-        <parameter name="totalGameTime" type="Object"><![CDATA[Type: TimeSpan The amount of game time since the start of the game.]]></parameter>
-        <parameter name="elapsedGameTime" type="Object"><![CDATA[Type: TimeSpan The amount of elapsed game time since the last update.]]></parameter>
+        <parameter name="totalGameTime" type="TimeSpan"><![CDATA[Type: TimeSpan The amount of game time since the start of the game.]]></parameter>
+        <parameter name="elapsedGameTime" type="TimeSpan"><![CDATA[Type: TimeSpan The amount of elapsed game time since the last update.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
