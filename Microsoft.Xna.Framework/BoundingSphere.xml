@@ -4,7 +4,7 @@
           name="BoundingSphere" kind="struct"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IEquatable&lt;BoundingSphere&gt;">
+          interfaces="IEquatable&amp;lt;BoundingSphere&amp;gt;">
   <summary><![CDATA[Defines a sphere.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.BoundingSphereConverter)")]
 [SerializableAttribute]
@@ -15,7 +15,7 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="BoundingSphere(Vector3, Single)">
+    <constructor signature="BoundingSphere(Object, float)">
       <summary><![CDATA[Creates a new instance of BoundingSphere.]]></summary>
       <syntax><![CDATA[public BoundingSphere (
          Vector3 center,
@@ -32,46 +32,28 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
       </platforms>
     </constructor>
   </constructors>
-  <fields>
-    <field name="Center" type="Vector3">
-      <summary><![CDATA[The center point of the sphere.]]></summary>
-      <syntax><![CDATA[public Vector3 Center]]></syntax>
-      <platforms>
-        <platform>Xbox 360</platform>
-        <platform>Windows XP SP2</platform>
-        <platform>Windows Vista</platform>
-      </platforms>
-    </field>
-    <field name="Radius" type="Single">
-      <summary><![CDATA[The radius of the sphere.]]></summary>
-      <syntax><![CDATA[public float Radius]]></syntax>
-      <platforms>
-        <platform>Xbox 360</platform>
-        <platform>Windows XP SP2</platform>
-        <platform>Windows Vista</platform>
-      </platforms>
-    </field>
-  </fields>
+  <properties>
+  </properties>
   <methods>
     <method name="Contains" returnType="ContainmentType">
-      <summary><![CDATA[Checks whether the current BoundingSphere contains the specified BoundingBox.]]></summary>
+      <summary><![CDATA[Checks whether the current BoundingSphere contains the specified BoundingSphere.]]></summary>
       <overloads>
-        <overload signature="Contains(BoundingBox)">
-          <summary><![CDATA[Checks whether the current BoundingSphere contains the specified BoundingBox.]]></summary>
+        <overload signature="Contains(BoundingSphere)">
+          <summary><![CDATA[Checks whether the current BoundingSphere contains the specified BoundingSphere.]]></summary>
           <syntax><![CDATA[public ContainmentType Contains (
-         BoundingBox box
+         BoundingSphere sphere
 )]]></syntax>
           <parameters>
-            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check against the current BoundingSphere .]]></parameter>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check against the current BoundingSphere .]]></parameter>
           </parameters>
-          <returns><![CDATA[An enumeration indicating the relationship of the specified BoundingBox to the current BoundingSphere.]]></returns>
+          <returns><![CDATA[An enumeration indicating the relationship of the BoundingSpheres.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Contains(ref BoundingBox, out ContainmentType)">
+        <overload signature="Contains(BoundingBox, ContainmentType)">
           <summary><![CDATA[Checks whether the current BoundingSphere contains the specified BoundingBox.]]></summary>
           <syntax><![CDATA[public void Contains (
          ref BoundingBox box,
@@ -102,22 +84,22 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Contains(BoundingSphere)">
-          <summary><![CDATA[Checks whether the current BoundingSphere contains the specified BoundingSphere.]]></summary>
+        <overload signature="Contains(BoundingBox)">
+          <summary><![CDATA[Checks whether the current BoundingSphere contains the specified BoundingBox.]]></summary>
           <syntax><![CDATA[public ContainmentType Contains (
-         BoundingSphere sphere
+         BoundingBox box
 )]]></syntax>
           <parameters>
-            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check against the current BoundingSphere .]]></parameter>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check against the current BoundingSphere .]]></parameter>
           </parameters>
-          <returns><![CDATA[An enumeration indicating the relationship of the BoundingSpheres.]]></returns>
+          <returns><![CDATA[An enumeration indicating the relationship of the specified BoundingBox to the current BoundingSphere.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Contains(ref BoundingSphere, out ContainmentType)">
+        <overload signature="Contains(BoundingSphere, ContainmentType)">
           <summary><![CDATA[Checks whether the current BoundingSphere contains the specified BoundingSphere.]]></summary>
           <syntax><![CDATA[public void Contains (
          ref BoundingSphere sphere,
@@ -125,6 +107,22 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to test for overlap.]]></parameter>
+            <parameter name="result" type="ContainmentType"><![CDATA[[ OutAttribute ] Enumeration indicating the extent of overlap.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Contains(Vector3, ContainmentType)">
+          <summary><![CDATA[Checks whether the current BoundingSphere contains the specified point.]]></summary>
+          <syntax><![CDATA[public void Contains (
+         ref Vector3 point,
+         out ContainmentType result
+)]]></syntax>
+          <parameters>
+            <parameter name="point" type="Object"><![CDATA[The point to test for overlap.]]></parameter>
             <parameter name="result" type="ContainmentType"><![CDATA[[ OutAttribute ] Enumeration indicating the extent of overlap.]]></parameter>
           </parameters>
           <platforms>
@@ -142,22 +140,6 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
             <parameter name="point" type="Object"><![CDATA[The point to check against the current BoundingSphere .]]></parameter>
           </parameters>
           <returns><![CDATA[An enumeration indicating the relationship of the specified point to the current BoundingSphere.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="Contains(ref Vector3, out ContainmentType)">
-          <summary><![CDATA[Checks whether the current BoundingSphere contains the specified point.]]></summary>
-          <syntax><![CDATA[public void Contains (
-         ref Vector3 point,
-         out ContainmentType result
-)]]></syntax>
-          <parameters>
-            <parameter name="point" type="Object"><![CDATA[The point to test for overlap.]]></parameter>
-            <parameter name="result" type="ContainmentType"><![CDATA[[ OutAttribute ] Enumeration indicating the extent of overlap.]]></parameter>
-          </parameters>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -184,7 +166,7 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="CreateFromBoundingBox(ref BoundingBox, out BoundingSphere)">
+        <overload signature="CreateFromBoundingBox(BoundingBox, BoundingSphere)">
           <summary><![CDATA[Creates the smallest BoundingSphere that can contain a specified BoundingBox.]]></summary>
           <syntax><![CDATA[public static void CreateFromBoundingBox (
          ref BoundingBox box,
@@ -202,10 +184,10 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateFromFrustum" returnType="BoundingSphere" isStatic="true">
+    <method name="CreateFromFrustum" returnType="void">
       <summary><![CDATA[Creates the smallest BoundingSphere that can contain a specified BoundingFrustum.]]></summary>
       <overloads>
-        <overload signature="CreateFromFrustum(BoundingFrustum)">
+        <overload signature="CreateFromFrustum()">
           <summary><![CDATA[Creates the smallest BoundingSphere that can contain a specified BoundingFrustum.]]></summary>
           <syntax><![CDATA[public static BoundingSphere CreateFromFrustum (
          BoundingFrustum frustum
@@ -222,10 +204,10 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateFromPoints" returnType="BoundingSphere" isStatic="true">
+    <method name="CreateFromPoints" returnType="void">
       <summary><![CDATA[Creates a BoundingSphere that can contain a specified list of points.]]></summary>
       <overloads>
-        <overload signature="CreateFromPoints(IEnumerable&lt;Vector3&gt;)">
+        <overload signature="CreateFromPoints()">
           <summary><![CDATA[Creates a BoundingSphere that can contain a specified list of points.]]></summary>
           <syntax><![CDATA[public static BoundingSphere CreateFromPoints (
          IEnumerable&lt;Vector3&gt; points
@@ -242,27 +224,10 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateMerged" returnType="BoundingSphere" isStatic="true">
+    <method name="CreateMerged" returnType="void" isStatic="true">
       <summary><![CDATA[Creates a BoundingSphere that contains the two specified BoundingSphere instances.]]></summary>
       <overloads>
-        <overload signature="CreateMerged(BoundingSphere, BoundingSphere)">
-          <summary><![CDATA[Creates a BoundingSphere that contains the two specified BoundingSphere instances.]]></summary>
-          <syntax><![CDATA[public static BoundingSphere CreateMerged (
-         BoundingSphere original,
-         BoundingSphere additional
-)]]></syntax>
-          <parameters>
-            <parameter name="original" type="BoundingSphere"><![CDATA[BoundingSphere to be merged.]]></parameter>
-            <parameter name="additional" type="BoundingSphere"><![CDATA[BoundingSphere to be merged.]]></parameter>
-          </parameters>
-          <returns><![CDATA[The created BoundingSphere.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="CreateMerged(ref BoundingSphere, ref BoundingSphere, out BoundingSphere)">
+        <overload signature="CreateMerged(BoundingSphere, BoundingSphere, BoundingSphere)">
           <summary><![CDATA[Creates a BoundingSphere that contains the two specified BoundingSphere instances.]]></summary>
           <syntax><![CDATA[public static void CreateMerged (
          ref BoundingSphere original,
@@ -280,9 +245,26 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
+        <overload signature="CreateMerged(BoundingSphere, BoundingSphere)">
+          <summary><![CDATA[Creates a BoundingSphere that contains the two specified BoundingSphere instances.]]></summary>
+          <syntax><![CDATA[public static BoundingSphere CreateMerged (
+         BoundingSphere original,
+         BoundingSphere additional
+)]]></syntax>
+          <parameters>
+            <parameter name="original" type="BoundingSphere"><![CDATA[BoundingSphere to be merged.]]></parameter>
+            <parameter name="additional" type="BoundingSphere"><![CDATA[BoundingSphere to be merged.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created BoundingSphere.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
       </overloads>
     </method>
-    <method name="Equals" returnType="Boolean">
+    <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether the specified BoundingSphere is equal to the current BoundingSphere.]]></summary>
       <overloads>
         <overload signature="Equals(BoundingSphere)">
@@ -317,7 +299,7 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="Int32">
+    <method name="GetHashCode" returnType="void">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -332,79 +314,18 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Intersects" returnType="Boolean">
-      <summary><![CDATA[Checks whether the current BoundingSphere intersects with a specified BoundingBox.]]></summary>
+    <method name="Intersects" returnType="void">
+      <summary><![CDATA[Checks whether the current BoundingSphere intersects a Ray.]]></summary>
       <overloads>
-        <overload signature="Intersects(BoundingBox)">
-          <summary><![CDATA[Checks whether the current BoundingSphere intersects with a specified BoundingBox.]]></summary>
-          <syntax><![CDATA[public bool Intersects (
-         BoundingBox box
-)]]></syntax>
-          <parameters>
-            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with the current BoundingSphere .]]></parameter>
-          </parameters>
-          <returns><![CDATA[true if the BoundingBox and BoundingSphere intersect; false otherwise.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="Intersects(ref BoundingBox, out Boolean)">
-          <summary><![CDATA[Checks whether the current BoundingSphere intersects a BoundingBox.]]></summary>
+        <overload signature="Intersects(Ray, Nullable&amp;lt;Single&amp;gt;)">
+          <summary><![CDATA[Checks whether the current BoundingSphere intersects a Ray.]]></summary>
           <syntax><![CDATA[public void Intersects (
-         ref BoundingBox box,
-         out bool result
+         ref Ray ray,
+         out Nullable&lt;float&gt; result
 )]]></syntax>
           <parameters>
-            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with.]]></parameter>
-            <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] true if the BoundingSphere and BoundingBox intersect; false otherwise.]]></parameter>
-          </parameters>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="Intersects(BoundingFrustum)">
-          <summary><![CDATA[Checks whether the current BoundingSphere intersects with a specified BoundingFrustum.]]></summary>
-          <syntax><![CDATA[public bool Intersects (
-         BoundingFrustum frustum
-)]]></syntax>
-          <parameters>
-            <parameter name="frustum" type="BoundingFrustum"><![CDATA[The BoundingFrustum to check for intersection with the current BoundingSphere .]]></parameter>
-          </parameters>
-          <returns><![CDATA[true if the BoundingFrustum and BoundingSphere intersect; false otherwise.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="Intersects(BoundingSphere)">
-          <summary><![CDATA[Checks whether the current BoundingSphere intersects with a specified BoundingSphere.]]></summary>
-          <syntax><![CDATA[public bool Intersects (
-         BoundingSphere sphere
-)]]></syntax>
-          <parameters>
-            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with the current BoundingSphere .]]></parameter>
-          </parameters>
-          <returns><![CDATA[true if the BoundingSpheres intersect; false otherwise.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="Intersects(ref BoundingSphere, out Boolean)">
-          <summary><![CDATA[Checks whether the current BoundingSphere intersects another BoundingSphere.]]></summary>
-          <syntax><![CDATA[public void Intersects (
-         ref BoundingSphere sphere,
-         out bool result
-)]]></syntax>
-          <parameters>
-            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with.]]></parameter>
-            <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] true if the BoundingSphere instances intersect; false otherwise.]]></parameter>
+            <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -427,20 +348,18 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Intersects(ref Plane, out PlaneIntersectionType)">
-          <summary><![CDATA[Checks whether the current BoundingSphere intersects a Plane.]]></summary>
+        <overload signature="Intersects(Ray, Nullable&amp;lt;Single&amp;gt;)">
+          <summary><![CDATA[Checks whether the current BoundingSphere intersects a Ray.]]></summary>
           <syntax><![CDATA[public void Intersects (
-         ref Plane plane,
-         out PlaneIntersectionType result
+         ref Ray ray,
+         out Nullable&lt;float&gt; result
 )]]></syntax>
           <parameters>
-            <parameter name="plane" type="Plane"><![CDATA[The Plane to check for intersection with.]]></parameter>
-            <parameter name="result" type="PlaneIntersectionType"><![CDATA[[ OutAttribute ] An enumeration indicating whether the BoundingSphere intersects the Plane .]]></parameter>
+            <parameter name="ray" type="Ray"><![CDATA[Type: Ray The Ray to check for intersection with.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[Type: Nullable &lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
+            <platform>Windows Phone</platform>
           </platforms>
         </overload>
         <overload signature="Intersects(Ray)">
@@ -458,16 +377,93 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Intersects(ref Ray, out Nullable&lt;Single&gt;)">
-          <summary><![CDATA[Checks whether the current BoundingSphere intersects a Ray.]]></summary>
+        <overload signature="Intersects(BoundingSphere, Boolean)">
+          <summary><![CDATA[Checks whether the current BoundingSphere intersects another BoundingSphere.]]></summary>
           <syntax><![CDATA[public void Intersects (
-         ref Ray ray,
-         out Nullable&lt;float&gt; result
+         ref BoundingSphere sphere,
+         out bool result
 )]]></syntax>
           <parameters>
-            <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with.]]></parameter>
+            <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] true if the BoundingSphere instances intersect; false otherwise.]]></parameter>
           </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(Plane, PlaneIntersectionType)">
+          <summary><![CDATA[Checks whether the current BoundingSphere intersects a Plane.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref Plane plane,
+         out PlaneIntersectionType result
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Plane"><![CDATA[The Plane to check for intersection with.]]></parameter>
+            <parameter name="result" type="PlaneIntersectionType"><![CDATA[[ OutAttribute ] An enumeration indicating whether the BoundingSphere intersects the Plane .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(BoundingFrustum)">
+          <summary><![CDATA[Checks whether the current BoundingSphere intersects with a specified BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         BoundingFrustum frustum
+)]]></syntax>
+          <parameters>
+            <parameter name="frustum" type="BoundingFrustum"><![CDATA[The BoundingFrustum to check for intersection with the current BoundingSphere .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the BoundingFrustum and BoundingSphere intersect; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(BoundingBox)">
+          <summary><![CDATA[Checks whether the current BoundingSphere intersects with a specified BoundingBox.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         BoundingBox box
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with the current BoundingSphere .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the BoundingBox and BoundingSphere intersect; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(BoundingBox, Boolean)">
+          <summary><![CDATA[Checks whether the current BoundingSphere intersects a BoundingBox.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingBox box,
+         out bool result
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with.]]></parameter>
+            <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] true if the BoundingSphere and BoundingBox intersect; false otherwise.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(BoundingSphere)">
+          <summary><![CDATA[Checks whether the current BoundingSphere intersects with a specified BoundingSphere.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         BoundingSphere sphere
+)]]></syntax>
+          <parameters>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with the current BoundingSphere .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the BoundingSpheres intersect; false otherwise.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -476,10 +472,63 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="Boolean" isStatic="true">
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a String that represents the current BoundingSphere.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a String that represents the current BoundingSphere.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of the current BoundingSphere.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Transform" returnType="void">
+      <summary><![CDATA[Translates and scales the BoundingSphere using a given Matrix.]]></summary>
+      <overloads>
+        <overload signature="Transform(Matrix, BoundingSphere)">
+          <summary><![CDATA[Translates and scales the BoundingSphere using a given Matrix.]]></summary>
+          <syntax><![CDATA[public void Transform (
+         ref Matrix matrix,
+         out BoundingSphere result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix" type="Matrix"><![CDATA[A transformation matrix that might include translation, rotation, or uniform scaling. Note that BoundingSphere.Transform will not return correct results if there are non-uniform scaling, shears, or other unusual transforms in this transformation matrix. This is because there is no way to shear or non-uniformly scale a sphere. Such an operation would cause the sphere to lose its shape as a sphere.]]></parameter>
+            <parameter name="result" type="BoundingSphere"><![CDATA[[ OutAttribute ] The transformed BoundingSphere .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Transform(Matrix)">
+          <summary><![CDATA[Translates and scales the BoundingSphere using a given Matrix.]]></summary>
+          <syntax><![CDATA[public BoundingSphere Transform (
+         Matrix matrix
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix" type="Matrix"><![CDATA[A transformation matrix that might include translation, rotation, or uniform scaling. Note that BoundingSphere.Transform will not return correct results if there are non-uniform scaling, shears, or other unusual transforms in this transformation matrix. This is because there is no way to shear or non-uniformly scale a sphere. Such an operation would cause the sphere to lose its shape as a sphere.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The transformed BoundingSphere.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
       <summary><![CDATA[Determines whether two instances of BoundingSphere are equal.]]></summary>
       <overloads>
-        <overload signature="op_Equality(BoundingSphere, BoundingSphere)">
+        <overload signature="op_Equality()">
           <summary><![CDATA[Determines whether two instances of BoundingSphere are equal.]]></summary>
           <syntax><![CDATA[public static bool op_Equality (
          BoundingSphere a,
@@ -498,10 +547,10 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="Boolean" isStatic="true">
+    <method name="op_Inequality" returnType="void">
       <summary><![CDATA[Determines whether two instances of BoundingSphere are not equal.]]></summary>
       <overloads>
-        <overload signature="op_Inequality(BoundingSphere, BoundingSphere)">
+        <overload signature="op_Inequality()">
           <summary><![CDATA[Determines whether two instances of BoundingSphere are not equal.]]></summary>
           <syntax><![CDATA[public static bool op_Inequality (
          BoundingSphere a,
@@ -520,58 +569,27 @@ public struct BoundingSphere : IEquatable&lt;BoundingSphere&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="String">
-      <summary><![CDATA[Returns a String that represents the current BoundingSphere.]]></summary>
-      <overloads>
-        <overload signature="ToString()">
-          <summary><![CDATA[Returns a String that represents the current BoundingSphere.]]></summary>
-          <syntax><![CDATA[public override string ToString ()]]></syntax>
-          <returns><![CDATA[String representation of the current BoundingSphere.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-      </overloads>
-    </method>
-    <method name="Transform" returnType="BoundingSphere">
-      <summary><![CDATA[Translates and scales the BoundingSphere using a given Matrix.]]></summary>
-      <overloads>
-        <overload signature="Transform(Matrix)">
-          <summary><![CDATA[Translates and scales the BoundingSphere using a given Matrix.]]></summary>
-          <syntax><![CDATA[public BoundingSphere Transform (
-         Matrix matrix
-)]]></syntax>
-          <parameters>
-            <parameter name="matrix" type="Matrix"><![CDATA[A transformation matrix that might include translation, rotation, or uniform scaling. Note that BoundingSphere.Transform will not return correct results if there are non-uniform scaling, shears, or other unusual transforms in this transformation matrix. This is because there is no way to shear or non-uniformly scale a sphere. Such an operation would cause the sphere to lose its shape as a sphere.]]></parameter>
-          </parameters>
-          <returns><![CDATA[The transformed BoundingSphere.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-            <platform>Zune</platform>
-          </platforms>
-        </overload>
-        <overload signature="Transform(ref Matrix, out BoundingSphere)">
-          <summary><![CDATA[Translates and scales the BoundingSphere using a given Matrix.]]></summary>
-          <syntax><![CDATA[public void Transform (
-         ref Matrix matrix,
-         out BoundingSphere result
-)]]></syntax>
-          <parameters>
-            <parameter name="matrix" type="Matrix"><![CDATA[A transformation matrix that might include translation, rotation, or uniform scaling. Note that BoundingSphere.Transform will not return correct results if there are non-uniform scaling, shears, or other unusual transforms in this transformation matrix. This is because there is no way to shear or non-uniformly scale a sphere. Such an operation would cause the sphere to lose its shape as a sphere.]]></parameter>
-            <parameter name="result" type="BoundingSphere"><![CDATA[[ OutAttribute ] The transformed BoundingSphere .]]></parameter>
-          </parameters>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-            <platform>Zune</platform>
-          </platforms>
-        </overload>
-      </overloads>
-    </method>
   </methods>
+  <fields>
+    <field name="Center" type="Vector3">
+      <summary><![CDATA[The center point of the sphere.]]></summary>
+      <syntax><![CDATA[public Vector3 Center]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Radius" type="float">
+      <summary><![CDATA[The radius of the sphere.]]></summary>
+      <syntax><![CDATA[public float Radius]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
 </xna-type>

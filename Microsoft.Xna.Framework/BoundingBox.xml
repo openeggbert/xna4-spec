@@ -4,7 +4,7 @@
           name="BoundingBox" kind="struct"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IEquatable&lt;BoundingBox&gt;">
+          interfaces="IEquatable&amp;lt;BoundingBox&amp;gt;">
   <summary><![CDATA[Defines an axis-aligned box-shaped 3D volume.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.BoundingBoxConverter)")]
 [SerializableAttribute]
@@ -16,7 +16,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="BoundingBox(Vector3, Vector3)">
+    <constructor signature="BoundingBox(Object, Object)">
       <summary><![CDATA[Creates an instance of BoundingBox.]]></summary>
       <syntax><![CDATA[public BoundingBox (
          Vector3 min,
@@ -34,72 +34,12 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
       </platforms>
     </constructor>
   </constructors>
-  <fields>
-    <field name="Min" type="Vector3">
-      <summary><![CDATA[The minimum point the BoundingBox contains.]]></summary>
-      <syntax><![CDATA[public Vector3 Min]]></syntax>
-      <remarks><![CDATA[The minimum point is the point with components that are less than or equal to the components of every other point within the BoundingBox . Since a BoundingBox is axis aligned the minimum point is the lower-left corner of the back face of the BoundingBox when looking at it from the positive z direction.]]></remarks>
-      <platforms>
-        <platform>Xbox 360</platform>
-        <platform>Windows XP SP2</platform>
-        <platform>Windows Vista</platform>
-      </platforms>
-    </field>
-    <field name="Max" type="Vector3">
-      <summary><![CDATA[The maximum point the BoundingBox contains.]]></summary>
-      <syntax><![CDATA[public Vector3 Max]]></syntax>
-      <remarks><![CDATA[The maximum point is the point with components that are greater than or equal to the components of every other point within the BoundingBox . Since a BoundingBox is axis aligned the maximum point is the upper-right corner of the front face of the BoundingBox when looking at it from the positive z direction.]]></remarks>
-      <platforms>
-        <platform>Xbox 360</platform>
-        <platform>Windows XP SP2</platform>
-        <platform>Windows Vista</platform>
-      </platforms>
-    </field>
-    <field name="CornerCount" type="Int32" isStatic="true" isReadOnly="true">
-      <summary><![CDATA[Specifies the total number of corners (8) in the BoundingBox.]]></summary>
-      <syntax><![CDATA[public const int CornerCount]]></syntax>
-      <platforms>
-        <platform>Xbox 360</platform>
-        <platform>Windows XP SP2</platform>
-        <platform>Windows Vista</platform>
-      </platforms>
-    </field>
-  </fields>
+  <properties>
+  </properties>
   <methods>
     <method name="Contains" returnType="ContainmentType">
-      <summary><![CDATA[Tests whether the BoundingBox contains another BoundingBox.]]></summary>
+      <summary><![CDATA[Tests whether the BoundingBox contains a BoundingFrustum.]]></summary>
       <overloads>
-        <overload signature="Contains(BoundingBox)">
-          <summary><![CDATA[Tests whether the BoundingBox contains another BoundingBox.]]></summary>
-          <syntax><![CDATA[public ContainmentType Contains (
-         BoundingBox box
-)]]></syntax>
-          <parameters>
-            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to test for overlap.]]></parameter>
-          </parameters>
-          <returns><![CDATA[Enumeration indicating the extent of overlap.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="Contains(ref BoundingBox, out ContainmentType)">
-          <summary><![CDATA[Tests whether the BoundingBox contains a BoundingBox.]]></summary>
-          <syntax><![CDATA[public void Contains (
-         ref BoundingBox box,
-         out ContainmentType result
-)]]></syntax>
-          <parameters>
-            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to test for overlap.]]></parameter>
-            <parameter name="result" type="ContainmentType"><![CDATA[[ OutAttribute ] Enumeration indicating the extent of overlap.]]></parameter>
-          </parameters>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
         <overload signature="Contains(BoundingFrustum)">
           <summary><![CDATA[Tests whether the BoundingBox contains a BoundingFrustum.]]></summary>
           <syntax><![CDATA[public ContainmentType Contains (
@@ -109,6 +49,38 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <parameter name="frustum" type="BoundingFrustum"><![CDATA[The BoundingFrustum to test for overlap.]]></parameter>
           </parameters>
           <returns><![CDATA[Enumeration indicating the extent of overlap.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Contains(BoundingSphere, ContainmentType)">
+          <summary><![CDATA[Tests whether the BoundingBox contains a BoundingSphere.]]></summary>
+          <syntax><![CDATA[public void Contains (
+         ref BoundingSphere sphere,
+         out ContainmentType result
+)]]></syntax>
+          <parameters>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to test for overlap.]]></parameter>
+            <parameter name="result" type="ContainmentType"><![CDATA[[ OutAttribute ] Enumeration indicating the extent of overlap.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Contains(BoundingBox, ContainmentType)">
+          <summary><![CDATA[Tests whether the BoundingBox contains a BoundingBox.]]></summary>
+          <syntax><![CDATA[public void Contains (
+         ref BoundingBox box,
+         out ContainmentType result
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to test for overlap.]]></parameter>
+            <parameter name="result" type="ContainmentType"><![CDATA[[ OutAttribute ] Enumeration indicating the extent of overlap.]]></parameter>
+          </parameters>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -130,16 +102,15 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Contains(ref BoundingSphere, out ContainmentType)">
-          <summary><![CDATA[Tests whether the BoundingBox contains a BoundingSphere.]]></summary>
-          <syntax><![CDATA[public void Contains (
-         ref BoundingSphere sphere,
-         out ContainmentType result
+        <overload signature="Contains(BoundingBox)">
+          <summary><![CDATA[Tests whether the BoundingBox contains another BoundingBox.]]></summary>
+          <syntax><![CDATA[public ContainmentType Contains (
+         BoundingBox box
 )]]></syntax>
           <parameters>
-            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to test for overlap.]]></parameter>
-            <parameter name="result" type="ContainmentType"><![CDATA[[ OutAttribute ] Enumeration indicating the extent of overlap.]]></parameter>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to test for overlap.]]></parameter>
           </parameters>
+          <returns><![CDATA[Enumeration indicating the extent of overlap.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -161,7 +132,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Contains(ref Vector3, out ContainmentType)">
+        <overload signature="Contains(Vector3, ContainmentType)">
           <summary><![CDATA[Tests whether the BoundingBox contains a point.]]></summary>
           <syntax><![CDATA[public void Contains (
          ref Vector3 point,
@@ -179,10 +150,10 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateFromPoints" returnType="BoundingBox" isStatic="true">
+    <method name="CreateFromPoints" returnType="void">
       <summary><![CDATA[Creates the smallest BoundingBox that will contain a group of points.]]></summary>
       <overloads>
-        <overload signature="CreateFromPoints(IEnumerable&lt;Vector3&gt;)">
+        <overload signature="CreateFromPoints()">
           <summary><![CDATA[Creates the smallest BoundingBox that will contain a group of points.]]></summary>
           <syntax><![CDATA[public static BoundingBox CreateFromPoints (
          IEnumerable&lt;Vector3&gt; points
@@ -199,25 +170,10 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateFromSphere" returnType="BoundingBox" isStatic="true">
+    <method name="CreateFromSphere" returnType="void" isStatic="true">
       <summary><![CDATA[Creates the smallest BoundingBox that will contain the specified BoundingSphere.]]></summary>
       <overloads>
-        <overload signature="CreateFromSphere(BoundingSphere)">
-          <summary><![CDATA[Creates the smallest BoundingBox that will contain the specified BoundingSphere.]]></summary>
-          <syntax><![CDATA[public static BoundingBox CreateFromSphere (
-         BoundingSphere sphere
-)]]></syntax>
-          <parameters>
-            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to contain.]]></parameter>
-          </parameters>
-          <returns><![CDATA[The created BoundingBox.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="CreateFromSphere(ref BoundingSphere, out BoundingBox)">
+        <overload signature="CreateFromSphere(BoundingSphere, BoundingBox)">
           <summary><![CDATA[Creates the smallest BoundingBox that will contain the specified BoundingSphere.]]></summary>
           <syntax><![CDATA[public static void CreateFromSphere (
          ref BoundingSphere sphere,
@@ -233,20 +189,13 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-      </overloads>
-    </method>
-    <method name="CreateMerged" returnType="BoundingBox" isStatic="true">
-      <summary><![CDATA[Creates the smallest BoundingBox that contains the two specified BoundingBox instances.]]></summary>
-      <overloads>
-        <overload signature="CreateMerged(BoundingBox, BoundingBox)">
-          <summary><![CDATA[Creates the smallest BoundingBox that contains the two specified BoundingBox instances.]]></summary>
-          <syntax><![CDATA[public static BoundingBox CreateMerged (
-         BoundingBox original,
-         BoundingBox additional
+        <overload signature="CreateFromSphere(BoundingSphere)">
+          <summary><![CDATA[Creates the smallest BoundingBox that will contain the specified BoundingSphere.]]></summary>
+          <syntax><![CDATA[public static BoundingBox CreateFromSphere (
+         BoundingSphere sphere
 )]]></syntax>
           <parameters>
-            <parameter name="original" type="BoundingBox"><![CDATA[One of the BoundingBox s to contain.]]></parameter>
-            <parameter name="additional" type="BoundingBox"><![CDATA[One of the BoundingBox s to contain.]]></parameter>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to contain.]]></parameter>
           </parameters>
           <returns><![CDATA[The created BoundingBox.]]></returns>
           <platforms>
@@ -255,7 +204,12 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="CreateMerged(ref BoundingBox, ref BoundingBox, out BoundingBox)">
+      </overloads>
+    </method>
+    <method name="CreateMerged" returnType="void" isStatic="true">
+      <summary><![CDATA[Creates the smallest BoundingBox that contains the two specified BoundingBox instances.]]></summary>
+      <overloads>
+        <overload signature="CreateMerged(BoundingBox, BoundingBox, BoundingBox)">
           <summary><![CDATA[Creates the smallest BoundingBox that contains the two specified BoundingBox instances.]]></summary>
           <syntax><![CDATA[public static void CreateMerged (
          ref BoundingBox original,
@@ -273,9 +227,26 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
+        <overload signature="CreateMerged(BoundingBox, BoundingBox)">
+          <summary><![CDATA[Creates the smallest BoundingBox that contains the two specified BoundingBox instances.]]></summary>
+          <syntax><![CDATA[public static BoundingBox CreateMerged (
+         BoundingBox original,
+         BoundingBox additional
+)]]></syntax>
+          <parameters>
+            <parameter name="original" type="BoundingBox"><![CDATA[One of the BoundingBox s to contain.]]></parameter>
+            <parameter name="additional" type="BoundingBox"><![CDATA[One of the BoundingBox s to contain.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created BoundingBox.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
       </overloads>
     </method>
-    <method name="Equals" returnType="Boolean">
+    <method name="Equals" returnType="bool">
       <summary><![CDATA[Determines whether two instances of BoundingBox are equal.]]></summary>
       <overloads>
         <overload signature="Equals(BoundingBox)">
@@ -324,7 +295,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="GetCorners(Vector3[])">
+        <overload signature="GetCorners(Vector3 )">
           <summary><![CDATA[Gets the array of points that make up the corners of the BoundingBox.]]></summary>
           <syntax><![CDATA[public void GetCorners (
          Vector3[] corners
@@ -341,7 +312,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="Int32">
+    <method name="GetHashCode" returnType="void">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -356,55 +327,9 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Intersects" returnType="Boolean">
-      <summary><![CDATA[Checks whether the current BoundingBox intersects another BoundingBox.]]></summary>
+    <method name="Intersects" returnType="bool">
+      <summary><![CDATA[Checks whether the current BoundingBox intersects a BoundingSphere.]]></summary>
       <overloads>
-        <overload signature="Intersects(BoundingBox)">
-          <summary><![CDATA[Checks whether the current BoundingBox intersects another BoundingBox.]]></summary>
-          <syntax><![CDATA[public bool Intersects (
-         BoundingBox box
-)]]></syntax>
-          <parameters>
-            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with.]]></parameter>
-          </parameters>
-          <returns><![CDATA[true if the BoundingBoxs intersect; false otherwise.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="Intersects(ref BoundingBox, out Boolean)">
-          <summary><![CDATA[Checks whether the current BoundingBox intersects another BoundingBox.]]></summary>
-          <syntax><![CDATA[public void Intersects (
-         ref BoundingBox box,
-         out bool result
-)]]></syntax>
-          <parameters>
-            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with.]]></parameter>
-            <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] true if the BoundingBox instances intersect; false otherwise.]]></parameter>
-          </parameters>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="Intersects(BoundingFrustum)">
-          <summary><![CDATA[Checks whether the current BoundingBox intersects a BoundingFrustum.]]></summary>
-          <syntax><![CDATA[public bool Intersects (
-         BoundingFrustum frustum
-)]]></syntax>
-          <parameters>
-            <parameter name="frustum" type="BoundingFrustum"><![CDATA[The BoundingFrustum to check for intersection with.]]></parameter>
-          </parameters>
-          <returns><![CDATA[true if the BoundingBox and BoundingFrustum intersect; false otherwise.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
         <overload signature="Intersects(BoundingSphere)">
           <summary><![CDATA[Checks whether the current BoundingBox intersects a BoundingSphere.]]></summary>
           <syntax><![CDATA[public bool Intersects (
@@ -420,7 +345,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Intersects(ref BoundingSphere, out Boolean)">
+        <overload signature="Intersects(BoundingSphere, Boolean)">
           <summary><![CDATA[Checks whether the current BoundingBox intersects a BoundingSphere.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref BoundingSphere sphere,
@@ -429,37 +354,6 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
           <parameters>
             <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with.]]></parameter>
             <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] true if the BoundingBox and BoundingSphere intersect; false otherwise.]]></parameter>
-          </parameters>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="Intersects(Plane)">
-          <summary><![CDATA[Checks whether the current BoundingBox intersects a Plane.]]></summary>
-          <syntax><![CDATA[public PlaneIntersectionType Intersects (
-         Plane plane
-)]]></syntax>
-          <parameters>
-            <parameter name="plane" type="Plane"><![CDATA[The Plane to check for intersection with.]]></parameter>
-          </parameters>
-          <returns><![CDATA[An enumeration indicating whether the BoundingBox intersects the Plane.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-        <overload signature="Intersects(ref Plane, out PlaneIntersectionType)">
-          <summary><![CDATA[Checks whether the current BoundingBox intersects a Plane.]]></summary>
-          <syntax><![CDATA[public void Intersects (
-         ref Plane plane,
-         out PlaneIntersectionType result
-)]]></syntax>
-          <parameters>
-            <parameter name="plane" type="Plane"><![CDATA[The Plane to check for intersection with.]]></parameter>
-            <parameter name="result" type="PlaneIntersectionType"><![CDATA[[ OutAttribute ] An enumeration indicating whether the BoundingBox intersects the Plane .]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -482,7 +376,69 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Intersects(ref Ray, out Nullable&lt;Single&gt;)">
+        <overload signature="Intersects(Plane, PlaneIntersectionType)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects a Plane.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref Plane plane,
+         out PlaneIntersectionType result
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Plane"><![CDATA[The Plane to check for intersection with.]]></parameter>
+            <parameter name="result" type="PlaneIntersectionType"><![CDATA[[ OutAttribute ] An enumeration indicating whether the BoundingBox intersects the Plane .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(BoundingBox, Boolean)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects another BoundingBox.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingBox box,
+         out bool result
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with.]]></parameter>
+            <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] true if the BoundingBox instances intersect; false otherwise.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(Plane)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects a Plane.]]></summary>
+          <syntax><![CDATA[public PlaneIntersectionType Intersects (
+         Plane plane
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Plane"><![CDATA[The Plane to check for intersection with.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An enumeration indicating whether the BoundingBox intersects the Plane.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(BoundingFrustum)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects a BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         BoundingFrustum frustum
+)]]></syntax>
+          <parameters>
+            <parameter name="frustum" type="BoundingFrustum"><![CDATA[The BoundingFrustum to check for intersection with.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the BoundingBox and BoundingFrustum intersect; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(Ray, Nullable&amp;lt;Single&amp;gt;)">
           <summary><![CDATA[Checks whether the current BoundingBox intersects a Ray.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref Ray ray,
@@ -498,12 +454,56 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
+        <overload signature="Intersects(Ray, Nullable&amp;lt;Single&amp;gt;)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects a Ray.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref Ray ray,
+         out Nullable&lt;float&gt; result
+)]]></syntax>
+          <parameters>
+            <parameter name="ray" type="Ray"><![CDATA[Type: Ray The Ray to check for intersection with.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[Type: Nullable &lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingBox , or null if there is no intersection.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(BoundingBox)">
+          <summary><![CDATA[Checks whether the current BoundingBox intersects another BoundingBox.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         BoundingBox box
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the BoundingBoxs intersect; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="Boolean" isStatic="true">
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a String that represents the current BoundingBox.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a String that represents the current BoundingBox.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of the current BoundingBox.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
       <summary><![CDATA[Determines whether two instances of BoundingBox are equal.]]></summary>
       <overloads>
-        <overload signature="op_Equality(BoundingBox, BoundingBox)">
+        <overload signature="op_Equality()">
           <summary><![CDATA[Determines whether two instances of BoundingBox are equal.]]></summary>
           <syntax><![CDATA[public static bool op_Equality (
          BoundingBox a,
@@ -522,10 +522,10 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="Boolean" isStatic="true">
+    <method name="op_Inequality" returnType="void">
       <summary><![CDATA[Determines whether two instances of BoundingBox are not equal.]]></summary>
       <overloads>
-        <overload signature="op_Inequality(BoundingBox, BoundingBox)">
+        <overload signature="op_Inequality()">
           <summary><![CDATA[Determines whether two instances of BoundingBox are not equal.]]></summary>
           <syntax><![CDATA[public static bool op_Inequality (
          BoundingBox a,
@@ -544,20 +544,38 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="String">
-      <summary><![CDATA[Returns a String that represents the current BoundingBox.]]></summary>
-      <overloads>
-        <overload signature="ToString()">
-          <summary><![CDATA[Returns a String that represents the current BoundingBox.]]></summary>
-          <syntax><![CDATA[public override string ToString ()]]></syntax>
-          <returns><![CDATA[String representation of the current BoundingBox.]]></returns>
-          <platforms>
-            <platform>Xbox 360</platform>
-            <platform>Windows XP SP2</platform>
-            <platform>Windows Vista</platform>
-          </platforms>
-        </overload>
-      </overloads>
-    </method>
   </methods>
+  <fields>
+    <field name="CornerCount" type="int" isReadOnly="true">
+      <summary><![CDATA[Specifies the total number of corners (8) in the BoundingBox.]]></summary>
+      <syntax><![CDATA[public const int CornerCount]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Max" type="Vector3">
+      <summary><![CDATA[The maximum point the BoundingBox contains.]]></summary>
+      <syntax><![CDATA[public Vector3 Max]]></syntax>
+      <remarks><![CDATA[The maximum point is the point with components that are greater than or equal to the components of every other point within the BoundingBox . Since a BoundingBox is axis aligned the maximum point is the upper-right corner of the front face of the BoundingBox when looking at it from the positive z direction.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Min" type="Vector3">
+      <summary><![CDATA[The minimum point the BoundingBox contains.]]></summary>
+      <syntax><![CDATA[public Vector3 Min]]></syntax>
+      <remarks><![CDATA[The minimum point is the point with components that are less than or equal to the components of every other point within the BoundingBox . Since a BoundingBox is axis aligned the minimum point is the lower-left corner of the back face of the BoundingBox when looking at it from the positive z direction.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
 </xna-type>
