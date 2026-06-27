@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BoundingFrustum" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IEquatable&lt;BoundingFrustum&gt;">
+  <summary><![CDATA[Defines a frustum and helps determine whether forms intersect with it.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute(System.ComponentModel.ExpandableObjectConverter, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)]
+[SerializableAttribute]
+public class BoundingFrustum : IEquatable&lt;BoundingFrustum&gt;]]></syntax>
+  <remarks><![CDATA[A frustum in computer graphics is generally a volume of 3D space, defined as the part of a rectangular pyramid that lies between two planes perpendicular to its center line. A frustum is often used to represent what a "camera" sees in your 3D space—for example: The BoundingFrustum class allows you to define a bounding frustum using a combined matrix that is generally the product of a view matrix and a projection matrix. You can query a BoundingFrustum object for any one of its bounding planes, for its corners, and for whether it intersects with a given object. Since objects that don't intersect with your view frustrum generally don't need to be rendered, culling them quickly can save you a lot of rendering time.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="BoundingFrustum(Matrix)">
+      <summary><![CDATA[Creates a new instance of BoundingFrustum.]]></summary>
+      <syntax><![CDATA[public BoundingFrustum (
+         Matrix value
+)]]></syntax>
+      <parameters>
+        <parameter name="value" type="Matrix"><![CDATA[Combined matrix that usually takes view × projection matrix.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[You can use BoundingFrustum Class to create a bounding volume that corresponds to the space visible to the camera. You create a bounding frustum from the combined view and projection matrix that the camera is using currently. If the camera moves or rotates, you need to recreate the bounding frustum. The bounding frustum isn’t used to determine when two objects collide, but rather when an object is in collision with the volume of space viewable by the camera. Objects that do not intersect and are not contained by the bounding frustum are not visible to the camera and don’t need to be drawn. For complex models, this can save the graphics card a lot of work.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Bottom" type="Plane" access="get">
+      <summary><![CDATA[Gets the bottom plane of the BoundingFrustum.]]></summary>
+      <syntax><![CDATA[public Plane Bottom { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Far" type="Plane" access="get">
+      <summary><![CDATA[Gets the far plane of the BoundingFrustum.]]></summary>
+      <syntax><![CDATA[public Plane Far { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Left" type="Plane" access="get">
+      <summary><![CDATA[Gets the left plane of the BoundingFrustum.]]></summary>
+      <syntax><![CDATA[public Plane Left { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Matrix" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets the Matrix that was used to instantiate this bounding frustum.]]></summary>
+      <syntax><![CDATA[public Matrix Matrix { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Near" type="Plane" access="get">
+      <summary><![CDATA[Gets the near plane of the BoundingFrustum.]]></summary>
+      <syntax><![CDATA[public Plane Near { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Right" type="Plane" access="get">
+      <summary><![CDATA[Gets the right plane of the BoundingFrustum.]]></summary>
+      <syntax><![CDATA[public Plane Right { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Top" type="Plane" access="get">
+      <summary><![CDATA[Gets the top plane of the BoundingFrustum.]]></summary>
+      <syntax><![CDATA[public Plane Top { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Contains" returnType="ContainmentType">
+      <summary><![CDATA[Checks whether the current BoundingFrustum contains the specified BoundingBox.]]></summary>
+      <overloads>
+        <overload signature="Contains(BoundingBox)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum contains the specified BoundingBox.]]></summary>
+          <syntax><![CDATA[public ContainmentType Contains (
+         BoundingBox box
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check against the current BoundingFrustum .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Enumeration indicating the relationship of the current BoundingFrustum to the specified BoundingBox.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Contains(ref BoundingBox, out ContainmentType)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum contains the specified BoundingBox.]]></summary>
+          <syntax><![CDATA[public void Contains (
+         ref BoundingBox box,
+         out ContainmentType result
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to test for overlap.]]></parameter>
+            <parameter name="result" type="ContainmentType"><![CDATA[[ OutAttribute ] Enumeration indicating the extent of overlap.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Contains(BoundingFrustum)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum contains the specified BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public ContainmentType Contains (
+         BoundingFrustum frustum
+)]]></syntax>
+          <parameters>
+            <parameter name="frustum" type="BoundingFrustum"><![CDATA[The BoundingFrustum to check against the current BoundingFrustum .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Enumeration indicating the relationship of the current BoundingFrustum to the specified BoundingFrustum.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Contains(BoundingSphere)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum contains the specified BoundingSphere.]]></summary>
+          <syntax><![CDATA[public ContainmentType Contains (
+         BoundingSphere sphere
+)]]></syntax>
+          <parameters>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check against the current BoundingFrustum .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Enumeration indicating the relationship of the current BoundingFrustum to the specified BoundingSphere.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Contains(ref BoundingSphere, out ContainmentType)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum contains the specified BoundingSphere.]]></summary>
+          <syntax><![CDATA[public void Contains (
+         ref BoundingSphere sphere,
+         out ContainmentType result
+)]]></syntax>
+          <parameters>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to test for overlap.]]></parameter>
+            <parameter name="result" type="ContainmentType"><![CDATA[[ OutAttribute ] Enumeration indicating the extent of overlap.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Contains(Vector3)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum contains the specified point.]]></summary>
+          <syntax><![CDATA[public ContainmentType Contains (
+         Vector3 point
+)]]></syntax>
+          <parameters>
+            <parameter name="point" type="Object"><![CDATA[The point to check against the current BoundingFrustum .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Enumeration indicating the relationship of the current BoundingFrustum to the specified point.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Contains(ref Vector3, out ContainmentType)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum contains the specified point.]]></summary>
+          <syntax><![CDATA[public void Contains (
+         ref Vector3 point,
+         out ContainmentType result
+)]]></syntax>
+          <parameters>
+            <parameter name="point" type="Object"><![CDATA[The point to test for overlap.]]></parameter>
+            <parameter name="result" type="ContainmentType"><![CDATA[[ OutAttribute ] Enumeration indicating the extent of overlap.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="Boolean">
+      <summary><![CDATA[Determines whether the specified BoundingFrustum is equal to the current BoundingFrustum.]]></summary>
+      <overloads>
+        <overload signature="Equals(BoundingFrustum)">
+          <summary><![CDATA[Determines whether the specified BoundingFrustum is equal to the current BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         BoundingFrustum other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="BoundingFrustum"><![CDATA[The BoundingFrustum to compare with the current BoundingFrustum .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified BoundingFrustum is equal to the current BoundingFrustum; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Equals(Object)">
+          <summary><![CDATA[Determines whether the specified Object is equal to the BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current BoundingFrustum .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Object is equal to the current BoundingFrustum; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetCorners" returnType="Vector3[]">
+      <summary><![CDATA[Gets an array of points that make up the corners of the BoundingFrustum.]]></summary>
+      <overloads>
+        <overload signature="GetCorners()">
+          <summary><![CDATA[Gets an array of points that make up the corners of the BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public Vector3[] GetCorners ()]]></syntax>
+          <returns><![CDATA[Array of Vector3 points that make up the corners of the BoundingFrustum.]]></returns>
+          <remarks><![CDATA[The points returned correspond to the corners of the BoundingFrustum faces that are perpendicular to the z-axis. The near face is the face with the larger z value, and the far face is the face with the smaller z value. Points 0 to 3 correspond to the near face in a clockwise order starting at its upper-left corner when looking toward the origin from the positive z direction. Points 4 to 7 correspond to the far face in a clockwise order starting at its upper-left corner when looking toward the origin from the positive z direction.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GetCorners(Vector3[])">
+          <summary><![CDATA[Gets an array of points that make up the corners of the BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public void GetCorners (
+         Vector3[] corners
+)]]></syntax>
+          <parameters>
+            <parameter name="corners" type="Object"><![CDATA[An existing array of at least 8 Vector3 points where the corners of the BoundingFrustum are written.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[The points returned correspond to the corners of the BoundingFrustum faces that are perpendicular to the z-axis. The near face is the face with the larger z value, and the far face is the face with the smaller z value. Points 0 to 3 correspond to the near face in a clockwise order starting at its upper-left corner when looking toward the origin from the positive z direction. Points 4 to 7 correspond to the far face in a clockwise order starting at its upper-left corner when looking toward the origin from the positive z direction.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="Int32">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[A hash code for the current BoundingFrustum.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Intersects" returnType="Boolean">
+      <summary><![CDATA[Checks whether the current BoundingFrustum intersects the specified BoundingBox.]]></summary>
+      <overloads>
+        <overload signature="Intersects(BoundingBox)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum intersects the specified BoundingBox.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         BoundingBox box
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the BoundingFrustum intersects the BoundingBox; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(ref BoundingBox, out Boolean)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum intersects a BoundingBox.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingBox box,
+         out bool result
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with.]]></parameter>
+            <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] true if the BoundingFrustum and BoundingBox intersect; false otherwise.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(BoundingFrustum)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum intersects the specified BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         BoundingFrustum frustum
+)]]></syntax>
+          <parameters>
+            <parameter name="frustum" type="BoundingFrustum"><![CDATA[The BoundingFrustum to check for intersection.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current BoundingFrustum intersects the specified BoundingFrustum; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(BoundingSphere)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum intersects the specified BoundingSphere.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         BoundingSphere sphere
+)]]></syntax>
+          <parameters>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the BoundingFrustum intersects the BoundingSphere; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(ref BoundingSphere, out Boolean)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum intersects a BoundingSphere.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingSphere sphere,
+         out bool result
+)]]></syntax>
+          <parameters>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with.]]></parameter>
+            <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] true if the BoundingFrustum and BoundingSphere intersect; false otherwise.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(Plane)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum intersects the specified Plane.]]></summary>
+          <syntax><![CDATA[public PlaneIntersectionType Intersects (
+         Plane plane
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Plane"><![CDATA[The Plane to check for intersection.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An enumeration indicating whether BoundingFrustum intersects the specified Plane.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(ref Plane, out PlaneIntersectionType)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum intersects a Plane.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref Plane plane,
+         out PlaneIntersectionType result
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Plane"><![CDATA[The Plane to check for intersection with.]]></parameter>
+            <parameter name="result" type="PlaneIntersectionType"><![CDATA[[ OutAttribute ] An enumeration indicating whether the BoundingFrustum intersects the Plane .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(Ray)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum intersects the specified Ray.]]></summary>
+          <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
+         Ray ray
+)]]></syntax>
+          <parameters>
+            <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Distance at which the ray intersects the BoundingFrustum or null if there is no intersection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Intersects(ref Ray, out Nullable&lt;Single&gt;)">
+          <summary><![CDATA[Checks whether the current BoundingFrustum intersects a Ray.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref Ray ray,
+         out Nullable&lt;float&gt; result
+)]]></syntax>
+          <parameters>
+            <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingFrustum or null if there is no intersection.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="Boolean" isStatic="true">
+      <summary><![CDATA[Determines whether two instances of BoundingFrustum are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality(BoundingFrustum, BoundingFrustum)">
+          <summary><![CDATA[Determines whether two instances of BoundingFrustum are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         BoundingFrustum a,
+         BoundingFrustum b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="BoundingFrustum"><![CDATA[The BoundingFrustum to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="BoundingFrustum"><![CDATA[The BoundingFrustum to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if left is equal to right; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="Boolean" isStatic="true">
+      <summary><![CDATA[Determines whether two instances of BoundingFrustum are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality(BoundingFrustum, BoundingFrustum)">
+          <summary><![CDATA[Determines whether two instances of BoundingFrustum are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         BoundingFrustum a,
+         BoundingFrustum b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="BoundingFrustum"><![CDATA[The BoundingFrustum to the left of the inequality operator.]]></parameter>
+            <parameter name="b" type="BoundingFrustum"><![CDATA[The BoundingFrustum to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if left is not equal to right; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="String">
+      <summary><![CDATA[Returns a String that represents the current BoundingFrustum.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a String that represents the current BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of the current BoundingFrustum.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="CornerCount" type="Int32" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[Specifies the total number of corners (8) in the BoundingFrustum.]]></summary>
+      <syntax><![CDATA[public const int CornerCount]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+</xna-type>
