@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Curve" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Stores an arbitrary collection of 2D CurveKey points, and provides methods for evaluating features of the curve they define.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute(System.ComponentModel.ExpandableObjectConverter, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)]
+[SerializableAttribute]
+public class Curve]]></syntax>
+  <remarks><![CDATA[The Curve class describes how two float values vary with respect to each other even when you cannot easily define their relationship by a formula; instead, the relationship is defined by an ordered set of value pairs that exemplify it. You specify a Curve by adding a sequence of CurveKey objects to its Keys collection, each of which must contain at minimum a Position greater than that of the preceding CurveKey , and a corresponding Value . In practice, the Position is almost always used to represent a point in time, while the Value property generally represents a coordinate value corresponding to that point in time. To represent a time path in two or three dimensions, you can define two or three Curve objects, each of which corresponds to a different spatial axis. Coordinates of a given time's point on the resulting 2D or 3D curve are calculated very efficiently. The Curve.Evaluate method returns a (coordinate) value corresponding to a (time) position that you specify. The position doesn't have to be contained in any of the CurveKey points, because Curve interpolates between points depending on the CurveKey characteristics you have defined. Not only is Curve useful for controlling animation and spatial motion, it can also be used anywhere you want to define a response that changes over time. For example, if you are using a button to accelerate a car in your game, you might want to define a complex velocity curve that varies with how long the button is held down to simulate gear shifts. A CurveKey point need not always be part of a smoothly varying curve; you can also set a CurveKey to represent a step or sharp inflection point.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors/>
+  <properties>
+    <property name="IsConstant" type="Boolean" access="get">
+      <summary><![CDATA[Gets a value indicating whether the curve is constant.]]></summary>
+      <syntax><![CDATA[public bool IsConstant { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Keys" type="CurveKeyCollection" access="get">
+      <summary><![CDATA[The points that make up the curve.]]></summary>
+      <syntax><![CDATA[public CurveKeyCollection Keys { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PostLoop" type="CurveLoopType" access="get;set">
+      <summary><![CDATA[Specifies how to handle weighting values that are greater than the last control point in the curve.]]></summary>
+      <syntax><![CDATA[public CurveLoopType PostLoop { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PreLoop" type="CurveLoopType" access="get;set">
+      <summary><![CDATA[Specifies how to handle weighting values that are less than the first control point in the curve.]]></summary>
+      <syntax><![CDATA[public CurveLoopType PreLoop { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Clone" returnType="Curve">
+      <summary><![CDATA[Creates a copy of the Curve.]]></summary>
+      <overloads>
+        <overload signature="Clone()">
+          <summary><![CDATA[Creates a copy of the Curve.]]></summary>
+          <syntax><![CDATA[public Curve Clone ()]]></syntax>
+          <returns><![CDATA[The copy of the Curve.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ComputeTangent" returnType="void">
+      <summary><![CDATA[Computes both the TangentIn and the TangentOut for a CurveKey specified by its index.]]></summary>
+      <overloads>
+        <overload signature="ComputeTangent(Int32, CurveTangent)">
+          <summary><![CDATA[Computes both the TangentIn and the TangentOut for a CurveKey specified by its index.]]></summary>
+          <syntax><![CDATA[public void ComputeTangent (
+         int keyIndex,
+         CurveTangent tangentType
+)]]></syntax>
+          <parameters>
+            <parameter name="keyIndex" type="int"><![CDATA[The index of the CurveKey for which to compute tangents (in the Keys collection of the Curve ).]]></parameter>
+            <parameter name="tangentType" type="CurveTangent"><![CDATA[The type of tangents to compute (one of the types specified in the CurveTangent enumeration).]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ComputeTangent(Int32, CurveTangent, CurveTangent)">
+          <summary><![CDATA[Computes a specified type of TangentIn and a specified type of TangentOut for a given CurveKey.]]></summary>
+          <syntax><![CDATA[public void ComputeTangent (
+         int keyIndex,
+         CurveTangent tangentInType,
+         CurveTangent tangentOutType
+)]]></syntax>
+          <parameters>
+            <parameter name="keyIndex" type="int"><![CDATA[The index of the CurveKey for which to compute tangents (in the Keys collection of the Curve ).]]></parameter>
+            <parameter name="tangentInType" type="CurveTangent"><![CDATA[The type of TangentIn to compute (one of the types specified in the CurveTangent enumeration).]]></parameter>
+            <parameter name="tangentOutType" type="CurveTangent"><![CDATA[The type of TangentOut to compute (one of the types specified in the CurveTangent enumeration).]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ComputeTangents" returnType="void">
+      <summary><![CDATA[Computes all tangents for all CurveKeys in this Curve, using a specified tangent type for both TangentIn and TangentOut.]]></summary>
+      <overloads>
+        <overload signature="ComputeTangents(CurveTangent)">
+          <summary><![CDATA[Computes all tangents for all CurveKeys in this Curve, using a specified tangent type for both TangentIn and TangentOut.]]></summary>
+          <syntax><![CDATA[public void ComputeTangents (
+         CurveTangent tangentType
+)]]></syntax>
+          <parameters>
+            <parameter name="tangentType" type="CurveTangent"><![CDATA[The type of TangentOut and TangentIn to compute (one of the types specified in the CurveTangent enumeration).]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ComputeTangents(CurveTangent, CurveTangent)">
+          <summary><![CDATA[Computes all tangents for all CurveKeys in this Curve, using different tangent types for TangentOut and TangentIn.]]></summary>
+          <syntax><![CDATA[public void ComputeTangents (
+         CurveTangent tangentInType,
+         CurveTangent tangentOutType
+)]]></syntax>
+          <parameters>
+            <parameter name="tangentInType" type="CurveTangent"><![CDATA[The type of TangentIn to compute (one of the types specified in the CurveTangent enumeration).]]></parameter>
+            <parameter name="tangentOutType" type="CurveTangent"><![CDATA[The type of TangentOut to compute (one of the types specified in the CurveTangent enumeration).]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Evaluate" returnType="Single">
+      <summary><![CDATA[Finds the value at a position on the Curve.]]></summary>
+      <overloads>
+        <overload signature="Evaluate(Single)">
+          <summary><![CDATA[Finds the value at a position on the Curve.]]></summary>
+          <syntax><![CDATA[public float Evaluate (
+         float position
+)]]></syntax>
+          <parameters>
+            <parameter name="position" type="float"><![CDATA[The position on the Curve .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Value at the position on the Curve.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+</xna-type>
