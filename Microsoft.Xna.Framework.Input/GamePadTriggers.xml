@@ -12,15 +12,15 @@
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="GamePadTriggers(float, float)">
+    <constructor signature="GamePadTriggers(Single&lt;, Single&lt;)">
       <summary><![CDATA[Initializes a new instance of the GamePadTriggers class.]]></summary>
       <syntax><![CDATA[public GamePadTriggers (
          float leftTrigger,
          float rightTrigger
 )]]></syntax>
       <parameters>
-        <parameter name="leftTrigger" type="float"><![CDATA[Type: Single Left trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
-        <parameter name="rightTrigger" type="float"><![CDATA[Type: Single Right trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
+        <parameter name="leftTrigger" type="Single&lt;"><![CDATA[Left trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
+        <parameter name="rightTrigger" type="Single&lt;"><![CDATA[Right trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
       </parameters>
       <remarks><![CDATA[Games normally use GetState to get the true gamepad state. This constructor is used instead to simulate gamepad input for passing within the game's own input subsystem.]]></remarks>
       <platforms>

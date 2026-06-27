@@ -116,7 +116,7 @@
          bool disposing
 )]]></syntax>
           <parameters>
-            <parameter name="disposing" type="bool"><![CDATA[Type: Boolean true to release both automatic and manual resources; false to release only manual resources.]]></parameter>
+            <parameter name="disposing" type="Boolean&lt;"><![CDATA[true to release both automatic and manual resources; false to release only manual resources.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

@@ -20,7 +20,7 @@
          RenderTarget2D renderTarget
 )]]></syntax>
       <parameters>
-        <parameter name="renderTarget" type="Object"><![CDATA[Identifies a 2D render target.]]></parameter>
+        <parameter name="renderTarget" type="RenderTarget2D"><![CDATA[Identifies a 2D render target.]]></parameter>
       </parameters>
       <platforms>
         <platform>Xbox 360</platform>

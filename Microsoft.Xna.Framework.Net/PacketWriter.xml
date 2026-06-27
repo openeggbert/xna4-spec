@@ -102,7 +102,7 @@
          Vector3 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Value being written.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[Value being written.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -117,7 +117,7 @@
          Color value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Color"><![CDATA[Type: Color Value to be written.]]></parameter>
+            <parameter name="value" type="Color&lt;"><![CDATA[Value to be written.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -147,7 +147,7 @@
          Vector2 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Value being written.]]></parameter>
+            <parameter name="value" type="Vector2"><![CDATA[Value being written.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -177,7 +177,7 @@
          Vector4 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Value being written.]]></parameter>
+            <parameter name="value" type="Vector4"><![CDATA[Value being written.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>

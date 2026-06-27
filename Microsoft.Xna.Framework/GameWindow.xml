@@ -226,7 +226,7 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
          DisplayOrientation orientations
 )]]></syntax>
           <parameters>
-            <parameter name="orientations" type="DisplayOrientation"><![CDATA[Type: DisplayOrientation A set of supported display orientations.]]></parameter>
+            <parameter name="orientations" type="DisplayOrientation&lt;"><![CDATA[A set of supported display orientations.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

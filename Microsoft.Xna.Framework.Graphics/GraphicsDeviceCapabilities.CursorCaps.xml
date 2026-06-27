@@ -14,8 +14,43 @@
   <constructors>
   </constructors>
   <properties>
+    <property name="SupportsColor" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether a full-color cursor is supported in hardware in high-resolution modes.]]></summary>
+      <syntax><![CDATA[public bool SupportsColor { get; }]]></syntax>
+      <remarks><![CDATA[Specifically, this flag indicates that the driver supports at least a hardware color cursor in high-resolution modes (with scan lines greater than or equal to 400).]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsLowResolution" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether a full-color cursor is supported in hardware in low-resolution modes.]]></summary>
+      <syntax><![CDATA[public bool SupportsLowResolution { get; }]]></syntax>
+      <remarks><![CDATA[Specifically, this flag indicates that the driver supports at least a hardware color cursor in low-resolution modes (with scan lines less than 400).]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
   </properties>
   <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
   </methods>
   <fields>
   </fields>

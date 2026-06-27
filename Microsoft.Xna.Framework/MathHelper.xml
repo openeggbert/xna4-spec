@@ -288,7 +288,7 @@
          float angle
 )]]></syntax>
           <parameters>
-            <parameter name="angle" type="float"><![CDATA[Type: Single The angle to reduce, in radians.]]></parameter>
+            <parameter name="angle" type="Single&lt;"><![CDATA[The angle to reduce, in radians.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Single The new angle, in radians.]]></returns>
           <platforms>

@@ -11,7 +11,7 @@
     <platform>Windows Phone</platform>
   </platforms>
   <constructors>
-    <constructor signature="UIElementRenderer(UIElement, int, int)">
+    <constructor signature="UIElementRenderer(UIElement&lt;, Int32&lt;, Int32&lt;)">
       <summary><![CDATA[Creates an instance of a UIElementRenderer object.]]></summary>
       <syntax><![CDATA[public UIElementRenderer (
          UIElement rootElement,
@@ -19,9 +19,9 @@
          int textureHeight
 )]]></syntax>
       <parameters>
-        <parameter name="rootElement" type="UIElement"><![CDATA[Type: UIElement The UIElement to be rendered.]]></parameter>
-        <parameter name="textureWidth" type="int"><![CDATA[Type: Int32 The width of the texture to be rendered into.]]></parameter>
-        <parameter name="textureHeight" type="int"><![CDATA[Type: Int32 The height of the texture to be rendered into.]]></parameter>
+        <parameter name="rootElement" type="UIElement&lt;"><![CDATA[The UIElement to be rendered.]]></parameter>
+        <parameter name="textureWidth" type="Int32&lt;"><![CDATA[The width of the texture to be rendered into.]]></parameter>
+        <parameter name="textureHeight" type="Int32&lt;"><![CDATA[The height of the texture to be rendered into.]]></parameter>
       </parameters>
       <remarks><![CDATA[Use a UIElementRenderer object to render a Silverlight UIElement into an XNA Texture2D .]]></remarks>
       <platforms>
@@ -55,7 +55,7 @@
          bool disposing
 )]]></syntax>
           <parameters>
-            <parameter name="disposing" type="bool"><![CDATA[Type: Boolean Indicates whether an object has been disposed.]]></parameter>
+            <parameter name="disposing" type="Boolean&lt;"><![CDATA[Indicates whether an object has been disposed.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

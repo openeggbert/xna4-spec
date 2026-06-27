@@ -158,7 +158,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant /]]></parameter>
+            <parameter name="value" type="Vector3[]"><![CDATA[Value to assign to the ShaderConstant /]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -174,7 +174,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Vector2"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -222,7 +222,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Vector2[]"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -270,7 +270,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -334,7 +334,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Vector4[]"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -350,7 +350,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Vector4"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>

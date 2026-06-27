@@ -14,8 +14,52 @@
   <constructors>
   </constructors>
   <properties>
+    <property name="NumberSimultaneousTextureCoordinates" type="short" access="get">
+      <summary><![CDATA[Gets the total number of texture coordinate sets that the device can simultaneously use for multiple texture blending.]]></summary>
+      <syntax><![CDATA[public short NumberSimultaneousTextureCoordinates { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsDoNotStripElements" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether vertex elements should not be stripped.]]></summary>
+      <syntax><![CDATA[public bool SupportsDoNotStripElements { get; }]]></syntax>
+      <remarks><![CDATA[If the vertex format contains elements that are not used with the current render states, there is no need to regenerate the vertices. If this property is false, stripping extraneous elements from the vertex format provides better performance.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsPointSize" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether point size comes from point size data in the vertex declaration.]]></summary>
+      <syntax><![CDATA[public bool SupportsPointSize { get; }]]></syntax>
+      <remarks><![CDATA[If this property is false, point size is determined by PointSize . If an application provides point size in both the render state and the vertex declaration, the vertex data overrides the render-state data.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
   </properties>
   <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
   </methods>
   <fields>
   </fields>

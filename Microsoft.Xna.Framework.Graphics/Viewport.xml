@@ -19,7 +19,7 @@ public struct Viewport]]></syntax>
          Rectangle bounds
 )]]></syntax>
       <parameters>
-        <parameter name="bounds" type="Rectangle"><![CDATA[Type: Rectangle A bounding box that defines the location and size of the viewport in a render target.]]></parameter>
+        <parameter name="bounds" type="Rectangle&lt;"><![CDATA[A bounding box that defines the location and size of the viewport in a render target.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -34,10 +34,10 @@ public struct Viewport]]></syntax>
          int height
 )]]></syntax>
       <parameters>
-        <parameter name="x" type="int"><![CDATA[Type: Int32 The x coordinate of the upper-left corner of the viewport in pixels.]]></parameter>
-        <parameter name="y" type="int"><![CDATA[Type: Int32 The y coordinate of the upper-left corner of the viewport in pixels.]]></parameter>
-        <parameter name="width" type="int"><![CDATA[Type: Int32 The width of the viewport in pixels.]]></parameter>
-        <parameter name="height" type="int"><![CDATA[Type: Int32 The height of the viewport in pixels.]]></parameter>
+        <parameter name="x" type="Int32&lt;"><![CDATA[The x coordinate of the upper-left corner of the viewport in pixels.]]></parameter>
+        <parameter name="y" type="Int32&lt;"><![CDATA[The y coordinate of the upper-left corner of the viewport in pixels.]]></parameter>
+        <parameter name="width" type="Int32&lt;"><![CDATA[The width of the viewport in pixels.]]></parameter>
+        <parameter name="height" type="Int32&lt;"><![CDATA[The height of the viewport in pixels.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -150,7 +150,7 @@ public struct Viewport]]></syntax>
          Matrix world
 )]]></syntax>
           <parameters>
-            <parameter name="source" type="Object"><![CDATA[The vector to project.]]></parameter>
+            <parameter name="source" type="Vector3"><![CDATA[The vector to project.]]></parameter>
             <parameter name="projection" type="Matrix"><![CDATA[The projection matrix.]]></parameter>
             <parameter name="view" type="Matrix"><![CDATA[The view matrix.]]></parameter>
             <parameter name="world" type="Matrix"><![CDATA[The world matrix.]]></parameter>
@@ -191,7 +191,7 @@ public struct Viewport]]></syntax>
          Matrix world
 )]]></syntax>
           <parameters>
-            <parameter name="source" type="Object"><![CDATA[The vector to project.]]></parameter>
+            <parameter name="source" type="Vector3"><![CDATA[The vector to project.]]></parameter>
             <parameter name="projection" type="Matrix"><![CDATA[The projection matrix.]]></parameter>
             <parameter name="view" type="Matrix"><![CDATA[The view matrix.]]></parameter>
             <parameter name="world" type="Matrix"><![CDATA[The world matrix.]]></parameter>

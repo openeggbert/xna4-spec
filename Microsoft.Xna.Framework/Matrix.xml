@@ -188,9 +188,9 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          Nullable&lt;Vector3&gt; cameraForwardVector
 )]]></syntax>
           <parameters>
-            <parameter name="objectPosition" type="Object"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
-            <parameter name="cameraPosition" type="Object"><![CDATA[Position of the camera.]]></parameter>
-            <parameter name="cameraUpVector" type="Object"><![CDATA[The up vector of the camera.]]></parameter>
+            <parameter name="objectPosition" type="Vector3"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
+            <parameter name="cameraPosition" type="Vector3"><![CDATA[Position of the camera.]]></parameter>
+            <parameter name="cameraUpVector" type="Vector3"><![CDATA[The up vector of the camera.]]></parameter>
             <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
           </parameters>
           <returns><![CDATA[The created billboard matrix.]]></returns>
@@ -211,9 +211,9 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          out Matrix result
 )]]></syntax>
           <parameters>
-            <parameter name="objectPosition" type="Object"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
-            <parameter name="cameraPosition" type="Object"><![CDATA[Position of the camera.]]></parameter>
-            <parameter name="cameraUpVector" type="Object"><![CDATA[The up vector of the camera.]]></parameter>
+            <parameter name="objectPosition" type="Vector3"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
+            <parameter name="cameraPosition" type="Vector3"><![CDATA[Position of the camera.]]></parameter>
+            <parameter name="cameraUpVector" type="Vector3"><![CDATA[The up vector of the camera.]]></parameter>
             <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created billboard matrix.]]></parameter>
           </parameters>
@@ -240,9 +240,9 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          out Matrix result
 )]]></syntax>
           <parameters>
-            <parameter name="objectPosition" type="Object"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
-            <parameter name="cameraPosition" type="Object"><![CDATA[Position of the camera.]]></parameter>
-            <parameter name="rotateAxis" type="Object"><![CDATA[Axis to rotate the billboard around.]]></parameter>
+            <parameter name="objectPosition" type="Vector3"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
+            <parameter name="cameraPosition" type="Vector3"><![CDATA[Position of the camera.]]></parameter>
+            <parameter name="rotateAxis" type="Vector3"><![CDATA[Axis to rotate the billboard around.]]></parameter>
             <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
             <parameter name="objectForwardVector" type="Object"><![CDATA[Optional forward vector of the object.]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created billboard matrix.]]></parameter>
@@ -264,9 +264,9 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          Nullable&lt;Vector3&gt; objectForwardVector
 )]]></syntax>
           <parameters>
-            <parameter name="objectPosition" type="Object"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
-            <parameter name="cameraPosition" type="Object"><![CDATA[Position of the camera.]]></parameter>
-            <parameter name="rotateAxis" type="Object"><![CDATA[Axis to rotate the billboard around.]]></parameter>
+            <parameter name="objectPosition" type="Vector3"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
+            <parameter name="cameraPosition" type="Vector3"><![CDATA[Position of the camera.]]></parameter>
+            <parameter name="rotateAxis" type="Vector3"><![CDATA[Axis to rotate the billboard around.]]></parameter>
             <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
             <parameter name="objectForwardVector" type="Object"><![CDATA[Optional forward vector of the object.]]></parameter>
           </parameters>
@@ -291,7 +291,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          out Matrix result
 )]]></syntax>
           <parameters>
-            <parameter name="axis" type="Object"><![CDATA[The axis to rotate around.]]></parameter>
+            <parameter name="axis" type="Vector3"><![CDATA[The axis to rotate around.]]></parameter>
             <parameter name="angle" type="float"><![CDATA[The angle to rotate around the vector.]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created Matrix .]]></parameter>
           </parameters>
@@ -308,7 +308,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          float angle
 )]]></syntax>
           <parameters>
-            <parameter name="axis" type="Object"><![CDATA[The axis to rotate around.]]></parameter>
+            <parameter name="axis" type="Vector3"><![CDATA[The axis to rotate around.]]></parameter>
             <parameter name="angle" type="float"><![CDATA[The angle to rotate around the vector.]]></parameter>
           </parameters>
           <returns><![CDATA[The created Matrix.]]></returns>
@@ -411,9 +411,9 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          Vector3 cameraUpVector
 )]]></syntax>
           <parameters>
-            <parameter name="cameraPosition" type="Object"><![CDATA[The position of the camera.]]></parameter>
-            <parameter name="cameraTarget" type="Object"><![CDATA[The position for the camera to look at.]]></parameter>
-            <parameter name="cameraUpVector" type="Object"><![CDATA[The world's up, usually [0, 1, 0].]]></parameter>
+            <parameter name="cameraPosition" type="Vector3"><![CDATA[The position of the camera.]]></parameter>
+            <parameter name="cameraTarget" type="Vector3"><![CDATA[The position for the camera to look at.]]></parameter>
+            <parameter name="cameraUpVector" type="Vector3"><![CDATA[The world's up, usually [0, 1, 0].]]></parameter>
           </parameters>
           <returns><![CDATA[The created view matrix.]]></returns>
           <remarks><![CDATA[View space, sometimes called camera space, is similar to world space in that it is typically used for the entire scene. However, in view space, the origin is at the viewer or camera.]]></remarks>
@@ -432,9 +432,9 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          out Matrix result
 )]]></syntax>
           <parameters>
-            <parameter name="cameraPosition" type="Object"><![CDATA[The position of the camera.]]></parameter>
-            <parameter name="cameraTarget" type="Object"><![CDATA[The position for the camera to look at.]]></parameter>
-            <parameter name="cameraUpVector" type="Object"><![CDATA[The world's up, usually [0, 1, 0].]]></parameter>
+            <parameter name="cameraPosition" type="Vector3"><![CDATA[The position of the camera.]]></parameter>
+            <parameter name="cameraTarget" type="Vector3"><![CDATA[The position for the camera to look at.]]></parameter>
+            <parameter name="cameraUpVector" type="Vector3"><![CDATA[The world's up, usually [0, 1, 0].]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created view matrix.]]></parameter>
           </parameters>
           <remarks><![CDATA[View space, sometimes called camera space, is similar to world space in that it is typically used for the entire scene. However, in view space, the origin is at the viewer or camera.]]></remarks>
@@ -865,7 +865,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          Vector3 scales
 )]]></syntax>
           <parameters>
-            <parameter name="scales" type="Object"><![CDATA[Amounts to scale by on the x, y, and z axes.]]></parameter>
+            <parameter name="scales" type="Vector3"><![CDATA[Amounts to scale by on the x, y, and z axes.]]></parameter>
           </parameters>
           <returns><![CDATA[The created scaling Matrix.]]></returns>
           <platforms>
@@ -881,7 +881,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          out Matrix result
 )]]></syntax>
           <parameters>
-            <parameter name="scales" type="Object"><![CDATA[Amounts to scale by on the x, y, and z axes.]]></parameter>
+            <parameter name="scales" type="Vector3"><![CDATA[Amounts to scale by on the x, y, and z axes.]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created scaling Matrix .]]></parameter>
           </parameters>
           <platforms>
@@ -972,7 +972,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          Plane plane
 )]]></syntax>
           <parameters>
-            <parameter name="lightDirection" type="Object"><![CDATA[A Vector3 specifying the direction from which the light that will cast the shadow is coming.]]></parameter>
+            <parameter name="lightDirection" type="Vector3"><![CDATA[A Vector3 specifying the direction from which the light that will cast the shadow is coming.]]></parameter>
             <parameter name="plane" type="Plane"><![CDATA[The Plane onto which the new matrix should flatten geometry so as to cast a shadow.]]></parameter>
           </parameters>
           <returns><![CDATA[A new Matrix that can be used to flatten geometry onto the specified plane from the specified direction.]]></returns>
@@ -990,7 +990,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          out Matrix result
 )]]></syntax>
           <parameters>
-            <parameter name="lightDirection" type="Object"><![CDATA[A Vector3 specifying the direction from which the light that will cast the shadow is coming.]]></parameter>
+            <parameter name="lightDirection" type="Vector3"><![CDATA[A Vector3 specifying the direction from which the light that will cast the shadow is coming.]]></parameter>
             <parameter name="plane" type="Plane"><![CDATA[The Plane onto which the new matrix should flatten geometry so as to cast a shadow.]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] A Matrix that can be used to flatten geometry onto the specified plane from the specified direction.]]></parameter>
           </parameters>
@@ -1011,7 +1011,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          Vector3 position
 )]]></syntax>
           <parameters>
-            <parameter name="position" type="Object"><![CDATA[Amounts to translate by on the x, y, and z axes.]]></parameter>
+            <parameter name="position" type="Vector3"><![CDATA[Amounts to translate by on the x, y, and z axes.]]></parameter>
           </parameters>
           <returns><![CDATA[The created translation Matrix.]]></returns>
           <platforms>
@@ -1027,7 +1027,7 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          out Matrix result
 )]]></syntax>
           <parameters>
-            <parameter name="position" type="Object"><![CDATA[Amounts to translate by on the x, y, and z axes.]]></parameter>
+            <parameter name="position" type="Vector3"><![CDATA[Amounts to translate by on the x, y, and z axes.]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created translation Matrix .]]></parameter>
           </parameters>
           <platforms>
@@ -1089,9 +1089,9 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          out Matrix result
 )]]></syntax>
           <parameters>
-            <parameter name="position" type="Object"><![CDATA[Position of the object. This value is used in translation operations.]]></parameter>
-            <parameter name="forward" type="Object"><![CDATA[Forward direction of the object.]]></parameter>
-            <parameter name="up" type="Object"><![CDATA[Upward direction of the object; usually [0, 1, 0].]]></parameter>
+            <parameter name="position" type="Vector3"><![CDATA[Position of the object. This value is used in translation operations.]]></parameter>
+            <parameter name="forward" type="Vector3"><![CDATA[Forward direction of the object.]]></parameter>
+            <parameter name="up" type="Vector3"><![CDATA[Upward direction of the object; usually [0, 1, 0].]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created world matrix.]]></parameter>
           </parameters>
           <remarks><![CDATA[This matrix includes rotation and translation, but not scaling.]]></remarks>
@@ -1110,9 +1110,9 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          Vector3 up
 )]]></syntax>
           <parameters>
-            <parameter name="position" type="Object"><![CDATA[Position of the object. This value is used in translation operations.]]></parameter>
-            <parameter name="forward" type="Object"><![CDATA[Forward direction of the object.]]></parameter>
-            <parameter name="up" type="Object"><![CDATA[Upward direction of the object; usually [0, 1, 0].]]></parameter>
+            <parameter name="position" type="Vector3"><![CDATA[Position of the object. This value is used in translation operations.]]></parameter>
+            <parameter name="forward" type="Vector3"><![CDATA[Forward direction of the object.]]></parameter>
+            <parameter name="up" type="Vector3"><![CDATA[Upward direction of the object; usually [0, 1, 0].]]></parameter>
           </parameters>
           <returns><![CDATA[The created world matrix.]]></returns>
           <remarks><![CDATA[This matrix includes rotation and translation, but not scaling.]]></remarks>
@@ -1136,9 +1136,9 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
          out Vector3 translation
 )]]></syntax>
           <parameters>
-            <parameter name="scale" type="Object"><![CDATA[[ OutAttribute ] The scalar component of the transform matrix, expressed as a Vector3 .]]></parameter>
+            <parameter name="scale" type="Vector3"><![CDATA[[ OutAttribute ] The scalar component of the transform matrix, expressed as a Vector3 .]]></parameter>
             <parameter name="rotation" type="Quaternion"><![CDATA[[ OutAttribute ] The rotation component of the transform matrix, expressed as a Quaternion .]]></parameter>
-            <parameter name="translation" type="Object"><![CDATA[[ OutAttribute ] The translation component of the transform matrix, expressed as a Vector3 .]]></parameter>
+            <parameter name="translation" type="Vector3"><![CDATA[[ OutAttribute ] The translation component of the transform matrix, expressed as a Vector3 .]]></parameter>
           </parameters>
           <returns><![CDATA[true if the Matrix can be decomposed; false otherwise.]]></returns>
           <platforms>

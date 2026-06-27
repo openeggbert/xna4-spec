@@ -14,8 +14,155 @@
   <constructors>
   </constructors>
   <properties>
+    <property name="SupportsAnisotropy" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports anisotropic filtering.]]></summary>
+      <syntax><![CDATA[public bool SupportsAnisotropy { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsColorPerspective" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device iterates colors perspective correctly.]]></summary>
+      <syntax><![CDATA[public bool SupportsColorPerspective { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsDepthBias" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports legacy depth bias.]]></summary>
+      <syntax><![CDATA[public bool SupportsDepthBias { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsDepthBufferLessHsr" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can perform hidden-surface removal (HSR) without requiring the application to sort polygons and without requiring the allocation of a depth buffer.]]></summary>
+      <syntax><![CDATA[public bool SupportsDepthBufferLessHsr { get; }]]></syntax>
+      <remarks><![CDATA[This leaves more video memory for textures. The method used to perform HSR is hardware-dependent and is transparent to the application. Z-bufferless HSR is performed if no depth-buffer surface is associated with the rendering-target surface and the depth-buffer comparison test is enabled (that is, when the state value associated with the DepthBufferEnable is true).]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsDepthBufferTest" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can perform depth-test operations.]]></summary>
+      <syntax><![CDATA[public bool SupportsDepthBufferTest { get; }]]></syntax>
+      <remarks><![CDATA[This effectively renders a primitive and indicates whether any depth pixels have been rendered.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsDepthFog" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports depth-based fog.]]></summary>
+      <syntax><![CDATA[public bool SupportsDepthFog { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsFogRange" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports range-based fog.]]></summary>
+      <syntax><![CDATA[public bool SupportsFogRange { get; }]]></syntax>
+      <remarks><![CDATA[In range-based fog, the distance of an object from the viewer is used to compute fog effects, not the depth of the object (that is, the z-coordinate) in the scene.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsFogTable" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device calculates the fog value by referring to a lookup table containing fog values that are indexed to the depth of a given pixel.]]></summary>
+      <syntax><![CDATA[public bool SupportsFogTable { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsFogVertex" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device calculates the fog value during the lighting operation and interpolates the fog value during rasterization.]]></summary>
+      <syntax><![CDATA[public bool SupportsFogVertex { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMipMapLevelOfDetailBias" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports level-of-detail bias adjustments.]]></summary>
+      <syntax><![CDATA[public bool SupportsMipMapLevelOfDetailBias { get; }]]></syntax>
+      <remarks><![CDATA[These bias adjustments enable an application to make a mipmap appear crisper or less sharp than it normally would.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMultisampleToggle" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports toggling multisampling on and off.]]></summary>
+      <syntax><![CDATA[public bool SupportsMultisampleToggle { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsScissorTest" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports scissor test.]]></summary>
+      <syntax><![CDATA[public bool SupportsScissorTest { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsSlopeScaleDepthBias" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device performs true slope-scale based depth bias.]]></summary>
+      <syntax><![CDATA[public bool SupportsSlopeScaleDepthBias { get; }]]></syntax>
+      <remarks><![CDATA[This is in contrast to the legacy-style depth bias.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsWFog" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports w-based fog.]]></summary>
+      <syntax><![CDATA[public bool SupportsWFog { get; }]]></syntax>
+      <remarks><![CDATA[W-based fog is used when a perspective projection matrix is specified, but affine projections still use z-based fog. The system considers a projection matrix that contains a nonzero value in the [3][4] element to be a perspective projection matrix.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
   </properties>
   <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
   </methods>
   <fields>
   </fields>

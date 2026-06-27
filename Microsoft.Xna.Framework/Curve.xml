@@ -14,9 +14,19 @@ public class Curve]]></syntax>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>
   </platforms>
-  <constructors/>
+  <constructors>
+    <constructor signature="Curve()">
+      <summary><![CDATA[Initializes a new instance of Curve.]]></summary>
+      <syntax><![CDATA[public Curve ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
   <properties>
-    <property name="IsConstant" type="Boolean" access="get">
+    <property name="IsConstant" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the curve is constant.]]></summary>
       <syntax><![CDATA[public bool IsConstant { get; }]]></syntax>
       <platforms>
@@ -54,7 +64,7 @@ public class Curve]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Clone" returnType="Curve">
+    <method name="Clone" returnType="void">
       <summary><![CDATA[Creates a copy of the Curve.]]></summary>
       <overloads>
         <overload signature="Clone()">
@@ -143,10 +153,10 @@ public class Curve]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Evaluate" returnType="Single">
+    <method name="Evaluate" returnType="void">
       <summary><![CDATA[Finds the value at a position on the Curve.]]></summary>
       <overloads>
-        <overload signature="Evaluate(Single)">
+        <overload signature="Evaluate()">
           <summary><![CDATA[Finds the value at a position on the Curve.]]></summary>
           <syntax><![CDATA[public float Evaluate (
          float position
@@ -164,4 +174,8 @@ public class Curve]]></syntax>
       </overloads>
     </method>
   </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
 </xna-type>

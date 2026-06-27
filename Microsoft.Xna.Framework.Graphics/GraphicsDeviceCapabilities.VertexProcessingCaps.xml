@@ -14,8 +14,59 @@
   <constructors>
   </constructors>
   <properties>
+    <property name="SupportsLocalViewer" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can do local viewer.]]></summary>
+      <syntax><![CDATA[public bool SupportsLocalViewer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsNoTextureGenerationNonLocalViewer" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports texture generation in non-local viewer mode.]]></summary>
+      <syntax><![CDATA[public bool SupportsNoTextureGenerationNonLocalViewer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsTextureGeneration" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can do texture generation.]]></summary>
+      <syntax><![CDATA[public bool SupportsTextureGeneration { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsTextureGenerationSphereMap" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports use of the specified texture coordinates for sphere mapping.]]></summary>
+      <syntax><![CDATA[public bool SupportsTextureGenerationSphereMap { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
   </properties>
   <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
   </methods>
   <fields>
   </fields>

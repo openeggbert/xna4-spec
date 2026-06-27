@@ -16,15 +16,15 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="BoundingBox(Object, Object)">
+    <constructor signature="BoundingBox(Vector3, Vector3)">
       <summary><![CDATA[Creates an instance of BoundingBox.]]></summary>
       <syntax><![CDATA[public BoundingBox (
          Vector3 min,
          Vector3 max
 )]]></syntax>
       <parameters>
-        <parameter name="min" type="Object"><![CDATA[The minimum point the BoundingBox includes.]]></parameter>
-        <parameter name="max" type="Object"><![CDATA[The maximum point the BoundingBox includes.]]></parameter>
+        <parameter name="min" type="Vector3"><![CDATA[The minimum point the BoundingBox includes.]]></parameter>
+        <parameter name="max" type="Vector3"><![CDATA[The maximum point the BoundingBox includes.]]></parameter>
       </parameters>
       <remarks><![CDATA[The BoundingBox Structure represents the space occupied by a box. The bounding box class is axis aligned. Each face of the bounding box is perpendicular to the x-axis, the y-axis, or the z-axis. There are several benefits of using the bounding box for collision detection. The bounding box class fits rectangular shapes aligned with the axis very well. Compared to the bounding sphere class, the bounding box class provides a much tighter fit for non-rotated rectangular objects. Because the bounding box class is axis aligned, you can make certain assumptions that result in collision checks between bounding boxes being quicker than a bounding box that can be rotated. There are a few drawbacks of using the bounding box for collision detection. Rotating a bounding box causes it to no longer be axis aligned. Because of this, if you rotate a model being bounded, you will need to recreate the bounding box. Doing so can be slow, since all the points in an object are iterated through to get the bounding box. If the model has not changed orientation, you can translate the bounding box instead of recreating it. If the model being bounded is not aligned to the axis, the bounding box will have some empty space. The amount of empty space will be greatest when the object is rotated 45 degrees from an axis. Empty space in the bounding box can result in false positives when checking for collision.]]></remarks>
       <platforms>
@@ -123,7 +123,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
          Vector3 point
 )]]></syntax>
           <parameters>
-            <parameter name="point" type="Object"><![CDATA[The point to test for overlap.]]></parameter>
+            <parameter name="point" type="Vector3"><![CDATA[The point to test for overlap.]]></parameter>
           </parameters>
           <returns><![CDATA[Enumeration indicating the extent of overlap.]]></returns>
           <platforms>
@@ -139,7 +139,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
          out ContainmentType result
 )]]></syntax>
           <parameters>
-            <parameter name="point" type="Object"><![CDATA[The point to test for overlap.]]></parameter>
+            <parameter name="point" type="Vector3"><![CDATA[The point to test for overlap.]]></parameter>
             <parameter name="result" type="ContainmentType"><![CDATA[[ OutAttribute ] Enumeration indicating the extent of overlap.]]></parameter>
           </parameters>
           <platforms>
@@ -301,7 +301,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
          Vector3[] corners
 )]]></syntax>
           <parameters>
-            <parameter name="corners" type="Object"><![CDATA[An existing array of at least 8 Vector3 points where the corners of the BoundingBox are written.]]></parameter>
+            <parameter name="corners" type="Vector3[]"><![CDATA[An existing array of at least 8 Vector3 points where the corners of the BoundingBox are written.]]></parameter>
           </parameters>
           <remarks><![CDATA[The points returned correspond to the corners of the BoundingBox faces that are perpendicular to the z-axis. The near face is the face with the larger z value, and the far face is the face with the smaller z value. Points 0 to 3 correspond to the near face in a clockwise order starting at its upper-left corner when looking toward the origin from the positive z direction. Points 4 to 7 correspond to the far face in a clockwise order starting at its upper-left corner when looking toward the origin from the positive z direction.]]></remarks>
           <platforms>
@@ -461,8 +461,8 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
          out Nullable&lt;float&gt; result
 )]]></syntax>
           <parameters>
-            <parameter name="ray" type="Ray"><![CDATA[Type: Ray The Ray to check for intersection with.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[Type: Nullable &lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingBox , or null if there is no intersection.]]></parameter>
+            <parameter name="ray" type="Ray&lt;"><![CDATA[The Ray to check for intersection with.]]></parameter>
+            <parameter name="result" type="Nullable&lt;"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingBox , or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

@@ -41,7 +41,7 @@
          Nullable&lt;GraphicsProfile&gt; targetProfile
 )]]></syntax>
           <parameters>
-            <parameter name="targetProfile" type="Object"><![CDATA[Type: Nullable &lt; GraphicsProfile &gt; The profile identifier that defines the capabilities of the device.]]></parameter>
+            <parameter name="targetProfile" type="Nullable&lt;"><![CDATA[&lt; GraphicsProfile &gt; The profile identifier that defines the capabilities of the device.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>

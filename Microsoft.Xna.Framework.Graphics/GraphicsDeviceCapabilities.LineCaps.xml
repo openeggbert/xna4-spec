@@ -14,8 +14,77 @@
   <constructors>
   </constructors>
   <properties>
+    <property name="SupportsAlphaCompare" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports alpha-test comparisons.]]></summary>
+      <syntax><![CDATA[public bool SupportsAlphaCompare { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsAntiAlias" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports antialiased lines.]]></summary>
+      <syntax><![CDATA[public bool SupportsAntiAlias { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsBlend" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports source blending.]]></summary>
+      <syntax><![CDATA[public bool SupportsBlend { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsDepthBufferTest" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports depth buffer comparisons.]]></summary>
+      <syntax><![CDATA[public bool SupportsDepthBufferTest { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsFog" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports fog.]]></summary>
+      <syntax><![CDATA[public bool SupportsFog { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsTextureMapping" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports texture mapping.]]></summary>
+      <syntax><![CDATA[public bool SupportsTextureMapping { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
   </properties>
   <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
   </methods>
   <fields>
   </fields>

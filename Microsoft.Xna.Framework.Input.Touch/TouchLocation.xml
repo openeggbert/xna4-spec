@@ -26,11 +26,11 @@
          Vector2 previousPosition
 )]]></syntax>
       <parameters>
-        <parameter name="id" type="int"><![CDATA[Type: Int32 ID of the new touch location.]]></parameter>
-        <parameter name="state" type="TouchLocationState"><![CDATA[Type: TouchLocationState State of the new touch location.]]></parameter>
-        <parameter name="position" type="Object"><![CDATA[Type: Vector2 Position, in screen coordinates, of the new touch location.]]></parameter>
-        <parameter name="previousState" type="TouchLocationState"><![CDATA[Type: TouchLocationState Previous state for the new touch location.]]></parameter>
-        <parameter name="previousPosition" type="Object"><![CDATA[Type: Vector2 Previous position for the new touch location.]]></parameter>
+        <parameter name="id" type="Int32&lt;"><![CDATA[ID of the new touch location.]]></parameter>
+        <parameter name="state" type="TouchLocationState&lt;"><![CDATA[State of the new touch location.]]></parameter>
+        <parameter name="position" type="Vector2&lt;"><![CDATA[Position, in screen coordinates, of the new touch location.]]></parameter>
+        <parameter name="previousState" type="TouchLocationState&lt;"><![CDATA[Previous state for the new touch location.]]></parameter>
+        <parameter name="previousPosition" type="Vector2&lt;"><![CDATA[Previous position for the new touch location.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -44,9 +44,9 @@
          Vector2 position
 )]]></syntax>
       <parameters>
-        <parameter name="id" type="int"><![CDATA[Type: Int32 ID of the new touch location.]]></parameter>
-        <parameter name="state" type="TouchLocationState"><![CDATA[Type: TouchLocationState State of the new touch location.]]></parameter>
-        <parameter name="position" type="Object"><![CDATA[Type: Vector2 Position, in screen coordinates, of the new touch location.]]></parameter>
+        <parameter name="id" type="Int32&lt;"><![CDATA[ID of the new touch location.]]></parameter>
+        <parameter name="state" type="TouchLocationState&lt;"><![CDATA[State of the new touch location.]]></parameter>
+        <parameter name="position" type="Vector2&lt;"><![CDATA[Position, in screen coordinates, of the new touch location.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

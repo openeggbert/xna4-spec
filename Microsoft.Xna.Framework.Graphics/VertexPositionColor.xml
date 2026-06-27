@@ -13,14 +13,14 @@ public struct VertexPositionColor]]></syntax>
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="VertexPositionColor(Object, Color)">
+    <constructor signature="VertexPositionColor(Vector3, Color)">
       <summary><![CDATA[Initializes a new instance of the VertexPositionColor class.]]></summary>
       <syntax><![CDATA[public VertexPositionColor (
          Vector3 position,
          Color color
 )]]></syntax>
       <parameters>
-        <parameter name="position" type="Object"><![CDATA[The position of the vertex.]]></parameter>
+        <parameter name="position" type="Vector3"><![CDATA[The position of the vertex.]]></parameter>
         <parameter name="color" type="Color"><![CDATA[The color of the vertex.]]></parameter>
       </parameters>
       <platforms>
@@ -29,15 +29,15 @@ public struct VertexPositionColor]]></syntax>
         <platform>Windows Vista</platform>
       </platforms>
     </constructor>
-    <constructor signature="VertexPositionColor(Object, Color)">
+    <constructor signature="VertexPositionColor(Vector3&lt;, Color&lt;)">
       <summary><![CDATA[Initializes a new instance of the VertexPositionColor class.]]></summary>
       <syntax><![CDATA[public VertexPositionColor (
          Vector3 position,
          Color color
 )]]></syntax>
       <parameters>
-        <parameter name="position" type="Object"><![CDATA[Type: Vector3 The position of the vertex.]]></parameter>
-        <parameter name="color" type="Color"><![CDATA[Type: Color The color of the vertex.]]></parameter>
+        <parameter name="position" type="Vector3&lt;"><![CDATA[The position of the vertex.]]></parameter>
+        <parameter name="color" type="Color&lt;"><![CDATA[The color of the vertex.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

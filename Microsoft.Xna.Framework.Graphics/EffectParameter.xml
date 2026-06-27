@@ -574,7 +574,7 @@
          Vector3 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
@@ -679,7 +679,7 @@
          Vector4 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+            <parameter name="value" type="Vector4"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
@@ -724,7 +724,7 @@
          Vector4[] value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+            <parameter name="value" type="Vector4[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
@@ -754,7 +754,7 @@
          Vector2 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+            <parameter name="value" type="Vector2"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
@@ -769,7 +769,7 @@
          Vector3[] value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+            <parameter name="value" type="Vector3[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
@@ -799,7 +799,7 @@
          Vector2[] value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+            <parameter name="value" type="Vector2[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>

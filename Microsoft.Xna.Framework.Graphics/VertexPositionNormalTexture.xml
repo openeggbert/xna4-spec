@@ -13,7 +13,7 @@ public struct VertexPositionNormalTexture]]></syntax>
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="VertexPositionNormalTexture(Object, Object, Object)">
+    <constructor signature="VertexPositionNormalTexture(Vector3, Vector3, Vector2)">
       <summary><![CDATA[Initializes a new instance of the VertexPositionNormalTexture class.]]></summary>
       <syntax><![CDATA[public VertexPositionNormalTexture (
          Vector3 position,
@@ -21,9 +21,9 @@ public struct VertexPositionNormalTexture]]></syntax>
          Vector2 textureCoordinate
 )]]></syntax>
       <parameters>
-        <parameter name="position" type="Object"><![CDATA[Position of the vertex.]]></parameter>
-        <parameter name="normal" type="Object"><![CDATA[The vertex normal.]]></parameter>
-        <parameter name="textureCoordinate" type="Object"><![CDATA[The texture coordinate.]]></parameter>
+        <parameter name="position" type="Vector3"><![CDATA[Position of the vertex.]]></parameter>
+        <parameter name="normal" type="Vector3"><![CDATA[The vertex normal.]]></parameter>
+        <parameter name="textureCoordinate" type="Vector2"><![CDATA[The texture coordinate.]]></parameter>
       </parameters>
       <platforms>
         <platform>Xbox 360</platform>

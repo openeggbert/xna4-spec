@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentProcessor" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          interfaces="IContentProcessor">
+  <summary><![CDATA[Provides a base class to use when developing custom processor components. All processors must derive from this class.]]></summary>
+  <syntax><![CDATA[public abstract class ContentProcessor&lt;TInput,TOutput&gt; : IContentProcessor]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentProcessor()">
+      <summary><![CDATA[Initializes a new instance of the ContentProcessor class.]]></summary>
+      <syntax><![CDATA[protected ContentProcessor ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Process" returnType="void">
+      <summary><![CDATA[Processes the specified input data and returns the result.]]></summary>
+      <overloads>
+        <overload signature="Process()">
+          <summary><![CDATA[Processes the specified input data and returns the result.]]></summary>
+          <syntax><![CDATA[public virtual abstract TOutput Process (
+         TInput input,
+         ContentProcessorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="input" type="TInput"><![CDATA[Existing content object being processed.]]></parameter>
+            <parameter name="context" type="ContentProcessorContext"><![CDATA[Contains any required custom process parameters.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A typed object representing the processed input.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -190,7 +190,7 @@
          IAvatarAnimation animation
 )]]></syntax>
           <parameters>
-            <parameter name="animation" type="IAvatarAnimation"><![CDATA[Type: IAvatarAnimation The animation to draw.]]></parameter>
+            <parameter name="animation" type="IAvatarAnimation&lt;"><![CDATA[The animation to draw.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

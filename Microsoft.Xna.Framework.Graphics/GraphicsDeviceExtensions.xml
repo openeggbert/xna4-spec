@@ -22,8 +22,8 @@ public static void SetSharingMode (
          bool enabled
 )]]></syntax>
           <parameters>
-            <parameter name="device" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The graphics device to share.]]></parameter>
-            <parameter name="enabled" type="bool"><![CDATA[Type: Boolean Set to true to enable, and false to disable XNA rendering within a Silverlight application. XNA rendering is disabled by default for Silverlight applications.]]></parameter>
+            <parameter name="device" type="GraphicsDevice&lt;"><![CDATA[The graphics device to share.]]></parameter>
+            <parameter name="enabled" type="Boolean&lt;"><![CDATA[Set to true to enable, and false to disable XNA rendering within a Silverlight application. XNA rendering is disabled by default for Silverlight applications.]]></parameter>
           </parameters>
           <remarks><![CDATA[SetSharingMode should be set to true before attempting to render with XNA, and should be set to false when rendering is completed, returning control of the graphics device to Silverlight.]]></remarks>
           <platforms>

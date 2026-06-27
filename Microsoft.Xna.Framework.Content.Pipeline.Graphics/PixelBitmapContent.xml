@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PixelBitmapContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="BitmapContent"
+          interfaces="IEquatable">
+  <summary><![CDATA[Provides methods for maintaining a 2D array of pixel values.]]></summary>
+  <syntax><![CDATA[public class PixelBitmapContent&lt;T&gt; : BitmapContent where T : ValueType, IEquatable]]></syntax>
+  <remarks><![CDATA[Pixel bitmaps are represented as a 2D array of independent pixel values. The pixel type will often be from the Graphics.PackedVector namespace, but can also be System.Single , Vector2 , Vector3 , or Vector4 . A pixel bitmap of Vector4 values is commonly used as an intermediate format for image manipulation operations.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="PixelBitmapContent()">
+      <summary><![CDATA[Initializes a new instance of PixelBitmapContent.]]></summary>
+      <syntax><![CDATA[protected PixelBitmapContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="PixelBitmapContent(Int32, Int32)">
+      <summary><![CDATA[Initializes a new instance of PixelBitmapContent with the specified width and height.]]></summary>
+      <syntax><![CDATA[public PixelBitmapContent (
+         int width,
+         int height
+)]]></syntax>
+      <parameters>
+        <parameter name="width" type="int"><![CDATA[Width, in pixels, of the blank pixel bitmap.]]></parameter>
+        <parameter name="height" type="int"><![CDATA[Height, in pixels, of the blank pixel bitmap.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="GetPixel" returnType="void">
+      <summary><![CDATA[Gets the pixel value at the specified location in the bitmap.]]></summary>
+      <overloads>
+        <overload signature="GetPixel()">
+          <summary><![CDATA[Gets the pixel value at the specified location in the bitmap.]]></summary>
+          <syntax><![CDATA[public T GetPixel (
+         int x,
+         int y
+)]]></syntax>
+          <parameters>
+            <parameter name="x" type="int"><![CDATA[The x component of a bitmap pixel.]]></parameter>
+            <parameter name="y" type="int"><![CDATA[The y component of a bitmap pixel.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Value of the pixel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelData" returnType="void">
+      <summary><![CDATA[Gets the bitmap content as an array of encoded bytes.]]></summary>
+      <overloads>
+        <overload signature="GetPixelData()">
+          <summary><![CDATA[Gets the bitmap content as an array of encoded bytes.]]></summary>
+          <syntax><![CDATA[public override byte[] GetPixelData ()]]></syntax>
+          <returns><![CDATA[Contents of the bitmap.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetRow" returnType="void">
+      <summary><![CDATA[Gets an array containing a single row of bitmap data.]]></summary>
+      <overloads>
+        <overload signature="GetRow()">
+          <summary><![CDATA[Gets an array containing a single row of bitmap data.]]></summary>
+          <syntax><![CDATA[public T[] GetRow (
+         int y
+)]]></syntax>
+          <parameters>
+            <parameter name="y" type="int"><![CDATA[The y component of the bitmap row.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array containing the bitmap row data.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReplaceColor" returnType="void">
+      <summary><![CDATA[Searches for all pixels matching the specified color and replaces them with a new value.]]></summary>
+      <overloads>
+        <overload signature="ReplaceColor()">
+          <summary><![CDATA[Searches for all pixels matching the specified color and replaces them with a new value.]]></summary>
+          <syntax><![CDATA[public void ReplaceColor (
+         T originalColor,
+         T newColor
+)]]></syntax>
+          <parameters>
+            <parameter name="originalColor" type="T"><![CDATA[Color being searched for.]]></parameter>
+            <parameter name="newColor" type="T"><![CDATA[Color used to replace originalColor .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Use this method to implement color keying. For instance, replace Magenta with TransparentBlack .]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetPixel" returnType="void">
+      <summary><![CDATA[Sets the pixel value at the specified location in the bitmap.]]></summary>
+      <overloads>
+        <overload signature="SetPixel()">
+          <summary><![CDATA[Sets the pixel value at the specified location in the bitmap.]]></summary>
+          <syntax><![CDATA[public void SetPixel (
+         int x,
+         int y,
+         T value
+)]]></syntax>
+          <parameters>
+            <parameter name="x" type="int"><![CDATA[The x component of a bitmap pixel.]]></parameter>
+            <parameter name="y" type="int"><![CDATA[The y component of a bitmap pixel.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[New pixel value.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetPixelData" returnType="void">
+      <summary><![CDATA[Sets the bitmap content using the specified encoded byte array.]]></summary>
+      <overloads>
+        <overload signature="SetPixelData()">
+          <summary><![CDATA[Sets the bitmap content using the specified encoded byte array.]]></summary>
+          <syntax><![CDATA[public override void SetPixelData (
+         byte[] sourceData
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceData" type="byte[]"><![CDATA[New bitmap content.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Gets a string description of the bitmap.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Gets a string description of the bitmap.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[Description of the bitmap.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryCopyFrom" returnType="void">
+      <summary><![CDATA[Attempts to copy a region from the specified bitmap.]]></summary>
+      <overloads>
+        <overload signature="TryCopyFrom()">
+          <summary><![CDATA[Attempts to copy a region from the specified bitmap.]]></summary>
+          <syntax><![CDATA[protected override bool TryCopyFrom (
+         BitmapContent sourceBitmap,
+         Rectangle sourceRegion,
+         Rectangle destinationRegion
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceBitmap" type="BitmapContent"><![CDATA[Bitmap content being copied.]]></parameter>
+            <parameter name="sourceRegion" type="Rectangle"><![CDATA[Location of the upper-left region of sourceBitmap being copied from.]]></parameter>
+            <parameter name="destinationRegion" type="Rectangle"><![CDATA[Region of destination bitmap to be overwritten.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if region copy is supported; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryCopyTo" returnType="void">
+      <summary><![CDATA[Attempts to copy a region to the specified bitmap.]]></summary>
+      <overloads>
+        <overload signature="TryCopyTo()">
+          <summary><![CDATA[Attempts to copy a region to the specified bitmap.]]></summary>
+          <syntax><![CDATA[protected override bool TryCopyTo (
+         BitmapContent destinationBitmap,
+         Rectangle sourceRegion,
+         Rectangle destinationRegion
+)]]></syntax>
+          <parameters>
+            <parameter name="destinationBitmap" type="BitmapContent"><![CDATA[Bitmap to be copied to.]]></parameter>
+            <parameter name="sourceRegion" type="Rectangle"><![CDATA[Location of upper-left region to be copied.]]></parameter>
+            <parameter name="destinationRegion" type="Rectangle"><![CDATA[Target region for the copied content.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if region copy is supported; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryGetFormat" returnType="void">
+      <summary><![CDATA[Gets the GPU texture format that corresponds to the specified bitmap type.]]></summary>
+      <overloads>
+        <overload signature="TryGetFormat()">
+          <summary><![CDATA[Gets the GPU texture format that corresponds to the specified bitmap type.]]></summary>
+          <syntax><![CDATA[public override bool TryGetFormat (
+         out SurfaceFormat format
+)]]></syntax>
+          <parameters>
+            <parameter name="format" type="SurfaceFormat"><![CDATA[[ OutAttribute ] Format being compared.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the bitmap matches format; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

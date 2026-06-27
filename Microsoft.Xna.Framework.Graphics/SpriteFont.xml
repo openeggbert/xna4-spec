@@ -65,7 +65,7 @@
          StringBuilder text
 )]]></syntax>
           <parameters>
-            <parameter name="text" type="StringBuilder"><![CDATA[Type: StringBuilder The string to measure.]]></parameter>
+            <parameter name="text" type="StringBuilder&lt;"><![CDATA[The string to measure.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Vector2 The width and height, in pixels, of text, when it is rendered.]]></returns>
           <remarks><![CDATA[Use a StringBuilder argument in place of a String argument to measure dynamically formatted text.]]></remarks>

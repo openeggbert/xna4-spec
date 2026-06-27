@@ -47,9 +47,9 @@
          int height
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The device.]]></parameter>
-        <parameter name="width" type="int"><![CDATA[Type: Int32 Texture width.]]></parameter>
-        <parameter name="height" type="int"><![CDATA[Type: Int32 Texture height.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The device.]]></parameter>
+        <parameter name="width" type="Int32&lt;"><![CDATA[Texture width.]]></parameter>
+        <parameter name="height" type="Int32&lt;"><![CDATA[Texture height.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -92,11 +92,11 @@
          SurfaceFormat format
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The device.]]></parameter>
-        <parameter name="width" type="int"><![CDATA[Type: Int32 Texture width.]]></parameter>
-        <parameter name="height" type="int"><![CDATA[Type: Int32 Texture height.]]></parameter>
-        <parameter name="mipMap" type="bool"><![CDATA[Type: Boolean [ MarshalAsAttribute (U1)] True to generate a full mipmap chain; false otherwise.]]></parameter>
-        <parameter name="format" type="SurfaceFormat"><![CDATA[Type: SurfaceFormat Texture data format.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The device.]]></parameter>
+        <parameter name="width" type="Int32&lt;"><![CDATA[Texture width.]]></parameter>
+        <parameter name="height" type="Int32&lt;"><![CDATA[Texture height.]]></parameter>
+        <parameter name="mipMap" type="Boolean&lt;"><![CDATA[[ MarshalAsAttribute (U1)] True to generate a full mipmap chain; false otherwise.]]></parameter>
+        <parameter name="format" type="SurfaceFormat&lt;"><![CDATA[Texture data format.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -429,9 +429,9 @@
          int height
 )]]></syntax>
           <parameters>
-            <parameter name="stream" type="Stream"><![CDATA[Type: Stream Data stream number.]]></parameter>
-            <parameter name="width" type="int"><![CDATA[Type: Int32 Image width.]]></parameter>
-            <parameter name="height" type="int"><![CDATA[Type: Int32 Image height.]]></parameter>
+            <parameter name="stream" type="Stream&lt;"><![CDATA[Data stream number.]]></parameter>
+            <parameter name="width" type="Int32&lt;"><![CDATA[Image width.]]></parameter>
+            <parameter name="height" type="Int32&lt;"><![CDATA[Image height.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -450,9 +450,9 @@
          int height
 )]]></syntax>
           <parameters>
-            <parameter name="stream" type="Stream"><![CDATA[Type: Stream Data stream number.]]></parameter>
-            <parameter name="width" type="int"><![CDATA[Type: Int32 Image width.]]></parameter>
-            <parameter name="height" type="int"><![CDATA[Type: Int32 Image height.]]></parameter>
+            <parameter name="stream" type="Stream&lt;"><![CDATA[Data stream number.]]></parameter>
+            <parameter name="width" type="Int32&lt;"><![CDATA[Image width.]]></parameter>
+            <parameter name="height" type="Int32&lt;"><![CDATA[Image height.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -485,8 +485,8 @@
          Texture2D right
 )]]></syntax>
           <parameters>
-            <parameter name="left" type="Object"><![CDATA[Object to the left of the equality operator.]]></parameter>
-            <parameter name="right" type="Object"><![CDATA[Object to the right of the equality operator.]]></parameter>
+            <parameter name="left" type="Texture2D"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="Texture2D"><![CDATA[Object to the right of the equality operator.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
           <platforms>
@@ -507,8 +507,8 @@
          Texture2D right
 )]]></syntax>
           <parameters>
-            <parameter name="left" type="Object"><![CDATA[Object to the left of the inequality operator.]]></parameter>
-            <parameter name="right" type="Object"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+            <parameter name="left" type="Texture2D"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="Texture2D"><![CDATA[Object to the right of the inequality operator.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
           <platforms>

@@ -43,7 +43,7 @@
          Vector4 vector
 )]]></syntax>
       <parameters>
-        <parameter name="vector" type="Object"><![CDATA[Input value for all four components (xyzw).]]></parameter>
+        <parameter name="vector" type="Vector4"><![CDATA[Input value for all four components (xyzw).]]></parameter>
       </parameters>
       <platforms>
         <platform>Xbox 360</platform>
@@ -95,7 +95,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
          Bgra4444 other
 )]]></syntax>
           <parameters>
-            <parameter name="other" type="Object"><![CDATA[The object to test.]]></parameter>
+            <parameter name="other" type="Bgra4444"><![CDATA[The object to test.]]></parameter>
           </parameters>
           <returns><![CDATA[True if they are equal, false otherwise.]]></returns>
           <platforms>
@@ -169,8 +169,8 @@ public UInt16 PackedValue { get; set; }]]></syntax>
          Bgra4444 b
 )]]></syntax>
           <parameters>
-            <parameter name="a" type="Object"><![CDATA[The first object.]]></parameter>
-            <parameter name="b" type="Object"><![CDATA[The second object.]]></parameter>
+            <parameter name="a" type="Bgra4444"><![CDATA[The first object.]]></parameter>
+            <parameter name="b" type="Bgra4444"><![CDATA[The second object.]]></parameter>
           </parameters>
           <returns><![CDATA[True if the objects are equal; otherwise false.]]></returns>
           <platforms>
@@ -193,8 +193,8 @@ public UInt16 PackedValue { get; set; }]]></syntax>
          Bgra4444 b
 )]]></syntax>
           <parameters>
-            <parameter name="a" type="Object"><![CDATA[The first object.]]></parameter>
-            <parameter name="b" type="Object"><![CDATA[The second object.]]></parameter>
+            <parameter name="a" type="Bgra4444"><![CDATA[The first object.]]></parameter>
+            <parameter name="b" type="Bgra4444"><![CDATA[The second object.]]></parameter>
           </parameters>
           <returns><![CDATA[True if the objects are not equal, false otherwise.]]></returns>
           <platforms>

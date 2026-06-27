@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentImporter" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          interfaces="IContentImporter">
+  <summary><![CDATA[Implements a file format importer for use with game assets.]]></summary>
+  <syntax><![CDATA[public abstract class ContentImporter&lt;T&gt; : IContentImporter]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentImporter()">
+      <summary><![CDATA[Initializes a new instance of ContentImporter.]]></summary>
+      <syntax><![CDATA[protected ContentImporter ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Import" returnType="void">
+      <summary><![CDATA[Called by the framework when importing a game asset. This is the method called by XNA when an asset is to be imported into an object that can be recognized by the Content Pipeline.]]></summary>
+      <overloads>
+        <overload signature="Import()">
+          <summary><![CDATA[Called by the framework when importing a game asset. This is the method called by XNA when an asset is to be imported into an object that can be recognized by the Content Pipeline.]]></summary>
+          <syntax><![CDATA[public virtual abstract T Import (
+         string filename,
+         ContentImporterContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="filename" type="string"><![CDATA[Name of a game asset file.]]></parameter>
+            <parameter name="context" type="ContentImporterContext"><![CDATA[Contains information for importing a game asset, such as a logger interface.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resulting game asset.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -19,7 +19,7 @@
          params VertexElement[] elements
 )]]></syntax>
       <parameters>
-        <parameter name="elements" type="params VertexElement[]"><![CDATA[Type: VertexElement [ ParamArrayAttribute ] An array of per-vertex elements.]]></parameter>
+        <parameter name="elements" type="VertexElement&lt;"><![CDATA[[ ParamArrayAttribute ] An array of per-vertex elements.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -32,8 +32,8 @@
          params VertexElement[] elements
 )]]></syntax>
       <parameters>
-        <parameter name="vertexStride" type="int"><![CDATA[Type: Int32 The number of bytes per element.]]></parameter>
-        <parameter name="elements" type="params VertexElement[]"><![CDATA[Type: VertexElement [ ParamArrayAttribute ] An array of per-vertex elements.]]></parameter>
+        <parameter name="vertexStride" type="Int32&lt;"><![CDATA[The number of bytes per element.]]></parameter>
+        <parameter name="elements" type="VertexElement&lt;"><![CDATA[[ ParamArrayAttribute ] An array of per-vertex elements.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

@@ -19,7 +19,7 @@
          Vector2 vector
 )]]></syntax>
       <parameters>
-        <parameter name="vector" type="Object"><![CDATA[A vector containing the initial values for the components of the NormalizedShort2 structure.]]></parameter>
+        <parameter name="vector" type="Vector2"><![CDATA[A vector containing the initial values for the components of the NormalizedShort2 structure.]]></parameter>
       </parameters>
       <platforms>
         <platform>Xbox 360</platform>
@@ -66,7 +66,7 @@ public UInt32 PackedValue { get; set; }]]></syntax>
          NormalizedShort2 other
 )]]></syntax>
           <parameters>
-            <parameter name="other" type="Object"><![CDATA[The object with which to make the comparison.]]></parameter>
+            <parameter name="other" type="NormalizedShort2"><![CDATA[The object with which to make the comparison.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
           <platforms>
@@ -147,8 +147,8 @@ public UInt32 PackedValue { get; set; }]]></syntax>
          NormalizedShort2 b
 )]]></syntax>
           <parameters>
-            <parameter name="a" type="Object"><![CDATA[The object to the left of the equality operator.]]></parameter>
-            <parameter name="b" type="Object"><![CDATA[The object to the right of the equality operator.]]></parameter>
+            <parameter name="a" type="NormalizedShort2"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="NormalizedShort2"><![CDATA[The object to the right of the equality operator.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
           <platforms>
@@ -169,8 +169,8 @@ public UInt32 PackedValue { get; set; }]]></syntax>
          NormalizedShort2 b
 )]]></syntax>
           <parameters>
-            <parameter name="a" type="Object"><![CDATA[The object to the left of the equality operator.]]></parameter>
-            <parameter name="b" type="Object"><![CDATA[The object to the right of the equality operator.]]></parameter>
+            <parameter name="a" type="NormalizedShort2"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="NormalizedShort2"><![CDATA[The object to the right of the equality operator.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
           <platforms>

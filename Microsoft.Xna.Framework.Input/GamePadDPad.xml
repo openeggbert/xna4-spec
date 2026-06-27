@@ -12,7 +12,7 @@
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="GamePadDPad(ButtonState, ButtonState, ButtonState, ButtonState)">
+    <constructor signature="GamePadDPad(ButtonState&lt;, ButtonState&lt;, ButtonState&lt;, ButtonState&lt;)">
       <summary><![CDATA[Initializes a new instance of the GamePadDPad class.]]></summary>
       <syntax><![CDATA[public GamePadDPad (
          ButtonState upValue,
@@ -21,10 +21,10 @@
          ButtonState rightValue
 )]]></syntax>
       <parameters>
-        <parameter name="upValue" type="ButtonState"><![CDATA[Type: ButtonState Directional pad up button state.]]></parameter>
-        <parameter name="downValue" type="ButtonState"><![CDATA[Type: ButtonState Directional pad down button state.]]></parameter>
-        <parameter name="leftValue" type="ButtonState"><![CDATA[Type: ButtonState Directional pad left button state.]]></parameter>
-        <parameter name="rightValue" type="ButtonState"><![CDATA[Type: ButtonState Directional pad right button state.]]></parameter>
+        <parameter name="upValue" type="ButtonState&lt;"><![CDATA[Directional pad up button state.]]></parameter>
+        <parameter name="downValue" type="ButtonState&lt;"><![CDATA[Directional pad down button state.]]></parameter>
+        <parameter name="leftValue" type="ButtonState&lt;"><![CDATA[Directional pad left button state.]]></parameter>
+        <parameter name="rightValue" type="ButtonState&lt;"><![CDATA[Directional pad right button state.]]></parameter>
       </parameters>
       <remarks><![CDATA[Games normally use GetState to get the true gamepad state. This constructor is used instead to simulate gamepad input for passing within the game's own input subsystem.]]></remarks>
       <platforms>

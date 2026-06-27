@@ -86,7 +86,7 @@ public virtual bool PremultiplyAlpha { get; set; }]]></syntax>
          ContentProcessorContext context
 )]]></syntax>
           <parameters>
-            <parameter name="input" type="Object"><![CDATA[The bitmap data to convert to a font.]]></parameter>
+            <parameter name="input" type="Texture2DContent"><![CDATA[The bitmap data to convert to a font.]]></parameter>
             <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
           </parameters>
           <returns><![CDATA[The font data.]]></returns>

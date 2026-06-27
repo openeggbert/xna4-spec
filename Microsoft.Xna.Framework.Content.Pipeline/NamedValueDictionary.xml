@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NamedValueDictionary" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          baseClass="T&amp;gt;"
+          interfaces="IDictionary&amp;lt;string, ICollection&amp;lt;KeyValuePair&amp;lt;string, T&amp;gt;&amp;gt;, IEnumerable&amp;lt;KeyValuePair&amp;lt;string, T&amp;gt;&amp;gt;, IEnumerable">
+  <summary><![CDATA[Base class for dictionaries that map string identifiers to data values.]]></summary>
+  <syntax><![CDATA[public class NamedValueDictionary&lt;T&gt; : IDictionary&lt;string, T&gt;, ICollection&lt;KeyValuePair&lt;string, T&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, T&gt;&gt;, IEnumerable]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="NamedValueDictionary()">
+      <summary><![CDATA[Initializes an instance of NamedValueDictionary.]]></summary>
+      <syntax><![CDATA[public NamedValueDictionary ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Gets the number of items in the dictionary.]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DefaultSerializerType" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[protected internal virtual Type DefaultSerializerType { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets the specified item.]]></summary>
+      <syntax><![CDATA[public T this [
+         string key
+] { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Keys" type="ICollection&amp;lt;string&amp;gt;" access="get">
+      <summary><![CDATA[Gets all keys contained in the dictionary.]]></summary>
+      <syntax><![CDATA[public ICollection&lt;string&gt; Keys { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Values" type="ICollection&amp;lt;T&amp;gt;" access="get">
+      <summary><![CDATA[Gets all values contained in the dictionary.]]></summary>
+      <syntax><![CDATA[public ICollection&lt;T&gt; Values { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Add" returnType="void">
+      <summary><![CDATA[Adds the specified key and value to the dictionary.]]></summary>
+      <overloads>
+        <overload signature="Add()">
+          <summary><![CDATA[Adds the specified key and value to the dictionary.]]></summary>
+          <syntax><![CDATA[public void Add (
+         string key,
+         T value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Identity of the key of the new data pair.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[The value of the new data pair.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="AddItem" returnType="void">
+      <summary><![CDATA[Adds an element to the dictionary.]]></summary>
+      <overloads>
+        <overload signature="AddItem()">
+          <summary><![CDATA[Adds an element to the dictionary.]]></summary>
+          <syntax><![CDATA[protected virtual void AddItem (
+         string key,
+         T value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Identity of the key of the new element.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[The value of the new element.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Clear" returnType="void">
+      <summary><![CDATA[Removes all keys and values from the dictionary.]]></summary>
+      <overloads>
+        <overload signature="Clear()">
+          <summary><![CDATA[Removes all keys and values from the dictionary.]]></summary>
+          <syntax><![CDATA[public void Clear ()]]></syntax>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ClearItems" returnType="void">
+      <summary><![CDATA[Removes all elements from the dictionary.]]></summary>
+      <overloads>
+        <overload signature="ClearItems()">
+          <summary><![CDATA[Removes all elements from the dictionary.]]></summary>
+          <syntax><![CDATA[protected virtual void ClearItems ()]]></syntax>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ContainsKey" returnType="void">
+      <summary><![CDATA[Determines whether the specified key is present in the dictionary.]]></summary>
+      <overloads>
+        <overload signature="ContainsKey()">
+          <summary><![CDATA[Determines whether the specified key is present in the dictionary.]]></summary>
+          <syntax><![CDATA[public bool ContainsKey (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Identity of a key.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the value is present; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Gets an enumerator that iterates through items in a dictionary.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Gets an enumerator that iterates through items in a dictionary.]]></summary>
+          <syntax><![CDATA[public IEnumerator&lt;KeyValuePair&lt;string, T&gt;&gt; GetEnumerator ()]]></syntax>
+          <returns><![CDATA[Enumerator for iterating through the dictionary.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Remove" returnType="void">
+      <summary><![CDATA[Removes the specified key and value from the dictionary.]]></summary>
+      <overloads>
+        <overload signature="Remove()">
+          <summary><![CDATA[Removes the specified key and value from the dictionary.]]></summary>
+          <syntax><![CDATA[public bool Remove (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Identity of the key to be removed.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the value is present; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="RemoveItem" returnType="void">
+      <summary><![CDATA[Removes the specified element from the dictionary.]]></summary>
+      <overloads>
+        <overload signature="RemoveItem()">
+          <summary><![CDATA[Removes the specified element from the dictionary.]]></summary>
+          <syntax><![CDATA[protected virtual bool RemoveItem (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Identity of the key of the data pair to be removed.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the value is present; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetItem" returnType="void">
+      <summary><![CDATA[Modifies the value of an existing element.]]></summary>
+      <overloads>
+        <overload signature="SetItem()">
+          <summary><![CDATA[Modifies the value of an existing element.]]></summary>
+          <syntax><![CDATA[protected virtual void SetItem (
+         string key,
+         T value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Identity of the element to be modified.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[The value to be set.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryGetValue" returnType="void">
+      <summary><![CDATA[Gets the value associated with the specified key.]]></summary>
+      <overloads>
+        <overload signature="TryGetValue()">
+          <summary><![CDATA[Gets the value associated with the specified key.]]></summary>
+          <syntax><![CDATA[public bool TryGetValue (
+         string key,
+         out T value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Identity of the key of the element whose value is to be retrieved.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[[ OutAttribute ] The current value of the element.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the value is present; false otherwise.]]></returns>
+          <remarks><![CDATA[If the key was not found, value gets the appropriate default value for the type T . For example, 0 (zero) for integer types, false for Boolean types, and a null reference for reference types.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

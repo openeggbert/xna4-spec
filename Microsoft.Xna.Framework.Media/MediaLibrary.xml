@@ -187,7 +187,7 @@
          string token
 )]]></syntax>
           <parameters>
-            <parameter name="token" type="string"><![CDATA[Type: String The picture token. This cannot be null]]></parameter>
+            <parameter name="token" type="String&lt;"><![CDATA[The picture token. This cannot be null]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Picture The Picture object that matches the supplied picture token.]]></returns>
           <platforms>
@@ -206,8 +206,8 @@
          byte[] imageBuffer
 )]]></syntax>
           <parameters>
-            <parameter name="name" type="string"><![CDATA[Type: String Name of the image file saved to the media library.]]></parameter>
-            <parameter name="imageBuffer" type="byte[]"><![CDATA[Type: Byte Buffer that contains the image in the required JPEG file format.]]></parameter>
+            <parameter name="name" type="String&lt;"><![CDATA[Name of the image file saved to the media library.]]></parameter>
+            <parameter name="imageBuffer" type="Byte&lt;"><![CDATA[Buffer that contains the image in the required JPEG file format.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Picture The Picture object that represents the saved image.]]></returns>
           <remarks><![CDATA[Image data that is passed in must be in a JPEG file format. Additionally, SavePicture always saves the image in a JPEG file format.]]></remarks>
@@ -223,8 +223,8 @@ public Picture SavePicture (
          Stream source
 )]]></syntax>
           <parameters>
-            <parameter name="name" type="string"><![CDATA[Type: String Name of the image file that is saved to the media library.]]></parameter>
-            <parameter name="source" type="Stream"><![CDATA[Type: Stream Stream object that contains the image information in the required JPEG file format.]]></parameter>
+            <parameter name="name" type="String&lt;"><![CDATA[Name of the image file that is saved to the media library.]]></parameter>
+            <parameter name="source" type="Stream&lt;"><![CDATA[Stream object that contains the image information in the required JPEG file format.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Picture The Picture object that represents the saved image.]]></returns>
           <remarks><![CDATA[Image data that is passed in must be in a JPEG file format. SavePicture always saves the image in a JPEG file format.]]></remarks>

@@ -89,7 +89,7 @@
          TargetPlatform targetPlatform
 )]]></syntax>
           <parameters>
-            <parameter name="targetPlatform" type="TargetPlatform"><![CDATA[Type: TargetPlatform The target platform.]]></parameter>
+            <parameter name="targetPlatform" type="TargetPlatform&lt;"><![CDATA[The target platform.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: String The qualified name.]]></returns>
           <platforms>
@@ -150,8 +150,8 @@
          T value
 )]]></syntax>
           <parameters>
-            <parameter name="output" type="ContentWriter"><![CDATA[Type: ContentWriter The content writer serializing the value.]]></parameter>
-            <parameter name="value" type="T"><![CDATA[Type: T The value to write.]]></parameter>
+            <parameter name="output" type="ContentWriter&lt;"><![CDATA[The content writer serializing the value.]]></parameter>
+            <parameter name="value" type="T&lt;br&gt;"><![CDATA[The value to write.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>
@@ -166,8 +166,8 @@
          Object value
 )]]></syntax>
           <parameters>
-            <parameter name="output" type="ContentWriter"><![CDATA[Type: ContentWriter The content writer serializing the value.]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Type: Object The value to write.]]></parameter>
+            <parameter name="output" type="ContentWriter&lt;"><![CDATA[The content writer serializing the value.]]></parameter>
+            <parameter name="value" type="Object&lt;"><![CDATA[The value to write.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>

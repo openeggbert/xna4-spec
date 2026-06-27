@@ -39,7 +39,7 @@
          Vector3 vector
 )]]></syntax>
       <parameters>
-        <parameter name="vector" type="Object"><![CDATA[A Vector3 containing the Red, Green, and Blue values defining a color.]]></parameter>
+        <parameter name="vector" type="Vector3"><![CDATA[A Vector3 containing the Red, Green, and Blue values defining a color.]]></parameter>
       </parameters>
       <platforms>
         <platform>Xbox 360</platform>
@@ -71,7 +71,7 @@
          Vector4 vector
 )]]></syntax>
       <parameters>
-        <parameter name="vector" type="Object"><![CDATA[A Vector4 containing the Red, Green, Blue, and Alpha values defining a color.]]></parameter>
+        <parameter name="vector" type="Vector4"><![CDATA[A Vector4 containing the Red, Green, Blue, and Alpha values defining a color.]]></parameter>
       </parameters>
       <platforms>
         <platform>Xbox 360</platform>

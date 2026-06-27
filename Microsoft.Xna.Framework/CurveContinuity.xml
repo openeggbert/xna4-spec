@@ -12,11 +12,7 @@
     <platform>Windows Vista</platform>
   </platforms>
   <members>
-    <member name="Smooth">
-      <summary><![CDATA[Interpolation can be used between this CurveKey and the next.]]></summary>
-    </member>
-    <member name="Step">
-      <summary><![CDATA[Interpolation cannot be used between this CurveKey and the next. Specifying a position between the two points returns this point.]]></summary>
-    </member>
+    <member name="Smooth"><summary><![CDATA[Interpolation can be used between this CurveKey and the next.]]></summary></member>
+    <member name="Step"><summary><![CDATA[Interpolation cannot be used between this CurveKey and the next. Specifying a position between the two points returns this point.]]></summary></member>
   </members>
 </xna-type>

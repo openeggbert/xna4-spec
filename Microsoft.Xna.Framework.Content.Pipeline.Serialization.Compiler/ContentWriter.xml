@@ -43,7 +43,7 @@
          Vector2 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Value to write.]]></parameter>
+            <parameter name="value" type="Vector2"><![CDATA[Value to write.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -56,7 +56,7 @@
          Vector4 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Value to write.]]></parameter>
+            <parameter name="value" type="Vector4"><![CDATA[Value to write.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -82,7 +82,7 @@
          Color value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Color"><![CDATA[Type: Color Value of a color using Red, Green, Blue, and Alpha values to write.]]></parameter>
+            <parameter name="value" type="Color&lt;"><![CDATA[Value of a color using Red, Green, Blue, and Alpha values to write.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>
@@ -109,7 +109,7 @@
          Vector3 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Value to write.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[Value to write.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows XP SP2</platform>

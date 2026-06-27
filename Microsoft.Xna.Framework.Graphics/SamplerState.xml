@@ -135,7 +135,7 @@
          bool disposing
 )]]></syntax>
           <parameters>
-            <parameter name="disposing" type="bool"><![CDATA[Type: Boolean [ MarshalAsAttribute (U1)] true to release both managed and unmanaged resources; false to release only unmanaged resources.]]></parameter>
+            <parameter name="disposing" type="Boolean&lt;"><![CDATA[[ MarshalAsAttribute (U1)] true to release both managed and unmanaged resources; false to release only unmanaged resources.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

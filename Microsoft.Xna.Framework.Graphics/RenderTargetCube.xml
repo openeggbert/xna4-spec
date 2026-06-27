@@ -47,13 +47,13 @@
          RenderTargetUsage usage
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The graphics device to associate with this render target resource.]]></parameter>
-        <parameter name="size" type="int"><![CDATA[Type: Int32 The width and height of this cube texture resource, in pixels.]]></parameter>
-        <parameter name="mipMap" type="bool"><![CDATA[Type: Boolean [ MarshalAsAttribute (U1)] True to generate a full mipmap chain, false otherwise.]]></parameter>
-        <parameter name="preferredFormat" type="SurfaceFormat"><![CDATA[Type: SurfaceFormat Preferred format of the surface data.]]></parameter>
-        <parameter name="preferredDepthFormat" type="DepthFormat"><![CDATA[Type: DepthFormat Preferred format of the depth data.]]></parameter>
-        <parameter name="preferredMultiSampleCount" type="int"><![CDATA[Type: Int32 Preferred number of sample locations during multisampling.]]></parameter>
-        <parameter name="usage" type="RenderTargetUsage"><![CDATA[Type: RenderTargetUsage Options identifying the behaviors of this texture resource.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The graphics device to associate with this render target resource.]]></parameter>
+        <parameter name="size" type="Int32&lt;"><![CDATA[The width and height of this cube texture resource, in pixels.]]></parameter>
+        <parameter name="mipMap" type="Boolean&lt;"><![CDATA[[ MarshalAsAttribute (U1)] True to generate a full mipmap chain, false otherwise.]]></parameter>
+        <parameter name="preferredFormat" type="SurfaceFormat&lt;"><![CDATA[Preferred format of the surface data.]]></parameter>
+        <parameter name="preferredDepthFormat" type="DepthFormat&lt;"><![CDATA[Preferred format of the depth data.]]></parameter>
+        <parameter name="preferredMultiSampleCount" type="Int32&lt;"><![CDATA[Preferred number of sample locations during multisampling.]]></parameter>
+        <parameter name="usage" type="RenderTargetUsage&lt;"><![CDATA[Options identifying the behaviors of this texture resource.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -94,11 +94,11 @@
          DepthFormat preferredDepthFormat
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice The graphics device to associate with this render target resource.]]></parameter>
-        <parameter name="size" type="int"><![CDATA[Type: Int32 The width and height of this cube texture resource, in pixels.]]></parameter>
-        <parameter name="mipMap" type="bool"><![CDATA[Type: Boolean [ MarshalAsAttribute (U1)] True to generate a full mipmap chain, false otherwise.]]></parameter>
-        <parameter name="preferredFormat" type="SurfaceFormat"><![CDATA[Type: SurfaceFormat Preferred format of the surface data.]]></parameter>
-        <parameter name="preferredDepthFormat" type="DepthFormat"><![CDATA[Type: DepthFormat Preferred format of the depth data.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The graphics device to associate with this render target resource.]]></parameter>
+        <parameter name="size" type="Int32&lt;"><![CDATA[The width and height of this cube texture resource, in pixels.]]></parameter>
+        <parameter name="mipMap" type="Boolean&lt;"><![CDATA[[ MarshalAsAttribute (U1)] True to generate a full mipmap chain, false otherwise.]]></parameter>
+        <parameter name="preferredFormat" type="SurfaceFormat&lt;"><![CDATA[Preferred format of the surface data.]]></parameter>
+        <parameter name="preferredDepthFormat" type="DepthFormat&lt;"><![CDATA[Preferred format of the depth data.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ChildCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          baseClass="Collection&amp;lt;TChild&amp;gt;">
+  <summary><![CDATA[Provides a collection of child objects for a content item.]]></summary>
+  <syntax><![CDATA[public abstract class ChildCollection&lt;TParent,TChild&gt; : Collection&lt;TChild&gt;]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ChildCollection(TParent)">
+      <summary><![CDATA[Creates an instance of ChildCollection.]]></summary>
+      <syntax><![CDATA[protected ChildCollection (
+         TParent parent
+)]]></syntax>
+      <parameters>
+        <parameter name="parent" type="TParent"><![CDATA[Parent object of the child objects returned in the collection.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="ClearItems" returnType="void">
+      <summary><![CDATA[Removes all children from the collection.]]></summary>
+      <overloads>
+        <overload signature="ClearItems()">
+          <summary><![CDATA[Removes all children from the collection.]]></summary>
+          <syntax><![CDATA[protected override void ClearItems ()]]></syntax>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetParent" returnType="void">
+      <summary><![CDATA[Gets the parent of a child object.]]></summary>
+      <overloads>
+        <overload signature="GetParent()">
+          <summary><![CDATA[Gets the parent of a child object.]]></summary>
+          <syntax><![CDATA[protected virtual abstract TParent GetParent (
+         TChild child
+)]]></syntax>
+          <parameters>
+            <parameter name="child" type="TChild"><![CDATA[The child of the parent being retrieved.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The parent of the child object.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="InsertItem" returnType="void">
+      <summary><![CDATA[Inserts a child object into the collection at the specified location.]]></summary>
+      <overloads>
+        <overload signature="InsertItem(Int32, TChild)">
+          <summary><![CDATA[Inserts a child object into the collection at the specified location.]]></summary>
+          <syntax><![CDATA[protected virtual void InsertItem (
+         int index,
+         TChild item
+)]]></syntax>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[The position in the collection.]]></parameter>
+            <parameter name="item" type="TChild"><![CDATA[The child object being inserted.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="RemoveItem" returnType="void">
+      <summary><![CDATA[Removes a child object from the collection.]]></summary>
+      <overloads>
+        <overload signature="RemoveItem()">
+          <summary><![CDATA[Removes a child object from the collection.]]></summary>
+          <syntax><![CDATA[protected override void RemoveItem (
+         int index
+)]]></syntax>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[The index of the item being removed.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetItem" returnType="void">
+      <summary><![CDATA[Modifies the value of the child object at the specified location.]]></summary>
+      <overloads>
+        <overload signature="SetItem(Int32, TChild)">
+          <summary><![CDATA[Modifies the value of the child object at the specified location.]]></summary>
+          <syntax><![CDATA[protected virtual void SetItem (
+         int index,
+         TChild item
+)]]></syntax>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[The index of the child object being modified.]]></parameter>
+            <parameter name="item" type="TChild"><![CDATA[The new value for the child object.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetParent" returnType="void">
+      <summary><![CDATA[Modifies the value of the parent object of the specified child object.]]></summary>
+      <overloads>
+        <overload signature="SetParent()">
+          <summary><![CDATA[Modifies the value of the parent object of the specified child object.]]></summary>
+          <syntax><![CDATA[protected virtual abstract void SetParent (
+         TChild child,
+         TParent parent
+)]]></syntax>
+          <parameters>
+            <parameter name="child" type="TChild"><![CDATA[The child of the parent being modified.]]></parameter>
+            <parameter name="parent" type="TParent"><![CDATA[The new value for the parent object.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -14,8 +14,95 @@
   <constructors>
   </constructors>
   <properties>
+    <property name="SupportsAlways" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether always passing the comparison test is supported.]]></summary>
+      <syntax><![CDATA[public bool SupportsAlways { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsEqual" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value equals the current value are supported.]]></summary>
+      <syntax><![CDATA[public bool SupportsEqual { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsGreater" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value is greater than the current value are supported.]]></summary>
+      <syntax><![CDATA[public bool SupportsGreater { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsGreaterEqual" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value is greater than or equal to the current value are supported.]]></summary>
+      <syntax><![CDATA[public bool SupportsGreaterEqual { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsLess" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value is less than the current value are supported.]]></summary>
+      <syntax><![CDATA[public bool SupportsLess { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsLessEqual" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value is less than or equal to the current value are supported.]]></summary>
+      <syntax><![CDATA[public bool SupportsLessEqual { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsNever" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether never passing the comparison test is supported.]]></summary>
+      <syntax><![CDATA[public bool SupportsNever { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsNotEqual" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value does not equal the current value are supported.]]></summary>
+      <syntax><![CDATA[public bool SupportsNotEqual { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
   </properties>
   <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
   </methods>
   <fields>
   </fields>

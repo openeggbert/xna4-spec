@@ -12,15 +12,15 @@
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="GamePadThumbSticks(Object, Object)">
+    <constructor signature="GamePadThumbSticks(Vector2&lt;, Vector2&lt;)">
       <summary><![CDATA[Initializes a new instance of the GamePadThumbSticks class.]]></summary>
       <syntax><![CDATA[public GamePadThumbSticks (
          Vector2 leftThumbstick,
          Vector2 rightThumbstick
 )]]></syntax>
       <parameters>
-        <parameter name="leftThumbstick" type="Object"><![CDATA[Type: Vector2 Left stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
-        <parameter name="rightThumbstick" type="Object"><![CDATA[Type: Vector2 Right stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
+        <parameter name="leftThumbstick" type="Vector2&lt;"><![CDATA[Left stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
+        <parameter name="rightThumbstick" type="Vector2&lt;"><![CDATA[Right stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
       </parameters>
       <remarks><![CDATA[Games normally use GetState to get the true gamepad state. This constructor is used instead to simulate gamepad input for passing within the game's own input subsystem.]]></remarks>
       <platforms>

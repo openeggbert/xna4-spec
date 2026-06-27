@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
-          name="GamerCollection Generic" kind="class"
+          name="GamerCollection" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
           baseClass="ReadOnlyCollection&amp;lt;T&amp;gt;"
@@ -20,6 +20,22 @@
   <properties>
   </properties>
   <methods>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Returns a strongly typed GamerCollection.GamerCollectionEnumerator Generic Structure that can iterate through a GamerCollection.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Returns a strongly typed GamerCollection.GamerCollectionEnumerator Generic Structure that can iterate through a GamerCollection.]]></summary>
+          <syntax><![CDATA[public GamerCollectionEnumerator GetEnumerator ()]]></syntax>
+          <returns><![CDATA[The GamerCollection.GamerCollectionEnumerator Generic Structure.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
   </methods>
   <fields>
   </fields>

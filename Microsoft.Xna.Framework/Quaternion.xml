@@ -43,7 +43,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
          float scalarPart
 )]]></syntax>
       <parameters>
-        <parameter name="vectorPart" type="Object"><![CDATA[The vector component of the quaternion.]]></parameter>
+        <parameter name="vectorPart" type="Vector3"><![CDATA[The vector component of the quaternion.]]></parameter>
         <parameter name="scalarPart" type="float"><![CDATA[The rotation component of the quaternion.]]></parameter>
       </parameters>
       <platforms>
@@ -200,7 +200,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
          float angle
 )]]></syntax>
           <parameters>
-            <parameter name="axis" type="Object"><![CDATA[The vector to rotate around.]]></parameter>
+            <parameter name="axis" type="Vector3"><![CDATA[The vector to rotate around.]]></parameter>
             <parameter name="angle" type="float"><![CDATA[The angle to rotate around the vector.]]></parameter>
           </parameters>
           <returns><![CDATA[The created Quaternion.]]></returns>
@@ -218,7 +218,7 @@ public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
          out Quaternion result
 )]]></syntax>
           <parameters>
-            <parameter name="axis" type="Object"><![CDATA[The vector to rotate around.]]></parameter>
+            <parameter name="axis" type="Vector3"><![CDATA[The vector to rotate around.]]></parameter>
             <parameter name="angle" type="float"><![CDATA[The angle to rotate around the vector.]]></parameter>
             <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] The created Quaternion .]]></parameter>
           </parameters>

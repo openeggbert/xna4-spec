@@ -202,7 +202,7 @@
          Stream stream
 )]]></syntax>
           <parameters>
-            <parameter name="stream" type="Stream"><![CDATA[Type: Stream Stream object that contains the data for this SoundEffect object.]]></parameter>
+            <parameter name="stream" type="Stream&lt;"><![CDATA[Stream object that contains the data for this SoundEffect object.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: SoundEffect SoundEffect object that this method creates.]]></returns>
           <remarks><![CDATA[The Stream object must point to the head of a valid PCM wave file. Also, this wave file must be in the RIFF bitstream format. The audio format has the following restrictions: Must be a PCM wave file Can only be mono or stereo Must be 8 or 16 bit Sample rate must be between 8,000 Hz and 48,000 Hz]]></remarks>
@@ -223,9 +223,9 @@
          AudioChannels channels
 )]]></syntax>
           <parameters>
-            <parameter name="sizeInBytes" type="int"><![CDATA[Type: Int32 Size, in bytes, of audio data.]]></parameter>
-            <parameter name="sampleRate" type="int"><![CDATA[Type: Int32 Sample rate, in Hertz (Hz), of audio content. The must be between 8000 Hz and 48000 Hz.]]></parameter>
-            <parameter name="channels" type="AudioChannels"><![CDATA[Type: AudioChannels Number of channels in the audio data.]]></parameter>
+            <parameter name="sizeInBytes" type="Int32&lt;"><![CDATA[Size, in bytes, of audio data.]]></parameter>
+            <parameter name="sampleRate" type="Int32&lt;"><![CDATA[Sample rate, in Hertz (Hz), of audio content. The must be between 8000 Hz and 48000 Hz.]]></parameter>
+            <parameter name="channels" type="AudioChannels&lt;"><![CDATA[Number of channels in the audio data.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: TimeSpan TimeSpan object that represents the calculated sample duration.]]></returns>
           <platforms>
@@ -245,9 +245,9 @@
          AudioChannels channels
 )]]></syntax>
           <parameters>
-            <parameter name="duration" type="TimeSpan"><![CDATA[Type: TimeSpan TimeSpan object that contains the sample duration.]]></parameter>
-            <parameter name="sampleRate" type="int"><![CDATA[Type: Int32 Sample rate, in Hertz (Hz), of audio content. The parameter must be between 8,000 Hz and 48,000 Hz.]]></parameter>
-            <parameter name="channels" type="AudioChannels"><![CDATA[Type: AudioChannels Number of channels in the audio data.]]></parameter>
+            <parameter name="duration" type="TimeSpan&lt;"><![CDATA[TimeSpan object that contains the sample duration.]]></parameter>
+            <parameter name="sampleRate" type="Int32&lt;"><![CDATA[Sample rate, in Hertz (Hz), of audio content. The parameter must be between 8,000 Hz and 48,000 Hz.]]></parameter>
+            <parameter name="channels" type="AudioChannels&lt;"><![CDATA[Number of channels in the audio data.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Int32 Size, in bytes, of audio sample.]]></returns>
           <platforms>
@@ -306,9 +306,9 @@
          float pan
 )]]></syntax>
           <parameters>
-            <parameter name="volume" type="float"><![CDATA[Type: Single Volume, ranging from 0.0f (silence) to 1.0f (full volume). 1.0f is full volume relative to SoundEffect.MasterVolume .]]></parameter>
-            <parameter name="pitch" type="float"><![CDATA[Type: Single Pitch adjustment, ranging from -1.0f (down one octave) to 1.0f (up one octave). 0.0f is unity (normal) pitch.]]></parameter>
-            <parameter name="pan" type="float"><![CDATA[Type: Single Panning, ranging from -1.0f (full left) to 1.0f (full right). 0.0f is centered.]]></parameter>
+            <parameter name="volume" type="Single&lt;"><![CDATA[Volume, ranging from 0.0f (silence) to 1.0f (full volume). 1.0f is full volume relative to SoundEffect.MasterVolume .]]></parameter>
+            <parameter name="pitch" type="Single&lt;"><![CDATA[Pitch adjustment, ranging from -1.0f (down one octave) to 1.0f (up one octave). 0.0f is unity (normal) pitch.]]></parameter>
+            <parameter name="pan" type="Single&lt;"><![CDATA[Panning, ranging from -1.0f (full left) to 1.0f (full right). 0.0f is centered.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if the sound is playing back successfully; otherwise, false.]]></returns>
           <remarks><![CDATA[Play will return false if there too many sounds already are playing. To loop a sound or apply 3D effects, call CreateInstance instead of Play , and SoundEffectInstance.Play . Sounds play in a "fire and forget" fashion with Play ; therefore, the lifetime of these sounds is managed by the framework. These sounds will play once, and then stop. They cannot be looped or 3D positioned. Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. Play throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>

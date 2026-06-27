@@ -14,10 +14,115 @@
   <constructors>
   </constructors>
   <properties>
+    <property name="DynamicFlowControlDepth" type="int" access="get">
+      <summary><![CDATA[Gets a value specifying the depth of the dynamic flow control instruction nesting.]]></summary>
+      <syntax><![CDATA[public int DynamicFlowControlDepth { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="NumberTemps" type="int" access="get">
+      <summary><![CDATA[Gets a value specifying the number of temporary registers supported.]]></summary>
+      <syntax><![CDATA[public int NumberTemps { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StaticFlowControlDepth" type="int" access="get">
+      <summary><![CDATA[Gets a value specifying the depth of nesting of the loop - vs/rep - vs and call - vs/callnz bool - vs instructions.]]></summary>
+      <syntax><![CDATA[public int StaticFlowControlDepth { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsPredication" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether instruction predication is supported.]]></summary>
+      <syntax><![CDATA[public bool SupportsPredication { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
   </properties>
   <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
   </methods>
   <fields>
+    <field name="MaxDynamicFlowControlDepth" type="int" isReadOnly="true">
+      <summary><![CDATA[Specifies the maximum level of nesting of dynamic flow control instructions (break - vs, break_comp - vs, breakp - vs, if_comp - vs, if_comp - vs, if pred - vs).]]></summary>
+      <syntax><![CDATA[public const int MaxDynamicFlowControlDepth]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="MaxNumberTemps" type="int" isReadOnly="true">
+      <summary><![CDATA[Specifies the maximum number of temporary registers supported.]]></summary>
+      <syntax><![CDATA[public const int MaxNumberTemps]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="MaxStaticFlowControlDepth" type="int" isReadOnly="true">
+      <summary><![CDATA[Specifies the maximum depth of nesting of the loop - vs/rep - vs and call - vs/callnz bool - vs instructions.]]></summary>
+      <syntax><![CDATA[public const int MaxStaticFlowControlDepth]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="MinDynamicFlowControlDepth" type="int" isReadOnly="true">
+      <summary><![CDATA[Specifies the minimum level of nesting of dynamic flow control instructions (break - vs, break_comp - vs, breakp - vs, if_comp - vs, if_comp - vs, if pred - vs).]]></summary>
+      <syntax><![CDATA[public const int MinDynamicFlowControlDepth]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="MinNumberTemps" type="int" isReadOnly="true">
+      <summary><![CDATA[Specifies the minimum number of temporary registers supported.]]></summary>
+      <syntax><![CDATA[public const int MinNumberTemps]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="MinStaticFlowControlDepth" type="int" isReadOnly="true">
+      <summary><![CDATA[Specifies the minimum depth of nesting of the loop - vs/rep - vs and call - vs/callnz bool - vs instructions.]]></summary>
+      <syntax><![CDATA[public const int MinStaticFlowControlDepth]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
   </fields>
   <events>
   </events>

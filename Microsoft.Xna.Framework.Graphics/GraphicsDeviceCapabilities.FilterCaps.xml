@@ -14,8 +14,143 @@
   <constructors>
   </constructors>
   <properties>
+    <property name="SupportsMagnifyAnisotropic" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates that the device supports per-stage anisotropic filtering for magnifying textures.]]></summary>
+      <syntax><![CDATA[public bool SupportsMagnifyAnisotropic { get; }]]></syntax>
+      <remarks><![CDATA[Anisotropic filters compensate for distortion caused by the difference in angle between the texture polygon and the plane of the screen. The anisotropic magnification filter is represented by the TextureFilter.Anisotropic enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMagnifyGaussianQuad" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports per-stage Gaussian quad filtering for magnifying textures.]]></summary>
+      <syntax><![CDATA[public bool SupportsMagnifyGaussianQuad { get; }]]></syntax>
+      <remarks><![CDATA[The Gaussian quad filter is represented by the TextureFilter.GaussianQuad enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMagnifyLinear" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates that the device supports per-stage bilinear interpolation filtering for magnifying textures.]]></summary>
+      <syntax><![CDATA[public bool SupportsMagnifyLinear { get; }]]></syntax>
+      <remarks><![CDATA[The bilinear interpolation mipmapping filter is represented by the TextureFilter.Linear enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMagnifyPoint" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates that the device supports per-stage point-sample filtering for magnifying textures.]]></summary>
+      <syntax><![CDATA[public bool SupportsMagnifyPoint { get; }]]></syntax>
+      <remarks><![CDATA[The point-sample magnification filter is represented by the TextureFilter.Point enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMagnifyPyramidalQuad" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates that the device supports per-stage pyramidal sample filtering for magnifying textures.]]></summary>
+      <syntax><![CDATA[public bool SupportsMagnifyPyramidalQuad { get; }]]></syntax>
+      <remarks><![CDATA[The pyramidal sample filter is represented by the TextureFilter.PyramidalQuad enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMinifyAnisotropic" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates that the device supports per-stage anisotropic filtering for minifying textures.]]></summary>
+      <syntax><![CDATA[public bool SupportsMinifyAnisotropic { get; }]]></syntax>
+      <remarks><![CDATA[The anisotropic minification filter is represented by the TextureFilter.Anisotropic enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMinifyGaussianQuad" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports per-stage Gaussian quad filtering for minifying textures.]]></summary>
+      <syntax><![CDATA[public bool SupportsMinifyGaussianQuad { get; }]]></syntax>
+      <remarks><![CDATA[The Gaussian quad filter is represented by the TextureFilter.GaussianQuad enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMinifyLinear" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates that the device supports per-stage bilinear interpolation filtering for minifying textures.]]></summary>
+      <syntax><![CDATA[public bool SupportsMinifyLinear { get; }]]></syntax>
+      <remarks><![CDATA[The linear minification filter is represented by the TextureFilter.Linear enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMinifyPoint" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the device supports per-stage point-sample filtering for minifying textures.]]></summary>
+      <syntax><![CDATA[public bool SupportsMinifyPoint { get; }]]></syntax>
+      <remarks><![CDATA[The point-sample minification filter is represented by the TextureFilter.Point enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMinifyPyramidalQuad" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates that the device supports per-stage pyramidal sample filtering for minifying textures.]]></summary>
+      <syntax><![CDATA[public bool SupportsMinifyPyramidalQuad { get; }]]></syntax>
+      <remarks><![CDATA[The pyramidal sample filter is represented by the TextureFilter.PyramidalQuad enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMipMapLinear" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates that the device supports per-stage trilinear interpolation filtering for mipmaps.]]></summary>
+      <syntax><![CDATA[public bool SupportsMipMapLinear { get; }]]></syntax>
+      <remarks><![CDATA[The bilinear interpolation mipmapping filter is represented by the TextureFilter.Linear enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsMipMapPoint" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates that the device supports per-stage point-sample filtering for mipmaps.]]></summary>
+      <syntax><![CDATA[public bool SupportsMipMapPoint { get; }]]></syntax>
+      <remarks><![CDATA[The point-sample mipmapping filter is represented by the TextureFilter.Point enumerated value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
   </properties>
   <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
   </methods>
   <fields>
   </fields>

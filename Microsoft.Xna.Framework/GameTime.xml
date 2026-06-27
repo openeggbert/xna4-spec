@@ -29,9 +29,9 @@
          bool isRunningSlowly
 )]]></syntax>
       <parameters>
-        <parameter name="totalGameTime" type="TimeSpan"><![CDATA[Type: TimeSpan The amount of game time since the start of the game.]]></parameter>
-        <parameter name="elapsedGameTime" type="TimeSpan"><![CDATA[Type: TimeSpan The amount of elapsed game time since the last update.]]></parameter>
-        <parameter name="isRunningSlowly" type="bool"><![CDATA[Type: Boolean Whether the game is running multiple updates this frame.]]></parameter>
+        <parameter name="totalGameTime" type="TimeSpan&lt;"><![CDATA[The amount of game time since the start of the game.]]></parameter>
+        <parameter name="elapsedGameTime" type="TimeSpan&lt;"><![CDATA[The amount of elapsed game time since the last update.]]></parameter>
+        <parameter name="isRunningSlowly" type="Boolean&lt;"><![CDATA[Whether the game is running multiple updates this frame.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -86,8 +86,8 @@
          TimeSpan elapsedGameTime
 )]]></syntax>
       <parameters>
-        <parameter name="totalGameTime" type="TimeSpan"><![CDATA[Type: TimeSpan The amount of game time since the start of the game.]]></parameter>
-        <parameter name="elapsedGameTime" type="TimeSpan"><![CDATA[Type: TimeSpan The amount of elapsed game time since the last update.]]></parameter>
+        <parameter name="totalGameTime" type="TimeSpan&lt;"><![CDATA[The amount of game time since the start of the game.]]></parameter>
+        <parameter name="elapsedGameTime" type="TimeSpan&lt;"><![CDATA[The amount of elapsed game time since the last update.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

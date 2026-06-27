@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ExternalReference" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          baseClass="ContentItem">
+  <summary><![CDATA[Specifies external references to a data file for the content item.]]></summary>
+  <syntax><![CDATA[public sealed class ExternalReference&lt;T&gt; : ContentItem]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ExternalReference()">
+      <summary><![CDATA[Initializes a new instance of ExternalReference.]]></summary>
+      <syntax><![CDATA[public ExternalReference ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ExternalReference(String, ContentIdentity)">
+      <summary><![CDATA[Initializes a new instance of ExternalReference, specifying the file path relative to another content item.]]></summary>
+      <syntax><![CDATA[public ExternalReference (
+         string filename,
+         ContentIdentity relativeToContent
+)]]></syntax>
+      <parameters>
+        <parameter name="filename" type="string"><![CDATA[The name of the referenced file.]]></parameter>
+        <parameter name="relativeToContent" type="ContentIdentity"><![CDATA[The content that the path specified in filename is relative to.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[This method constructs a reference to the specified file. If the file name contains a relative path, it is made absolute based on the SourceFilename property of relativeToContent . This can be useful in a custom content processor for constructing references to texture or effect files relative to the Identity property of the mesh being processed.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ExternalReference(String)">
+      <summary><![CDATA[Initializes a new instance of ExternalReference.]]></summary>
+      <syntax><![CDATA[public ExternalReference (
+         string filename
+)]]></syntax>
+      <parameters>
+        <parameter name="filename" type="string"><![CDATA[The name of the referenced file.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Filename" type="string" access="get;set">
+      <summary><![CDATA[Gets and sets the file name of an ExternalReference.]]></summary>
+      <syntax><![CDATA[public string Filename { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

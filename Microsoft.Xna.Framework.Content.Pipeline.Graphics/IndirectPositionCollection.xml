@@ -44,7 +44,7 @@
          Vector3 item
 )]]></syntax>
           <parameters>
-            <parameter name="item" type="Object"><![CDATA[Position being searched for in the collection.]]></parameter>
+            <parameter name="item" type="Vector3"><![CDATA[Position being searched for in the collection.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the position was found; false otherwise.]]></returns>
           <platforms>
@@ -64,7 +64,7 @@
          int arrayIndex
 )]]></syntax>
           <parameters>
-            <parameter name="array" type="Object"><![CDATA[Array of positions to be copied.]]></parameter>
+            <parameter name="array" type="Vector3[]"><![CDATA[Array of positions to be copied.]]></parameter>
             <parameter name="arrayIndex" type="int"><![CDATA[Index of the first copied position.]]></parameter>
           </parameters>
           <platforms>
@@ -97,7 +97,7 @@
          Vector3 item
 )]]></syntax>
           <parameters>
-            <parameter name="item" type="Object"><![CDATA[Position being searched for.]]></parameter>
+            <parameter name="item" type="Vector3"><![CDATA[Position being searched for.]]></parameter>
           </parameters>
           <returns><![CDATA[Index of the specified position.]]></returns>
           <platforms>

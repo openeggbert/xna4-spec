@@ -82,13 +82,13 @@
          Matrix transformMatrix
 )]]></syntax>
           <parameters>
-            <parameter name="sortMode" type="SpriteSortMode"><![CDATA[Type: SpriteSortMode Sprite drawing order.]]></parameter>
-            <parameter name="blendState" type="BlendState"><![CDATA[Type: BlendState Blending options.]]></parameter>
-            <parameter name="samplerState" type="SamplerState"><![CDATA[Type: SamplerState Texture sampling options.]]></parameter>
-            <parameter name="depthStencilState" type="DepthStencilState"><![CDATA[Type: DepthStencilState Depth and stencil options.]]></parameter>
-            <parameter name="rasterizerState" type="RasterizerState"><![CDATA[Type: RasterizerState Rasterization options.]]></parameter>
-            <parameter name="effect" type="Effect"><![CDATA[Type: Effect Effect state options.]]></parameter>
-            <parameter name="transformMatrix" type="Matrix"><![CDATA[Type: Matrix Transformation matrix for scale, rotate, translate options.]]></parameter>
+            <parameter name="sortMode" type="SpriteSortMode&lt;"><![CDATA[Sprite drawing order.]]></parameter>
+            <parameter name="blendState" type="BlendState&lt;"><![CDATA[Blending options.]]></parameter>
+            <parameter name="samplerState" type="SamplerState&lt;"><![CDATA[Texture sampling options.]]></parameter>
+            <parameter name="depthStencilState" type="DepthStencilState&lt;"><![CDATA[Depth and stencil options.]]></parameter>
+            <parameter name="rasterizerState" type="RasterizerState&lt;"><![CDATA[Rasterization options.]]></parameter>
+            <parameter name="effect" type="Effect&lt;"><![CDATA[Effect state options.]]></parameter>
+            <parameter name="transformMatrix" type="Matrix&lt;"><![CDATA[Transformation matrix for scale, rotate, translate options.]]></parameter>
           </parameters>
           <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
           <platforms>
@@ -105,11 +105,11 @@
          RasterizerState rasterizerState
 )]]></syntax>
           <parameters>
-            <parameter name="sortMode" type="SpriteSortMode"><![CDATA[Type: SpriteSortMode Sprite drawing order.]]></parameter>
-            <parameter name="blendState" type="BlendState"><![CDATA[Type: BlendState Blending options.]]></parameter>
-            <parameter name="samplerState" type="SamplerState"><![CDATA[Type: SamplerState Texture sampling options.]]></parameter>
-            <parameter name="depthStencilState" type="DepthStencilState"><![CDATA[Type: DepthStencilState Depth and stencil options.]]></parameter>
-            <parameter name="rasterizerState" type="RasterizerState"><![CDATA[Type: RasterizerState Rasterization options.]]></parameter>
+            <parameter name="sortMode" type="SpriteSortMode&lt;"><![CDATA[Sprite drawing order.]]></parameter>
+            <parameter name="blendState" type="BlendState&lt;"><![CDATA[Blending options.]]></parameter>
+            <parameter name="samplerState" type="SamplerState&lt;"><![CDATA[Texture sampling options.]]></parameter>
+            <parameter name="depthStencilState" type="DepthStencilState&lt;"><![CDATA[Depth and stencil options.]]></parameter>
+            <parameter name="rasterizerState" type="RasterizerState&lt;"><![CDATA[Rasterization options.]]></parameter>
           </parameters>
           <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
           <platforms>
@@ -159,8 +159,8 @@
          BlendState blendState
 )]]></syntax>
           <parameters>
-            <parameter name="sortMode" type="SpriteSortMode"><![CDATA[Type: SpriteSortMode Sprite drawing order.]]></parameter>
-            <parameter name="blendState" type="BlendState"><![CDATA[Type: BlendState Blending options.]]></parameter>
+            <parameter name="sortMode" type="SpriteSortMode&lt;"><![CDATA[Sprite drawing order.]]></parameter>
+            <parameter name="blendState" type="BlendState&lt;"><![CDATA[Blending options.]]></parameter>
           </parameters>
           <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
           <platforms>
@@ -207,12 +207,12 @@
          Effect effect
 )]]></syntax>
           <parameters>
-            <parameter name="sortMode" type="SpriteSortMode"><![CDATA[Type: SpriteSortMode Sprite drawing order.]]></parameter>
-            <parameter name="blendState" type="BlendState"><![CDATA[Type: BlendState Blending options.]]></parameter>
-            <parameter name="samplerState" type="SamplerState"><![CDATA[Type: SamplerState Texture sampling options.]]></parameter>
-            <parameter name="depthStencilState" type="DepthStencilState"><![CDATA[Type: DepthStencilState Depth and stencil options.]]></parameter>
-            <parameter name="rasterizerState" type="RasterizerState"><![CDATA[Type: RasterizerState Rasterization options.]]></parameter>
-            <parameter name="effect" type="Effect"><![CDATA[Type: Effect Effect state options.]]></parameter>
+            <parameter name="sortMode" type="SpriteSortMode&lt;"><![CDATA[Sprite drawing order.]]></parameter>
+            <parameter name="blendState" type="BlendState&lt;"><![CDATA[Blending options.]]></parameter>
+            <parameter name="samplerState" type="SamplerState&lt;"><![CDATA[Texture sampling options.]]></parameter>
+            <parameter name="depthStencilState" type="DepthStencilState&lt;"><![CDATA[Depth and stencil options.]]></parameter>
+            <parameter name="rasterizerState" type="RasterizerState&lt;"><![CDATA[Rasterization options.]]></parameter>
+            <parameter name="effect" type="Effect&lt;"><![CDATA[Effect state options.]]></parameter>
           </parameters>
           <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
           <platforms>
@@ -260,7 +260,7 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
             <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle specifying, in screen coordinates, where the sprite will be drawn. If this rectangle is not the same size as sourcerectangle , the sprite is scaled to fit.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
@@ -285,13 +285,13 @@
          float layerDepth
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
+            <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
             <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
             <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the sprite around the origin.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>
-            <parameter name="scale" type="Object"><![CDATA[Vector containing separate scalar multiples for the x- and y-axes of the sprite.]]></parameter>
+            <parameter name="origin" type="Vector2"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Vector2"><![CDATA[Vector containing separate scalar multiples for the x- and y-axes of the sprite.]]></parameter>
             <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply before rendering.]]></parameter>
             <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
           </parameters>
@@ -310,9 +310,9 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
-            <parameter name="destinationRectangle" type="Rectangle"><![CDATA[Type: Rectangle A rectangle that specifies (in screen coordinates) the destination for drawing the sprite.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="texture" type="Texture2D&lt;"><![CDATA[A texture.]]></parameter>
+            <parameter name="destinationRectangle" type="Rectangle&lt;"><![CDATA[A rectangle that specifies (in screen coordinates) the destination for drawing the sprite.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
@@ -328,10 +328,10 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="sourceRectangle" type="Object"><![CDATA[Type: Nullable &lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="texture" type="Texture2D&lt;"><![CDATA[A texture.]]></parameter>
+            <parameter name="position" type="Vector2&lt;"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
@@ -351,12 +351,12 @@
          float layerDepth
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
             <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle specifying, in screen coordinates, where the sprite will be drawn. If this rectangle is not the same size as sourcerectangle , the sprite is scaled to fit.]]></parameter>
             <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
             <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the sprite around the origin.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>
+            <parameter name="origin" type="Vector2"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>
             <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
             <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
           </parameters>
@@ -376,10 +376,10 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
-            <parameter name="destinationRectangle" type="Rectangle"><![CDATA[Type: Rectangle A rectangle that specifies (in screen coordinates) the destination for drawing the sprite. If this rectangle is not the same size as the source rectangle, the sprite will be scaled to fit.]]></parameter>
-            <parameter name="sourceRectangle" type="Object"><![CDATA[Type: Nullable &lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="texture" type="Texture2D&lt;"><![CDATA[A texture.]]></parameter>
+            <parameter name="destinationRectangle" type="Rectangle&lt;"><![CDATA[A rectangle that specifies (in screen coordinates) the destination for drawing the sprite. If this rectangle is not the same size as the source rectangle, the sprite will be scaled to fit.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
@@ -395,7 +395,7 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
             <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle specifying, in screen coordinates, where the sprite will be drawn. If this rectangle is not the same size as sourcerectangle the sprite will be scaled to fit.]]></parameter>
             <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
@@ -421,15 +421,15 @@
          float layerDepth
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="sourceRectangle" type="Object"><![CDATA[Type: Nullable &lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
-            <parameter name="rotation" type="float"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
-            <parameter name="scale" type="Object"><![CDATA[Type: Vector2 Scale factor.]]></parameter>
-            <parameter name="effects" type="SpriteEffects"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
-            <parameter name="layerDepth" type="float"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+            <parameter name="texture" type="Texture2D&lt;"><![CDATA[A texture.]]></parameter>
+            <parameter name="position" type="Vector2&lt;"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Single&lt;"><![CDATA[Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Vector2&lt;"><![CDATA[The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Vector2&lt;"><![CDATA[Scale factor.]]></parameter>
+            <parameter name="effects" type="SpriteEffects&lt;"><![CDATA[Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Single&lt;"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
@@ -450,15 +450,15 @@
          float layerDepth
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="sourceRectangle" type="Object"><![CDATA[Type: Nullable &lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
-            <parameter name="rotation" type="float"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
-            <parameter name="scale" type="float"><![CDATA[Type: Single Scale factor.]]></parameter>
-            <parameter name="effects" type="SpriteEffects"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
-            <parameter name="layerDepth" type="float"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+            <parameter name="texture" type="Texture2D&lt;"><![CDATA[A texture.]]></parameter>
+            <parameter name="position" type="Vector2&lt;"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Single&lt;"><![CDATA[Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Vector2&lt;"><![CDATA[The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Single&lt;"><![CDATA[Scale factor.]]></parameter>
+            <parameter name="effects" type="SpriteEffects&lt;"><![CDATA[Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Single&lt;"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
@@ -474,8 +474,8 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
+            <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
             <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
@@ -494,9 +494,9 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="texture" type="Texture2D&lt;"><![CDATA[A texture.]]></parameter>
+            <parameter name="position" type="Vector2&lt;"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
@@ -516,14 +516,14 @@
          float layerDepth
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
-            <parameter name="destinationRectangle" type="Rectangle"><![CDATA[Type: Rectangle A rectangle that specifies (in screen coordinates) the destination for drawing the sprite. If this rectangle is not the same size as the source rectangle, the sprite will be scaled to fit.]]></parameter>
-            <parameter name="sourceRectangle" type="Object"><![CDATA[Type: Nullable &lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
-            <parameter name="rotation" type="float"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
-            <parameter name="effects" type="SpriteEffects"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
-            <parameter name="layerDepth" type="float"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+            <parameter name="texture" type="Texture2D&lt;"><![CDATA[A texture.]]></parameter>
+            <parameter name="destinationRectangle" type="Rectangle&lt;"><![CDATA[A rectangle that specifies (in screen coordinates) the destination for drawing the sprite. If this rectangle is not the same size as the source rectangle, the sprite will be scaled to fit.]]></parameter>
+            <parameter name="sourceRectangle" type="Nullable&lt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Single&lt;"><![CDATA[Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Vector2&lt;"><![CDATA[The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="effects" type="SpriteEffects&lt;"><![CDATA[Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Single&lt;"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
@@ -538,8 +538,8 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
+            <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
           <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
@@ -563,12 +563,12 @@
          float layerDepth
 )]]></syntax>
           <parameters>
-            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
+            <parameter name="texture" type="Texture2D"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
             <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
             <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the sprite around the origin.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>
+            <parameter name="origin" type="Vector2"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>
             <parameter name="scale" type="float"><![CDATA[Uniform multiple by which to scale the sprite width and height.]]></parameter>
             <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
             <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
@@ -594,10 +594,10 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="spriteFont" type="SpriteFont"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
-            <parameter name="text" type="string"><![CDATA[Type: String A text string.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="spriteFont" type="SpriteFont&lt;"><![CDATA[A font for diplaying text.]]></parameter>
+            <parameter name="text" type="String&lt;"><![CDATA[A text string.]]></parameter>
+            <parameter name="position" type="Vector2&lt;"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
@@ -618,15 +618,15 @@
          float layerDepth
 )]]></syntax>
           <parameters>
-            <parameter name="spriteFont" type="SpriteFont"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
-            <parameter name="text" type="StringBuilder"><![CDATA[Type: StringBuilder Text string.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
-            <parameter name="rotation" type="float"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
-            <parameter name="scale" type="float"><![CDATA[Type: Single Scale factor.]]></parameter>
-            <parameter name="effects" type="SpriteEffects"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
-            <parameter name="layerDepth" type="float"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+            <parameter name="spriteFont" type="SpriteFont&lt;"><![CDATA[A font for diplaying text.]]></parameter>
+            <parameter name="text" type="StringBuilder&lt;"><![CDATA[Text string.]]></parameter>
+            <parameter name="position" type="Vector2&lt;"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Single&lt;"><![CDATA[Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Vector2&lt;"><![CDATA[The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Single&lt;"><![CDATA[Scale factor.]]></parameter>
+            <parameter name="effects" type="SpriteEffects&lt;"><![CDATA[Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Single&lt;"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
@@ -644,7 +644,7 @@
           <parameters>
             <parameter name="spriteFont" type="SpriteFont"><![CDATA[The sprite font.]]></parameter>
             <parameter name="text" type="string"><![CDATA[The string to draw.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the text will be drawn.]]></parameter>
+            <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the text will be drawn.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The desired color of the text.]]></parameter>
           </parameters>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
@@ -668,15 +668,15 @@
          float layerDepth
 )]]></syntax>
           <parameters>
-            <parameter name="spriteFont" type="SpriteFont"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
-            <parameter name="text" type="string"><![CDATA[Type: String A text string.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
-            <parameter name="rotation" type="float"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
-            <parameter name="scale" type="float"><![CDATA[Type: Single Scale factor.]]></parameter>
-            <parameter name="effects" type="SpriteEffects"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
-            <parameter name="layerDepth" type="float"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+            <parameter name="spriteFont" type="SpriteFont&lt;"><![CDATA[A font for diplaying text.]]></parameter>
+            <parameter name="text" type="String&lt;"><![CDATA[A text string.]]></parameter>
+            <parameter name="position" type="Vector2&lt;"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Single&lt;"><![CDATA[Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Vector2&lt;"><![CDATA[The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Single&lt;"><![CDATA[Scale factor.]]></parameter>
+            <parameter name="effects" type="SpriteEffects&lt;"><![CDATA[Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Single&lt;"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
@@ -697,15 +697,15 @@
          float layerDepth
 )]]></syntax>
           <parameters>
-            <parameter name="spriteFont" type="SpriteFont"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
-            <parameter name="text" type="string"><![CDATA[Type: String A text string.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
-            <parameter name="rotation" type="float"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
-            <parameter name="scale" type="Object"><![CDATA[Type: Vector2 Scale factor.]]></parameter>
-            <parameter name="effects" type="SpriteEffects"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
-            <parameter name="layerDepth" type="float"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+            <parameter name="spriteFont" type="SpriteFont&lt;"><![CDATA[A font for diplaying text.]]></parameter>
+            <parameter name="text" type="String&lt;"><![CDATA[A text string.]]></parameter>
+            <parameter name="position" type="Vector2&lt;"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Single&lt;"><![CDATA[Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Vector2&lt;"><![CDATA[The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Vector2&lt;"><![CDATA[Scale factor.]]></parameter>
+            <parameter name="effects" type="SpriteEffects&lt;"><![CDATA[Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Single&lt;"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
@@ -721,10 +721,10 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="spriteFont" type="SpriteFont"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
-            <parameter name="text" type="StringBuilder"><![CDATA[Type: StringBuilder Text string.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="spriteFont" type="SpriteFont&lt;"><![CDATA[A font for diplaying text.]]></parameter>
+            <parameter name="text" type="StringBuilder&lt;"><![CDATA[Text string.]]></parameter>
+            <parameter name="position" type="Vector2&lt;"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
@@ -745,15 +745,15 @@
          float layerDepth
 )]]></syntax>
           <parameters>
-            <parameter name="spriteFont" type="SpriteFont"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
-            <parameter name="text" type="StringBuilder"><![CDATA[Type: StringBuilder Text string.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
-            <parameter name="rotation" type="float"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
-            <parameter name="scale" type="Object"><![CDATA[Type: Vector2 Scale factor.]]></parameter>
-            <parameter name="effects" type="SpriteEffects"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
-            <parameter name="layerDepth" type="float"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+            <parameter name="spriteFont" type="SpriteFont&lt;"><![CDATA[A font for diplaying text.]]></parameter>
+            <parameter name="text" type="StringBuilder&lt;"><![CDATA[Text string.]]></parameter>
+            <parameter name="position" type="Vector2&lt;"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Single&lt;"><![CDATA[Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Vector2&lt;"><![CDATA[The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Vector2&lt;"><![CDATA[Scale factor.]]></parameter>
+            <parameter name="effects" type="SpriteEffects&lt;"><![CDATA[Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Single&lt;"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
@@ -776,11 +776,11 @@
           <parameters>
             <parameter name="spriteFont" type="SpriteFont"><![CDATA[The sprite font.]]></parameter>
             <parameter name="text" type="string"><![CDATA[The string to draw.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the text will be drawn.]]></parameter>
+            <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the text will be drawn.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The desired color of the text.]]></parameter>
             <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the text around the origin.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[The origin of the string. Specify (0,0) for the upper-left corner.]]></parameter>
-            <parameter name="scale" type="Object"><![CDATA[Vector containing separate scalar multiples for the x- and y-axes of the sprite.]]></parameter>
+            <parameter name="origin" type="Vector2"><![CDATA[The origin of the string. Specify (0,0) for the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Vector2"><![CDATA[Vector containing separate scalar multiples for the x- and y-axes of the sprite.]]></parameter>
             <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
             <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
           </parameters>
@@ -807,10 +807,10 @@
           <parameters>
             <parameter name="spriteFont" type="SpriteFont"><![CDATA[The sprite font.]]></parameter>
             <parameter name="text" type="string"><![CDATA[The string to draw.]]></parameter>
-            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the text will be drawn.]]></parameter>
+            <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the text will be drawn.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The desired color of the text.]]></parameter>
             <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the text around the origin.]]></parameter>
-            <parameter name="origin" type="Object"><![CDATA[The origin of the string. Specify (0,0) for the upper-left corner.]]></parameter>
+            <parameter name="origin" type="Vector2"><![CDATA[The origin of the string. Specify (0,0) for the upper-left corner.]]></parameter>
             <parameter name="scale" type="float"><![CDATA[Uniform multiple by which to scale the sprite width and height.]]></parameter>
             <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
             <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>

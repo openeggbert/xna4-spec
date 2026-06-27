@@ -49,7 +49,7 @@
          Alpha8 other
 )]]></syntax>
           <parameters>
-            <parameter name="other" type="Object"><![CDATA[The object with which to make the comparison.]]></parameter>
+            <parameter name="other" type="Alpha8"><![CDATA[The object with which to make the comparison.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
           <platforms>
@@ -130,8 +130,8 @@
          Alpha8 b
 )]]></syntax>
           <parameters>
-            <parameter name="a" type="Object"><![CDATA[The object to the left of the equality operator.]]></parameter>
-            <parameter name="b" type="Object"><![CDATA[The object to the right of the equality operator.]]></parameter>
+            <parameter name="a" type="Alpha8"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="Alpha8"><![CDATA[The object to the right of the equality operator.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
           <platforms>
@@ -152,8 +152,8 @@
          Alpha8 b
 )]]></syntax>
           <parameters>
-            <parameter name="a" type="Object"><![CDATA[The object to the left of the equality operator.]]></parameter>
-            <parameter name="b" type="Object"><![CDATA[The object to the right of the equality operator.]]></parameter>
+            <parameter name="a" type="Alpha8"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="Alpha8"><![CDATA[The object to the right of the equality operator.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
           <platforms>

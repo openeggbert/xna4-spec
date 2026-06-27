@@ -476,7 +476,7 @@
          PlayerIndex player
 )]]></syntax>
           <parameters>
-            <parameter name="player" type="PlayerIndex"><![CDATA[Type: PlayerIndex The player index for whom to bring up the Xbox LIVE Party screen.]]></parameter>
+            <parameter name="player" type="PlayerIndex&lt;"><![CDATA[The player index for whom to bring up the Xbox LIVE Party screen.]]></parameter>
           </parameters>
           <remarks><![CDATA[Windows Phone Specific Information This method cannot be used on Windows Phone. If called, it throws a NotSupportedException . Shows the Xbox LIVE Party screen, which allows players to invite others to the party, to invite party members to the current game session, or to chat with party members.]]></remarks>
           <platforms>
@@ -494,7 +494,7 @@
          PlayerIndex player
 )]]></syntax>
           <parameters>
-            <parameter name="player" type="PlayerIndex"><![CDATA[Type: PlayerIndex The player index for whom the list of game sessions with party members is shown.]]></parameter>
+            <parameter name="player" type="PlayerIndex&lt;"><![CDATA[The player index for whom the list of game sessions with party members is shown.]]></parameter>
           </parameters>
           <remarks><![CDATA[Windows Phone Specific Information This method cannot be used on Windows Phone. If called, it throws a NotSupportedException . This method brings up the Play with Party Member screen, which allows players to join game sessions with fellow party members in the current title. If the player is not currently in a party, or if the platform lacks Xbox LIVE Party support, this method shows the Friends screen instead.]]></remarks>
           <platforms>

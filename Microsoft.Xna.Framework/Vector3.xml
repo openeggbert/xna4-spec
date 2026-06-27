@@ -54,7 +54,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          float z
 )]]></syntax>
       <parameters>
-        <parameter name="value" type="Object"><![CDATA[A vector containing the values to initialize x and y components with.]]></parameter>
+        <parameter name="value" type="Vector2"><![CDATA[A vector containing the values to initialize x and y components with.]]></parameter>
         <parameter name="z" type="float"><![CDATA[Initial value for the z-component of the vector.]]></parameter>
       </parameters>
       <platforms>
@@ -177,9 +177,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Sum of the source vectors.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] Sum of the source vectors.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -194,8 +194,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[Sum of the source vectors.]]></returns>
           <platforms>
@@ -219,9 +219,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          float amount2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 1 of the triangle.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 2 of the triangle.]]></parameter>
-            <parameter name="value3" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 3 of the triangle.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 1 of the triangle.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 2 of the triangle.]]></parameter>
+            <parameter name="value3" type="Vector3"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 3 of the triangle.]]></parameter>
             <parameter name="amount1" type="float"><![CDATA[Barycentric coordinate b2, which expresses the weighting factor toward vertex 2 (specified in value2 ).]]></parameter>
             <parameter name="amount2" type="float"><![CDATA[Barycentric coordinate b3, which expresses the weighting factor toward vertex 3 (specified in value3 ).]]></parameter>
           </parameters>
@@ -243,12 +243,12 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 1 of the triangle.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 2 of the triangle.]]></parameter>
-            <parameter name="value3" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 3 of the triangle.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 1 of the triangle.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 2 of the triangle.]]></parameter>
+            <parameter name="value3" type="Vector3"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 3 of the triangle.]]></parameter>
             <parameter name="amount1" type="float"><![CDATA[Barycentric coordinate b2 , which expresses the weighting factor toward vertex 2 (specified in value2 ).]]></parameter>
             <parameter name="amount2" type="float"><![CDATA[Barycentric coordinate b3 , which expresses the weighting factor toward vertex 3 (specified in value3 ).]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The 3D Cartesian coordinates of the specified point are placed in this Vector3 on exit.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The 3D Cartesian coordinates of the specified point are placed in this Vector3 on exit.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -271,10 +271,10 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          float amount
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[The first position in the interpolation.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[The second position in the interpolation.]]></parameter>
-            <parameter name="value3" type="Object"><![CDATA[The third position in the interpolation.]]></parameter>
-            <parameter name="value4" type="Object"><![CDATA[The fourth position in the interpolation.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[The first position in the interpolation.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[The second position in the interpolation.]]></parameter>
+            <parameter name="value3" type="Vector3"><![CDATA[The third position in the interpolation.]]></parameter>
+            <parameter name="value4" type="Vector3"><![CDATA[The fourth position in the interpolation.]]></parameter>
             <parameter name="amount" type="float"><![CDATA[Weighting factor.]]></parameter>
           </parameters>
           <returns><![CDATA[A vector that is the result of the Catmull-Rom interpolation.]]></returns>
@@ -295,12 +295,12 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[The first position in the interpolation.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[The second position in the interpolation.]]></parameter>
-            <parameter name="value3" type="Object"><![CDATA[The third position in the interpolation.]]></parameter>
-            <parameter name="value4" type="Object"><![CDATA[The fourth position in the interpolation.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[The first position in the interpolation.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[The second position in the interpolation.]]></parameter>
+            <parameter name="value3" type="Vector3"><![CDATA[The third position in the interpolation.]]></parameter>
+            <parameter name="value4" type="Vector3"><![CDATA[The fourth position in the interpolation.]]></parameter>
             <parameter name="amount" type="float"><![CDATA[Weighting factor.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] A vector that is the result of the Catmull-Rom interpolation.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] A vector that is the result of the Catmull-Rom interpolation.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -322,10 +322,10 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[The value to clamp.]]></parameter>
-            <parameter name="min" type="Object"><![CDATA[The minimum value.]]></parameter>
-            <parameter name="max" type="Object"><![CDATA[The maximum value.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The clamped value.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[The value to clamp.]]></parameter>
+            <parameter name="min" type="Vector3"><![CDATA[The minimum value.]]></parameter>
+            <parameter name="max" type="Vector3"><![CDATA[The maximum value.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The clamped value.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -341,9 +341,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 max
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[The value to clamp.]]></parameter>
-            <parameter name="min" type="Object"><![CDATA[The minimum value.]]></parameter>
-            <parameter name="max" type="Object"><![CDATA[The maximum value.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[The value to clamp.]]></parameter>
+            <parameter name="min" type="Vector3"><![CDATA[The minimum value.]]></parameter>
+            <parameter name="max" type="Vector3"><![CDATA[The maximum value.]]></parameter>
           </parameters>
           <returns><![CDATA[The clamped value.]]></returns>
           <platforms>
@@ -365,9 +365,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="vector1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="vector2" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The cross product of the vectors.]]></parameter>
+            <parameter name="vector1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="vector2" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The cross product of the vectors.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -382,8 +382,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 vector2
 )]]></syntax>
           <parameters>
-            <parameter name="vector1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="vector2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="vector1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="vector2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[Cross product of the source vectors.]]></returns>
           <platforms>
@@ -404,8 +404,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[Distance between the source vectors.]]></returns>
           <platforms>
@@ -422,8 +422,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out float result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The distance between the vectors.]]></parameter>
           </parameters>
           <platforms>
@@ -444,8 +444,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[The distance between the source vectors squared.]]></returns>
           <remarks><![CDATA[Distance is calculated with the following formula: Distance squared is the value before taking the square root. Distance squared can often be used in place of distance if relative comparisons are being made. For example, consider three points A, B, and C. To determine whether B or C is further from A, compare the distance between A and B to the distance between A and C. Calculating the two distances involves two square roots, which are computationally expensive. However, using distance squared provides the same information and avoids calculating two square roots.]]></remarks>
@@ -463,8 +463,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out float result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The distance between the two vectors squared.]]></parameter>
           </parameters>
           <remarks><![CDATA[Distance is calculated with the formula: Distance squared is the value before taking the square root. Distance squared can often be used in place of distance if relative comparisons are being made. For example, consider three points A, B, and C. To determine whether B or C is further from A, compare the distance between A and B to the distance between A and C. Calculating the two distances involves two square roots, which are computationally expensive. However, using distance squared provides the same information and avoids calculating two square roots.]]></remarks>
@@ -486,7 +486,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          float value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="value2" type="float"><![CDATA[The divisor.]]></parameter>
           </parameters>
           <returns><![CDATA[The source vector divided by b.]]></returns>
@@ -504,9 +504,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="value2" type="float"><![CDATA[The divisor.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the division.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The result of the division.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -522,9 +522,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[The divisor.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the division.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[The divisor.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The result of the division.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -539,8 +539,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Divisor vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Divisor vector.]]></parameter>
           </parameters>
           <returns><![CDATA[The result of dividing the vectors.]]></returns>
           <remarks><![CDATA[Division of a vector by another vector is not mathematically defined. This method simply divides each component of a by the matching component of b .]]></remarks>
@@ -563,8 +563,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out float result
 )]]></syntax>
           <parameters>
-            <parameter name="vector1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="vector2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="vector1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="vector2" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The dot product of the two vectors.]]></parameter>
           </parameters>
           <platforms>
@@ -580,8 +580,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 vector2
 )]]></syntax>
           <parameters>
-            <parameter name="vector1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="vector2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="vector1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="vector2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[The dot product of the two vectors.]]></returns>
           <platforms>
@@ -616,7 +616,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 other
 )]]></syntax>
           <parameters>
-            <parameter name="other" type="Object"><![CDATA[The Vector3 to compare with the current Vector3 .]]></parameter>
+            <parameter name="other" type="Vector3"><![CDATA[The Vector3 to compare with the current Vector3 .]]></parameter>
           </parameters>
           <returns><![CDATA[true if the specified Vector3 is equal to the current Vector3; false otherwise.]]></returns>
           <platforms>
@@ -655,10 +655,10 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          float amount
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source position vector.]]></parameter>
-            <parameter name="tangent1" type="Object"><![CDATA[Source tangent vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source position vector.]]></parameter>
-            <parameter name="tangent2" type="Object"><![CDATA[Source tangent vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source position vector.]]></parameter>
+            <parameter name="tangent1" type="Vector3"><![CDATA[Source tangent vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source position vector.]]></parameter>
+            <parameter name="tangent2" type="Vector3"><![CDATA[Source tangent vector.]]></parameter>
             <parameter name="amount" type="float"><![CDATA[Weighting factor.]]></parameter>
           </parameters>
           <returns><![CDATA[The result of the Hermite spline interpolation.]]></returns>
@@ -679,12 +679,12 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source position vector.]]></parameter>
-            <parameter name="tangent1" type="Object"><![CDATA[Source tangent vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source position vector.]]></parameter>
-            <parameter name="tangent2" type="Object"><![CDATA[Source tangent vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source position vector.]]></parameter>
+            <parameter name="tangent1" type="Vector3"><![CDATA[Source tangent vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source position vector.]]></parameter>
+            <parameter name="tangent2" type="Vector3"><![CDATA[Source tangent vector.]]></parameter>
             <parameter name="amount" type="float"><![CDATA[Weighting factor.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the Hermite spline interpolation.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The result of the Hermite spline interpolation.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -736,10 +736,10 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="amount" type="float"><![CDATA[Value between 0 and 1 indicating the weight of value2 .]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the interpolation.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The result of the interpolation.]]></parameter>
           </parameters>
           <remarks><![CDATA[This method performs the linear interpolation based on the following formula. value1 + (value2 - value1) * amount Passing amount a value of 0 will cause value1 to be returned; a value of 1 will cause value2 to be returned.]]></remarks>
           <platforms>
@@ -756,8 +756,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          float amount
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="amount" type="float"><![CDATA[Value between 0 and 1 indicating the weight of value2 .]]></parameter>
           </parameters>
           <returns><![CDATA[The linear interpolation of the two vectors.]]></returns>
@@ -780,8 +780,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[The maximized vector.]]></returns>
           <platforms>
@@ -798,9 +798,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The maximized vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The maximized vector.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -820,8 +820,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[The minimized vector.]]></returns>
           <platforms>
@@ -838,9 +838,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The minimized vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The minimized vector.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -860,7 +860,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          float scaleFactor
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
           </parameters>
           <returns><![CDATA[Result of the multiplication.]]></returns>
@@ -877,8 +877,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[Result of the multiplication.]]></returns>
           <remarks><![CDATA[Multiplication performed by this method is not vector multiplication (dot product and cross product) but multiplication of the corresponding components of each vector.]]></remarks>
@@ -896,9 +896,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the multiplication.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The result of the multiplication.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -914,9 +914,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the multiplication.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The result of the multiplication.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -935,7 +935,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[Vector pointing in the opposite direction.]]></returns>
           <platforms>
@@ -951,8 +951,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Vector pointing in the opposite direction.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] Vector pointing in the opposite direction.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -971,7 +971,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The source Vector3 .]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[The source Vector3 .]]></parameter>
           </parameters>
           <returns><![CDATA[The created unit vector.]]></returns>
           <platforms>
@@ -996,8 +996,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The normalized vector.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The normalized vector.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1017,8 +1017,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 normal
 )]]></syntax>
           <parameters>
-            <parameter name="vector" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="normal" type="Object"><![CDATA[Normal of the surface.]]></parameter>
+            <parameter name="vector" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="normal" type="Vector3"><![CDATA[Normal of the surface.]]></parameter>
           </parameters>
           <returns><![CDATA[The reflected vector.]]></returns>
           <remarks><![CDATA[Reflect only gives the direction of a reflection off a surface, it does not determine whether the original vector was close enough to the surface to hit it.]]></remarks>
@@ -1036,9 +1036,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="vector" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="normal" type="Object"><![CDATA[Normal of the surface.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The reflected vector.]]></parameter>
+            <parameter name="vector" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="normal" type="Vector3"><![CDATA[Normal of the surface.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The reflected vector.]]></parameter>
           </parameters>
           <remarks><![CDATA[Reflect only gives the direction of a reflection off a surface, it does not determine whether the original vector was close enough to the surface to hit it.]]></remarks>
           <platforms>
@@ -1060,8 +1060,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          float amount
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source value.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source value.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source value.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source value.]]></parameter>
             <parameter name="amount" type="float"><![CDATA[Weighting value.]]></parameter>
           </parameters>
           <returns><![CDATA[Interpolated value.]]></returns>
@@ -1080,10 +1080,10 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="amount" type="float"><![CDATA[Weighting value.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The interpolated value.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The interpolated value.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1104,9 +1104,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the subtraction.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The result of the subtraction.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1121,8 +1121,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[Result of the subtraction.]]></returns>
           <platforms>
@@ -1158,7 +1158,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Matrix matrix
 )]]></syntax>
           <parameters>
-            <parameter name="position" type="Object"><![CDATA[The source vector.]]></parameter>
+            <parameter name="position" type="Vector3"><![CDATA[The source vector.]]></parameter>
             <parameter name="matrix" type="Matrix"><![CDATA[The transformation matrix.]]></parameter>
           </parameters>
           <returns><![CDATA[The transformed vector.]]></returns>
@@ -1175,7 +1175,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Quaternion rotation
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The Vector3 to rotate.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[The Vector3 to rotate.]]></parameter>
             <parameter name="rotation" type="Quaternion"><![CDATA[The Quaternion rotation to apply.]]></parameter>
           </parameters>
           <returns><![CDATA[Returns a new Vector3 that results from the rotation.]]></returns>
@@ -1196,10 +1196,10 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          int length
 )]]></syntax>
           <parameters>
-            <parameter name="sourceArray" type="Object"><![CDATA[The source array.]]></parameter>
+            <parameter name="sourceArray" type="Vector3[]"><![CDATA[The source array.]]></parameter>
             <parameter name="sourceIndex" type="int"><![CDATA[The index in the source array at which to start.]]></parameter>
             <parameter name="matrix" type="Matrix"><![CDATA[The transform Matrix to apply.]]></parameter>
-            <parameter name="destinationArray" type="Object"><![CDATA[The existing destination array.]]></parameter>
+            <parameter name="destinationArray" type="Vector3[]"><![CDATA[The existing destination array.]]></parameter>
             <parameter name="destinationIndex" type="int"><![CDATA[The index in the destination array at which to start.]]></parameter>
             <parameter name="length" type="int"><![CDATA[The number of Vector3 s to transform.]]></parameter>
           </parameters>
@@ -1220,10 +1220,10 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          int length
 )]]></syntax>
           <parameters>
-            <parameter name="sourceArray" type="Object"><![CDATA[The source array.]]></parameter>
+            <parameter name="sourceArray" type="Vector3[]"><![CDATA[The source array.]]></parameter>
             <parameter name="sourceIndex" type="int"><![CDATA[The index in the source array at which to start.]]></parameter>
             <parameter name="rotation" type="Quaternion"><![CDATA[The Quaternion rotation to apply.]]></parameter>
-            <parameter name="destinationArray" type="Object"><![CDATA[The existing destination array.]]></parameter>
+            <parameter name="destinationArray" type="Vector3[]"><![CDATA[The existing destination array.]]></parameter>
             <parameter name="destinationIndex" type="int"><![CDATA[The index in the destination array at which to start.]]></parameter>
             <parameter name="length" type="int"><![CDATA[The number of Vector3 s to transform.]]></parameter>
           </parameters>
@@ -1241,9 +1241,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The Vector3 to rotate.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[The Vector3 to rotate.]]></parameter>
             <parameter name="rotation" type="Quaternion"><![CDATA[The Quaternion rotation to apply.]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] An existing Vector3 filled in with the results of the rotation.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] An existing Vector3 filled in with the results of the rotation.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1259,9 +1259,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="position" type="Object"><![CDATA[The source Vector3 .]]></parameter>
+            <parameter name="position" type="Vector3"><![CDATA[The source Vector3 .]]></parameter>
             <parameter name="matrix" type="Matrix"><![CDATA[The transformation Matrix .]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The transformed vector.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The transformed vector.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1277,9 +1277,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3[] destinationArray
 )]]></syntax>
           <parameters>
-            <parameter name="sourceArray" type="Object"><![CDATA[The source array.]]></parameter>
+            <parameter name="sourceArray" type="Vector3[]"><![CDATA[The source array.]]></parameter>
             <parameter name="rotation" type="Quaternion"><![CDATA[The Quaternion rotation to apply.]]></parameter>
-            <parameter name="destinationArray" type="Object"><![CDATA[An existing destination array into which the transformed Vector3 s are written.]]></parameter>
+            <parameter name="destinationArray" type="Vector3[]"><![CDATA[An existing destination array into which the transformed Vector3 s are written.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1295,9 +1295,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3[] destinationArray
 )]]></syntax>
           <parameters>
-            <parameter name="sourceArray" type="Object"><![CDATA[The source array.]]></parameter>
+            <parameter name="sourceArray" type="Vector3[]"><![CDATA[The source array.]]></parameter>
             <parameter name="matrix" type="Matrix"><![CDATA[The transform Matrix to apply.]]></parameter>
-            <parameter name="destinationArray" type="Object"><![CDATA[An existing destination array into which the transformed Vector3 s are written.]]></parameter>
+            <parameter name="destinationArray" type="Vector3[]"><![CDATA[An existing destination array into which the transformed Vector3 s are written.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1318,9 +1318,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          out Vector3 result
 )]]></syntax>
           <parameters>
-            <parameter name="normal" type="Object"><![CDATA[The source vector.]]></parameter>
+            <parameter name="normal" type="Vector3"><![CDATA[The source vector.]]></parameter>
             <parameter name="matrix" type="Matrix"><![CDATA[The transformation Matrix .]]></parameter>
-            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The Vector3 resulting from the transformation.]]></parameter>
+            <parameter name="result" type="Vector3"><![CDATA[[ OutAttribute ] The Vector3 resulting from the transformation.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1339,10 +1339,10 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          int length
 )]]></syntax>
           <parameters>
-            <parameter name="sourceArray" type="Object"><![CDATA[The source array of Vector3 normals.]]></parameter>
+            <parameter name="sourceArray" type="Vector3[]"><![CDATA[The source array of Vector3 normals.]]></parameter>
             <parameter name="sourceIndex" type="int"><![CDATA[The starting index in the source array.]]></parameter>
             <parameter name="matrix" type="Matrix"><![CDATA[The transform Matrix to apply.]]></parameter>
-            <parameter name="destinationArray" type="Object"><![CDATA[The destination Vector3 array.]]></parameter>
+            <parameter name="destinationArray" type="Vector3[]"><![CDATA[The destination Vector3 array.]]></parameter>
             <parameter name="destinationIndex" type="int"><![CDATA[The starting index in the destination array.]]></parameter>
             <parameter name="length" type="int"><![CDATA[The number of vectors to transform.]]></parameter>
           </parameters>
@@ -1359,7 +1359,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Matrix matrix
 )]]></syntax>
           <parameters>
-            <parameter name="normal" type="Object"><![CDATA[The source vector.]]></parameter>
+            <parameter name="normal" type="Vector3"><![CDATA[The source vector.]]></parameter>
             <parameter name="matrix" type="Matrix"><![CDATA[The transformation matrix.]]></parameter>
           </parameters>
           <returns><![CDATA[The transformed vector normal.]]></returns>
@@ -1377,9 +1377,9 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3[] destinationArray
 )]]></syntax>
           <parameters>
-            <parameter name="sourceArray" type="Object"><![CDATA[The array of Vector3 normals to transform.]]></parameter>
+            <parameter name="sourceArray" type="Vector3[]"><![CDATA[The array of Vector3 normals to transform.]]></parameter>
             <parameter name="matrix" type="Matrix"><![CDATA[The transform matrix to apply.]]></parameter>
-            <parameter name="destinationArray" type="Object"><![CDATA[An existing Vector3 array into which the results of the transforms are written.]]></parameter>
+            <parameter name="destinationArray" type="Vector3[]"><![CDATA[An existing Vector3 array into which the results of the transforms are written.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1399,8 +1399,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[Sum of the vectors.]]></returns>
           <platforms>
@@ -1421,8 +1421,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Divisor vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Divisor vector.]]></parameter>
           </parameters>
           <returns><![CDATA[The result of dividing the vectors.]]></returns>
           <remarks><![CDATA[Division of a vector by another vector is not mathematically defined. This method simply divides each component of a by the matching component of b .]]></remarks>
@@ -1439,7 +1439,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          float divider
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="divider" type="float"><![CDATA[The divisor.]]></parameter>
           </parameters>
           <returns><![CDATA[The source vector divided by div.]]></returns>
@@ -1461,8 +1461,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the vectors are equal; false otherwise.]]></returns>
           <platforms>
@@ -1483,8 +1483,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Vector to compare.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Vector to compare.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Vector to compare.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Vector to compare.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the vectors are not equal; false otherwise.]]></returns>
           <platforms>
@@ -1505,7 +1505,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          float scaleFactor
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[Source vector.]]></parameter>
             <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
           </parameters>
           <returns><![CDATA[Result of the multiplication.]]></returns>
@@ -1522,8 +1522,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[Result of the multiplication.]]></returns>
           <remarks><![CDATA[Multiplication performed by this method is not vector multiplication (dot product and cross product) but multiplication of the corresponding components of each vector.]]></remarks>
@@ -1541,7 +1541,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
 )]]></syntax>
           <parameters>
             <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
-            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[Result of the multiplication.]]></returns>
           <platforms>
@@ -1562,8 +1562,8 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
-            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value1" type="Vector3"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[Result of the subtraction.]]></returns>
           <platforms>
@@ -1583,7 +1583,7 @@ public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
          Vector3 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[Source vector.]]></parameter>
           </parameters>
           <returns><![CDATA[Vector pointing in the opposite direction.]]></returns>
           <platforms>

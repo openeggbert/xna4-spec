@@ -133,9 +133,9 @@
          Matrix projection
 )]]></syntax>
           <parameters>
-            <parameter name="world" type="Matrix"><![CDATA[Type: Matrix A world transformation matrix.]]></parameter>
-            <parameter name="view" type="Matrix"><![CDATA[Type: Matrix A view transformation matrix.]]></parameter>
-            <parameter name="projection" type="Matrix"><![CDATA[Type: Matrix A projection transformation matrix.]]></parameter>
+            <parameter name="world" type="Matrix&lt;"><![CDATA[A world transformation matrix.]]></parameter>
+            <parameter name="view" type="Matrix&lt;"><![CDATA[A view transformation matrix.]]></parameter>
+            <parameter name="projection" type="Matrix&lt;"><![CDATA[A projection transformation matrix.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

@@ -36,7 +36,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </constructor>
-    <constructor signature="GraphicsDevice(GraphicsAdapter, GraphicsProfile, PresentationParameters)">
+    <constructor signature="GraphicsDevice(GraphicsAdapter&lt;, GraphicsProfile&lt;, PresentationParameters&lt;)">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
       <syntax><![CDATA[public GraphicsDevice (
          GraphicsAdapter adapter,
@@ -44,9 +44,9 @@
          PresentationParameters presentationParameters
 )]]></syntax>
       <parameters>
-        <parameter name="adapter" type="GraphicsAdapter"><![CDATA[Type: GraphicsAdapter The display adapter.]]></parameter>
-        <parameter name="graphicsProfile" type="GraphicsProfile"><![CDATA[Type: GraphicsProfile The graphics profile.]]></parameter>
-        <parameter name="presentationParameters" type="PresentationParameters"><![CDATA[Type: PresentationParameters The presentation options.]]></parameter>
+        <parameter name="adapter" type="GraphicsAdapter&lt;"><![CDATA[The display adapter.]]></parameter>
+        <parameter name="graphicsProfile" type="GraphicsProfile&lt;"><![CDATA[The graphics profile.]]></parameter>
+        <parameter name="presentationParameters" type="PresentationParameters&lt;"><![CDATA[The presentation options.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -385,7 +385,7 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="color" type="Color"><![CDATA[Type: Color Set this color value in all buffers.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[Set this color value in all buffers.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -420,10 +420,10 @@
          int stencil
 )]]></syntax>
           <parameters>
-            <parameter name="options" type="ClearOptions"><![CDATA[Type: ClearOptions Options for clearing a buffer.]]></parameter>
-            <parameter name="color" type="Color"><![CDATA[Type: Color Set this color value in the buffer.]]></parameter>
-            <parameter name="depth" type="float"><![CDATA[Type: Single Set this depth value in the buffer.]]></parameter>
-            <parameter name="stencil" type="int"><![CDATA[Type: Int32 Set this stencil value in the buffer.]]></parameter>
+            <parameter name="options" type="ClearOptions&lt;"><![CDATA[Options for clearing a buffer.]]></parameter>
+            <parameter name="color" type="Color&lt;"><![CDATA[Set this color value in the buffer.]]></parameter>
+            <parameter name="depth" type="Single&lt;"><![CDATA[Set this depth value in the buffer.]]></parameter>
+            <parameter name="stencil" type="Int32&lt;"><![CDATA[Set this stencil value in the buffer.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -454,7 +454,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="options" type="ClearOptions"><![CDATA[The surfaces to clear.]]></parameter>
-            <parameter name="color" type="Object"><![CDATA[Color value to which the render target surface is cleared.]]></parameter>
+            <parameter name="color" type="Vector4"><![CDATA[Color value to which the render target surface is cleared.]]></parameter>
             <parameter name="depth" type="float"><![CDATA[New z value that this method stores in the depth buffer. This parameter can be in the range of 0.0 through 1.0 (for z-based or w-based depth buffers). A value of 0.0 represents the nearest distance to the viewer; a value of 1.0 represents the farthest distance.]]></parameter>
             <parameter name="stencil" type="int"><![CDATA[Integer value to store in each stencil-buffer entry. This parameter can be in the range of 0 through 2 n −1, where n is the bit depth of the stencil buffer.]]></parameter>
             <parameter name="regions" type="Rectangle[]"><![CDATA[The regions to clear.]]></parameter>
@@ -475,7 +475,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="options" type="ClearOptions"><![CDATA[The surfaces to clear.]]></parameter>
-            <parameter name="color" type="Object"><![CDATA[Color value to which the render target surface is cleared.]]></parameter>
+            <parameter name="color" type="Vector4"><![CDATA[Color value to which the render target surface is cleared.]]></parameter>
             <parameter name="depth" type="float"><![CDATA[New z value that this method stores in the depth buffer. This parameter can be in the range of 0.0 through 1.0 (for z-based or w-based depth buffers). A value of 0.0 represents the nearest distance to the viewer; a value of 1.0 represents the farthest distance.]]></parameter>
             <parameter name="stencil" type="int"><![CDATA[Integer value to store in each stencil-buffer entry. This parameter can be in the range of 0 through 2 n −1, where n is the bit depth of the stencil buffer.]]></parameter>
           </parameters>
@@ -559,13 +559,13 @@
          int instanceCount
 )]]></syntax>
           <parameters>
-            <parameter name="primitiveType" type="PrimitiveType"><![CDATA[Type: PrimitiveType The primitive type.]]></parameter>
-            <parameter name="baseVertex" type="int"><![CDATA[Type: Int32 Offset to add to each vertex index in the index buffer.]]></parameter>
-            <parameter name="minVertexIndex" type="int"><![CDATA[Type: Int32 Minimum vertex index for vertices used during the call. The parameter and all of the indices in the index stream are relative to the baseVertex parameter.]]></parameter>
-            <parameter name="numVertices" type="int"><![CDATA[Type: Int32 Number of vertices used during the call. The first vertex is located at index: baseVertex + minVertexIndex .]]></parameter>
-            <parameter name="startIndex" type="int"><![CDATA[Type: Int32 Location in the index array at which to start reading vertices.]]></parameter>
-            <parameter name="primitiveCount" type="int"><![CDATA[Type: Int32 Number of primitives to render. The number of vertices used is a function of and primitiveType .]]></parameter>
-            <parameter name="instanceCount" type="int"><![CDATA[Type: Int32 Number of primitives to render.]]></parameter>
+            <parameter name="primitiveType" type="PrimitiveType&lt;"><![CDATA[The primitive type.]]></parameter>
+            <parameter name="baseVertex" type="Int32&lt;"><![CDATA[Offset to add to each vertex index in the index buffer.]]></parameter>
+            <parameter name="minVertexIndex" type="Int32&lt;"><![CDATA[Minimum vertex index for vertices used during the call. The parameter and all of the indices in the index stream are relative to the baseVertex parameter.]]></parameter>
+            <parameter name="numVertices" type="Int32&lt;"><![CDATA[Number of vertices used during the call. The first vertex is located at index: baseVertex + minVertexIndex .]]></parameter>
+            <parameter name="startIndex" type="Int32&lt;"><![CDATA[Location in the index array at which to start reading vertices.]]></parameter>
+            <parameter name="primitiveCount" type="Int32&lt;"><![CDATA[Number of primitives to render. The number of vertices used is a function of and primitiveType .]]></parameter>
+            <parameter name="instanceCount" type="Int32&lt;"><![CDATA[Number of primitives to render.]]></parameter>
           </parameters>
           <remarks><![CDATA[This method provides a mechanism for gathering vertex shader input data from different streams at different frequencies (typically by interpreting one data stream as a per-instance world transform); this approach requires a custom shader to interpret the input data. For more information, see DrawInstancedPrimitives in XNA Game Studio 4.0 .]]></remarks>
           <platforms>
@@ -1365,8 +1365,8 @@
          GraphicsAdapter graphicsAdapter
 )]]></syntax>
           <parameters>
-            <parameter name="presentationParameters" type="PresentationParameters"><![CDATA[Type: PresentationParameters Describes the new presentation parameters. This value cannot be null .]]></parameter>
-            <parameter name="graphicsAdapter" type="GraphicsAdapter"><![CDATA[Type: GraphicsAdapter The graphics device being reset.]]></parameter>
+            <parameter name="presentationParameters" type="PresentationParameters&lt;"><![CDATA[Describes the new presentation parameters. This value cannot be null .]]></parameter>
+            <parameter name="graphicsAdapter" type="GraphicsAdapter&lt;"><![CDATA[The graphics device being reset.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -1383,7 +1383,7 @@
          Texture2D resolveTarget
 )]]></syntax>
           <parameters>
-            <parameter name="resolveTarget" type="Object"><![CDATA[Texture to update with the resolved back buffer. This texture must be created with a usage type of ResourceUsage.ResolveTarget .]]></parameter>
+            <parameter name="resolveTarget" type="Texture2D"><![CDATA[Texture to update with the resolved back buffer. This texture must be created with a usage type of ResourceUsage.ResolveTarget .]]></parameter>
           </parameters>
           <remarks><![CDATA[On Xbox 360, the back buffer is cleared when ResolveBackBuffer is called. Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
           <platforms>
@@ -1399,7 +1399,7 @@
          int backBufferIndex
 )]]></syntax>
           <parameters>
-            <parameter name="resolveTarget" type="Object"><![CDATA[Texture to update with the resolved back buffer. This texture must be created with a usage type of ResourceUsage.ResolveTarget .]]></parameter>
+            <parameter name="resolveTarget" type="Texture2D"><![CDATA[Texture to update with the resolved back buffer. This texture must be created with a usage type of ResourceUsage.ResolveTarget .]]></parameter>
             <parameter name="backBufferIndex" type="int"><![CDATA[Index of the back buffer to resolve.]]></parameter>
           </parameters>
           <remarks><![CDATA[On Xbox 360, the back buffer is cleared when ResolveBackBuffer is called. Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
@@ -1512,7 +1512,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector4[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1544,7 +1544,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector4"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1560,7 +1560,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector3"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector3 containing (1,2,3) will fill the register with (1,2,3,0).]]></remarks>
           <platforms>
@@ -1593,7 +1593,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector2"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector2 containing (1,2) will fill the register with (1,2,0,0).]]></remarks>
           <platforms>
@@ -1626,7 +1626,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector2[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to an array of Vector2 values containing (1,2) and (3,4) will fill register 0 with (1,2,0,0) and register 1 with (3,4,0,0).]]></remarks>
           <platforms>
@@ -1659,7 +1659,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector3[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to an array of Vector3 values containing (1,2,3) and (4,5,6) will fill register 0 with (1,2,3,0) and register 1 with (4,5,6,0).]]></remarks>
           <platforms>
@@ -1681,7 +1681,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="renderTargetIndex" type="int"><![CDATA[Index of the render target. The number of render targets supported by a GraphicsDevice is contained in NumberSimultaneousRenderTargets .]]></parameter>
-            <parameter name="renderTarget" type="Object"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
+            <parameter name="renderTarget" type="RenderTarget2D"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
           </parameters>
           <remarks><![CDATA[Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve. The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. For more information, see CheckDepthStencilMatch . The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
           <platforms>
@@ -1696,7 +1696,7 @@
          RenderTarget2D renderTarget
 )]]></syntax>
           <parameters>
-            <parameter name="renderTarget" type="Object"><![CDATA[Type: RenderTarget2D A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
+            <parameter name="renderTarget" type="RenderTarget2D&lt;"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
           </parameters>
           <remarks><![CDATA[The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
           <platforms>
@@ -1729,8 +1729,8 @@
          CubeMapFace cubeMapFace
 )]]></syntax>
           <parameters>
-            <parameter name="renderTarget" type="RenderTargetCube"><![CDATA[Type: RenderTargetCube A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
-            <parameter name="cubeMapFace" type="CubeMapFace"><![CDATA[Type: CubeMapFace The cube map face type.]]></parameter>
+            <parameter name="renderTarget" type="RenderTargetCube&lt;"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
+            <parameter name="cubeMapFace" type="CubeMapFace&lt;"><![CDATA[The cube map face type.]]></parameter>
           </parameters>
           <remarks><![CDATA[The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
           <platforms>
@@ -1748,7 +1748,7 @@
          params RenderTargetBinding[] renderTargets
 )]]></syntax>
           <parameters>
-            <parameter name="renderTargets" type="params RenderTargetBinding[]"><![CDATA[Type: RenderTargetBinding [ ParamArrayAttribute ] An array of render targets.]]></parameter>
+            <parameter name="renderTargets" type="RenderTargetBinding&lt;"><![CDATA[[ ParamArrayAttribute ] An array of render targets.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -1765,7 +1765,7 @@
          VertexBuffer vertexBuffer
 )]]></syntax>
           <parameters>
-            <parameter name="vertexBuffer" type="VertexBuffer"><![CDATA[Type: VertexBuffer A vertex buffer.]]></parameter>
+            <parameter name="vertexBuffer" type="VertexBuffer&lt;"><![CDATA[A vertex buffer.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -1778,8 +1778,8 @@
          int vertexOffset
 )]]></syntax>
           <parameters>
-            <parameter name="vertexBuffer" type="VertexBuffer"><![CDATA[Type: VertexBuffer A vertex buffer.]]></parameter>
-            <parameter name="vertexOffset" type="int"><![CDATA[Type: Int32 The offset (in vertices) from the beginning of the buffer.]]></parameter>
+            <parameter name="vertexBuffer" type="VertexBuffer&lt;"><![CDATA[A vertex buffer.]]></parameter>
+            <parameter name="vertexOffset" type="Int32&lt;"><![CDATA[The offset (in vertices) from the beginning of the buffer.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -1796,7 +1796,7 @@
          params VertexBufferBinding[] vertexBuffers
 )]]></syntax>
           <parameters>
-            <parameter name="vertexBuffers" type="params VertexBufferBinding[]"><![CDATA[Type: VertexBufferBinding [ ParamArrayAttribute ] An array of vertex buffers.]]></parameter>
+            <parameter name="vertexBuffers" type="VertexBufferBinding&lt;"><![CDATA[[ ParamArrayAttribute ] An array of vertex buffers.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -1815,7 +1815,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector4"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1847,7 +1847,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector3"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector3 of (1,2,3) will fill the register with (1,2,3,0).]]></remarks>
           <platforms>
@@ -1880,7 +1880,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector2"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector2 of of (1,2) will fill the register with (1,2,0,0).]]></remarks>
           <platforms>
@@ -1897,7 +1897,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector4[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1945,7 +1945,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector3[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to to an array of Vector3 values containing (1,2,3) and (4,5,6) will fill register 0 with (1,2,3,0) and register 1 with (4,5,6,0).]]></remarks>
           <platforms>
@@ -2010,7 +2010,7 @@
 )]]></syntax>
           <parameters>
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
-            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+            <parameter name="constantData" type="Vector2[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
           <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to an array of Vector2 values containing (1,2) and (3,4) will fill register 0 with (1,2,0,0) and register 1 with (3,4,0,0).]]></remarks>
           <platforms>

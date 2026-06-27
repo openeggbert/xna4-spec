@@ -90,9 +90,9 @@
          Object asyncState
 )]]></syntax>
           <parameters>
-            <parameter name="gamertag" type="string"><![CDATA[Type: String The Xbox LIVE gamertag for the gamer requested.]]></parameter>
-            <parameter name="callback" type="AsyncCallback"><![CDATA[Type: AsyncCallback The method to call once the asynchronous operation is finished.]]></parameter>
-            <parameter name="asyncState" type="Object"><![CDATA[Type: Object State of the asynchronous operation.]]></parameter>
+            <parameter name="gamertag" type="String&lt;"><![CDATA[The Xbox LIVE gamertag for the gamer requested.]]></parameter>
+            <parameter name="callback" type="AsyncCallback&lt;"><![CDATA[The method to call once the asynchronous operation is finished.]]></parameter>
+            <parameter name="asyncState" type="Object&lt;"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the method. Call EndGetFromGamertag to access these results.]]></returns>
           <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
@@ -113,9 +113,9 @@
          Object asyncState
 )]]></syntax>
           <parameters>
-            <parameter name="audienceUri" type="string"><![CDATA[Type: String URI associated with the service to use with this token. This cannot be null .]]></parameter>
-            <parameter name="callback" type="AsyncCallback"><![CDATA[Type: AsyncCallback Method to call once the asynchronous operation is finished.]]></parameter>
-            <parameter name="asyncState" type="Object"><![CDATA[Type: Object State of the asynchronous operation.]]></parameter>
+            <parameter name="audienceUri" type="String&lt;"><![CDATA[URI associated with the service to use with this token. This cannot be null .]]></parameter>
+            <parameter name="callback" type="AsyncCallback&lt;"><![CDATA[Method to call once the asynchronous operation is finished.]]></parameter>
+            <parameter name="asyncState" type="Object&lt;"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the method. Call EndGetPartnerToken to access these results.]]></returns>
           <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. A partner token contains authentication information that identifies both the application and gamer for communication with Xbox LIVE.]]></remarks>
@@ -203,7 +203,7 @@
          IAsyncResult result
 )]]></syntax>
           <parameters>
-            <parameter name="result" type="IAsyncResult"><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the operation.]]></parameter>
+            <parameter name="result" type="IAsyncResult&lt;"><![CDATA[An IAsyncResult used to track the progress of the operation.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: GamerProfile The profile data for this gamer.]]></returns>
           <platforms>
@@ -221,7 +221,7 @@
          string gamertag
 )]]></syntax>
           <parameters>
-            <parameter name="gamertag" type="string"><![CDATA[Type: String The Xbox LIVE gamertag for the gamer requested.]]></parameter>
+            <parameter name="gamertag" type="String&lt;"><![CDATA[The Xbox LIVE gamertag for the gamer requested.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Gamer A Gamer object for the specified gamertag.]]></returns>
           <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
@@ -240,7 +240,7 @@
          string audienceUri
 )]]></syntax>
           <parameters>
-            <parameter name="audienceUri" type="string"><![CDATA[Type: String URI associated with the service that will be used with this token. This cannot be null .]]></parameter>
+            <parameter name="audienceUri" type="String&lt;"><![CDATA[URI associated with the service that will be used with this token. This cannot be null .]]></parameter>
           </parameters>
           <returns><![CDATA[Type: String The Xbox LIVE partner token for the gamer.]]></returns>
           <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. A partner token contains authentication information that identifies both the application and gamer for communication with Xbox LIVE.]]></remarks>

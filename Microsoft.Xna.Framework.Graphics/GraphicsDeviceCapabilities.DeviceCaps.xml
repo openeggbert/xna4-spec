@@ -14,8 +14,187 @@
   <constructors>
   </constructors>
   <properties>
+    <property name="CanDrawSystemToNonLocal" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports blits from system-memory textures to non-local video-memory textures.]]></summary>
+      <syntax><![CDATA[public bool CanDrawSystemToNonLocal { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CanRenderAfterFlip" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can queue rendering commands after a page flip.]]></summary>
+      <syntax><![CDATA[public bool CanRenderAfterFlip { get; }]]></syntax>
+      <remarks><![CDATA[Applications do not change their behavior if this flag is set; this capability means that the device is relatively fast.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsDirect3D9Driver" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating if the device supports copying the contents of a source rectangle to a destination rectangle using a texture as the source.]]></summary>
+      <syntax><![CDATA[public bool IsDirect3D9Driver { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsDrawPrimitives2" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can support at least a DirectX 5–compliant driver.]]></summary>
+      <syntax><![CDATA[public bool SupportsDrawPrimitives2 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsDrawPrimitives2Ex" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can support at least a DirectX 7–compliant driver.]]></summary>
+      <syntax><![CDATA[public bool SupportsDrawPrimitives2Ex { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsDrawPrimitivesTransformedVertex" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device exports a DrawPrimitives-aware hardware abstraction layer (HAL).]]></summary>
+      <syntax><![CDATA[public bool SupportsDrawPrimitivesTransformedVertex { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsExecuteSystemMemory" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can use execute buffers from video memory.]]></summary>
+      <syntax><![CDATA[public bool SupportsExecuteSystemMemory { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsExecuteVideoMemory" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can use execute buffers from video memory.]]></summary>
+      <syntax><![CDATA[public bool SupportsExecuteVideoMemory { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsHardwareRasterization" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device has hardware acceleration for scene rasterization.]]></summary>
+      <syntax><![CDATA[public bool SupportsHardwareRasterization { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsHardwareTransformAndLight" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can support transformation and lighting in hardware.]]></summary>
+      <syntax><![CDATA[public bool SupportsHardwareTransformAndLight { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsSeparateTextureMemories" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device is texturing from separate memory pools.]]></summary>
+      <syntax><![CDATA[public bool SupportsSeparateTextureMemories { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsStreamOffset" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device supports stream offsets.]]></summary>
+      <syntax><![CDATA[public bool SupportsStreamOffset { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsTextureNonLocalVideoMemory" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can retrieve textures from non-local video memory.]]></summary>
+      <syntax><![CDATA[public bool SupportsTextureNonLocalVideoMemory { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsTextureSystemMemory" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can retrieve textures from system memory.]]></summary>
+      <syntax><![CDATA[public bool SupportsTextureSystemMemory { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsTextureVideoMemory" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can retrieve textures from device memory.]]></summary>
+      <syntax><![CDATA[public bool SupportsTextureVideoMemory { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsTransformedVertexSystemMemory" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can use buffers from system memory for transformed and lit vertices.]]></summary>
+      <syntax><![CDATA[public bool SupportsTransformedVertexSystemMemory { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportsTransformedVertexVideoMemory" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device can use buffers from video memory for transformed and lit vertices.]]></summary>
+      <syntax><![CDATA[public bool SupportsTransformedVertexVideoMemory { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexElementScanSharesStreamOffset" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the device allows multiple vertex elements to share the same offset in a stream.]]></summary>
+      <syntax><![CDATA[public bool VertexElementScanSharesStreamOffset { get; }]]></syntax>
+      <remarks><![CDATA[Multiple vertex elements can share the same offset in a stream if VertexElementScanSharesStreamOffset is true and the vertex declaration does not have an element with VertexElementUsage.PositionTransformed .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
   </properties>
   <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
   </methods>
   <fields>
   </fields>

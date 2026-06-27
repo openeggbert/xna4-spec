@@ -27,8 +27,8 @@ public static void AwardAvatarAssets (
          string[] assetKeys
 )]]></syntax>
           <parameters>
-            <parameter name="gamer" type="SignedInGamer"><![CDATA[Type: SignedInGamer A signed in gamer.]]></parameter>
-            <parameter name="assetKeys" type="string[]"><![CDATA[Type: String Avatar asset keys.]]></parameter>
+            <parameter name="gamer" type="SignedInGamer&lt;"><![CDATA[A signed in gamer.]]></parameter>
+            <parameter name="assetKeys" type="String&lt;"><![CDATA[Avatar asset keys.]]></parameter>
           </parameters>
           <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. This is a blocking call: to query asynchronously, use Begin/EndAwardAvatarAssets instead.]]></remarks>
           <platforms>
@@ -50,10 +50,10 @@ public static IAsyncResult BeginAwardAvatarAssets (
          Object state
 )]]></syntax>
           <parameters>
-            <parameter name="gamer" type="SignedInGamer"><![CDATA[Type: SignedInGamer A signed in gamer.]]></parameter>
-            <parameter name="assetKeys" type="string[]"><![CDATA[Type: String Avatar asset keys.]]></parameter>
-            <parameter name="callback" type="AsyncCallback"><![CDATA[Type: AsyncCallback An AsyncCallback that represents the method called when the operation is complete.]]></parameter>
-            <parameter name="state" type="Object"><![CDATA[Type: Object A user-created object used to uniquely identify the request, or null.]]></parameter>
+            <parameter name="gamer" type="SignedInGamer&lt;"><![CDATA[A signed in gamer.]]></parameter>
+            <parameter name="assetKeys" type="String&lt;"><![CDATA[Avatar asset keys.]]></parameter>
+            <parameter name="callback" type="AsyncCallback&lt;"><![CDATA[An AsyncCallback that represents the method called when the operation is complete.]]></parameter>
+            <parameter name="state" type="Object&lt;"><![CDATA[A user-created object used to uniquely identify the request, or null.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: IAsyncResult The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
           <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
@@ -74,8 +74,8 @@ public static void EndAwardAvatarAssets (
          IAsyncResult result
 )]]></syntax>
           <parameters>
-            <parameter name="gamer" type="SignedInGamer"><![CDATA[Type: SignedInGamer A signed in gamer.]]></parameter>
-            <parameter name="result" type="IAsyncResult"><![CDATA[Type: IAsyncResult The IAsyncResult used to determine when the asynchronous request is finished.]]></parameter>
+            <parameter name="gamer" type="SignedInGamer&lt;"><![CDATA[A signed in gamer.]]></parameter>
+            <parameter name="result" type="IAsyncResult&lt;"><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></parameter>
           </parameters>
           <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
           <platforms>

@@ -51,7 +51,7 @@
          GraphicsDevice device
 )]]></syntax>
       <parameters>
-        <parameter name="device" type="GraphicsDevice"><![CDATA[Type: GraphicsDevice A device.]]></parameter>
+        <parameter name="device" type="GraphicsDevice&lt;"><![CDATA[A device.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -63,7 +63,7 @@
          BasicEffect cloneSource
 )]]></syntax>
       <parameters>
-        <parameter name="cloneSource" type="BasicEffect"><![CDATA[Type: BasicEffect An instance of a object to copy initialization data from.]]></parameter>
+        <parameter name="cloneSource" type="BasicEffect&lt;"><![CDATA[An instance of a object to copy initialization data from.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

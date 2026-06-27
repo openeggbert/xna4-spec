@@ -22,7 +22,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
          Vector4 value
 )]]></syntax>
       <parameters>
-        <parameter name="value" type="Object"><![CDATA[Vector4 with X, Y, and Z components defining the normal of the Plane . The W component defines the distance of the Plane along the normal from the origin.]]></parameter>
+        <parameter name="value" type="Vector4"><![CDATA[Vector4 with X, Y, and Z components defining the normal of the Plane . The W component defines the distance of the Plane along the normal from the origin.]]></parameter>
       </parameters>
       <platforms>
         <platform>Xbox 360</platform>
@@ -58,9 +58,9 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
          Vector3 point3
 )]]></syntax>
       <parameters>
-        <parameter name="point1" type="Object"><![CDATA[One point of a triangle defining the Plane .]]></parameter>
-        <parameter name="point2" type="Object"><![CDATA[One point of a triangle defining the Plane .]]></parameter>
-        <parameter name="point3" type="Object"><![CDATA[One point of a triangle defining the Plane .]]></parameter>
+        <parameter name="point1" type="Vector3"><![CDATA[One point of a triangle defining the Plane .]]></parameter>
+        <parameter name="point2" type="Vector3"><![CDATA[One point of a triangle defining the Plane .]]></parameter>
+        <parameter name="point3" type="Vector3"><![CDATA[One point of a triangle defining the Plane .]]></parameter>
       </parameters>
       <platforms>
         <platform>Xbox 360</platform>
@@ -75,7 +75,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
          float d
 )]]></syntax>
       <parameters>
-        <parameter name="normal" type="Object"><![CDATA[The normal vector to the Plane .]]></parameter>
+        <parameter name="normal" type="Vector3"><![CDATA[The normal vector to the Plane .]]></parameter>
         <parameter name="d" type="float"><![CDATA[The Plane 's distance along its normal from the origin.]]></parameter>
       </parameters>
       <platforms>
@@ -97,7 +97,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
          Vector4 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The Vector4 to multiply this Plane by.]]></parameter>
+            <parameter name="value" type="Vector4"><![CDATA[The Vector4 to multiply this Plane by.]]></parameter>
           </parameters>
           <returns><![CDATA[The dot product of the specified Vector4 and this Plane.]]></returns>
           <platforms>
@@ -113,7 +113,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
          out float result
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The Vector4 to multiply this Plane by.]]></parameter>
+            <parameter name="value" type="Vector4"><![CDATA[The Vector4 to multiply this Plane by.]]></parameter>
             <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The dot product of the specified Vector4 and this Plane .]]></parameter>
           </parameters>
           <platforms>
@@ -134,7 +134,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
          out float result
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The Vector3 to multiply by.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[The Vector3 to multiply by.]]></parameter>
             <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The resulting value.]]></parameter>
           </parameters>
           <platforms>
@@ -149,7 +149,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
          Vector3 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The Vector3 to multiply by.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[The Vector3 to multiply by.]]></parameter>
           </parameters>
           <returns><![CDATA[The resulting value.]]></returns>
           <platforms>
@@ -170,7 +170,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
          out float result
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The Vector3 to multiply by.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[The Vector3 to multiply by.]]></parameter>
             <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The resulting dot product.]]></parameter>
           </parameters>
           <platforms>
@@ -185,7 +185,7 @@ public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
          Vector3 value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Object"><![CDATA[The Vector3 to multiply by.]]></parameter>
+            <parameter name="value" type="Vector3"><![CDATA[The Vector3 to multiply by.]]></parameter>
           </parameters>
           <returns><![CDATA[The resulting dot product.]]></returns>
           <platforms>
