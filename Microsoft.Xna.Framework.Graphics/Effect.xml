@@ -20,8 +20,8 @@
          byte[] effectCode
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The device.]]></parameter>
-        <parameter name="effectCode" type="Byte&lt;"><![CDATA[The effect code.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The device.]]></parameter>
+        <parameter name="effectCode" type="Byte"><![CDATA[The effect code.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -114,7 +114,7 @@
          Effect cloneSource
 )]]></syntax>
       <parameters>
-        <parameter name="cloneSource" type="Effect&lt;"><![CDATA[An object to copy.]]></parameter>
+        <parameter name="cloneSource" type="Effect"><![CDATA[An object to copy.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

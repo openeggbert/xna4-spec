@@ -82,7 +82,7 @@
          Color value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Color&lt;"><![CDATA[Value of a color using Red, Green, Blue, and Alpha values to write.]]></parameter>
+            <parameter name="value" type="Color"><![CDATA[Value of a color using Red, Green, Blue, and Alpha values to write.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>

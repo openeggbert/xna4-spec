@@ -131,7 +131,7 @@
          MaterialContent material
 )]]></syntax>
           <parameters>
-            <parameter name="material" type="MaterialContent&lt;"><![CDATA[The material to be used by the mesh.]]></parameter>
+            <parameter name="material" type="MaterialContent"><![CDATA[The material to be used by the mesh.]]></parameter>
           </parameters>
           <remarks><![CDATA[Sets the material used by the triangle being defined next. This material, in conjunction with SetOpaqueData , determines the GeometryContent object containing the next triangle. MeshBuilder maintains the material value for all future triangles. Therefore, if multiple triangles share the same material, you need only one call to SetMaterial .]]></remarks>
           <platforms>
@@ -151,7 +151,7 @@
          OpaqueDataDictionary opaqueData
 )]]></syntax>
           <parameters>
-            <parameter name="opaqueData" type="OpaqueDataDictionary&lt;"><![CDATA[Opaque data to be applied to the GeometryContent object of the next triangle.]]></parameter>
+            <parameter name="opaqueData" type="OpaqueDataDictionary"><![CDATA[Opaque data to be applied to the GeometryContent object of the next triangle.]]></parameter>
           </parameters>
           <remarks><![CDATA[The opaque data is used in conjunction with the current material (set with a call to SetMaterial ) to determine the GeometryContent object that will contain the next triangle. MeshBuilder maintains the material value for all future triangles. Therefore, if multiple triangles share the same material, you need only one call to SetMaterial . SetOpaqueData can be called only on GeometryContent and MeshContent objects.]]></remarks>
           <platforms>
@@ -172,8 +172,8 @@
          Object channelData
 )]]></syntax>
           <parameters>
-            <parameter name="vertexDataIndex" type="Int32&lt;"><![CDATA[Index of the vertex data channel being set. This should match the index returned by CreateVertexChannel .]]></parameter>
-            <parameter name="channelData" type="Object&lt;"><![CDATA[New data values for the vertex data. The data type being set must match the data type for the vertex channel specified by vertexDataIndex .]]></parameter>
+            <parameter name="vertexDataIndex" type="Int32"><![CDATA[Index of the vertex data channel being set. This should match the index returned by CreateVertexChannel .]]></parameter>
+            <parameter name="channelData" type="Object"><![CDATA[New data values for the vertex data. The data type being set must match the data type for the vertex channel specified by vertexDataIndex .]]></parameter>
           </parameters>
           <remarks><![CDATA[The following table lists the exceptions that can be thrown by this method: Exception Cause KeyNotFoundException If vertexDataIndex does not correspond to an actual vertex data channel created using CreateVertexChannel . InvalidOperationException If the type of channelData does not match the data type for the vertex channel specified by vertexDataIndex .]]></remarks>
           <platforms>

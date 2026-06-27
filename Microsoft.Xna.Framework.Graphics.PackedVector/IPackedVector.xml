@@ -3,10 +3,9 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="IPackedVector" kind="interface"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
-          assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector">
-  <summary><![CDATA[Converts packed vector types to and from Vector4 values.]]></summary>
-  <syntax><![CDATA[public interface IPackedVector&lt;TPacked&gt; : IPackedVector]]></syntax>
+          assembly="Microsoft.Xna.Framework.Graphics.PackedVector">
+  <summary><![CDATA[Interface that converts packed vector types to and from Vector4 values, allowing multiple encodings to be manipulated in a generic way.]]></summary>
+  <syntax><![CDATA[public interface IPackedVector]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

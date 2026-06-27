@@ -3,11 +3,9 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ContentTypeSerializer" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
-          baseClass="ContentTypeSerializer">
-  <summary><![CDATA[Provides a generic implementation of ContentTypeSerializer methods and properties for serializing and deserializing a specific managed type.]]></summary>
-  <syntax><![CDATA[public abstract class ContentTypeSerializer&lt;T&gt; : ContentTypeSerializer]]></syntax>
-  <remarks><![CDATA[This is a generic implementation of ContentTypeSerializer and, therefore, can handle strongly typed content data.]]></remarks>
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate">
+  <summary><![CDATA[Provides methods for serializing and deserializing a specific managed type.]]></summary>
+  <syntax><![CDATA[public abstract class ContentTypeSerializer]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>
@@ -101,9 +99,9 @@
          T existingInstance
 )]]></syntax>
           <parameters>
-            <parameter name="input" type="IntermediateReader&lt;"><![CDATA[Location of the intermediate XML and various deserialization helpers.]]></parameter>
-            <parameter name="format" type="ContentSerializerAttribute&lt;"><![CDATA[Specifies the intermediate source XML format.]]></parameter>
-            <parameter name="existingInstance" type="T&lt;br&gt;"><![CDATA[The strongly typed object containing the received data, or null if the deserializer should construct a new instance.]]></parameter>
+            <parameter name="input" type="IntermediateReader"><![CDATA[Location of the intermediate XML and various deserialization helpers.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[Specifies the intermediate source XML format.]]></parameter>
+            <parameter name="existingInstance" type="T"><![CDATA[The strongly typed object containing the received data, or null if the deserializer should construct a new instance.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: T The object type of the deserialized object.]]></returns>
           <platforms>
@@ -120,9 +118,9 @@
          Object existingInstance
 )]]></syntax>
           <parameters>
-            <parameter name="input" type="IntermediateReader&lt;"><![CDATA[Location of the intermediate XML and various deserialization helpers.]]></parameter>
-            <parameter name="format" type="ContentSerializerAttribute&lt;"><![CDATA[Specifies the intermediate source XML format.]]></parameter>
-            <parameter name="existingInstance" type="Object&lt;"><![CDATA[The object containing the received data, or null if the deserializer should construct a new instance.]]></parameter>
+            <parameter name="input" type="IntermediateReader"><![CDATA[Location of the intermediate XML and various deserialization helpers.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[Specifies the intermediate source XML format.]]></parameter>
+            <parameter name="existingInstance" type="Object"><![CDATA[The object containing the received data, or null if the deserializer should construct a new instance.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Object The object after deserialization.]]></returns>
           <platforms>
@@ -142,7 +140,7 @@
          IntermediateSerializer serializer
 )]]></syntax>
           <parameters>
-            <parameter name="serializer" type="IntermediateSerializer&lt;"><![CDATA[The content serializer.]]></parameter>
+            <parameter name="serializer" type="IntermediateSerializer"><![CDATA[The content serializer.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>
@@ -196,9 +194,9 @@
          Object value
 )]]></syntax>
           <parameters>
-            <parameter name="serializer" type="IntermediateSerializer&lt;"><![CDATA[The content serializer.]]></parameter>
-            <parameter name="callback" type="ChildCallback&lt;"><![CDATA[The method to be called for each examined child.]]></parameter>
-            <parameter name="value" type="Object&lt;"><![CDATA[The object whose children are being scanned.]]></parameter>
+            <parameter name="serializer" type="IntermediateSerializer"><![CDATA[The content serializer.]]></parameter>
+            <parameter name="callback" type="ChildCallback"><![CDATA[The method to be called for each examined child.]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[The object whose children are being scanned.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>
@@ -214,9 +212,9 @@
          T value
 )]]></syntax>
           <parameters>
-            <parameter name="serializer" type="IntermediateSerializer&lt;"><![CDATA[The content serializer.]]></parameter>
-            <parameter name="callback" type="ChildCallback&lt;"><![CDATA[The method to be called for each examined child.]]></parameter>
-            <parameter name="value" type="T&lt;br&gt;"><![CDATA[The strongly typed object whose children are being scanned.]]></parameter>
+            <parameter name="serializer" type="IntermediateSerializer"><![CDATA[The content serializer.]]></parameter>
+            <parameter name="callback" type="ChildCallback"><![CDATA[The method to be called for each examined child.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[The strongly typed object whose children are being scanned.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>
@@ -237,9 +235,9 @@
          ContentSerializerAttribute format
 )]]></syntax>
           <parameters>
-            <parameter name="output" type="IntermediateWriter&lt;"><![CDATA[Specifies the intermediate XML location, and provides various serialization helpers.]]></parameter>
-            <parameter name="value" type="Object&lt;"><![CDATA[The object to be serialized.]]></parameter>
-            <parameter name="format" type="ContentSerializerAttribute&lt;"><![CDATA[Specifies the content format for this object.]]></parameter>
+            <parameter name="output" type="IntermediateWriter"><![CDATA[Specifies the intermediate XML location, and provides various serialization helpers.]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[The object to be serialized.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[Specifies the content format for this object.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>
@@ -255,9 +253,9 @@
          ContentSerializerAttribute format
 )]]></syntax>
           <parameters>
-            <parameter name="output" type="IntermediateWriter&lt;"><![CDATA[Specifies the intermediate XML location, and provides various serialization helpers.]]></parameter>
-            <parameter name="value" type="T&lt;br&gt;"><![CDATA[The strongly typed object to be serialized.]]></parameter>
-            <parameter name="format" type="ContentSerializerAttribute&lt;"><![CDATA[Specifies the content format for this object.]]></parameter>
+            <parameter name="output" type="IntermediateWriter"><![CDATA[Specifies the intermediate XML location, and provides various serialization helpers.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[The strongly typed object to be serialized.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[Specifies the content format for this object.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>

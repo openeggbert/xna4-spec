@@ -23,10 +23,10 @@
          BufferUsage usage
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The graphics device.]]></parameter>
-        <parameter name="vertexDeclaration" type="VertexDeclaration&lt;"><![CDATA[The vertex declaration, which describes per-vertex data.]]></parameter>
-        <parameter name="vertexCount" type="Int32&lt;"><![CDATA[The number of vertices.]]></parameter>
-        <parameter name="usage" type="BufferUsage&lt;"><![CDATA[Behavior options; it is good practice for this to match the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device.]]></parameter>
+        <parameter name="vertexDeclaration" type="VertexDeclaration"><![CDATA[The vertex declaration, which describes per-vertex data.]]></parameter>
+        <parameter name="vertexCount" type="Int32"><![CDATA[The number of vertices.]]></parameter>
+        <parameter name="usage" type="BufferUsage"><![CDATA[Behavior options; it is good practice for this to match the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

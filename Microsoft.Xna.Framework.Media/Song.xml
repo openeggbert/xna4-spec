@@ -208,8 +208,8 @@
          Uri uri
 )]]></syntax>
           <parameters>
-            <parameter name="name" type="String&lt;"><![CDATA[Name of the song.]]></parameter>
-            <parameter name="uri" type="Uri&lt;"><![CDATA[Uri object that represents the URI.]]></parameter>
+            <parameter name="name" type="String"><![CDATA[Name of the song.]]></parameter>
+            <parameter name="uri" type="Uri"><![CDATA[Uri object that represents the URI.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Song Song object that can be used to play the song remotely.]]></returns>
           <platforms>

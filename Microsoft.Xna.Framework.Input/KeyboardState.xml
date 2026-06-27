@@ -12,13 +12,13 @@
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="KeyboardState(Keys&lt;)">
+    <constructor signature="KeyboardState(Keys)">
       <summary><![CDATA[Initializes a new instance of the KeyboardState class.]]></summary>
       <syntax><![CDATA[public KeyboardState (
          params Keys[] keys
 )]]></syntax>
       <parameters>
-        <parameter name="keys" type="Keys&lt;"><![CDATA[Array or parameter list of Keys to initialize as pressed.]]></parameter>
+        <parameter name="keys" type="Keys"><![CDATA[Array or parameter list of Keys to initialize as pressed.]]></parameter>
       </parameters>
       <remarks><![CDATA[Games normally use GetState to get the true keyboard state. This constructor is used instead to simulate keyboard input for passing within the game's own input subsystem.]]></remarks>
       <platforms>

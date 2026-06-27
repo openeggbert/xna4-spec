@@ -393,8 +393,8 @@ public class BoundingFrustum : IEquatable&lt;BoundingFrustum&gt;]]></syntax>
          out Nullable&lt;float&gt; result
 )]]></syntax>
           <parameters>
-            <parameter name="ray" type="Ray&lt;"><![CDATA[The Ray to check for intersection with.]]></parameter>
-            <parameter name="result" type="Nullable&lt;"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingFrustum or null if there is no intersection.]]></parameter>
+            <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
+            <parameter name="result" type="Nullable"><![CDATA[&lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingFrustum or null if there is no intersection.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

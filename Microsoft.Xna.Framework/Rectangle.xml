@@ -284,8 +284,8 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
          Rectangle value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Rectangle&lt;"><![CDATA[The first Rectangle to compare.]]></parameter>
-            <parameter name="value2" type="Rectangle&lt;"><![CDATA[The second Rectangle to compare.]]></parameter>
+            <parameter name="value1" type="Rectangle"><![CDATA[The first Rectangle to compare.]]></parameter>
+            <parameter name="value2" type="Rectangle"><![CDATA[The second Rectangle to compare.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Rectangle The area where the two parameters overlap.]]></returns>
           <remarks><![CDATA[If the two rectangles do not overlap, the resulting Rectangle will be empty.]]></remarks>
@@ -301,9 +301,9 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
          out Rectangle result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Rectangle&lt;"><![CDATA[The first Rectangle to compare.]]></parameter>
-            <parameter name="value2" type="Rectangle&lt;"><![CDATA[The second Rectangle to compare.]]></parameter>
-            <parameter name="result" type="Rectangle&lt;"><![CDATA[[ OutAttribute ] The area where the two first parameters overlap.]]></parameter>
+            <parameter name="value1" type="Rectangle"><![CDATA[The first Rectangle to compare.]]></parameter>
+            <parameter name="value2" type="Rectangle"><![CDATA[The second Rectangle to compare.]]></parameter>
+            <parameter name="result" type="Rectangle"><![CDATA[[ OutAttribute ] The area where the two first parameters overlap.]]></parameter>
           </parameters>
           <remarks><![CDATA[If the two rectangles do not overlap, the resulting Rectangle will be empty.]]></remarks>
           <platforms>
@@ -409,9 +409,9 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
          out Rectangle result
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Rectangle&lt;"><![CDATA[The first Rectangle to contain.]]></parameter>
-            <parameter name="value2" type="Rectangle&lt;"><![CDATA[The second Rectangle to contain.]]></parameter>
-            <parameter name="result" type="Rectangle&lt;"><![CDATA[[ OutAttribute ] The Rectangle that must be the union of the first two rectangles.]]></parameter>
+            <parameter name="value1" type="Rectangle"><![CDATA[The first Rectangle to contain.]]></parameter>
+            <parameter name="value2" type="Rectangle"><![CDATA[The second Rectangle to contain.]]></parameter>
+            <parameter name="result" type="Rectangle"><![CDATA[[ OutAttribute ] The Rectangle that must be the union of the first two rectangles.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -424,8 +424,8 @@ public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
          Rectangle value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="Rectangle&lt;"><![CDATA[The first Rectangle to contain.]]></parameter>
-            <parameter name="value2" type="Rectangle&lt;"><![CDATA[The second Rectangle to contain.]]></parameter>
+            <parameter name="value1" type="Rectangle"><![CDATA[The first Rectangle to contain.]]></parameter>
+            <parameter name="value2" type="Rectangle"><![CDATA[The second Rectangle to contain.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Rectangle The union of the two Rectangle parameters.]]></returns>
           <platforms>

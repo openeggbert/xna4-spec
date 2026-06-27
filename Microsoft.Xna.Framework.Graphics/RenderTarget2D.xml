@@ -22,9 +22,9 @@
          int height
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The graphics device to associate with this render target resource.]]></parameter>
-        <parameter name="width" type="Int32&lt;"><![CDATA[Width, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferWidth to get the current screen width.]]></parameter>
-        <parameter name="height" type="Int32&lt;"><![CDATA[Height, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferHeight to get the current screen height.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to associate with this render target resource.]]></parameter>
+        <parameter name="width" type="Int32"><![CDATA[Width, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferWidth to get the current screen width.]]></parameter>
+        <parameter name="height" type="Int32"><![CDATA[Height, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferHeight to get the current screen height.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -41,12 +41,12 @@
          DepthFormat preferredDepthFormat
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The graphics device to associate with this render target resource.]]></parameter>
-        <parameter name="width" type="Int32&lt;"><![CDATA[Width, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferWidth to get the current screen width.]]></parameter>
-        <parameter name="height" type="Int32&lt;"><![CDATA[Height, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferHeight to get the current screen height.]]></parameter>
-        <parameter name="mipMap" type="Boolean&lt;"><![CDATA[[ MarshalAsAttribute (U1)] True to enable a full mipmap chain to be generated, false otherwise.]]></parameter>
-        <parameter name="preferredFormat" type="SurfaceFormat&lt;"><![CDATA[Preferred format for the surface data. This is the format preferred by the application, which may or may not be available from the hardware.]]></parameter>
-        <parameter name="preferredDepthFormat" type="DepthFormat&lt;"><![CDATA[Preferred format for the depth buffer. This is the format preferred by the application, which may or may not be available from the hardware.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to associate with this render target resource.]]></parameter>
+        <parameter name="width" type="Int32"><![CDATA[Width, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferWidth to get the current screen width.]]></parameter>
+        <parameter name="height" type="Int32"><![CDATA[Height, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferHeight to get the current screen height.]]></parameter>
+        <parameter name="mipMap" type="Boolean"><![CDATA[[ MarshalAsAttribute (U1)] True to enable a full mipmap chain to be generated, false otherwise.]]></parameter>
+        <parameter name="preferredFormat" type="SurfaceFormat"><![CDATA[Preferred format for the surface data. This is the format preferred by the application, which may or may not be available from the hardware.]]></parameter>
+        <parameter name="preferredDepthFormat" type="DepthFormat"><![CDATA[Preferred format for the depth buffer. This is the format preferred by the application, which may or may not be available from the hardware.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -115,14 +115,14 @@
          RenderTargetUsage usage
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The graphics device to associate with this render target resource.]]></parameter>
-        <parameter name="width" type="Int32&lt;"><![CDATA[Width, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferWidth to get the current screen width.]]></parameter>
-        <parameter name="height" type="Int32&lt;"><![CDATA[Height, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferHeight to get the current screen height.]]></parameter>
-        <parameter name="mipMap" type="Boolean&lt;"><![CDATA[[ MarshalAsAttribute (U1)] True to enable a full mipmap chain to be generated, false otherwise.]]></parameter>
-        <parameter name="preferredFormat" type="SurfaceFormat&lt;"><![CDATA[Preferred format for the surface data. This is the format preferred by the application, which may or may not be available from the hardware.]]></parameter>
-        <parameter name="preferredDepthFormat" type="DepthFormat&lt;"><![CDATA[Preferred format for the depth buffer. This is the format preferred by the application, which may or may not be available from the hardware.]]></parameter>
-        <parameter name="preferredMultiSampleCount" type="Int32&lt;"><![CDATA[The preferred number of multisample locations.]]></parameter>
-        <parameter name="usage" type="RenderTargetUsage&lt;"><![CDATA[Behavior options.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to associate with this render target resource.]]></parameter>
+        <parameter name="width" type="Int32"><![CDATA[Width, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferWidth to get the current screen width.]]></parameter>
+        <parameter name="height" type="Int32"><![CDATA[Height, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferHeight to get the current screen height.]]></parameter>
+        <parameter name="mipMap" type="Boolean"><![CDATA[[ MarshalAsAttribute (U1)] True to enable a full mipmap chain to be generated, false otherwise.]]></parameter>
+        <parameter name="preferredFormat" type="SurfaceFormat"><![CDATA[Preferred format for the surface data. This is the format preferred by the application, which may or may not be available from the hardware.]]></parameter>
+        <parameter name="preferredDepthFormat" type="DepthFormat"><![CDATA[Preferred format for the depth buffer. This is the format preferred by the application, which may or may not be available from the hardware.]]></parameter>
+        <parameter name="preferredMultiSampleCount" type="Int32"><![CDATA[The preferred number of multisample locations.]]></parameter>
+        <parameter name="usage" type="RenderTargetUsage"><![CDATA[Behavior options.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

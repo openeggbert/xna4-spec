@@ -22,10 +22,10 @@
          BufferUsage usage
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The GraphicsDevice object to associate with the index buffer.]]></parameter>
-        <parameter name="indexElementSize" type="IndexElementSize&lt;"><![CDATA[The size (in bits) of each index.]]></parameter>
-        <parameter name="indexCount" type="Int32&lt;"><![CDATA[The number of indices.]]></parameter>
-        <parameter name="usage" type="BufferUsage&lt;"><![CDATA[Behavior options.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice object to associate with the index buffer.]]></parameter>
+        <parameter name="indexElementSize" type="IndexElementSize"><![CDATA[The size (in bits) of each index.]]></parameter>
+        <parameter name="indexCount" type="Int32"><![CDATA[The number of indices.]]></parameter>
+        <parameter name="usage" type="BufferUsage"><![CDATA[Behavior options.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -104,10 +104,10 @@
          BufferUsage usage
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The GraphicsDevice object to associate with the index buffer.]]></parameter>
-        <parameter name="indexType" type="Type&lt;"><![CDATA[The index value type.]]></parameter>
-        <parameter name="indexCount" type="Int32&lt;"><![CDATA[The number of indices.]]></parameter>
-        <parameter name="usage" type="BufferUsage&lt;"><![CDATA[Behavior options.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice object to associate with the index buffer.]]></parameter>
+        <parameter name="indexType" type="Type"><![CDATA[The index value type.]]></parameter>
+        <parameter name="indexCount" type="Int32"><![CDATA[The number of indices.]]></parameter>
+        <parameter name="usage" type="BufferUsage"><![CDATA[Behavior options.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

@@ -23,10 +23,10 @@
          BufferUsage usage
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The associated graphics device.]]></parameter>
-        <parameter name="indexElementSize" type="IndexElementSize&lt;"><![CDATA[Size of each index element.]]></parameter>
-        <parameter name="indexCount" type="Int32&lt;"><![CDATA[Number of indices in the buffer.]]></parameter>
-        <parameter name="usage" type="BufferUsage&lt;"><![CDATA[Behavior options.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The associated graphics device.]]></parameter>
+        <parameter name="indexElementSize" type="IndexElementSize"><![CDATA[Size of each index element.]]></parameter>
+        <parameter name="indexCount" type="Int32"><![CDATA[Number of indices in the buffer.]]></parameter>
+        <parameter name="usage" type="BufferUsage"><![CDATA[Behavior options.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

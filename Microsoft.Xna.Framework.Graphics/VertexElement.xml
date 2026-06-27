@@ -38,7 +38,7 @@ public struct VertexElement]]></syntax>
         <platform>Windows Vista</platform>
       </platforms>
     </constructor>
-    <constructor signature="VertexElement(Int32&lt;, VertexElementFormat&lt;, VertexElementUsage&lt;, Int32&lt;)">
+    <constructor signature="VertexElement(Int32, VertexElementFormat, VertexElementUsage, Int32)">
       <summary><![CDATA[Initializes a new instance of the VertexElement class.]]></summary>
       <syntax><![CDATA[public VertexElement (
          int offset,
@@ -47,10 +47,10 @@ public struct VertexElement]]></syntax>
          int usageIndex
 )]]></syntax>
       <parameters>
-        <parameter name="offset" type="Int32&lt;"><![CDATA[Offset (if any) from the beginning of the stream to the beginning of the vertex data.]]></parameter>
-        <parameter name="elementFormat" type="VertexElementFormat&lt;"><![CDATA[One of several predefined types that define the vertex data size.]]></parameter>
-        <parameter name="elementUsage" type="VertexElementUsage&lt;"><![CDATA[The intended use of the vertex data.]]></parameter>
-        <parameter name="usageIndex" type="Int32&lt;"><![CDATA[Modifies the usage data to allow the user to specify multiple usage types.]]></parameter>
+        <parameter name="offset" type="Int32"><![CDATA[Offset (if any) from the beginning of the stream to the beginning of the vertex data.]]></parameter>
+        <parameter name="elementFormat" type="VertexElementFormat"><![CDATA[One of several predefined types that define the vertex data size.]]></parameter>
+        <parameter name="elementUsage" type="VertexElementUsage"><![CDATA[The intended use of the vertex data.]]></parameter>
+        <parameter name="usageIndex" type="Int32"><![CDATA[Modifies the usage data to allow the user to specify multiple usage types.]]></parameter>
       </parameters>
       <remarks><![CDATA[Vertex data is defined using an array of VertexElement structures.]]></remarks>
       <platforms>

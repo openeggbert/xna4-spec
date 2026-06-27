@@ -22,8 +22,8 @@
          Exception innerException
 )]]></syntax>
       <parameters>
-        <parameter name="message" type="String&lt;"><![CDATA[A message that describes the error.]]></parameter>
-        <parameter name="innerException" type="Exception&lt;"><![CDATA[The inner exception related to this exception.]]></parameter>
+        <parameter name="message" type="String"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="innerException" type="Exception"><![CDATA[The inner exception related to this exception.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -35,7 +35,7 @@
          string message
 )]]></syntax>
       <parameters>
-        <parameter name="message" type="String&lt;"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="message" type="String"><![CDATA[A message that describes the error.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -48,8 +48,8 @@
          StreamingContext context
 )]]></syntax>
       <parameters>
-        <parameter name="info" type="SerializationInfo&lt;"><![CDATA[Describes the network data being sent or received when the exception occurred.]]></parameter>
-        <parameter name="context" type="StreamingContext&lt;"><![CDATA[Describes the stream where the exception occurred.]]></parameter>
+        <parameter name="info" type="SerializationInfo"><![CDATA[Describes the network data being sent or received when the exception occurred.]]></parameter>
+        <parameter name="context" type="StreamingContext"><![CDATA[Describes the stream where the exception occurred.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows 7</platform>

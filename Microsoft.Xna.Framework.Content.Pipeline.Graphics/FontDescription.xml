@@ -41,11 +41,11 @@
          bool useKerning
 )]]></syntax>
       <parameters>
-        <parameter name="fontName" type="String&lt;"><![CDATA[The name of the font, such as Times New Roman .]]></parameter>
-        <parameter name="size" type="Single&lt;"><![CDATA[The size, in points, of the font.]]></parameter>
-        <parameter name="spacing" type="Single&lt;"><![CDATA[The amount of space, in pixels, to insert between letters in a string.]]></parameter>
-        <parameter name="fontStyle" type="FontDescriptionStyle&lt;"><![CDATA[The font style for the font.]]></parameter>
-        <parameter name="useKerning" type="Boolean&lt;"><![CDATA[true if kerning information is used when drawing characters; false otherwise.]]></parameter>
+        <parameter name="fontName" type="String"><![CDATA[The name of the font, such as Times New Roman .]]></parameter>
+        <parameter name="size" type="Single"><![CDATA[The size, in points, of the font.]]></parameter>
+        <parameter name="spacing" type="Single"><![CDATA[The amount of space, in pixels, to insert between letters in a string.]]></parameter>
+        <parameter name="fontStyle" type="FontDescriptionStyle"><![CDATA[The font style for the font.]]></parameter>
+        <parameter name="useKerning" type="Boolean"><![CDATA[true if kerning information is used when drawing characters; false otherwise.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows 7</platform>

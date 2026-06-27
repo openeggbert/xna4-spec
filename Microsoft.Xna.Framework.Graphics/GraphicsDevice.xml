@@ -36,7 +36,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </constructor>
-    <constructor signature="GraphicsDevice(GraphicsAdapter&lt;, GraphicsProfile&lt;, PresentationParameters&lt;)">
+    <constructor signature="GraphicsDevice(GraphicsAdapter, GraphicsProfile, PresentationParameters)">
       <summary><![CDATA[Creates an instance of this object.]]></summary>
       <syntax><![CDATA[public GraphicsDevice (
          GraphicsAdapter adapter,
@@ -44,9 +44,9 @@
          PresentationParameters presentationParameters
 )]]></syntax>
       <parameters>
-        <parameter name="adapter" type="GraphicsAdapter&lt;"><![CDATA[The display adapter.]]></parameter>
-        <parameter name="graphicsProfile" type="GraphicsProfile&lt;"><![CDATA[The graphics profile.]]></parameter>
-        <parameter name="presentationParameters" type="PresentationParameters&lt;"><![CDATA[The presentation options.]]></parameter>
+        <parameter name="adapter" type="GraphicsAdapter"><![CDATA[The display adapter.]]></parameter>
+        <parameter name="graphicsProfile" type="GraphicsProfile"><![CDATA[The graphics profile.]]></parameter>
+        <parameter name="presentationParameters" type="PresentationParameters"><![CDATA[The presentation options.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -385,7 +385,7 @@
          Color color
 )]]></syntax>
           <parameters>
-            <parameter name="color" type="Color&lt;"><![CDATA[Set this color value in all buffers.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[Set this color value in all buffers.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -420,10 +420,10 @@
          int stencil
 )]]></syntax>
           <parameters>
-            <parameter name="options" type="ClearOptions&lt;"><![CDATA[Options for clearing a buffer.]]></parameter>
-            <parameter name="color" type="Color&lt;"><![CDATA[Set this color value in the buffer.]]></parameter>
-            <parameter name="depth" type="Single&lt;"><![CDATA[Set this depth value in the buffer.]]></parameter>
-            <parameter name="stencil" type="Int32&lt;"><![CDATA[Set this stencil value in the buffer.]]></parameter>
+            <parameter name="options" type="ClearOptions"><![CDATA[Options for clearing a buffer.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[Set this color value in the buffer.]]></parameter>
+            <parameter name="depth" type="Single"><![CDATA[Set this depth value in the buffer.]]></parameter>
+            <parameter name="stencil" type="Int32"><![CDATA[Set this stencil value in the buffer.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -559,13 +559,13 @@
          int instanceCount
 )]]></syntax>
           <parameters>
-            <parameter name="primitiveType" type="PrimitiveType&lt;"><![CDATA[The primitive type.]]></parameter>
-            <parameter name="baseVertex" type="Int32&lt;"><![CDATA[Offset to add to each vertex index in the index buffer.]]></parameter>
-            <parameter name="minVertexIndex" type="Int32&lt;"><![CDATA[Minimum vertex index for vertices used during the call. The parameter and all of the indices in the index stream are relative to the baseVertex parameter.]]></parameter>
-            <parameter name="numVertices" type="Int32&lt;"><![CDATA[Number of vertices used during the call. The first vertex is located at index: baseVertex + minVertexIndex .]]></parameter>
-            <parameter name="startIndex" type="Int32&lt;"><![CDATA[Location in the index array at which to start reading vertices.]]></parameter>
-            <parameter name="primitiveCount" type="Int32&lt;"><![CDATA[Number of primitives to render. The number of vertices used is a function of and primitiveType .]]></parameter>
-            <parameter name="instanceCount" type="Int32&lt;"><![CDATA[Number of primitives to render.]]></parameter>
+            <parameter name="primitiveType" type="PrimitiveType"><![CDATA[The primitive type.]]></parameter>
+            <parameter name="baseVertex" type="Int32"><![CDATA[Offset to add to each vertex index in the index buffer.]]></parameter>
+            <parameter name="minVertexIndex" type="Int32"><![CDATA[Minimum vertex index for vertices used during the call. The parameter and all of the indices in the index stream are relative to the baseVertex parameter.]]></parameter>
+            <parameter name="numVertices" type="Int32"><![CDATA[Number of vertices used during the call. The first vertex is located at index: baseVertex + minVertexIndex .]]></parameter>
+            <parameter name="startIndex" type="Int32"><![CDATA[Location in the index array at which to start reading vertices.]]></parameter>
+            <parameter name="primitiveCount" type="Int32"><![CDATA[Number of primitives to render. The number of vertices used is a function of and primitiveType .]]></parameter>
+            <parameter name="instanceCount" type="Int32"><![CDATA[Number of primitives to render.]]></parameter>
           </parameters>
           <remarks><![CDATA[This method provides a mechanism for gathering vertex shader input data from different streams at different frequencies (typically by interpreting one data stream as a per-instance world transform); this approach requires a custom shader to interpret the input data. For more information, see DrawInstancedPrimitives in XNA Game Studio 4.0 .]]></remarks>
           <platforms>
@@ -1365,8 +1365,8 @@
          GraphicsAdapter graphicsAdapter
 )]]></syntax>
           <parameters>
-            <parameter name="presentationParameters" type="PresentationParameters&lt;"><![CDATA[Describes the new presentation parameters. This value cannot be null .]]></parameter>
-            <parameter name="graphicsAdapter" type="GraphicsAdapter&lt;"><![CDATA[The graphics device being reset.]]></parameter>
+            <parameter name="presentationParameters" type="PresentationParameters"><![CDATA[Describes the new presentation parameters. This value cannot be null .]]></parameter>
+            <parameter name="graphicsAdapter" type="GraphicsAdapter"><![CDATA[The graphics device being reset.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -1696,7 +1696,7 @@
          RenderTarget2D renderTarget
 )]]></syntax>
           <parameters>
-            <parameter name="renderTarget" type="RenderTarget2D&lt;"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
+            <parameter name="renderTarget" type="RenderTarget2D"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
           </parameters>
           <remarks><![CDATA[The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
           <platforms>
@@ -1729,8 +1729,8 @@
          CubeMapFace cubeMapFace
 )]]></syntax>
           <parameters>
-            <parameter name="renderTarget" type="RenderTargetCube&lt;"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
-            <parameter name="cubeMapFace" type="CubeMapFace&lt;"><![CDATA[The cube map face type.]]></parameter>
+            <parameter name="renderTarget" type="RenderTargetCube"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
+            <parameter name="cubeMapFace" type="CubeMapFace"><![CDATA[The cube map face type.]]></parameter>
           </parameters>
           <remarks><![CDATA[The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
           <platforms>
@@ -1748,7 +1748,7 @@
          params RenderTargetBinding[] renderTargets
 )]]></syntax>
           <parameters>
-            <parameter name="renderTargets" type="RenderTargetBinding&lt;"><![CDATA[[ ParamArrayAttribute ] An array of render targets.]]></parameter>
+            <parameter name="renderTargets" type="RenderTargetBinding"><![CDATA[[ ParamArrayAttribute ] An array of render targets.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -1765,7 +1765,7 @@
          VertexBuffer vertexBuffer
 )]]></syntax>
           <parameters>
-            <parameter name="vertexBuffer" type="VertexBuffer&lt;"><![CDATA[A vertex buffer.]]></parameter>
+            <parameter name="vertexBuffer" type="VertexBuffer"><![CDATA[A vertex buffer.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -1778,8 +1778,8 @@
          int vertexOffset
 )]]></syntax>
           <parameters>
-            <parameter name="vertexBuffer" type="VertexBuffer&lt;"><![CDATA[A vertex buffer.]]></parameter>
-            <parameter name="vertexOffset" type="Int32&lt;"><![CDATA[The offset (in vertices) from the beginning of the buffer.]]></parameter>
+            <parameter name="vertexBuffer" type="VertexBuffer"><![CDATA[A vertex buffer.]]></parameter>
+            <parameter name="vertexOffset" type="Int32"><![CDATA[The offset (in vertices) from the beginning of the buffer.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -1796,7 +1796,7 @@
          params VertexBufferBinding[] vertexBuffers
 )]]></syntax>
           <parameters>
-            <parameter name="vertexBuffers" type="VertexBufferBinding&lt;"><![CDATA[[ ParamArrayAttribute ] An array of vertex buffers.]]></parameter>
+            <parameter name="vertexBuffers" type="VertexBufferBinding"><![CDATA[[ ParamArrayAttribute ] An array of vertex buffers.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

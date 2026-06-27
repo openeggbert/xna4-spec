@@ -443,7 +443,7 @@
          Exception exception
 )]]></syntax>
           <parameters>
-            <parameter name="exception" type="Exception&lt;"><![CDATA[The exception to display.]]></parameter>
+            <parameter name="exception" type="Exception"><![CDATA[The exception to display.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if an error was displayed, otherwise false.]]></returns>
           <remarks><![CDATA[Games are not expected to call this method directly. This method will be called automatically if the game throws an unhandled exception of type NoSuitableGraphicsDeviceException or NoAudioHardwareException . You may override this method to add messages for additional exception types, or to provide localized versions of the error message text.]]></remarks>

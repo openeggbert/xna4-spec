@@ -121,7 +121,7 @@
          string filename
 )]]></syntax>
           <parameters>
-            <parameter name="filename" type="String&lt;"><![CDATA[The name of the file.]]></parameter>
+            <parameter name="filename" type="String"><![CDATA[The name of the file.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows 7</platform>

@@ -155,7 +155,7 @@
          Video video
 )]]></syntax>
           <parameters>
-            <parameter name="video" type="Video&lt;"><![CDATA[Video to play.]]></parameter>
+            <parameter name="video" type="Video"><![CDATA[Video to play.]]></parameter>
           </parameters>
           <remarks><![CDATA[After calling Play , call GetTexture to get the current frame of video.]]></remarks>
           <platforms>

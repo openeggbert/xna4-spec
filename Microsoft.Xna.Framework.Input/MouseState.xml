@@ -12,7 +12,7 @@ public struct MouseState]]></syntax>
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="MouseState(Int32&lt;, Int32&lt;, Int32&lt;, ButtonState&lt;, ButtonState&lt;, ButtonState&lt;, ButtonState&lt;, ButtonState&lt;)">
+    <constructor signature="MouseState(Int32, Int32, Int32, ButtonState, ButtonState, ButtonState, ButtonState, ButtonState)">
       <summary><![CDATA[Initializes a new instance of the MouseState class.]]></summary>
       <syntax><![CDATA[public MouseState (
          int x,
@@ -25,14 +25,14 @@ public struct MouseState]]></syntax>
          ButtonState xButton2
 )]]></syntax>
       <parameters>
-        <parameter name="x" type="Int32&lt;"><![CDATA[Horizontal mouse position.]]></parameter>
-        <parameter name="y" type="Int32&lt;"><![CDATA[Vertical mouse position.]]></parameter>
-        <parameter name="scrollWheel" type="Int32&lt;"><![CDATA[Mouse scroll wheel value.]]></parameter>
-        <parameter name="leftButton" type="ButtonState&lt;"><![CDATA[Left mouse button state.]]></parameter>
-        <parameter name="middleButton" type="ButtonState&lt;"><![CDATA[Middle mouse button state.]]></parameter>
-        <parameter name="rightButton" type="ButtonState&lt;"><![CDATA[Right mouse button state.]]></parameter>
-        <parameter name="xButton1" type="ButtonState&lt;"><![CDATA[XBUTTON1 state.]]></parameter>
-        <parameter name="xButton2" type="ButtonState&lt;"><![CDATA[XBUTTON2 state.]]></parameter>
+        <parameter name="x" type="Int32"><![CDATA[Horizontal mouse position.]]></parameter>
+        <parameter name="y" type="Int32"><![CDATA[Vertical mouse position.]]></parameter>
+        <parameter name="scrollWheel" type="Int32"><![CDATA[Mouse scroll wheel value.]]></parameter>
+        <parameter name="leftButton" type="ButtonState"><![CDATA[Left mouse button state.]]></parameter>
+        <parameter name="middleButton" type="ButtonState"><![CDATA[Middle mouse button state.]]></parameter>
+        <parameter name="rightButton" type="ButtonState"><![CDATA[Right mouse button state.]]></parameter>
+        <parameter name="xButton1" type="ButtonState"><![CDATA[XBUTTON1 state.]]></parameter>
+        <parameter name="xButton2" type="ButtonState"><![CDATA[XBUTTON2 state.]]></parameter>
       </parameters>
       <remarks><![CDATA[Games normally use GetState to get the true mouse state. This constructor is used instead to simulate mouse input for passing within the game's own input subsystem.]]></remarks>
       <platforms>

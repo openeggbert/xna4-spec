@@ -54,9 +54,9 @@
          Object state
 )]]></syntax>
           <parameters>
-            <parameter name="displayName" type="String&lt;"><![CDATA[A constant human-readable string that names the file.]]></parameter>
-            <parameter name="callback" type="AsyncCallback&lt;"><![CDATA[An AsyncCallback that represents the method called when the operation is complete.]]></parameter>
-            <parameter name="state" type="Object&lt;"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
+            <parameter name="displayName" type="String"><![CDATA[A constant human-readable string that names the file.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[An AsyncCallback that represents the method called when the operation is complete.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
           </parameters>
           <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
           <remarks><![CDATA[After the container is opened, changes to the files within the container are cached until the container is disposed. For this reason, only one container per profile can be opened concurrently on the same device. If the storage device is removed or the Xbox 360 console is powered down before the container is disposed, any changes are lost. Call the Dispose method to dispose a StorageContainer .]]></remarks>
@@ -82,11 +82,11 @@
          Object state
 )]]></syntax>
           <parameters>
-            <parameter name="player" type="PlayerIndex&lt;"><![CDATA[The PlayerIndex that represents the player who requested the save operation. On Windows, the only valid option is PlayerIndex.One .]]></parameter>
-            <parameter name="sizeInBytes" type="Int32&lt;"><![CDATA[The size, in bytes, of the data to write to the storage device.]]></parameter>
-            <parameter name="directoryCount" type="Int32&lt;"><![CDATA[The number of directories to write to the storage device.]]></parameter>
-            <parameter name="callback" type="AsyncCallback&lt;"><![CDATA[An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
-            <parameter name="state" type="Object&lt;"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
+            <parameter name="player" type="PlayerIndex"><![CDATA[The PlayerIndex that represents the player who requested the save operation. On Windows, the only valid option is PlayerIndex.One .]]></parameter>
+            <parameter name="sizeInBytes" type="Int32"><![CDATA[The size, in bytes, of the data to write to the storage device.]]></parameter>
+            <parameter name="directoryCount" type="Int32"><![CDATA[The number of directories to write to the storage device.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
           </parameters>
           <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
           <platforms>
@@ -103,8 +103,8 @@
          Object state
 )]]></syntax>
           <parameters>
-            <parameter name="callback" type="AsyncCallback&lt;"><![CDATA[An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
-            <parameter name="state" type="Object&lt;"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
           </parameters>
           <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
           <platforms>
@@ -122,9 +122,9 @@
          Object state
 )]]></syntax>
           <parameters>
-            <parameter name="player" type="PlayerIndex&lt;"><![CDATA[The PlayerIndex that represents the player who requested the save operation. On Windows, the only valid option is PlayerIndex.One .]]></parameter>
-            <parameter name="callback" type="AsyncCallback&lt;"><![CDATA[An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
-            <parameter name="state" type="Object&lt;"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
+            <parameter name="player" type="PlayerIndex"><![CDATA[The PlayerIndex that represents the player who requested the save operation. On Windows, the only valid option is PlayerIndex.One .]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
           </parameters>
           <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
           <platforms>
@@ -143,10 +143,10 @@
          Object state
 )]]></syntax>
           <parameters>
-            <parameter name="sizeInBytes" type="Int32&lt;"><![CDATA[The size, in bytes, of data to write to the storage device.]]></parameter>
-            <parameter name="directoryCount" type="Int32&lt;"><![CDATA[The number of directories to write to the storage device.]]></parameter>
-            <parameter name="callback" type="AsyncCallback&lt;"><![CDATA[An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
-            <parameter name="state" type="Object&lt;"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
+            <parameter name="sizeInBytes" type="Int32"><![CDATA[The size, in bytes, of data to write to the storage device.]]></parameter>
+            <parameter name="directoryCount" type="Int32"><![CDATA[The number of directories to write to the storage device.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
           </parameters>
           <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
           <platforms>
@@ -210,7 +210,7 @@
          string titleName
 )]]></syntax>
           <parameters>
-            <parameter name="titleName" type="String&lt;"><![CDATA[The name of the storage container to delete.]]></parameter>
+            <parameter name="titleName" type="String"><![CDATA[The name of the storage container to delete.]]></parameter>
           </parameters>
           <remarks><![CDATA[The string passed to titleName must be the same string used with StorageDevice.BeginOpenContainer . Usually a storage container is closed with StorageContainer.Dispose so that it can be re-opened with its data intact. Use DeleteContainer only when you want to delete the data permanently or when you determine the storage container has been corrupted. See the What Is Storage? for more information about using storage containers in your title.]]></remarks>
           <platforms>
@@ -231,7 +231,7 @@
          IAsyncResult result
 )]]></syntax>
           <parameters>
-            <parameter name="result" type="IAsyncResult&lt;"><![CDATA[The IAsyncResult returned from BeginOpenContainer .]]></parameter>
+            <parameter name="result" type="IAsyncResult"><![CDATA[The IAsyncResult returned from BeginOpenContainer .]]></parameter>
           </parameters>
           <returns><![CDATA[A StorageContainer containing any files for the title.]]></returns>
           <platforms>
@@ -252,7 +252,7 @@
          IAsyncResult result
 )]]></syntax>
           <parameters>
-            <parameter name="result" type="IAsyncResult&lt;"><![CDATA[The IAsyncResult returned from BeginShowSelector .]]></parameter>
+            <parameter name="result" type="IAsyncResult"><![CDATA[The IAsyncResult returned from BeginShowSelector .]]></parameter>
           </parameters>
           <returns><![CDATA[Returns the storage device selected by the gamer, or null if the user cancelled the selection.]]></returns>
           <platforms>

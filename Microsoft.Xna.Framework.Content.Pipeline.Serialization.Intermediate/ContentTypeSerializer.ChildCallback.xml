@@ -13,14 +13,8 @@
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>
   </platforms>
-  <constructors>
-  </constructors>
-  <properties>
-  </properties>
-  <methods>
-  </methods>
-  <fields>
-  </fields>
-  <events>
-  </events>
+  <parameters>
+    <parameter name="typeSerializer" type="ContentTypeSerializer"><![CDATA[The serializer component used to read or write the child object.]]></parameter>
+    <parameter name="value" type="Object"><![CDATA[The child object currently being scanned.]]></parameter>
+  </parameters>
 </xna-type>

@@ -102,7 +102,7 @@
          string achievementKey
 )]]></syntax>
           <parameters>
-            <parameter name="achievementKey" type="String&lt;"><![CDATA[Identifier specifying the achievement to award.]]></parameter>
+            <parameter name="achievementKey" type="String"><![CDATA[Identifier specifying the achievement to award.]]></parameter>
           </parameters>
           <remarks><![CDATA[Important This function is deprecated: use the asynchronous method BeginAwardAchievement to award an achievement, which also provides result information.]]></remarks>
           <platforms>
@@ -148,8 +148,8 @@
          Object asyncState
 )]]></syntax>
           <parameters>
-            <parameter name="callback" type="AsyncCallback&lt;"><![CDATA[The method to be called once the asynchronous operation is finished.]]></parameter>
-            <parameter name="asyncState" type="Object&lt;"><![CDATA[State of the asynchronous operation.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[The method to be called once the asynchronous operation is finished.]]></parameter>
+            <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the method. Call EndGetAchievements to access these results.]]></returns>
           <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
@@ -267,7 +267,7 @@
          Microphone microphone
 )]]></syntax>
           <parameters>
-            <parameter name="microphone" type="Microphone&lt;"><![CDATA[The microphone to check against this signed-in gamer.]]></parameter>
+            <parameter name="microphone" type="Microphone"><![CDATA[The microphone to check against this signed-in gamer.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if the microphone is associated with this signed-in gamer; false otherwise.]]></returns>
           <platforms>

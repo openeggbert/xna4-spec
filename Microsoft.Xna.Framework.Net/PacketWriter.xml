@@ -117,7 +117,7 @@
          Color value
 )]]></syntax>
           <parameters>
-            <parameter name="value" type="Color&lt;"><![CDATA[Value to be written.]]></parameter>
+            <parameter name="value" type="Color"><![CDATA[Value to be written.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>

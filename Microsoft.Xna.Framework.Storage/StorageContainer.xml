@@ -84,7 +84,7 @@
          string directory
 )]]></syntax>
           <parameters>
-            <parameter name="directory" type="String&lt;"><![CDATA[The relative path of the directory to delete within the StorageContainer scope.]]></parameter>
+            <parameter name="directory" type="String"><![CDATA[The relative path of the directory to delete within the StorageContainer scope.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -104,7 +104,7 @@
          string file
 )]]></syntax>
           <parameters>
-            <parameter name="file" type="String&lt;"><![CDATA[The relative path of the file to be created in the StorageContainer .]]></parameter>
+            <parameter name="file" type="String"><![CDATA[The relative path of the file to be created in the StorageContainer .]]></parameter>
           </parameters>
           <returns><![CDATA[A new file with read/write access.]]></returns>
           <platforms>
@@ -139,7 +139,7 @@
          string directory
 )]]></syntax>
           <parameters>
-            <parameter name="directory" type="String&lt;"><![CDATA[The relative path of the directory to delete within the StorageContainer scope.]]></parameter>
+            <parameter name="directory" type="String"><![CDATA[The relative path of the directory to delete within the StorageContainer scope.]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -159,7 +159,7 @@
          string file
 )]]></syntax>
           <parameters>
-            <parameter name="file" type="String&lt;"><![CDATA[The relative path of the file to delete within the StorageContainer .]]></parameter>
+            <parameter name="file" type="String"><![CDATA[The relative path of the file to delete within the StorageContainer .]]></parameter>
           </parameters>
           <platforms>
             <platform>Xbox 360</platform>
@@ -179,7 +179,7 @@
          string directory
 )]]></syntax>
           <parameters>
-            <parameter name="directory" type="String&lt;"><![CDATA[The path to test.]]></parameter>
+            <parameter name="directory" type="String"><![CDATA[The path to test.]]></parameter>
           </parameters>
           <returns><![CDATA[true if path refers to an existing directory in the StorageContainer and is not null; otherwise, false.]]></returns>
           <platforms>
@@ -215,7 +215,7 @@
          string file
 )]]></syntax>
           <parameters>
-            <parameter name="file" type="String&lt;"><![CDATA[The path and file name to test.]]></parameter>
+            <parameter name="file" type="String"><![CDATA[The path and file name to test.]]></parameter>
           </parameters>
           <returns><![CDATA[true if path refers to an existing file in the StorageContainer and is not null; otherwise, false.]]></returns>
           <platforms>
@@ -263,7 +263,7 @@
          string searchPattern
 )]]></syntax>
           <parameters>
-            <parameter name="searchPattern" type="String&lt;"><![CDATA[A search pattern. Both single-character ("?") and multicharacter ("*") wildcards are supported.]]></parameter>
+            <parameter name="searchPattern" type="String"><![CDATA[A search pattern. Both single-character ("?") and multicharacter ("*") wildcards are supported.]]></parameter>
           </parameters>
           <returns><![CDATA[An array of relative paths of directories in the root of the StorageContainer. A zero-length array specifies that there are no directories in the root.]]></returns>
           <platforms>
@@ -284,7 +284,7 @@
          string searchPattern
 )]]></syntax>
           <parameters>
-            <parameter name="searchPattern" type="String&lt;"><![CDATA[A search pattern. Both single-character ("?") and multicharacter ("*") wildcards are supported.]]></parameter>
+            <parameter name="searchPattern" type="String"><![CDATA[A search pattern. Both single-character ("?") and multicharacter ("*") wildcards are supported.]]></parameter>
           </parameters>
           <returns><![CDATA[An array of relative paths of files in the the root directory of StorageContainer scope that match searchPattern. A zero-length array specifies that there are no files that match.]]></returns>
           <remarks><![CDATA[GetFileNames applies only to the root directory of the StorageContainer . It does not examine any subdirectories.]]></remarks>
@@ -320,9 +320,9 @@
          FileAccess fileAccess
 )]]></syntax>
           <parameters>
-            <parameter name="file" type="String&lt;"><![CDATA[Relative path of the file within the StorageContainer .]]></parameter>
-            <parameter name="fileMode" type="FileMode&lt;"><![CDATA[One of the enumeration values that specifies how to open the file.]]></parameter>
-            <parameter name="fileAccess" type="FileAccess&lt;"><![CDATA[One of the enumeration values that specifies whether the file is opened with read, write, or read/write access.]]></parameter>
+            <parameter name="file" type="String"><![CDATA[Relative path of the file within the StorageContainer .]]></parameter>
+            <parameter name="fileMode" type="FileMode"><![CDATA[One of the enumeration values that specifies how to open the file.]]></parameter>
+            <parameter name="fileAccess" type="FileAccess"><![CDATA[One of the enumeration values that specifies whether the file is opened with read, write, or read/write access.]]></parameter>
           </parameters>
           <returns><![CDATA[An unshared file opened in the designated mode with the specified access.]]></returns>
           <platforms>
@@ -339,8 +339,8 @@
          FileMode fileMode
 )]]></syntax>
           <parameters>
-            <parameter name="file" type="String&lt;"><![CDATA[Relative path of the file within the StorageContainer .]]></parameter>
-            <parameter name="fileMode" type="FileMode&lt;"><![CDATA[One of the enumeration values that specifies how to open the file.]]></parameter>
+            <parameter name="file" type="String"><![CDATA[Relative path of the file within the StorageContainer .]]></parameter>
+            <parameter name="fileMode" type="FileMode"><![CDATA[One of the enumeration values that specifies how to open the file.]]></parameter>
           </parameters>
           <returns><![CDATA[An unshared file with read/write access that is opened in the specified mode.]]></returns>
           <platforms>
@@ -359,10 +359,10 @@
          FileShare fileShare
 )]]></syntax>
           <parameters>
-            <parameter name="file" type="String&lt;"><![CDATA[Relative path of the file within the StorageContainer .]]></parameter>
-            <parameter name="fileMode" type="FileMode&lt;"><![CDATA[One of the enumeration values that specifies how to open the file.]]></parameter>
-            <parameter name="fileAccess" type="FileAccess&lt;"><![CDATA[One of the enumeration values that specifies whether the file is opened with read, write, or read/write access.]]></parameter>
-            <parameter name="fileShare" type="FileShare&lt;"><![CDATA[A bitwise combination of enumeration values that specify the type of access other Stream objects have to this file.]]></parameter>
+            <parameter name="file" type="String"><![CDATA[Relative path of the file within the StorageContainer .]]></parameter>
+            <parameter name="fileMode" type="FileMode"><![CDATA[One of the enumeration values that specifies how to open the file.]]></parameter>
+            <parameter name="fileAccess" type="FileAccess"><![CDATA[One of the enumeration values that specifies whether the file is opened with read, write, or read/write access.]]></parameter>
+            <parameter name="fileShare" type="FileShare"><![CDATA[A bitwise combination of enumeration values that specify the type of access other Stream objects have to this file.]]></parameter>
           </parameters>
           <returns><![CDATA[A file opened in the designated mode with the specified access and sharing options.]]></returns>
           <platforms>

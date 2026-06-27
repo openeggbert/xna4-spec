@@ -13,7 +13,7 @@ public struct VertexPositionColorTexture]]></syntax>
     <platform>Windows Vista</platform>
   </platforms>
   <constructors>
-    <constructor signature="VertexPositionColorTexture(Vector3&lt;, Color&lt;, Vector2&lt;)">
+    <constructor signature="VertexPositionColorTexture(Vector3, Color, Vector2)">
       <summary><![CDATA[Initializes a new instance of the VertexPositionColorTexture class.]]></summary>
       <syntax><![CDATA[public VertexPositionColorTexture (
          Vector3 position,
@@ -21,9 +21,9 @@ public struct VertexPositionColorTexture]]></syntax>
          Vector2 textureCoordinate
 )]]></syntax>
       <parameters>
-        <parameter name="position" type="Vector3&lt;"><![CDATA[Position of the vertex.]]></parameter>
-        <parameter name="color" type="Color&lt;"><![CDATA[Color of the vertex.]]></parameter>
-        <parameter name="textureCoordinate" type="Vector2&lt;"><![CDATA[Texture coordinate of the vertex.]]></parameter>
+        <parameter name="position" type="Vector3"><![CDATA[Position of the vertex.]]></parameter>
+        <parameter name="color" type="Color"><![CDATA[Color of the vertex.]]></parameter>
+        <parameter name="textureCoordinate" type="Vector2"><![CDATA[Texture coordinate of the vertex.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

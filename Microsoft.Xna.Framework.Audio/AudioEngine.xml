@@ -40,9 +40,9 @@
          string rendererId
 )]]></syntax>
       <parameters>
-        <parameter name="settingsFile" type="String&lt;"><![CDATA[Path to a global settings file.]]></parameter>
-        <parameter name="lookAheadTime" type="TimeSpan&lt;"><![CDATA[Interactive audio and branch event look-ahead time, in milliseconds.]]></parameter>
-        <parameter name="rendererId" type="String&lt;"><![CDATA[A string that specifies the audio renderer to use.]]></parameter>
+        <parameter name="settingsFile" type="String"><![CDATA[Path to a global settings file.]]></parameter>
+        <parameter name="lookAheadTime" type="TimeSpan"><![CDATA[Interactive audio and branch event look-ahead time, in milliseconds.]]></parameter>
+        <parameter name="rendererId" type="String"><![CDATA[A string that specifies the audio renderer to use.]]></parameter>
       </parameters>
       <remarks><![CDATA[The lookAheadTime parameter specifies how far ahead the audio engine will look when determining when to transition to another sound. For sounds linked to Play events that use a wave variation list, this parameter should be set to greater than 250 milliseconds. Doing so should give the audio engine enough time to prepare streamed data before it is needed for the loop iteration.]]></remarks>
       <platforms>

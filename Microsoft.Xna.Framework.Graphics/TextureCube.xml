@@ -37,7 +37,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </constructor>
-    <constructor signature="TextureCube(GraphicsDevice&lt;, Int32&lt;, Boolean&lt;, SurfaceFormat&lt;)">
+    <constructor signature="TextureCube(GraphicsDevice, Int32, Boolean, SurfaceFormat)">
       <summary><![CDATA[Creates a new instance of this object.]]></summary>
       <syntax><![CDATA[public TextureCube (
          GraphicsDevice graphicsDevice,
@@ -46,10 +46,10 @@
          SurfaceFormat format
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The device.]]></parameter>
-        <parameter name="size" type="Int32&lt;"><![CDATA[The size (in pixels) of the top-level faces of the cube texture. Subsequent levels of each face will be the truncated value of half of the previous level's pixel dimension (independently). Each dimension is clamped to a minimum of 1 pixel.]]></parameter>
-        <parameter name="mipMap" type="Boolean&lt;"><![CDATA[[ MarshalAsAttribute (U1)] True to generate a full mipmap chain, false otherwise.]]></parameter>
-        <parameter name="format" type="SurfaceFormat&lt;"><![CDATA[Surface data format.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The device.]]></parameter>
+        <parameter name="size" type="Int32"><![CDATA[The size (in pixels) of the top-level faces of the cube texture. Subsequent levels of each face will be the truncated value of half of the previous level's pixel dimension (independently). Each dimension is clamped to a minimum of 1 pixel.]]></parameter>
+        <parameter name="mipMap" type="Boolean"><![CDATA[[ MarshalAsAttribute (U1)] True to generate a full mipmap chain, false otherwise.]]></parameter>
+        <parameter name="format" type="SurfaceFormat"><![CDATA[Surface data format.]]></parameter>
       </parameters>
       <remarks><![CDATA[To initialize the resource from an existing file, use ContentManager.Load .]]></remarks>
       <platforms>

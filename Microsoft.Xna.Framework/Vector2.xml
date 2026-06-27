@@ -896,9 +896,9 @@ public struct Vector2 : IEquatable&lt;Vector2&gt;]]></syntax>
          out Vector2 result
 )]]></syntax>
           <parameters>
-            <parameter name="vector" type="Vector2&lt;"><![CDATA[Source vector.]]></parameter>
-            <parameter name="normal" type="Vector2&lt;"><![CDATA[Normal of vector .]]></parameter>
-            <parameter name="result" type="Vector2&lt;"><![CDATA[[ OutAttribute ] The created reflect vector.]]></parameter>
+            <parameter name="vector" type="Vector2"><![CDATA[Source vector.]]></parameter>
+            <parameter name="normal" type="Vector2"><![CDATA[Normal of vector .]]></parameter>
+            <parameter name="result" type="Vector2"><![CDATA[[ OutAttribute ] The created reflect vector.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -911,8 +911,8 @@ public struct Vector2 : IEquatable&lt;Vector2&gt;]]></syntax>
          Vector2 normal
 )]]></syntax>
           <parameters>
-            <parameter name="vector" type="Vector2&lt;"><![CDATA[Source vector.]]></parameter>
-            <parameter name="normal" type="Vector2&lt;"><![CDATA[Normal of vector .]]></parameter>
+            <parameter name="vector" type="Vector2"><![CDATA[Source vector.]]></parameter>
+            <parameter name="normal" type="Vector2"><![CDATA[Normal of vector .]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Vector2 Resulting reflect vector.]]></returns>
           <platforms>

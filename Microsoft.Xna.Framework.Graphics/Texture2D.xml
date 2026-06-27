@@ -47,9 +47,9 @@
          int height
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The device.]]></parameter>
-        <parameter name="width" type="Int32&lt;"><![CDATA[Texture width.]]></parameter>
-        <parameter name="height" type="Int32&lt;"><![CDATA[Texture height.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The device.]]></parameter>
+        <parameter name="width" type="Int32"><![CDATA[Texture width.]]></parameter>
+        <parameter name="height" type="Int32"><![CDATA[Texture height.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -92,11 +92,11 @@
          SurfaceFormat format
 )]]></syntax>
       <parameters>
-        <parameter name="graphicsDevice" type="GraphicsDevice&lt;"><![CDATA[The device.]]></parameter>
-        <parameter name="width" type="Int32&lt;"><![CDATA[Texture width.]]></parameter>
-        <parameter name="height" type="Int32&lt;"><![CDATA[Texture height.]]></parameter>
-        <parameter name="mipMap" type="Boolean&lt;"><![CDATA[[ MarshalAsAttribute (U1)] True to generate a full mipmap chain; false otherwise.]]></parameter>
-        <parameter name="format" type="SurfaceFormat&lt;"><![CDATA[Texture data format.]]></parameter>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The device.]]></parameter>
+        <parameter name="width" type="Int32"><![CDATA[Texture width.]]></parameter>
+        <parameter name="height" type="Int32"><![CDATA[Texture height.]]></parameter>
+        <parameter name="mipMap" type="Boolean"><![CDATA[[ MarshalAsAttribute (U1)] True to generate a full mipmap chain; false otherwise.]]></parameter>
+        <parameter name="format" type="SurfaceFormat"><![CDATA[Texture data format.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>
@@ -429,9 +429,9 @@
          int height
 )]]></syntax>
           <parameters>
-            <parameter name="stream" type="Stream&lt;"><![CDATA[Data stream number.]]></parameter>
-            <parameter name="width" type="Int32&lt;"><![CDATA[Image width.]]></parameter>
-            <parameter name="height" type="Int32&lt;"><![CDATA[Image height.]]></parameter>
+            <parameter name="stream" type="Stream"><![CDATA[Data stream number.]]></parameter>
+            <parameter name="width" type="Int32"><![CDATA[Image width.]]></parameter>
+            <parameter name="height" type="Int32"><![CDATA[Image height.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -450,9 +450,9 @@
          int height
 )]]></syntax>
           <parameters>
-            <parameter name="stream" type="Stream&lt;"><![CDATA[Data stream number.]]></parameter>
-            <parameter name="width" type="Int32&lt;"><![CDATA[Image width.]]></parameter>
-            <parameter name="height" type="Int32&lt;"><![CDATA[Image height.]]></parameter>
+            <parameter name="stream" type="Stream"><![CDATA[Data stream number.]]></parameter>
+            <parameter name="width" type="Int32"><![CDATA[Image width.]]></parameter>
+            <parameter name="height" type="Int32"><![CDATA[Image height.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>

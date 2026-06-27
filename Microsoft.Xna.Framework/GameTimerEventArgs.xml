@@ -25,8 +25,8 @@
          TimeSpan elapsedTime
 )]]></syntax>
       <parameters>
-        <parameter name="totalTime" type="TimeSpan&lt;"><![CDATA[Total time since the start of the game.]]></parameter>
-        <parameter name="elapsedTime" type="TimeSpan&lt;"><![CDATA[Time since the last update.]]></parameter>
+        <parameter name="totalTime" type="TimeSpan"><![CDATA[Total time since the start of the game.]]></parameter>
+        <parameter name="elapsedTime" type="TimeSpan"><![CDATA[Time since the last update.]]></parameter>
       </parameters>
       <platforms>
         <platform>Windows Phone</platform>

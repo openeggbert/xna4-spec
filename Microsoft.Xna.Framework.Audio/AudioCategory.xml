@@ -34,7 +34,7 @@
          AudioCategory other
 )]]></syntax>
           <parameters>
-            <parameter name="other" type="AudioCategory&lt;"><![CDATA[AudioCategory to compare with this instance.]]></parameter>
+            <parameter name="other" type="AudioCategory"><![CDATA[AudioCategory to compare with this instance.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if the objects are equal; false otherwise.]]></returns>
           <platforms>
@@ -47,7 +47,7 @@
          Object obj
 )]]></syntax>
           <parameters>
-            <parameter name="obj" type="Object&lt;"><![CDATA[Object to compare with this instance.]]></parameter>
+            <parameter name="obj" type="Object"><![CDATA[Object to compare with this instance.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if the objects are equal; false otherwise.]]></returns>
           <platforms>
@@ -164,8 +164,8 @@
          AudioCategory value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="AudioCategory&lt;"><![CDATA[Object to the left of the equality operator.]]></parameter>
-            <parameter name="value2" type="AudioCategory&lt;"><![CDATA[Object to the right of the equality operator.]]></parameter>
+            <parameter name="value1" type="AudioCategory"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="value2" type="AudioCategory"><![CDATA[Object to the right of the equality operator.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if the objects are equal; false otherwise.]]></returns>
           <platforms>
@@ -184,8 +184,8 @@
          AudioCategory value2
 )]]></syntax>
           <parameters>
-            <parameter name="value1" type="AudioCategory&lt;"><![CDATA[Object to the left of the inequality operator.]]></parameter>
-            <parameter name="value2" type="AudioCategory&lt;"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+            <parameter name="value1" type="AudioCategory"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="value2" type="AudioCategory"><![CDATA[Object to the right of the inequality operator.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Boolean true if the objects are not equal; false otherwise.]]></returns>
           <platforms>

@@ -22,11 +22,11 @@
          params Buttons[] buttons
 )]]></syntax>
       <parameters>
-        <parameter name="leftThumbStick" type="Vector2&lt;"><![CDATA[Left stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
-        <parameter name="rightThumbStick" type="Vector2&lt;"><![CDATA[Right stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
-        <parameter name="leftTrigger" type="Single&lt;"><![CDATA[Left trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
-        <parameter name="rightTrigger" type="Single&lt;"><![CDATA[Right trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
-        <parameter name="buttons" type="Buttons&lt;"><![CDATA[Array or parameter list of Buttons to initialize as pressed.]]></parameter>
+        <parameter name="leftThumbStick" type="Vector2"><![CDATA[Left stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
+        <parameter name="rightThumbStick" type="Vector2"><![CDATA[Right stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
+        <parameter name="leftTrigger" type="Single"><![CDATA[Left trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
+        <parameter name="rightTrigger" type="Single"><![CDATA[Right trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
+        <parameter name="buttons" type="Buttons"><![CDATA[Array or parameter list of Buttons to initialize as pressed.]]></parameter>
       </parameters>
       <remarks><![CDATA[Games normally use GetState to get the true gamepad state. This constructor is used instead to simulate gamepad input for passing within the game's own input subsystem.]]></remarks>
       <platforms>
@@ -42,10 +42,10 @@
          GamePadDPad dPad
 )]]></syntax>
       <parameters>
-        <parameter name="thumbSticks" type="GamePadThumbSticks&lt;"><![CDATA[Initial thumbstick state.]]></parameter>
-        <parameter name="triggers" type="GamePadTriggers&lt;"><![CDATA[Initial trigger state.]]></parameter>
-        <parameter name="buttons" type="GamePadButtons&lt;"><![CDATA[Initial button state.]]></parameter>
-        <parameter name="dPad" type="GamePadDPad&lt;"><![CDATA[Initial directional pad state.]]></parameter>
+        <parameter name="thumbSticks" type="GamePadThumbSticks"><![CDATA[Initial thumbstick state.]]></parameter>
+        <parameter name="triggers" type="GamePadTriggers"><![CDATA[Initial trigger state.]]></parameter>
+        <parameter name="buttons" type="GamePadButtons"><![CDATA[Initial button state.]]></parameter>
+        <parameter name="dPad" type="GamePadDPad"><![CDATA[Initial directional pad state.]]></parameter>
       </parameters>
       <remarks><![CDATA[Games normally use GetState to get the true gamepad state. This constructor is used instead to simulate gamepad input for passing within the game's own input subsystem. Thumbstick state is different from the state indicated by the GamePadButtons.LeftStick Property or the GamePadButtons.RightStick Property . Thumbstick state refers to the position of the thumbstick, while the LeftStick or RightStick properties indicate if the stick is "clicked" in.]]></remarks>
       <platforms>

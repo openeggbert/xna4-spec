@@ -3,10 +3,9 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ContentTypeReader" kind="class"
           namespace="Microsoft.Xna.Framework.Content"
-          assembly="Microsoft.Xna.Framework.Content"
-          baseClass="ContentTypeReader">
-  <summary><![CDATA[Worker for reading a specific managed type from a binary format. Derive from this class to add new data types to the content pipeline system.]]></summary>
-  <syntax><![CDATA[public abstract class ContentTypeReader&lt;T&gt; : ContentTypeReader]]></syntax>
+          assembly="Microsoft.Xna.Framework.Content">
+  <summary><![CDATA[Worker for reading a specific managed type from a binary format.]]></summary>
+  <syntax><![CDATA[public abstract class ContentTypeReader]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>
@@ -78,7 +77,7 @@
          ContentTypeReaderManager manager
 )]]></syntax>
           <parameters>
-            <parameter name="manager" type="ContentTypeReaderManager&lt;"><![CDATA[The content manager.]]></parameter>
+            <parameter name="manager" type="ContentTypeReaderManager"><![CDATA[The content manager.]]></parameter>
           </parameters>
           <platforms>
             <platform>Windows Phone</platform>
@@ -96,8 +95,8 @@
          T existingInstance
 )]]></syntax>
           <parameters>
-            <parameter name="input" type="ContentReader&lt;"><![CDATA[The ContentReader used to read the object.]]></parameter>
-            <parameter name="existingInstance" type="T&lt;br&gt;"><![CDATA[An existing object to read into.]]></parameter>
+            <parameter name="input" type="ContentReader"><![CDATA[The ContentReader used to read the object.]]></parameter>
+            <parameter name="existingInstance" type="T"><![CDATA[An existing object to read into.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: T The type of object to read.]]></returns>
           <platforms>
@@ -111,8 +110,8 @@
          Object existingInstance
 )]]></syntax>
           <parameters>
-            <parameter name="input" type="ContentReader&lt;"><![CDATA[The ContentReader used to read the object.]]></parameter>
-            <parameter name="existingInstance" type="Object&lt;"><![CDATA[An existing object to read into.]]></parameter>
+            <parameter name="input" type="ContentReader"><![CDATA[The ContentReader used to read the object.]]></parameter>
+            <parameter name="existingInstance" type="Object"><![CDATA[An existing object to read into.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Object The object that was read.]]></returns>
           <platforms>
