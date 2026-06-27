@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="DisplayMode" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Describes the display mode.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public struct DisplayMode]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="AspectRatio" type="float" access="get">
+      <summary><![CDATA[Gets the aspect ratio used by the graphics device.]]></summary>
+      <syntax><![CDATA[public float AspectRatio { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Format" type="SurfaceFormat" access="get">
+      <summary><![CDATA[Gets a value indicating the surface format of the display mode.]]></summary>
+      <syntax><![CDATA[public SurfaceFormat Format { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Height" type="int" access="get">
+      <summary><![CDATA[Gets a value indicating the screen height, in pixels.]]></summary>
+      <syntax><![CDATA[public int Height { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RefreshRate" type="int" access="get">
+      <summary><![CDATA[Gets a value indicating the refresh rate. The value of 0 indicates an adapter default.]]></summary>
+      <syntax><![CDATA[public int RefreshRate { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TitleSafeArea" type="Rectangle" access="get">
+      <summary><![CDATA[Returns the title safe area of the display.]]></summary>
+      <syntax><![CDATA[public Rectangle TitleSafeArea { get; }]]></syntax>
+      <remarks><![CDATA[On television sets, text should not be displayed at the outer edges of the screen because it may not be visible to the user. The title safe area is the part of the screen where text should be displayed.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Width" type="int" access="get">
+      <summary><![CDATA[Gets a value indicating the screen width, in pixels.]]></summary>
+      <syntax><![CDATA[public int Width { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current DisplayMode .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         DisplayMode left,
+         DisplayMode right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="DisplayMode"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="DisplayMode"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         DisplayMode left,
+         DisplayMode right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="DisplayMode"><![CDATA[The object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="DisplayMode"><![CDATA[The object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

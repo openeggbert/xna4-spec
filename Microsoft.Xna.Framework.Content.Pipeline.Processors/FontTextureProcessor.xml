@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="FontTextureProcessor" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          baseClass="ContentProcessor&amp;lt;Texture2DContent"
+          interfaces="SpriteFontContent&amp;gt;">
+  <summary><![CDATA[Provides methods to convert a specially marked 2D bitmap into SpriteFontContent.]]></summary>
+  <syntax><![CDATA[[ContentProcessorAttribute]
+public class FontTextureProcessor : ContentProcessor&lt;Texture2DContent, SpriteFontContent&gt;]]></syntax>
+  <remarks><![CDATA[The FontTextureProcessor class transforms a specially formatted bitmap-font texture into a SpriteFontContent object that can be loaded at run time as a standard SpriteFont object. You can create a bitmap-font texture in the appropriate format using almost any raster drawing program. Place all the characters of the font in order on the bitmap as follows: Each character should be arranged on the bitmap in a grid ordered from upper left to lower right. Monochrome characters should use white for solid areas and black for transparent areas. To include multicolored characters, add an alpha channel to the bitmap and use that to control which parts of the character are solid. Fill the spaces between each character and around the edges of the grid with a specific magenta color having the value Red:255 Green:0 Blue:255 Alpha:255. The processor packs the characters together as tightly as possible, eliminating any wasted space in the original grid. The following figure shows an example of this kind of font texture. The default behavior of FontTextureProcessor is to expect the first character at the upper left corner of the grid to be a space character (ASCII and Unicode code 32), and the one beside it to be an exclamation point (ASCII and Unicode code 33), and the succeeding characters to appear in Unicode order for all the characters that the font contains. You can support a different range and order of characters by writing a custom processor that extends FontTextureProcessor by overriding the GetCharacterForIndex method. For example, the code below creates a processor class that you could use to load a bitmap font texture containing the numeric digits from 1 to 9: [ContentProcessor] public class MyFontTextureProcessor : FontTextureProcessor { protected override char GetCharacterForIndex( int index ) { return (char)('1' + index); } } Be sure to include the [ContentProcessor] attribute before the class declaration, as shown in this example.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="FontTextureProcessor()">
+      <summary><![CDATA[Initializes a new instance of FontTextureProcessor.]]></summary>
+      <syntax><![CDATA[public FontTextureProcessor ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="FirstCharacter" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual char FirstCharacter { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="PremultiplyAlpha" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[[DefaultValueAttribute(true)]
+public virtual bool PremultiplyAlpha { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="TextureFormat" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual TextureProcessorOutputFormat TextureFormat { get; set; }]]></syntax>
+      <remarks><![CDATA[Textures can be left unchanged from the source asset, converted to the Color format, or DXT compressed.]]></remarks>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetCharacterForIndex" returnType="void">
+      <summary><![CDATA[Maps a glyph index to a character.]]></summary>
+      <overloads>
+        <overload signature="GetCharacterForIndex()">
+          <summary><![CDATA[Maps a glyph index to a character.]]></summary>
+          <syntax><![CDATA[protected virtual char GetCharacterForIndex (
+         int index
+)]]></syntax>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[The glyph index. This is a zero-based index that corresponds to the position of the glyph in the original character. This value begins at the upper-left corner of the texture and increases when moving to the right and down.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The character represented by the specified glyph index.]]></returns>
+          <remarks><![CDATA[This method is designed to be overridden by a subclass of this processor. For example, if the original texture contains the characters A, B, and C, in that order, this method should return "A" when passed 0 , "B" when passed 1 , and "C" when passed 2 . Subclasses of this processor may override this method to control which characters a bitmap font represents. If not overridden, the default implementation of this function assumes a Unicode order of character code points starting at code point 32—the space character. In other words, it assumes that a character index of zero corresponds to a space character, a character index of 1 corresponds to an exclamation point ("!"), and so on.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Process" returnType="void">
+      <summary><![CDATA[Creates SpriteFontContent from a bitmap.]]></summary>
+      <overloads>
+        <overload signature="Process()">
+          <summary><![CDATA[Creates SpriteFontContent from a bitmap.]]></summary>
+          <syntax><![CDATA[public virtual SpriteFontContent Process (
+         Texture2DContent input,
+         ContentProcessorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="input" type="Object"><![CDATA[The bitmap data to convert to a font.]]></parameter>
+            <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The font data.]]></returns>
+          <remarks><![CDATA[Each character should be arranged on the bitmap in a grid ordered from upper left to lower right. Monochrome characters should use white for solid areas and black for transparent areas. To include multicolored characters, add an alpha channel to the bitmap and use that to control which parts of the character are solid. Fill the spaces between each character and around the edges of the grid with a specific magenta color having the value Red:255 Green:0 Blue:255 Alpha:255. The processor packs the characters together as tightly as possible, eliminating any wasted space in the original grid.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

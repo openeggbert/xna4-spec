@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AvatarAnimationPreset" kind="enum"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Defines standard animations for avatars.]]></summary>
+  <syntax><![CDATA[public enum AvatarAnimationPreset]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <members>
+  </members>
+</xna-type>

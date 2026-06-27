@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentSerializerRuntimeTypeAttribute" kind="class"
+          namespace="Microsoft.Xna.Framework.Content"
+          assembly="Microsoft.Xna.Framework.Content"
+          baseClass="Attribute">
+  <summary><![CDATA[A custom Attribute that specifies the corresponding run-time type of this object. For more information, see Automatic Serialization of .XNB Files.]]></summary>
+  <syntax><![CDATA[public sealed class ContentSerializerRuntimeTypeAttribute : Attribute]]></syntax>
+  <remarks><![CDATA[You can apply multiple instances of this attribute to a single class, thus specifying different strong names for each target platform. If you don't specify the target platform, a single attribute provides a strong name for all platforms.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentSerializerRuntimeTypeAttribute(string)">
+      <summary><![CDATA[Creates a new instance of ContentSerializerRuntimeTypeAttribute.]]></summary>
+      <syntax><![CDATA[public ContentSerializerRuntimeTypeAttribute (
+         string runtimeType
+)]]></syntax>
+      <parameters>
+        <parameter name="runtimeType" type="string"><![CDATA[The run-time type name of the object.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="RuntimeType" type="string" access="get">
+      <summary><![CDATA[Gets the run-time type for the object.]]></summary>
+      <syntax><![CDATA[public string RuntimeType { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GraphicsDeviceStatus" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Describes the status of the device.]]></summary>
+  <syntax><![CDATA[public enum GraphicsDeviceStatus]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Lost"><summary><![CDATA[The device has been lost.]]></summary></member>
+    <member name="Normal"><summary><![CDATA[The device is normal.]]></summary></member>
+    <member name="NotReset"><summary><![CDATA[The device has not been reset.]]></summary></member>
+  </members>
+</xna-type>

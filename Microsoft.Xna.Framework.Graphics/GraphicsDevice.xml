@@ -1,0 +1,2280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GraphicsDevice" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IDisposable">
+  <summary><![CDATA[Performs primitive-based rendering, creates resources, handles system-level variables, adjusts gamma ramp levels, and creates shaders.]]></summary>
+  <syntax><![CDATA[public class GraphicsDevice : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GraphicsDevice(GraphicsAdapter, DeviceType, IntPtr, CreateOptions, PresentationParameters)">
+      <summary><![CDATA[Creates a new instance of GraphicsDevice]]></summary>
+      <syntax><![CDATA[public GraphicsDevice (
+         GraphicsAdapter adapter,
+         DeviceType deviceType,
+         IntPtr renderWindowHandle,
+         CreateOptions creationOptions,
+         PresentationParameters presentationParameters
+)]]></syntax>
+      <parameters>
+        <parameter name="adapter" type="GraphicsAdapter"><![CDATA[The display adapter.]]></parameter>
+        <parameter name="deviceType" type="DeviceType"><![CDATA[The desired device type.]]></parameter>
+        <parameter name="renderWindowHandle" type="IntPtr"><![CDATA[The focus window.]]></parameter>
+        <parameter name="creationOptions" type="CreateOptions"><![CDATA[Combination of one or more options that control the global behavior of the device.]]></parameter>
+        <parameter name="presentationParameters" type="PresentationParameters"><![CDATA[The presentation parameters for the device to be created.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[When you create a new XNA Framework game using XNA Game Studio Express, the game derives from Game and contains a member variable that is a GraphicsDeviceManager . This GraphicsDeviceManager automatically creates the best device that is available for the application and exposes it as the GraphicsDeviceManager.GraphicsDevice property. If you wish to change the settings used to create the device, you can create a custom PreparingDeviceSettings event handler for the graphics device manager with the settings you require for your application. For more information on using the PreparingDeviceSettings event handler, see GraphicsDeviceManager . Note If a graphics device has been constructed without the GraphicsDeviceManager , it is necessary to manually call Present subsequent to any draw calls to present the back buffer.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GraphicsDevice(Object, Object, Object)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         adapter As GraphicsAdapter, _
+         graphicsProfile As GraphicsProfile, _
+         presentationParameters As PresentationParameters _
+)]]></syntax>
+      <parameters>
+        <parameter name="adapter" type="Object"><![CDATA[Type: GraphicsAdapter The display adapter.]]></parameter>
+        <parameter name="graphicsProfile" type="Object"><![CDATA[Type: GraphicsProfile The graphics profile.]]></parameter>
+        <parameter name="presentationParameters" type="Object"><![CDATA[Type: PresentationParameters The presentation options.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Adapter" type="GraphicsAdapter" access="get">
+      <summary><![CDATA[Gets the graphics adapter.]]></summary>
+      <syntax><![CDATA[public GraphicsAdapter Adapter { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="BlendFactor" type="Color" access="get;set">
+      <summary><![CDATA[Gets or sets the color used for a constant-blend factor during alpha blending. The default value is Color.White.]]></summary>
+      <syntax><![CDATA[public Color BlendFactor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="BlendState" type="BlendState" access="get;set">
+      <summary><![CDATA[Gets or sets a system-defined instance of a blend state object initialized for alpha blending. The default value is BlendState.Opaque.]]></summary>
+      <syntax><![CDATA[public BlendState BlendState { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="ClipPlanes" type="ClipPlaneCollection" access="get">
+      <summary><![CDATA[Retrieves the clipping planes of the current GraphicsDevice.]]></summary>
+      <syntax><![CDATA[public ClipPlaneCollection ClipPlanes { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CreationParameters" type="GraphicsDeviceCreationParameters" access="get">
+      <summary><![CDATA[Retrieves the creation parameters of the GraphicsDevice.]]></summary>
+      <syntax><![CDATA[public GraphicsDeviceCreationParameters CreationParameters { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DepthStencilBuffer" type="DepthStencilBuffer" access="get;set">
+      <summary><![CDATA[Gets or sets the depth stencil surface of this GraphicsDevice.]]></summary>
+      <syntax><![CDATA[public DepthStencilBuffer DepthStencilBuffer { get; set; }]]></syntax>
+      <remarks><![CDATA[The following restrictions apply when using this property. The multisample type must be the same for the render target and the depth stencil surface. The formats for the render target and depth stencil surface must be compatible. For more information, see CheckDepthStencilMatch . The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DepthStencilState" type="DepthStencilState" access="get;set">
+      <summary><![CDATA[Gets or sets a system-defined instance of a depth-stencil state object. The default value is DepthStencilState.Default.]]></summary>
+      <syntax><![CDATA[public DepthStencilState DepthStencilState { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="DisplayMode" type="DisplayMode" access="get">
+      <summary><![CDATA[Retrieves the display mode's spatial resolution, color resolution, and refresh frequency.]]></summary>
+      <syntax><![CDATA[public DisplayMode DisplayMode { get; }]]></syntax>
+      <remarks><![CDATA[For a list of all supported display modes for an adapter, see the SupportedDisplayModes property.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DriverLevel" type="int" access="get">
+      <summary><![CDATA[Returns the driver level.]]></summary>
+      <syntax><![CDATA[public int DriverLevel { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GraphicsDeviceCapabilities" type="GraphicsDeviceCapabilities" access="get">
+      <summary><![CDATA[Gets the capabilities of the graphics device.]]></summary>
+      <syntax><![CDATA[public GraphicsDeviceCapabilities GraphicsDeviceCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GraphicsDeviceStatus" type="GraphicsDeviceStatus" access="get">
+      <summary><![CDATA[Retrieves the status of the device]]></summary>
+      <syntax><![CDATA[public GraphicsDeviceStatus GraphicsDeviceStatus { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GraphicsProfile" type="GraphicsProfile" access="get">
+      <summary><![CDATA[Gets the graphics profile. The default value is GraphicsProfile.Reach.]]></summary>
+      <syntax><![CDATA[public GraphicsProfile GraphicsProfile { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Indices" type="IndexBuffer" access="get;set">
+      <summary><![CDATA[Gets or sets index data.]]></summary>
+      <syntax><![CDATA[public IndexBuffer Indices { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MultiSampleMask" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets a bitmask controlling modification of the samples in a multisample render target. The default value is -1 (0xffffffff).]]></summary>
+      <syntax><![CDATA[public int MultiSampleMask { get; set; }]]></syntax>
+      <remarks><![CDATA[This render state enables use of a multisample buffer as an accumulation buffer, doing multipass rendering of geometry where each pass updates a subset of samples. Given n multisamples and k -enabled samples, the resulting intensity of the rendered image should be k / n . Each component RGB of every pixel is factored by k / n .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="PixelShader" type="PixelShader" access="get;set">
+      <summary><![CDATA[Gets or sets the current pixel shader.]]></summary>
+      <syntax><![CDATA[public PixelShader PixelShader { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PresentationParameters" type="PresentationParameters" access="get">
+      <summary><![CDATA[Gets the presentation parameters associated with this graphics device.]]></summary>
+      <syntax><![CDATA[public PresentationParameters PresentationParameters { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RasterStatus" type="RasterStatus" access="get">
+      <summary><![CDATA[Retrieves information that describes the raster of the monitor on which the swap chain is presented.]]></summary>
+      <syntax><![CDATA[public RasterStatus RasterStatus { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RasterizerState" type="RasterizerState" access="get;set">
+      <summary><![CDATA[Gets or sets rasterizer state. The default value is RasterizerState.CullCounterClockwise.]]></summary>
+      <syntax><![CDATA[public RasterizerState RasterizerState { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="ReferenceStencil" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets a reference value for stencil testing. The default value is zero.]]></summary>
+      <syntax><![CDATA[public int ReferenceStencil { get; set; }]]></syntax>
+      <remarks><![CDATA[The reference value is compared (using the comparison function specified by StencilFunction ) to the pixel data in the stencil buffer using the equation: ReferenceStencil StencilFunction (stencil buffer entry) This comparison applies only to the bits marked enabled by the stencil mask. If the comparison is true, the stencil test passes and the pass operation (specified by the DepthStencilState.StencilPass Property ) is performed.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="RenderState" type="RenderState" access="get">
+      <summary><![CDATA[Retrieves a render-state value for a GraphicsDevice.]]></summary>
+      <syntax><![CDATA[public RenderState RenderState { get; }]]></syntax>
+      <remarks><![CDATA[This method returns the last render state that was set for the GraphicsDevice, or the default GraphicsDevice render state, if not previously set.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SamplerStates" type="SamplerStateCollection" access="get">
+      <summary><![CDATA[Retrieves a collection of SamplerState objects for the current GraphicsDevice.]]></summary>
+      <syntax><![CDATA[public SamplerStateCollection SamplerStates { get; }]]></syntax>
+      <remarks><![CDATA[This method returns the last sampler state that was set for the GraphicsDevice , or the default GraphicsDevice sampler state, if not previously set. Programmable shaders reference textures using the sampler number, which is set as the index of a GraphicsDevice.Textures .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ScissorRectangle" type="Rectangle" access="get;set">
+      <summary><![CDATA[Gets or sets the rectangle used for scissor testing.]]></summary>
+      <syntax><![CDATA[public Rectangle ScissorRectangle { get; set; }]]></syntax>
+      <remarks><![CDATA[The scissor rectangle is used as a rectangular clipping region. Use ScissorTestEnable to enable scissor testing.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SoftwareVertexProcessing" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets the vertex processing mode.]]></summary>
+      <syntax><![CDATA[public bool SoftwareVertexProcessing { get; set; }]]></syntax>
+      <remarks><![CDATA[The following restrictions apply when changing modes. If a GraphicsDevice is created with CreateOptions.SoftwareVertexProcessing , vertex processing is done in software and cannot be changed. If a GraphicsDevice is created with CreateOptions.HardwareVertexProcessing , vertex processing is done in hardware and cannot be changed. If a GraphicsDevice is created with CreateOptions.MixedVertexProcessing , vertex processing is done in hardware by default, and can be switched between software and hardware. An application can create a mixed-mode GraphicsDevice to use both software and hardware vertex processing. Use this property to switch between the two vertex processing modes.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Textures" type="TextureCollection" access="get">
+      <summary><![CDATA[Returns the collection of textures that have been assigned to the texture stages of the device.]]></summary>
+      <syntax><![CDATA[public TextureCollection Textures { get; }]]></syntax>
+      <remarks><![CDATA[The collection of texture stage on the device contains one or more textures (all of the same type and dimensions) that can be accessed by shaders. Note At draw time, a texture cannot be simultaneously set as a render target and a texture at a stage.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexDeclaration" type="VertexDeclaration" access="get;set">
+      <summary><![CDATA[Gets or sets a vertex shader declaration.]]></summary>
+      <syntax><![CDATA[public VertexDeclaration VertexDeclaration { get; set; }]]></syntax>
+      <remarks><![CDATA[A vertex shader declaration is made up of an array of vertex elements.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexSamplerStates" type="SamplerStateCollection" access="get">
+      <summary><![CDATA[Gets the collection of vertex sampler states.]]></summary>
+      <syntax><![CDATA[public SamplerStateCollection VertexSamplerStates { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexShader" type="VertexShader" access="get;set">
+      <summary><![CDATA[Gets or sets the current vertex shader.]]></summary>
+      <syntax><![CDATA[public VertexShader VertexShader { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexTextures" type="TextureCollection" access="get">
+      <summary><![CDATA[Gets the collection of vertex textures that support texture lookup in the vertex shader using the texldl - vs texture load statement. The vertex engine contains four texture sampler stages.]]></summary>
+      <syntax><![CDATA[public TextureCollection VertexTextures { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Vertices" type="VertexStreamCollection" access="get">
+      <summary><![CDATA[Gets the vertex stream collection.]]></summary>
+      <syntax><![CDATA[public VertexStreamCollection Vertices { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Viewport" type="Viewport" access="get;set">
+      <summary><![CDATA[Gets or sets a viewport identifying the portion of the render target to receive draw calls.]]></summary>
+      <syntax><![CDATA[public Viewport Viewport { get; set; }]]></syntax>
+      <remarks><![CDATA[Viewport can be used to draw on part of the screen. It should be set before any geometry is drawn so the viewport parameters will take effect. To draw multiple views within a scene, repeat setting Viewport and draw a geometry sequence for each view.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Clear" returnType="void">
+      <summary><![CDATA[Clears a set of regions to a specified color, clears the depth buffer, and erases the stencil buffer.]]></summary>
+      <overloads>
+        <overload signature="ClearOptions, Color, Single, Int32, Rectangle ">
+          <summary><![CDATA[Clears a set of regions to a specified color, clears the depth buffer, and erases the stencil buffer.]]></summary>
+          <syntax><![CDATA[public void Clear (
+         ClearOptions options,
+         Color color,
+         float depth,
+         int stencil,
+         Rectangle[] regions
+)]]></syntax>
+          <parameters>
+            <parameter name="options" type="ClearOptions"><![CDATA[Flags that indicate which surfaces to clear.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[Color value to which the render target surface is cleared.]]></parameter>
+            <parameter name="depth" type="float"><![CDATA[New depth value to store in the depth buffer. This parameter can be in the range of 0.0 through 1.0 (for z-based or w-based depth buffers). A value of 0.0 represents the nearest distance to the viewer; a value of 1.0 represents the farthest distance.]]></parameter>
+            <parameter name="stencil" type="int"><![CDATA[Integer value to store in each stencil-buffer entry. This parameter can be in the range of 0 through 2 n −1, where n is the bit depth of the stencil buffer.]]></parameter>
+            <parameter name="regions" type="Rectangle[]"><![CDATA[The regions to clear.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Color">
+          <summary><![CDATA[Clears resource buffers.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Clear ( _
+         color As Color _
+)]]></syntax>
+          <parameters>
+            <parameter name="color" type="Object"><![CDATA[Type: Color Set this color value in all buffers.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="ClearOptions, Color, Single, Int32">
+          <summary><![CDATA[Clears the viewport to a specified color, clears the depth buffer, and erases the stencil buffer.]]></summary>
+          <syntax><![CDATA[public void Clear (
+         ClearOptions options,
+         Color color,
+         float depth,
+         int stencil
+)]]></syntax>
+          <parameters>
+            <parameter name="options" type="ClearOptions"><![CDATA[Flags indicating which surfaces to clear.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[Color value to which the render target surface is cleared.]]></parameter>
+            <parameter name="depth" type="float"><![CDATA[New depth value that this method stores in the depth buffer. This parameter can be in the range of 0.0 through 1.0 (for z-based or w-based depth buffers). A value of 0.0 represents the nearest distance to the viewer; a value of 1.0 represents the farthest distance.]]></parameter>
+            <parameter name="stencil" type="int"><![CDATA[Integer value to store in each stencil-buffer entry. This parameter can be in the range of 0 through 2 n −1, where n is the bit depth of the stencil buffer.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ClearOptions, Color, Single, Int32">
+          <summary><![CDATA[Clears resource buffers.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Clear ( _
+         options As ClearOptions, _
+         color As Color, _
+         depth As Single, _
+         stencil As Integer _
+)]]></syntax>
+          <parameters>
+            <parameter name="options" type="Object"><![CDATA[Type: ClearOptions Options for clearing a buffer.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color Set this color value in the buffer.]]></parameter>
+            <parameter name="depth" type="Object"><![CDATA[Type: Single Set this depth value in the buffer.]]></parameter>
+            <parameter name="stencil" type="Object"><![CDATA[Type: Int32 Set this stencil value in the buffer.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Color">
+          <summary><![CDATA[Clears the viewport to a specified color.]]></summary>
+          <syntax><![CDATA[public void Clear (
+         Color color
+)]]></syntax>
+          <parameters>
+            <parameter name="color" type="Color"><![CDATA[Color value to which the render target surface is cleared.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ClearOptions, Vector4, Single, Int32, Rectangle ">
+          <summary><![CDATA[Clears a set of regions to a specified color, clears the depth buffer, and erases the stencil buffer.]]></summary>
+          <syntax><![CDATA[public void Clear (
+         ClearOptions options,
+         Vector4 color,
+         float depth,
+         int stencil,
+         Rectangle[] regions
+)]]></syntax>
+          <parameters>
+            <parameter name="options" type="ClearOptions"><![CDATA[The surfaces to clear.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Color value to which the render target surface is cleared.]]></parameter>
+            <parameter name="depth" type="float"><![CDATA[New z value that this method stores in the depth buffer. This parameter can be in the range of 0.0 through 1.0 (for z-based or w-based depth buffers). A value of 0.0 represents the nearest distance to the viewer; a value of 1.0 represents the farthest distance.]]></parameter>
+            <parameter name="stencil" type="int"><![CDATA[Integer value to store in each stencil-buffer entry. This parameter can be in the range of 0 through 2 n −1, where n is the bit depth of the stencil buffer.]]></parameter>
+            <parameter name="regions" type="Rectangle[]"><![CDATA[The regions to clear.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ClearOptions, Vector4, Single, Int32">
+          <summary><![CDATA[Clears the viewport to a specified color, clears the depth buffer, and erases the stencil buffer.]]></summary>
+          <syntax><![CDATA[public void Clear (
+         ClearOptions options,
+         Vector4 color,
+         float depth,
+         int stencil
+)]]></syntax>
+          <parameters>
+            <parameter name="options" type="ClearOptions"><![CDATA[The surfaces to clear.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Color value to which the render target surface is cleared.]]></parameter>
+            <parameter name="depth" type="float"><![CDATA[New z value that this method stores in the depth buffer. This parameter can be in the range of 0.0 through 1.0 (for z-based or w-based depth buffers). A value of 0.0 represents the nearest distance to the viewer; a value of 1.0 represents the farthest distance.]]></parameter>
+            <parameter name="stencil" type="int"><![CDATA[Integer value to store in each stencil-buffer entry. This parameter can be in the range of 0 through 2 n −1, where n is the bit depth of the stencil buffer.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <remarks><![CDATA[Call Dispose when you are finished using the GraphicsDevice . The Dispose method leaves the GraphicsDevice in an unusable state. After calling Dispose , you must release all references to the GraphicsDevice so the garbage collector can reclaim the memory that the GraphicsDevice was occupying. Note Always call Dispose before you release your last reference to the GraphicsDevice . Otherwise, the resources it is using will not be freed until the garbage collector calls the GraphicsDevice object's Finalize method.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool 
+)]]></syntax>
+          <remarks><![CDATA[This method is called by the public Dispose method and the Finalize method. Dispose invokes the protected Dispose(Boolean) method with the disposing parameter set to true . Finalize invokes Dispose(Boolean) with disposing set to false . When the disposing parameter is true , this method releases all resources held by any managed objects that this GraphicsDevice references. This method invokes the Dispose method of each referenced object. Note Notes to Inheritors Dispose can be called multiple times by other objects. When overriding Dispose(Boolean) , be careful not to reference objects disposed of in an earlier call to Dispose .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DrawIndexedPrimitives" returnType="void">
+      <summary><![CDATA[Renders the specified geometric primitive, based on indexing into an array of vertices.]]></summary>
+      <overloads>
+        <overload signature="DrawIndexedPrimitives()">
+          <summary><![CDATA[Renders the specified geometric primitive, based on indexing into an array of vertices.]]></summary>
+          <syntax><![CDATA[public void DrawIndexedPrimitives (
+         PrimitiveType primitiveType,
+         int baseVertex,
+         int minVertexIndex,
+         int numVertices,
+         int startIndex,
+         int primitiveCount
+)]]></syntax>
+          <parameters>
+            <parameter name="primitiveType" type="PrimitiveType"><![CDATA[Describes the type of primitive to render. PrimitiveType.PointList is not supported with this method.]]></parameter>
+            <parameter name="baseVertex" type="int"><![CDATA[Offset to add to each vertex index in the index buffer.]]></parameter>
+            <parameter name="minVertexIndex" type="int"><![CDATA[Minimum vertex index for vertices used during the call. The parameter and all of the indices in the index stream are relative to the baseVertex parameter.]]></parameter>
+            <parameter name="numVertices" type="int"><![CDATA[A number of vertices used during the call. The first vertex is located at index: baseVertex + minVertexIndex .]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[Location in the index array at which to start reading vertices.]]></parameter>
+            <parameter name="primitiveCount" type="int"><![CDATA[A number of primitives to render. The number of vertices used is a function of and primitiveType . To determine the maximum number of primitives allowed, check the MaxPrimitiveCount property member of the Capabilities structure.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method draws indexed primitives from the current set of data input streams. The minVertexIndex and numVertices parameters specify the range of vertex indices used for each call to DrawIndexedPrimitives . These vertex indices are used to optimize vertex processing of indexed primitives by processing a sequential range of vertices prior to indexing into them. Indices used during this call cannot reference any vertices outside this range. If no index array is set, DrawIndexedPrimitives fails.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DrawInstancedPrimitives" returnType="void">
+      <summary><![CDATA[Draws a series of instanced models.]]></summary>
+      <overloads>
+        <overload signature="DrawInstancedPrimitives()">
+          <summary><![CDATA[Draws a series of instanced models.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub DrawInstancedPrimitives ( _
+         primitiveType As PrimitiveType, _
+         baseVertex As Integer, _
+         minVertexIndex As Integer, _
+         numVertices As Integer, _
+         startIndex As Integer, _
+         primitiveCount As Integer, _
+         instanceCount As Integer _
+)]]></syntax>
+          <parameters>
+            <parameter name="primitiveType" type="Object"><![CDATA[Type: PrimitiveType The primitive type.]]></parameter>
+            <parameter name="baseVertex" type="Object"><![CDATA[Type: Int32 Offset to add to each vertex index in the index buffer.]]></parameter>
+            <parameter name="minVertexIndex" type="Object"><![CDATA[Type: Int32 Minimum vertex index for vertices used during the call. The parameter and all of the indices in the index stream are relative to the baseVertex parameter.]]></parameter>
+            <parameter name="numVertices" type="Object"><![CDATA[Type: Int32 Number of vertices used during the call. The first vertex is located at index: baseVertex + minVertexIndex .]]></parameter>
+            <parameter name="startIndex" type="Object"><![CDATA[Type: Int32 Location in the index array at which to start reading vertices.]]></parameter>
+            <parameter name="primitiveCount" type="Object"><![CDATA[Type: Int32 Number of primitives to render. The number of vertices used is a function of and primitiveType .]]></parameter>
+            <parameter name="instanceCount" type="Object"><![CDATA[Type: Int32 Number of primitives to render.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method provides a mechanism for gathering vertex shader input data from different streams at different frequencies (typically by interpreting one data stream as a per-instance world transform); this approach requires a custom shader to interpret the input data. For more information, see DrawInstancedPrimitives in XNA Game Studio 4.0 .]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DrawPrimitives" returnType="void">
+      <summary><![CDATA[Renders a sequence of non-indexed geometric primitives of the specified type from the current set of data input streams.]]></summary>
+      <overloads>
+        <overload signature="DrawPrimitives()">
+          <summary><![CDATA[Renders a sequence of non-indexed geometric primitives of the specified type from the current set of data input streams.]]></summary>
+          <syntax><![CDATA[public void DrawPrimitives (
+         PrimitiveType primitiveType,
+         int startVertex,
+         int primitiveCount
+)]]></syntax>
+          <parameters>
+            <parameter name="primitiveType" type="PrimitiveType"><![CDATA[Describes the type of primitive to render.]]></parameter>
+            <parameter name="startVertex" type="int"><![CDATA[Index of the first vertex to load. Beginning at , the correct number of vertices is read out of the vertex buffer.]]></parameter>
+            <parameter name="primitiveCount" type="int"><![CDATA[Number of primitives to render. To determine the maximum number of primitives allowed, check MaxPrimitiveCount . The is the number of primitives as determined by the primitive type. If it is a line list, each primitive has two vertices. If it is a triangle list, each primitive has three vertices.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[DrawPrimitives should not be called with a single triangle at a time.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object to compare to this GraphicsDevice .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EvictManagedResources" returnType="void">
+      <summary><![CDATA[Evicts all managed resources, including Microsoft Direct3D resources and those that are driver managed.]]></summary>
+      <overloads>
+        <overload signature="EvictManagedResources()">
+          <summary><![CDATA[Evicts all managed resources, including Microsoft Direct3D resources and those that are driver managed.]]></summary>
+          <syntax><![CDATA[public void EvictManagedResources ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <remarks><![CDATA[This method overrides System.Object.Finalize . Application code should not call this method; an object's Finalize method is invoked automatically during garbage collection, unless a call to the GC.SuppressFinalize method has disabled finalization by the garbage collector.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetGammaRamp" returnType="void">
+      <summary><![CDATA[Gets the gamma correction ramp.]]></summary>
+      <overloads>
+        <overload signature="GetGammaRamp()">
+          <summary><![CDATA[Gets the gamma correction ramp.]]></summary>
+          <syntax><![CDATA[public GammaRamp GetGammaRamp ()]]></syntax>
+          <returns><![CDATA[The gamma correction ramp.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderBooleanConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Boolean values from the pixel shader constant Boolean registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderBooleanConstant()">
+          <summary><![CDATA[Gets an array of Boolean values from the pixel shader constant Boolean registers.]]></summary>
+          <syntax><![CDATA[public bool[] GetPixelShaderBooleanConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader Boolean constant register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Boolean values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Boolean values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderInt32Constant" returnType="void">
+      <summary><![CDATA[Gets an array of Int32 values from the pixel shader constant integer registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderInt32Constant()">
+          <summary><![CDATA[Gets an array of Int32 values from the pixel shader constant integer registers.]]></summary>
+          <syntax><![CDATA[public int[] GetPixelShaderInt32Constant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader integer register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Int32 values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Int32 values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderMatrixArrayConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Matrix values from the pixel shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderMatrixArrayConstant()">
+          <summary><![CDATA[Gets an array of Matrix values from the pixel shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Matrix[] GetPixelShaderMatrixArrayConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Matrix values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Matrix values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderMatrixConstant" returnType="void">
+      <summary><![CDATA[Gets a Matrix value from the pixel shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderMatrixConstant()">
+          <summary><![CDATA[Gets a Matrix value from the pixel shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Matrix GetPixelShaderMatrixConstant (
+         int startRegister
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Matrix value retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderQuaternionArrayConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Quaternion values from the pixel shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderQuaternionArrayConstant()">
+          <summary><![CDATA[Gets an array of Quaternion values from the pixel shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Quaternion[] GetPixelShaderQuaternionArrayConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Quaternion values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Quaternion values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderQuaternionConstant" returnType="void">
+      <summary><![CDATA[Gets a Quaternion value from the pixel shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderQuaternionConstant()">
+          <summary><![CDATA[Gets a Quaternion value from the pixel shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Quaternion GetPixelShaderQuaternionConstant (
+         int startRegister
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Quaternion value retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderSingleConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Single values from the pixel shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderSingleConstant()">
+          <summary><![CDATA[Gets an array of Single values from the pixel shader constant float registers.]]></summary>
+          <syntax><![CDATA[public float[] GetPixelShaderSingleConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Single values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Single values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderVector2ArrayConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Vector2 values from the pixel shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderVector2ArrayConstant()">
+          <summary><![CDATA[Gets an array of Vector2 values from the pixel shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector2[] GetPixelShaderVector2ArrayConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Vector2 values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Vector2 values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderVector2Constant" returnType="void">
+      <summary><![CDATA[Gets a Vector2 value from the pixel shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderVector2Constant()">
+          <summary><![CDATA[Gets a Vector2 value from the pixel shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector2 GetPixelShaderVector2Constant (
+         int startRegister
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Vector2 value retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderVector3ArrayConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Vector3 values from the pixel shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderVector3ArrayConstant()">
+          <summary><![CDATA[Gets an array of Vector3 values from the pixel shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector3[] GetPixelShaderVector3ArrayConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Vector3 values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Vector3 values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderVector3Constant" returnType="void">
+      <summary><![CDATA[Gets a Vector3 value from the pixel shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderVector3Constant()">
+          <summary><![CDATA[Gets a Vector3 value from the pixel shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector3 GetPixelShaderVector3Constant (
+         int startRegister
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Vector3 value retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderVector4ArrayConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Vector4 values from the pixel shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderVector4ArrayConstant()">
+          <summary><![CDATA[Gets an array of Vector4 values from the pixel shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector4[] GetPixelShaderVector4ArrayConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Vector4 values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Vector4 values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPixelShaderVector4Constant" returnType="void">
+      <summary><![CDATA[Gets a Vector4 value from the pixel shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetPixelShaderVector4Constant()">
+          <summary><![CDATA[Gets a Vector4 value from the pixel shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector4 GetPixelShaderVector4Constant (
+         int startRegister
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Vector4 value retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetRenderTarget" returnType="void">
+      <summary><![CDATA[Gets a render target surface.]]></summary>
+      <overloads>
+        <overload signature="GetRenderTarget()">
+          <summary><![CDATA[Gets a render target surface.]]></summary>
+          <syntax><![CDATA[public RenderTarget GetRenderTarget (
+         int renderTargetIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="renderTargetIndex" type="int"><![CDATA[Index of the render target.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The render target surface of the current graphics device.]]></returns>
+          <remarks><![CDATA[The GraphicsDevice can support multiple render targets. The number of render targets supported by a GraphicsDevice is contained in NumberSimultaneousRenderTargets .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetRenderTargets" returnType="void">
+      <summary><![CDATA[Gets a render target surface.]]></summary>
+      <overloads>
+        <overload signature="GetRenderTargets()">
+          <summary><![CDATA[Gets a render target surface.]]></summary>
+          <syntax><![CDATA[public RenderTargetBinding[] GetRenderTargets ()]]></syntax>
+          <returns><![CDATA[An array of bound render targets.]]></returns>
+          <remarks><![CDATA[The GraphicsDevice can support multiple render targets.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexBuffers" returnType="void">
+      <summary><![CDATA[Gets the vertex buffers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexBuffers()">
+          <summary><![CDATA[Gets the vertex buffers.]]></summary>
+          <syntax><![CDATA[public VertexBufferBinding[] GetVertexBuffers ()]]></syntax>
+          <returns><![CDATA[An array of vertex buffers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderBooleanConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Boolean values from the vertex shader constant Boolean registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderBooleanConstant()">
+          <summary><![CDATA[Gets an array of Boolean values from the vertex shader constant Boolean registers.]]></summary>
+          <syntax><![CDATA[public bool[] GetVertexShaderBooleanConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant Boolean register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Boolean values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Boolean values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderInt32Constant" returnType="void">
+      <summary><![CDATA[Gets an array of Int32 values from the vertex shader constant integer registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderInt32Constant()">
+          <summary><![CDATA[Gets an array of Int32 values from the vertex shader constant integer registers.]]></summary>
+          <syntax><![CDATA[public int[] GetVertexShaderInt32Constant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant integer register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Int32 values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Int32 values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderMatrixArrayConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Matrix values from the vertex shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderMatrixArrayConstant()">
+          <summary><![CDATA[Gets an array of Matrix values from the vertex shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Matrix[] GetVertexShaderMatrixArrayConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Matrix values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Matrix values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderMatrixConstant" returnType="void">
+      <summary><![CDATA[Gets a Matrix value from the vertex shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderMatrixConstant()">
+          <summary><![CDATA[Gets a Matrix value from the vertex shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Matrix GetVertexShaderMatrixConstant (
+         int startRegister
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Matrix value retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderQuaternionArrayConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Quaternion values from the vertex shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderQuaternionArrayConstant()">
+          <summary><![CDATA[Gets an array of Quaternion values from the vertex shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Quaternion[] GetVertexShaderQuaternionArrayConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Quaternion values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Quaternion values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderQuaternionConstant" returnType="void">
+      <summary><![CDATA[Gets a Quaternion value from the vertex shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderQuaternionConstant()">
+          <summary><![CDATA[Gets a Quaternion value from the vertex shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Quaternion GetVertexShaderQuaternionConstant (
+         int startRegister
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Quaternion value retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderSingleConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Single values from the vertex shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderSingleConstant()">
+          <summary><![CDATA[Gets an array of Single values from the vertex shader constant float registers.]]></summary>
+          <syntax><![CDATA[public float[] GetVertexShaderSingleConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Single values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Single values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderVector2ArrayConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Vector2 values from the vertex shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderVector2ArrayConstant()">
+          <summary><![CDATA[Gets an array of Vector2 values from the vertex shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector2[] GetVertexShaderVector2ArrayConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Vector2 values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Vector2 values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderVector2Constant" returnType="void">
+      <summary><![CDATA[Gets a Vector2 value from the vertex shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderVector2Constant()">
+          <summary><![CDATA[Gets a Vector2 value from the vertex shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector2 GetVertexShaderVector2Constant (
+         int startRegister
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Vector2 value retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderVector3ArrayConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Vector3 values from the vertex shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderVector3ArrayConstant()">
+          <summary><![CDATA[Gets an array of Vector3 values from the vertex shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector3[] GetVertexShaderVector3ArrayConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Vector3 values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Vector3 values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderVector3Constant" returnType="void">
+      <summary><![CDATA[Gets a Vector3 value from the vertex shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderVector3Constant()">
+          <summary><![CDATA[Gets a Vector3 value from the vertex shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector3 GetVertexShaderVector3Constant (
+         int startRegister
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Vector3 value retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderVector4ArrayConstant" returnType="void">
+      <summary><![CDATA[Gets an array of Vector4 values from the vertex shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderVector4ArrayConstant()">
+          <summary><![CDATA[Gets an array of Vector4 values from the vertex shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector4[] GetVertexShaderVector4ArrayConstant (
+         int startRegister,
+         int constantCount
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
+            <parameter name="constantCount" type="int"><![CDATA[Number of Vector4 values to retrieve.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Array of Vector4 values retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetVertexShaderVector4Constant" returnType="void">
+      <summary><![CDATA[Gets a Vector4 value from the vertex shader constant float registers.]]></summary>
+      <overloads>
+        <overload signature="GetVertexShaderVector4Constant()">
+          <summary><![CDATA[Gets a Vector4 value from the vertex shader constant float registers.]]></summary>
+          <syntax><![CDATA[public Vector4 GetVertexShaderVector4Constant (
+         int startRegister
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Vector4 value retrieved from the constant registers.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Present" returnType="void">
+      <summary><![CDATA[Presents the display with the contents of the next buffer in the sequence of back buffers owned by the GraphicsDevice.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Presents the display with the contents of the next buffer in the sequence of back buffers owned by the GraphicsDevice.]]></summary>
+          <syntax><![CDATA[public void Present ()]]></syntax>
+          <remarks><![CDATA[Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Nullable&amp;lt;Rectangle&amp;gt;, Nullable&amp;lt;Rectangle&amp;gt;, IntPtr">
+          <summary><![CDATA[Specifies the window target for a presentation and presents the display with the contents of the next buffer in the sequence of back buffers owned by the GraphicsDevice.]]></summary>
+          <syntax><![CDATA[public void Present (
+         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Nullable&lt;Rectangle&gt; destinationRectangle,
+         IntPtr overrideWindowHandle
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceRectangle" type="Object"><![CDATA[The source rectangle. If null , the entire source surface is presented. If the rectangle exceeds the source surface, the rectangle is clipped to the source surface. This parameter must be null unless the swap chain was created with SwapEffect.Copy .]]></parameter>
+            <parameter name="destinationRectangle" type="Object"><![CDATA[The destination rectangle, in window client coordinates. If null , the entire client area is filled. If the rectangle exceeds the destination client area, the rectangle is clipped to the destination client area. This parameter must be null unless the swap chain was created with SwapEffect.Copy .]]></parameter>
+            <parameter name="overrideWindowHandle" type="IntPtr"><![CDATA[Destination window containing the client area that is the target for this presentation. If not specified, this is DeviceWindowHandle .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="IntPtr">
+          <summary><![CDATA[Specifies the window target for a presentation and presents the display with the contents of the next buffer in the sequence of back buffers owned by the GraphicsDevice.]]></summary>
+          <syntax><![CDATA[public void Present (
+         IntPtr overrideWindowHandle
+)]]></syntax>
+          <parameters>
+            <parameter name="overrideWindowHandle" type="IntPtr"><![CDATA[Destination window containing the client area that is the target for this presentation. If not specified, this is DeviceWindowHandle .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Reset" returnType="void">
+      <summary><![CDATA[Resets the presentation parameters for the current GraphicsDevice.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Resets the presentation parameters for the current GraphicsDevice.]]></summary>
+          <syntax><![CDATA[public void Reset ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="PresentationParameters">
+          <summary><![CDATA[Resets the current GraphicsDevice with the specified PresentationParameters.]]></summary>
+          <syntax><![CDATA[public void Reset (
+         PresentationParameters presentationParameters
+)]]></syntax>
+          <parameters>
+            <parameter name="presentationParameters" type="PresentationParameters"><![CDATA[Describes the new presentation parameters. This value cannot be null .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="PresentationParameters, GraphicsAdapter">
+          <summary><![CDATA[Resets the specified Reset with the specified presentation parameters.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Reset ( _
+         presentationParameters As PresentationParameters, _
+         graphicsAdapter As GraphicsAdapter _
+)]]></syntax>
+          <parameters>
+            <parameter name="presentationParameters" type="Object"><![CDATA[Type: PresentationParameters Describes the new presentation parameters. This value cannot be null .]]></parameter>
+            <parameter name="graphicsAdapter" type="Object"><![CDATA[Type: GraphicsAdapter The graphics device being reset.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ResolveBackBuffer" returnType="void">
+      <summary><![CDATA[Copies the current back buffer contents to a texture.]]></summary>
+      <overloads>
+        <overload signature="Texture2D">
+          <summary><![CDATA[Copies the current back buffer contents to a texture.]]></summary>
+          <syntax><![CDATA[public void ResolveBackBuffer (
+         Texture2D resolveTarget
+)]]></syntax>
+          <parameters>
+            <parameter name="resolveTarget" type="Object"><![CDATA[Texture to update with the resolved back buffer. This texture must be created with a usage type of ResourceUsage.ResolveTarget .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[On Xbox 360, the back buffer is cleared when ResolveBackBuffer is called. Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Int32">
+          <summary><![CDATA[Copies the contents of the back buffer at the specified index to a texture.]]></summary>
+          <syntax><![CDATA[public void ResolveBackBuffer (
+         Texture2D resolveTarget,
+         int backBufferIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="resolveTarget" type="Object"><![CDATA[Texture to update with the resolved back buffer. This texture must be created with a usage type of ResourceUsage.ResolveTarget .]]></parameter>
+            <parameter name="backBufferIndex" type="int"><![CDATA[Index of the back buffer to resolve.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[On Xbox 360, the back buffer is cleared when ResolveBackBuffer is called. Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ResolveRenderTarget" returnType="void">
+      <summary><![CDATA[Signifies that the device has finished drawing to a render target and prepares the render target for a call to RenderTarget2D.GetTexture or RenderTargetCube.GetTexture.]]></summary>
+      <overloads>
+        <overload signature="ResolveRenderTarget()">
+          <summary><![CDATA[Signifies that the device has finished drawing to a render target and prepares the render target for a call to RenderTarget2D.GetTexture or RenderTargetCube.GetTexture.]]></summary>
+          <syntax><![CDATA[public void ResolveRenderTarget (
+         int index
+)]]></syntax>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[Index of the render target to resolve.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[On Windows, non-multisampled render targets are not cleared when ResolveRenderTarget is called. Multisampled render targets, and all render targets on the Xbox 360, are cleared when ResolveRenderTarget is called. Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetGammaRamp" returnType="void">
+      <summary><![CDATA[Sets the gamma correction ramp.]]></summary>
+      <overloads>
+        <overload signature="SetGammaRamp()">
+          <summary><![CDATA[Sets the gamma correction ramp.]]></summary>
+          <syntax><![CDATA[public void SetGammaRamp (
+         bool calibrate,
+         GammaRamp ramp
+)]]></syntax>
+          <parameters>
+            <parameter name="calibrate" type="bool"><![CDATA[[ MarshalAsAttribute (U1)] true to indicate that correction should be applied. false to indicate that no gamma correction should be applied. The supplied gamma table is transferred directly to the GraphicsDevice .]]></parameter>
+            <parameter name="ramp" type="GammaRamp"><![CDATA[The gamma correction ramp to set.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Gamma correction results in a more consistent display, but can incur processing overhead and should not be used frequently. Short-duration effects, such as flashing the entire screen red, should not be calibrated, but long-duration gamma changes should be. If a gamma calibrator is installed, the ramp is modified before being sent to the GraphicsDevice to account for the system and monitor response curves. If no calibrator is installed, the ramp is passed directly to the GraphicsDevice . The gamma ramp takes effect immediately. No wait for a vertical sync operation is performed. If the GraphicsDevice does not support gamma ramps in the current presentation mode (full-screen or windowed), no error is returned. Applications can check SupportsFullScreenGamma and CanCalibrateGamma to determine the capabilities of the GraphicsDevice and whether a calibrator is installed.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetPixelShaderConstant" returnType="void">
+      <summary><![CDATA[Sets the specified pixel shader constant float registers to a Quaternion value.]]></summary>
+      <overloads>
+        <overload signature="Int32, Quaternion">
+          <summary><![CDATA[Sets the specified pixel shader constant float registers to a Quaternion value.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         Quaternion constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Quaternion"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Matrix ">
+          <summary><![CDATA[Sets the specified pixel shader constant float registers to an array of Matrix values.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         Matrix[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Matrix[]"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Matrix">
+          <summary><![CDATA[Sets the specified pixel shader constant float registers to a Matrix value.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         Matrix constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Matrix"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Vector4 ">
+          <summary><![CDATA[Sets the specified pixel shader constant float registers to an array of Vector4 values.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         Vector4[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Boolean ">
+          <summary><![CDATA[Sets the specified pixel shader constant Boolean registers to an array of Boolean values.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         bool[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant Boolean register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="bool[]"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Vector4">
+          <summary><![CDATA[Sets the specified pixel shader constant float register to a Vector4 value.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         Vector4 constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Vector3">
+          <summary><![CDATA[Sets the specified pixel shader constant float register to a Vector3 value.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         Vector3 constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector3 containing (1,2,3) will fill the register with (1,2,3,0).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Int32 ">
+          <summary><![CDATA[Sets the specified pixel shader constant integer registers to an array of Int32 values.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         int[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant integer register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="int[]"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Vector2">
+          <summary><![CDATA[Sets the specified pixel shader constant float register to a Vector2 value.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         Vector2 constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector2 containing (1,2) will fill the register with (1,2,0,0).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Single ">
+          <summary><![CDATA[Sets the specified pixel shader constant float registers to an array of Single values.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         float[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="float[]"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Vector2 ">
+          <summary><![CDATA[Sets the specified pixel shader constant float registers to an array of Vector2 values.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         Vector2[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to an array of Vector2 values containing (1,2) and (3,4) will fill register 0 with (1,2,0,0) and register 1 with (3,4,0,0).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Quaternion ">
+          <summary><![CDATA[Sets the specified pixel shader constant float registers to an array of Quaternion values.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         Quaternion[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Quaternion[]"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Vector3 ">
+          <summary><![CDATA[Sets the specified pixel shader constant float registers to an array of Vector3 values.]]></summary>
+          <syntax><![CDATA[public void SetPixelShaderConstant (
+         int startRegister,
+         Vector3[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to an array of Vector3 values containing (1,2,3) and (4,5,6) will fill register 0 with (1,2,3,0) and register 1 with (4,5,6,0).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetRenderTarget" returnType="void">
+      <summary><![CDATA[Sets a new render target for this GraphicsDevice.]]></summary>
+      <overloads>
+        <overload signature="Int32, RenderTarget2D">
+          <summary><![CDATA[Sets a new render target for this GraphicsDevice.]]></summary>
+          <syntax><![CDATA[public void SetRenderTarget (
+         int renderTargetIndex,
+         RenderTarget2D renderTarget
+)]]></syntax>
+          <parameters>
+            <parameter name="renderTargetIndex" type="int"><![CDATA[Index of the render target. The number of render targets supported by a GraphicsDevice is contained in NumberSimultaneousRenderTargets .]]></parameter>
+            <parameter name="renderTarget" type="Object"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve. The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. For more information, see CheckDepthStencilMatch . The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="RenderTarget2D">
+          <summary><![CDATA[Sets a new render target for this GraphicsDevice.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub SetRenderTarget ( _
+         renderTarget As RenderTarget2D _
+)]]></syntax>
+          <parameters>
+            <parameter name="renderTarget" type="Object"><![CDATA[Type: RenderTarget2D A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, RenderTargetCube, CubeMapFace">
+          <summary><![CDATA[Sets a new render target for this GraphicsDevice.]]></summary>
+          <syntax><![CDATA[public void SetRenderTarget (
+         int renderTargetIndex,
+         RenderTargetCube renderTarget,
+         CubeMapFace faceType
+)]]></syntax>
+          <parameters>
+            <parameter name="renderTargetIndex" type="int"><![CDATA[Index of the render target. The number of render targets supported by a GraphicsDevice is contained in NumberSimultaneousRenderTargets .]]></parameter>
+            <parameter name="renderTarget" type="RenderTargetCube"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
+            <parameter name="faceType" type="CubeMapFace"><![CDATA[The cube map face type.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve. The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. For more information, see CheckDepthStencilMatch . The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="RenderTargetCube, CubeMapFace">
+          <summary><![CDATA[Sets a new render target for this GraphicsDevice.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub SetRenderTarget ( _
+         renderTarget As RenderTargetCube, _
+         cubeMapFace As CubeMapFace _
+)]]></syntax>
+          <parameters>
+            <parameter name="renderTarget" type="Object"><![CDATA[Type: RenderTargetCube A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
+            <parameter name="cubeMapFace" type="Object"><![CDATA[Type: CubeMapFace The cube map face type.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetRenderTargets" returnType="void">
+      <summary><![CDATA[Sets an array of render targets.]]></summary>
+      <overloads>
+        <overload signature="SetRenderTargets()">
+          <summary><![CDATA[Sets an array of render targets.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub SetRenderTargets ( _
+         renderTargets As RenderTargetBinding() _
+)]]></syntax>
+          <parameters>
+            <parameter name="renderTargets" type="Object"><![CDATA[Type: RenderTargetBinding [ ParamArrayAttribute ] An array of render targets.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetVertexBuffer" returnType="void">
+      <summary><![CDATA[Sets or binds a vertex buffer to the device.]]></summary>
+      <overloads>
+        <overload signature="VertexBuffer">
+          <summary><![CDATA[Sets or binds a vertex buffer to the device.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub SetVertexBuffer ( _
+         vertexBuffer As VertexBuffer _
+)]]></syntax>
+          <parameters>
+            <parameter name="vertexBuffer" type="Object"><![CDATA[Type: VertexBuffer A vertex buffer.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="VertexBuffer, Int32">
+          <summary><![CDATA[Sets or binds a vertex buffer to the device.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub SetVertexBuffer ( _
+         vertexBuffer As VertexBuffer, _
+         vertexOffset As Integer _
+)]]></syntax>
+          <parameters>
+            <parameter name="vertexBuffer" type="Object"><![CDATA[Type: VertexBuffer A vertex buffer.]]></parameter>
+            <parameter name="vertexOffset" type="Object"><![CDATA[Type: Int32 The offset (in vertices) from the beginning of the buffer.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetVertexBuffers" returnType="void">
+      <summary><![CDATA[Sets the vertex buffers.]]></summary>
+      <overloads>
+        <overload signature="SetVertexBuffers()">
+          <summary><![CDATA[Sets the vertex buffers.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub SetVertexBuffers ( _
+         vertexBuffers As VertexBufferBinding() _
+)]]></syntax>
+          <parameters>
+            <parameter name="vertexBuffers" type="Object"><![CDATA[Type: VertexBufferBinding [ ParamArrayAttribute ] An array of vertex buffers.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetVertexShaderConstant" returnType="void">
+      <summary><![CDATA[Sets the specified vertex shader constant float register to a Vector4 value.]]></summary>
+      <overloads>
+        <overload signature="Int32, Vector4">
+          <summary><![CDATA[Sets the specified vertex shader constant float register to a Vector4 value.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         Vector4 constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Single ">
+          <summary><![CDATA[Sets the specified vertex shader constant float registers to an array of Single values.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         float[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="float[]"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Vector3">
+          <summary><![CDATA[Sets the specified vertex shader constant float register to a Vector3 value.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         Vector3 constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector3 of (1,2,3) will fill the register with (1,2,3,0).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Quaternion ">
+          <summary><![CDATA[Sets the specified vertex shader constant float registers to an array of Quaternion values.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         Quaternion[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Quaternion[]"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Vector2">
+          <summary><![CDATA[Sets the specified vertex shader constant float register to a Vector2 value.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         Vector2 constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector2 of of (1,2) will fill the register with (1,2,0,0).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Vector4 ">
+          <summary><![CDATA[Sets the specified vertex shader constant float registers to an array of Vector4 values.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         Vector4[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Quaternion">
+          <summary><![CDATA[Sets the specified vertex shader constant float register to a Quaternion value.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         Quaternion constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Quaternion"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Int32 ">
+          <summary><![CDATA[Sets the specified vertex shader constant integer registers to an array of Int32 values.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         int[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant integer register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="int[]"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Vector3 ">
+          <summary><![CDATA[Sets the specified vertex shader constant float registers to an array of Vector3 values.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         Vector3[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to to an array of Vector3 values containing (1,2,3) and (4,5,6) will fill register 0 with (1,2,3,0) and register 1 with (4,5,6,0).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Matrix">
+          <summary><![CDATA[Sets the specified vertex shader constant float registers to a Matrix value.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         Matrix constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Matrix"><![CDATA[The constant data. This value will be transposed when the vertex shader constant is set.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Boolean ">
+          <summary><![CDATA[Sets the specified vertex shader constant Boolean registers to an array of Boolean values.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         bool[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant Boolean register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="bool[]"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Matrix ">
+          <summary><![CDATA[Sets the specified vertex shader constant float registers to an array of Matrix values.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         Matrix[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Matrix[]"><![CDATA[The constant data. This value will be transposed when the vertex shader constant is set.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Vector2 ">
+          <summary><![CDATA[Sets the specified vertex shader constant float registers to an array of Vector2 values.]]></summary>
+          <syntax><![CDATA[public void SetVertexShaderConstant (
+         int startRegister,
+         Vector2[] constantData
+)]]></syntax>
+          <parameters>
+            <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
+            <parameter name="constantData" type="Object"><![CDATA[The constant data.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to an array of Vector2 values containing (1,2) and (3,4) will fill register 0 with (1,2,0,0) and register 1 with (3,4,0,0).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         GraphicsDevice left,
+         GraphicsDevice right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GraphicsDevice"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="GraphicsDevice"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         GraphicsDevice left,
+         GraphicsDevice right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GraphicsDevice"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="GraphicsDevice"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_DeviceLost" returnType="void">
+      <summary><![CDATA[Occurs when a GraphicsDevice is about to be lost (for example, immediately before a reset).]]></summary>
+      <overloads>
+        <overload signature="raise_DeviceLost()">
+          <summary><![CDATA[Occurs when a GraphicsDevice is about to be lost (for example, immediately before a reset).]]></summary>
+          <syntax><![CDATA[protected void raise_DeviceLost (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[The source of this event.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[The event arguments that are associated with the action that raised the event.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_DeviceReset" returnType="void">
+      <summary><![CDATA[Occurs after a GraphicsDevice is reset, allowing an application to re-create all resources.]]></summary>
+      <overloads>
+        <overload signature="raise_DeviceReset()">
+          <summary><![CDATA[Occurs after a GraphicsDevice is reset, allowing an application to re-create all resources.]]></summary>
+          <syntax><![CDATA[protected void raise_DeviceReset (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[The source of this event.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[The event arguments that are associated with the action that raised the event.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_DeviceResetting" returnType="void">
+      <summary><![CDATA[Occurs when a GraphicsDevice is resetting]]></summary>
+      <overloads>
+        <overload signature="raise_DeviceResetting()">
+          <summary><![CDATA[Occurs when a GraphicsDevice is resetting]]></summary>
+          <syntax><![CDATA[protected void raise_DeviceResetting (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[The source of this event.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[The event arguments that are associated with the action that raised the event.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_Disposing" returnType="void">
+      <summary><![CDATA[Raises the Disposing event when called from within a derived class.]]></summary>
+      <overloads>
+        <overload signature="raise_Disposing()">
+          <summary><![CDATA[Raises the Disposing event when called from within a derived class.]]></summary>
+          <syntax><![CDATA[protected void raise_Disposing (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[Invoking object reference; should be this object.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[Arguments to pass to the event handler.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_ResourceCreated" returnType="void">
+      <summary><![CDATA[Occurs when ResourceCreated is called.]]></summary>
+      <overloads>
+        <overload signature="raise_ResourceCreated()">
+          <summary><![CDATA[Occurs when ResourceCreated is called.]]></summary>
+          <syntax><![CDATA[protected void raise_ResourceCreated (
+         Object value0,
+         ResourceCreatedEventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[The source of the event.]]></parameter>
+            <parameter name="value1" type="ResourceCreatedEventArgs"><![CDATA[An EventArgs object that contains no data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_ResourceDestroyed" returnType="void">
+      <summary><![CDATA[Occurs when ResourceDestroyed is called.]]></summary>
+      <overloads>
+        <overload signature="raise_ResourceDestroyed()">
+          <summary><![CDATA[Occurs when ResourceDestroyed is called.]]></summary>
+          <syntax><![CDATA[protected void raise_ResourceDestroyed (
+         Object value0,
+         ResourceDestroyedEventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[The source of the event.]]></parameter>
+            <parameter name="value1" type="ResourceDestroyedEventArgs"><![CDATA[An EventArgs object that contains no data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="DeviceLost" type="EventHandler">
+      <summary><![CDATA[Occurs when a GraphicsDevice is about to be lost (for example, immediately before a reset).]]></summary>
+      <syntax><![CDATA[public event EventHandler DeviceLost]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="DeviceReset" type="EventHandler">
+      <summary><![CDATA[Occurs after a GraphicsDevice is reset, allowing an application to recreate all resources.]]></summary>
+      <syntax><![CDATA[public event EventHandler DeviceReset]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="DeviceResetting" type="EventHandler">
+      <summary><![CDATA[Occurs when a GraphicsDevice is resetting, allowing the application to cancel the default handling of the reset.]]></summary>
+      <syntax><![CDATA[public event EventHandler DeviceResetting]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="Disposing" type="EventHandler">
+      <summary><![CDATA[Occurs when Dispose is called or when this object is finalized and collected by the garbage collector of the Microsoft .NET common language runtime.]]></summary>
+      <syntax><![CDATA[public event EventHandler Disposing]]></syntax>
+      <remarks><![CDATA[IsDisposed indicates whether an object has been disposed.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="ResourceCreated" type="EventHandler&amp;lt;ResourceCreatedEventArgs&amp;gt;">
+      <summary><![CDATA[Occurs when a resource is created.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;ResourceCreatedEventArgs&gt; ResourceCreated]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="ResourceDestroyed" type="EventHandler&amp;lt;ResourceDestroyedEventArgs&amp;gt;">
+      <summary><![CDATA[Occurs when a resource is destroyed.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;ResourceDestroyedEventArgs&gt; ResourceDestroyed]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

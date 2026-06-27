@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GraphicsProfile" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Identifies the set of supported devices for the game based on device capabilities.]]></summary>
+  <syntax><![CDATA[public enum GraphicsProfile]]></syntax>
+  <remarks><![CDATA[Use the reach profile to create a game for all supported platforms.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <members>
+    <member name="HiDef"><summary><![CDATA[Use the largest available set of graphic features and capabilities to target devices, such as an Xbox 360 console and a Windows-based computer, that have more enhanced graphic capabilities.]]></summary></member>
+    <member name="Reach"><summary><![CDATA[Use a limited set of graphic features and capabilities, allowing the game to support the widest variety of devices, including all Windows-based computers and Windows Phone.]]></summary></member>
+  </members>
+</xna-type>

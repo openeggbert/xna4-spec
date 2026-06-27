@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BlendState" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="GraphicsResource">
+  <summary><![CDATA[Contains blend state for the device.]]></summary>
+  <syntax><![CDATA[public class BlendState : GraphicsResource]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="BlendState()">
+      <summary><![CDATA[Creates an instance of the BlendState class with default values, using additive color and alpha blending.]]></summary>
+      <syntax><![CDATA[public BlendState ()]]></syntax>
+      <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="AlphaBlendFunction" type="BlendFunction" access="get;set">
+      <summary><![CDATA[Gets or sets the arithmetic operation when blending alpha values. The default is BlendFunction.Add.]]></summary>
+      <syntax><![CDATA[public BlendFunction AlphaBlendFunction { get; set; }]]></syntax>
+      <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="AlphaDestinationBlend" type="Blend" access="get;set">
+      <summary><![CDATA[Gets or sets the blend factor for the destination alpha, which is the percentage of the destination alpha included in the blended result. The default is Blend.One.]]></summary>
+      <syntax><![CDATA[public Blend AlphaDestinationBlend { get; set; }]]></syntax>
+      <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="AlphaSourceBlend" type="Blend" access="get;set">
+      <summary><![CDATA[Gets or sets the alpha blend factor. The default is Blend.One.]]></summary>
+      <syntax><![CDATA[public Blend AlphaSourceBlend { get; set; }]]></syntax>
+      <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="BlendFactor" type="Color" access="get;set">
+      <summary><![CDATA[Gets or sets the four-component (RGBA) blend factor for alpha blending.]]></summary>
+      <syntax><![CDATA[public Color BlendFactor { get; set; }]]></syntax>
+      <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="ColorBlendFunction" type="BlendFunction" access="get;set">
+      <summary><![CDATA[Gets or sets the arithmetic operation when blending color values. The default is BlendFunction.Add.]]></summary>
+      <syntax><![CDATA[public BlendFunction ColorBlendFunction { get; set; }]]></syntax>
+      <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="ColorDestinationBlend" type="Blend" access="get;set">
+      <summary><![CDATA[Gets or sets the blend factor for the destination color. The default is Blend.One.]]></summary>
+      <syntax><![CDATA[public Blend ColorDestinationBlend { get; set; }]]></syntax>
+      <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="ColorSourceBlend" type="Blend" access="get;set">
+      <summary><![CDATA[Gets or sets the blend factor for the source color. The default is Blend.One.]]></summary>
+      <syntax><![CDATA[public Blend ColorSourceBlend { get; set; }]]></syntax>
+      <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="ColorWriteChannels" type="ColorWriteChannels" access="get;set">
+      <summary><![CDATA[Gets or sets which color channels (RGBA) are enabled for writing during color blending. The default value is ColorWriteChannels.None.]]></summary>
+      <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="ColorWriteChannels1" type="ColorWriteChannels" access="get;set">
+      <summary><![CDATA[Gets or sets which color channels (RGBA) are enabled for writing during color blending. The default value is ColorWriteChannels.None.]]></summary>
+      <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels1 { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="ColorWriteChannels2" type="ColorWriteChannels" access="get;set">
+      <summary><![CDATA[Gets or sets which color channels (RGBA) are enabled for writing during color blending. The default value is ColorWriteChannels.None.]]></summary>
+      <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels2 { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="ColorWriteChannels3" type="ColorWriteChannels" access="get;set">
+      <summary><![CDATA[Gets or sets which color channels (RGBA) are enabled for writing during color blending. The default value is ColorWriteChannels.None.]]></summary>
+      <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels3 { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="MultiSampleMask" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets a bitmask which defines which samples can be written during multisampling. The default is 0xffffffff.]]></summary>
+      <syntax><![CDATA[public int MultiSampleMask { get; set; }]]></syntax>
+      <remarks><![CDATA[Each bit enables writing to a multisample location. As an example, the first 8 bits enable the first eight samples for an 8-sample render target. The mask has no effect when not multisampling.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected override void Dispose (
+         bool 
+)]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="Additive" type="BlendState" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[A built-in state object with settings for additive blend, that is adding the destination data to the source data without using alpha.]]></summary>
+      <syntax><![CDATA[public static readonly BlendState Additive]]></syntax>
+      <remarks><![CDATA[This built-in state object has the following settings: ColorSourceBlend = Blend.One, AlphaSourceBlend = Blend.One, ColorDestinationBlend = Blend.InverseSourceAlpha, AlphaDestinationBlend = Blend.InverseSourceAlpha,]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </field>
+    <field name="AlphaBlend" type="BlendState" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[A built-in state object with settings for alpha blend, that is blending the source and destination data using alpha.]]></summary>
+      <syntax><![CDATA[public static readonly BlendState AlphaBlend]]></syntax>
+      <remarks><![CDATA[This built-in state object has the following settings: ColorSourceBlend = Blend.One, AlphaSourceBlend = Blend.One, ColorDestinationBlend = Blend.InverseSourceAlpha, AlphaDestinationBlend = Blend.InverseSourceAlpha,]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </field>
+    <field name="NonPremultiplied" type="BlendState" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[A built-in state object with settings for blending with non-premultipled alpha, that is blending source and destination data using alpha while assuming the color data contains no alpha information.]]></summary>
+      <syntax><![CDATA[public static readonly BlendState NonPremultiplied]]></syntax>
+      <remarks><![CDATA[This built-in state object has the following settings: ColorSourceBlend = Blend.SourceAlpha, AlphaSourceBlend = Blend.SourceAlpha, ColorDestinationBlend = Blend.InverseSourceAlpha, AlphaDestinationBlend = Blend.InverseSourceAlpha,]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </field>
+    <field name="Opaque" type="BlendState" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[A built-in state object with settings for opaque blend, that is overwriting the source with the destination data.]]></summary>
+      <syntax><![CDATA[public static readonly BlendState Opaque]]></syntax>
+      <remarks><![CDATA[This built-in state object has the following settings: ColorSourceBlend = Blend.One, AlphaSourceBlend = Blend.One, ColorDestinationBlend = Blend.Zero, AlphaDestinationBlend = Blend.Zero,]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

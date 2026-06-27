@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamerCollection Generic" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          baseClass="ReadOnlyCollection&amp;lt;T&amp;gt;"
+          interfaces="IEnumerable&amp;lt;Gamer&amp;gt;, IEnumerable">
+  <summary><![CDATA[Represents a collection of gamers. This collection cannot be modified and is updated automatically during the call to Update.]]></summary>
+  <syntax><![CDATA[public class GamerCollection&lt;T&gt; : ReadOnlyCollection&lt;T&gt;, IEnumerable&lt;Gamer&gt;, IEnumerable where T : Gamer]]></syntax>
+  <remarks><![CDATA[Access this collection using the following methods. AllGamers LocalGamers RemoteGamers]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

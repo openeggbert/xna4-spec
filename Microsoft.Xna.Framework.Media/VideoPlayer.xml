@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VideoPlayer" kind="class"
+          namespace="Microsoft.Xna.Framework.Media"
+          assembly="Microsoft.Xna.Framework.Media"
+          interfaces="IDisposable">
+  <summary><![CDATA[Provides methods and properties to play back, pause, resume, and stop video. VideoPlayer also exposes repeat, volume, and play position information.]]></summary>
+  <syntax><![CDATA[public sealed class VideoPlayer : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="VideoPlayer()">
+      <summary><![CDATA[Initializes a new instance of this class.]]></summary>
+      <syntax><![CDATA[public VideoPlayer ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="IsLooped" type="bool" access="get;set">
+      <summary><![CDATA[Gets a value that indicates whether the player is playing video in a loop.]]></summary>
+      <syntax><![CDATA[public bool IsLooped { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="IsMuted" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets the muted setting for the video player.]]></summary>
+      <syntax><![CDATA[public bool IsMuted { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="PlayPosition" type="TimeSpan" access="get">
+      <summary><![CDATA[Gets the play position within the currently playing video.]]></summary>
+      <syntax><![CDATA[public TimeSpan PlayPosition { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="State" type="MediaState" access="get">
+      <summary><![CDATA[Gets the media playback state, MediaState.]]></summary>
+      <syntax><![CDATA[public MediaState State { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Video" type="Video" access="get">
+      <summary><![CDATA[Gets the Video that is currently playing.]]></summary>
+      <syntax><![CDATA[public Video Video { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Volume" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the video player volume.]]></summary>
+      <syntax><![CDATA[public float Volume { get; set; }]]></syntax>
+      <remarks><![CDATA[Volume adjustment is based on a decibel, not multiplicative, scale. For example, when the device volume is half of maximum (about 7 in the Windows Phone user interface), setting Volume to 0.6f or less is silent or nearly so, not volume 4 as you would expect from a multiplicative adjustment. Setting Volume to 0.0 subtracts 96 dB from the volume. Setting Volume to 1.0 subtracts 0 dB from the volume. Values in between 0.0f and 1.0f subtract dB from the volume proportionally.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetTexture" returnType="void">
+      <summary><![CDATA[Retrieves a Texture2D containing the current frame of video being played.]]></summary>
+      <overloads>
+        <overload signature="GetTexture()">
+          <summary><![CDATA[Retrieves a Texture2D containing the current frame of video being played.]]></summary>
+          <syntax><![CDATA[public Texture2D GetTexture ()]]></syntax>
+          <returns><![CDATA[The current frame of video.]]></returns>
+          <remarks><![CDATA[Call GetTexture once per frame to get the latest video data. Use SpriteBatch.Draw to display the video on the screen, or attach the texture to an object in 3D space to display the video as part of a scene.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Pause" returnType="void">
+      <summary><![CDATA[Pauses the currently playing video.]]></summary>
+      <overloads>
+        <overload signature="Pause()">
+          <summary><![CDATA[Pauses the currently playing video.]]></summary>
+          <syntax><![CDATA[public void Pause ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Play" returnType="void">
+      <summary><![CDATA[Plays a Video.]]></summary>
+      <overloads>
+        <overload signature="Play()">
+          <summary><![CDATA[Plays a Video.]]></summary>
+          <syntax><![CDATA[public void Play (
+         Video video
+)]]></syntax>
+          <parameters>
+            <parameter name="video" type="Video"><![CDATA[Type: Video Video to play.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[After calling Play , call GetTexture to get the current frame of video.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Resume" returnType="void">
+      <summary><![CDATA[Resumes a paused video.]]></summary>
+      <overloads>
+        <overload signature="Resume()">
+          <summary><![CDATA[Resumes a paused video.]]></summary>
+          <syntax><![CDATA[public void Resume ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Stop" returnType="void">
+      <summary><![CDATA[Stops playing a video.]]></summary>
+      <overloads>
+        <overload signature="Stop()">
+          <summary><![CDATA[Stops playing a video.]]></summary>
+          <syntax><![CDATA[public void Stop ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

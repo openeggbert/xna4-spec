@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PictureAlbum" kind="class"
+          namespace="Microsoft.Xna.Framework.Media"
+          assembly="Microsoft.Xna.Framework.Media"
+          interfaces="IEquatable&amp;lt;PictureAlbum&amp;gt;">
+  <summary><![CDATA[Provides access to a picture album in the media library.]]></summary>
+  <syntax><![CDATA[public sealed class PictureAlbum : IEquatable&lt;PictureAlbum&gt;]]></syntax>
+  <remarks><![CDATA[The PictureAlbum class provides information about a picture album, including the picture album's Name , Pictures , and Parent . A PictureAlbum can contain both pictures and other picture albums. Obtain PictureAlbum objects through the PictureAlbumCollection.Item indexer.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Albums" type="PictureAlbumCollection" access="get">
+      <summary><![CDATA[Gets the collection of picture albums that are contained within the picture album (that is, picture albums that are children of the picture album).]]></summary>
+      <syntax><![CDATA[public PictureAlbumCollection Albums { get; }]]></syntax>
+      <remarks><![CDATA[A PictureAlbum can contain pictures as well as other picture albums. This property returns the collection of picture albums that are contained within this picture album, if any. If this picture album has no child picture albums, an empty collection is returned.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Gets the name of the PictureAlbum.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Parent" type="PictureAlbum" access="get">
+      <summary><![CDATA[Gets the parent picture album.]]></summary>
+      <syntax><![CDATA[public PictureAlbum Parent { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Pictures" type="PictureCollection" access="get">
+      <summary><![CDATA[Gets the collection of pictures in this picture album.]]></summary>
+      <syntax><![CDATA[public PictureCollection Pictures { get; }]]></syntax>
+      <remarks><![CDATA[A PictureAlbum can contain pictures as well as other picture albums. This property returns the collection of pictures in this picture album, if any. If this picture album has no pictures, an empty collection is returned.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Determines whether the specified Object is equal to this PictureAlbum.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Determines whether the specified Object is equal to this PictureAlbum.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object to compare with this instance.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="PictureAlbum">
+          <summary><![CDATA[Determines whether the specified PictureAlbum is equal to this PictureAlbum.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         PictureAlbum other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="PictureAlbum"><![CDATA[PictureAlbum to compare with this instance.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Releases unmanaged resources and performs other cleanup operations before the PictureAlbum is reclaimed by garbage collection.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Releases unmanaged resources and performs other cleanup operations before the PictureAlbum is reclaimed by garbage collection.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <remarks><![CDATA[This method overrides Finalize System.Object.Finalize . Application code should not call this method. The object's Finalize method is automatically invoked during garbage collection, unless a call to the GC.SuppressFinalize method has disabled finalization by the garbage collector. For more information, see Finalize Methods and Destructors , Cleaning Up Unmanaged Resources , and Overriding the Finalize Method .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a String representation of the PictureAlbum.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a String representation of the PictureAlbum.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether the specified PictureAlbum instances are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether the specified PictureAlbum instances are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         PictureAlbum first,
+         PictureAlbum second
+)]]></syntax>
+          <parameters>
+            <parameter name="first" type="PictureAlbum"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="second" type="PictureAlbum"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether the specified PictureAlbum instances are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether the specified PictureAlbum instances are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         PictureAlbum first,
+         PictureAlbum second
+)]]></syntax>
+          <parameters>
+            <parameter name="first" type="PictureAlbum"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="second" type="PictureAlbum"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

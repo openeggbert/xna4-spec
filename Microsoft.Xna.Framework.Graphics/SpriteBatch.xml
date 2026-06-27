@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SpriteBatch" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IDisposable">
+  <summary><![CDATA[Enables a group of sprites to be drawn using the same settings.]]></summary>
+  <syntax><![CDATA[public class SpriteBatch : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="SpriteBatch(GraphicsDevice)">
+      <summary><![CDATA[Initializes a new instance of the class, which enables a group of sprites to be drawn using the same settings.]]></summary>
+      <syntax><![CDATA[public SpriteBatch (
+         GraphicsDevice graphicsDevice
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device where sprites will be drawn.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="GraphicsDevice" type="GraphicsDevice" access="get">
+      <summary><![CDATA[Gets the graphics device associated with this SpriteBatch.]]></summary>
+      <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the name of this sprite batch.]]></summary>
+      <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Tag" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets an object that uniquely identifies this sprite batch.]]></summary>
+      <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Begin" returnType="void">
+      <summary><![CDATA[Begins a sprite batch operation using the specified sort, blend, sampler, depth stencil, rasterizer state objects, plus a custom effect and a 2D transformation matrix. Passing null for any of the state objects selects the default default state objects (BlendState.AlphaBlend, DepthStencilState.None, RasterizerState.CullCounterClockwise, SamplerState.LinearClamp). Passing a null effect selects the default SpriteBatch Class shader.]]></summary>
+      <overloads>
+        <overload signature="SpriteSortMode, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect, Matrix">
+          <summary><![CDATA[Begins a sprite batch operation using the specified sort, blend, sampler, depth stencil, rasterizer state objects, plus a custom effect and a 2D transformation matrix. Passing null for any of the state objects selects the default default state objects (BlendState.AlphaBlend, DepthStencilState.None, RasterizerState.CullCounterClockwise, SamplerState.LinearClamp). Passing a null effect selects the default SpriteBatch Class shader.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Begin ( _
+         sortMode As SpriteSortMode, _
+         blendState As BlendState, _
+         samplerState As SamplerState, _
+         depthStencilState As DepthStencilState, _
+         rasterizerState As RasterizerState, _
+         effect As Effect, _
+         transformMatrix As Matrix _
+)]]></syntax>
+          <parameters>
+            <parameter name="sortMode" type="Object"><![CDATA[Type: SpriteSortMode Sprite drawing order.]]></parameter>
+            <parameter name="blendState" type="Object"><![CDATA[Type: BlendState Blending options.]]></parameter>
+            <parameter name="samplerState" type="Object"><![CDATA[Type: SamplerState Texture sampling options.]]></parameter>
+            <parameter name="depthStencilState" type="Object"><![CDATA[Type: DepthStencilState Depth and stencil options.]]></parameter>
+            <parameter name="rasterizerState" type="Object"><![CDATA[Type: RasterizerState Rasterization options.]]></parameter>
+            <parameter name="effect" type="Object"><![CDATA[Type: Effect Effect state options.]]></parameter>
+            <parameter name="transformMatrix" type="Object"><![CDATA[Type: Matrix Transformation matrix for scale, rotate, translate options.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteSortMode, BlendState, SamplerState, DepthStencilState, RasterizerState">
+          <summary><![CDATA[Begins a sprite batch operation using the specified sort, blend, sampler, depth stencil and rasterizer state objects. Passing null for any of the state objects selects the default default state objects (BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise).]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Begin ( _
+         sortMode As SpriteSortMode, _
+         blendState As BlendState, _
+         samplerState As SamplerState, _
+         depthStencilState As DepthStencilState, _
+         rasterizerState As RasterizerState _
+)]]></syntax>
+          <parameters>
+            <parameter name="sortMode" type="Object"><![CDATA[Type: SpriteSortMode Sprite drawing order.]]></parameter>
+            <parameter name="blendState" type="Object"><![CDATA[Type: BlendState Blending options.]]></parameter>
+            <parameter name="samplerState" type="Object"><![CDATA[Type: SamplerState Texture sampling options.]]></parameter>
+            <parameter name="depthStencilState" type="Object"><![CDATA[Type: DepthStencilState Depth and stencil options.]]></parameter>
+            <parameter name="rasterizerState" type="Object"><![CDATA[Type: RasterizerState Rasterization options.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteBlendMode, SpriteSortMode, SaveStateMode, Matrix">
+          <summary><![CDATA[Prepares the graphics device for drawing sprites with specified blending, sorting, and render state options.]]></summary>
+          <syntax><![CDATA[public void Begin (
+         SpriteBlendMode blendMode,
+         SpriteSortMode sortMode,
+         SaveStateMode stateMode,
+         Matrix transformMatrix
+)]]></syntax>
+          <parameters>
+            <parameter name="blendMode" type="SpriteBlendMode"><![CDATA[Blending options to use when rendering.]]></parameter>
+            <parameter name="sortMode" type="SpriteSortMode"><![CDATA[Sorting options to use when rendering.]]></parameter>
+            <parameter name="stateMode" type="SaveStateMode"><![CDATA[Rendering state options.]]></parameter>
+            <parameter name="transformMatrix" type="Matrix"><![CDATA[A matrix to apply to position, rotation, scale, and depth data passed to Draw .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End . Begin sets the following render states: CullMode DepthBufferEnable AlphaBlendEnable AlphaTestEnable AlphaBlendOperation SourceBlend DestinationBlend SeparateAlphaBlendEnabled AlphaFunction ReferenceAlpha Begin sets the following sampler states: AddressU AddressV MagFilter MinFilter MipFilter MipMapLevelOfDetailBias MaxMipLevel If Begin is called with SaveStateMode set to None , then these states must be reset by the caller if they are used elsewhere. Calling Begin with SaveStateMode set to SaveState will reset these values properly, but may adversely affect performance. Use transformMatrix to apply the same transformation to all sprites drawn by this SpriteBatch . This matrix can be any combination of translation, scaling, or rotation operations. This matrix is applied to the position, rotation, scale, and depth values provided to Draw .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteBlendMode">
+          <summary><![CDATA[Prepares the graphics device for drawing sprites with specified blending options.]]></summary>
+          <syntax><![CDATA[public void Begin (
+         SpriteBlendMode blendMode
+)]]></syntax>
+          <parameters>
+            <parameter name="blendMode" type="SpriteBlendMode"><![CDATA[Blending options to use when rendering.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End . Begin sets the following render states: CullMode DepthBufferEnable AlphaBlendEnable AlphaTestEnable AlphaBlendOperation SourceBlend DestinationBlend SeparateAlphaBlendEnabled AlphaFunction ReferenceAlpha Begin sets the following sampler states: AddressU AddressV MagFilter MinFilter MipFilter MipMapLevelOfDetailBias MaxMipLevel This version of Begin sets SpriteSortMode to Deferred , and SaveStateMode to None . When SaveStateMode is set to None , the caller must reset the render and sampler states if they are used elsewhere.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteSortMode, BlendState">
+          <summary><![CDATA[Begins a sprite batch operation using the specified sort and blend state object and default state objects (DepthStencilState.None, SamplerState.LinearClamp, RasterizerState.CullCounterClockwise). If you pass a null blend state, the default is BlendState.AlphaBlend.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Begin ( _
+         sortMode As SpriteSortMode, _
+         blendState As BlendState _
+)]]></syntax>
+          <parameters>
+            <parameter name="sortMode" type="Object"><![CDATA[Type: SpriteSortMode Sprite drawing order.]]></parameter>
+            <parameter name="blendState" type="Object"><![CDATA[Type: BlendState Blending options.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Prepares the graphics device for drawing sprites.]]></summary>
+          <syntax><![CDATA[public void Begin ()]]></syntax>
+          <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End . Begin sets the following render states: CullMode DepthBufferEnable AlphaBlendEnable AlphaTestEnable AlphaBlendOperation SourceBlend DestinationBlend SeparateAlphaBlendEnabled AlphaFunction ReferenceAlpha Begin sets the following sampler states: AddressU AddressV MagFilter MinFilter MipFilter MipMapLevelOfDetailBias MaxMipLevel This version of Begin sets SpriteBlendMode to AlphaBlend , SpriteSortMode to Deferred , and SaveStateMode to None . When SaveStateMode is set to None , the caller must reset the render and sampler states if they are used elsewhere.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteBlendMode, SpriteSortMode, SaveStateMode">
+          <summary><![CDATA[Prepares the graphics device for drawing sprites with specified blending, sorting, and render state options.]]></summary>
+          <syntax><![CDATA[public void Begin (
+         SpriteBlendMode blendMode,
+         SpriteSortMode sortMode,
+         SaveStateMode stateMode
+)]]></syntax>
+          <parameters>
+            <parameter name="blendMode" type="SpriteBlendMode"><![CDATA[Blending options to use when rendering.]]></parameter>
+            <parameter name="sortMode" type="SpriteSortMode"><![CDATA[Sorting options to use when rendering.]]></parameter>
+            <parameter name="stateMode" type="SaveStateMode"><![CDATA[Rendering state options.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End . Begin sets the following render states: CullMode DepthBufferEnable AlphaBlendEnable AlphaTestEnable AlphaBlendOperation SourceBlend DestinationBlend SeparateAlphaBlendEnabled AlphaFunction ReferenceAlpha Begin sets the following sampler states: AddressU AddressV MagFilter MinFilter MipFilter MipMapLevelOfDetailBias MaxMipLevel If Begin is called with SaveStateMode set to None , the caller must reset these states must be reset if they are used elsewhere. Calling Begin with SaveStateMode set to SaveState will reset these values properly, but performance may be adversely affected.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteSortMode, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect">
+          <summary><![CDATA[Begins a sprite batch operation using the specified sort, blend, sampler, depth stencil and rasterizer state objects, plus a custom effect. Passing null for any of the state objects selects the default default state objects (BlendState.AlphaBlend, DepthStencilState.None, RasterizerState.CullCounterClockwise, SamplerState.LinearClamp). Passing a null effect selects the default SpriteBatch Class shader.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Begin ( _
+         sortMode As SpriteSortMode, _
+         blendState As BlendState, _
+         samplerState As SamplerState, _
+         depthStencilState As DepthStencilState, _
+         rasterizerState As RasterizerState, _
+         effect As Effect _
+)]]></syntax>
+          <parameters>
+            <parameter name="sortMode" type="Object"><![CDATA[Type: SpriteSortMode Sprite drawing order.]]></parameter>
+            <parameter name="blendState" type="Object"><![CDATA[Type: BlendState Blending options.]]></parameter>
+            <parameter name="samplerState" type="Object"><![CDATA[Type: SamplerState Texture sampling options.]]></parameter>
+            <parameter name="depthStencilState" type="Object"><![CDATA[Type: DepthStencilState Depth and stencil options.]]></parameter>
+            <parameter name="rasterizerState" type="Object"><![CDATA[Type: RasterizerState Rasterization options.]]></parameter>
+            <parameter name="effect" type="Object"><![CDATA[Type: Effect Effect state options.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool disposing
+)]]></syntax>
+          <parameters>
+            <parameter name="disposing" type="bool"><![CDATA[true to release both managed and unmanaged resources; false to release only unmanaged resources.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Draw" returnType="void">
+      <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, destination rectangle, and color tint.]]></summary>
+      <overloads>
+        <overload signature="Texture2D, Rectangle, Color">
+          <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, destination rectangle, and color tint.]]></summary>
+          <syntax><![CDATA[public void Draw (
+         Texture2D texture,
+         Rectangle destinationRectangle,
+         Color color
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle specifying, in screen coordinates, where the sprite will be drawn. If this rectangle is not the same size as sourcerectangle , the sprite is scaled to fit.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, Vector2, SpriteEffects, Single">
+          <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, screen position, source rectangle, color tint, rotation, origin, scale, effects, and sort depth.]]></summary>
+          <syntax><![CDATA[public void Draw (
+         Texture2D texture,
+         Vector2 position,
+         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Color color,
+         float rotation,
+         Vector2 origin,
+         Vector2 scale,
+         SpriteEffects effects,
+         float layerDepth
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
+            <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the sprite around the origin.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Object"><![CDATA[Vector containing separate scalar multiples for the x- and y-axes of the sprite.]]></parameter>
+            <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply before rendering.]]></parameter>
+            <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Rectangle, Color">
+          <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, destination rectangle, and color.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Draw ( _
+         texture As Texture2D, _
+         destinationRectangle As Rectangle, _
+         color As Color _
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
+            <parameter name="destinationRectangle" type="Object"><![CDATA[Type: Rectangle A rectangle that specifies (in screen coordinates) the destination for drawing the sprite.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color">
+          <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, position, source rectangle, and color.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Draw ( _
+         texture As Texture2D, _
+         position As Vector2, _
+         sourceRectangle As Nullable(Of Rectangle), _
+         color As Color _
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="sourceRectangle" type="Object"><![CDATA[Type: Nullable &lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Rectangle, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, SpriteEffects, Single">
+          <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, destination and source rectangles, color tint, rotation, origin, effects, and sort depth.]]></summary>
+          <syntax><![CDATA[public void Draw (
+         Texture2D texture,
+         Rectangle destinationRectangle,
+         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Color color,
+         float rotation,
+         Vector2 origin,
+         SpriteEffects effects,
+         float layerDepth
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle specifying, in screen coordinates, where the sprite will be drawn. If this rectangle is not the same size as sourcerectangle , the sprite is scaled to fit.]]></parameter>
+            <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the sprite around the origin.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>
+            <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
+            <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Rectangle, Nullable&amp;lt;Rectangle&amp;gt;, Color">
+          <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, destination rectangle, source rectangle, and color.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Draw ( _
+         texture As Texture2D, _
+         destinationRectangle As Rectangle, _
+         sourceRectangle As Nullable(Of Rectangle), _
+         color As Color _
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
+            <parameter name="destinationRectangle" type="Object"><![CDATA[Type: Rectangle A rectangle that specifies (in screen coordinates) the destination for drawing the sprite. If this rectangle is not the same size as the source rectangle, the sprite will be scaled to fit.]]></parameter>
+            <parameter name="sourceRectangle" type="Object"><![CDATA[Type: Nullable &lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Rectangle, Nullable&amp;lt;Rectangle&amp;gt;, Color">
+          <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, destination and source rectangles, and color tint.]]></summary>
+          <syntax><![CDATA[public void Draw (
+         Texture2D texture,
+         Rectangle destinationRectangle,
+         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Color color
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle specifying, in screen coordinates, where the sprite will be drawn. If this rectangle is not the same size as sourcerectangle the sprite will be scaled to fit.]]></parameter>
+            <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, Vector2, SpriteEffects, Single">
+          <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, position, source rectangle, color, rotation, origin, scale, effects and layer.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Draw ( _
+         texture As Texture2D, _
+         position As Vector2, _
+         sourceRectangle As Nullable(Of Rectangle), _
+         color As Color, _
+         rotation As Single, _
+         origin As Vector2, _
+         scale As Vector2, _
+         effects As SpriteEffects, _
+         layerDepth As Single _
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="sourceRectangle" type="Object"><![CDATA[Type: Nullable &lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Object"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Object"><![CDATA[Type: Vector2 Scale factor.]]></parameter>
+            <parameter name="effects" type="Object"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Object"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, Single, SpriteEffects, Single">
+          <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, position, source rectangle, color, rotation, origin, scale, effects, and layer.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Draw ( _
+         texture As Texture2D, _
+         position As Vector2, _
+         sourceRectangle As Nullable(Of Rectangle), _
+         color As Color, _
+         rotation As Single, _
+         origin As Vector2, _
+         scale As Single, _
+         effects As SpriteEffects, _
+         layerDepth As Single _
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="sourceRectangle" type="Object"><![CDATA[Type: Nullable &lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Object"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Object"><![CDATA[Type: Single Scale factor.]]></parameter>
+            <parameter name="effects" type="Object"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Object"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color">
+          <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, screen position, source rectangle, and color tint.]]></summary>
+          <syntax><![CDATA[public void Draw (
+         Texture2D texture,
+         Vector2 position,
+         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Color color
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
+            <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Vector2, Color">
+          <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, position and color.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Draw ( _
+         texture As Texture2D, _
+         position As Vector2, _
+         color As Color _
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Rectangle, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, SpriteEffects, Single">
+          <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, destination rectangle, source rectangle, color, rotation, origin, effects and layer.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Draw ( _
+         texture As Texture2D, _
+         destinationRectangle As Rectangle, _
+         sourceRectangle As Nullable(Of Rectangle), _
+         color As Color, _
+         rotation As Single, _
+         origin As Vector2, _
+         effects As SpriteEffects, _
+         layerDepth As Single _
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[Type: Texture2D A texture.]]></parameter>
+            <parameter name="destinationRectangle" type="Object"><![CDATA[Type: Rectangle A rectangle that specifies (in screen coordinates) the destination for drawing the sprite. If this rectangle is not the same size as the source rectangle, the sprite will be scaled to fit.]]></parameter>
+            <parameter name="sourceRectangle" type="Object"><![CDATA[Type: Nullable &lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Object"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="effects" type="Object"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Object"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Vector2, Color">
+          <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, screen position, and color tint.]]></summary>
+          <syntax><![CDATA[public void Draw (
+         Texture2D texture,
+         Vector2 position,
+         Color color
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, Single, SpriteEffects, Single">
+          <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, screen position, optional source rectangle, color tint, rotation, origin, scale, effects, and sort depth.]]></summary>
+          <syntax><![CDATA[public void Draw (
+         Texture2D texture,
+         Vector2 position,
+         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Color color,
+         float rotation,
+         Vector2 origin,
+         float scale,
+         SpriteEffects effects,
+         float layerDepth
+)]]></syntax>
+          <parameters>
+            <parameter name="texture" type="Object"><![CDATA[The sprite texture.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
+            <parameter name="sourceRectangle" type="Object"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the sprite around the origin.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[The origin of the sprite. Specify (0,0) for the upper-left corner.]]></parameter>
+            <parameter name="scale" type="float"><![CDATA[Uniform multiple by which to scale the sprite width and height.]]></parameter>
+            <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
+            <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DrawString" returnType="void">
+      <summary><![CDATA[Adds a string to a batch of sprites for rendering using the specified font, text, position, and color.]]></summary>
+      <overloads>
+        <overload signature="SpriteFont, String, Vector2, Color">
+          <summary><![CDATA[Adds a string to a batch of sprites for rendering using the specified font, text, position, and color.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub DrawString ( _
+         spriteFont As SpriteFont, _
+         text As String, _
+         position As Vector2, _
+         color As Color _
+)]]></syntax>
+          <parameters>
+            <parameter name="spriteFont" type="Object"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
+            <parameter name="text" type="Object"><![CDATA[Type: String A text string.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteFont, StringBuilder, Vector2, Color, Single, Vector2, Single, SpriteEffects, Single">
+          <summary><![CDATA[Adds a string to a batch of sprites for rendering using the specified font, text, position, color, rotation, origin, scale, effects and layer.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub DrawString ( _
+         spriteFont As SpriteFont, _
+         text As StringBuilder, _
+         position As Vector2, _
+         color As Color, _
+         rotation As Single, _
+         origin As Vector2, _
+         scale As Single, _
+         effects As SpriteEffects, _
+         layerDepth As Single _
+)]]></syntax>
+          <parameters>
+            <parameter name="spriteFont" type="Object"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
+            <parameter name="text" type="Object"><![CDATA[Type: StringBuilder Text string.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Object"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Object"><![CDATA[Type: Single Scale factor.]]></parameter>
+            <parameter name="effects" type="Object"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Object"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteFont, String, Vector2, Color">
+          <summary><![CDATA[Adds a sprite string to the batch of sprites to be rendered, specifying the font, output text, screen position, and color tint.]]></summary>
+          <syntax><![CDATA[public void DrawString (
+         SpriteFont spriteFont,
+         string text,
+         Vector2 position,
+         Color color
+)]]></syntax>
+          <parameters>
+            <parameter name="spriteFont" type="SpriteFont"><![CDATA[The sprite font.]]></parameter>
+            <parameter name="text" type="string"><![CDATA[The string to draw.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the text will be drawn.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[The desired color of the text.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteFont, String, Vector2, Color, Single, Vector2, Single, SpriteEffects, Single">
+          <summary><![CDATA[Adds a string to a batch of sprites for rendering using the specified font, text, position, color, rotation, origin, scale, effects and layer.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub DrawString ( _
+         spriteFont As SpriteFont, _
+         text As String, _
+         position As Vector2, _
+         color As Color, _
+         rotation As Single, _
+         origin As Vector2, _
+         scale As Single, _
+         effects As SpriteEffects, _
+         layerDepth As Single _
+)]]></syntax>
+          <parameters>
+            <parameter name="spriteFont" type="Object"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
+            <parameter name="text" type="Object"><![CDATA[Type: String A text string.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Object"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Object"><![CDATA[Type: Single Scale factor.]]></parameter>
+            <parameter name="effects" type="Object"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Object"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteFont, String, Vector2, Color, Single, Vector2, Vector2, SpriteEffects, Single">
+          <summary><![CDATA[Adds a string to a batch of sprites for rendering using the specified font, text, position, color, rotation, origin, scale, effects and layer.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub DrawString ( _
+         spriteFont As SpriteFont, _
+         text As String, _
+         position As Vector2, _
+         color As Color, _
+         rotation As Single, _
+         origin As Vector2, _
+         scale As Vector2, _
+         effects As SpriteEffects, _
+         layerDepth As Single _
+)]]></syntax>
+          <parameters>
+            <parameter name="spriteFont" type="Object"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
+            <parameter name="text" type="Object"><![CDATA[Type: String A text string.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Object"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Object"><![CDATA[Type: Vector2 Scale factor.]]></parameter>
+            <parameter name="effects" type="Object"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Object"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteFont, StringBuilder, Vector2, Color">
+          <summary><![CDATA[Adds a string to a batch of sprites for rendering using the specified font, text, position, and color.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub DrawString ( _
+         spriteFont As SpriteFont, _
+         text As StringBuilder, _
+         position As Vector2, _
+         color As Color _
+)]]></syntax>
+          <parameters>
+            <parameter name="spriteFont" type="Object"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
+            <parameter name="text" type="Object"><![CDATA[Type: StringBuilder Text string.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteFont, StringBuilder, Vector2, Color, Single, Vector2, Vector2, SpriteEffects, Single">
+          <summary><![CDATA[Adds a string to a batch of sprites for rendering using the specified font, text, position, color, rotation, origin, scale, effects and layer.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub DrawString ( _
+         spriteFont As SpriteFont, _
+         text As StringBuilder, _
+         position As Vector2, _
+         color As Color, _
+         rotation As Single, _
+         origin As Vector2, _
+         scale As Vector2, _
+         effects As SpriteEffects, _
+         layerDepth As Single _
+)]]></syntax>
+          <parameters>
+            <parameter name="spriteFont" type="Object"><![CDATA[Type: SpriteFont A font for diplaying text.]]></parameter>
+            <parameter name="text" type="Object"><![CDATA[Type: StringBuilder Text string.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[Type: Vector2 The location (in screen coordinates) to draw the sprite.]]></parameter>
+            <parameter name="color" type="Object"><![CDATA[Type: Color The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
+            <parameter name="rotation" type="Object"><![CDATA[Type: Single Specifies the angle (in radians) to rotate the sprite about its center.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[Type: Vector2 The sprite origin; the default is (0,0) which represents the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Object"><![CDATA[Type: Vector2 Scale factor.]]></parameter>
+            <parameter name="effects" type="Object"><![CDATA[Type: SpriteEffects Effects to apply.]]></parameter>
+            <parameter name="layerDepth" type="Object"><![CDATA[Type: Single The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteFont, String, Vector2, Color, Single, Vector2, Vector2, SpriteEffects, Single">
+          <summary><![CDATA[Adds a sprite string to the batch of sprites to be rendered, specifying the font, output text, screen position, color tint, rotation, origin, scale, effects, and depth.]]></summary>
+          <syntax><![CDATA[public void DrawString (
+         SpriteFont spriteFont,
+         string text,
+         Vector2 position,
+         Color color,
+         float rotation,
+         Vector2 origin,
+         Vector2 scale,
+         SpriteEffects effects,
+         float layerDepth
+)]]></syntax>
+          <parameters>
+            <parameter name="spriteFont" type="SpriteFont"><![CDATA[The sprite font.]]></parameter>
+            <parameter name="text" type="string"><![CDATA[The string to draw.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the text will be drawn.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[The desired color of the text.]]></parameter>
+            <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the text around the origin.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[The origin of the string. Specify (0,0) for the upper-left corner.]]></parameter>
+            <parameter name="scale" type="Object"><![CDATA[Vector containing separate scalar multiples for the x- and y-axes of the sprite.]]></parameter>
+            <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
+            <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
+          </parameters>
+          <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SpriteFont, String, Vector2, Color, Single, Vector2, Single, SpriteEffects, Single">
+          <summary><![CDATA[Adds a sprite string to the batch of sprites to be rendered, specifying the font, output text, screen position, color tint, rotation, origin, scale, and effects.]]></summary>
+          <syntax><![CDATA[public void DrawString (
+         SpriteFont spriteFont,
+         string text,
+         Vector2 position,
+         Color color,
+         float rotation,
+         Vector2 origin,
+         float scale,
+         SpriteEffects effects,
+         float layerDepth
+)]]></syntax>
+          <parameters>
+            <parameter name="spriteFont" type="SpriteFont"><![CDATA[The sprite font.]]></parameter>
+            <parameter name="text" type="string"><![CDATA[The string to draw.]]></parameter>
+            <parameter name="position" type="Object"><![CDATA[The location, in screen coordinates, where the text will be drawn.]]></parameter>
+            <parameter name="color" type="Color"><![CDATA[The desired color of the text.]]></parameter>
+            <parameter name="rotation" type="float"><![CDATA[The angle, in radians, to rotate the text around the origin.]]></parameter>
+            <parameter name="origin" type="Object"><![CDATA[The origin of the string. Specify (0,0) for the upper-left corner.]]></parameter>
+            <parameter name="scale" type="float"><![CDATA[Uniform multiple by which to scale the sprite width and height.]]></parameter>
+            <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
+            <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
+          </parameters>
+          <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="End" returnType="void">
+      <summary><![CDATA[Flushes the sprite batch and restores the device state to how it was before Begin was called.]]></summary>
+      <overloads>
+        <overload signature="End()">
+          <summary><![CDATA[Flushes the sprite batch and restores the device state to how it was before Begin was called.]]></summary>
+          <syntax><![CDATA[public void End ()]]></syntax>
+          <remarks><![CDATA[Call End after all calls to Draw are complete.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="Disposing" type="EventHandler">
+      <summary><![CDATA[Occurs when Dispose is called or when this object is finalized and collected by the garbage collector of the Microsoft .NET common language runtime.]]></summary>
+      <syntax><![CDATA[public event EventHandler Disposing]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

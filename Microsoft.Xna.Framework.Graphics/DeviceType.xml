@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="DeviceType" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Specifies the type of device driver.]]></summary>
+  <syntax><![CDATA[public enum DeviceType]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Hardware"><summary><![CDATA[A hardware device. Using the flag to get direct access to the video hardware.]]></summary></member>
+    <member name="NullReference"><summary><![CDATA[A null device. This is a reference device that can do everything except render a scene.]]></summary></member>
+    <member name="Reference"><summary><![CDATA[A reference device. Use this flag to create a software emulated device.]]></summary></member>
+  </members>
+</xna-type>

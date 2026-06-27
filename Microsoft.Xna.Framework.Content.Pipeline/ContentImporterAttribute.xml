@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentImporterAttribute" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          baseClass="Attribute">
+  <summary><![CDATA[Provides properties that identify and provide metadata about the importer, such as supported file extensions and caching information.]]></summary>
+  <syntax><![CDATA[public class ContentImporterAttribute : Attribute]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentImporterAttribute(String)">
+      <summary><![CDATA[Initializes a new instance of ContentImporterAttribute and sets the file name extension supported by the importer.]]></summary>
+      <syntax><![CDATA[public ContentImporterAttribute (
+         string fileExtension
+)]]></syntax>
+      <parameters>
+        <parameter name="fileExtension" type="string"><![CDATA[The list of file name extensions supported by the importer. Prefix each extension with a '.'.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ContentImporterAttribute(String )">
+      <summary><![CDATA[Initializes a new instance of ContentImporterAttribute and sets the file name extensions supported by the importer.]]></summary>
+      <syntax><![CDATA[public ContentImporterAttribute (
+         string[] fileExtensions
+)]]></syntax>
+      <parameters>
+        <parameter name="fileExtensions" type="string[]"><![CDATA[[ ParamArrayAttribute ] The list of file name extensions supported by the importer. Prefix each extension with a '.'.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="CacheImportedData" type="bool" access="get;set">
+      <summary><![CDATA[Gets and sets the caching of the content during importation.]]></summary>
+      <syntax><![CDATA[public bool CacheImportedData { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DefaultProcessor" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the name of the default processor for content read by this importer.]]></summary>
+      <syntax><![CDATA[public string DefaultProcessor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DisplayName" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets the string representing the importer in a user interface. This name is not used by the content pipeline and should not be passed to the BuildAssets task. It is used for display purposes only.]]></summary>
+      <syntax><![CDATA[public virtual string DisplayName { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FileExtensions" type="IEnumerable&amp;lt;string&amp;gt;" access="get">
+      <summary><![CDATA[Gets the supported file name extensions of the importer.]]></summary>
+      <syntax><![CDATA[public IEnumerable&lt;string&gt; FileExtensions { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

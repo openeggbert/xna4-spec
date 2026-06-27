@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TextureCreationParameters" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[This structure is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public struct TextureCreationParameters]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="TextureCreationParameters(int, int, int, int, SurfaceFormat, ResourceUsage, ResourceManagementMode, Color, FilterOptions, FilterOptions)">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public TextureCreationParameters (
+         int width,
+         int height,
+         int depth,
+         int mipLevels,
+         SurfaceFormat format,
+         ResourceUsage resourceUsage,
+         ResourceManagementMode resourceManagementMode,
+         Color colorKey,
+         FilterOptions filter,
+         FilterOptions mipFilter
+)]]></syntax>
+      <parameters>
+        <parameter name="width" type="int"><![CDATA[Width of the texture.]]></parameter>
+        <parameter name="height" type="int"><![CDATA[Height of the texture.]]></parameter>
+        <parameter name="depth" type="int"><![CDATA[Depth of the texture.]]></parameter>
+        <parameter name="mipLevels" type="int"><![CDATA[Number of mip levels in the texture.]]></parameter>
+        <parameter name="format" type="SurfaceFormat"><![CDATA[The format of the texture.]]></parameter>
+        <parameter name="resourceUsage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this texture resource. If resourceManagementMode is ResourceManagementMode.Automatic , this value cannot be ResourceUsage.Dynamic .]]></parameter>
+        <parameter name="resourceManagementMode" type="ResourceManagementMode"><![CDATA[The memory pool to hold the buffers for this texture resource. If this value is ResourceManagementMode.Automatic , the runtime will recreate the resource when the graphics device is reset. If this value is ResourceManagementMode.Manual , this resource should be re-initialized when the graphics device is reset.]]></parameter>
+        <parameter name="colorKey" type="Color"><![CDATA[The color key of the texture.]]></parameter>
+        <parameter name="filter" type="FilterOptions"><![CDATA[A set of options controlling how the image is filtered.]]></parameter>
+        <parameter name="mipFilter" type="FilterOptions"><![CDATA[A set of options controlling how mipmaps are filtered.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="ColorKey" type="Color" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public Color ColorKey { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Default" type="TextureCreationParameters" access="get" isStatic="true">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public static TextureCreationParameters Default { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Depth" type="int" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public int Depth { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Filter" type="FilterOptions" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public FilterOptions Filter { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Format" type="SurfaceFormat" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public SurfaceFormat Format { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Height" type="int" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public int Height { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MipFilter" type="FilterOptions" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public FilterOptions MipFilter { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MipLevels" type="int" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public int MipLevels { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ResourceManagementMode" type="ResourceManagementMode" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public ResourceManagementMode ResourceManagementMode { get; set; }]]></syntax>
+      <remarks><![CDATA[On Windows, the GetData or SetData methods of a texture will fail if the texture ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target. If this value is ResourceManagementMode.Automatic , ResourceUsage cannot be ResourceUsage.Dynamic .]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ResourceUsage" type="ResourceUsage" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public ResourceUsage ResourceUsage { get; set; }]]></syntax>
+      <remarks><![CDATA[If ResourceManagementMode is ResourceManagementMode.Automatic , this value cannot be ResourceUsage.Dynamic .]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Width" type="int" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public int Width { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current TextureCreationParameters .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Object is equal to the current TextureCreationParameters; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[A hash code for the current TextureCreationParameters.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of the current TextureCreationParameters.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         TextureCreationParameters left,
+         TextureCreationParameters right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="TextureCreationParameters"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="TextureCreationParameters"><![CDATA[The object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if left is equal to right; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         TextureCreationParameters left,
+         TextureCreationParameters right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="TextureCreationParameters"><![CDATA[The object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="TextureCreationParameters"><![CDATA[The object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if left is not equal to right; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

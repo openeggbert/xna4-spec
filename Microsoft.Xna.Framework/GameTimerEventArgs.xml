@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GameTimerEventArgs" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[A snapshot of the game timing state based on game time and not real time.]]></summary>
+  <syntax><![CDATA['Declaration
+Public NotInheritable Class GameTimerEventArgs
+         Inherits EventArgs]]></syntax>
+  <platforms>
+    <platform>Windows Phone</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GameTimerEventArgs()">
+      <summary><![CDATA[Constructs an instance of GameTimerEventArgs.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GameTimerEventArgs(TimeSpan, TimeSpan)">
+      <summary><![CDATA[Constructs an instance of GameTimerEventArgs using the totalTime and elapsedTime values.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         totalTime As TimeSpan, _
+         elapsedTime As TimeSpan _
+)]]></syntax>
+      <parameters>
+        <parameter name="totalTime" type="Object"><![CDATA[Type: TimeSpan Total time since the start of the game.]]></parameter>
+        <parameter name="elapsedTime" type="Object"><![CDATA[Type: TimeSpan Time since the last update.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="ElapsedTime" type="Object" access="get">
+      <summary><![CDATA[Gets the amount of elapsed time.]]></summary>
+      <syntax><![CDATA['Declaration
+Public ReadOnly Property ElapsedTime As TimeSpan]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="TotalTime" type="Object" access="get">
+      <summary><![CDATA[Gets the amount of total time since the start of the game.]]></summary>
+      <syntax><![CDATA['Declaration
+Public ReadOnly Property TotalTime As TimeSpan]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

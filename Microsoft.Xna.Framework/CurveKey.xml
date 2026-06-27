@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CurveKey" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IEquatable&amp;lt;CurveKey&amp;gt;, IComparable&amp;lt;CurveKey&amp;gt;">
+  <summary><![CDATA[Represents a point in a multi-point curve.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute(System.ComponentModel.ExpandableObjectConverter, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)]
+[SerializableAttribute]
+public class CurveKey : IEquatable&lt;CurveKey&gt;, IComparable&lt;CurveKey&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="CurveKey(Single, Single)">
+      <summary><![CDATA[Initializes a new instance of CurveKey.]]></summary>
+      <syntax><![CDATA[public CurveKey (
+         float position,
+         float value
+)]]></syntax>
+      <parameters>
+        <parameter name="position" type="float"><![CDATA[Position in the curve.]]></parameter>
+        <parameter name="value" type="float"><![CDATA[Value of the control point.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="CurveKey(Single, Single, Single, Single)">
+      <summary><![CDATA[Initializes a new instance of CurveKey.]]></summary>
+      <syntax><![CDATA[public CurveKey (
+         float position,
+         float value,
+         float tangentIn,
+         float tangentOut
+)]]></syntax>
+      <parameters>
+        <parameter name="position" type="float"><![CDATA[Position in the curve.]]></parameter>
+        <parameter name="value" type="float"><![CDATA[Value of the control point.]]></parameter>
+        <parameter name="tangentIn" type="float"><![CDATA[Tangent approaching point from the previous point in the curve.]]></parameter>
+        <parameter name="tangentOut" type="float"><![CDATA[Tangent leaving point toward next point in the curve.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="CurveKey(Single, Single, Single, Single, CurveContinuity)">
+      <summary><![CDATA[Initializes a new instance of CurveKey.]]></summary>
+      <syntax><![CDATA[public CurveKey (
+         float position,
+         float value,
+         float tangentIn,
+         float tangentOut,
+         CurveContinuity continuity
+)]]></syntax>
+      <parameters>
+        <parameter name="position" type="float"><![CDATA[Position in the curve.]]></parameter>
+        <parameter name="value" type="float"><![CDATA[Value of the control point.]]></parameter>
+        <parameter name="tangentIn" type="float"><![CDATA[Tangent approaching point from the previous point in the curve.]]></parameter>
+        <parameter name="tangentOut" type="float"><![CDATA[Tangent leaving point toward next point in the curve.]]></parameter>
+        <parameter name="continuity" type="CurveContinuity"><![CDATA[Enum indicating whether the curve is discrete or continuous.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Continuity" type="CurveContinuity" access="get;set">
+      <summary><![CDATA[Describes whether the segment between this point and the next point in the curve is discrete or continuous.]]></summary>
+      <syntax><![CDATA[public CurveContinuity Continuity { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Position" type="float" access="get">
+      <summary><![CDATA[Position of the CurveKey in the curve.]]></summary>
+      <syntax><![CDATA[public float Position { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TangentIn" type="float" access="get;set">
+      <summary><![CDATA[Describes the tangent when approaching this point from the previous point in the curve.]]></summary>
+      <syntax><![CDATA[public float TangentIn { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TangentOut" type="float" access="get;set">
+      <summary><![CDATA[Describes the tangent when leaving this point to the next point in the curve.]]></summary>
+      <syntax><![CDATA[public float TangentOut { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Value" type="float" access="get;set">
+      <summary><![CDATA[Describes the value of this point.]]></summary>
+      <syntax><![CDATA[public float Value { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Clone" returnType="void">
+      <summary><![CDATA[Creates a copy of the CurveKey.]]></summary>
+      <overloads>
+        <overload signature="Clone()">
+          <summary><![CDATA[Creates a copy of the CurveKey.]]></summary>
+          <syntax><![CDATA[public CurveKey Clone ()]]></syntax>
+          <returns><![CDATA[The copy of the CurveKey.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CompareTo" returnType="void">
+      <summary><![CDATA[Compares this instance to another CurveKey and returns an indication of their relative values.]]></summary>
+      <overloads>
+        <overload signature="CompareTo()">
+          <summary><![CDATA[Compares this instance to another CurveKey and returns an indication of their relative values.]]></summary>
+          <syntax><![CDATA[public int CompareTo (
+         CurveKey other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="CurveKey"><![CDATA[CurveKey to compare to.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Zero if the positions are the same; -1 if this CurveKey comes before other and 1 if this CurveKey comes after other.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Value that is true if the current instance is equal to the specified object, or false if it is not.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="CurveKey">
+          <summary><![CDATA[Determines whether the specified Object is equal to the CurveKey.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         CurveKey other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="CurveKey"><![CDATA[The Object to compare with the current CurveKey .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Object is equal to the current CurveKey; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Returns the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Returns the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hashcode for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether two CurveKey instances are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether two CurveKey instances are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         CurveKey a,
+         CurveKey b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="CurveKey"><![CDATA[CurveKey on the left of the equal sign.]]></parameter>
+            <parameter name="b" type="CurveKey"><![CDATA[CurveKey on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the CurveKeys are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether two CurveKey instances are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether two CurveKey instances are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         CurveKey a,
+         CurveKey b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="CurveKey"><![CDATA[CurveKey on the left of the equal sign.]]></parameter>
+            <parameter name="b" type="CurveKey"><![CDATA[CurveKey on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true /&gt; if the CurveKeys are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

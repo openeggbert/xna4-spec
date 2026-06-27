@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexStreamCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Collection of VertexStream objects.]]></summary>
+  <syntax><![CDATA[public sealed class VertexStreamCollection]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Item" type="Object" access="get">
+      <summary><![CDATA[Returns the VertexStream at the specified index.]]></summary>
+      <syntax><![CDATA[public VertexStream this [
+         int index
+] { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

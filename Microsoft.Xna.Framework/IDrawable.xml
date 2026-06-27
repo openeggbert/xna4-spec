@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IDrawable" kind="interface"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Defines the interface for a drawable game component.]]></summary>
+  <syntax><![CDATA[public interface IDrawable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="DrawOrder" type="Object" access="get">
+      <summary><![CDATA[The order in which to draw this object relative to other objects. Objects with a lower value are drawn first.]]></summary>
+      <syntax><![CDATA[public virtual abstract int DrawOrder { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Visible" type="Object" access="get">
+      <summary><![CDATA[Indicates whether IDrawable.Draw should be called in Game.Draw for this game component.]]></summary>
+      <syntax><![CDATA[public virtual abstract bool Visible { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Draw" returnType="void">
+      <summary><![CDATA[Draws the IDrawable.]]></summary>
+      <overloads>
+        <overload signature="Draw()">
+          <summary><![CDATA[Draws the IDrawable.]]></summary>
+          <syntax><![CDATA[public void Draw (
+         GameTime gameTime
+)]]></syntax>
+          <parameters>
+            <parameter name="gameTime" type="GameTime"><![CDATA[Snapshot of the game's timing state.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning In the method of an Xbox 360 game, vertex buffers, index buffers, and textures should not be written using SetData when they are intended to be used for rendering. This condition may lead to graphics corruption or crashes. To avoid this potential issue, use DrawUserPrimitives or DrawUserIndexedPrimitives as the preferred alternative to VertexBuffer.SetData for dynamic vertex generation. This is because, in cases where the size of the back buffer and depth stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. When predicated tiling has been triggered, the drawing commands contained in the function are not submitted until Present is called. (Note that implicitly calls Present at the end of this method.) In this case, these resources are not available for modification until the GPU is finished with presenting the entire frame.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="DrawOrderChanged" type="EventHandler">
+      <summary><![CDATA[Raised when the DrawOrder property changes.]]></summary>
+      <syntax><![CDATA[public virtual abstract event EventHandler DrawOrderChanged]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="VisibleChanged" type="EventHandler">
+      <summary><![CDATA[Raised when the Visible property changes.]]></summary>
+      <syntax><![CDATA[public virtual abstract event EventHandler VisibleChanged]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

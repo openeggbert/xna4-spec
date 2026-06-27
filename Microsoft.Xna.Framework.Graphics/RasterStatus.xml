@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="RasterStatus" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Describes the raster status.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public struct RasterStatus]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="InVerticalBlank" type="bool" access="get">
+      <summary><![CDATA[Gets the status of the vertical blank period.]]></summary>
+      <syntax><![CDATA[public bool InVerticalBlank { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ScanLine" type="int" access="get">
+      <summary><![CDATA[Gets a value that roughly corresponds to the current scan line painted by the raster.]]></summary>
+      <syntax><![CDATA[public int ScanLine { get; }]]></syntax>
+      <remarks><![CDATA[If InVerticalBlank is false , this property's value is an integer that roughly corresponds to the current scan line painted by the raster. Scan lines are numbered in the same way as Microsoft Direct3D surface coordinates: 0 is the top of the primary surface, extending to the value (height of the surface − 1) at the bottom of the display. If InVerticalBlank is true , this value is set to 0 and can be ignored.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

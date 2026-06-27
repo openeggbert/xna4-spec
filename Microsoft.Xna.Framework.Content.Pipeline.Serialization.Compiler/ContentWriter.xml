@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentWriter" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
+          baseClass="BinaryWriter">
+  <summary><![CDATA[Provides an implementation for many of the ContentCompiler methods including compilation, state tracking for shared resources and creation of the header type manifest.]]></summary>
+  <syntax><![CDATA[public sealed class ContentWriter : BinaryWriter]]></syntax>
+  <remarks><![CDATA[A new ContentWriter is constructed for each compilation operation.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="TargetPlatform" type="TargetPlatform" access="get">
+      <summary><![CDATA[Gets the content build target platform.]]></summary>
+      <syntax><![CDATA[public TargetPlatform TargetPlatform { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TargetProfile" type="GraphicsProfile" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public GraphicsProfile TargetProfile { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Write" returnType="void">
+      <summary><![CDATA[Writes a Vector2 value.]]></summary>
+      <overloads>
+        <overload signature="Vector2">
+          <summary><![CDATA[Writes a Vector2 value.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Vector2 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Value to write.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector4">
+          <summary><![CDATA[Writes a Vector4 value.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Vector4 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Value to write.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix">
+          <summary><![CDATA[Writes a Matrix value.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Matrix value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Matrix"><![CDATA[Value to write.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Color">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Write ( _
+         value As Color _
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Type: Color Value of a color using Red, Green, Blue, and Alpha values to write.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion">
+          <summary><![CDATA[Writes a Quaternion value.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Quaternion value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Quaternion"><![CDATA[Value to write.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3">
+          <summary><![CDATA[Writes a Vector3 value.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Vector3 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Value to write.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

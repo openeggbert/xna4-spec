@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="FogMode" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[This enumeration is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public enum FogMode]]></syntax>
+  <remarks><![CDATA[Fog can be considered a measure of visibility. The lower the fog value produced by a fog equation, the less visible an object is.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Exponent"><summary><![CDATA[Fog effect intensifies in a linear manner between the start and end points, according to the following formula.]]></summary></member>
+    <member name="ExponentSquared"><summary><![CDATA[Fog effect intensifies exponentially with the square of the distance, according to the following formula.]]></summary></member>
+    <member name="Linear"><summary><![CDATA[Fog effect intensifies exponentially, according to the following formula.]]></summary></member>
+    <member name="None"><summary><![CDATA[No fog effect.]]></summary></member>
+  </members>
+</xna-type>

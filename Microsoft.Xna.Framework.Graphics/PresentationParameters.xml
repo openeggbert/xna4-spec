@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PresentationParameters" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IDisposable">
+  <summary><![CDATA[Contains presentation parameters.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public class PresentationParameters : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="PresentationParameters()">
+      <summary><![CDATA[Initializes a new instance of this class.]]></summary>
+      <syntax><![CDATA[public PresentationParameters ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="AutoDepthStencilFormat" type="DepthFormat" access="get;set">
+      <summary><![CDATA[Gets or sets a value specifying the format of the depth-stencil surface that the device will automatically create.]]></summary>
+      <syntax><![CDATA[public DepthFormat AutoDepthStencilFormat { get; set; }]]></syntax>
+      <remarks><![CDATA[This member is ignored unless EnableAutoDepthStencil is true . Warning In cases where the size of the back buffer and depth stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. Using a depth-stencil surface directly affects the size of the back buffer and depth-stencil buffer and may trigger predicated tiling.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="BackBufferCount" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets a value specifying how many back buffers to create.]]></summary>
+      <syntax><![CDATA[public int BackBufferCount { get; set; }]]></syntax>
+      <remarks><![CDATA[When an instance of this class is returned from a method (for example, the GraphicsDevice constructor), BackBufferCount is set to the number of back buffers that can be created. For that reason, an application can call the method twice and expect the second call to successfully create back buffers. SwapEffect.Copy requires exactly one back buffer.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="BackBufferFormat" type="SurfaceFormat" access="get;set">
+      <summary><![CDATA[Gets or sets the format of the back buffer.]]></summary>
+      <syntax><![CDATA[public SurfaceFormat BackBufferFormat { get; set; }]]></syntax>
+      <remarks><![CDATA[For windowed applications, the back-buffer format no longer needs to match the display-mode format because color conversion can now be done by the hardware (if the hardware supports color conversion). The set of possible back-buffer formats is constrained, but the runtime will allow any valid back-buffer format to be presented to any desktop format. (There is the additional requirement that the device be operable in the desktop mode; devices typically do not operate in 8-bits-per-pixel modes.) Full screen applications cannot do color conversion. Warning In cases where the size of the back buffer and depth stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. The format of the back buffer chosen with the BackBufferFormat property directly affects the size of the back buffer and may trigger predicated tiling.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="BackBufferHeight" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets a value indicating the height of the new swap chain's back buffer.]]></summary>
+      <syntax><![CDATA[public int BackBufferHeight { get; set; }]]></syntax>
+      <remarks><![CDATA[If IsFullScreen is true , BackBufferHeight and BackBufferWidth must equal the width and height of one of the enumerated display modes found through SupportedDisplayModes . If IsFullScreen is false and either of these values is zero, the corresponding dimension of the client area of the DeviceWindowHandle (or the focus window, if DeviceWindowHandle is Zero ) is taken.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="BackBufferWidth" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets a value indicating the width of the new swap chain's back buffer.]]></summary>
+      <syntax><![CDATA[public int BackBufferWidth { get; set; }]]></syntax>
+      <remarks><![CDATA[If IsFullScreen is true , BackBufferHeight and BackBufferWidth must equal the width and height of one of the enumerated display modes found through SupportedDisplayModes . If IsFullScreen is false and either of these values is zero, the corresponding dimension of the client area of the DeviceWindowHandle (or the focus window, if DeviceWindowHandle is Zero ) is taken.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Bounds" type="Rectangle" access="get">
+      <summary><![CDATA[Gets the size of this resource.]]></summary>
+      <syntax><![CDATA[public Rectangle Bounds { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="DepthStencilFormat" type="DepthFormat" access="get;set">
+      <summary><![CDATA[Gets or sets the depth stencil data format.]]></summary>
+      <syntax><![CDATA[public DepthFormat DepthStencilFormat { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="DeviceWindowHandle" type="IntPtr" access="get;set">
+      <summary><![CDATA[Gets or sets the handle to the device window.]]></summary>
+      <syntax><![CDATA[public IntPtr DeviceWindowHandle { get; set; }]]></syntax>
+      <remarks><![CDATA[The device window determines the location and size of the back buffer on screen. This is used by Direct3D when the back buffer contents are copied to the front buffer during Present . For a full screen application, this is a handle to the top window (which is the focus window). For applications that use multiple full screen devices (such as a multimonitor system), exactly one device can use the focus window as the device window. All other devices must have unique device windows. For a windowed-mode application, this handle will be the default target window for Present . If this handle is Zero , the focus window will be taken. Note that the runtime does not attempt to reflect user changes in window size. The back buffer is not implicitly reset when this window is reset. However, the Present method does automatically track window position changes.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DisplayOrientation" type="DisplayOrientation" access="get;set">
+      <summary><![CDATA[Gets or sets the orientation of the display. The default value is DisplayOrientation.Default, which means orientation is determined automatically from your BackBufferWidth and BackBufferHeight.]]></summary>
+      <syntax><![CDATA[public DisplayOrientation DisplayOrientation { get; set; }]]></syntax>
+      <remarks><![CDATA[Windows Phone Specific Information Orientation settings apply only to Windows Phone-based games.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="EnableAutoDepthStencil" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets a value indicating whether Direct3D will manage depth buffers for the application.]]></summary>
+      <syntax><![CDATA[public bool EnableAutoDepthStencil { get; set; }]]></syntax>
+      <remarks><![CDATA[If EnableAutoDepthStencil is true , the device will create a depth-stencil buffer when it is created. The depth-stencil buffer will be automatically set as the render target of the device. When the device is reset, the depth-stencil buffer will be automatically destroyed and recreated in the new size. If EnableAutoDepthStencil is true , then AutoDepthStencilFormat must be a valid depth-stencil format.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FullScreenRefreshRateInHz" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets a value indicating the rate at which the display adapter will refresh the screen.]]></summary>
+      <syntax><![CDATA[public int FullScreenRefreshRateInHz { get; set; }]]></syntax>
+      <remarks><![CDATA[For full screen mode, the refresh rate must be one of the refresh rates found in SupportedDisplayModes .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsFullScreen" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets a value indicating whether the application is in full screen mode.]]></summary>
+      <syntax><![CDATA[public bool IsFullScreen { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MultiSampleCount" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets a value indicating the number of sample locations during multisampling.]]></summary>
+      <syntax><![CDATA[public int MultiSampleCount { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="MultiSampleQuality" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets a value indicating the multisample quality level.]]></summary>
+      <syntax><![CDATA[public int MultiSampleQuality { get; set; }]]></syntax>
+      <remarks><![CDATA[Paired values of render targets or of depth-stencil surfaces and MultiSampleType must match.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MultiSampleType" type="MultiSampleType" access="get;set">
+      <summary><![CDATA[Gets or sets the multisample type.]]></summary>
+      <syntax><![CDATA[public MultiSampleType MultiSampleType { get; set; }]]></syntax>
+      <remarks><![CDATA[Warning In cases where the size of the back buffer and depth stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. The multisampling chosen with the MultiSampleType property directly affects the size of the back buffer and may trigger predicated tiling.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PresentOptions" type="PresentOptions" access="get;set">
+      <summary><![CDATA[Gets or sets miscellaneous presentation flags.]]></summary>
+      <syntax><![CDATA[public PresentOptions PresentOptions { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PresentationInterval" type="PresentInterval" access="get;set">
+      <summary><![CDATA[Gets or sets the maximum rate at which the swap chain's back buffers can be presented to the front buffer.]]></summary>
+      <syntax><![CDATA[public PresentInterval PresentationInterval { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RenderTargetUsage" type="RenderTargetUsage" access="get;set">
+      <summary><![CDATA[Gets or sets render target usage flags.]]></summary>
+      <syntax><![CDATA[public RenderTargetUsage RenderTargetUsage { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="SwapEffect" type="SwapEffect" access="get;set">
+      <summary><![CDATA[Gets or sets the swap effect.]]></summary>
+      <syntax><![CDATA[public SwapEffect SwapEffect { get; set; }]]></syntax>
+      <remarks><![CDATA[The runtime will guarantee the implied semantics concerning buffer swap behavior; therefore, if IsFullScreen is false and SwapEffect is set to SwapEffect.Flip , the runtime will create one extra back buffer and copy whichever becomes the front buffer at presentation time. SwapEffect.Copy requires that BackBufferCount be set to 1. SwapEffect.Discard will be enforced in the debug runtime by filling any buffer with noise after it is presented.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Clear" returnType="void">
+      <summary><![CDATA[Resets all of the PresentationParameters values.]]></summary>
+      <overloads>
+        <overload signature="Clear()">
+          <summary><![CDATA[Resets all of the PresentationParameters values.]]></summary>
+          <syntax><![CDATA[public void Clear ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Clone" returnType="void">
+      <summary><![CDATA[Creates a copy of this PresentationParameters object.]]></summary>
+      <overloads>
+        <overload signature="Clone()">
+          <summary><![CDATA[Creates a copy of this PresentationParameters object.]]></summary>
+          <syntax><![CDATA[public PresentationParameters Clone ()]]></syntax>
+          <returns><![CDATA[A copy of this PresentationParameters object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool 
+)]]></syntax>
+          <remarks><![CDATA[This method is called by the public Dispose method and the Finalize method. Dispose invokes the protected Dispose(Boolean) method with the disposing parameter set to true . Finalize invokes Dispose(Boolean) with disposing set to false . When the disposing parameter is true , this method releases all resources held by any managed objects that this PresentationParameters references. This method invokes the Dispose method of each referenced object. Note Notes to Inheritors Dispose can be called multiple times by other objects. When overriding Dispose(Boolean) , be careful not to reference objects disposed of in an earlier call to Dispose .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <remarks><![CDATA[Call Dispose when you are finished using the PresentationParameters . The Dispose method leaves the PresentationParameters in an unusable state. After calling Dispose , you must release all references to the PresentationParameters so the garbage collector can reclaim the memory that the PresentationParameters was occupying. Note Always call Dispose before you release your last reference to the PresentationParameters . Otherwise, the resources it is using will not be freed until the garbage collector calls the PresentationParameters object's Finalize method.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current PresentationParameters .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         PresentationParameters left,
+         PresentationParameters right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="PresentationParameters"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="PresentationParameters"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         PresentationParameters left,
+         PresentationParameters right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="PresentationParameters"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="PresentationParameters"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="DefaultPresentRate" type="int" isReadOnly="true">
+      <summary><![CDATA[The default presentation rate.]]></summary>
+      <syntax><![CDATA[public const int DefaultPresentRate]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

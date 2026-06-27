@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ProcessorParameterCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          baseClass="ReadOnlyCollection&amp;lt;ProcessorParameter&amp;gt;">
+  <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public sealed class ProcessorParameterCollection : ReadOnlyCollection&lt;ProcessorParameter&gt;]]></syntax>
+  <platforms>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

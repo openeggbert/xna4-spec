@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EffectProcessorDebugMode" kind="enum"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <summary><![CDATA[This enumeration is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public enum EffectProcessorDebugMode]]></syntax>
+  <platforms>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <members>
+    <member name="Auto"><summary><![CDATA[0]]></summary></member>
+    <member name="Debug"><summary><![CDATA[1]]></summary></member>
+    <member name="Optimize"><summary><![CDATA[2]]></summary></member>
+  </members>
+</xna-type>

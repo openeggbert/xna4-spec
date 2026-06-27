@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BasicDirectionalLight" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Provides methods for manipulating the directional lights used by the BasicEffect class.]]></summary>
+  <syntax><![CDATA[public sealed class BasicDirectionalLight]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="DiffuseColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the diffuse color of this light.]]></summary>
+      <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Direction" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets light direciton.]]></summary>
+      <syntax><![CDATA[public Vector3 Direction { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Enabled" type="bool" access="get;set">
+      <summary><![CDATA[Enables this light.]]></summary>
+      <syntax><![CDATA[public bool Enabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SpecularColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the specular color of the light.]]></summary>
+      <syntax><![CDATA[public Vector3 SpecularColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

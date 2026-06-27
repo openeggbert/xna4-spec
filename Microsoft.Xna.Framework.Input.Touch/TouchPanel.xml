@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TouchPanel" kind="class"
+          namespace="Microsoft.Xna.Framework.Input.Touch"
+          assembly="Microsoft.Xna.Framework.Input.Touch">
+  <summary><![CDATA[Provides methods for retrieving touch panel device information.]]></summary>
+  <syntax><![CDATA[public static class TouchPanel]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="DisplayHeight" type="int" access="get;set" isStatic="true">
+      <summary><![CDATA[Gets or sets the display height of the touch panel.]]></summary>
+      <syntax><![CDATA[public static int DisplayHeight { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DisplayOrientation" type="DisplayOrientation" access="get;set" isStatic="true">
+      <summary><![CDATA[Gets or sets the display orientation of the touch panel.]]></summary>
+      <syntax><![CDATA[public static DisplayOrientation DisplayOrientation { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DisplayWidth" type="int" access="get;set" isStatic="true">
+      <summary><![CDATA[Gets or sets the display width of the touch panel.]]></summary>
+      <syntax><![CDATA[public static int DisplayWidth { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="EnabledGestures" type="GestureType" access="get;set" isStatic="true">
+      <summary><![CDATA[Gets or sets the gestures that are enabled for the touch panel.]]></summary>
+      <syntax><![CDATA[public static GestureType EnabledGestures { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="IsGestureAvailable" type="bool" access="get" isStatic="true">
+      <summary><![CDATA[Used to determine if a touch gesture is available.]]></summary>
+      <syntax><![CDATA[public static bool IsGestureAvailable { get; }]]></syntax>
+      <remarks><![CDATA[Before gestures can become available, they first must be set with the TouchPanel.EnabledGestures property. If IsGestureAvailable is true , TouchPanel.ReadGesture can be used to read the gesture data.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="WindowHandle" type="IntPtr" access="get;set" isStatic="true">
+      <summary><![CDATA[The window handle of the touch panel.]]></summary>
+      <syntax><![CDATA[public static IntPtr WindowHandle { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetCapabilities" returnType="void">
+      <summary><![CDATA[Gets the touch panel capabilities for an available device.]]></summary>
+      <overloads>
+        <overload signature="GetCapabilities()">
+          <summary><![CDATA[Gets the touch panel capabilities for an available device.]]></summary>
+          <syntax><![CDATA[public static TouchPanelCapabilities GetCapabilities ()]]></syntax>
+          <returns><![CDATA[Information about the capabilities of the touch panel device.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetState" returnType="void">
+      <summary><![CDATA[Gets the current state of the touch panel.]]></summary>
+      <overloads>
+        <overload signature="GetState()">
+          <summary><![CDATA[Gets the current state of the touch panel.]]></summary>
+          <syntax><![CDATA[public static TouchCollection GetState ()]]></syntax>
+          <returns><![CDATA[State of the touch panel and any existing touch locations.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadGesture" returnType="void">
+      <summary><![CDATA[Reads an available gesture on the touch panel.]]></summary>
+      <overloads>
+        <overload signature="ReadGesture()">
+          <summary><![CDATA[Reads an available gesture on the touch panel.]]></summary>
+          <syntax><![CDATA[public static GestureSample ReadGesture ()]]></syntax>
+          <returns><![CDATA[A GestureSample that represents the next gesture to read.]]></returns>
+          <remarks><![CDATA[After reading a gesture, TouchPanel.IsGestureAvailable is true if there are more gestures to read.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

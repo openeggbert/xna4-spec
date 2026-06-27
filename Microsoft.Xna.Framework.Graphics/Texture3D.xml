@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Texture3D" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="Texture">
+  <summary><![CDATA[Represents a 3D volume of texels.]]></summary>
+  <syntax><![CDATA[public class Texture3D : Texture]]></syntax>
+  <remarks><![CDATA[A texel represents the smallest unit of a texture that can be read from or written to by the GPU. A texel is composed of 1 to 4 components. Specifically, a texel may be any one of the available texture formats represented in the SurfaceFormat enumeration. A Texture3D resource (also known as a volume texture) contains a 3D volume of texels. Since it is a texture resource, it may contain mipmap levels. Figure 1 shows a fully populated Texture3D resource. Figure 1.&nbsp;&nbsp;Texture3D Resource Architecture When a Texture3D mipmap slice is bound as a render target output (by creating a RenderTargetCube ), the Texture3D behaves identically to an array of Texture2D objects with n array slices, where n is the depth (third dimension) of the Texture3D .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Texture3D(GraphicsDevice, int, int, int, int, ResourceUsage, SurfaceFormat)">
+      <summary><![CDATA[Creates an uninitialized volume texture resource of the given dimensions, specifying the memory management mode for the resource. To initialize a Texture3D from an existing file, see the static method ContentManager.Load or FromFile.]]></summary>
+      <syntax><![CDATA[public Texture3D (
+         GraphicsDevice graphicsDevice,
+         int width,
+         int height,
+         int depth,
+         int numberLevels,
+         ResourceUsage usage,
+         SurfaceFormat format
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice that will display the volume texture.]]></parameter>
+        <parameter name="width" type="int"><![CDATA[The width, in pixels, of the top-level of the volume texture. This value must be a power of two if the RequiresPower2 property of graphicsDevice is true . The pixel dimensions of subsequent levels will be the truncated value of half of the previous level's pixel dimension (independently). Each dimension clamps at a size of 1 pixel. Thus, if the division by two results in 0 (zero), 1 will be taken instead. The maximum dimension that a driver supports (for , height , and depth ) can be found in MaxVolumeExtent .]]></parameter>
+        <parameter name="height" type="int"><![CDATA[The height, in pixels, of the top-level of the volume texture. This value must be a power of two if the RequiresPower2 property of graphicsDevice is true . The pixel dimensions of subsequent levels will be the truncated value of half of the previous level's pixel dimension (independently). Each dimension clamps at a size of 1 pixel. Thus, if the division by two results in 0 (zero), 1 will be taken instead. The maximum dimension that a driver supports (for width , , and depth ) can be found in MaxVolumeExtent .]]></parameter>
+        <parameter name="depth" type="int"><![CDATA[The depth, in pixels, of the top-level of the volume texture. This value must be a power of two if the RequiresVolumeMapPower2 property of graphicsDevice is true . The pixel dimensions of subsequent levels will be the truncated value of half of the previous level's pixel dimension (independently). Each dimension clamps at a size of 1 pixel. Thus, if the division by two results in 0 (zero), 1 will be taken instead. The maximum dimension that a driver supports (for width , height , and ) can be found in MaxVolumeExtent .]]></parameter>
+        <parameter name="numberLevels" type="int"><![CDATA[The number of downsampled surfaces to create when preprocessing the texture. These smaller versions of the texture, known as mip levels, are used when the texture is minified to fit a smaller area than the original texture size. The chain of downsampled surfaces associated with a texture is sometimes called a mipmap chain. If is zero, all texture sublevels down to 1×1 pixels will be generated for hardware that supports mipmapped textures. Use LevelCount to see the number of levels generated.]]></parameter>
+        <parameter name="usage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this volume texture resource.]]></parameter>
+        <parameter name="format" type="SurfaceFormat"><![CDATA[The format of all levels in the volume texture resource.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[A texel represents the smallest unit of a texture that can be read from or written to by the GPU. A texel is composed of 1 to 4 components. Specifically, a texel may be any one of the available texture formats represented in the SurfaceFormat enumeration. A resource (also known as a volume texture) contains a 3D volume of texels. Since it is a texture resource, it may contain mipmap levels. Figure 1 shows a fully populated **** resource. Figure 1.&nbsp;&nbsp;Texture3D Resource Architecture When a mipmap slice is bound as a render target output (by creating a RenderTargetCube ), the **** behaves identically to an array of Texture2D objects with n array slices, where n is the depth (third dimension) of the .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Texture3D(Object, Object, Object, Object, Object, Object)">
+      <summary><![CDATA[Creates a new instance of this object.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         graphicsDevice As GraphicsDevice, _
+         width As Integer, _
+         height As Integer, _
+         depth As Integer, _
+         mipMap As Boolean, _
+         format As SurfaceFormat _
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice A device.]]></parameter>
+        <parameter name="width" type="Object"><![CDATA[Type: Int32 Texture width.]]></parameter>
+        <parameter name="height" type="Object"><![CDATA[Type: Int32 Texture height.]]></parameter>
+        <parameter name="depth" type="Object"><![CDATA[Type: Int32 Texture depth.]]></parameter>
+        <parameter name="mipMap" type="Object"><![CDATA[Type: Boolean [ MarshalAsAttribute (U1)] True to generate a full mipmap chain; false otherwise.]]></parameter>
+        <parameter name="format" type="Object"><![CDATA[Type: SurfaceFormat Data format.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Depth" type="int" access="get">
+      <summary><![CDATA[Gets the depth of this volume texture resource, in pixels.]]></summary>
+      <syntax><![CDATA[public int Depth { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Format" type="SurfaceFormat" access="get">
+      <summary><![CDATA[Gets the pixel format for this texture resource.]]></summary>
+      <syntax><![CDATA[public SurfaceFormat Format { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Height" type="int" access="get">
+      <summary><![CDATA[Gets the height of this texture resource, in pixels.]]></summary>
+      <syntax><![CDATA[public int Height { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ResourceManagementMode" type="ResourceManagementMode" access="get">
+      <summary><![CDATA[Gets the memory management mode to use for this volume texture resource.]]></summary>
+      <syntax><![CDATA[public ResourceManagementMode ResourceManagementMode { get; }]]></syntax>
+      <remarks><![CDATA[On Windows, GetData and SetData will fail if Texture3D.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target. If this value is ResourceManagementMode.Automatic , Texture3D.ResourceUsage cannot be ResourceUsage.Dynamic .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ResourceUsage" type="ResourceUsage" access="get">
+      <summary><![CDATA[Gets a set of options identifying the behaviors of this resource.]]></summary>
+      <syntax><![CDATA[public ResourceUsage ResourceUsage { get; }]]></syntax>
+      <remarks><![CDATA[If ResourceManagementMode is ResourceManagementMode.Automatic , this value cannot be ResourceUsage.Dynamic .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Width" type="int" access="get">
+      <summary><![CDATA[Gets the width of this texture resource, in pixels.]]></summary>
+      <syntax><![CDATA[public int Width { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Releases the unmanaged resources used by the Texture3D and optionally releases the managed resources.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Releases the unmanaged resources used by the Texture3D and optionally releases the managed resources.]]></summary>
+          <syntax><![CDATA[protected override void Dispose (
+         bool 
+)]]></syntax>
+          <remarks><![CDATA[This method is called by the public Dispose method and the Finalize method. Dispose invokes the protected Dispose(Boolean) method with the disposing parameter set to true . Finalize invokes Dispose(Boolean) with disposing set to false . When the disposing parameter is true , this method releases all resources held by any managed objects that this Texture3D references. This method invokes the Dispose method of each referenced object. Note Notes to Inheritors Dispose can be called multiple times by other objects. When overriding Dispose(Boolean) , be careful not to reference objects disposed of in an earlier call to Dispose .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current Texture3D .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <remarks><![CDATA[This method overrides System.Object.Finalize . Application code should not call this method; an object's Finalize method is automatically invoked during garbage collection, unless a call to the GC.SuppressFinalize method has disabled finalization by the garbage collector.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="FromFile" returnType="Texture3D" isStatic="true">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="GraphicsDevice, Stream, TextureCreationParameters">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static Texture3D FromFile (
+         GraphicsDevice graphicsDevice,
+         Stream textureStream,
+         TextureCreationParameters creationParameters
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to use to create the texture resource.]]></parameter>
+            <parameter name="textureStream" type="Stream"><![CDATA[Stream containing the texture data.]]></parameter>
+            <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[Texture creation options.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, String, TextureCreationParameters">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static Texture3D FromFile (
+         GraphicsDevice graphicsDevice,
+         string filename,
+         TextureCreationParameters creationParameters
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to use to create the texture resource.]]></parameter>
+            <parameter name="filename" type="string"><![CDATA[The name of the file containing the texture.]]></parameter>
+            <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[The parameters to use when creating this texture.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, String">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static Texture3D FromFile (
+         GraphicsDevice graphicsDevice,
+         string filename
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to use to create the texture resource.]]></parameter>
+            <parameter name="filename" type="string"><![CDATA[The name of the file containing the texture.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, String, Int32, Int32, Int32">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static Texture3D FromFile (
+         GraphicsDevice graphicsDevice,
+         string filename,
+         int width,
+         int height,
+         int depth
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to use to create the texture resource.]]></parameter>
+            <parameter name="filename" type="string"><![CDATA[The name of the file containing the texture.]]></parameter>
+            <parameter name="width" type="int"><![CDATA[The width, in pixels, of the texture.]]></parameter>
+            <parameter name="height" type="int"><![CDATA[The height, in pixels, of the texture.]]></parameter>
+            <parameter name="depth" type="int"><![CDATA[The depth, in pixels, of the texture.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Stream">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static Texture3D FromFile (
+         GraphicsDevice graphicsDevice,
+         Stream textureStream
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to use to create the texture resource.]]></parameter>
+            <parameter name="textureStream" type="Stream"><![CDATA[Stream containing the volume texture data.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Stream, Int32, TextureCreationParameters">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static Texture3D FromFile (
+         GraphicsDevice graphicsDevice,
+         Stream textureStream,
+         int numberBytes,
+         TextureCreationParameters creationParameters
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to use to create the texture resource.]]></parameter>
+            <parameter name="textureStream" type="Stream"><![CDATA[Stream containing the volume texture data.]]></parameter>
+            <parameter name="numberBytes" type="int"><![CDATA[The number of bytes in textureStream .]]></parameter>
+            <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[The parameters to use when creating this texture.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Stream, Int32">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static Texture3D FromFile (
+         GraphicsDevice graphicsDevice,
+         Stream textureStream,
+         int numberBytes
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to use to create the texture resource.]]></parameter>
+            <parameter name="textureStream" type="Stream"><![CDATA[Stream containing the texture data.]]></parameter>
+            <parameter name="numberBytes" type="int"><![CDATA[The number of bytes in textureStream .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="bool" isStatic="true">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="Texture3D, Texture3D">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Texture3D left,
+         Texture3D right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="Object"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="Object"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="bool" isStatic="true">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="Texture3D, Texture3D">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Texture3D left,
+         Texture3D right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="Object"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="Object"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

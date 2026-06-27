@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MaterialContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="ContentItem">
+  <summary><![CDATA[Provides methods and properties for maintaining a collection of named texture references.]]></summary>
+  <syntax><![CDATA[public class MaterialContent : ContentItem]]></syntax>
+  <remarks><![CDATA[In addition to texture references, opaque data values are stored in the OpaqueData property of the base class.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="MaterialContent()">
+      <summary><![CDATA[Initializes a new instance of MaterialContent.]]></summary>
+      <syntax><![CDATA[public MaterialContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Textures" type="TextureReferenceDictionary" access="get">
+      <summary><![CDATA[Gets the texture collection of the material.]]></summary>
+      <syntax><![CDATA[public TextureReferenceDictionary Textures { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetTexture" returnType="void">
+      <summary><![CDATA[Gets a value from the Textures collection.]]></summary>
+      <overloads>
+        <overload signature="GetTexture()">
+          <summary><![CDATA[Gets a value from the Textures collection.]]></summary>
+          <syntax><![CDATA[protected ExternalReference&lt;TextureContent&gt; GetTexture (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Key of the texture being retrieved.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Reference to a texture from the collection.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetTexture" returnType="void">
+      <summary><![CDATA[Sets a value in the contained TextureReferenceDictionary object.]]></summary>
+      <overloads>
+        <overload signature="SetTexture()">
+          <summary><![CDATA[Sets a value in the contained TextureReferenceDictionary object.]]></summary>
+          <syntax><![CDATA[protected void SetTexture (
+         string key,
+         ExternalReference&lt;TextureContent&gt; value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Name of the key being modified.]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[Value being set.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

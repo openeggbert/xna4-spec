@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Dxt5BitmapContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="DxtBitmapContent">
+  <summary><![CDATA[Provides methods and properties for managing compressed textures (DXT5).]]></summary>
+  <syntax><![CDATA[public class Dxt5BitmapContent : DxtBitmapContent]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Dxt5BitmapContent(int, int)">
+      <summary><![CDATA[Initializes a new instance of Dxt5BitmapContent with the specified width and height.]]></summary>
+      <syntax><![CDATA[public Dxt5BitmapContent (
+         int width,
+         int height
+)]]></syntax>
+      <parameters>
+        <parameter name="width" type="int"><![CDATA[Width of the bitmap, in pixels.]]></parameter>
+        <parameter name="height" type="int"><![CDATA[Height of the bitmap, in pixels.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="TryGetFormat" returnType="void">
+      <summary><![CDATA[Attempts to get the GPU texture format of this bitmap type.]]></summary>
+      <overloads>
+        <overload signature="TryGetFormat()">
+          <summary><![CDATA[Attempts to get the GPU texture format of this bitmap type.]]></summary>
+          <syntax><![CDATA[public override bool TryGetFormat (
+         out SurfaceFormat format
+)]]></syntax>
+          <parameters>
+            <parameter name="format" type="SurfaceFormat"><![CDATA[[ OutAttribute ] Matching GPU format.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the bitmap matches a GPU format; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

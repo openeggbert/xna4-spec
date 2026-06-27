@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="HostChangedEventArgs" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="EventArgs">
+  <summary><![CDATA[Represents the arguments passed to a HostChanged event. These arguments are passed to event handlers when the host changes for a multiplayer session. This class contains the NetworkGamer instance that is the new host of the multiplayer session.]]></summary>
+  <syntax><![CDATA[public class HostChangedEventArgs : EventArgs]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="HostChangedEventArgs(NetworkGamer, NetworkGamer)">
+      <summary><![CDATA[Creates an instance of HostChangedEventArgs.]]></summary>
+      <syntax><![CDATA[public HostChangedEventArgs (
+         NetworkGamer oldHost,
+         NetworkGamer newHost
+)]]></syntax>
+      <parameters>
+        <parameter name="oldHost" type="NetworkGamer"><![CDATA[The player who was the previous session host.]]></parameter>
+        <parameter name="newHost" type="NetworkGamer"><![CDATA[The player who is the new host of the multiplayer session.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="NewHost" type="NetworkGamer" access="get">
+      <summary><![CDATA[Gets the new host of the session.]]></summary>
+      <syntax><![CDATA[public NetworkGamer NewHost { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="OldHost" type="NetworkGamer" access="get">
+      <summary><![CDATA[Gets the player who was the previous session host.]]></summary>
+      <syntax><![CDATA[public NetworkGamer OldHost { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

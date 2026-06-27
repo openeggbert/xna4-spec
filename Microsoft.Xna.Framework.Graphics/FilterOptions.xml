@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="FilterOptions" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[This enumeration is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum FilterOptions]]></syntax>
+  <remarks><![CDATA[Each valid filter must contain exactly one of the following flags: None , Point , Linear , Triangle , or Box . In addition, the bitwise OR operator can be used to specify zero or more of the following optional flags with a valid filter: MirrorU , MirrorV , MirrorW , Mirror , or Dither .]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Box"><summary><![CDATA[Each pixel is computed by averaging a 2×2(×2) box of pixels from the source image. This filter works only when the dimensions of the destination are half those of the source, as is the case with mipmaps.]]></summary></member>
+    <member name="Dither"><summary><![CDATA[Resulting image must be dithered using a 4×4 ordered dither algorithm. This happens when converting from one format to another.]]></summary></member>
+    <member name="DitherDiffusion"><summary><![CDATA[Do diffuse dithering on the image when changing from one format to another.]]></summary></member>
+    <member name="Linear"><summary><![CDATA[Bilinear interpolation filtering is used as a texture magnification or minification filter. A weighted average of a 2×2 area of texels surrounding the desired pixel is used. The texture filter to use between mipmap levels is trilinear mipmap interpolation. The rasterizer interpolates pixel color in a linear manner, using the texels of the two nearest textures.]]></summary></member>
+    <member name="Mirror"><summary><![CDATA[Same as specifying the MirrorU, MirrorV, and MirrorW flags. This flag is always used internally for this function.]]></summary></member>
+    <member name="MirrorU"><summary><![CDATA[Pixels off the edge of the texture on the u-axis should be mirrored, not wrapped.]]></summary></member>
+    <member name="MirrorV"><summary><![CDATA[Pixels off the edge of the texture on the v-axis should be mirrored, not wrapped.]]></summary></member>
+    <member name="MirrorW"><summary><![CDATA[Pixels off the edge of the texture on the w-axis should be mirrored, not wrapped.]]></summary></member>
+    <member name="None"><summary><![CDATA[Mipmapping disabled. The rasterizer uses the magnification filter instead.]]></summary></member>
+    <member name="Point"><summary><![CDATA[Each destination pixel is computed by sampling the nearest pixel from the source image.]]></summary></member>
+    <member name="Srgb"><summary><![CDATA[Same as specifying SrgbIn | SrgbOut.]]></summary></member>
+    <member name="SrgbIn"><summary><![CDATA[Input data is in sRGB (gamma 2.2) color space.]]></summary></member>
+    <member name="SrgbOut"><summary><![CDATA[Output data is in sRGB (gamma 2.2) color space.]]></summary></member>
+    <member name="Triangle"><summary><![CDATA[Each pixel in the source image contributes equally to the destination image. This is the slowest of the filters.]]></summary></member>
+  </members>
+</xna-type>

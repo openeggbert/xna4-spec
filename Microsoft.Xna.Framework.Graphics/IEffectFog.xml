@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IEffectFog" kind="interface"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Gets or sets fog parameters for the current effect.]]></summary>
+  <syntax><![CDATA[public interface IEffectFog]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="FogColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the fog color.]]></summary>
+      <syntax><![CDATA[public Vector3 FogColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="FogEnabled" type="bool" access="get;set">
+      <summary><![CDATA[Enables or disables fog.]]></summary>
+      <syntax><![CDATA[public bool FogEnabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="FogEnd" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets maximum z value for fog.]]></summary>
+      <syntax><![CDATA[public float FogEnd { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="FogStart" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets minimum z value for fog.]]></summary>
+      <syntax><![CDATA[public float FogStart { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

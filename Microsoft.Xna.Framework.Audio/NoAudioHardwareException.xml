@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NoAudioHardwareException" kind="class"
+          namespace="Microsoft.Xna.Framework.Audio"
+          assembly="Microsoft.Xna.Framework.Audio"
+          baseClass="ExternalException">
+  <summary><![CDATA[The exception that is thrown when no audio hardware is present, or when audio hardware is installed but device drivers for the audio hardware are not present or enabled.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public sealed class NoAudioHardwareException : ExternalException]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="NoAudioHardwareException(String)">
+      <summary><![CDATA[Initializes a new instance of this class with a specified error message.]]></summary>
+      <syntax><![CDATA[public NoAudioHardwareException (
+         string message
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NoAudioHardwareException()">
+      <summary><![CDATA[Initializes a new instance of this class.]]></summary>
+      <syntax><![CDATA[public NoAudioHardwareException ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NoAudioHardwareException(String, Exception)">
+      <summary><![CDATA[Initializes a new instance of this class with a specified error message and a reference to the inner exception that is the cause of this exception.]]></summary>
+      <syntax><![CDATA[public NoAudioHardwareException (
+         string message,
+         Exception inner
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="inner" type="Exception"><![CDATA[The exception that is the cause of the current exception. If the parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

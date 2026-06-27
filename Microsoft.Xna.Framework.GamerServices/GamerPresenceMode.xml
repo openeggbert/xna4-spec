@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamerPresenceMode" kind="enum"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Settings defining the status string that will appear when you view a friend through the Xbox LIVE Guide or on Xbox.com. This option is set using the PresenceMode property.]]></summary>
+  <syntax><![CDATA[public enum GamerPresenceMode]]></syntax>
+  <remarks><![CDATA[Zune Specific Information Setting presence information is not supported on the Zune platform. On the Zune platform, setting presence information for a signed-in gamer will not change the presence information on Xbox LIVE. The following GamerPresenceMode settings, specified in PresenceMode , may include a numeric value as specified by PresenceValue : GamerPresenceMode.Stage GamerPresenceMode.Level GamerPresenceMode.Score GamerPresenceMode.CoopStage GamerPresenceMode.CoopLevel GamerPresenceMode.VersusScore]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="ArcadeMode"><summary><![CDATA[Arcade Mode]]></summary></member>
+    <member name="AtMenu"><summary><![CDATA[At Menu]]></summary></member>
+    <member name="BattlingBoss"><summary><![CDATA[Battling Boss]]></summary></member>
+    <member name="CampaignMode"><summary><![CDATA[Campaign Mode]]></summary></member>
+    <member name="ChallengeMode"><summary><![CDATA[Challenge Mode]]></summary></member>
+    <member name="ConfiguringSettings"><summary><![CDATA[Configuring Settings]]></summary></member>
+    <member name="CoOpLevel"><summary><![CDATA[Co-Op: Level. Includes a numeric value specified with PresenceValue.]]></summary></member>
+    <member name="CoOpStage"><summary><![CDATA[Co-Op: Stage. Includes a numeric value specified with PresenceValue.]]></summary></member>
+    <member name="CornflowerBlue"><summary><![CDATA[Cornflower Blue]]></summary></member>
+    <member name="CustomizingPlayer"><summary><![CDATA[Customizing Player]]></summary></member>
+    <member name="DifficultyEasy"><summary><![CDATA[Difficulty: Easy]]></summary></member>
+    <member name="DifficultyExtreme"><summary><![CDATA[Difficulty: Extreme]]></summary></member>
+    <member name="DifficultyHard"><summary><![CDATA[Difficulty: Hard]]></summary></member>
+    <member name="DifficultyMedium"><summary><![CDATA[Difficulty: Medium]]></summary></member>
+    <member name="EditingLevel"><summary><![CDATA[Editing Level]]></summary></member>
+    <member name="ExplorationMode"><summary><![CDATA[Exploration Mode]]></summary></member>
+    <member name="FoundSecret"><summary><![CDATA[Found Secret]]></summary></member>
+    <member name="FreePlay"><summary><![CDATA[Free Play]]></summary></member>
+    <member name="GameOver"><summary><![CDATA[Game Over]]></summary></member>
+    <member name="InCombat"><summary><![CDATA[In Combat]]></summary></member>
+    <member name="InGameStore"><summary><![CDATA[In Game Store]]></summary></member>
+    <member name="Level"><summary><![CDATA[Level. Includes a numeric value specified with PresenceValue.]]></summary></member>
+    <member name="LocalCoOp"><summary><![CDATA[Local Co-Op]]></summary></member>
+    <member name="LocalVersus"><summary><![CDATA[Local Versus]]></summary></member>
+    <member name="LookingForGames"><summary><![CDATA[Looking For Games]]></summary></member>
+    <member name="Losing"><summary><![CDATA[Losing]]></summary></member>
+    <member name="Multiplayer"><summary><![CDATA[Multiplayer]]></summary></member>
+    <member name="NearlyFinished"><summary><![CDATA[Nearly Finished]]></summary></member>
+    <member name="None"><summary><![CDATA[No Presence String Displayed]]></summary></member>
+    <member name="OnARoll"><summary><![CDATA[On a Roll]]></summary></member>
+    <member name="OnlineCoOp"><summary><![CDATA[Online Co-Op]]></summary></member>
+    <member name="OnlineVersus"><summary><![CDATA[Online Versus]]></summary></member>
+    <member name="Outnumbered"><summary><![CDATA[Outnumbered]]></summary></member>
+    <member name="Paused"><summary><![CDATA[Paused]]></summary></member>
+    <member name="PlayingMinigame"><summary><![CDATA[Playing Minigame]]></summary></member>
+    <member name="PlayingWithFriends"><summary><![CDATA[Playing With Friends]]></summary></member>
+    <member name="PracticeMode"><summary><![CDATA[Practice Mode]]></summary></member>
+    <member name="PuzzleMode"><summary><![CDATA[Puzzle Mode]]></summary></member>
+    <member name="ScenarioMode"><summary><![CDATA[Scenario Mode]]></summary></member>
+    <member name="Score"><summary><![CDATA[Score. Includes a numeric value specified with PresenceValue.]]></summary></member>
+    <member name="ScoreIsTied"><summary><![CDATA[Score is Tied]]></summary></member>
+    <member name="SettingUpMatch"><summary><![CDATA[Setting Up Match]]></summary></member>
+    <member name="SinglePlayer"><summary><![CDATA[Single Player]]></summary></member>
+    <member name="Stage"><summary><![CDATA[Stage. Includes a numeric value specified with PresenceValue.]]></summary></member>
+    <member name="StartingGame"><summary><![CDATA[Starting Game]]></summary></member>
+    <member name="StoryMode"><summary><![CDATA[Story Mode]]></summary></member>
+    <member name="StuckOnAHardBit"><summary><![CDATA[Stuck on a Hard Bit]]></summary></member>
+    <member name="SurvivalMode"><summary><![CDATA[Survival Mode]]></summary></member>
+    <member name="TimeAttack"><summary><![CDATA[Time Attack]]></summary></member>
+    <member name="TryingForRecord"><summary><![CDATA[Trying For Record]]></summary></member>
+    <member name="TutorialMode"><summary><![CDATA[Tutorial Mode]]></summary></member>
+    <member name="VersusComputer"><summary><![CDATA[Versus Computer]]></summary></member>
+    <member name="VersusScore"><summary><![CDATA[Versus: Score. Includes a numeric value specified with PresenceValue.]]></summary></member>
+    <member name="WaitingForPlayers"><summary><![CDATA[Waiting For Players]]></summary></member>
+    <member name="WaitingInLobby"><summary><![CDATA[Waiting In Lobby]]></summary></member>
+    <member name="WastingTime"><summary><![CDATA[Wasting Time]]></summary></member>
+    <member name="WatchingCredits"><summary><![CDATA[Watching Credits]]></summary></member>
+    <member name="WatchingCutscene"><summary><![CDATA[Watching Cutscene]]></summary></member>
+    <member name="Winning"><summary><![CDATA[Winning]]></summary></member>
+    <member name="WonTheGame"><summary><![CDATA[Won the Game]]></summary></member>
+  </members>
+</xna-type>

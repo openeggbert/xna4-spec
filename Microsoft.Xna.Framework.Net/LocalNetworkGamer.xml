@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="LocalNetworkGamer" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="NetworkGamer">
+  <summary><![CDATA[Represents a local player in a network session.]]></summary>
+  <syntax><![CDATA[public sealed class LocalNetworkGamer : NetworkGamer]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="IsDataAvailable" type="bool" access="get">
+      <summary><![CDATA[Determines if there is incoming packet data for this player.]]></summary>
+      <syntax><![CDATA[public bool IsDataAvailable { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="SignedInGamer" type="SignedInGamer" access="get">
+      <summary><![CDATA[Gets the SignedInGamer instance for this SignedInGamer object.]]></summary>
+      <syntax><![CDATA[public SignedInGamer SignedInGamer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="EnableSendVoice" returnType="void">
+      <summary><![CDATA[Specifies whether voice data should be sent to, or received from, the specified remote gamer.]]></summary>
+      <overloads>
+        <overload signature="EnableSendVoice()">
+          <summary><![CDATA[Specifies whether voice data should be sent to, or received from, the specified remote gamer.]]></summary>
+          <syntax><![CDATA[public void EnableSendVoice (
+         NetworkGamer remoteGamer,
+         bool enable
+)]]></syntax>
+          <parameters>
+            <parameter name="remoteGamer" type="NetworkGamer"><![CDATA[A remote gamer in the session.]]></parameter>
+            <parameter name="enable" type="bool"><![CDATA[true if voice is enabled; false otherwise.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Call this method for local gamer instances only. By default, voice is enabled for all gamers. However, you can selectively turn it off to enable features such as team chat. Also, you can dynamically turn it on or off, depending on the player's location in the game world, to achieve a proximity voice effect.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReceiveData" returnType="int">
+      <summary><![CDATA[Reads the next incoming packet using the specified values.]]></summary>
+      <overloads>
+        <overload signature="Byte , Int32, NetworkGamer">
+          <summary><![CDATA[Reads the next incoming packet using the specified values.]]></summary>
+          <syntax><![CDATA[public int ReceiveData (
+         byte[] data,
+         int offset,
+         out NetworkGamer sender
+)]]></syntax>
+          <parameters>
+            <parameter name="data" type="byte[]"><![CDATA[Storage for the network packet data.]]></parameter>
+            <parameter name="offset" type="int"><![CDATA[Offset, in bytes, to begin reading data.]]></parameter>
+            <parameter name="sender" type="NetworkGamer"><![CDATA[[ OutAttribute ] Gamer who sent this packet.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Number of bytes read from the network packet. Returns 0 if no packet is available.]]></returns>
+          <remarks><![CDATA[ReceiveData copies the packet data into the array specified by data , returning the number of bytes read. If several independent packets are available, only one is returned for each ReceiveData call.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="PacketReader, NetworkGamer">
+          <summary><![CDATA[Reads the next incoming packet and copies the packet data into the specified reader object.]]></summary>
+          <syntax><![CDATA[public int ReceiveData (
+         PacketReader data,
+         out NetworkGamer sender
+)]]></syntax>
+          <parameters>
+            <parameter name="data" type="PacketReader"><![CDATA[Network packet data.]]></parameter>
+            <parameter name="sender" type="NetworkGamer"><![CDATA[[ OutAttribute ] Gamer who sent this packet.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Number of bytes read from the network packet. Returns 0 if no packet is available.]]></returns>
+          <remarks><![CDATA[If several independent packets are available, only one will be returned on each call to ReceiveData .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Byte , NetworkGamer">
+          <summary><![CDATA[Reads the next incoming packet using the specified values.]]></summary>
+          <syntax><![CDATA[public int ReceiveData (
+         byte[] data,
+         out NetworkGamer sender
+)]]></syntax>
+          <parameters>
+            <parameter name="data" type="byte[]"><![CDATA[Storage for the network packet data.]]></parameter>
+            <parameter name="sender" type="NetworkGamer"><![CDATA[[ OutAttribute ] Gamer who sent this packet.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Number of bytes read from the network packet. Returns 0 if no packet is available.]]></returns>
+          <remarks><![CDATA[ReceiveData copies the packet data into the array specified by data , returning the number of bytes read. If several independent packets are available, only one is returned for each ReceiveData call.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SendData" returnType="void">
+      <summary><![CDATA[Sends a byte array to all gamers in a session. This includes the gamer sending the packet.]]></summary>
+      <overloads>
+        <overload signature="Byte , SendDataOptions">
+          <summary><![CDATA[Sends a byte array to all gamers in a session. This includes the gamer sending the packet.]]></summary>
+          <syntax><![CDATA[public void SendData (
+         byte[] data,
+         SendDataOptions options
+)]]></syntax>
+          <parameters>
+            <parameter name="data" type="byte[]"><![CDATA[Byte array containing session data.]]></parameter>
+            <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Byte , SendDataOptions, NetworkGamer">
+          <summary><![CDATA[Sends a byte array to the specified gamer.]]></summary>
+          <syntax><![CDATA[public void SendData (
+         byte[] data,
+         SendDataOptions options,
+         NetworkGamer recipient
+)]]></syntax>
+          <parameters>
+            <parameter name="data" type="byte[]"><![CDATA[Byte array containing session data.]]></parameter>
+            <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
+            <parameter name="recipient" type="NetworkGamer"><![CDATA[Gamer to receive the data packet.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="PacketWriter, SendDataOptions, NetworkGamer">
+          <summary><![CDATA[Sends a network packet to the specified gamer in a session.]]></summary>
+          <syntax><![CDATA[public void SendData (
+         PacketWriter data,
+         SendDataOptions options,
+         NetworkGamer recipient
+)]]></syntax>
+          <parameters>
+            <parameter name="data" type="PacketWriter"><![CDATA[Byte array containing session data.]]></parameter>
+            <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
+            <parameter name="recipient" type="NetworkGamer"><![CDATA[Gamer receiving the data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Byte , Int32, Int32, SendDataOptions, NetworkGamer">
+          <summary><![CDATA[Sends a selected portion of a byte array to the specified gamer.]]></summary>
+          <syntax><![CDATA[public void SendData (
+         byte[] data,
+         int offset,
+         int count,
+         SendDataOptions options,
+         NetworkGamer recipient
+)]]></syntax>
+          <parameters>
+            <parameter name="data" type="byte[]"><![CDATA[Byte array containing session data.]]></parameter>
+            <parameter name="offset" type="int"><![CDATA[Offset, in bytes, to the start of the data.]]></parameter>
+            <parameter name="count" type="int"><![CDATA[Amount, in bytes, of data sent.]]></parameter>
+            <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
+            <parameter name="recipient" type="NetworkGamer"><![CDATA[Gamer to receive the data packet.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Byte , Int32, Int32, SendDataOptions">
+          <summary><![CDATA[Sends a selected portion of a byte array to all gamers in a session. This includes the gamer sending the packet.]]></summary>
+          <syntax><![CDATA[public void SendData (
+         byte[] data,
+         int offset,
+         int count,
+         SendDataOptions options
+)]]></syntax>
+          <parameters>
+            <parameter name="data" type="byte[]"><![CDATA[Byte array containing session data.]]></parameter>
+            <parameter name="offset" type="int"><![CDATA[Offset, in bytes, to the start of the data.]]></parameter>
+            <parameter name="count" type="int"><![CDATA[Amount, in bytes, of data sent.]]></parameter>
+            <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="PacketWriter, SendDataOptions">
+          <summary><![CDATA[Sends a network packet to all gamers in a session. This includes the gamer sending the packet.]]></summary>
+          <syntax><![CDATA[public void SendData (
+         PacketWriter data,
+         SendDataOptions options
+)]]></syntax>
+          <parameters>
+            <parameter name="data" type="PacketWriter"><![CDATA[Byte array containing session data.]]></parameter>
+            <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SendPartyInvites" returnType="void">
+      <summary><![CDATA[Sends game invitations to all party members that are not in the current game session.]]></summary>
+      <overloads>
+        <overload signature="SendPartyInvites()">
+          <summary><![CDATA[Sends game invitations to all party members that are not in the current game session.]]></summary>
+          <syntax><![CDATA[public void SendPartyInvites ()]]></syntax>
+          <remarks><![CDATA[This method has no effect when the player is not currently a member of a LIVE party, or on platforms that do not support LIVE parties.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

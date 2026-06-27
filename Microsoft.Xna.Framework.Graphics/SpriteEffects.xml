@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SpriteEffects" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines sprite rotation options.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum SpriteEffects]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="FlipHorizontally"><summary><![CDATA[Rotate 180 degrees about the Y axis before rendering.]]></summary></member>
+    <member name="FlipVertically"><summary><![CDATA[Rotate 180 degrees about the X axis before rendering.]]></summary></member>
+    <member name="None"><summary><![CDATA[No rotations specified.]]></summary></member>
+  </members>
+</xna-type>

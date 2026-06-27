@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SpriteFontContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <summary><![CDATA[Provides methods and properties for managing a design-time SpriteFont Class holding packed font data.]]></summary>
+  <syntax><![CDATA[public sealed class SpriteFontContent]]></syntax>
+  <remarks><![CDATA[This class is the output of the built-in font processors, FontDescriptionProcessor and FontTextureProcessor .]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

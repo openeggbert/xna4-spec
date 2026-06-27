@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TextureAddressMode" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines constants that describe supported texture-addressing modes.]]></summary>
+  <syntax><![CDATA[public enum TextureAddressMode]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Border"><summary><![CDATA[Texture coordinates outside the range [0.0, 1.0] are set to the border color.]]></summary></member>
+    <member name="Clamp"><summary><![CDATA[Texture coordinates outside the range [0.0, 1.0] are set to the texture color at 0.0 or 1.0, respectively.]]></summary></member>
+    <member name="Mirror"><summary><![CDATA[Similar to Wrap, except that the texture is flipped at every integer junction. For u values between 0 and 1, for example, the texture is addressed normally; between 1 and 2, the texture is flipped (mirrored); between 2 and 3, the texture is normal again, and so on.]]></summary></member>
+    <member name="MirrorOnce"><summary><![CDATA[Similar to Mirror and Clamp. Takes the absolute value of the texture coordinate (thus, mirroring around 0), and then clamps to the maximum value. The most common usage is for volume textures, where support for the full MirrorOnce texture-addressing mode is not necessary, but the data is symmetrical around the one axis.]]></summary></member>
+    <member name="Wrap"><summary><![CDATA[Tile the texture at every integer junction. For example, for u values between 0 and 3, the texture is repeated three times; no mirroring is performed.]]></summary></member>
+  </members>
+</xna-type>

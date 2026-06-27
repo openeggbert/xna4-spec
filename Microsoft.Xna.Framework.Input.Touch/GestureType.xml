@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GestureType" kind="enum"
+          namespace="Microsoft.Xna.Framework.Input.Touch"
+          assembly="Microsoft.Xna.Framework.Input.Touch">
+  <summary><![CDATA[Contains values that represent different multitouch gestures that can be detected by TouchPanel.ReadGesture.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum GestureType]]></syntax>
+  <remarks><![CDATA[These values can be combined when reading them from, or writing them to, TouchPanel.EnabledGestures .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <members>
+    <member name="None"><summary><![CDATA[Represents no gestures.]]></summary></member>
+    <member name="Tap"><summary><![CDATA[The user briefly touched a single point on the screen.]]></summary></member>
+    <member name="DoubleTap"><summary><![CDATA[The user tapped the screen twice in quick succession. This always is preceded by a Tap gesture. If the time between taps is too great to be considered a DoubleTap, two Tap gestures will be generated instead.]]></summary></member>
+    <member name="Hold"><summary><![CDATA[The user touched a single point on the screen for approximately one second. This is a single event, and not continuously generated while the user is holding the touchpoint.]]></summary></member>
+    <member name="HorizontalDrag"><summary><![CDATA[The user touched the screen, and then performed a horizontal (left to right or right to left) gesture.]]></summary></member>
+    <member name="VerticalDrag"><summary><![CDATA[The user touched the screen, and then performed a vertical (top to bottom or bottom to top) gesture.]]></summary></member>
+    <member name="FreeDrag"><summary><![CDATA[The user touched the screen, and then performed a free-form drag gesture.]]></summary></member>
+    <member name="Pinch"><summary><![CDATA[The user touched two points on the screen, and then converged or diverged them. Pinch behaves like a two-finger drag. When this gesture is enabled, it takes precedence over drag gestures while two fingers are down.]]></summary></member>
+    <member name="Flick"><summary><![CDATA[The user performed a touch combined with a quick swipe of the screen. Flicks are positionless. The velocity of the flick can be retrieved by reading the Delta member of GestureSample.]]></summary></member>
+    <member name="DragComplete"><summary><![CDATA[A drag gesture (VerticalDrag, HorizontalDrag, or FreeDrag) was completed. This signals only completion. No position or delta data is valid for this sample.]]></summary></member>
+    <member name="PinchComplete"><summary><![CDATA[A pinch operation was completed. This signals only completion. No position or delta data is valid for this sample.]]></summary></member>
+  </members>
+</xna-type>

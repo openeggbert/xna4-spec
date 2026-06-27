@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexChannel" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          interfaces="IList, ICollection, IEnumerable">
+  <summary><![CDATA[Provides methods and properties for maintaining a vertex channel.]]></summary>
+  <syntax><![CDATA[public abstract class VertexChannel : IList, ICollection, IEnumerable]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Gets the number of elements in the vertex channel]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ElementType" type="Object" access="get">
+      <summary><![CDATA[Gets the type of data contained in this channel.]]></summary>
+      <syntax><![CDATA[public virtual abstract Type ElementType { get; }]]></syntax>
+      <remarks><![CDATA[To access strongly typed content data, cast the VertexChannel object to a VertexChannel&lt;T&gt; before calling ElementType . This causes a generic enumerator interface to be returned.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets the element at the specified index.]]></summary>
+      <syntax><![CDATA[public T this [
+         int index
+] { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Gets the name of the vertex channel.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Contains" returnType="bool">
+      <summary><![CDATA[Determines whether the specified element is in the channel.]]></summary>
+      <overloads>
+        <overload signature="T">
+          <summary><![CDATA[Determines whether the specified element is in the channel.]]></summary>
+          <syntax><![CDATA[public bool Contains (
+         T item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="T"><![CDATA[Element being searched for.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the element is present; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CopyTo" returnType="void">
+      <summary><![CDATA[Copies the elements of the channel to an array, starting at the specified index.]]></summary>
+      <overloads>
+        <overload signature="T , Int32">
+          <summary><![CDATA[Copies the elements of the channel to an array, starting at the specified index.]]></summary>
+          <syntax><![CDATA[public void CopyTo (
+         T[] array,
+         int arrayIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="array" type="T[]"><![CDATA[Array that will receive the copied channel elements.]]></parameter>
+            <parameter name="arrayIndex" type="int"><![CDATA[Starting index for copy operation.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Gets an enumerator interface for reading channel content.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Gets an enumerator interface for reading channel content.]]></summary>
+          <syntax><![CDATA[public IEnumerator GetEnumerator ()]]></syntax>
+          <returns><![CDATA[Enumeration of the channel content.]]></returns>
+          <remarks><![CDATA[To access strongly typed content data, cast the VertexChannel object to a VertexChannel&lt;T&gt; before calling GetEnumerator . This causes a generic enumerator interface to be returned.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IndexOf" returnType="int">
+      <summary><![CDATA[Gets the index of the specified item.]]></summary>
+      <overloads>
+        <overload signature="T">
+          <summary><![CDATA[Gets the index of the specified item.]]></summary>
+          <syntax><![CDATA[public int IndexOf (
+         T item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="T"><![CDATA[Item whose index is to be retrieved.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Index of specified item.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

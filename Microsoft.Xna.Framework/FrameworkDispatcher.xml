@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="FrameworkDispatcher" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Implements the Windows-specific portion of a FrameworkDispatcher class.]]></summary>
+  <syntax><![CDATA[public static class FrameworkDispatcher]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Update" returnType="void">
+      <summary><![CDATA[Updates the status of various framework components (such as power state and media) and raises related events. If your game does not use the Game class, you must call this method (the recommendation is once per frame) yourself.]]></summary>
+      <overloads>
+        <overload signature="Update()">
+          <summary><![CDATA[Updates the status of various framework components (such as power state and media) and raises related events. If your game does not use the Game class, you must call this method (the recommendation is once per frame) yourself.]]></summary>
+          <syntax><![CDATA[public static void Update ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

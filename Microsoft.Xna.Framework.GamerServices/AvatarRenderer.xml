@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AvatarRenderer" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          interfaces="IDisposable">
+  <summary><![CDATA[Provides properties and methods for rendering a standard avatar.]]></summary>
+  <syntax><![CDATA[public class AvatarRenderer : IDisposable]]></syntax>
+  <remarks><![CDATA[Use this class, in conjunction with AvatarAnimation , to render an avatar model using standard animations. For more information, see Rendering and Animating Avatars (Xbox 360) .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="AvatarRenderer(AvatarDescription, Boolean)">
+      <summary><![CDATA[Creates a new instance of AvatarRenderer with the specified description. The standard loading effect can also be requested. This effect is animated, indicating that the avatar currently is loading.]]></summary>
+      <syntax><![CDATA[public AvatarRenderer (
+         AvatarDescription avatarDescription,
+         bool useLoadingEffect
+)]]></syntax>
+      <parameters>
+        <parameter name="avatarDescription" type="AvatarDescription"><![CDATA[Description of the avatar to be rendered.]]></parameter>
+        <parameter name="useLoadingEffect" type="bool"><![CDATA[true if the standard effect is to be used during loading; otherwise, false .]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="AvatarRenderer(AvatarDescription)">
+      <summary><![CDATA[Creates a new instance of AvatarRenderer with the specified description.]]></summary>
+      <syntax><![CDATA[public AvatarRenderer (
+         AvatarDescription avatarDescription
+)]]></syntax>
+      <parameters>
+        <parameter name="avatarDescription" type="AvatarDescription"><![CDATA[Description of the avatar to be rendered.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="AmbientLightColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the color of the ambient light used by the avatar renderer.]]></summary>
+      <syntax><![CDATA[public Vector3 AmbientLightColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="BindPose" type="ReadOnlyCollection&amp;lt;Matrix&amp;gt;" access="get">
+      <summary><![CDATA[Gets the collection of bind pose positions for each bone of the avatar model. These positions are in local space, and are relative to the parent bone.]]></summary>
+      <syntax><![CDATA[public ReadOnlyCollection&lt;Matrix&gt; BindPose { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets the disposed state of the avatar renderer.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="LightColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the color of the directional light used by the avatar renderer.]]></summary>
+      <syntax><![CDATA[public Vector3 LightColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="LightDirection" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the color of the directional light used by the avatar renderer.]]></summary>
+      <syntax><![CDATA[public Vector3 LightDirection { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="ParentBones" type="ReadOnlyCollection&amp;lt;int&amp;gt;" access="get">
+      <summary><![CDATA[Collection of the parent indices for each bone in the related BindPose collection.]]></summary>
+      <syntax><![CDATA[public ReadOnlyCollection&lt;int&gt; ParentBones { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Projection" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the projection matrix for the avatar.]]></summary>
+      <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="State" type="AvatarRendererState" access="get">
+      <summary><![CDATA[Gets the state of the avatar.]]></summary>
+      <syntax><![CDATA[public AvatarRendererState State { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="View" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the view matrix for the avatar.]]></summary>
+      <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="World" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the world matrix for the avatar.]]></summary>
+      <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool disposing
+)]]></syntax>
+          <parameters>
+            <parameter name="disposing" type="bool"><![CDATA[true to release both managed and unmanaged resources; false to release only unmanaged resources.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Draw" returnType="void">
+      <summary><![CDATA[Draws the avatar to the current render target.]]></summary>
+      <overloads>
+        <overload signature="IAvatarAnimation">
+          <summary><![CDATA[Draws the avatar to the current render target.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Draw ( _
+         animation As IAvatarAnimation _
+)]]></syntax>
+          <parameters>
+            <parameter name="animation" type="Object"><![CDATA[Type: IAvatarAnimation The animation to draw.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Generic IList, AvatarExpression">
+          <summary><![CDATA[Draws the avatar to the current render target.]]></summary>
+          <syntax><![CDATA[public void Draw (
+         IList&lt;Matrix&gt; bones,
+         AvatarExpression expression
+)]]></syntax>
+          <parameters>
+            <parameter name="bones" type="Object"><![CDATA[Collection of current bone transforms for the avatar. The transforms are in local bone space relative to their parent.]]></parameter>
+            <parameter name="expression" type="AvatarExpression"><![CDATA[Current expression textures for the avatar.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[If any avatar assets are not loaded, the standard loading effect is displayed (determined by the renderer's constructor call). Determine the current loading state by checking the value of the State property. The avatar model is always rendered as if FillMode.Solid is the current fill mode value. Note The AvatarRenderer class requires each bone transformation to be decomposable. Passing a bone transformation matrix that is not decomposable to AvatarRenderer.Draw will result in a InvalidOperationException exception. Use Decompose on each matrix to ensure each matrix in the bone matrix collection is decomposable. If the matrix in question is not decomposable, Decompose will return false.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows the avatar renderer to attempt to free resources and perform other cleanup operations before garbage collection reclaims the renderer.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows the avatar renderer to attempt to free resources and perform other cleanup operations before garbage collection reclaims the renderer.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="BoneCount" type="int" isReadOnly="true">
+      <summary><![CDATA[Number of bones in the avatar model.]]></summary>
+      <syntax><![CDATA[public const int BoneCount]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

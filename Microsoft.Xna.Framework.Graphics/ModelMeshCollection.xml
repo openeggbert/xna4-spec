@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ModelMeshCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="ReadOnlyCollection&amp;lt;ModelMesh&amp;gt;">
+  <summary><![CDATA[Represents a collection of ModelMesh objects.]]></summary>
+  <syntax><![CDATA[public sealed class ModelMeshCollection : ReadOnlyCollection&lt;ModelMesh&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Item" type="Object" access="get">
+      <summary><![CDATA[Retrieves a ModelMesh from the collection, given the name of the mesh.]]></summary>
+      <syntax><![CDATA[public ModelMesh this [
+         string meshName
+] { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Returns a ModelMeshCollection.Enumerator that can iterate through a ModelMeshCollection.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Returns a ModelMeshCollection.Enumerator that can iterate through a ModelMeshCollection.]]></summary>
+          <syntax><![CDATA[public Enumerator GetEnumerator ()]]></syntax>
+          <returns><![CDATA[The ModelMeshCollection.Enumerator of the mesh collection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryGetValue" returnType="void">
+      <summary><![CDATA[Finds a mesh with a given name if it exists in the collection.]]></summary>
+      <overloads>
+        <overload signature="TryGetValue()">
+          <summary><![CDATA[Finds a mesh with a given name if it exists in the collection.]]></summary>
+          <syntax><![CDATA[public bool TryGetValue (
+         string meshName,
+         out ModelMesh value
+)]]></syntax>
+          <parameters>
+            <parameter name="meshName" type="string"><![CDATA[The name of the mesh to find.]]></parameter>
+            <parameter name="value" type="ModelMesh"><![CDATA[[ OutAttribute ] The mesh named meshName , if found.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the named mesh is found; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

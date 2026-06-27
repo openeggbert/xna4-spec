@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexPositionColorTexture" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Describes a custom vertex format structure that contains position, color, and one set of texture coordinates.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public struct VertexPositionColorTexture]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="VertexPositionColorTexture(Object, Object, Object)">
+      <summary><![CDATA[Initializes a new instance of the VertexPositionColorTexture class.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         position As Vector3, _
+         color As Color, _
+         textureCoordinate As Vector2 _
+)]]></syntax>
+      <parameters>
+        <parameter name="position" type="Object"><![CDATA[Type: Vector3 Position of the vertex.]]></parameter>
+        <parameter name="color" type="Object"><![CDATA[Type: Color Color of the vertex.]]></parameter>
+        <parameter name="textureCoordinate" type="Object"><![CDATA[Type: Vector2 Texture coordinate of the vertex.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="VertexPositionColorTexture(Object, Color, Object)">
+      <summary><![CDATA[Initializes a new instance of the VertexPositionColorTexture class.]]></summary>
+      <syntax><![CDATA[public VertexPositionColorTexture (
+         Vector3 position,
+         Color color,
+         Vector2 textureCoordinate
+)]]></syntax>
+      <parameters>
+        <parameter name="position" type="Object"><![CDATA[Position of the vertex.]]></parameter>
+        <parameter name="color" type="Color"><![CDATA[Color of the vertex.]]></parameter>
+        <parameter name="textureCoordinate" type="Object"><![CDATA[Texture coordinate of the vertex.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="SizeInBytes" type="int" access="get" isStatic="true">
+      <summary><![CDATA[Gets the size of the VertexPositionColorTexture class.]]></summary>
+      <syntax><![CDATA[public static int SizeInBytes { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current VertexPositionColorTexture .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         VertexPositionColorTexture left,
+         VertexPositionColorTexture right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="VertexPositionColorTexture"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="VertexPositionColorTexture"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         VertexPositionColorTexture left,
+         VertexPositionColorTexture right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="VertexPositionColorTexture"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="VertexPositionColorTexture"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="Color" type="Color">
+      <summary><![CDATA[The vertex color.]]></summary>
+      <syntax><![CDATA[public Color Color]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Position" type="Vector3">
+      <summary><![CDATA[The vertex position.]]></summary>
+      <syntax><![CDATA[public Vector3 Position]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="TextureCoordinate" type="Vector2">
+      <summary><![CDATA[The texture coordinates.]]></summary>
+      <syntax><![CDATA[public Vector2 TextureCoordinate]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="VertexDeclaration" type="VertexDeclaration" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[Vertex declaration, which defines per-vertex data.]]></summary>
+      <syntax><![CDATA[public static readonly VertexDeclaration VertexDeclaration]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </field>
+    <field name="VertexElements" type="VertexElement[]" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[An array of three vertex elements describing the position, texture coordinate, and color of this vertex.]]></summary>
+      <syntax><![CDATA[public static readonly VertexElement[] VertexElements]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

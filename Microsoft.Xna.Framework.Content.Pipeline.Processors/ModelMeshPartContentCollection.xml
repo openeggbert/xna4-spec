@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ModelMeshPartContentCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          baseClass="ReadOnlyCollection&amp;lt;ModelMeshPartContent&amp;gt;">
+  <summary><![CDATA[Collection of ModelMeshPartContent objects.]]></summary>
+  <syntax><![CDATA[public sealed class ModelMeshPartContentCollection : ReadOnlyCollection&lt;ModelMeshPartContent&gt;]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

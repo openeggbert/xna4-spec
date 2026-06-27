@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexElementFormat" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines vertex element formats.]]></summary>
+  <syntax><![CDATA[public enum VertexElementFormat]]></syntax>
+  <remarks><![CDATA[Vertex data is declared with an array of VertexElement structures. Each element in the array contains a vertex declaration method. These values can be passed into the constructor or to the VertexElementMethod property. A mapping of each Direct3D 9 format name to the VertexElementFormat equivalent is listed in the following table. Direct3D 9 Vertex Format VertexElementFormat equivalent Floating Point Float32 D3DDECLTYPE_FLOAT1 Single D3DDECLTYPE_FLOAT2 Vector2 D3DDECLTYPE_FLOAT3 Vector3 D3DDECLTYPE_FLOAT4 Vector4 Float16 D3DDECLTYPE_FLOAT16_2 HalfVector2 D3DDECLTYPE_FLOAT16_4 HalfVector4 Unsigned Normalized 64 bpp D3DDECLTYPE_USHORT4N Rgba64 32 bpp D3DDECLTYPE_D3DCOLOR Color D3DDECLTYPE_UBYTE4N Rgba32 D3DDECLTYPE_USHORT2N Rg32 Signed Normalized D3DDECLTYPE_SHORT2N NormalizedShort2 D3DDECLTYPE_SHORT4N NormalizedShort4 D3DDECLTYPE_DEC3N Normalized101010 Signed Integer D3DDECLTYPE_SHORT2 Short2 D3DDECLTYPE_SHORT4 Short4 Unsigned Integer D3DDECLTYPE_UBYTE4 Byte4 D3DDECLTYPE_UDEC3 UInt101010]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Single"><summary><![CDATA[Single-component, 32-bit floating-point, expanded to (float, 0, 0, 1).]]></summary></member>
+    <member name="Vector2"><summary><![CDATA[Two-component, 32-bit floating-point, expanded to (float, Float32 value, 0, 1).]]></summary></member>
+    <member name="Vector3"><summary><![CDATA[Three-component, 32-bit floating point, expanded to (float, float, float, 1).]]></summary></member>
+    <member name="Vector4"><summary><![CDATA[Four-component, 32-bit floating point, expanded to (float, float, float, float).]]></summary></member>
+    <member name="HalfVector2"><summary><![CDATA[Two-component, 16-bit floating point expanded to (value, value, value, value). This type is valid for vertex shader version 2.0 or higher.]]></summary></member>
+    <member name="HalfVector4"><summary><![CDATA[Four-component, 16-bit floating-point expanded to (value, value, value, value). This type is valid for vertex shader version 2.0 or higher.]]></summary></member>
+    <member name="Rgba64"><summary><![CDATA[Normalized, four-component, unsigned short, expanded to (first byte/65535.0, second byte/65535.0, third byte/65535.0, fourth byte/65535.0). This type is valid for vertex shader version 2.0 or higher.]]></summary></member>
+    <member name="Color"><summary><![CDATA[Four-component, packed, unsigned byte, mapped to 0 to 1 range. Input is in Int32 format (ARGB) expanded to (R, G, B, A).]]></summary></member>
+    <member name="Rgba32"><summary><![CDATA[Four-component byte with each byte normalized by dividing the component with 255.0f. This type is valid for vertex shader version 2.0 or higher.]]></summary></member>
+    <member name="Rg32"><summary><![CDATA[Normalized, two-component, unsigned short, expanded to (first byte/65535.0, second byte/65535.0, 0, 1). This type is valid for vertex shader version 2.0 or higher.]]></summary></member>
+    <member name="NormalizedShort2"><summary><![CDATA[Normalized, two-component, signed short, expanded to (first short/32767.0, second short/32767.0, 0, 1). This type is valid for vertex shader version 2.0 or higher.]]></summary></member>
+    <member name="NormalizedShort4"><summary><![CDATA[Normalized, four-component, signed short, expanded to (first short/32767.0, second short/32767.0, third short/32767.0, fourth short/32767.0). This type is valid for vertex shader version 2.0 or higher.]]></summary></member>
+    <member name="Normalized101010"><summary><![CDATA[Three-component, signed, 10 10 10 format normalized and expanded to (v[0]/511.0, v[1]/511.0, v[2]/511.0, 1).]]></summary></member>
+    <member name="Short2"><summary><![CDATA[Two-component, signed short expanded to (value, value, 0, 1).]]></summary></member>
+    <member name="Short4"><summary><![CDATA[Four-component, signed short expanded to (value, value, value, value).]]></summary></member>
+    <member name="Byte4"><summary><![CDATA[Four-component, unsigned byte.]]></summary></member>
+    <member name="UInt101010"><summary><![CDATA[Three-component, unsigned, 10 10 10 format expanded to (value, value, value, 1).]]></summary></member>
+    <member name="Unused"><summary><![CDATA[Type field in the declaration is unused. This is designed for use with VertexElementMethod.UV and VertexElementMethod.LookUpPresampled.]]></summary></member>
+  </members>
+</xna-type>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NotificationPosition" kind="enum"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Determines where notifications appear on the screen. Used to specify the notification position for the NotificationPosition property.]]></summary>
+  <syntax><![CDATA[public enum NotificationPosition]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="BottomCenter"><summary><![CDATA[Positions the message box at the bottom of the screen and centered.]]></summary></member>
+    <member name="BottomLeft"><summary><![CDATA[Positions the message box at the bottom-left of the screen.]]></summary></member>
+    <member name="BottomRight"><summary><![CDATA[Positions the message box at the bottom-right of the screen.]]></summary></member>
+    <member name="Center"><summary><![CDATA[Positions the message box at the center of the screen.]]></summary></member>
+    <member name="CenterLeft"><summary><![CDATA[Positions the message box at the center of the screen and left-aligned.]]></summary></member>
+    <member name="CenterRight"><summary><![CDATA[Positions the message box at the center of the screen and right-aligned.]]></summary></member>
+    <member name="TopCenter"><summary><![CDATA[Positions the message box at the top of the screen and centered.]]></summary></member>
+    <member name="TopLeft"><summary><![CDATA[Positions the message box at the top-left of the screen.]]></summary></member>
+    <member name="TopRight"><summary><![CDATA[Positions the message box at the top-right of the screen.]]></summary></member>
+  </members>
+</xna-type>

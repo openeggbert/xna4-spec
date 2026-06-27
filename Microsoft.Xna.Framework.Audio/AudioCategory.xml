@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AudioCategory" kind="struct"
+          namespace="Microsoft.Xna.Framework.Audio"
+          assembly="Microsoft.Xna.Framework.Audio">
+  <summary><![CDATA[Represents a particular category of sounds.]]></summary>
+  <syntax><![CDATA[public struct AudioCategory]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Specifies the friendly name of this category.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="void">
+      <summary><![CDATA[Determines whether the specified AudioCategory is equal to this AudioCategory.]]></summary>
+      <overloads>
+        <overload signature="AudioCategory">
+          <summary><![CDATA[Determines whether the specified AudioCategory is equal to this AudioCategory.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Function Equals ( _
+         other As AudioCategory _
+) As Boolean]]></syntax>
+          <parameters>
+            <parameter name="other" type="Object"><![CDATA[Type: AudioCategory AudioCategory to compare with this instance.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Boolean true if the objects are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Object">
+          <summary><![CDATA[Determines whether the specified Object is equal to this AudioCategory.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Overrides Function Equals ( _
+         obj As Object _
+) As Boolean]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Type: Object Object to compare with this instance.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Boolean true if the objects are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Pause" returnType="void">
+      <summary><![CDATA[Pauses all sounds associated with this category.]]></summary>
+      <overloads>
+        <overload signature="Pause()">
+          <summary><![CDATA[Pauses all sounds associated with this category.]]></summary>
+          <syntax><![CDATA[public void Pause ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Resume" returnType="void">
+      <summary><![CDATA[Resumes all paused sounds associated with this category.]]></summary>
+      <overloads>
+        <overload signature="Resume()">
+          <summary><![CDATA[Resumes all paused sounds associated with this category.]]></summary>
+          <syntax><![CDATA[public void Resume ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetVolume" returnType="void">
+      <summary><![CDATA[Sets the volume of all sounds associated with this category.]]></summary>
+      <overloads>
+        <overload signature="SetVolume()">
+          <summary><![CDATA[Sets the volume of all sounds associated with this category.]]></summary>
+          <syntax><![CDATA[public void SetVolume (
+         float volume
+)]]></syntax>
+          <parameters>
+            <parameter name="volume" type="float"><![CDATA[Volume value, between 0 and 1, where 0 is minimum volume (muted), and 1 is maximum volume.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Stop" returnType="void">
+      <summary><![CDATA[Stops all sounds associated with this category.]]></summary>
+      <overloads>
+        <overload signature="Stop()">
+          <summary><![CDATA[Stops all sounds associated with this category.]]></summary>
+          <syntax><![CDATA[public void Stop (
+         AudioStopOptions options
+)]]></syntax>
+          <parameters>
+            <parameter name="options" type="AudioStopOptions"><![CDATA[Enumerated value specifying how the sounds should be stopped.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a String representation of this AudioCategory.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a String representation of this AudioCategory.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether the specified AudioCategory instances are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether the specified AudioCategory instances are equal.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Function op_Equality ( _
+         value1 As AudioCategory, _
+         value2 As AudioCategory _
+) As Boolean]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Type: AudioCategory Object to the left of the equality operator.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Type: AudioCategory Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Boolean true if the objects are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether the specified AudioCategory instances are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether the specified AudioCategory instances are not equal.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Function op_Inequality ( _
+         value1 As AudioCategory, _
+         value2 As AudioCategory _
+) As Boolean]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Type: AudioCategory Object to the left of the inequality operator.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Type: AudioCategory Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Boolean true if the objects are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="RenderTargetUsage" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Determines how render target data is used once a new render target is set.]]></summary>
+  <syntax><![CDATA[public enum RenderTargetUsage]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="DiscardContents"><summary><![CDATA[Always clears the render target data.]]></summary></member>
+    <member name="PlatformContents"><summary><![CDATA[Either clears or keeps the data, depending on the current platform. On Xbox 360, the render target will discard contents. On PC, the render target will discard if multisampling is enabled, and preserve the contents if not.]]></summary></member>
+    <member name="PreserveContents"><summary><![CDATA[Always keeps the render target data.]]></summary></member>
+  </members>
+</xna-type>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SkinnedEffect" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="Effect"
+          interfaces="IEffectMatrices, IEffectLights, IEffectFog">
+  <summary><![CDATA[Contains a configurable effect for rendering skinned character models.]]></summary>
+  <syntax><![CDATA[public class SkinnedEffect : Effect, IEffectMatrices, IEffectLights, IEffectFog]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="SkinnedEffect(GraphicsDevice)">
+      <summary><![CDATA[Creates a SkinnedEffect with default parameter settings.]]></summary>
+      <syntax><![CDATA[public SkinnedEffect (
+         GraphicsDevice device
+)]]></syntax>
+      <parameters>
+        <parameter name="device" type="GraphicsDevice"><![CDATA[The graphics device.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="SkinnedEffect(SkinnedEffect)">
+      <summary><![CDATA[Creates a SkinnedEffect by cloning parameter settings from an existing instance.]]></summary>
+      <syntax><![CDATA[protected SkinnedEffect (
+         SkinnedEffect cloneSource
+)]]></syntax>
+      <parameters>
+        <parameter name="cloneSource" type="SkinnedEffect"><![CDATA[An existing instance.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Alpha" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the material alpha which determines its transparency. Range is between 1 (fully opaque) and 0 (fully transparent).]]></summary>
+      <syntax><![CDATA[public float Alpha { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="AmbientLightColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the ambient color for a light, the range of color values is from 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 AmbientLightColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DiffuseColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the diffuse color for a material, the range of color values is from 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight0" type="DirectionalLight" access="get">
+      <summary><![CDATA[Gets the first directional light.]]></summary>
+      <syntax><![CDATA[public DirectionalLight DirectionalLight0 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight1" type="DirectionalLight" access="get">
+      <summary><![CDATA[Gets the second directional light.]]></summary>
+      <syntax><![CDATA[public DirectionalLight DirectionalLight1 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight2" type="DirectionalLight" access="get">
+      <summary><![CDATA[Gets the third directional light.]]></summary>
+      <syntax><![CDATA[public DirectionalLight DirectionalLight2 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="EmissiveColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the emissive color for a material, the range of color values is from 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 EmissiveColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the fog color, the range of color values is from 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 FogColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogEnabled" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets the fog enable flag.]]></summary>
+      <syntax><![CDATA[public bool FogEnabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogEnd" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the maximum z value for fog, which ranges from 0 to 1.]]></summary>
+      <syntax><![CDATA[public float FogEnd { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogStart" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the minimum z value for fog, which ranges from 0 to 1.]]></summary>
+      <syntax><![CDATA[public float FogStart { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="PreferPerPixelLighting" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets the per-pixel prefer lighting flag.]]></summary>
+      <syntax><![CDATA[public bool PreferPerPixelLighting { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Projection" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the projection matrix.]]></summary>
+      <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="SpecularColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the specular color for a material, the range of color values is from 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 SpecularColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="SpecularPower" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the material specular power.]]></summary>
+      <syntax><![CDATA[public float SpecularPower { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Texture" type="Texture2D" access="get;set">
+      <summary><![CDATA[Gets or sets the current texture.]]></summary>
+      <syntax><![CDATA[public Texture2D Texture { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="View" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the view matrix.]]></summary>
+      <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="WeightsPerVertex" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets the number of per-vertex skinning weights to evaluate, which is either 1, 2, or 4.]]></summary>
+      <syntax><![CDATA[public int WeightsPerVertex { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="World" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the world matrix.]]></summary>
+      <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Clone" returnType="void">
+      <summary><![CDATA[Creates a clone of the current SkinnedEffect instance.]]></summary>
+      <overloads>
+        <overload signature="Clone()">
+          <summary><![CDATA[Creates a clone of the current SkinnedEffect instance.]]></summary>
+          <syntax><![CDATA[public override Effect Clone ()]]></syntax>
+          <returns><![CDATA[The cloned object from the current instance.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EnableDefaultLighting" returnType="void">
+      <summary><![CDATA[Sets up standard key, fill, and back lighting for a SkinnedEffect.]]></summary>
+      <overloads>
+        <overload signature="EnableDefaultLighting()">
+          <summary><![CDATA[Sets up standard key, fill, and back lighting for a SkinnedEffect.]]></summary>
+          <syntax><![CDATA[public void EnableDefaultLighting ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetBoneTransforms" returnType="void">
+      <summary><![CDATA[Gets the bone transform matrices for a SkinnedEffect.]]></summary>
+      <overloads>
+        <overload signature="GetBoneTransforms()">
+          <summary><![CDATA[Gets the bone transform matrices for a SkinnedEffect.]]></summary>
+          <syntax><![CDATA[public Matrix[] GetBoneTransforms (
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="count" type="int"><![CDATA[The number of matrices.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An array of matrices which contain bone transforms.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnApply" returnType="void">
+      <summary><![CDATA[Computes derived parameter values immediately before applying the effect.]]></summary>
+      <overloads>
+        <overload signature="OnApply()">
+          <summary><![CDATA[Computes derived parameter values immediately before applying the effect.]]></summary>
+          <syntax><![CDATA[protected internal override void OnApply ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetBoneTransforms" returnType="void">
+      <summary><![CDATA[Sets an array of bone transform matrices for a SkinnedEffect.]]></summary>
+      <overloads>
+        <overload signature="SetBoneTransforms()">
+          <summary><![CDATA[Sets an array of bone transform matrices for a SkinnedEffect.]]></summary>
+          <syntax><![CDATA[public void SetBoneTransforms (
+         Matrix[] boneTransforms
+)]]></syntax>
+          <parameters>
+            <parameter name="boneTransforms" type="Matrix[]"><![CDATA[An array of bone transformation matrices; the maximum number of bones (matrices) allowed is 72.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="MaxBones" type="int" isReadOnly="true">
+      <summary><![CDATA[The maximum number of bones.]]></summary>
+      <syntax><![CDATA[public const int MaxBones]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

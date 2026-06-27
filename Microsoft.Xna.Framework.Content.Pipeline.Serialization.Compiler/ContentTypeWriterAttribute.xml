@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentTypeWriterAttribute" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
+          baseClass="Attribute">
+  <summary><![CDATA[Identifies the components of a type writer. Custom content writers must apply this attribute to their class as well as extend the ContentTypeWriter class.]]></summary>
+  <syntax><![CDATA[[AttributeUsageAttribute(4)]
+public sealed class ContentTypeWriterAttribute : Attribute]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentTypeWriterAttribute()">
+      <summary><![CDATA[Initializes a new instance of the ContentTypeWriterAttribute class.]]></summary>
+      <syntax><![CDATA[public ContentTypeWriterAttribute ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

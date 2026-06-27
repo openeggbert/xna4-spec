@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NetworkSessionEndedEventArgs" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="EventArgs">
+  <summary><![CDATA[Represents the arguments passed to a SessionEnded event. These arguments are passed to event handlers when a session ends.]]></summary>
+  <syntax><![CDATA[public class NetworkSessionEndedEventArgs : EventArgs]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="NetworkSessionEndedEventArgs(NetworkSessionEndReason)">
+      <summary><![CDATA[Creates an instance of NetworkSessionEndedEventArgs.]]></summary>
+      <syntax><![CDATA[public NetworkSessionEndedEventArgs (
+         NetworkSessionEndReason endReason
+)]]></syntax>
+      <parameters>
+        <parameter name="endReason" type="NetworkSessionEndReason"><![CDATA[Reason for ending the session.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="EndReason" type="NetworkSessionEndReason" access="get">
+      <summary><![CDATA[Gets the reason for ending a session.]]></summary>
+      <syntax><![CDATA[public NetworkSessionEndReason EndReason { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

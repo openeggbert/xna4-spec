@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ResolveGlobalAssemblies" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Tasks"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Tasks"
+          baseClass="Task">
+  <summary><![CDATA[An MSBuildTask that modifies the filenames of global content pipeline assemblies to point to a specific directory under the install path of XNA Game Studio Express.]]></summary>
+  <syntax><![CDATA[public class ResolveGlobalAssemblies : Task]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ResolveGlobalAssemblies()">
+      <summary><![CDATA[Initializes a new instance of ResolveGlobalAssemblies.]]></summary>
+      <syntax><![CDATA[public ResolveGlobalAssemblies ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Assemblies" type="ITaskItem[]" access="get;set">
+      <summary><![CDATA[Gets or sets the file names of the global assemblies to be modified. Any file names that are already pointing to the root directory of XNA Game Studio Express remain unchanged.]]></summary>
+      <syntax><![CDATA[[OutputAttribute]
+public ITaskItem[] Assemblies { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="XnaFrameworkVersion" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the XNA framework version, used to determine the xactbld.exe path.]]></summary>
+      <syntax><![CDATA[[RequiredAttribute]
+public string XnaFrameworkVersion { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Execute" returnType="void">
+      <summary><![CDATA[Executes the ResolveGlobalAssemblies task.]]></summary>
+      <overloads>
+        <overload signature="Execute()">
+          <summary><![CDATA[Executes the ResolveGlobalAssemblies task.]]></summary>
+          <syntax><![CDATA[public override bool Execute ()]]></syntax>
+          <returns><![CDATA[true to begin execution of the task; otherwise false.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

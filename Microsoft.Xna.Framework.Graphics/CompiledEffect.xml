@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CompiledEffect" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[This structure is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public struct CompiledEffect]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="CompiledEffect(byte[], string)">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public CompiledEffect (
+         byte[] compiledEffectCode,
+         string errors
+)]]></syntax>
+      <parameters>
+        <parameter name="compiledEffectCode" type="byte[]"><![CDATA[The compiled effect code.]]></parameter>
+        <parameter name="errors" type="string"><![CDATA[A string to receive compilation errors, if any.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="ErrorsAndWarnings" type="string" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public string ErrorsAndWarnings { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Success" type="bool" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public bool Success { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetEffectCode" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="GetEffectCode()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public byte[] GetEffectCode ()]]></syntax>
+          <returns><![CDATA[The compiled bytecode.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

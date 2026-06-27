@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EffectAnnotation" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Represents an annotation to an EffectParameter.]]></summary>
+  <syntax><![CDATA[public sealed class EffectAnnotation]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="ColumnCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of columns in this effect annotation.]]></summary>
+      <syntax><![CDATA[public int ColumnCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Gets the name of the effect annotation.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ParameterClass" type="EffectParameterClass" access="get">
+      <summary><![CDATA[Gets the parameter class of this effect annotation.]]></summary>
+      <syntax><![CDATA[public EffectParameterClass ParameterClass { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ParameterType" type="EffectParameterType" access="get">
+      <summary><![CDATA[Gets the parameter type of this effect annotation.]]></summary>
+      <syntax><![CDATA[public EffectParameterType ParameterType { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RowCount" type="int" access="get">
+      <summary><![CDATA[Gets the row count of this effect annotation.]]></summary>
+      <syntax><![CDATA[public int RowCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Semantic" type="string" access="get">
+      <summary><![CDATA[Gets the semantic of this effect annotation.]]></summary>
+      <syntax><![CDATA[public string Semantic { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with this EffectAnnotation .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueBoolean" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectAnnotation as a Boolean.]]></summary>
+      <overloads>
+        <overload signature="GetValueBoolean()">
+          <summary><![CDATA[Gets the value of the EffectAnnotation as a Boolean.]]></summary>
+          <syntax><![CDATA[public bool GetValueBoolean ()]]></syntax>
+          <returns><![CDATA[The value of the EffectAnnotation as a Boolean.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueInt32" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectAnnotation as a Int32.]]></summary>
+      <overloads>
+        <overload signature="GetValueInt32()">
+          <summary><![CDATA[Gets the value of the EffectAnnotation as a Int32.]]></summary>
+          <syntax><![CDATA[public int GetValueInt32 ()]]></syntax>
+          <returns><![CDATA[The value of the EffectAnnotation as a Int32.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueMatrix" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectAnnotation as a Int32.]]></summary>
+      <overloads>
+        <overload signature="GetValueMatrix()">
+          <summary><![CDATA[Gets the value of the EffectAnnotation as a Int32.]]></summary>
+          <syntax><![CDATA[public Matrix GetValueMatrix ()]]></syntax>
+          <returns><![CDATA[The value of the EffectAnnotation as a Int32.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueSingle" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectAnnotation as a Single.]]></summary>
+      <overloads>
+        <overload signature="GetValueSingle()">
+          <summary><![CDATA[Gets the value of the EffectAnnotation as a Single.]]></summary>
+          <syntax><![CDATA[public float GetValueSingle ()]]></syntax>
+          <returns><![CDATA[The value of the EffectAnnotation as a Single.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueString" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectAnnotation as a String.]]></summary>
+      <overloads>
+        <overload signature="GetValueString()">
+          <summary><![CDATA[Gets the value of the EffectAnnotation as a String.]]></summary>
+          <syntax><![CDATA[public string GetValueString ()]]></syntax>
+          <returns><![CDATA[The value of the EffectAnnotation as a String.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueVector2" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectAnnotation as a Vector2.]]></summary>
+      <overloads>
+        <overload signature="GetValueVector2()">
+          <summary><![CDATA[Gets the value of the EffectAnnotation as a Vector2.]]></summary>
+          <syntax><![CDATA[public Vector2 GetValueVector2 ()]]></syntax>
+          <returns><![CDATA[The value of the EffectAnnotation as a Vector2.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueVector3" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectAnnotation as a Vector3.]]></summary>
+      <overloads>
+        <overload signature="GetValueVector3()">
+          <summary><![CDATA[Gets the value of the EffectAnnotation as a Vector3.]]></summary>
+          <syntax><![CDATA[public Vector3 GetValueVector3 ()]]></syntax>
+          <returns><![CDATA[The value of the EffectAnnotation as a Vector3.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueVector4" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectAnnotation as a Vector4.]]></summary>
+      <overloads>
+        <overload signature="GetValueVector4()">
+          <summary><![CDATA[Gets the value of the EffectAnnotation as a Vector4.]]></summary>
+          <syntax><![CDATA[public Vector4 GetValueVector4 ()]]></syntax>
+          <returns><![CDATA[The value of the EffectAnnotation as a Vector4.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         EffectAnnotation left,
+         EffectAnnotation right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="EffectAnnotation"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="EffectAnnotation"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         EffectAnnotation left,
+         EffectAnnotation right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="EffectAnnotation"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="EffectAnnotation"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

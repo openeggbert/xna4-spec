@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentSerializerTypeVersionAttribute" kind="class"
+          namespace="Microsoft.Xna.Framework.Content"
+          assembly="Microsoft.Xna.Framework.Content"
+          baseClass="Attribute">
+  <summary><![CDATA[A custom Attribute that specifies the corresponding run-time type version of this object. For more information, see Automatic Serialization of .XNB Files.]]></summary>
+  <syntax><![CDATA[public sealed class ContentSerializerTypeVersionAttribute : Attribute]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentSerializerTypeVersionAttribute(int)">
+      <summary><![CDATA[Creates a new instance of ContentSerializerTypeVersionAttribute.]]></summary>
+      <syntax><![CDATA[public ContentSerializerTypeVersionAttribute (
+         int typeVersion
+)]]></syntax>
+      <parameters>
+        <parameter name="typeVersion" type="int"><![CDATA[The run-time type version of the object.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="TypeVersion" type="int" access="get">
+      <summary><![CDATA[Gets the run-time type version for the object.]]></summary>
+      <syntax><![CDATA[public int TypeVersion { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

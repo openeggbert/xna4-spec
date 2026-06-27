@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SoundBank" kind="class"
+          namespace="Microsoft.Xna.Framework.Audio"
+          assembly="Microsoft.Xna.Framework.Audio"
+          interfaces="IDisposable">
+  <summary><![CDATA[Represents a sound bank, which is a collection of cues.]]></summary>
+  <syntax><![CDATA[public class SoundBank : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="SoundBank(AudioEngine, string)">
+      <summary><![CDATA[Initializes a new instance of this class using a sound bank from file.]]></summary>
+      <syntax><![CDATA[public SoundBank (
+         AudioEngine audioEngine,
+         string filename
+)]]></syntax>
+      <parameters>
+        <parameter name="audioEngine" type="AudioEngine"><![CDATA[Audio engine that will be associated with this sound bank.]]></parameter>
+        <parameter name="filename" type="string"><![CDATA[Path to the sound bank file.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsInUse" type="bool" access="get">
+      <summary><![CDATA[Returns whether the sound bank is currently in use.]]></summary>
+      <syntax><![CDATA[public bool IsInUse { get; }]]></syntax>
+      <remarks><![CDATA[This value will return true if the sound bank is currently referenced by at least one valid cue instance or other client. For example, the game itself might reference the sound bank.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool 
+)]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The object to compare.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are equivalent; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetCue" returnType="void">
+      <summary><![CDATA[Gets a cue from the sound bank.]]></summary>
+      <overloads>
+        <overload signature="GetCue()">
+          <summary><![CDATA[Gets a cue from the sound bank.]]></summary>
+          <syntax><![CDATA[public Cue GetCue (
+         string name
+)]]></syntax>
+          <parameters>
+            <parameter name="name" type="string"><![CDATA[Friendly name of the cue to get.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Cue object.]]></returns>
+          <remarks><![CDATA[Each Cue instance that you retrieve is unique, even when retrieving multiple cues with the same name. This allows multiple instances of the same Cue to exist and play simultaneously. The Cue instance that you retrieve using this method is valid only as long as it is in scope. If the Cue instance is allowed to go out of scope, such as in the case of the Cue being retrieved and played without otherwise being stored, the Cue is marked to be disposed by the garbage collector. This will result in the Cue stopping playback at an indeterminate time when the garbage collector disposes of the Cue . To prevent this behavior, store Cue objects to prevent them from falling out of scope. Alternatively, you can call PlayCue to play a cue immediately that will not fall out of scope.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="PlayCue" returnType="void">
+      <summary><![CDATA[Plays a cue.]]></summary>
+      <overloads>
+        <overload signature="String, AudioListener, AudioEmitter">
+          <summary><![CDATA[Plays a cue using 3D positional information specified in an AudioListener and AudioEmitter.]]></summary>
+          <syntax><![CDATA[public void PlayCue (
+         string name,
+         AudioListener listener,
+         AudioEmitter emitter
+)]]></syntax>
+          <parameters>
+            <parameter name="name" type="string"><![CDATA[Name of the cue to play.]]></parameter>
+            <parameter name="listener" type="AudioListener"><![CDATA[AudioListener that specifies listener 3D audio information.]]></parameter>
+            <parameter name="emitter" type="AudioEmitter"><![CDATA[AudioEmitter that specifies emitter 3D audio information.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[The 3D audio information in the specified listener and emitter is used to initialize the cue instance and apply a static positional 3D audio effect (the direction from which the player hears the sound). Position and velocity are not updated over time; the 3D audio effects are calculated based on the emitter and listener position at the time of the call. Typically, this is used for short-lived sounds, or when the object and listener are stationary for the duration of the sound but placed somewhere in the world space. For example, a sound that is played off to the right will continue to sound as if it is coming from the right, even if the listener moves or turns. For very short sounds, this may be imperceptable and thus acceptable. As another example, a voice that comes from the player's vehicle will always be the same distance and direction relative to the player, so static positioning in this case would be correct. Attenuation and doppler effects, if enabled, will also be static for the duration of the sound. To enable dynamic 3D audio when the emitter or listener are moving, use GetCue and Apply3D instead. Each Cue instance that you play is unique, even when playing multiple cues with the same name. This allows multiple instances of the same Cue to play simultaneously. Calling this method does not return a Cue object. Therefore, once the cue has started playing, it cannot be controlled through any methods of Cue , such as Stop , Pause , or Resume . The cue will play until its authored end, at which point it will be released. Because no Cue object is retrieved, cues played using this method are also unable to use Apply3D to apply dynamic 3D effects to the cue. To retrieve a cue that you can control during playback, or apply dynamic 3D effects to, use GetCue . For more information about 3D audio, see How To: Apply Basic 3D Positional Effects to a Cue and How To: Apply Attenuation and Doppler 3D Audio Effects .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         SoundBank left,
+         SoundBank right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="SoundBank"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="SoundBank"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         SoundBank left,
+         SoundBank right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="SoundBank"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="SoundBank"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_Disposing" returnType="void">
+      <summary><![CDATA[Raises the Disposing event when called from within a derived class.]]></summary>
+      <overloads>
+        <overload signature="raise_Disposing()">
+          <summary><![CDATA[Raises the Disposing event when called from within a derived class.]]></summary>
+          <syntax><![CDATA[protected void raise_Disposing (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[Invoking object reference; should be this object.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[Arguments to pass to the event handler.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="Disposing" type="EventHandler">
+      <summary><![CDATA[Occurs when Dispose is called or when this object is finalized and collected by the garbage collector of the Microsoft .NET common language runtime (CLR).]]></summary>
+      <syntax><![CDATA[public event EventHandler Disposing]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

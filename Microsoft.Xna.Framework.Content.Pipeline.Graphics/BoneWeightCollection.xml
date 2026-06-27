@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BoneWeightCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="Collection&amp;lt;BoneWeight&amp;gt;">
+  <summary><![CDATA[Collection of bone weights of a vertex.]]></summary>
+  <syntax><![CDATA[public sealed class BoneWeightCollection : Collection&lt;BoneWeight&gt;]]></syntax>
+  <remarks><![CDATA[These objects are stored in the Weights property of a vertex data channel object. The complete set of weights should sum to one.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="BoneWeightCollection()">
+      <summary><![CDATA[Initializes a new instance of BoneWeightCollection.]]></summary>
+      <syntax><![CDATA[public BoneWeightCollection ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="NormalizeWeights" returnType="void">
+      <summary><![CDATA[Normalizes the contents of the bone weights list.]]></summary>
+      <overloads>
+        <overload signature="Int32">
+          <summary><![CDATA[Normalizes the contents of the bone weights list.]]></summary>
+          <syntax><![CDATA[public void NormalizeWeights (
+         int maxWeights
+)]]></syntax>
+          <parameters>
+            <parameter name="maxWeights" type="int"><![CDATA[Maximum number of weights allowed.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Normalization does the following: Sorts weights such that the most significant weight is first. Removes zero-value entries. Discards weights with the smallest value until there are maxWeights or less in the list. Adjusts values so the sum equals one. Throws InvalidContentException if all weights are zero.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Normalizes the contents of the weights list.]]></summary>
+          <syntax><![CDATA[public void NormalizeWeights ()]]></syntax>
+          <remarks><![CDATA[Normalization does the following: Sorts weights such that the most significant weight is first. Removes zero-value entries. Adjusts values so the sum equals one. Throws InvalidContentException if all weights are zero.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

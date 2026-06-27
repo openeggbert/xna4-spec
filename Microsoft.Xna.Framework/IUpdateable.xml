@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IUpdateable" kind="interface"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Defines an interface for a game component that should be updated in Game.Update.]]></summary>
+  <syntax><![CDATA[public interface IUpdateable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Enabled" type="Object" access="get">
+      <summary><![CDATA[Indicates whether the game component's Update method should be called in Game.Update.]]></summary>
+      <syntax><![CDATA[public virtual abstract bool Enabled { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="UpdateOrder" type="Object" access="get">
+      <summary><![CDATA[Indicates when the game component should be updated relative to other game components. Lower values are updated first.]]></summary>
+      <syntax><![CDATA[public virtual abstract int UpdateOrder { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Update" returnType="void">
+      <summary><![CDATA[Called when the game component should be updated.]]></summary>
+      <overloads>
+        <overload signature="Update()">
+          <summary><![CDATA[Called when the game component should be updated.]]></summary>
+          <syntax><![CDATA[public void Update (
+         GameTime gameTime
+)]]></syntax>
+          <parameters>
+            <parameter name="gameTime" type="GameTime"><![CDATA[Snapshot of the game's timing state.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="EnabledChanged" type="EventHandler">
+      <summary><![CDATA[Raised when the Enabled property changes.]]></summary>
+      <syntax><![CDATA[public virtual abstract event EventHandler EnabledChanged]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="UpdateOrderChanged" type="EventHandler">
+      <summary><![CDATA[Raised when the UpdateOrder property changes.]]></summary>
+      <syntax><![CDATA[public virtual abstract event EventHandler UpdateOrderChanged]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

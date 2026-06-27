@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexElementMethod" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines the tessellator processing method for a vertex element.]]></summary>
+  <syntax><![CDATA[public enum VertexElementMethod]]></syntax>
+  <remarks><![CDATA[The VertexElement structure uses VertexElementMethod values to determine which vertex data to calculate during tessellation. These values can be passed into the constructor or to the VertexElementMethod property. Mesh data should use the default value. Patches can use any of the other implemented types. Vertex data is declared with an array of VertexElement structures. Each element in the array contains a vertex declaration method. In addition to using Default , a normal mesh can use LookUp and LookUpPresampled when N-patches are enabled.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Default"><summary><![CDATA[Default value. The tessellator copies the vertex data (or the spline data if it is operating on a patch) without performing additional calculations on it. The input and output types can be any value. When the tessellator is used, this element is interpolated; otherwise, vertex data is copied into the input register.]]></summary></member>
+    <member name="LookUp"><summary><![CDATA[Looks up a displacement map. The input type can be VertexElementFormat.Vector2, VertexElementFormat.Vector3, or VertexElementFormat.Vector4. Only the .x and .y components are used for the texture map lookup. The output type is always VertexElementFormat.Single. The device must support displacement mapping. This constant is supported only by the programmable pipeline on N-patch data, if N-patches are enabled.]]></summary></member>
+    <member name="LookUpPresampled"><summary><![CDATA[Looks up a presampled displacement map. The input type must be set to VertexElementFormat.Unused, and the stream index and stream offset must be set to 0. The output type for this operation is always VertexElementFormat.Single. The device must support displacement mapping. This constant is supported only by the programmable pipeline on N-patch data, if N-patches are enabled.]]></summary></member>
+    <member name="UV"><summary><![CDATA[Copies out the u and v values at a point on the rectangle or triangle patch. This results in a 2D float. The input type must be set to VertexElementFormat.Unused; the output type is always VertexElementFormat.Vector2. The input stream and offset also are unused, but must be set to 0.]]></summary></member>
+  </members>
+</xna-type>

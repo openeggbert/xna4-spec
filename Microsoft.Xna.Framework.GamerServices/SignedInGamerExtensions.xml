@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SignedInGamerExtensions" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Provides additional services to Gamer Services for Xbox LIVE.]]></summary>
+  <syntax><![CDATA['Declaration
+&lt;ExtensionAttribute&gt; _
+Public NotInheritable Class SignedInGamerExtensions]]></syntax>
+  <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
+  <platforms>
+    <platform>Windows Phone</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="AwardAvatarAssets" returnType="void">
+      <summary><![CDATA[Awards an Avatar asset]]></summary>
+      <overloads>
+        <overload signature="AwardAvatarAssets()">
+          <summary><![CDATA[Awards an Avatar asset]]></summary>
+          <syntax><![CDATA['Declaration
+&lt;ExtensionAttribute&gt; _
+Public Shared Sub AwardAvatarAssets ( _
+         gamer As SignedInGamer, _
+         assetKeys As String() _
+)]]></syntax>
+          <parameters>
+            <parameter name="gamer" type="Object"><![CDATA[Type: SignedInGamer A signed in gamer.]]></parameter>
+            <parameter name="assetKeys" type="Object"><![CDATA[Type: String Avatar asset keys.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. This is a blocking call: to query asynchronously, use Begin/EndAwardAvatarAssets instead.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BeginAwardAvatarAssets" returnType="void">
+      <summary><![CDATA[Begins the asyncronous process of awarding the specified avatar assets to a signed in gamer.]]></summary>
+      <overloads>
+        <overload signature="BeginAwardAvatarAssets()">
+          <summary><![CDATA[Begins the asyncronous process of awarding the specified avatar assets to a signed in gamer.]]></summary>
+          <syntax><![CDATA['Declaration
+&lt;ExtensionAttribute&gt; _
+Public Shared Function BeginAwardAvatarAssets ( _
+         gamer As SignedInGamer, _
+         assetKeys As String(), _
+         callback As AsyncCallback, _
+         state As Object _
+) As IAsyncResult]]></syntax>
+          <parameters>
+            <parameter name="gamer" type="Object"><![CDATA[Type: SignedInGamer A signed in gamer.]]></parameter>
+            <parameter name="assetKeys" type="Object"><![CDATA[Type: String Avatar asset keys.]]></parameter>
+            <parameter name="callback" type="Object"><![CDATA[Type: AsyncCallback An AsyncCallback that represents the method called when the operation is complete.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[Type: Object A user-created object used to uniquely identify the request, or null.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: IAsyncResult The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndAwardAvatarAssets" returnType="void">
+      <summary><![CDATA[Call this function after the system has finished awarding the avatar asset.]]></summary>
+      <overloads>
+        <overload signature="EndAwardAvatarAssets()">
+          <summary><![CDATA[Call this function after the system has finished awarding the avatar asset.]]></summary>
+          <syntax><![CDATA['Declaration
+&lt;ExtensionAttribute&gt; _
+Public Shared Sub EndAwardAvatarAssets ( _
+         gamer As SignedInGamer, _
+         result As IAsyncResult _
+)]]></syntax>
+          <parameters>
+            <parameter name="gamer" type="Object"><![CDATA[Type: SignedInGamer A signed in gamer.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[Type: IAsyncResult The IAsyncResult used to determine when the asynchronous request is finished.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

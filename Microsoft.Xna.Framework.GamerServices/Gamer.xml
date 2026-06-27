@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Gamer" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Abstract base class for types that represent game players (profiles that have an associated gamertag). The concrete types SignedInGamer and NetworkGamer derive from this.]]></summary>
+  <syntax><![CDATA[public abstract class Gamer]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="DisplayName" type="string" access="get;set">
+      <summary><![CDATA[Gets the display name string for the gamer.]]></summary>
+      <syntax><![CDATA[public string DisplayName { get; set; }]]></syntax>
+      <remarks><![CDATA[Windows Phone Specific Information On Windows Phone this property always returns a localized string.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Gamertag" type="string" access="get">
+      <summary><![CDATA[Gets the gamertag string.]]></summary>
+      <syntax><![CDATA[public string Gamertag { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="LeaderboardWriter" type="LeaderboardWriter" access="get">
+      <summary><![CDATA[Gets an object that can be used to write leaderboard statistics for this gamer.]]></summary>
+      <syntax><![CDATA[public LeaderboardWriter LeaderboardWriter { get; }]]></syntax>
+      <remarks><![CDATA[Leaderboards can be written from local, player match, or ranked sessions, using the following rules: Ranked sessions can write to both arbitrated and non-arbitrated leaderboards. Other session types can only write to non-arbitrated leaderboards. Arbitrated statistics should be written by all machines for all gamers. Non-arbitrated statistics should only be written by their local machine. In ranked sessions, all machines should report TrueSkill for all gamers. In other session types, only the host should report TrueSkill data. Leaderboards can only be written when the session is actually playing the game, not when it is in the lobby state. This property will return null if leaderboards are not available for this gamer, which occurs in system link sessions, or if the gamer profile is a guest or not signed into Xbox LIVE, or if the game is in trial mode.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="SignedInGamers" type="SignedInGamerCollection" access="get" isStatic="true">
+      <summary><![CDATA[Represents a collection of all gamers on the local system. The collection is sorted by the gamer index, skipping non-existent gamer indices. For example, if gamers 1 and 3 are signed in, the collection contains two instances of SignedInGamer, with gamer 1 first in the collection.]]></summary>
+      <syntax><![CDATA[public static SignedInGamerCollection SignedInGamers { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Tag" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets a custom object which can be used to attach arbitrary user defined data to the gamer.]]></summary>
+      <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="BeginGetFromGamertag" returnType="void">
+      <summary><![CDATA[Begins the process of getting a Gamer object for a specified gamertag.]]></summary>
+      <overloads>
+        <overload signature="BeginGetFromGamertag()">
+          <summary><![CDATA[Begins the process of getting a Gamer object for a specified gamertag.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Function BeginGetFromGamertag ( _
+         gamertag As String, _
+         callback As AsyncCallback, _
+         asyncState As Object _
+) As IAsyncResult]]></syntax>
+          <parameters>
+            <parameter name="gamertag" type="Object"><![CDATA[Type: String The Xbox LIVE gamertag for the gamer requested.]]></parameter>
+            <parameter name="callback" type="Object"><![CDATA[Type: AsyncCallback The method to call once the asynchronous operation is finished.]]></parameter>
+            <parameter name="asyncState" type="Object"><![CDATA[Type: Object State of the asynchronous operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the method. Call EndGetFromGamertag to access these results.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BeginGetPartnerToken" returnType="void">
+      <summary><![CDATA[Begins the asynchronous process of getting the partner token for this gamer.]]></summary>
+      <overloads>
+        <overload signature="BeginGetPartnerToken()">
+          <summary><![CDATA[Begins the asynchronous process of getting the partner token for this gamer.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Function BeginGetPartnerToken ( _
+         audienceUri As String, _
+         callback As AsyncCallback, _
+         asyncState As Object _
+) As IAsyncResult]]></syntax>
+          <parameters>
+            <parameter name="audienceUri" type="Object"><![CDATA[Type: String URI associated with the service to use with this token. This cannot be null .]]></parameter>
+            <parameter name="callback" type="Object"><![CDATA[Type: AsyncCallback Method to call once the asynchronous operation is finished.]]></parameter>
+            <parameter name="asyncState" type="Object"><![CDATA[Type: Object State of the asynchronous operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the method. Call EndGetPartnerToken to access these results.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. A partner token contains authentication information that identifies both the application and gamer for communication with Xbox LIVE.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BeginGetProfile" returnType="void">
+      <summary><![CDATA[Starts an asynchronous profile read operation.]]></summary>
+      <overloads>
+        <overload signature="BeginGetProfile()">
+          <summary><![CDATA[Starts an asynchronous profile read operation.]]></summary>
+          <syntax><![CDATA[public IAsyncResult BeginGetProfile (
+         AsyncCallback callback,
+         Object asyncState
+)]]></syntax>
+          <parameters>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[The method to be called once the asynchronous operation has finished.]]></parameter>
+            <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An IAsyncResult used to track the progress of the method. Call EndGetProfile to access these results.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndGetFromGamertag" returnType="void">
+      <summary><![CDATA[Ends the process of getting a Gamer object for a specified gamertag.]]></summary>
+      <overloads>
+        <overload signature="EndGetFromGamertag()">
+          <summary><![CDATA[Ends the process of getting a Gamer object for a specified gamertag.]]></summary>
+          <syntax><![CDATA[public static Gamer EndGetFromGamertag (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[An IAsyncResult used to track the progress of the operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A Gamer object for the specified gamertag.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndGetPartnerToken" returnType="void">
+      <summary><![CDATA[Retrieves the results from an asynchronous request for the partner token for this gamer.]]></summary>
+      <overloads>
+        <overload signature="EndGetPartnerToken()">
+          <summary><![CDATA[Retrieves the results from an asynchronous request for the partner token for this gamer.]]></summary>
+          <syntax><![CDATA[public static string EndGetPartnerToken (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[An IAsyncResult used to track the progress of the operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The Xbox LIVE partner token for the gamer.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. A partner token contains authentication information that identifies both the application and gamer for communication with Xbox LIVE.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndGetProfile" returnType="void">
+      <summary><![CDATA[Ends an asynchronous profile read operation.]]></summary>
+      <overloads>
+        <overload signature="EndGetProfile()">
+          <summary><![CDATA[Ends an asynchronous profile read operation.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Function EndGetProfile ( _
+         result As IAsyncResult _
+) As GamerProfile]]></syntax>
+          <parameters>
+            <parameter name="result" type="Object"><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: GamerProfile The profile data for this gamer.]]></returns>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetFromGamertag" returnType="void">
+      <summary><![CDATA[Returns a Gamer object for the specified gamertag.]]></summary>
+      <overloads>
+        <overload signature="GetFromGamertag()">
+          <summary><![CDATA[Returns a Gamer object for the specified gamertag.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Function GetFromGamertag ( _
+         gamertag As String _
+) As Gamer]]></syntax>
+          <parameters>
+            <parameter name="gamertag" type="Object"><![CDATA[Type: String The Xbox LIVE gamertag for the gamer requested.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Gamer A Gamer object for the specified gamertag.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPartnerToken" returnType="void">
+      <summary><![CDATA[Gets the partner token for this gamer.]]></summary>
+      <overloads>
+        <overload signature="GetPartnerToken()">
+          <summary><![CDATA[Gets the partner token for this gamer.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Function GetPartnerToken ( _
+         audienceUri As String _
+) As String]]></syntax>
+          <parameters>
+            <parameter name="audienceUri" type="Object"><![CDATA[Type: String URI associated with the service that will be used with this token. This cannot be null .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: String The Xbox LIVE partner token for the gamer.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. A partner token contains authentication information that identifies both the application and gamer for communication with Xbox LIVE.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetProfile" returnType="void">
+      <summary><![CDATA[Reads profile data for this gamer.]]></summary>
+      <overloads>
+        <overload signature="GetProfile()">
+          <summary><![CDATA[Reads profile data for this gamer.]]></summary>
+          <syntax><![CDATA[public GamerProfile GetProfile ()]]></syntax>
+          <returns><![CDATA[The profile data for this gamer.]]></returns>
+          <remarks><![CDATA[This operation can take some time if called on a remote gamer instance, in which case you might prefer to use the non-blocking alternative BeginGetProfile , but will complete quickly when used with a locally signed in profile.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

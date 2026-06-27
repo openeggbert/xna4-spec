@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="OcclusionQuery" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IDisposable">
+  <summary><![CDATA[Used to perform an occlusion query against the latest drawn objects.]]></summary>
+  <syntax><![CDATA[public class OcclusionQuery : IDisposable]]></syntax>
+  <remarks><![CDATA[An occlusion query is a technique that determines how many pixels were actually drawn during a set of draw calls. This is useful for certain rendering techniques and rendering optimizations. An example of using this query follows: OcclusionQuery query = new OcclusionQuery(device); query.Begin(); // Drawing simple objects, bounding areas, etc. query.End(); // Do additional work here to provide enough time for the GPU to complete query execution. // Draw additional models if (query.IsComplete == true &amp;&amp; query.PixelCount &gt; 0) { // A non-zero pixel count means some of the low res model is visible // so let's draw the real version of it } The number of non-occluded pixels (indicated by PixelCount ) can differ based on the platform. For Xbox 360 games, PixelCount represents the number of pixels modified by drawing. This includes GraphicsDevice.Clear calls and any drawing associated with sprite batches. For Windows games, PixelCount represents the number of pixels that passed the depth and stencil tests. This does not include sprite batch drawing (because the depth test is turned off) or calls to GraphicsDevice.Clear . To achieve consistent results across all platforms, use occlusion queries only when the depth buffer is enabled. In addition, avoid calling Clear or changing the assigned render target inside an occlusion query begin/end block.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="OcclusionQuery(GraphicsDevice)">
+      <summary><![CDATA[Initializes a new instance of OcclusionQuery with the specified device.]]></summary>
+      <syntax><![CDATA[public OcclusionQuery (
+         GraphicsDevice graphicsDevice
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to associate with this query.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="GraphicsDevice" type="GraphicsDevice" access="get">
+      <summary><![CDATA[Gets the graphics device being queried.]]></summary>
+      <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsComplete" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates if the occlusion query has completed.]]></summary>
+      <syntax><![CDATA[public bool IsComplete { get; }]]></syntax>
+      <remarks><![CDATA[If predicated tiling has been triggered for an Xbox 360 game, calls to IsComplete from within the tiling bracket always fail. Access this data by switching to a different render target or end the frame. This condition does not apply to games targeting the Windows platform.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsSupported" type="bool" access="get">
+      <summary><![CDATA[Specifies if occlusion queries are supported on the related graphics device.]]></summary>
+      <syntax><![CDATA[public bool IsSupported { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get;set">
+      <summary><![CDATA[Gets the name of this occlusion query]]></summary>
+      <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PixelCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of visible pixels.]]></summary>
+      <syntax><![CDATA[public int PixelCount { get; }]]></syntax>
+      <remarks><![CDATA[The number of non-occluded pixels (indicated by PixelCount ) can differ based on the platform. For Xbox 360 games, PixelCount represents the number of pixels modified by drawing. This includes GraphicsDevice.Clear calls and any drawing associated with sprite batches. For Windows games, PixelCount represents the number of pixels that passed the depth and stencil tests. This does not include sprite batch drawing (because the depth test is turned off) or calls to GraphicsDevice.Clear . To achieve consistent results across all platforms, use occlusion queries only when the depth buffer is enabled. In addition, avoid calling Clear or changing the assigned render target inside an occlusion query begin/end block.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Tag" type="Object" access="get;set">
+      <summary><![CDATA[Gets the resource tag for this occlusion query.]]></summary>
+      <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Begin" returnType="void">
+      <summary><![CDATA[Begins application of the query.]]></summary>
+      <overloads>
+        <overload signature="Begin()">
+          <summary><![CDATA[Begins application of the query.]]></summary>
+          <syntax><![CDATA[public void Begin ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Releases the unmanaged resources used by Dispose and optionally releases the managed resources.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Releases the unmanaged resources used by Dispose and optionally releases the managed resources.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool 
+)]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="End" returnType="void">
+      <summary><![CDATA[Ends the application of the query.]]></summary>
+      <overloads>
+        <overload signature="End()">
+          <summary><![CDATA[Ends the application of the query.]]></summary>
+          <syntax><![CDATA[public void End ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_Disposing" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="raise_Disposing()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[protected void raise_Disposing (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[Invoking object reference; should be this object.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[Arguments to pass to the event handler.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="Disposing" type="EventHandler">
+      <summary><![CDATA[Occurs when Dispose is called or when this object is finalized and collected by the garbage collector of the Microsoft .NET common language runtime.]]></summary>
+      <syntax><![CDATA[public event EventHandler Disposing]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

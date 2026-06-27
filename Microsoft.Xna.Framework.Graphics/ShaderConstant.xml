@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ShaderConstant" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Describes a shader constant.]]></summary>
+  <syntax><![CDATA[public sealed class ShaderConstant]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="ColumnCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of columns in the ShaderConstant.]]></summary>
+      <syntax><![CDATA[public int ColumnCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ElementCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of elements in the ShaderConstant.]]></summary>
+      <syntax><![CDATA[public int ElementCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Gets the name of the ShaderConstant.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ParameterClass" type="EffectParameterClass" access="get">
+      <summary><![CDATA[Gets the EffectParameterClass of the ShaderConstant.]]></summary>
+      <syntax><![CDATA[public EffectParameterClass ParameterClass { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ParameterType" type="EffectParameterType" access="get">
+      <summary><![CDATA[Gets the EffectParameterType of the ShaderConstant.]]></summary>
+      <syntax><![CDATA[public EffectParameterType ParameterType { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RegisterCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of registers that contain data.]]></summary>
+      <syntax><![CDATA[public int RegisterCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RegisterIndex" type="int" access="get">
+      <summary><![CDATA[Gets the index of the ShaderConstant in the constant table.]]></summary>
+      <syntax><![CDATA[public int RegisterIndex { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RegisterSet" type="ShaderRegisterSet" access="get">
+      <summary><![CDATA[Gets the data type of the shader register.]]></summary>
+      <syntax><![CDATA[public ShaderRegisterSet RegisterSet { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RowCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of rows in the ShaderConstant.]]></summary>
+      <syntax><![CDATA[public int RowCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SamplerIndex" type="int" access="get">
+      <summary><![CDATA[Gets the sampler index number of the ShaderConstant from the constant table.]]></summary>
+      <syntax><![CDATA[public int SamplerIndex { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StructureMemberCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of structure member subparameters.]]></summary>
+      <syntax><![CDATA[public int StructureMemberCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="SetValue" returnType="void">
+      <summary><![CDATA[Sets the value of a ShaderConstant to an array of Boolean objects.]]></summary>
+      <overloads>
+        <overload signature="GraphicsDevice, Boolean ">
+          <summary><![CDATA[Sets the value of a ShaderConstant to an array of Boolean objects.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         bool[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="bool[]"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Single">
+          <summary><![CDATA[Sets the value of a ShaderConstant to a Single.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         float value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="float"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Vector3 ">
+          <summary><![CDATA[Sets the value of a ShaderConstant to an array of Vector3 objects.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         Vector3[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant /]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Vector2">
+          <summary><![CDATA[Sets the value of a ShaderConstant to a Vector2]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         Vector2 value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Boolean">
+          <summary><![CDATA[Sets the value of a ShaderConstant to a Boolean.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         bool value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="bool"><![CDATA[[ MarshalAsAttribute (U1)] Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Single ">
+          <summary><![CDATA[Sets the value of a ShaderConstant to an array of Single objects.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         float[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="float[]"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Vector2 ">
+          <summary><![CDATA[Sets the value of a ShaderConstant to an array of Vector2 objects.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         Vector2[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Int32">
+          <summary><![CDATA[Sets the value of a ShaderConstant to an Int32.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         int value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="int"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Matrix ">
+          <summary><![CDATA[Sets the value of a ShaderConstant to an array of Matrix objects.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         Matrix[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Matrix[]"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Vector3">
+          <summary><![CDATA[Sets the value of a ShaderConstant to a Vector3.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         Vector3 value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Int32 ">
+          <summary><![CDATA[Sets the value of a ShaderConstant to an array of Int32 objects.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         int[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="int[]"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Quaternion ">
+          <summary><![CDATA[Sets the value of a ShaderConstant to an array of Quaternion objects.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         Quaternion[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Quaternion[]"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Quaternion">
+          <summary><![CDATA[Sets the value of a ShaderConstant to a Quaternion.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         Quaternion value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Quaternion"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Vector4 ">
+          <summary><![CDATA[Sets the value of a ShaderConstant to an array of Vector4 objects.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         Vector4[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Vector4">
+          <summary><![CDATA[Sets the value of a ShaderConstant to a Vector4.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         Vector4 value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Matrix">
+          <summary><![CDATA[Sets the value of a ShaderConstant to a Matrix.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         GraphicsDevice graphicsDevice,
+         Matrix value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Matrix"><![CDATA[Value to assign to the ShaderConstant .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetValueTranspose" returnType="void">
+      <summary><![CDATA[Sets the value of a ShaderConstant to an matrix.]]></summary>
+      <overloads>
+        <overload signature="GraphicsDevice, Matrix">
+          <summary><![CDATA[Sets the value of a ShaderConstant to an matrix.]]></summary>
+          <syntax><![CDATA[public void SetValueTranspose (
+         GraphicsDevice graphicsDevice,
+         Matrix value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Matrix"><![CDATA[The matrix to set the ShaderConstant to.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GraphicsDevice, Matrix ">
+          <summary><![CDATA[Sets the value of a ShaderConstant to an array of matrices.]]></summary>
+          <syntax><![CDATA[public void SetValueTranspose (
+         GraphicsDevice graphicsDevice,
+         Matrix[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the ShaderConstant .]]></parameter>
+            <parameter name="value" type="Matrix[]"><![CDATA[The array of values to set the ShaderConstant to.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BoneWeight" kind="struct"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+  <summary><![CDATA[Provides properties for managing a bone weight.]]></summary>
+  <syntax><![CDATA[public struct BoneWeight]]></syntax>
+  <remarks><![CDATA[A bone weight describes the influence of a single bone on the position of a vertex. These are grouped into BoneWeightCollection objects, which are stored in a vertex data channel.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="BoneWeight(string, float)">
+      <summary><![CDATA[Initializes a new instance of BoneWeight with the specified name and weight.]]></summary>
+      <syntax><![CDATA[public BoneWeight (
+         string boneName,
+         float weight
+)]]></syntax>
+      <parameters>
+        <parameter name="boneName" type="string"><![CDATA[Name of the bone.]]></parameter>
+        <parameter name="weight" type="float"><![CDATA[Amount of influence, ranging from zero to one.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="BoneName" type="string" access="get">
+      <summary><![CDATA[Gets the name of the bone.]]></summary>
+      <syntax><![CDATA[public string BoneName { get; }]]></syntax>
+      <remarks><![CDATA[The bone can be located by searching for a BoneContent object with a matching Name property.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Weight" type="float" access="get">
+      <summary><![CDATA[Gets the amount of bone influence, ranging from zero to one. The complete set of weights in a BoneWeightCollection should sum to one.]]></summary>
+      <syntax><![CDATA[public float Weight { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

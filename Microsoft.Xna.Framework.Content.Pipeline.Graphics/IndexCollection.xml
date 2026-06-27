@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IndexCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="Collection&amp;lt;int&amp;gt;">
+  <summary><![CDATA[Provides methods for maintaining a list of index values.]]></summary>
+  <syntax><![CDATA[public sealed class IndexCollection : Collection&lt;int&gt;]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="IndexCollection()">
+      <summary><![CDATA[Initializes a new instance of IndexCollection.]]></summary>
+      <syntax><![CDATA[public IndexCollection ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="AddRange" returnType="void">
+      <summary><![CDATA[Appends the specified indices into the collection.]]></summary>
+      <overloads>
+        <overload signature="AddRange()">
+          <summary><![CDATA[Appends the specified indices into the collection.]]></summary>
+          <syntax><![CDATA[public void AddRange (
+         IEnumerable&lt;int&gt; indices
+)]]></syntax>
+          <parameters>
+            <parameter name="indices" type="Object"><![CDATA[Index into the Positions member of the parent.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

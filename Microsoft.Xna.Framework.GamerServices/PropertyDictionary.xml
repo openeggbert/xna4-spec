@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PropertyDictionary" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          baseClass="Object&amp;gt;"
+          interfaces="IDictionary&amp;lt;string, ICollection&amp;lt;KeyValuePair&amp;lt;string, Object&amp;gt;&amp;gt;, IEnumerable&amp;lt;KeyValuePair&amp;lt;string, Object&amp;gt;&amp;gt;, IEnumerable">
+  <summary><![CDATA[Holds a set of properties used to define presence states or leaderboard column values.]]></summary>
+  <syntax><![CDATA[public sealed class PropertyDictionary : IDictionary&lt;string, Object&gt;, ICollection&lt;KeyValuePair&lt;string, Object&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, Object&gt;&gt;, IEnumerable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Gets the number of elements contained in this PropertyDictionary.]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets the element with the specified key.]]></summary>
+      <syntax><![CDATA[public Object this [
+         string key
+] { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="ContainsKey" returnType="void">
+      <summary><![CDATA[Determines whether the PropertyDictionary contains an element with the specified key.]]></summary>
+      <overloads>
+        <overload signature="ContainsKey()">
+          <summary><![CDATA[Determines whether the PropertyDictionary contains an element with the specified key.]]></summary>
+          <syntax><![CDATA[public bool ContainsKey (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to locate in the PropertyDictionary .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Returns true if the PropertyDictionary contains an element with the specified key; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Returns an enumerator that iterates through a collection of key/value pairs that represent elements in the PropertyDictionary.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Returns an enumerator that iterates through a collection of key/value pairs that represent elements in the PropertyDictionary.]]></summary>
+          <syntax><![CDATA[public IEnumerator&lt;KeyValuePair&lt;string, Object&gt;&gt; GetEnumerator ()]]></syntax>
+          <returns><![CDATA[An that iterates through a collection of key/value pairs that represent elements in the PropertyDictionary.]]></returns>
+          <remarks><![CDATA[The C# foreach statement hides the complexity of using enumerators. Therefore, using foreach is recommended instead of directly manipulating the enumerator. Enumerators can be used to read the data in the collection, but can not be used to modify the underlying collection.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueDateTime" returnType="void">
+      <summary><![CDATA[Gets the value of the property with the specified key, as a System.DateTime.]]></summary>
+      <overloads>
+        <overload signature="GetValueDateTime()">
+          <summary><![CDATA[Gets the value of the property with the specified key, as a System.DateTime.]]></summary>
+          <syntax><![CDATA[public DateTime GetValueDateTime (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the property associated with the specified key, as a DateTime.]]></returns>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a DateTime , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueDouble" returnType="void">
+      <summary><![CDATA[Gets the value of the property with the specified key, as a System.Double.]]></summary>
+      <overloads>
+        <overload signature="GetValueDouble()">
+          <summary><![CDATA[Gets the value of the property with the specified key, as a System.Double.]]></summary>
+          <syntax><![CDATA[public double GetValueDouble (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the property associated with the specified key, as a Double.]]></returns>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a Double , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueInt32" returnType="void">
+      <summary><![CDATA[Gets the value of the property with the specified key, as a System.Int32.]]></summary>
+      <overloads>
+        <overload signature="GetValueInt32()">
+          <summary><![CDATA[Gets the value of the property with the specified key, as a System.Int32.]]></summary>
+          <syntax><![CDATA[public int GetValueInt32 (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the property associated with the specified key, as an Int32.]]></returns>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by an Int32 , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueInt64" returnType="void">
+      <summary><![CDATA[Gets the value of the property with the specified key, as a System.Int64.]]></summary>
+      <overloads>
+        <overload signature="GetValueInt64()">
+          <summary><![CDATA[Gets the value of the property with the specified key, as a System.Int64.]]></summary>
+          <syntax><![CDATA[public long GetValueInt64 (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the property associated with the specified key, as an Int64.]]></returns>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by an Int64 , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueOutcome" returnType="void">
+      <summary><![CDATA[Gets the value of the property with the specified key, as a LeaderboardOutcome.]]></summary>
+      <overloads>
+        <overload signature="GetValueOutcome()">
+          <summary><![CDATA[Gets the value of the property with the specified key, as a LeaderboardOutcome.]]></summary>
+          <syntax><![CDATA[public LeaderboardOutcome GetValueOutcome (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the property associated with the specified key, as a LeaderboardOutcome.]]></returns>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a LeaderboardOutcome , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueSingle" returnType="void">
+      <summary><![CDATA[Gets the value of the property with the specified key, as a System.Single.]]></summary>
+      <overloads>
+        <overload signature="GetValueSingle()">
+          <summary><![CDATA[Gets the value of the property with the specified key, as a System.Single.]]></summary>
+          <syntax><![CDATA[public float GetValueSingle (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the property associated with the specified key, as a Single.]]></returns>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a Single , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueStream" returnType="void">
+      <summary><![CDATA[Gets the value of the property with the specified key, as a System.IO.Stream.]]></summary>
+      <overloads>
+        <overload signature="GetValueStream()">
+          <summary><![CDATA[Gets the value of the property with the specified key, as a System.IO.Stream.]]></summary>
+          <syntax><![CDATA[public Stream GetValueStream (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the property associated with the specified key, as a Stream.]]></returns>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a Stream , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueString" returnType="void">
+      <summary><![CDATA[Gets the value of the property with the specified key, as a System.String.]]></summary>
+      <overloads>
+        <overload signature="GetValueString()">
+          <summary><![CDATA[Gets the value of the property with the specified key, as a System.String.]]></summary>
+          <syntax><![CDATA[public string GetValueString (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the property associated with the specified key, as a String.]]></returns>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a String , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueTimeSpan" returnType="void">
+      <summary><![CDATA[Gets the value of the property with the specified key, as a System.TimeSpan.]]></summary>
+      <overloads>
+        <overload signature="GetValueTimeSpan()">
+          <summary><![CDATA[Gets the value of the property with the specified key, as a System.TimeSpan.]]></summary>
+          <syntax><![CDATA[public TimeSpan GetValueTimeSpan (
+         string key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[he key to search for in the PropertyDictionary .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the property associated with the specified key, as a TimeSpan.]]></returns>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a TimeSpan , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetValue" returnType="void">
+      <summary><![CDATA[Sets the value of the property with the specified key, as a System.Double.]]></summary>
+      <overloads>
+        <overload signature="String, Double">
+          <summary><![CDATA[Sets the value of the property with the specified key, as a System.Double.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         string key,
+         double value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+            <parameter name="value" type="double"><![CDATA[The value of the property to set for the specified key, as a Double .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a Double , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, Int32">
+          <summary><![CDATA[Sets the value of the property with the specified key, as a System.Int32.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         string key,
+         int value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+            <parameter name="value" type="int"><![CDATA[The value of the property to set for the specified key, as an Int32 .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by an Int32 , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, TimeSpan">
+          <summary><![CDATA[Sets the value of the property with the specified key, as a System.TimeSpan.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         string key,
+         TimeSpan value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+            <parameter name="value" type="TimeSpan"><![CDATA[The value of the property to set for the specified key, as a TimeSpan .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a TimeSpan , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, Int64">
+          <summary><![CDATA[Sets the value of the property with the specified key, as a System.Int64.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         string key,
+         long value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+            <parameter name="value" type="long"><![CDATA[The value of the property to set for the specified key, as an Int64 .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by an Int64 , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, String">
+          <summary><![CDATA[Sets the value of the property with the specified key, as a System.String.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         string key,
+         string value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+            <parameter name="value" type="string"><![CDATA[The value of the property to set for the specified key, as a String .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a String , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, LeaderboardOutcome">
+          <summary><![CDATA[Sets the value of the property with the specified key, as a LeaderboardOutcome.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         string key,
+         LeaderboardOutcome value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+            <parameter name="value" type="LeaderboardOutcome"><![CDATA[The value of the property to set for the specified key, as a LeaderboardOutcome .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a LeaderboardOutcome , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, Single">
+          <summary><![CDATA[Sets the value of the property with the specified key, as a System.Single.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         string key,
+         float value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+            <parameter name="value" type="float"><![CDATA[The value of the property to set for the specified key, as a Single .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a Single , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, DateTime">
+          <summary><![CDATA[Sets the value of the property with the specified key, as a System.DateTime.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         string key,
+         DateTime value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+            <parameter name="value" type="DateTime"><![CDATA[The value of the property to set for the specified key, as a DateTime .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[If the value that corresponds to the specified key cannot be represented by a DateTime , an InvalidCastException will be thrown. A KeyNotFoundException will be thrown if the key does not exist.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryGetValue" returnType="void">
+      <summary><![CDATA[Determines if a value for the specified key exists in the PropertyDictionary.]]></summary>
+      <overloads>
+        <overload signature="TryGetValue()">
+          <summary><![CDATA[Determines if a value for the specified key exists in the PropertyDictionary.]]></summary>
+          <syntax><![CDATA[public bool TryGetValue (
+         string key,
+         out Object value
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The key to search for in the PropertyDictionary .]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[[ OutAttribute ] When the method returns, this parameter will contain the value associated with the specified key. If no value could be found in the PropertyDictionary , it will contain the default value for the type passed in.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Returns true if the PropertyDictionary contains a value associated with the specified key; false otherwise.]]></returns>
+          <remarks><![CDATA[If the key is not found, then the value parameter gets the appropriate default value for the value type passed in. For example: 0 (zero) for integer types, false for Boolean types, and null for reference types. Use the TryGetValue method if your code frequently attempts to access keys that are not in the dictionary. Using this method is more efficient than catching the KeyNotFoundException thrown by the Item property.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

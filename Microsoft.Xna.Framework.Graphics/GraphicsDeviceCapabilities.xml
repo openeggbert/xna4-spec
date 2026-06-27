@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GraphicsDeviceCapabilities" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IDisposable">
+  <summary><![CDATA[Represents the capabilities of the hardware.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="AdapterOrdinalInGroup" type="int" access="get">
+      <summary><![CDATA[Gets the number indicating the order in which heads are referenced by the API.]]></summary>
+      <syntax><![CDATA[public int AdapterOrdinalInGroup { get; }]]></syntax>
+      <remarks><![CDATA[The value for the master adapter is always 0. These values do not correspond to the adapter ordinals. They apply only to heads within a group.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="AlphaCompareCapabilities" type="CompareCaps" access="get">
+      <summary><![CDATA[Gets the alpha-test comparison capabilities.]]></summary>
+      <syntax><![CDATA[public CompareCaps AlphaCompareCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CubeTextureFilterCapabilities" type="FilterCaps" access="get">
+      <summary><![CDATA[Gets texture-filtering capabilities for a cube texture.]]></summary>
+      <syntax><![CDATA[public FilterCaps CubeTextureFilterCapabilities { get; }]]></syntax>
+      <remarks><![CDATA[Per-stage filtering capabilities reflect which filtering modes are supported for texture stages when performing multiple-texture blending. This member can be any combination of the per-stage texture-filtering flags defined in GraphicsDeviceCapabilities.FilterCaps .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CursorCapabilities" type="CursorCaps" access="get">
+      <summary><![CDATA[Gets hardware cursor capabilties.]]></summary>
+      <syntax><![CDATA[public CursorCaps CursorCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DeclarationTypeCapabilities" type="DeclarationTypeCaps" access="get">
+      <summary><![CDATA[Gets vertex data type capabilities.]]></summary>
+      <syntax><![CDATA[public DeclarationTypeCaps DeclarationTypeCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DepthBufferCompareCapabilities" type="CompareCaps" access="get">
+      <summary><![CDATA[Gets depth buffer comparision capabilities.]]></summary>
+      <syntax><![CDATA[public CompareCaps DepthBufferCompareCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DestinationBlendCapabilities" type="BlendCaps" access="get">
+      <summary><![CDATA[Gets destination-blending capabilities.]]></summary>
+      <syntax><![CDATA[public BlendCaps DestinationBlendCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DeviceCapabilities" type="DeviceCaps" access="get">
+      <summary><![CDATA[Gets graphics device capabilities.]]></summary>
+      <syntax><![CDATA[public DeviceCaps DeviceCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DeviceType" type="DeviceType" access="get">
+      <summary><![CDATA[Returns the type of the current GraphicsDevice.]]></summary>
+      <syntax><![CDATA[public DeviceType DeviceType { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DriverCapabilities" type="DriverCaps" access="get">
+      <summary><![CDATA[Gets device driver capabilities.]]></summary>
+      <syntax><![CDATA[public DriverCaps DriverCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ExtentsAdjust" type="float" access="get">
+      <summary><![CDATA[Gets the number of pixels to adjust the extents rectangle outward to accommodate antialiasing kernels.]]></summary>
+      <syntax><![CDATA[public float ExtentsAdjust { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GuardBandBottom" type="float" access="get">
+      <summary><![CDATA[Gets the bottom screen-space coordinate of the guard-band clipping region.]]></summary>
+      <syntax><![CDATA[public float GuardBandBottom { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GuardBandLeft" type="float" access="get">
+      <summary><![CDATA[Gets the left screen-space coordinate of the guard-band clipping region.]]></summary>
+      <syntax><![CDATA[public float GuardBandLeft { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GuardBandRight" type="float" access="get">
+      <summary><![CDATA[Gets the right coordinate of the guard-band clipping region.]]></summary>
+      <syntax><![CDATA[public float GuardBandRight { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GuardBandTop" type="float" access="get">
+      <summary><![CDATA[Gets the top screen-space coordinate of the guard-band clipping region.]]></summary>
+      <syntax><![CDATA[public float GuardBandTop { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LineCapabilities" type="LineCaps" access="get">
+      <summary><![CDATA[Gets line-drawing primitives capabilities.]]></summary>
+      <syntax><![CDATA[public LineCaps LineCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MasterAdapterOrdinal" type="int" access="get">
+      <summary><![CDATA[Gets the master device for this subordinate.]]></summary>
+      <syntax><![CDATA[public int MasterAdapterOrdinal { get; }]]></syntax>
+      <remarks><![CDATA[For multi-head support, one head will be denoted the master head, and all other heads on the same card will be denoted subordinate heads. If more than one multi-head adapter is present in a system, the master and its subordinates from one multi-head adapter are called a group.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxAnisotropy" type="int" access="get">
+      <summary><![CDATA[Gets the maximum valid value for the MaxAnisotropy texture-stage state.]]></summary>
+      <syntax><![CDATA[public int MaxAnisotropy { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxPixelShader30InstructionSlots" type="int" access="get">
+      <summary><![CDATA[Gets the maximum number of pixel shader instruction slots supported.]]></summary>
+      <syntax><![CDATA[public int MaxPixelShader30InstructionSlots { get; }]]></syntax>
+      <remarks><![CDATA[The maximum value that can be set on this capability is 32,768. Devices that support ps_3_0 are required to support at least 512 instruction slots.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxPixelShaderProfile" type="ShaderProfile" access="get">
+      <summary><![CDATA[Returns the maximum pixel shader profile for this GraphicsDevice.]]></summary>
+      <syntax><![CDATA[public ShaderProfile MaxPixelShaderProfile { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxPointSize" type="float" access="get">
+      <summary><![CDATA[Gets the maximum size of a point primitive.]]></summary>
+      <syntax><![CDATA[public float MaxPointSize { get; }]]></syntax>
+      <remarks><![CDATA[If the size is set to 1.0f, the device does not support point size control.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxPrimitiveCount" type="int" access="get">
+      <summary><![CDATA[Gets the maximum number of primitives for each DrawPrimitives call.]]></summary>
+      <syntax><![CDATA[public int MaxPrimitiveCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxSimultaneousRenderTargets" type="int" access="get">
+      <summary><![CDATA[Gets the maximum number of simultaneous render targets.]]></summary>
+      <syntax><![CDATA[public int MaxSimultaneousRenderTargets { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="MaxSimultaneousTextures" type="int" access="get">
+      <summary><![CDATA[Gets the maximum number of textures that can be simultaneously bound to the fixed-function pipeline sampler stages.]]></summary>
+      <syntax><![CDATA[public int MaxSimultaneousTextures { get; }]]></syntax>
+      <remarks><![CDATA[If the same texture is bound to two sampler stages, it counts as two textures. This value has no meaning in the programmable pipeline where the number of sampler stages is determined by each pixel shader version. Each pixel shader version also determines the number of texture declaration instructions.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxStreamStride" type="int" access="get">
+      <summary><![CDATA[Gets the maximum stride.]]></summary>
+      <syntax><![CDATA[public int MaxStreamStride { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxStreams" type="int" access="get">
+      <summary><![CDATA[Gets the maximum number of concurrent data streams.]]></summary>
+      <syntax><![CDATA[public int MaxStreams { get; }]]></syntax>
+      <remarks><![CDATA[If this value is 0, then the driver is not a Direct3D 9 driver.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxTextureAspectRatio" type="int" access="get">
+      <summary><![CDATA[Gets the maximum texture aspect ratio supported by the hardware.]]></summary>
+      <syntax><![CDATA[public int MaxTextureAspectRatio { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxTextureHeight" type="int" access="get">
+      <summary><![CDATA[Gets the maximum texture height for this device.]]></summary>
+      <syntax><![CDATA[public int MaxTextureHeight { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxTextureRepeat" type="int" access="get">
+      <summary><![CDATA[Gets the maximum range of the integer bits of the post-normalized texture coordinates.]]></summary>
+      <syntax><![CDATA[public int MaxTextureRepeat { get; }]]></syntax>
+      <remarks><![CDATA[A texture coordinate is stored as a 32-bit signed integer using 27 bits to store the integer part and 5 bits for the floating-point fraction. The maximum integer index, 227, is used to determine the maximum texture coordinate, depending on how the hardware does texture-coordinate scaling. Some hardware reports the cap TextureCaps.SupportsTextureRepeatNotScaledBySize . For this case, the device defers scaling texture coordinates by the texture size until after interpolation and application of the texture address mode, so the number of times a texture can be wrapped is given by the integer value in MaxTextureRepeat . Less desirably, on some hardware TextureCaps.SupportsTextureRepeatNotScaledBySize is not set and the device scales the texture coordinates by the texture size (using the highest level of detail) prior to interpolation. This limits the number of times a texture can be wrapped to MaxTextureRepeat / texture size. For example, assume that MaxTextureRepeat is equal to 32K and the size of the texture is 4K. If the hardware sets TextureCaps.SupportsTextureRepeatNotScaledBySize , then the number of times a texture can be wrapped is equal to MaxTextureRepeat (32K, in this example). Otherwise, the number of times a texture can be wrapped is equal to MaxTextureRepeat divided by texture size, which, in this example, is 32K/4K, or 8.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxTextureWidth" type="int" access="get">
+      <summary><![CDATA[Gets the maximum texture width for this device.]]></summary>
+      <syntax><![CDATA[public int MaxTextureWidth { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxUserClipPlanes" type="int" access="get">
+      <summary><![CDATA[Gets the maximum number of user-defined clipping planes supported.]]></summary>
+      <syntax><![CDATA[public int MaxUserClipPlanes { get; }]]></syntax>
+      <remarks><![CDATA[For a given physical device, this capability might vary across Direct3D devices, depending on the parameters supplied to the Device constructor.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxVertexIndex" type="int" access="get">
+      <summary><![CDATA[Gets the maximum size of indices supported for hardware vertex processing.]]></summary>
+      <syntax><![CDATA[public int MaxVertexIndex { get; }]]></syntax>
+      <remarks><![CDATA[It is possible to create 32-bit index buffers; however, you will not be able to render with the index buffer unless this value is greater than 0x0000FFFF.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxVertexShader30InstructionSlots" type="int" access="get">
+      <summary><![CDATA[Gets the maximum number of vertex shader instruction slots supported.]]></summary>
+      <syntax><![CDATA[public int MaxVertexShader30InstructionSlots { get; }]]></syntax>
+      <remarks><![CDATA[The maximum value that can be set on this cap is 32,768. Devices that support vs_3_0 are required to support at least 512 instruction slots.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxVertexShaderConstants" type="int" access="get">
+      <summary><![CDATA[Gets the number of vertex shader registers that are reserved for constants.]]></summary>
+      <syntax><![CDATA[public int MaxVertexShaderConstants { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxVertexShaderProfile" type="ShaderProfile" access="get">
+      <summary><![CDATA[Returns the maximum vertex shader profile for this GraphicsDevice.]]></summary>
+      <syntax><![CDATA[public ShaderProfile MaxVertexShaderProfile { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxVertexW" type="float" access="get">
+      <summary><![CDATA[Gets the maximum W-based depth value that the device supports.]]></summary>
+      <syntax><![CDATA[public float MaxVertexW { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxVolumeExtent" type="int" access="get">
+      <summary><![CDATA[Gets the maximum value for any of the three dimensions (width, height, and depth) of a volume texture.]]></summary>
+      <syntax><![CDATA[public int MaxVolumeExtent { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="NumberOfAdaptersInGroup" type="int" access="get">
+      <summary><![CDATA[Gets the number of adapters in this adapter group (only if master).]]></summary>
+      <syntax><![CDATA[public int NumberOfAdaptersInGroup { get; }]]></syntax>
+      <remarks><![CDATA[NumberOfAdaptersInGroup will be 1 for conventional adapters, greater than 1 for the master adapter of a multi-head card, or 0 for a subordinate adapter of a multihead card. Each card can have at most one master, but may have many subordinates.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="NumberSimultaneousRenderTargets" type="int" access="get">
+      <summary><![CDATA[Gets the number of simultaneous render targets.]]></summary>
+      <syntax><![CDATA[public int NumberSimultaneousRenderTargets { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PixelShader1xMaxValue" type="float" access="get">
+      <summary><![CDATA[Gets the maximum value of pixel shader arithmetic component.]]></summary>
+      <syntax><![CDATA[public float PixelShader1xMaxValue { get; }]]></syntax>
+      <remarks><![CDATA[PixelShader1xMaxValue indicates the internal range of values supported for pixel color blending operations. Within the range that they report to, implementations must allow data to pass through pixel processing unmodified (unclamped). Normally, the value of this member is an absolute value. For example, a 1.0 indicates that the range is −1.0 to 1, and an 8.0 indicates that the range is −8.0 to 8.0. The value must be greater than or equal to 1.0 for any hardware that supports pixel shaders.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PixelShaderCapabilities" type="PixelShaderCaps" access="get">
+      <summary><![CDATA[Gets the pixel shader 2.0 capabilities.]]></summary>
+      <syntax><![CDATA[public PixelShaderCaps PixelShaderCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PixelShaderVersion" type="Version" access="get">
+      <summary><![CDATA[Gets the pixel shader main and sub versions.]]></summary>
+      <syntax><![CDATA[public Version PixelShaderVersion { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PresentInterval" type="PresentInterval" access="get">
+      <summary><![CDATA[Gets the rate at which the swap chain's back buffers are presented to the front buffer.]]></summary>
+      <syntax><![CDATA[public PresentInterval PresentInterval { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PrimitiveCapabilities" type="PrimitiveCaps" access="get">
+      <summary><![CDATA[Gets driver primitive capabilities.]]></summary>
+      <syntax><![CDATA[public PrimitiveCaps PrimitiveCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RasterCapabilities" type="RasterCaps" access="get">
+      <summary><![CDATA[Gets information on raster-drawing capabilities.]]></summary>
+      <syntax><![CDATA[public RasterCaps RasterCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ShadingCapabilities" type="ShadingCaps" access="get">
+      <summary><![CDATA[Gets shading operations capabilities.]]></summary>
+      <syntax><![CDATA[public ShadingCaps ShadingCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SourceBlendCapabilities" type="BlendCaps" access="get">
+      <summary><![CDATA[Gets source-blending capabilities.]]></summary>
+      <syntax><![CDATA[public BlendCaps SourceBlendCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StencilCapabilities" type="StencilCaps" access="get">
+      <summary><![CDATA[Gets the supported stencil-buffer operations.]]></summary>
+      <syntax><![CDATA[public StencilCaps StencilCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TextureAddressCapabilities" type="AddressCaps" access="get">
+      <summary><![CDATA[Gets texture-addressing capabilities for texture objects.]]></summary>
+      <syntax><![CDATA[public AddressCaps TextureAddressCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TextureCapabilities" type="TextureCaps" access="get">
+      <summary><![CDATA[Gets miscellaneous texture-mapping capabilities.]]></summary>
+      <syntax><![CDATA[public TextureCaps TextureCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TextureFilterCapabilities" type="FilterCaps" access="get">
+      <summary><![CDATA[Gets texture-filtering capabilities for a texture.]]></summary>
+      <syntax><![CDATA[public FilterCaps TextureFilterCapabilities { get; }]]></syntax>
+      <remarks><![CDATA[Per-stage filtering capabilities reflect which filtering modes are supported for texture stages when performing multiple-texture blending. This member can be any combination of the per-stage texture-filtering flags defined in GraphicsDeviceCapabilities.FilterCaps .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexFormatCapabilities" type="VertexFormatCaps" access="get">
+      <summary><![CDATA[Gets flexible vertex format capabilities.]]></summary>
+      <syntax><![CDATA[public VertexFormatCaps VertexFormatCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexProcessingCapabilities" type="VertexProcessingCaps" access="get">
+      <summary><![CDATA[Gets vertex processing capabilities.]]></summary>
+      <syntax><![CDATA[public VertexProcessingCaps VertexProcessingCapabilities { get; }]]></syntax>
+      <remarks><![CDATA[For a given physical device, this capability might vary across Direct3D devices, depending on the parameters supplied to the Device constructor.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexShaderCapabilities" type="VertexShaderCaps" access="get">
+      <summary><![CDATA[Gets vertex shader version 2.0 extended capabilities.]]></summary>
+      <syntax><![CDATA[public VertexShaderCaps VertexShaderCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexShaderVersion" type="Version" access="get">
+      <summary><![CDATA[Gets the vertex shader main and sub versions.]]></summary>
+      <syntax><![CDATA[public Version VertexShaderVersion { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexTextureFilterCapabilities" type="FilterCaps" access="get">
+      <summary><![CDATA[Gets vertex shader texture filter capabilities.]]></summary>
+      <syntax><![CDATA[public FilterCaps VertexTextureFilterCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VolumeTextureAddressCapabilities" type="AddressCaps" access="get">
+      <summary><![CDATA[Gets texture-addressing capabilities for a volume texture]]></summary>
+      <syntax><![CDATA[public AddressCaps VolumeTextureAddressCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VolumeTextureFilterCapabilities" type="FilterCaps" access="get">
+      <summary><![CDATA[Gets texture-filtering capabilities for a volume texture.]]></summary>
+      <syntax><![CDATA[public FilterCaps VolumeTextureFilterCapabilities { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Releases all resources used by the GraphicsDeviceCapabilities class.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Releases all resources used by the GraphicsDeviceCapabilities class.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <remarks><![CDATA[Call Dispose when you are finished using the GraphicsDeviceCapabilities . The Dispose method leaves the GraphicsDeviceCapabilities in an unusable state. After calling Dispose , you must release all references to the GraphicsDeviceCapabilities so the garbage collector can reclaim the memory that the GraphicsDeviceCapabilities was occupying. Note Always call Dispose before you release your last reference to the GraphicsDeviceCapabilities . Otherwise, the resources it is using will not be freed until the garbage collector calls the GraphicsDeviceCapabilities object's Finalize method.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current GraphicsDeviceCapabilities .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         GraphicsDeviceCapabilities left,
+         GraphicsDeviceCapabilities right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GraphicsDeviceCapabilities"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="GraphicsDeviceCapabilities"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         GraphicsDeviceCapabilities left,
+         GraphicsDeviceCapabilities right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GraphicsDeviceCapabilities"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="GraphicsDeviceCapabilities"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

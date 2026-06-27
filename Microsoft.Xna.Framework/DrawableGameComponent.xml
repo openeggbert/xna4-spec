@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="DrawableGameComponent" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          baseClass="GameComponent"
+          interfaces="IDrawable">
+  <summary><![CDATA[A game component that is notified when it needs to draw itself.]]></summary>
+  <syntax><![CDATA[public class DrawableGameComponent : GameComponent, IDrawable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="DrawableGameComponent(Game)">
+      <summary><![CDATA[Creates a new instance of DrawableGameComponent.]]></summary>
+      <syntax><![CDATA[public DrawableGameComponent (
+         Game game
+)]]></syntax>
+      <parameters>
+        <parameter name="game" type="Game"><![CDATA[The Game to add the component to.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="DrawOrder" type="int" access="get;set">
+      <summary><![CDATA[Order in which the component should be drawn, relative to other components that are in the same GameComponentCollection.]]></summary>
+      <syntax><![CDATA[public int DrawOrder { get; set; }]]></syntax>
+      <remarks><![CDATA[This value can be any integer. Components in the GameComponentCollection are drawn in ascending order based on their DrawOrder .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GraphicsDevice" type="Object" access="get">
+      <summary><![CDATA[The GraphicsDevice the DrawableGameComponent is associated with.]]></summary>
+      <syntax><![CDATA[protected GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Visible" type="bool" access="get;set">
+      <summary><![CDATA[Indicates whether Draw should be called.]]></summary>
+      <syntax><![CDATA[public bool Visible { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Releases the unmanaged resources used by the DrawableGameComponent and optionally releases the managed resources.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Releases the unmanaged resources used by the DrawableGameComponent and optionally releases the managed resources.]]></summary>
+          <syntax><![CDATA[protected override void Dispose (
+         bool disposing
+)]]></syntax>
+          <parameters>
+            <parameter name="disposing" type="bool"><![CDATA[true to release both managed and unmanaged resources; false to release only unmanaged resources.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Draw" returnType="void">
+      <summary><![CDATA[Called when the DrawableGameComponent needs to be drawn. Override this method with component-specific drawing code.]]></summary>
+      <overloads>
+        <overload signature="Draw()">
+          <summary><![CDATA[Called when the DrawableGameComponent needs to be drawn. Override this method with component-specific drawing code.]]></summary>
+          <syntax><![CDATA[public virtual void Draw (
+         GameTime gameTime
+)]]></syntax>
+          <parameters>
+            <parameter name="gameTime" type="GameTime"><![CDATA[Time passed since the last call to Draw .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning In the method of an Xbox 360 game, vertex buffers, index buffers, and textures should not be written using SetData when they are intended to be used for rendering. This condition may lead to graphics corruption or crashes. To avoid this potential issue, use DrawUserPrimitives or DrawUserIndexedPrimitives as the preferred alternative to VertexBuffer.SetData for dynamic vertex generation. This is because, in cases where the size of the back buffer and depth stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. When predicated tiling has been triggered, the drawing commands contained in the function are not submitted until Present is called. (Note that implicitly calls Present at the end of this method.) In this case, these resources are not available for modification until the GPU is finished with presenting the entire frame.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Initialize" returnType="void">
+      <summary><![CDATA[Initializes the component. Override this method to load any non-graphics resources and query for any required services.]]></summary>
+      <overloads>
+        <overload signature="Initialize()">
+          <summary><![CDATA[Initializes the component. Override this method to load any non-graphics resources and query for any required services.]]></summary>
+          <syntax><![CDATA[public override void Initialize ()]]></syntax>
+          <remarks><![CDATA[Game services are a mechanism for maintaining loose coupling between objects that need to interact with each other. Services work through a mediator—in this case, Game.Services . Service providers register with Game.Services , and service consumers request services from Game.Services . This arrangement allows an object that requires a service to request the service without knowing the name of the service provider. Game services are defined by an interface. A class specifies the services it provides by implementing interfaces and registering the services with Game.Services . A service is registered by calling Game.Services.AddService specifying the type of service being implemented and a reference to the object providing the service. For example, to register an object that provides a service represented by the interface IMyService, you would use the following code. Services.AddService( typeof( IMyService ), myobject ); Once a service is registered, the object providing the service can be retrieved by Game.Services.GetService and specifying the desired service. For example, to retrieve IGraphicsDeviceService , you would use the following code. IGraphicsDeviceService graphicsservice = (IGraphicsDeviceService)Services.GetService( typeof(IGraphicsDeviceService) );]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="LoadContent" returnType="void">
+      <summary><![CDATA[Called when graphics resources need to be loaded. Override this method to load any component-specific graphics resources.]]></summary>
+      <overloads>
+        <overload signature="LoadContent()">
+          <summary><![CDATA[Called when graphics resources need to be loaded. Override this method to load any component-specific graphics resources.]]></summary>
+          <syntax><![CDATA[protected virtual void LoadContent ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="LoadGraphicsContent" returnType="void">
+      <summary><![CDATA[Called when the component needs to load graphics resources. Override this method to load any component-specific graphics resources.]]></summary>
+      <overloads>
+        <overload signature="LoadGraphicsContent()">
+          <summary><![CDATA[Called when the component needs to load graphics resources. Override this method to load any component-specific graphics resources.]]></summary>
+          <syntax><![CDATA[protected virtual void LoadGraphicsContent (
+         bool loadAllContent
+)]]></syntax>
+          <parameters>
+            <parameter name="loadAllContent" type="bool"><![CDATA[true if all graphics resources need to be loaded; false if only manual resources need to be loaded.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnDrawOrderChanged" returnType="void">
+      <summary><![CDATA[Called when the DrawOrder property changes. Raises the DrawOrderChanged event.]]></summary>
+      <overloads>
+        <overload signature="OnDrawOrderChanged()">
+          <summary><![CDATA[Called when the DrawOrder property changes. Raises the DrawOrderChanged event.]]></summary>
+          <syntax><![CDATA[protected virtual void OnDrawOrderChanged (
+         Object sender,
+         EventArgs args
+)]]></syntax>
+          <parameters>
+            <parameter name="sender" type="Object"><![CDATA[The DrawableGameComponent .]]></parameter>
+            <parameter name="args" type="EventArgs"><![CDATA[Arguments to the DrawOrderChanged event.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnVisibleChanged" returnType="void">
+      <summary><![CDATA[Called when the Visible property changes. Raises the VisibleChanged event.]]></summary>
+      <overloads>
+        <overload signature="OnVisibleChanged()">
+          <summary><![CDATA[Called when the Visible property changes. Raises the VisibleChanged event.]]></summary>
+          <syntax><![CDATA[protected virtual void OnVisibleChanged (
+         Object sender,
+         EventArgs args
+)]]></syntax>
+          <parameters>
+            <parameter name="sender" type="Object"><![CDATA[The DrawableGameComponent .]]></parameter>
+            <parameter name="args" type="EventArgs"><![CDATA[Arguments to the VisibleChanged event.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="UnloadContent" returnType="void">
+      <summary><![CDATA[Called when graphics resources need to be unloaded. Override this method to unload any component-specific graphics resources.]]></summary>
+      <overloads>
+        <overload signature="UnloadContent()">
+          <summary><![CDATA[Called when graphics resources need to be unloaded. Override this method to unload any component-specific graphics resources.]]></summary>
+          <syntax><![CDATA[protected virtual void UnloadContent ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="UnloadGraphicsContent" returnType="void">
+      <summary><![CDATA[Called when graphics resources should be unloaded. Override this method to handle component-specific graphics resources.]]></summary>
+      <overloads>
+        <overload signature="UnloadGraphicsContent()">
+          <summary><![CDATA[Called when graphics resources should be unloaded. Override this method to handle component-specific graphics resources.]]></summary>
+          <syntax><![CDATA[protected virtual void UnloadGraphicsContent (
+         bool unloadAllContent
+)]]></syntax>
+          <parameters>
+            <parameter name="unloadAllContent" type="bool"><![CDATA[true if all graphics resources should be unloaded; false if only manual resources should be unloaded.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="DrawOrderChanged" type="EventHandler">
+      <summary><![CDATA[Raised when the DrawOrder property changes.]]></summary>
+      <syntax><![CDATA[public event EventHandler DrawOrderChanged]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="VisibleChanged" type="EventHandler">
+      <summary><![CDATA[Raised when the Visible property changes.]]></summary>
+      <syntax><![CDATA[public event EventHandler VisibleChanged]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

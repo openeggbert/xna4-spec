@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamerPrivilegeSetting" kind="enum"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Describes the conditions in which a privilege is available.]]></summary>
+  <syntax><![CDATA[public enum GamerPrivilegeSetting]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="Blocked"><summary><![CDATA[This privilege is not available for the current gamer profile.]]></summary></member>
+    <member name="Everyone"><summary><![CDATA[This privilege is available for the current gamer profile.]]></summary></member>
+    <member name="FriendsOnly"><summary><![CDATA[This privilege is only available for friends of the current gamer profile. Use the IsFriend method to check which gamers are friends.]]></summary></member>
+  </members>
+</xna-type>

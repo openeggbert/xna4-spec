@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MediaPlayer" kind="class"
+          namespace="Microsoft.Xna.Framework.Media"
+          assembly="Microsoft.Xna.Framework.Media">
+  <summary><![CDATA[Provides methods and properties to play, pause, resume, and stop songs. MediaPlayer also exposes shuffle, repeat, volume, play position, and visualization capabilities.]]></summary>
+  <syntax><![CDATA[public static class MediaPlayer]]></syntax>
+  <remarks><![CDATA[MediaPlayer provides methods and properties for playing songs in the media library. To control song playback, use the Play , Pause , Stop , and Resume methods. The MoveNext and MovePrevious methods move to the next or previous song in the queue. They operate as if the queue was circular. That is, MoveNext , when the last song is playing, moves to the first song. MovePrevious , when the first song is playing, moves to the last song. To get and set playback options, use the IsMuted , IsRepeating , IsShuffled , PlayPosition , and Volume properties. To obtain visualization data for the currently playing song, call GetVisualizationData . MediaPlayer is a static class, so you do not have to use new to instantiate an instance of the class. Instead, call methods and properties directly on the class.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="GameHasControl" type="bool" access="get" isStatic="true">
+      <summary><![CDATA[Determines whether the game has control of the background music.]]></summary>
+      <syntax><![CDATA[public static bool GameHasControl { get; }]]></syntax>
+      <remarks><![CDATA[A gamer can play his or her own music as the background to your game by using the Xbox 360 dashboard. If the game is currently playing custom background music (specified by the gamer using the Xbox 360 dashboard), calls to Play , Stop , Pause , Resume , MoveNext , and MovePrevious have no effect.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsMuted" type="bool" access="get;set" isStatic="true">
+      <summary><![CDATA[Gets or set the muted setting for the media player.]]></summary>
+      <syntax><![CDATA[public static bool IsMuted { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsRepeating" type="bool" access="get;set" isStatic="true">
+      <summary><![CDATA[Gets or sets the repeat setting for the media player.]]></summary>
+      <syntax><![CDATA[public static bool IsRepeating { get; set; }]]></syntax>
+      <remarks><![CDATA[When IsRepeating is true , the playback queue will begin playing again after all songs in the queue have been played.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsShuffled" type="bool" access="get;set" isStatic="true">
+      <summary><![CDATA[Gets or sets the shuffle setting for the media player.]]></summary>
+      <syntax><![CDATA[public static bool IsShuffled { get; set; }]]></syntax>
+      <remarks><![CDATA[When IsShuffled is true , songs in the playback queue are played in random order rather than from first to last.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsVisualizationEnabled" type="bool" access="get;set" isStatic="true">
+      <summary><![CDATA[Gets or sets the visualization enabled setting for the media player.]]></summary>
+      <syntax><![CDATA[public static bool IsVisualizationEnabled { get; set; }]]></syntax>
+      <remarks><![CDATA[When IsVisualizationEnabled is true , visualization data is enabled and GetVisualizationData will return visualization data for the currently playing song.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="PlayPosition" type="TimeSpan" access="get" isStatic="true">
+      <summary><![CDATA[Gets the play position within the currently playing song.]]></summary>
+      <syntax><![CDATA[public static TimeSpan PlayPosition { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Queue" type="MediaQueue" access="get" isStatic="true">
+      <summary><![CDATA[Gets the media playback queue, MediaQueue.]]></summary>
+      <syntax><![CDATA[public static MediaQueue Queue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="State" type="MediaState" access="get" isStatic="true">
+      <summary><![CDATA[Gets the media playback state, MediaState.]]></summary>
+      <syntax><![CDATA[public static MediaState State { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Volume" type="float" access="get;set" isStatic="true">
+      <summary><![CDATA[Gets or sets the media player volume.]]></summary>
+      <syntax><![CDATA[public static float Volume { get; set; }]]></syntax>
+      <remarks><![CDATA[Volume adjustment is based on a decibel, not multiplicative, scale. For example, when the device volume is half of maximum (about 7 in the Zune user interface), setting Volume to 0.6f or less is silent or nearly so, not volume 4 as you would expect from a multiplicative adjustment. Setting Volume to 0.0 subtracts 96 dB from the volume. Setting Volume to 1.0 subtracts 0 dB from the volume. Values in between 0.0f and 1.0f subtract dB from the volume proportionally.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetVisualizationData" returnType="void">
+      <summary><![CDATA[Retrieves visualization (frequency and sample) data for the currently-playing song.]]></summary>
+      <overloads>
+        <overload signature="GetVisualizationData()">
+          <summary><![CDATA[Retrieves visualization (frequency and sample) data for the currently-playing song.]]></summary>
+          <syntax><![CDATA[public static void GetVisualizationData (
+         VisualizationData visualizationData
+)]]></syntax>
+          <parameters>
+            <parameter name="visualizationData" type="VisualizationData"><![CDATA[Visualization (frequency and sample) data for the currently playing song.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Visualization data can be used to create visualizers , which are graphical representations of sound. For example, a simple visualizer might be an equalizer spectrum display that shows the current power level for each frequency band. The frequency data is a collection of float values. Each element corresponds to a frequency band, ranging from 20Hz to 20KHz. In the collection, the distribution of bands from 20Hz to 20KHz is logarithmic, not linear. This means that elements at the lower end of the spectrum represent a smaller frequency range than those at the upper end of the spectrum. Each value in the frequency collection is a normalized float value from 0.0f to 1.0f, and is the logarithmic scaled power level for that frequency band. Frequency is perceived as pitch. Information returned from the GetVisualizationData method can determine if a sound is more of a higher pitch, or more of a lower pitch. This information can be useful when determining how the sounds might drive game play.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="MoveNext" returnType="void">
+      <summary><![CDATA[Moves to the next song in the queue of playing songs.]]></summary>
+      <overloads>
+        <overload signature="MoveNext()">
+          <summary><![CDATA[Moves to the next song in the queue of playing songs.]]></summary>
+          <syntax><![CDATA[public static void MoveNext ()]]></syntax>
+          <remarks><![CDATA[If the current song is the last song in the queue, MoveNext moves to the first song in the queue. MoveNext does not alter the current media state (playing, paused, or stopped).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="MovePrevious" returnType="void">
+      <summary><![CDATA[Moves to the previous song in the queue of playing songs.]]></summary>
+      <overloads>
+        <overload signature="MovePrevious()">
+          <summary><![CDATA[Moves to the previous song in the queue of playing songs.]]></summary>
+          <syntax><![CDATA[public static void MovePrevious ()]]></syntax>
+          <remarks><![CDATA[If the current song is the first song in the queue, MovePrevious moves to the last song in the queue. MovePrevious does not alter the current media state (playing, paused, or stopped).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Pause" returnType="void">
+      <summary><![CDATA[Pauses the currently playing song.]]></summary>
+      <overloads>
+        <overload signature="Pause()">
+          <summary><![CDATA[Pauses the currently playing song.]]></summary>
+          <syntax><![CDATA[public static void Pause ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Play" returnType="void" isStatic="true">
+      <summary><![CDATA[Plays a SongCollection.]]></summary>
+      <overloads>
+        <overload signature="SongCollection">
+          <summary><![CDATA[Plays a SongCollection.]]></summary>
+          <syntax><![CDATA[public static void Play (
+         SongCollection songs
+)]]></syntax>
+          <parameters>
+            <parameter name="songs" type="SongCollection"><![CDATA[SongCollection to play.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Play clears the current playback queue, and then queues up the specified song collection for playback. It begins with the first song in the collection. Playback starts immediately at the beginning of the song.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="SongCollection, Int32">
+          <summary><![CDATA[Plays a SongCollection, starting with the Song at the specified index.]]></summary>
+          <syntax><![CDATA[public static void Play (
+         SongCollection songs,
+         int index
+)]]></syntax>
+          <parameters>
+            <parameter name="songs" type="SongCollection"><![CDATA[SongCollection to play.]]></parameter>
+            <parameter name="index" type="int"><![CDATA[Index of the song in the collection at which playback should begin.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Play clears the current playback queue, and then queues up the specified song collection for playback. It begins with the song at the specified index in the collection. Playback starts immediately at the beginning of the song.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Song">
+          <summary><![CDATA[Plays a Song.]]></summary>
+          <syntax><![CDATA[public static void Play (
+         Song song
+)]]></syntax>
+          <parameters>
+            <parameter name="song" type="Song"><![CDATA[Song to play.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Play clears the current playback queue, and then queues up the specified song for playback. Playback starts immediately at the beginning of the song.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Resume" returnType="void">
+      <summary><![CDATA[Resumes a paused song.]]></summary>
+      <overloads>
+        <overload signature="Resume()">
+          <summary><![CDATA[Resumes a paused song.]]></summary>
+          <syntax><![CDATA[public static void Resume ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Stop" returnType="void">
+      <summary><![CDATA[Stops playing a song.]]></summary>
+      <overloads>
+        <overload signature="Stop()">
+          <summary><![CDATA[Stops playing a song.]]></summary>
+          <syntax><![CDATA[public static void Stop ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="ActiveSongChanged" type="EventHandler">
+      <summary><![CDATA[Raised when the active song changes due to active playback or due to explicit calls to the MoveNext or MovePrevious methods.]]></summary>
+      <syntax><![CDATA[public static event EventHandler ActiveSongChanged]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </event>
+    <event name="MediaStateChanged" type="EventHandler">
+      <summary><![CDATA[Raised when the media player play state changes.]]></summary>
+      <syntax><![CDATA[public static event EventHandler MediaStateChanged]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

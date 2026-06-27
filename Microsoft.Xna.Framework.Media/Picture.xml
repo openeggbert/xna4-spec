@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Picture" kind="class"
+          namespace="Microsoft.Xna.Framework.Media"
+          assembly="Microsoft.Xna.Framework.Media"
+          interfaces="IEquatable&amp;lt;Picture&amp;gt;">
+  <summary><![CDATA[Provides access to a picture in the media library.]]></summary>
+  <syntax><![CDATA[public sealed class Picture : IEquatable&lt;Picture&gt;]]></syntax>
+  <remarks><![CDATA[The Picture class provides information about a picture, including the picture's graphic ( GetTexture ), thumbnail ( GetThumbnail ), Name , Date , and Height and Width . You can obtain a Picture object through the PictureCollection.Item indexer.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Album" type="PictureAlbum" access="get">
+      <summary><![CDATA[Gets the picture album that contains the picture.]]></summary>
+      <syntax><![CDATA[public PictureAlbum Album { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Date" type="DateTime" access="get">
+      <summary><![CDATA[Gets the picture's date.]]></summary>
+      <syntax><![CDATA[public DateTime Date { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Height" type="int" access="get">
+      <summary><![CDATA[Gets the picture's height.]]></summary>
+      <syntax><![CDATA[public int Height { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Gets the name of the Picture.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Width" type="int" access="get">
+      <summary><![CDATA[Gets the picture's width.]]></summary>
+      <syntax><![CDATA[public int Width { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Determines whether the specified Picture is equal to this Picture.]]></summary>
+      <overloads>
+        <overload signature="Picture">
+          <summary><![CDATA[Determines whether the specified Picture is equal to this Picture.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Picture other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Picture"><![CDATA[Picture to compare with this instance.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Object">
+          <summary><![CDATA[Determines whether the specified Object is equal to this Picture.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object to compare with this instance.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Releases unmanaged resources and performs other cleanup operations before the Picture is reclaimed by garbage collection.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Releases unmanaged resources and performs other cleanup operations before the Picture is reclaimed by garbage collection.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <remarks><![CDATA[This method overrides Finalize System.Object.Finalize . Application code should not call this method. The object's Finalize method is automatically invoked during garbage collection, unless a call to the GC.SuppressFinalize method has disabled finalization by the garbage collector. For more information, see Finalize Methods and Destructors , Cleaning Up Unmanaged Resources , and Overriding the Finalize Method .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetImage" returnType="void">
+      <summary><![CDATA[Returns the stream that contains the image data.]]></summary>
+      <overloads>
+        <overload signature="GetImage()">
+          <summary><![CDATA[Returns the stream that contains the image data.]]></summary>
+          <syntax><![CDATA[public Stream GetImage ()]]></syntax>
+          <returns><![CDATA[Stream object that contains the image data.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetTexture" returnType="void">
+      <summary><![CDATA[Gets the picture as a texture.]]></summary>
+      <overloads>
+        <overload signature="GetTexture()">
+          <summary><![CDATA[Gets the picture as a texture.]]></summary>
+          <syntax><![CDATA[public Texture2D GetTexture (
+         IServiceProvider serviceProvider
+)]]></syntax>
+          <parameters>
+            <parameter name="serviceProvider" type="IServiceProvider"><![CDATA[Game service provider, obtained from the Game.Services property.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Texture with the graphical content of the picture.]]></returns>
+          <remarks><![CDATA[GameServiceContainer Class implements IServiceProvider , so you can pass the value of the Game.Services property as the serviceProvider parameter.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetThumbnail" returnType="void">
+      <summary><![CDATA[Returns the stream that contains the picture's thumbnail image data.]]></summary>
+      <overloads>
+        <overload signature="GetThumbnail()">
+          <summary><![CDATA[Returns the stream that contains the picture's thumbnail image data.]]></summary>
+          <syntax><![CDATA[public Stream GetThumbnail ()]]></syntax>
+          <returns><![CDATA[Stream object that contains the thumbnail image data.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a String representation of the Picture.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a String representation of the Picture.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether the specified Picture instances are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether the specified Picture instances are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Picture first,
+         Picture second
+)]]></syntax>
+          <parameters>
+            <parameter name="first" type="Picture"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="second" type="Picture"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether the specified Picture instances are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether the specified Picture instances are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Picture first,
+         Picture second
+)]]></syntax>
+          <parameters>
+            <parameter name="first" type="Picture"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="second" type="Picture"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

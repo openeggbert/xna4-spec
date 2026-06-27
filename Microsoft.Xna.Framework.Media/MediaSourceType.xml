@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MediaSourceType" kind="enum"
+          namespace="Microsoft.Xna.Framework.Media"
+          assembly="Microsoft.Xna.Framework.Media">
+  <summary><![CDATA[Type of the media source.]]></summary>
+  <syntax><![CDATA[public enum MediaSourceType]]></syntax>
+  <remarks><![CDATA[Indicates the type of the current media source. The type can be either a local device, or a device connected through Windows Media Connect. On Windows and Zune, the only available media source type is the local device. On Xbox 360, a media source can be either the local device or a device connected through Windows Media Connect. The MediaSource.MediaSourceType property returns a MediaSourceType value.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="LocalDevice"><summary><![CDATA[A local device.]]></summary></member>
+    <member name="WindowsMediaConnect"><summary><![CDATA[A Windows Media Connect device.]]></summary></member>
+  </members>
+</xna-type>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ResourceUsage" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines options that identify the behavior of a resource.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum ResourceUsage]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="AutoGenerateMipMap"><summary><![CDATA[The resource will automatically generate mipmaps. Automatic generation of mipmaps is not supported for volume textures and depth stencil surfaces/textures.]]></summary></member>
+    <member name="DoNotClip"><summary><![CDATA[Indicates that the vertex buffer content will never require clipping.]]></summary></member>
+    <member name="Dynamic"><summary><![CDATA[Indicates that the vertex buffer requires dynamic memory use. This is useful for drivers because it enables them to decide where to place the buffer. In general, static vertex buffers are placed in video memory and dynamic vertex buffers are placed in AGP memory. Note that there is no separate static use. If you do not specify Dynamic, the vertex buffer is made static. Textures can specify Dynamic. However, textures created with ResourceManagementMode.Automatic cannot use Dynamic.]]></summary></member>
+    <member name="Linear"><summary><![CDATA[(XBox 360 only) Linear texture memory format. Linear formats are arranged in memory using a left-to-right and top-to-bottom layout (with pixels contiguous in memory for each row, and rows contiguous except for possible alignment padding). Use a linear format when doing dynamic CPU updates to textures where you do not want the overhead of translating tile addresses using the CPU, the textures will not be referenced often during the frame, and you do not mind less efficient GPU performance. This flag is only valid when used for texture creation on XBox 360, and will be ignored if utilized elsewhere. On XBox, most formats are created as Tiled if it is applicable.]]></summary></member>
+    <member name="None"><summary><![CDATA[None.]]></summary></member>
+    <member name="Points"><summary><![CDATA[Indicates that the vertex or index buffer will be used for drawing point sprites. The buffer will be loaded in system memory if software vertex processing is needed to emulate point sprites.]]></summary></member>
+    <member name="ResolveTarget"><summary><![CDATA[This texture resource will be used as the destination texture in a call to GraphicsDevice.ResolveBackBuffer.]]></summary></member>
+    <member name="SoftwareProcessing"><summary><![CDATA[If this flag is used, vertex processing is done in software. If this flag is not used, vertex processing is done in hardware.]]></summary></member>
+    <member name="Tiled"><summary><![CDATA[(XBox 360 only) Tiled texture memory format. Tiled formats are arranged using a memory layout designed to maximize the cache coherency of texture fetches and balance the access workload of the memory controllers. The exact pixel arrangement of tiled formats varies based on the bit depth of the format; however, pixels that are close to one another spatially are located close to one another in memory. For example, two pixels adjacent to one another in a vertical column would be separated in memory by an entire row of pixels for a linear format, but could be separated by only a few bytes for a tiled format. The tiled texture format is usually more efficient than the linear texture format. This flag is only valid when used for texture creation on XBox 360, and will be ignored if utilized elsewhere. On XBox, most formats are created as Tiled if it is applicable.]]></summary></member>
+    <member name="WriteOnly"><summary><![CDATA[Informs the system that the application writes only to the vertex buffer. Using this flag enables the driver to choose the best memory location for efficient write operations and rendering. Attempts to read from a vertex buffer that is created with this capability will fail.]]></summary></member>
+  </members>
+</xna-type>

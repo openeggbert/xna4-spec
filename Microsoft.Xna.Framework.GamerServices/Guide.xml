@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Guide" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Provides access to the Guide user interface. This interface contains message boxes, a text entry system, and other common interface elements.]]></summary>
+  <syntax><![CDATA[public static class Guide]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="IsScreenSaverEnabled" type="bool" access="get;set" isStatic="true">
+      <summary><![CDATA[Gets or sets the current state of the screen saver. This property has no effect for Windows games.]]></summary>
+      <syntax><![CDATA[public static bool IsScreenSaverEnabled { get; set; }]]></syntax>
+      <remarks><![CDATA[The IsScreenSaverEnabled property is a per-game property. Disabling the screen saver for this game does not permanently disable the screen saver. Use this method when displaying cutscenes or during other periods where the gamer could become inactive for a long period of time.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsTrialMode" type="bool" access="get;set" isStatic="true">
+      <summary><![CDATA[Determines whether the game is running currently in limited trial mode.]]></summary>
+      <syntax><![CDATA[public static bool IsTrialMode { get; set; }]]></syntax>
+      <remarks><![CDATA[Best Practice When a trial game is exiting, you can present a marketplace offer using the Guide.ShowMarketplace method. You can write code that is performed on game exit in the Game.Exit method.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsVisible" type="bool" access="get;set" isStatic="true">
+      <summary><![CDATA[Determines whether a Guide user interface screen is active.]]></summary>
+      <syntax><![CDATA[public static bool IsVisible { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="NotificationPosition" type="NotificationPosition" access="get;set" isStatic="true">
+      <summary><![CDATA[Determines where notifications appear on the screen.]]></summary>
+      <syntax><![CDATA[public static NotificationPosition NotificationPosition { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SimulateTrialMode" type="bool" access="get;set" isStatic="true">
+      <summary><![CDATA[Allows titles to simulate trial mode restrictions when testing using the Development configuration. Setting this property to true in the game constructor will artificially force IsTrialMode to return true.]]></summary>
+      <syntax><![CDATA[public static bool SimulateTrialMode { get; set; }]]></syntax>
+      <remarks><![CDATA[You can set SimulateTrialMode to false at some later point (perhaps calling the ShowMarketplace API at the same time) to simulate purchasing the full game.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="BeginShowKeyboardInput" returnType="IAsyncResult" isStatic="true">
+      <summary><![CDATA[Begins the process for displaying a dialog for keyboard input from a gamer. The display operation is performed asynchronously.]]></summary>
+      <overloads>
+        <overload signature="PlayerIndex, String, String, String, AsyncCallback, Object, Boolean">
+          <summary><![CDATA[Begins the process for displaying asynchronously the software keyboard interface for a gamer by using the password mode if it is specified.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowKeyboardInput (
+         PlayerIndex player,
+         string title,
+         string description,
+         string defaultText,
+         AsyncCallback callback,
+         Object state,
+         bool usePasswordMode
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Index of the player providing input. On platforms such as Windows Phone or Windows that support only one player, the valid value is PlayerIndex.One .]]></parameter>
+            <parameter name="title" type="string"><![CDATA[Title of the interface dialog box.]]></parameter>
+            <parameter name="description" type="string"><![CDATA[Text of the interface dialog box.]]></parameter>
+            <parameter name="defaultText" type="string"><![CDATA[Default text displayed in the input area when the interface dialog box is first shown.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[Method to be called once the asynchronous operation is finished.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[User-created object uniquely identifying this request.]]></parameter>
+            <parameter name="usePasswordMode" type="bool"><![CDATA[Specify true to enable password mode, or false to disable it. If the password mode is specified, the characters that the player types are not echoed in the input area.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BeginShowMessageBox" returnType="IAsyncResult" isStatic="true">
+      <summary><![CDATA[Begins the process of displaying a message box with the specified parameters. The display operation is performed asynchronously.]]></summary>
+      <overloads>
+        <overload signature="String, String, Generic IEnumerable, Int32, MessageBoxIcon, AsyncCallback, Object">
+          <summary><![CDATA[Begins the process of displaying a message box to which any user on the system can respond.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowMessageBox (
+         string title,
+         string text,
+         IEnumerable&lt;string&gt; buttons,
+         int focusButton,
+         MessageBoxIcon icon,
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="title" type="string"><![CDATA[Title of the message box.]]></parameter>
+            <parameter name="text" type="string"><![CDATA[Text that will be displayed by the message box.]]></parameter>
+            <parameter name="buttons" type="Object"><![CDATA[Captions for message box buttons. The maximum number of buttons is two on Windows Phone, and three on Xbox 360 or Windows.]]></parameter>
+            <parameter name="focusButton" type="int"><![CDATA[Zero-based index specifying which button has the focus.]]></parameter>
+            <parameter name="icon" type="MessageBoxIcon"><![CDATA[Type of icon displayed in the message box.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[Method to be called once the asynchronous operation is finished.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[User-created object uniquely identifying this request.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <remarks><![CDATA[On Xbox 360, this overload allows any player on the system to respond to the message.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BeginShowStorageDeviceSelector" returnType="IAsyncResult" isStatic="true">
+      <summary><![CDATA[Begins the process for displaying the storage device selector user interface. The display operation is performed asynchronously.]]></summary>
+      <overloads>
+        <overload signature="AsyncCallback, Object">
+          <summary><![CDATA[Begins the process for displaying the storage device selector user interface. The display operation is performed asynchronously.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceSelector (
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[The method to be called once the asynchronous operation has finished.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[A user-created object uniquely identifying this request.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="PlayerIndex, AsyncCallback, Object">
+          <summary><![CDATA[Begins the process for displaying the storage device selector user interface, specifying the index of the player to be shown the user interface. The display operation is performed asynchronously.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceSelector (
+         PlayerIndex player,
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Index of the player being shown the user interface display. On Windows, the only valid option is PlayerIndex.One .]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[The method to be called once the asynchronous operation has finished.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[A user-created object uniquely identifying this request.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Int32, AsyncCallback, Object">
+          <summary><![CDATA[Begins the process for displaying the storage device selector user interface, specifying the size of the data to be written to the storage device. The display operation is performed asynchronously.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceSelector (
+         int sizeInBytes,
+         int directoryCount,
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="sizeInBytes" type="int"><![CDATA[Size, in bytes, of the data to write to the storage device.]]></parameter>
+            <parameter name="directoryCount" type="int"><![CDATA[Number of directories to write to the storage device.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[The method to be called once the asynchronous operation has finished.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[A user-created object uniquely identifying this request.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="PlayerIndex, Int32, Int32, AsyncCallback, Object">
+          <summary><![CDATA[Begins the process for displaying the storage device selector user interface, specifying the index of the player to be shown the user interface, as well as the size of the data to be written to the storage device. The display operation is performed asynchronously.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceSelector (
+         PlayerIndex player,
+         int sizeInBytes,
+         int directoryCount,
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Index of the player being shown the user interface display. On Windows, the only valid option is PlayerIndex.One .]]></parameter>
+            <parameter name="sizeInBytes" type="int"><![CDATA[Size, in bytes, of the data to write to the storage device.]]></parameter>
+            <parameter name="directoryCount" type="int"><![CDATA[Number of directories to write to the storage device.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[The method to be called once the asynchronous operation has finished.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[A user-created object uniquely identifying this request.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DelayNotifications" returnType="void">
+      <summary><![CDATA[Delays system notifications for the specified amount of time.]]></summary>
+      <overloads>
+        <overload signature="DelayNotifications()">
+          <summary><![CDATA[Delays system notifications for the specified amount of time.]]></summary>
+          <syntax><![CDATA[public static void DelayNotifications (
+         TimeSpan delay
+)]]></syntax>
+          <parameters>
+            <parameter name="delay" type="TimeSpan"><![CDATA[Time, in seconds, of the delay. Calling this function while notifications are already delayed has no effect. The maximum delay is 120. If the specified duration exceeds the maximum, the maximum value is used.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Use DelayNotifications to suppress pop-up notifications during critical times, such as cut scenes. Once the delay interval has passed, any deferred notifications are individually displayed in the order they were sent. Titles cannot call DelayNotifications multiple times in a row. There must be an opportunity for the system application to display notifications to gamers.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndShowKeyboardInput" returnType="void">
+      <summary><![CDATA[Ends the display of the keyboard input dialog box.]]></summary>
+      <overloads>
+        <overload signature="EndShowKeyboardInput()">
+          <summary><![CDATA[Ends the display of the keyboard input dialog box.]]></summary>
+          <syntax><![CDATA[public static string EndShowKeyboardInput (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[The IAsyncResult returned from BeginShowKeyboardInput .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Input received from the gamer.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndShowMessageBox" returnType="void">
+      <summary><![CDATA[Ends the display of a message box.]]></summary>
+      <overloads>
+        <overload signature="EndShowMessageBox()">
+          <summary><![CDATA[Ends the display of a message box.]]></summary>
+          <syntax><![CDATA[public static Nullable&lt;int&gt; EndShowMessageBox (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[The IAsyncResult returned from BeginShowMessageBox .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Guide Class Guide Members Microsoft.Xna.Framework.GamerServices Namespace]]></returns>
+          <remarks><![CDATA[This call blocks until the display operation is finished. Typically, you call this from the callback function specified in the callback argument of BeginShowMessageBox . Each call to EndShowMessageBox must match an earlier call to BeginShowMessageBox .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndShowStorageDeviceSelector" returnType="void">
+      <summary><![CDATA[Ends the display of the storage selector user interface.]]></summary>
+      <overloads>
+        <overload signature="EndShowStorageDeviceSelector()">
+          <summary><![CDATA[Ends the display of the storage selector user interface.]]></summary>
+          <syntax><![CDATA[public static StorageDevice EndShowStorageDeviceSelector (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[The IAsyncResult returned from BeginShowStorageDeviceSelector .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Storage device selected by the gamer.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Show" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Zune.]]></summary>
+      <overloads>
+        <overload signature="Show()">
+          <summary><![CDATA[This method is available only when developing for Zune.]]></summary>
+          <syntax><![CDATA[public static void Show ()]]></syntax>
+          <platforms>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowComposeMessage" returnType="void">
+      <summary><![CDATA[Shows the Compose Message user interface. A gamer uses this user interface to write messages to other gamers.]]></summary>
+      <overloads>
+        <overload signature="ShowComposeMessage()">
+          <summary><![CDATA[Shows the Compose Message user interface. A gamer uses this user interface to write messages to other gamers.]]></summary>
+          <syntax><![CDATA[public static void ShowComposeMessage (
+         PlayerIndex player,
+         string text,
+         IEnumerable&lt;Gamer&gt; recipients
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Gamer composing the message.]]></parameter>
+            <parameter name="text" type="string"><![CDATA[Text of the message.]]></parameter>
+            <parameter name="recipients" type="Object"><![CDATA[Collection of gamers receiving the message. If this is null , the Select Gamertag user interface is displayed.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Best Practice You can check GamerPrivileges.AllowCommunication to determine if a player is allowed to send and receive communications prior to displaying a menu option that would call this method.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowFriendRequest" returnType="void">
+      <summary><![CDATA[Shows the Friend Request user interface.]]></summary>
+      <overloads>
+        <overload signature="ShowFriendRequest()">
+          <summary><![CDATA[Shows the Friend Request user interface.]]></summary>
+          <syntax><![CDATA[public static void ShowFriendRequest (
+         PlayerIndex player,
+         Gamer gamer
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Index of the player making the request. The profile specified by must be signed in when calling this function.]]></parameter>
+            <parameter name="gamer" type="Gamer"><![CDATA[Recipient of the request.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowFriends" returnType="void">
+      <summary><![CDATA[Shows the Friends user interface.]]></summary>
+      <overloads>
+        <overload signature="ShowFriends()">
+          <summary><![CDATA[Shows the Friends user interface.]]></summary>
+          <syntax><![CDATA[public static void ShowFriends (
+         PlayerIndex player
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Index of the player making the request. The profile specified by must be signed in when calling this function.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowGameInvite" returnType="void" isStatic="true">
+      <summary><![CDATA[Displays the game invitation user interface.]]></summary>
+      <overloads>
+        <overload signature="String">
+          <summary><![CDATA[Displays the game invitation user interface, taking a session ID.]]></summary>
+          <syntax><![CDATA[public static void ShowGameInvite (
+         string sessionId
+)]]></syntax>
+          <parameters>
+            <parameter name="sessionId" type="string"><![CDATA[The session ID to use for the game invitation.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[See Inviting Players to Join Your Game for more information about adding game invitation support to your title. You can check GamerPrivileges.AllowCommunication to determine if a player is allowed to send and receive communications before displaying a menu option that would call this method. Windows Phone Specific Information On Windows Phone, this method causes the game to close so that the system user interface can be shown. For information about how to prepare for such an interruption, see Handling Interruptions on Windows Phone . No response to this method is returned. The player can choose invitation recipients from his or her own contact list on the phone. For each recipient chosen, an email is sent to the contact's email address. If the recipient has an Xbox LIVE Gamertag associated with this email address and a Windows Phone, an invitation also is sent directly to the recipient's phone. If the recipient does not have an Xbox LIVE Gamertag associated with the email address or does not have a Windows Phone, the recipient only receives the email. The email will contain a link to play the game. This link leads to a redirect service so that when the link is clicked an appropriate action is taken based on the platform the recipient is using. On a PC, the link opens a web-based version of the game, if one exists. On the phone, the link either opens the game if it is already installed on the recipient's phone, or it goes to the Marketplace if the game is not installed.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowGamerCard" returnType="void">
+      <summary><![CDATA[Shows the Gamer Card user interface.]]></summary>
+      <overloads>
+        <overload signature="ShowGamerCard()">
+          <summary><![CDATA[Shows the Gamer Card user interface.]]></summary>
+          <syntax><![CDATA[public static void ShowGamerCard (
+         PlayerIndex player,
+         Gamer gamer
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Index of the player making the request. The profile specified by must be signed in when calling this function.]]></parameter>
+            <parameter name="gamer" type="Gamer"><![CDATA[Owner of the gamer card being requested for display.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Best Practice You can check GamerPrivileges.AllowProfileViewing to determine if a player is allowed to send and receive communications prior to displaying a menu option that would call this method.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowMarketplace" returnType="void">
+      <summary><![CDATA[Displays the marketplace user interface.]]></summary>
+      <overloads>
+        <overload signature="ShowMarketplace()">
+          <summary><![CDATA[Displays the marketplace user interface.]]></summary>
+          <syntax><![CDATA[public static void ShowMarketplace (
+         PlayerIndex player
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Index of the controller for the player making the request.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Best Practice You can check GamerPrivileges.AllowPurchaseContent to determine if a player is allowed to purchase content before displaying a menu option that would call this method. When a trial game is exiting, you can present a marketplace offer using the Guide.ShowMarketplace method. You can check if a game is in trial mode using Guide.IsTrialMode , and write code that is performed on game exit in the Game.Exit method.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowMessages" returnType="void">
+      <summary><![CDATA[Shows the Messages user interface.]]></summary>
+      <overloads>
+        <overload signature="ShowMessages()">
+          <summary><![CDATA[Shows the Messages user interface.]]></summary>
+          <syntax><![CDATA[public static void ShowMessages (
+         PlayerIndex player
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Index of the player making the request. The profile specified by must be signed in when calling this function.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowParty" returnType="void">
+      <summary><![CDATA[Shows the Xbox LIVE Party screen.]]></summary>
+      <overloads>
+        <overload signature="ShowParty()">
+          <summary><![CDATA[Shows the Xbox LIVE Party screen.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Sub ShowParty ( _
+         player As PlayerIndex _
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="Object"><![CDATA[Type: PlayerIndex The player index for whom to bring up the Xbox LIVE Party screen.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Windows Phone Specific Information This method cannot be used on Windows Phone. If called, it throws a NotSupportedException . Shows the Xbox LIVE Party screen, which allows players to invite others to the party, to invite party members to the current game session, or to chat with party members.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowPartySessions" returnType="void">
+      <summary><![CDATA[Shows the Play with Party Member screen.]]></summary>
+      <overloads>
+        <overload signature="ShowPartySessions()">
+          <summary><![CDATA[Shows the Play with Party Member screen.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Sub ShowPartySessions ( _
+         player As PlayerIndex _
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="Object"><![CDATA[Type: PlayerIndex The player index for whom the list of game sessions with party members is shown.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Windows Phone Specific Information This method cannot be used on Windows Phone. If called, it throws a NotSupportedException . This method brings up the Play with Party Member screen, which allows players to join game sessions with fellow party members in the current title. If the player is not currently in a party, or if the platform lacks Xbox LIVE Party support, this method shows the Friends screen instead.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowPlayerReview" returnType="void">
+      <summary><![CDATA[Shows the Player Review user interface.]]></summary>
+      <overloads>
+        <overload signature="ShowPlayerReview()">
+          <summary><![CDATA[Shows the Player Review user interface.]]></summary>
+          <syntax><![CDATA[public static void ShowPlayerReview (
+         PlayerIndex player,
+         Gamer gamer
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Index of the player making the request. The profile specified by must be signed in when calling this function.]]></parameter>
+            <parameter name="gamer" type="Gamer"><![CDATA[Player being reviewed.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowPlayers" returnType="void">
+      <summary><![CDATA[Shows the Players user interface.]]></summary>
+      <overloads>
+        <overload signature="ShowPlayers()">
+          <summary><![CDATA[Shows the Players user interface.]]></summary>
+          <syntax><![CDATA[public static void ShowPlayers (
+         PlayerIndex player
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Index of the player making the request. The profile specified by must be signed in when calling this function.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowSignIn" returnType="void">
+      <summary><![CDATA[Shows the user interface a gamer uses for signing into Xbox LIVE.]]></summary>
+      <overloads>
+        <overload signature="ShowSignIn()">
+          <summary><![CDATA[Shows the user interface a gamer uses for signing into Xbox LIVE.]]></summary>
+          <syntax><![CDATA[public static void ShowSignIn (
+         int paneCount,
+         bool onlineOnly
+)]]></syntax>
+          <parameters>
+            <parameter name="paneCount" type="int"><![CDATA[Number of panes displayed at sign in. Each pane accepts a single gamer. On Windows, only a single pane can be displayed. On Xbox 360, valid values are 1, 2, and 4.]]></parameter>
+            <parameter name="onlineOnly" type="bool"><![CDATA[Determines the profile types being displayed. true if only online profiles are displayed; false otherwise. If is true , local gamers can sign in as guests of a profile currently signed in.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

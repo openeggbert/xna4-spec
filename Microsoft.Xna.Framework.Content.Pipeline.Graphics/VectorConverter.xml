@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VectorConverter" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+  <summary><![CDATA[Provides methods for converting data between different packed vector representations.]]></summary>
+  <syntax><![CDATA[public static class VectorConverter]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="TryGetSurfaceFormat" returnType="void">
+      <summary><![CDATA[Gets the GPU texture format that corresponds to a managed vector type.]]></summary>
+      <overloads>
+        <overload signature="TryGetSurfaceFormat()">
+          <summary><![CDATA[Gets the GPU texture format that corresponds to a managed vector type.]]></summary>
+          <syntax><![CDATA[public static bool TryGetSurfaceFormat (
+         Type vectorType,
+         out SurfaceFormat surfaceFormat
+)]]></syntax>
+          <parameters>
+            <parameter name="vectorType" type="Type"><![CDATA[Can be one of the following: IPackedVector]]></parameter>
+            <parameter name="surfaceFormat" type="SurfaceFormat"><![CDATA[[ OutAttribute ] Surface format being compared.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if a match is found; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryGetVectorType" returnType="bool" isStatic="true">
+      <summary><![CDATA[Searches for a managed vector type that corresponds to a GPU vertex format.]]></summary>
+      <overloads>
+        <overload signature="VertexElementFormat, Type">
+          <summary><![CDATA[Searches for a managed vector type that corresponds to a GPU vertex format.]]></summary>
+          <syntax><![CDATA[public static bool TryGetVectorType (
+         VertexElementFormat vertexElementFormat,
+         out Type vectorType
+)]]></syntax>
+          <parameters>
+            <parameter name="vertexElementFormat" type="VertexElementFormat"><![CDATA[Texture format being matched.]]></parameter>
+            <parameter name="vectorType" type="Type"><![CDATA[[ OutAttribute ] Corresponding managed vector type.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if a match is found; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SurfaceFormat, Type">
+          <summary><![CDATA[Searches for a managed vector type that corresponds to a GPU texture format.]]></summary>
+          <syntax><![CDATA[public static bool TryGetVectorType (
+         SurfaceFormat surfaceFormat,
+         out Type vectorType
+)]]></syntax>
+          <parameters>
+            <parameter name="surfaceFormat" type="SurfaceFormat"><![CDATA[Surface format being compared.]]></parameter>
+            <parameter name="vectorType" type="Type"><![CDATA[[ OutAttribute ] Corresponding managed vector type.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if a match is found; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryGetVertexElementFormat" returnType="void">
+      <summary><![CDATA[Gets the GPU vertex format that corresponds to a managed vector type.]]></summary>
+      <overloads>
+        <overload signature="TryGetVertexElementFormat()">
+          <summary><![CDATA[Gets the GPU vertex format that corresponds to a managed vector type.]]></summary>
+          <syntax><![CDATA[public static bool TryGetVertexElementFormat (
+         Type vectorType,
+         out VertexElementFormat vertexElementFormat
+)]]></syntax>
+          <parameters>
+            <parameter name="vectorType" type="Type"><![CDATA[Can be one of the following: IPackedVector]]></parameter>
+            <parameter name="vertexElementFormat" type="VertexElementFormat"><![CDATA[[ OutAttribute ] Corresponding vertex element type.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if a match is found; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

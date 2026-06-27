@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NetworkNotAvailableException" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="NetworkException">
+  <summary><![CDATA[Exception thrown if no network is available. This can occur on a gaming machine if the network cable is unplugged, or on Zune if wireless is disabled.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public class NetworkNotAvailableException : NetworkException]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="NetworkNotAvailableException(SerializationInfo, StreamingContext)">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[protected NetworkNotAvailableException (
+         SerializationInfo info,
+         StreamingContext context
+)]]></syntax>
+      <parameters>
+        <parameter name="info" type="SerializationInfo"><![CDATA[Serialization information.]]></parameter>
+        <parameter name="context" type="StreamingContext"><![CDATA[Streaming context.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NetworkNotAvailableException(String, Exception)">
+      <summary><![CDATA[Constructs an exception with the specified error message and inner exception.]]></summary>
+      <syntax><![CDATA[public NetworkNotAvailableException (
+         string message,
+         Exception innerException
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[Error message to associate with this exception.]]></parameter>
+        <parameter name="innerException" type="Exception"><![CDATA[Inner exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NetworkNotAvailableException()">
+      <summary><![CDATA[Constructs an empty exception.]]></summary>
+      <syntax><![CDATA[public NetworkNotAvailableException ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NetworkNotAvailableException(String)">
+      <summary><![CDATA[Constructs an exception with the specified error message.]]></summary>
+      <syntax><![CDATA[public NetworkNotAvailableException (
+         string message
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[Error message to associate with this exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

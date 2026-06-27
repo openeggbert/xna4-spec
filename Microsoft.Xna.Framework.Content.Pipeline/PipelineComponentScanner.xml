@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PipelineComponentScanner" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <summary><![CDATA[Implements a scanner object containing the available importers and processors for an application. Designed for internal use only.]]></summary>
+  <syntax><![CDATA[public sealed class PipelineComponentScanner]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="PipelineComponentScanner()">
+      <summary><![CDATA[Initializes a new instance of PipelineComponentScanner.]]></summary>
+      <syntax><![CDATA[public PipelineComponentScanner ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Errors" type="IList&amp;lt;string&amp;gt;" access="get">
+      <summary><![CDATA[Gets the list of error messages produced by the last call to Update.]]></summary>
+      <syntax><![CDATA[public IList&lt;string&gt; Errors { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ImporterAttributes" type="Object" access="get">
+      <summary><![CDATA[Gets a dictionary that maps importer names to their associated metadata attributes.]]></summary>
+      <syntax><![CDATA[public IDictionary&lt;string, ContentImporterAttribute&gt; ImporterAttributes { get; }]]></syntax>
+      <remarks><![CDATA[Call ImporterAttributes to look up the DisplayName value for an importer object and which file extensions are supported.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ImporterNames" type="IEnumerable&amp;lt;string&amp;gt;" access="get">
+      <summary><![CDATA[Gets the names of all available importers.]]></summary>
+      <syntax><![CDATA[public IEnumerable&lt;string&gt; ImporterNames { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ImporterOutputTypes" type="Object" access="get">
+      <summary><![CDATA[Gets a dictionary that maps importer names to the fully qualified name of their return types.]]></summary>
+      <syntax><![CDATA[public IDictionary&lt;string, string&gt; ImporterOutputTypes { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ProcessorAttributes" type="Object" access="get">
+      <summary><![CDATA[Gets a dictionary that maps processor names to their associated metadata attributes.]]></summary>
+      <syntax><![CDATA[public IDictionary&lt;string, ContentProcessorAttribute&gt; ProcessorAttributes { get; }]]></syntax>
+      <remarks><![CDATA[Call ProcessorAttributes to look up the DisplayName value for an processor object.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ProcessorInputTypes" type="Object" access="get">
+      <summary><![CDATA[Gets a dictionary that maps processor names to the fully qualified name of supported input types.]]></summary>
+      <syntax><![CDATA[public IDictionary&lt;string, string&gt; ProcessorInputTypes { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ProcessorNames" type="IEnumerable&amp;lt;string&amp;gt;" access="get">
+      <summary><![CDATA[Gets the names of all available importers.]]></summary>
+      <syntax><![CDATA[public IEnumerable&lt;string&gt; ProcessorNames { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ProcessorOutputTypes" type="Object" access="get">
+      <summary><![CDATA[Gets a dictionary that maps processor names to the fully qualified name of their output types.]]></summary>
+      <syntax><![CDATA[public IDictionary&lt;string, string&gt; ProcessorOutputTypes { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ProcessorParameters" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public IDictionary&lt;string, ProcessorParameterCollection&gt; ProcessorParameters { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Update" returnType="void">
+      <summary><![CDATA[Updates the scanner object with the latest available assembly states.]]></summary>
+      <overloads>
+        <overload signature="Generic IEnumerable, Generic IEnumerable">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Function Update ( _
+         pipelineAssemblies As IEnumerable(Of String), _
+         pipelineAssemblyDependencies As IEnumerable(Of String) _
+) As Boolean]]></syntax>
+          <parameters>
+            <parameter name="pipelineAssemblies" type="Object"><![CDATA[Type: IEnumerable &lt; String &gt; Enumerated list of available assemblies.]]></parameter>
+            <parameter name="pipelineAssemblyDependencies" type="Object"><![CDATA[Type: IEnumerable &lt; String &gt; Enumerated list of dependent assemblies.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Boolean true if an actual scan was required, indicating the collection contents may have changed. false if no assembly changes were detected since the previous call.]]></returns>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

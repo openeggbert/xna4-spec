@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="LeaderboardReader" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          interfaces="IDisposable">
+  <summary><![CDATA[Reads data from leaderboards.]]></summary>
+  <syntax><![CDATA[public sealed class LeaderboardReader : IDisposable]]></syntax>
+  <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="CanPageDown" type="bool" access="get">
+      <summary><![CDATA[Provides information about whether there are more leaderboard entries after the current page of entries.]]></summary>
+      <syntax><![CDATA[public bool CanPageDown { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="CanPageUp" type="bool" access="get">
+      <summary><![CDATA[Provides information about whether there are more leaderboard entries before the current page of entries.]]></summary>
+      <syntax><![CDATA[public bool CanPageUp { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Entries" type="ReadOnlyCollection&amp;lt;LeaderboardEntry&amp;gt;" access="get">
+      <summary><![CDATA[Gets the collection of leaderboard entries for the leaderboard.]]></summary>
+      <syntax><![CDATA[public ReadOnlyCollection&lt;LeaderboardEntry&gt; Entries { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Provides information about whether this leaderboard reader is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="LeaderboardIdentity" type="LeaderboardIdentity" access="get">
+      <summary><![CDATA[Provides the identity of the leaderboard.]]></summary>
+      <syntax><![CDATA[public LeaderboardIdentity LeaderboardIdentity { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="PageStart" type="int" access="get">
+      <summary><![CDATA[Gets the index of the leaderboard entry at the start of the current page.]]></summary>
+      <syntax><![CDATA[public int PageStart { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="TotalLeaderboardSize" type="int" access="get">
+      <summary><![CDATA[Provides information about the total number of entries in the leaderboard.]]></summary>
+      <syntax><![CDATA[public int TotalLeaderboardSize { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="BeginPageDown" returnType="void">
+      <summary><![CDATA[Begins an asynchronous read of the page of leaderboard data after the current page.]]></summary>
+      <overloads>
+        <overload signature="BeginPageDown()">
+          <summary><![CDATA[Begins an asynchronous read of the page of leaderboard data after the current page.]]></summary>
+          <syntax><![CDATA[public IAsyncResult BeginPageDown (
+         AsyncCallback callback,
+         Object asyncState
+)]]></syntax>
+          <parameters>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[An AsyncCallback representing the method to call when the leaderboard information is read.]]></parameter>
+            <parameter name="asyncState" type="Object"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BeginPageUp" returnType="void">
+      <summary><![CDATA[Begins an asynchronous read of the page of leaderboard data before the current page.]]></summary>
+      <overloads>
+        <overload signature="BeginPageUp()">
+          <summary><![CDATA[Begins an asynchronous read of the page of leaderboard data before the current page.]]></summary>
+          <syntax><![CDATA[public IAsyncResult BeginPageUp (
+         AsyncCallback callback,
+         Object asyncState
+)]]></syntax>
+          <parameters>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[An AsyncCallback representing the method to call when the leaderboard information is read.]]></parameter>
+            <parameter name="asyncState" type="Object"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BeginRead" returnType="IAsyncResult" isStatic="true">
+      <summary><![CDATA[Begins an asynchronous read of leaderboard data, taking a leaderboard identity, a collection of gamers, a pivot gamer, and a page size.]]></summary>
+      <overloads>
+        <overload signature="LeaderboardIdentity, Generic IEnumerable, Gamer, Int32, AsyncCallback, Object">
+          <summary><![CDATA[Begins an asynchronous read of leaderboard data, taking a leaderboard identity, a collection of gamers, a pivot gamer, and a page size.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginRead (
+         LeaderboardIdentity leaderboardId,
+         IEnumerable&lt;Gamer&gt; gamers,
+         Gamer pivotGamer,
+         int pageSize,
+         AsyncCallback callback,
+         Object asyncState
+)]]></syntax>
+          <parameters>
+            <parameter name="leaderboardId" type="LeaderboardIdentity"><![CDATA[The leaderboard identity of the leaderboard to read.]]></parameter>
+            <parameter name="gamers" type="Object"><![CDATA[A collection of gamers that should be included in the leaderboard results. This parameter is ignored on Windows Phone.]]></parameter>
+            <parameter name="pivotGamer" type="Gamer"><![CDATA[The gamer of interest in the leaderboard. The current page is set so that this gamer appears on the page.]]></parameter>
+            <parameter name="pageSize" type="int"><![CDATA[The number of leaderboard entries per page.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[An AsyncCallback representing the method to call when the leaderboard information is read.]]></parameter>
+            <parameter name="asyncState" type="Object"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. The returned page of results contains the pivotGamer if this gamer appears on the leaderboard. Otherwise, the top page of leaderboard entries is returned.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="LeaderboardIdentity, Int32, Int32, AsyncCallback, Object">
+          <summary><![CDATA[Begins reading a leaderboard asynchronously, and specifies a leaderboard identity, the start page, and the page size.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginRead (
+         LeaderboardIdentity leaderboardId,
+         int pageStart,
+         int pageSize,
+         AsyncCallback callback,
+         Object asyncState
+)]]></syntax>
+          <parameters>
+            <parameter name="leaderboardId" type="LeaderboardIdentity"><![CDATA[The leaderboard identity of the leaderboard to read.]]></parameter>
+            <parameter name="pageStart" type="int"><![CDATA[The page of leaderboard entries at which to start.]]></parameter>
+            <parameter name="pageSize" type="int"><![CDATA[The number of leaderboard entries per page.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[An AsyncCallback representing the method to call when the leaderboard information is read.]]></parameter>
+            <parameter name="asyncState" type="Object"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="LeaderboardIdentity, Gamer, Int32, AsyncCallback, Object">
+          <summary><![CDATA[Begins reading a leaderboard asynchronously, and specifies a leaderboard identity, pivot gamer, and page size.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginRead (
+         LeaderboardIdentity leaderboardId,
+         Gamer pivotGamer,
+         int pageSize,
+         AsyncCallback callback,
+         Object asyncState
+)]]></syntax>
+          <parameters>
+            <parameter name="leaderboardId" type="LeaderboardIdentity"><![CDATA[The leaderboard identity of the leaderboard to read.]]></parameter>
+            <parameter name="pivotGamer" type="Gamer"><![CDATA[The gamer of interest in the leaderboard. The current page is set so that this gamer appears on the page.]]></parameter>
+            <parameter name="pageSize" type="int"><![CDATA[The number of leaderboard entries per page.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[An AsyncCallback representing the method to call when the leaderboard information is read.]]></parameter>
+            <parameter name="asyncState" type="Object"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. The returned page of results contains the pivotGamer if this gamer appears on the leaderboard. Otherwise, the top page of leaderboard entries is returned.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Releases all resources used by this LeaderboardReader.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Releases all resources used by this LeaderboardReader.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. Calling Dispose leaves the LeaderboardReader in an unusable state. Call this method to release the resources used by this object so that the garbage collector can reclaim the memory used by this instance.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndPageDown" returnType="void">
+      <summary><![CDATA[Checks the result of an asynchonous PageDown operation.]]></summary>
+      <overloads>
+        <overload signature="EndPageDown()">
+          <summary><![CDATA[Checks the result of an asynchonous PageDown operation.]]></summary>
+          <syntax><![CDATA[public void EndPageDown (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[The IASyncResult that represents the state of the asynchronous page-down operation. If the operation is finished, IsCompleted will be true .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndPageUp" returnType="void">
+      <summary><![CDATA[Checks the result of an asynchonous PageUp operation.]]></summary>
+      <overloads>
+        <overload signature="EndPageUp()">
+          <summary><![CDATA[Checks the result of an asynchonous PageUp operation.]]></summary>
+          <syntax><![CDATA[public void EndPageUp (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[The IASyncResult that represents the state of the asynchronous page-up operation. If the operation is finished, IsCompleted will be true .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndRead" returnType="void">
+      <summary><![CDATA[Checks the result of an asynchronous Read operation.]]></summary>
+      <overloads>
+        <overload signature="EndRead()">
+          <summary><![CDATA[Checks the result of an asynchronous Read operation.]]></summary>
+          <syntax><![CDATA[public static LeaderboardReader EndRead (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[The IASyncResult that represents the state of the asynchronous read operation. If the operation is finished, IsCompleted will be true .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The LeaderboardReader that contains the read results.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="PageDown" returnType="void">
+      <summary><![CDATA[Reads the next page of leaderboard data synchronously.]]></summary>
+      <overloads>
+        <overload signature="PageDown()">
+          <summary><![CDATA[Reads the next page of leaderboard data synchronously.]]></summary>
+          <syntax><![CDATA[public void PageDown ()]]></syntax>
+          <remarks><![CDATA[Use the CanPageDown property to check if there is more data to be read before calling this method.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="PageUp" returnType="void">
+      <summary><![CDATA[Reads the previous page of leaderboard data synchronously.]]></summary>
+      <overloads>
+        <overload signature="PageUp()">
+          <summary><![CDATA[Reads the previous page of leaderboard data synchronously.]]></summary>
+          <syntax><![CDATA[public void PageUp ()]]></syntax>
+          <remarks><![CDATA[Use the CanPageUp property to check if there is more data to be read before calling this method.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Read" returnType="LeaderboardReader" isStatic="true">
+      <summary><![CDATA[Reads a leaderboard synchronously, specifying a leaderboard identity, pivot gamer, and page size.]]></summary>
+      <overloads>
+        <overload signature="LeaderboardIdentity, Gamer, Int32">
+          <summary><![CDATA[Reads a leaderboard synchronously, specifying a leaderboard identity, pivot gamer, and page size.]]></summary>
+          <syntax><![CDATA[public static LeaderboardReader Read (
+         LeaderboardIdentity leaderboardId,
+         Gamer pivotGamer,
+         int pageSize
+)]]></syntax>
+          <parameters>
+            <parameter name="leaderboardId" type="LeaderboardIdentity"><![CDATA[The leaderboard identity of the leaderboard to read.]]></parameter>
+            <parameter name="pivotGamer" type="Gamer"><![CDATA[The gamer to center the results on. It can be null .]]></parameter>
+            <parameter name="pageSize" type="int"><![CDATA[The number of leaderboard entries on a page. Pass zero to include all available entries on a single page.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A LeaderboardReader containing the retrieved leaderboard data.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. The returned page of results contains the pivotGamer if this gamer appears on the leaderboard. Otherwise, the top page of leaderboard entries is returned.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="LeaderboardIdentity, Int32, Int32">
+          <summary><![CDATA[Begins reading a leaderboard synchronously, specifying a leaderboard identity, the start page, and the page size.]]></summary>
+          <syntax><![CDATA[public static LeaderboardReader Read (
+         LeaderboardIdentity leaderboardId,
+         int pageStart,
+         int pageSize
+)]]></syntax>
+          <parameters>
+            <parameter name="leaderboardId" type="LeaderboardIdentity"><![CDATA[The leaderboard identity of the leaderboard to read.]]></parameter>
+            <parameter name="pageStart" type="int"><![CDATA[The page of leaderboard entries at which to start. Pass zero to start at the highest scores.]]></parameter>
+            <parameter name="pageSize" type="int"><![CDATA[The number of leaderboard entries per page. Pass zero to include all available entries on a single page.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The leaderboard reader used to read the results.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="LeaderboardIdentity, Generic IEnumerable, Gamer, Int32">
+          <summary><![CDATA[Reads a leaderboard synchronously, specifying a leaderboard identity, collection of gamers, pivot gamer, and page size.]]></summary>
+          <syntax><![CDATA[public static LeaderboardReader Read (
+         LeaderboardIdentity leaderboardId,
+         IEnumerable&lt;Gamer&gt; gamers,
+         Gamer pivotGamer,
+         int pageSize
+)]]></syntax>
+          <parameters>
+            <parameter name="leaderboardId" type="LeaderboardIdentity"><![CDATA[The leaderboard identity of the leaderboard to read.]]></parameter>
+            <parameter name="gamers" type="Object"><![CDATA[A collection of gamers to be included in the leaderboard results. This parameter is ignored on Windows Phone.]]></parameter>
+            <parameter name="pivotGamer" type="Gamer"><![CDATA[The gamer of interest in the leaderboard. The current page will be set so that this gamer will appear on the page.]]></parameter>
+            <parameter name="pageSize" type="int"><![CDATA[The number of leaderboard entries per page.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A LeaderboardReader containing the retrieved leaderboard data.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. The returned page of results will contain the pivotGamer , if this gamer appears on the leaderboard. Otherwise, the top page of leaderboard entries will be returned.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

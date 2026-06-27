@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MeshHelper" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+  <summary><![CDATA[Provides methods for manipulating mesh data.]]></summary>
+  <syntax><![CDATA[public static class MeshHelper]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="CalculateNormals" returnType="void">
+      <summary><![CDATA[Computes new normals for the specified mesh.]]></summary>
+      <overloads>
+        <overload signature="CalculateNormals()">
+          <summary><![CDATA[Computes new normals for the specified mesh.]]></summary>
+          <syntax><![CDATA[public static void CalculateNormals (
+         MeshContent mesh,
+         bool overwriteExistingNormals
+)]]></syntax>
+          <parameters>
+            <parameter name="mesh" type="MeshContent"><![CDATA[Mesh containing the normals being computed.]]></parameter>
+            <parameter name="overwriteExistingNormals" type="bool"><![CDATA[true if existing normals are to be discarded; false otherwise. Existing normals are searched for as if they are a vertex data channel (of type Vector3 Structure ) with the name VertexChannelNames.Normal .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[The new normals are stored in vertex data channels (of type Vector3 Structure ) with the name VertexChannelNames.Normal .]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CalculateTangentFrames" returnType="void">
+      <summary><![CDATA[Compute tangent frames for the given mesh.]]></summary>
+      <overloads>
+        <overload signature="CalculateTangentFrames()">
+          <summary><![CDATA[Compute tangent frames for the given mesh.]]></summary>
+          <syntax><![CDATA[public static void CalculateTangentFrames (
+         MeshContent mesh,
+         string textureCoordinateChannelName,
+         string tangentChannelName,
+         string binormalChannelName
+)]]></syntax>
+          <parameters>
+            <parameter name="mesh" type="MeshContent"><![CDATA[The target mesh used to create the tangent frame. All geometries in this mesh must have normal vertex channels stored in Normal , and must contain Vector3 data.]]></parameter>
+            <parameter name="textureCoordinateChannelName" type="string"><![CDATA[The texture coordinate channel used for computing the tangent frame. This channel most contain Vector2 data.]]></parameter>
+            <parameter name="tangentChannelName" type="string"><![CDATA[Target channel name used to store calculated tangents. A tangent channel is not generated if null or an empty string is specified.]]></parameter>
+            <parameter name="binormalChannelName" type="string"><![CDATA[Target channel name used to store calculated binormals. A tangent channel is not generated if null or an empty string is specified.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method computes and adds tangent and binormal vertex channels to the given mesh. An InvalidContentException is thrown if: The mesh does not contain a normal channel (stored in Normal ). The data specified in the normal channel is not a Vector3 type. The vertex channel of the mesh does not have the name specified by textureCoordinateChannelName . The data specified in the texture coordinate channel is not a Vector2 type. The channel specified by tangentChannelName already exists. The channel specified by binormalChannelName already exists.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="FindSkeleton" returnType="void">
+      <summary><![CDATA[Searches for the root bone of the contained skeleton. This node is used to animate the skeleton.]]></summary>
+      <overloads>
+        <overload signature="FindSkeleton()">
+          <summary><![CDATA[Searches for the root bone of the contained skeleton. This node is used to animate the skeleton.]]></summary>
+          <syntax><![CDATA[public static BoneContent FindSkeleton (
+         NodeContent node
+)]]></syntax>
+          <parameters>
+            <parameter name="node" type="NodeContent"><![CDATA[Mesh that possibly contains the skeleton.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Root of the contained skeleton; otherwise null if no skeleton is found.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="FlattenSkeleton" returnType="void">
+      <summary><![CDATA[Gets a flattened list of all bones contained by the specified skeleton.]]></summary>
+      <overloads>
+        <overload signature="FlattenSkeleton()">
+          <summary><![CDATA[Gets a flattened list of all bones contained by the specified skeleton.]]></summary>
+          <syntax><![CDATA[public static IList&lt;BoneContent&gt; FlattenSkeleton (
+         BoneContent skeleton
+)]]></syntax>
+          <parameters>
+            <parameter name="skeleton" type="BoneContent"><![CDATA[Skeleton to be traversed.]]></parameter>
+          </parameters>
+          <returns><![CDATA[List of bones for the animation skeleton.]]></returns>
+          <remarks><![CDATA[The tree is calculated using a depth–first traversal. The bones are returned in the same order used by ModelProcessor to convert BoneWeight vertex channels into the BlendIndices format.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="MergeDuplicatePositions" returnType="void">
+      <summary><![CDATA[Processes the PositionCollection collection of the specified mesh, merging any values that are closer together than the specified tolerance threshold.]]></summary>
+      <overloads>
+        <overload signature="MergeDuplicatePositions()">
+          <summary><![CDATA[Processes the PositionCollection collection of the specified mesh, merging any values that are closer together than the specified tolerance threshold.]]></summary>
+          <syntax><![CDATA[public static void MergeDuplicatePositions (
+         MeshContent mesh,
+         float tolerance
+)]]></syntax>
+          <parameters>
+            <parameter name="mesh" type="MeshContent"><![CDATA[Mesh to be processed.]]></parameter>
+            <parameter name="tolerance" type="float"><![CDATA[Tolerance to be used when determining duplicate positions. Pass a value of 0 to merge only those values that are exactly identical.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method also updates the PositionIndices data to match the modified position table. This should generally be followed by a call to MergeDuplicateVertices .]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="MergeDuplicateVertices" returnType="void" isStatic="true">
+      <summary><![CDATA[Processes the PositionIndices and VertexChannel data of the specified geometry batch, merging any duplicate vertices.]]></summary>
+      <overloads>
+        <overload signature="GeometryContent">
+          <summary><![CDATA[Processes the PositionIndices and VertexChannel data of the specified geometry batch, merging any duplicate vertices.]]></summary>
+          <syntax><![CDATA[public static void MergeDuplicateVertices (
+         GeometryContent geometry
+)]]></syntax>
+          <parameters>
+            <parameter name="geometry" type="GeometryContent"><![CDATA[Geometry batch to be processed.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="MeshContent">
+          <summary><![CDATA[Processes the PositionIndices and VertexChannel data of the specified mesh, merging any duplicate vertices.]]></summary>
+          <syntax><![CDATA[public static void MergeDuplicateVertices (
+         MeshContent mesh
+)]]></syntax>
+          <parameters>
+            <parameter name="mesh" type="MeshContent"><![CDATA[Mesh to be processed.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OptimizeForCache" returnType="void">
+      <summary><![CDATA[Reorders the indices and vertices of the mesh for optimal GPU cache performance.]]></summary>
+      <overloads>
+        <overload signature="OptimizeForCache()">
+          <summary><![CDATA[Reorders the indices and vertices of the mesh for optimal GPU cache performance.]]></summary>
+          <syntax><![CDATA[public static void OptimizeForCache (
+         MeshContent mesh
+)]]></syntax>
+          <parameters>
+            <parameter name="mesh" type="MeshContent"><![CDATA[Mesh to be optimized.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SwapWindingOrder" returnType="void">
+      <summary><![CDATA[Reverses the triangle winding order of the specified mesh.]]></summary>
+      <overloads>
+        <overload signature="SwapWindingOrder()">
+          <summary><![CDATA[Reverses the triangle winding order of the specified mesh.]]></summary>
+          <syntax><![CDATA[public static void SwapWindingOrder (
+         MeshContent mesh
+)]]></syntax>
+          <parameters>
+            <parameter name="mesh" type="MeshContent"><![CDATA[The mesh to be modified.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Call this method when moving data between right-handed and left-handed coordinate systems, or when changing the direction of the back-face culling.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TransformScene" returnType="void">
+      <summary><![CDATA[Applies a transformation to the contents of a scene hierarchy.]]></summary>
+      <overloads>
+        <overload signature="TransformScene()">
+          <summary><![CDATA[Applies a transformation to the contents of a scene hierarchy.]]></summary>
+          <syntax><![CDATA[public static void TransformScene (
+         NodeContent scene,
+         Matrix transform
+)]]></syntax>
+          <parameters>
+            <parameter name="scene" type="NodeContent"><![CDATA[Scene hierarchy being transformed.]]></parameter>
+            <parameter name="transform" type="Matrix"><![CDATA[Matrix used in the transformation]]></parameter>
+          </parameters>
+          <remarks><![CDATA[The resulting world space positions are similar to the results obtained from applying the specified transform to the Transform property of the scene object. However, this method performs the transformation by cascading down through the scene hierarchy and modifying the actual underlying vertex positions. This does not introduce unwanted artifacts into the node transforms. For instance, this method can be used to mirror a scene without leaving mirroring in the transform matrices. Typically, you would convert a scene from a left-handed to a right-handed coordinate system and then transform it with the following matrix ((1, 0, 0), (0, 1, 0), (0, 0, −1)).]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

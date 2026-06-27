@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexDeclarationContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          baseClass="ContentItem">
+  <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public class VertexDeclarationContent : ContentItem]]></syntax>
+  <platforms>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="VertexDeclarationContent()">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public VertexDeclarationContent ()]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="VertexElements" type="Collection&amp;lt;VertexElement&amp;gt;" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public Collection&lt;VertexElement&gt; VertexElements { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="VertexStride" type="Nullable&amp;lt;int&amp;gt;" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;int&gt; VertexStride { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

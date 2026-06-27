@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MediaState" kind="enum"
+          namespace="Microsoft.Xna.Framework.Media"
+          assembly="Microsoft.Xna.Framework.Media">
+  <summary><![CDATA[Media playback state (playing, paused, or stopped).]]></summary>
+  <syntax><![CDATA[public enum MediaState]]></syntax>
+  <remarks><![CDATA[The MediaPlayer.State property returns a MediaState value.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="Paused"><summary><![CDATA[Media playback is paused.]]></summary></member>
+    <member name="Playing"><summary><![CDATA[Media is currently playing.]]></summary></member>
+    <member name="Stopped"><summary><![CDATA[Media playback is stopped.]]></summary></member>
+  </members>
+</xna-type>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentTypeSerializerAttribute" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
+          baseClass="Attribute">
+  <summary><![CDATA[Identifies type serializer components.]]></summary>
+  <syntax><![CDATA[[AttributeUsageAttribute(4)]
+public sealed class ContentTypeSerializerAttribute : Attribute]]></syntax>
+  <remarks><![CDATA[All custom serializers must decorate their class with this attribute, as well as extend the ContentTypeSerializer class.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentTypeSerializerAttribute()">
+      <summary><![CDATA[Initializes a new isntance of the ContentTypeSerializerAttribute class.]]></summary>
+      <syntax><![CDATA[public ContentTypeSerializerAttribute ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

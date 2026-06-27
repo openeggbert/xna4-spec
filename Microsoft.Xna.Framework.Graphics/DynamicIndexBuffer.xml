@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="DynamicIndexBuffer" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IndexBuffer">
+  <summary><![CDATA[Describes the rendering order of the vertices in a vertex buffer. Use DynamicIndexBuffer for storing indices for dynamic vertices and IndexBuffer for indices of non-dynamic arrays.]]></summary>
+  <syntax><![CDATA[public class DynamicIndexBuffer : IndexBuffer]]></syntax>
+  <remarks><![CDATA[For more information on drawing with dynamic buffers, see DynamicVertexBuffer Class .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="DynamicIndexBuffer(GraphicsDevice, IndexElementSize, Int32, BufferUsage)">
+      <summary><![CDATA[Create a new instance of this class.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         graphicsDevice As GraphicsDevice, _
+         indexElementSize As IndexElementSize, _
+         indexCount As Integer, _
+         usage As BufferUsage _
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The associated graphics device.]]></parameter>
+        <parameter name="indexElementSize" type="Object"><![CDATA[Type: IndexElementSize Size of each index element.]]></parameter>
+        <parameter name="indexCount" type="Object"><![CDATA[Type: Int32 Number of indices in the buffer.]]></parameter>
+        <parameter name="usage" type="Object"><![CDATA[Type: BufferUsage Behavior options.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="DynamicIndexBuffer(GraphicsDevice, Type, Int32, BufferUsage)">
+      <summary><![CDATA[Initializes a new instance of DynamicIndexBuffer with the specified parameters.]]></summary>
+      <syntax><![CDATA[public DynamicIndexBuffer (
+         GraphicsDevice graphicsDevice,
+         Type indexType,
+         int elementCount,
+         BufferUsage usage
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The associated graphics device of the index buffer.]]></parameter>
+        <parameter name="indexType" type="Type"><![CDATA[Type to use for index values.]]></parameter>
+        <parameter name="elementCount" type="int"><![CDATA[Number of indices in the buffer.]]></parameter>
+        <parameter name="usage" type="BufferUsage"><![CDATA[A set of options identifying the behaviors of this index buffer resource.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="DynamicIndexBuffer(GraphicsDevice, Int32, BufferUsage, IndexElementSize)">
+      <summary><![CDATA[Initializes a new instance of DynamicIndexBuffer with the specified parameters.]]></summary>
+      <syntax><![CDATA[public DynamicIndexBuffer (
+         GraphicsDevice graphicsDevice,
+         int sizeInBytes,
+         BufferUsage usage,
+         IndexElementSize elementSize
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The associated graphics device of the index buffer.]]></parameter>
+        <parameter name="sizeInBytes" type="int"><![CDATA[The size, in bytes, of the index buffer.]]></parameter>
+        <parameter name="usage" type="BufferUsage"><![CDATA[A set of options identifying the behaviors of this index buffer resource.]]></parameter>
+        <parameter name="elementSize" type="IndexElementSize"><![CDATA[The size, in bits, of an index element.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="IsContentLost" type="bool" access="get">
+      <summary><![CDATA[Determines if the index buffer data has been lost due to a lost device event.]]></summary>
+      <syntax><![CDATA[public bool IsContentLost { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected override void Dispose (
+         bool 
+)]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_ContentLost" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="raise_ContentLost()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[protected virtual void raise_ContentLost (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[The source of this event.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[The event arguments that are associated with the action that raised the event.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="ContentLost" type="EventHandler">
+      <summary><![CDATA[Occurs when resources are lost due to a lost device event.]]></summary>
+      <syntax><![CDATA[public virtual event EventHandler ContentLost]]></syntax>
+      <remarks><![CDATA[When this event is fired, the IsContentLost property, of the index buffer, is set to true .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

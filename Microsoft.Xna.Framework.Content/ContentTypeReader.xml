@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentTypeReader" kind="class"
+          namespace="Microsoft.Xna.Framework.Content"
+          assembly="Microsoft.Xna.Framework.Content">
+  <summary><![CDATA[Worker for reading a specific managed type from a binary format.]]></summary>
+  <syntax><![CDATA[public abstract class ContentTypeReader]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentTypeReader()">
+      <summary><![CDATA[Creates a new instance of ContentTypeReader.]]></summary>
+      <syntax><![CDATA[protected ContentTypeReader ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ContentTypeReader(Type)">
+      <summary><![CDATA[Creates a new instance of ContentTypeReader.]]></summary>
+      <syntax><![CDATA[protected ContentTypeReader (
+         Type targetType
+)]]></syntax>
+      <parameters>
+        <parameter name="targetType" type="Type"><![CDATA[The type handled by this reader component.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="CanDeserializeIntoExistingObject" type="Object" access="get">
+      <summary><![CDATA[Determines if deserialization into an existing object is possible.]]></summary>
+      <syntax><![CDATA[public virtual bool CanDeserializeIntoExistingObject { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="TargetType" type="Type" access="get">
+      <summary><![CDATA[Gets the type handled by this reader component.]]></summary>
+      <syntax><![CDATA[public Type TargetType { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TypeVersion" type="Object" access="get">
+      <summary><![CDATA[Gets a format version number for this type.]]></summary>
+      <syntax><![CDATA[public virtual int TypeVersion { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Initialize" returnType="void">
+      <summary><![CDATA[Retrieves and caches nested type readers. Called by the framework at creation time.]]></summary>
+      <overloads>
+        <overload signature="Initialize()">
+          <summary><![CDATA[Retrieves and caches nested type readers. Called by the framework at creation time.]]></summary>
+          <syntax><![CDATA['Declaration
+Protected Internal Overridable Sub Initialize ( _
+         manager As ContentTypeReaderManager _
+)]]></syntax>
+          <parameters>
+            <parameter name="manager" type="Object"><![CDATA[Type: ContentTypeReaderManager The content manager.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Read" returnType="void">
+      <summary><![CDATA[Reads a strongly typed object from the current stream.]]></summary>
+      <overloads>
+        <overload signature="ContentReader, T">
+          <summary><![CDATA[Reads a strongly typed object from the current stream.]]></summary>
+          <syntax><![CDATA['Declaration
+Protected Internal MustOverride Function Read ( _
+         input As ContentReader, _
+         existingInstance As T _
+) As T]]></syntax>
+          <parameters>
+            <parameter name="input" type="Object"><![CDATA[Type: ContentReader The ContentReader used to read the object.]]></parameter>
+            <parameter name="existingInstance" type="Object"><![CDATA[Type: T An existing object to read into.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: T The type of object to read.]]></returns>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="ContentReader, Object">
+          <summary><![CDATA[Reads an object from the current stream.]]></summary>
+          <syntax><![CDATA['Declaration
+Protected Internal Overrides Function Read ( _
+         input As ContentReader, _
+         existingInstance As Object _
+) As Object]]></syntax>
+          <parameters>
+            <parameter name="input" type="Object"><![CDATA[Type: ContentReader The ContentReader used to read the object.]]></parameter>
+            <parameter name="existingInstance" type="Object"><![CDATA[Type: Object An existing object to read into.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Object The object that was read.]]></returns>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

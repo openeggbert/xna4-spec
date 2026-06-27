@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="QueryUsages" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines options for querying device resource formats.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum QueryUsages]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Filter"><summary><![CDATA[Query the resource format to see if it supports texture filter types other than TextureFilter.Point (which is always supported).]]></summary></member>
+    <member name="None"><summary><![CDATA[No option specified.]]></summary></member>
+    <member name="PostPixelShaderBlending"><summary><![CDATA[Query the resource to verify support for post pixel shader blending support, including alpha test, pixel fog, render-target blending, color write enable, and dithering.]]></summary></member>
+    <member name="SrgbRead"><summary><![CDATA[Query the resource to verify if a texture supports gamma correction during a read operation.]]></summary></member>
+    <member name="SrgbWrite"><summary><![CDATA[Query the resource to verify if a texture supports gamma correction during a write operation.]]></summary></member>
+    <member name="VertexTexture"><summary><![CDATA[Query the resource to verify support for vertex shader texture sampling.]]></summary></member>
+    <member name="WrapAndMip"><summary><![CDATA[Query the resource to verify support for texture wrapping and mipmapping.]]></summary></member>
+  </members>
+</xna-type>

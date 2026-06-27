@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="InvalidContentException" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          baseClass="Exception">
+  <summary><![CDATA[Thrown when errors are encountered in content during processing.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public class InvalidContentException : Exception]]></syntax>
+  <remarks><![CDATA[InvalidContentException is an exception that any importer or content processor can throw to indicate a problem with the current content file. Exceptions of this type are presented differently from all other exceptions the pipeline throws. Exceptions of this type indicate a problem in the content. Other exceptions the content pipeline throws indicate a problem with the pipeline code itself. The InvalidContentException class has properties that identify the content file with the problem, if available.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="InvalidContentException(String)">
+      <summary><![CDATA[Initializes a new instance of the InvalidContentException class with the specified error message.]]></summary>
+      <syntax><![CDATA[public InvalidContentException (
+         string message
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="InvalidContentException(SerializationInfo, StreamingContext)">
+      <summary><![CDATA[Initializes a new instance of the InvalidContentException class with information on serialization and streaming context for the related content item.]]></summary>
+      <syntax><![CDATA[protected InvalidContentException (
+         SerializationInfo serializationInfo,
+         StreamingContext streamingContext
+)]]></syntax>
+      <parameters>
+        <parameter name="serializationInfo" type="SerializationInfo"><![CDATA[Information necessary for serialization and deserialization of the content item.]]></parameter>
+        <parameter name="streamingContext" type="StreamingContext"><![CDATA[Information necessary for the source and destination of a given serialized stream. Also provides an additional caller-defined context.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="InvalidContentException(String, Exception)">
+      <summary><![CDATA[Initializes a new instance of the InvalidContentException class with the specified error message and a reference to the inner exception that is the cause of this exception.]]></summary>
+      <syntax><![CDATA[public InvalidContentException (
+         string message,
+         Exception innerException
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="innerException" type="Exception"><![CDATA[The exception that is the cause of the current exception. If is not a null reference, the current exception is raised in a catch block that handles the inner exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="InvalidContentException()">
+      <summary><![CDATA[Initializes a new instance of the InvalidContentException class]]></summary>
+      <syntax><![CDATA[public InvalidContentException ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="InvalidContentException(String, ContentIdentity, Exception)">
+      <summary><![CDATA[Initializes a new instance of the InvalidContentException class with the specified error message, the identity of the content throwing the exception, and a reference to the inner exception that is the cause of this exception.]]></summary>
+      <syntax><![CDATA[public InvalidContentException (
+         string message,
+         ContentIdentity contentIdentity,
+         Exception innerException
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="contentIdentity" type="ContentIdentity"><![CDATA[Information about the content item that caused this error, including the file name. In some cases, a location within the file (of the problem) is specified.]]></parameter>
+        <parameter name="innerException" type="Exception"><![CDATA[The exception that is the cause of the current exception. If is not a null reference, the current exception is raised in a catch block that handles the inner exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="InvalidContentException(String, ContentIdentity)">
+      <summary><![CDATA[Initializes a new instance of the InvalidContentException class with the specified error message and the identity of the content throwing the exception.]]></summary>
+      <syntax><![CDATA[public InvalidContentException (
+         string message,
+         ContentIdentity contentIdentity
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="contentIdentity" type="ContentIdentity"><![CDATA[Information about the content item that caused this error, including the file name. In some cases, a location within the file (of the problem) is specified.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="ContentIdentity" type="ContentIdentity" access="get;set">
+      <summary><![CDATA[Gets or sets the identity of the content item that caused the exception.]]></summary>
+      <syntax><![CDATA[public ContentIdentity ContentIdentity { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetObjectData" returnType="void">
+      <summary><![CDATA[When overridden in a derived class, returns information about the exception.]]></summary>
+      <overloads>
+        <overload signature="GetObjectData()">
+          <summary><![CDATA[When overridden in a derived class, returns information about the exception.]]></summary>
+          <syntax><![CDATA[public override void GetObjectData (
+         SerializationInfo info,
+         StreamingContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="info" type="SerializationInfo"><![CDATA[Information necessary for serialization and deserialization of the content item.]]></parameter>
+            <parameter name="context" type="StreamingContext"><![CDATA[Information necessary for the source and destination of a given serialized stream. Also provides an additional caller-defined context.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

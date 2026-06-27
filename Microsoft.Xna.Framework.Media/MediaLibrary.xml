@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MediaLibrary" kind="class"
+          namespace="Microsoft.Xna.Framework.Media"
+          assembly="Microsoft.Xna.Framework.Media">
+  <summary><![CDATA[Provides access to songs, playlists, and pictures in the device's media library.]]></summary>
+  <syntax><![CDATA[public sealed class MediaLibrary]]></syntax>
+  <remarks><![CDATA[MediaLibrary provides the following properties that return media collections: Albums , Artists , Genres , Pictures , Playlists , and Songs . Each property returns a collection object that can be enumerated and indexed. The collection object represents all media of that type in the device's media library. The media collections do not retrieve or instantiate all media objects immediately. Instead, when needed, you can use the collections later to retrieve individual media objects, such as Song and Artist objects. On Windows, MediaLibrary cannot find any songs unless the Windows Media Player previously found songs on the system. That means that Windows Media Player must first search the system for music before any songs can be accessed through MediaLibrary .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="MediaLibrary(MediaSource)">
+      <summary><![CDATA[Initializes a new instance of the MediaLibrary class, using a specific media source to create the new media library.]]></summary>
+      <syntax><![CDATA[public MediaLibrary (
+         MediaSource mediaSource
+)]]></syntax>
+      <parameters>
+        <parameter name="mediaSource" type="MediaSource"><![CDATA[A media source that will be the source for the media library.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="MediaLibrary()">
+      <summary><![CDATA[Initializes a new instance of the MediaLibrary class.]]></summary>
+      <syntax><![CDATA[public MediaLibrary ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Albums" type="AlbumCollection" access="get">
+      <summary><![CDATA[Gets the AlbumCollection that contains all albums in the media library.]]></summary>
+      <syntax><![CDATA[public AlbumCollection Albums { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Artists" type="ArtistCollection" access="get">
+      <summary><![CDATA[Gets the ArtistCollection that contains all artists in the media library.]]></summary>
+      <syntax><![CDATA[public ArtistCollection Artists { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Genres" type="GenreCollection" access="get">
+      <summary><![CDATA[Gets the GenreCollection that contains all genres in the media library.]]></summary>
+      <syntax><![CDATA[public GenreCollection Genres { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="MediaSource" type="MediaSource" access="get">
+      <summary><![CDATA[Gets the MediaSource with which this media library was constructed.]]></summary>
+      <syntax><![CDATA[public MediaSource MediaSource { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Pictures" type="PictureCollection" access="get">
+      <summary><![CDATA[Gets the PictureCollection that contains all pictures in the media library.]]></summary>
+      <syntax><![CDATA[public PictureCollection Pictures { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Playlists" type="PlaylistCollection" access="get">
+      <summary><![CDATA[Gets the PlaylistCollection that contains all playlists in the media library.]]></summary>
+      <syntax><![CDATA[public PlaylistCollection Playlists { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="RootPictureAlbum" type="PictureAlbum" access="get">
+      <summary><![CDATA[Gets the root PictureAlbum for all pictures in the media library.]]></summary>
+      <syntax><![CDATA[public PictureAlbum RootPictureAlbum { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="SavedPictures" type="PictureCollection" access="get">
+      <summary><![CDATA[Returns the collection of all saved pictures in the device's media library.]]></summary>
+      <syntax><![CDATA[public PictureCollection SavedPictures { get; }]]></syntax>
+      <remarks><![CDATA[SavedPictures is only supported on Windows Phone, and returns an empty PictureCollection on Windows and Xbox 360.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="Songs" type="SongCollection" access="get">
+      <summary><![CDATA[Gets the SongCollection that contains all songs in the media library.]]></summary>
+      <syntax><![CDATA[public SongCollection Songs { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Releases the resources used by the MediaLibrary.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Releases the resources used by the MediaLibrary.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <remarks><![CDATA[Call Dispose only when you are finished using the MediaLibrary . The Dispose method leaves the MediaLibrary in an unusable state. After calling Dispose , you must release all references to the MediaLibrary in order for the garbage collector to reclaim the memory that the MediaLibrary was occupying. For more information, see Cleaning Up Unmanaged Resources and Implementing a Dispose Method .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Releases unmanaged resources and performs other cleanup operations before the MediaLibrary is reclaimed by garbage collection.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Releases unmanaged resources and performs other cleanup operations before the MediaLibrary is reclaimed by garbage collection.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <remarks><![CDATA[This method overrides Finalize System.Object.Finalize . Application code should not call this method. The object's Finalize method is automatically invoked during garbage collection, unless a call to the GC.SuppressFinalize method has disabled finalization by the garbage collector. For more information, see Finalize Methods and Destructors , Cleaning Up Unmanaged Resources , and Overriding the Finalize Method .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPictureFromToken" returnType="void">
+      <summary><![CDATA[Retrieves a picture from the device's media library based on a picture token.]]></summary>
+      <overloads>
+        <overload signature="GetPictureFromToken()">
+          <summary><![CDATA[Retrieves a picture from the device's media library based on a picture token.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Function GetPictureFromToken ( _
+         token As String _
+) As Picture]]></syntax>
+          <parameters>
+            <parameter name="token" type="Object"><![CDATA[Type: String The picture token. This cannot be null]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Picture The Picture object that matches the supplied picture token.]]></returns>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SavePicture" returnType="void">
+      <summary><![CDATA[Saves the image to the media library, and then returns that saved image as a picture object.]]></summary>
+      <overloads>
+        <overload signature="String, Byte ">
+          <summary><![CDATA[Saves the image to the media library, and then returns that saved image as a picture object.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Function SavePicture ( _
+         name As String, _
+         imageBuffer As Byte() _
+) As Picture]]></syntax>
+          <parameters>
+            <parameter name="name" type="Object"><![CDATA[Type: String Name of the image file saved to the media library.]]></parameter>
+            <parameter name="imageBuffer" type="Object"><![CDATA[Type: Byte Buffer that contains the image in the required JPEG file format.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Picture The Picture object that represents the saved image.]]></returns>
+          <remarks><![CDATA[Image data that is passed in must be in a JPEG file format. Additionally, SavePicture always saves the image in a JPEG file format.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, Stream">
+          <summary><![CDATA[Saves the image contained in the stream object to the media library, and then returns that saved image as a picture object.]]></summary>
+          <syntax><![CDATA['Declaration
+&lt;SecuritySafeCriticalAttribute&gt; _
+Public Function SavePicture ( _
+         name As String, _
+         source As Stream _
+) As Picture]]></syntax>
+          <parameters>
+            <parameter name="name" type="Object"><![CDATA[Type: String Name of the image file that is saved to the media library.]]></parameter>
+            <parameter name="source" type="Object"><![CDATA[Type: Stream Stream object that contains the image information in the required JPEG file format.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Picture The Picture object that represents the saved image.]]></returns>
+          <remarks><![CDATA[Image data that is passed in must be in a JPEG file format. SavePicture always saves the image in a JPEG file format.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SetDataOptions" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Describes whether existing buffer data will be overwritten or discarded during a SetData operation.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum SetDataOptions]]></syntax>
+  <remarks><![CDATA[Note Discard is not valid on Xbox 360, but dynamic geometry may be rendered on the Xbox 360 by using DrawUserPrimitives .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Discard"><summary><![CDATA[The SetData operation will discard all existing buffer data. The operation will overwrite (with a write-only operation) every location within the locked surface. This is a valid option when using dynamic textures, dynamic vertex buffers, and dynamic index buffers. You may not use this option to update a portion of a surface. For vertex and index buffers, the SetData operation will discard the entire buffer. A pointer to a new memory area is returned so that the direct memory access (DMA) and rendering from the previous area do not stall. For textures, the SetData operation will overwrite (with a write-only operation) every location within the region being locked.]]></summary></member>
+    <member name="None"><summary><![CDATA[Portions of existing data in the buffer may be overwritten during this operation.]]></summary></member>
+    <member name="NoOverwrite"><summary><![CDATA[The SetData operation will not overwrite existing data in the vertex and index buffers. Specifying this option allows the driver to return immediately from a SetData operation and continue rendering.]]></summary></member>
+  </members>
+</xna-type>

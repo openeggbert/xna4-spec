@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EffectParameterCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IEnumerable&amp;lt;EffectParameter&amp;gt;">
+  <summary><![CDATA[Manipulates a collection of EffectParameter objects.]]></summary>
+  <syntax><![CDATA[public sealed class EffectParameterCollection : IEnumerable&lt;EffectParameter&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Gets the number of EffectParameter objects in this EffectParameterCollection.]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get">
+      <summary><![CDATA[Gets a specific EffectParameter object by using an index value.]]></summary>
+      <syntax><![CDATA[public EffectParameter this [
+         int index
+] { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Returns an enumerator that can iterate through the EffectParameterCollection.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Returns an enumerator that can iterate through the EffectParameterCollection.]]></summary>
+          <syntax><![CDATA[public IEnumerator&lt;EffectParameter&gt; GetEnumerator ()]]></syntax>
+          <returns><![CDATA[The iterator.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetParameterBySemantic" returnType="void">
+      <summary><![CDATA[Gets the handle of a top-level parameter or a structure member parameter by looking up its semantic with a case-insensitive search.]]></summary>
+      <overloads>
+        <overload signature="GetParameterBySemantic()">
+          <summary><![CDATA[Gets the handle of a top-level parameter or a structure member parameter by looking up its semantic with a case-insensitive search.]]></summary>
+          <syntax><![CDATA[public EffectParameter GetParameterBySemantic (
+         string semantic
+)]]></syntax>
+          <parameters>
+            <parameter name="semantic" type="string"><![CDATA[The name of the semantic to search for.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The first parameter that matches the semantic, or null if no matching parameter was found.]]></returns>
+          <remarks><![CDATA[Getting an effect parameter by semantic is a slow operation. Avoid-high frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

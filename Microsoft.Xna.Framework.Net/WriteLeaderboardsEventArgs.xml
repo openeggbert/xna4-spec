@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="WriteLeaderboardsEventArgs" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="EventArgs">
+  <summary><![CDATA[Represents the arguments passed to a WriteArbitratedLeaderboard. WriteUnarbitratedLeaderboard, or WriteTrueSkill event.]]></summary>
+  <syntax><![CDATA[public sealed class WriteLeaderboardsEventArgs : EventArgs]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Gamer" type="NetworkGamer" access="get">
+      <summary><![CDATA[Gets the gamer whose statistics need to be written to the leaderboard.]]></summary>
+      <syntax><![CDATA[public NetworkGamer Gamer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="IsLeaving" type="bool" access="get">
+      <summary><![CDATA[Indicates whether or not the player is leaving the session early.]]></summary>
+      <syntax><![CDATA[public bool IsLeaving { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

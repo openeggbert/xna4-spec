@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AnimationChannel" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          interfaces="ICollection&amp;lt;AnimationKeyframe&amp;gt;, IEnumerable&amp;lt;AnimationKeyframe&amp;gt;, IEnumerable">
+  <summary><![CDATA[Provides methods and properties for maintaining an animation channel. An animation channel is a collection of keyframes describing the movement of a single bone or rigid object.]]></summary>
+  <syntax><![CDATA[public sealed class AnimationChannel : ICollection&lt;AnimationKeyframe&gt;, IEnumerable&lt;AnimationKeyframe&gt;, IEnumerable]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="AnimationChannel()">
+      <summary><![CDATA[Initializes a new instance of AnimationChannel.]]></summary>
+      <syntax><![CDATA[public AnimationChannel ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Gets the number of keyframes in the collection.]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get">
+      <summary><![CDATA[Gets the keyframe at the specified index position.]]></summary>
+      <syntax><![CDATA[public AnimationKeyframe this [
+         int index
+] { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Add" returnType="void">
+      <summary><![CDATA[Adds a new keyframe to the collection, automatically sorting the contents according to keyframe times.]]></summary>
+      <overloads>
+        <overload signature="Add()">
+          <summary><![CDATA[Adds a new keyframe to the collection, automatically sorting the contents according to keyframe times.]]></summary>
+          <syntax><![CDATA[public int Add (
+         AnimationKeyframe item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="AnimationKeyframe"><![CDATA[Keyframe to be added to the channel.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Index of the new keyframe.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Clear" returnType="void">
+      <summary><![CDATA[Removes all keyframes from the collection.]]></summary>
+      <overloads>
+        <overload signature="Clear()">
+          <summary><![CDATA[Removes all keyframes from the collection.]]></summary>
+          <syntax><![CDATA[public void Clear ()]]></syntax>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Contains" returnType="void">
+      <summary><![CDATA[Searches the collection for the specified keyframe.]]></summary>
+      <overloads>
+        <overload signature="Contains()">
+          <summary><![CDATA[Searches the collection for the specified keyframe.]]></summary>
+          <syntax><![CDATA[public bool Contains (
+         AnimationKeyframe item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="AnimationKeyframe"><![CDATA[Keyframe being searched for.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the keyframe exists; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Returns an enumerator that iterates through the keyframes.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Returns an enumerator that iterates through the keyframes.]]></summary>
+          <syntax><![CDATA[public IEnumerator&lt;AnimationKeyframe&gt; GetEnumerator ()]]></syntax>
+          <returns><![CDATA[Enumerator for the keyframe collection.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IndexOf" returnType="void">
+      <summary><![CDATA[Determines the index for the specified keyframe.]]></summary>
+      <overloads>
+        <overload signature="IndexOf()">
+          <summary><![CDATA[Determines the index for the specified keyframe.]]></summary>
+          <syntax><![CDATA[public int IndexOf (
+         AnimationKeyframe item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="AnimationKeyframe"><![CDATA[Identity of a keyframe.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Index of the specified keyframe.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Remove" returnType="void">
+      <summary><![CDATA[Removes the specified keyframe from the collection.]]></summary>
+      <overloads>
+        <overload signature="Remove()">
+          <summary><![CDATA[Removes the specified keyframe from the collection.]]></summary>
+          <syntax><![CDATA[public bool Remove (
+         AnimationKeyframe item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="AnimationKeyframe"><![CDATA[Keyframe being removed.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the keyframe was removed; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="RemoveAt" returnType="void">
+      <summary><![CDATA[Removes the keyframe at the specified index position.]]></summary>
+      <overloads>
+        <overload signature="RemoveAt()">
+          <summary><![CDATA[Removes the keyframe at the specified index position.]]></summary>
+          <syntax><![CDATA[public void RemoveAt (
+         int index
+)]]></syntax>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[Index of the keyframe being removed.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

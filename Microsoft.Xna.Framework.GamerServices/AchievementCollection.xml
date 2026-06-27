@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AchievementCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          interfaces="IList&amp;lt;Achievement&amp;gt;, ICollection&amp;lt;Achievement&amp;gt;, IEnumerable&amp;lt;Achievement&amp;gt;, IEnumerable, IDisposable">
+  <summary><![CDATA[Collection holding the achievements belonging to a signed-in gamer.]]></summary>
+  <syntax><![CDATA[public sealed class AchievementCollection : IList&lt;Achievement&gt;, ICollection&lt;Achievement&gt;, IEnumerable&lt;Achievement&gt;, IEnumerable, IDisposable]]></syntax>
+  <remarks><![CDATA[This collection may be indexed by key string or integer order. When you are indexing achievements by integer order or iterating over the collection, achievements are ordered with earned achievements first. They are sorted by most-recently earned, then sorted by unearned non-hidden achievements in the order they were defined using XLAST, and finally sorted by any unearned hidden achievements in XLAST order.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Gets the number of objects in the collection.]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Indicates whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get">
+      <summary><![CDATA[Gets a specific element in the collection using an index value.]]></summary>
+      <syntax><![CDATA[public Achievement this [
+         int index
+] { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Gets an enumerator that can iterate through this AchievementCollection.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Gets an enumerator that can iterate through this AchievementCollection.]]></summary>
+          <syntax><![CDATA[public IEnumerator&lt;Achievement&gt; GetEnumerator ()]]></syntax>
+          <returns><![CDATA[An enumerator for this AchievementCollection.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EffectParameterClass" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines classes that can be used for effect parameters or shader constants.]]></summary>
+  <syntax><![CDATA[public enum EffectParameterClass]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="MatrixColumns"><summary><![CDATA[Constant is a column major matrix.]]></summary></member>
+    <member name="MatrixRows"><summary><![CDATA[Constant is a row major matrix.]]></summary></member>
+    <member name="Object"><summary><![CDATA[Constant is either a texture, a shader, or a string.]]></summary></member>
+    <member name="Scalar"><summary><![CDATA[Constant is a scalar.]]></summary></member>
+    <member name="Struct"><summary><![CDATA[Constant is a structure.]]></summary></member>
+    <member name="Vector"><summary><![CDATA[Constant is a vector.]]></summary></member>
+  </members>
+</xna-type>

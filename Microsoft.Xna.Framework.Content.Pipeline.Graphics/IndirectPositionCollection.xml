@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IndirectPositionCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          interfaces="IList&amp;lt;Vector3&amp;gt;, ICollection&amp;lt;Vector3&amp;gt;, IEnumerable&amp;lt;Vector3&amp;gt;, IEnumerable">
+  <summary><![CDATA[Provides methods for maintaining a list of vertex positions.]]></summary>
+  <syntax><![CDATA[public sealed class IndirectPositionCollection : IList&lt;Vector3&gt;, ICollection&lt;Vector3&gt;, IEnumerable&lt;Vector3&gt;, IEnumerable]]></syntax>
+  <remarks><![CDATA[This class is designed to collect the vertex positions for a VertexContent object. Use the contents of the PositionIndices property (of the contained VertexContent object) to index into the Positions property of the parent mesh.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Number of positions in the collection.]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets the position at the specified index.]]></summary>
+      <syntax><![CDATA[public Vector3 this [
+         int index
+] { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Contains" returnType="void">
+      <summary><![CDATA[Determines whether the specified position is in the collection.]]></summary>
+      <overloads>
+        <overload signature="Contains()">
+          <summary><![CDATA[Determines whether the specified position is in the collection.]]></summary>
+          <syntax><![CDATA[public bool Contains (
+         Vector3 item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="Object"><![CDATA[Position being searched for in the collection.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the position was found; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CopyTo" returnType="void">
+      <summary><![CDATA[Copies the specified positions to an array, starting at the specified index.]]></summary>
+      <overloads>
+        <overload signature="CopyTo()">
+          <summary><![CDATA[Copies the specified positions to an array, starting at the specified index.]]></summary>
+          <syntax><![CDATA[public void CopyTo (
+         Vector3[] array,
+         int arrayIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="array" type="Object"><![CDATA[Array of positions to be copied.]]></parameter>
+            <parameter name="arrayIndex" type="int"><![CDATA[Index of the first copied position.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Gets an enumerator interface for reading the position values.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Gets an enumerator interface for reading the position values.]]></summary>
+          <syntax><![CDATA[public IEnumerator&lt;Vector3&gt; GetEnumerator ()]]></syntax>
+          <returns><![CDATA[Interface for enumerating the collection of position values.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IndexOf" returnType="void">
+      <summary><![CDATA[Gets the index of the specified position in a collection.]]></summary>
+      <overloads>
+        <overload signature="IndexOf()">
+          <summary><![CDATA[Gets the index of the specified position in a collection.]]></summary>
+          <syntax><![CDATA[public int IndexOf (
+         Vector3 item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="Object"><![CDATA[Position being searched for.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Index of the specified position.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

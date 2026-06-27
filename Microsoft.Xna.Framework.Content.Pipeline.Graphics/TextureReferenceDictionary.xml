@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TextureReferenceDictionary" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="NamedValueDictionary&amp;lt;ExternalReference&amp;lt;TextureContent&amp;gt;&amp;gt;">
+  <summary><![CDATA[Provides a collection of named references to texture files.]]></summary>
+  <syntax><![CDATA[public sealed class TextureReferenceDictionary : NamedValueDictionary&lt;ExternalReference&lt;TextureContent&gt;&gt;]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="TextureReferenceDictionary()">
+      <summary><![CDATA[Initializes a new instance of TextureReferenceDictionary.]]></summary>
+      <syntax><![CDATA[public TextureReferenceDictionary ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

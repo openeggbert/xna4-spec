@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SpriteSortMode" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines sprite sort-rendering options.]]></summary>
+  <syntax><![CDATA[public enum SpriteSortMode]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="BackToFront"><summary><![CDATA[Same as Deferred mode, except sprites are sorted by depth in back-to-front order prior to drawing. This procedure is recommended when drawing transparent sprites of varying depths.]]></summary></member>
+    <member name="Deferred"><summary><![CDATA[Sprites are not drawn until End is called. End will apply graphics device settings and draw all the sprites in one batch, in the same order calls to Draw were received. This mode allows Draw calls to two or more instances of SpriteBatch without introducing conflicting graphics device settings. SpriteBatch defaults to Deferred mode.]]></summary></member>
+    <member name="FrontToBack"><summary><![CDATA[Same as Deferred mode, except sprites are sorted by depth in front-to-back order prior to drawing. This procedure is recommended when drawing opaque sprites of varying depths.]]></summary></member>
+    <member name="Immediate"><summary><![CDATA[Begin will apply new graphics device settings, and sprites will be drawn within each Draw call. In Immediate mode there can only be one active SpriteBatch instance without introducing conflicting device settings. Immediate mode is faster than Deferred mode.]]></summary></member>
+    <member name="Texture"><summary><![CDATA[Same as Deferred mode, except sprites are sorted by texture prior to drawing. This can improve performance when drawing non-overlapping sprites of uniform depth.]]></summary></member>
+  </members>
+</xna-type>

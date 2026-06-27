@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BasicMaterialContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="MaterialContent">
+  <summary><![CDATA[Provides properties for modifying a traditional fixed-function–style material, as supported by most 3D modeling packages.]]></summary>
+  <syntax><![CDATA[public class BasicMaterialContent : MaterialContent]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="BasicMaterialContent()">
+      <summary><![CDATA[Initializes a new instance of BasicMaterialContent.]]></summary>
+      <syntax><![CDATA[public BasicMaterialContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Alpha" type="Nullable&amp;lt;float&amp;gt;" access="get;set">
+      <summary><![CDATA[Gets or sets the alpha property.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;float&gt; Alpha { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DiffuseColor" type="Nullable&amp;lt;Vector3&amp;gt;" access="get;set">
+      <summary><![CDATA[Gets or sets the diffuse color property.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;Vector3&gt; DiffuseColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="EmissiveColor" type="Nullable&amp;lt;Vector3&amp;gt;" access="get;set">
+      <summary><![CDATA[Gets or sets the emissive color property.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;Vector3&gt; EmissiveColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SpecularColor" type="Nullable&amp;lt;Vector3&amp;gt;" access="get;set">
+      <summary><![CDATA[Gets or sets the specular color property.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;Vector3&gt; SpecularColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SpecularPower" type="Nullable&amp;lt;float&amp;gt;" access="get;set">
+      <summary><![CDATA[Gets or sets the specular power property.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;float&gt; SpecularPower { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Texture" type="ExternalReference&amp;lt;TextureContent&amp;gt;" access="get;set">
+      <summary><![CDATA[Gets or sets the diffuse texture property.]]></summary>
+      <syntax><![CDATA[public ExternalReference&lt;TextureContent&gt; Texture { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexColorEnabled" type="Nullable&amp;lt;bool&amp;gt;" access="get;set">
+      <summary><![CDATA[Gets or sets the vertex color property.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;bool&gt; VertexColorEnabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+    <field name="AlphaKey" type="string" isReadOnly="true">
+      <summary><![CDATA[Specifies the key of the key/data pair for the alpha property.]]></summary>
+      <syntax><![CDATA[public const string AlphaKey]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="DiffuseColorKey" type="string" isReadOnly="true">
+      <summary><![CDATA[Specifies the key of the key/data pair for the diffuse color.]]></summary>
+      <syntax><![CDATA[public const string DiffuseColorKey]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="EmissiveColorKey" type="string" isReadOnly="true">
+      <summary><![CDATA[Specifies the key of the key/data pair for the emissive color.]]></summary>
+      <syntax><![CDATA[public const string EmissiveColorKey]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="SpecularColorKey" type="string" isReadOnly="true">
+      <summary><![CDATA[Specifies the key of the key/data pair for the specular color.]]></summary>
+      <syntax><![CDATA[public const string SpecularColorKey]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="SpecularPowerKey" type="string" isReadOnly="true">
+      <summary><![CDATA[Specifies the key of the key/data pair for the specular power.]]></summary>
+      <syntax><![CDATA[public const string SpecularPowerKey]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="TextureKey" type="string" isReadOnly="true">
+      <summary><![CDATA[Specifies the key of the key/data pair for the diffuse texture.]]></summary>
+      <syntax><![CDATA[public const string TextureKey]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="VertexColorEnabledKey" type="string" isReadOnly="true">
+      <summary><![CDATA[Specifies the key of the key/data pair for the vertex color property.]]></summary>
+      <syntax><![CDATA[public const string VertexColorEnabledKey]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

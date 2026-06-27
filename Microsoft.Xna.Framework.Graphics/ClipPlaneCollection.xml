@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ClipPlaneCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Manipulates a collection of ClipPlane objects.]]></summary>
+  <syntax><![CDATA[public sealed class ClipPlaneCollection]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Item" type="Object" access="get">
+      <summary><![CDATA[Gets a specific ClipPlane object using an index value.]]></summary>
+      <syntax><![CDATA[public ClipPlane this [
+         int index
+] { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="DisableAll" returnType="void">
+      <summary><![CDATA[Disables all clipping planes on the device.]]></summary>
+      <overloads>
+        <overload signature="DisableAll()">
+          <summary><![CDATA[Disables all clipping planes on the device.]]></summary>
+          <syntax><![CDATA[public void DisableAll ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EnableAll" returnType="void">
+      <summary><![CDATA[Enables all clipping planes that have been set.]]></summary>
+      <overloads>
+        <overload signature="EnableAll()">
+          <summary><![CDATA[Enables all clipping planes that have been set.]]></summary>
+          <syntax><![CDATA[public void EnableAll ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

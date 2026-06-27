@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TextureUsage" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Specifies special usage of the texture data.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum TextureUsage]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="AutoGenerateMipMap"><summary><![CDATA[The resource automatically generates mipmaps. Automatic generation of mipmaps is not supported for volume textures and depth stencil surfaces/textures.]]></summary></member>
+    <member name="Linear"><summary><![CDATA[(Xbox 360 only) Linear texture memory format. Linear formats are arranged in memory using a left-to-right and top-to-bottom layout (with pixels contiguous in memory for each row, and rows contiguous except for possible alignment padding). Use this format when doing dynamic CPU updates to textures where: You do not want the overhead of translating tile addresses using the CPU. Textures are not often referenced during the frame. Less efficient GPU performance is not a problem. This flag is valid only for texture creation on Xbox 360. It is ignored if used elsewhere. On Xbox, most formats are created as Tiled if it is applicable.]]></summary></member>
+    <member name="None"><summary><![CDATA[None.]]></summary></member>
+    <member name="Tiled"><summary><![CDATA[(Xbox 360 only) Tiled texture memory format. Tiled formats are arranged using a memory layout designed to maximize the cache coherency of texture fetches and balance the access workload of the memory controllers. The exact pixel arrangement of tiled formats varies based on the bit depth of the format; however, pixels that are close to one another spatially are located close to one another in memory. For example, two pixels adjacent to one another in a vertical column would be separated in memory by an entire row of pixels for a linear format, but could be separated by only a few bytes for a tiled format. The tiled texture format is usually more efficient than the linear texture format. This flag is valid only when used for texture creation on Xbox 360, and will be ignored if used elsewhere. On Xbox, most formats are created as Tiled if it is applicable.]]></summary></member>
+  </members>
+</xna-type>

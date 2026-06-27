@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NetworkSessionState" kind="enum"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net">
+  <summary><![CDATA[Defines the different states of a multiplayer session.]]></summary>
+  <syntax><![CDATA[public enum NetworkSessionState]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="Lobby"><summary><![CDATA[The local machine joins the session, waiting in the pregame lobby. The GameStarted event is raised when gameplay begins.]]></summary></member>
+    <member name="Playing"><summary><![CDATA[The local machine joins the session, currently in the middle of gameplay. The GameEnded event is raised when the session returns to the lobby.]]></summary></member>
+    <member name="Ended"><summary><![CDATA[The local machine has left the current session or the session has ended. The SessionEnded event is raised at this time. The event's arguments describe the reason for the session ending.]]></summary></member>
+  </members>
+</xna-type>

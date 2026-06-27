@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Buttons" kind="enum"
+          namespace="Microsoft.Xna.Framework.Input"
+          assembly="Microsoft.Xna.Framework.Input">
+  <summary><![CDATA[Enumerates input device buttons.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum Buttons]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="A"><summary><![CDATA[A button]]></summary></member>
+    <member name="B"><summary><![CDATA[B button]]></summary></member>
+    <member name="Back"><summary><![CDATA[BACK button]]></summary></member>
+    <member name="BigButton"><summary><![CDATA[Big button]]></summary></member>
+    <member name="DPadDown"><summary><![CDATA[Directional pad up]]></summary></member>
+    <member name="DPadLeft"><summary><![CDATA[Directional pad left]]></summary></member>
+    <member name="DPadRight"><summary><![CDATA[Directional pad right]]></summary></member>
+    <member name="DPadUp"><summary><![CDATA[Directional pad down]]></summary></member>
+    <member name="LeftShoulder"><summary><![CDATA[Left bumper (shoulder) button]]></summary></member>
+    <member name="LeftStick"><summary><![CDATA[Left stick button (pressing the left stick)]]></summary></member>
+    <member name="LeftThumbstickDown"><summary><![CDATA[Left stick is towards down]]></summary></member>
+    <member name="LeftThumbstickLeft"><summary><![CDATA[Left stick is towards the left]]></summary></member>
+    <member name="LeftThumbstickRight"><summary><![CDATA[Left stick is towards the right]]></summary></member>
+    <member name="LeftThumbstickUp"><summary><![CDATA[Left stick is towards up]]></summary></member>
+    <member name="LeftTrigger"><summary><![CDATA[Left trigger]]></summary></member>
+    <member name="RightShoulder"><summary><![CDATA[Right bumper (shoulder) button]]></summary></member>
+    <member name="RightStick"><summary><![CDATA[Right stick button (pressing the right stick)]]></summary></member>
+    <member name="RightThumbstickDown"><summary><![CDATA[Right stick is towards down]]></summary></member>
+    <member name="RightThumbstickLeft"><summary><![CDATA[Right stick is towards the left]]></summary></member>
+    <member name="RightThumbstickRight"><summary><![CDATA[Right stick is towards the right]]></summary></member>
+    <member name="RightThumbstickUp"><summary><![CDATA[Right stick is towards up]]></summary></member>
+    <member name="RightTrigger"><summary><![CDATA[Right trigger]]></summary></member>
+    <member name="Start"><summary><![CDATA[START button]]></summary></member>
+    <member name="X"><summary><![CDATA[X button]]></summary></member>
+    <member name="Y"><summary><![CDATA[Y button]]></summary></member>
+  </members>
+</xna-type>

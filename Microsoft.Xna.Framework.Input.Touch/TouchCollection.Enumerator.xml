@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TouchCollection.Enumerator" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input.Touch"
+          assembly="Microsoft.Xna.Framework.Input.Touch"
+          interfaces="IEnumerator&amp;lt;TouchLocation&amp;gt;, IDisposable, IEnumerator">
+  <summary><![CDATA[Provides the ability to iterate through the touch locations in a TouchCollection.]]></summary>
+  <syntax><![CDATA[public struct TouchCollection.Enumerator : IEnumerator&lt;TouchLocation&gt;, IDisposable, IEnumerator]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

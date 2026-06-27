@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ProcessorParameter" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public sealed class ProcessorParameter]]></syntax>
+  <platforms>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="DefaultValue" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public Object DefaultValue { get; set; }]]></syntax>
+      <remarks><![CDATA[Not all types are supported. For a complete list of supported values, see Parameterized Processors . DefaultValue is treated as a suggestion to the designer UI and is not enforced by the content pipeline. This value may be null .]]></remarks>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Description" type="string" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public string Description { get; set; }]]></syntax>
+      <remarks><![CDATA[The description appears as a tooltip, displayed by the designer UI. This value may be null .]]></remarks>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="DisplayName" type="string" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public string DisplayName { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="IsEnum" type="bool" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public bool IsEnum { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="PossibleEnumValues" type="ReadOnlyCollection&amp;lt;string&amp;gt;" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public ReadOnlyCollection&lt;string&gt; PossibleEnumValues { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="PropertyName" type="string" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public string PropertyName { get; }]]></syntax>
+      <remarks><![CDATA[Corresponds to the property name, as defined in the C# code. This differs from the friendly parameter name, stored in the DisplayName property.]]></remarks>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="PropertyType" type="string" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public string PropertyType { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

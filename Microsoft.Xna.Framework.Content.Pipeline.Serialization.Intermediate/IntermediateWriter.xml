@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IntermediateWriter" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate">
+  <summary><![CDATA[Provides an implementation of many of the methods of IntermediateSerializer including serialization and state tracking for shared resources and external references.]]></summary>
+  <syntax><![CDATA[public sealed class IntermediateWriter]]></syntax>
+  <remarks><![CDATA[A new instance of IntermediateWriter is constructed for each serialize operation.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Serializer" type="IntermediateSerializer" access="get">
+      <summary><![CDATA[Gets the parent serializer.]]></summary>
+      <syntax><![CDATA[public IntermediateSerializer Serializer { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Xml" type="XmlWriter" access="get">
+      <summary><![CDATA[Gets the XML output stream.]]></summary>
+      <syntax><![CDATA[public XmlWriter Xml { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="WriteTypeName" returnType="void">
+      <summary><![CDATA[Writes a managed type descriptor to the XML output stream.]]></summary>
+      <overloads>
+        <overload signature="WriteTypeName()">
+          <summary><![CDATA[Writes a managed type descriptor to the XML output stream.]]></summary>
+          <syntax><![CDATA[public void WriteTypeName (
+         Type type
+)]]></syntax>
+          <parameters>
+            <parameter name="type" type="Type"><![CDATA[The type.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

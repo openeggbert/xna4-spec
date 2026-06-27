@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PassThroughProcessor" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          baseClass="ContentProcessor&amp;lt;Object"
+          interfaces="Object&amp;gt;">
+  <summary><![CDATA[Provides an implementation of a no-operation processor that returns an unmodified copy of the input data.]]></summary>
+  <syntax><![CDATA[[ContentProcessorAttribute]
+public class PassThroughProcessor : ContentProcessor&lt;Object, Object&gt;]]></syntax>
+  <remarks><![CDATA[PassThroughProcessor is useful when the importer is already producing data in a game ready format. This can occur after importing textures from DDS files that have been formatted using an external tool, or when deserializing game logic data from XML using the intermediate XML importer.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="PassThroughProcessor()">
+      <summary><![CDATA[Initializes a new instance of the PassThroughProcessor class.]]></summary>
+      <syntax><![CDATA[public PassThroughProcessor ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Process" returnType="void">
+      <summary><![CDATA[No-operation process that simply returns the input argument.]]></summary>
+      <overloads>
+        <overload signature="Process()">
+          <summary><![CDATA[No-operation process that simply returns the input argument.]]></summary>
+          <syntax><![CDATA[public virtual Object Process (
+         Object input,
+         ContentProcessorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="input" type="Object"><![CDATA[The input argument.]]></parameter>
+            <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The unmodified input argument.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

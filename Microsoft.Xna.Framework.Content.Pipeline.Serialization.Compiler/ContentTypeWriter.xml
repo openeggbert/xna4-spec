@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentTypeWriter" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler">
+  <summary><![CDATA[Provides methods and properties for compiling a specific managed type into a binary format.]]></summary>
+  <syntax><![CDATA[public abstract class ContentTypeWriter]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentTypeWriter()">
+      <summary><![CDATA[Initializes a new instance of the ContentTypeWriter class.]]></summary>
+      <syntax><![CDATA[protected ContentTypeWriter ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ContentTypeWriter(Type)">
+      <summary><![CDATA[Initializes a new instance of the ContentTypeWriter class.]]></summary>
+      <syntax><![CDATA[protected ContentTypeWriter (
+         Type targetType
+)]]></syntax>
+      <parameters>
+        <parameter name="targetType" type="Type"><![CDATA[The target type the ContentTypeWriter .]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="CanDeserializeIntoExistingObject" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual bool CanDeserializeIntoExistingObject { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="TargetType" type="Type" access="get">
+      <summary><![CDATA[Gets the type handled by this compiler component.]]></summary>
+      <syntax><![CDATA[public Type TargetType { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TypeVersion" type="Object" access="get">
+      <summary><![CDATA[Gets a format version number for this type.]]></summary>
+      <syntax><![CDATA[public virtual int TypeVersion { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetRuntimeReader" returnType="void">
+      <summary><![CDATA[Gets the assembly qualified name of the runtime loader for this type.]]></summary>
+      <overloads>
+        <overload signature="GetRuntimeReader()">
+          <summary><![CDATA[Gets the assembly qualified name of the runtime loader for this type.]]></summary>
+          <syntax><![CDATA[public virtual abstract string GetRuntimeReader (
+         TargetPlatform targetPlatform
+)]]></syntax>
+          <parameters>
+            <parameter name="targetPlatform" type="TargetPlatform"><![CDATA[Name of the platform.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Name of the runtime loader.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetRuntimeType" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="GetRuntimeType()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Overridable Function GetRuntimeType ( _
+         targetPlatform As TargetPlatform _
+) As String]]></syntax>
+          <parameters>
+            <parameter name="targetPlatform" type="Object"><![CDATA[Type: TargetPlatform The target platform.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: String The qualified name.]]></returns>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Initialize" returnType="void">
+      <summary><![CDATA[Retrieves and caches nested type writers and allows for reflection over the target data type. Called by the framework at creation time.]]></summary>
+      <overloads>
+        <overload signature="Initialize()">
+          <summary><![CDATA[Retrieves and caches nested type writers and allows for reflection over the target data type. Called by the framework at creation time.]]></summary>
+          <syntax><![CDATA[protected virtual void Initialize (
+         ContentCompiler compiler
+)]]></syntax>
+          <parameters>
+            <parameter name="compiler" type="ContentCompiler"><![CDATA[The content compiler.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShouldCompressContent" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ShouldCompressContent()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[protected internal virtual bool ShouldCompressContent (
+         TargetPlatform targetPlatform,
+         Object value
+)]]></syntax>
+          <parameters>
+            <parameter name="targetPlatform" type="TargetPlatform"><![CDATA[The target platform of the content build.]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[The object about to be serialized, or null if a collection of objects is to be serialized.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the content of the requested type should be compressed; false otherwise.]]></returns>
+          <remarks><![CDATA[This base class implementation of this method always returns true . It should be overridden to return false if there would be little or no useful reduction in size of the content type's data from a general-purpose lossless compression algorithm. The implementations for Song Class and SoundEffect Class data return false because data for these content types is already in compressed form.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Write" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ContentWriter, T">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA['Declaration
+Protected Internal MustOverride Sub Write ( _
+         output As ContentWriter, _
+         value As T _
+)]]></syntax>
+          <parameters>
+            <parameter name="output" type="Object"><![CDATA[Type: ContentWriter The content writer serializing the value.]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[Type: T The value to write.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="ContentWriter, Object">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA['Declaration
+Protected Internal Overrides Sub Write ( _
+         output As ContentWriter, _
+         value As Object _
+)]]></syntax>
+          <parameters>
+            <parameter name="output" type="Object"><![CDATA[Type: ContentWriter The content writer serializing the value.]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[Type: Object The value to write.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

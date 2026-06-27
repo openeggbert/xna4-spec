@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AnimationContentDictionary" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="NamedValueDictionary&amp;lt;AnimationContent&amp;gt;">
+  <summary><![CDATA[Collection of named animations.]]></summary>
+  <syntax><![CDATA[public sealed class AnimationContentDictionary : NamedValueDictionary&lt;AnimationContent&gt;]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="AnimationContentDictionary()">
+      <summary><![CDATA[Initializes a new instance of AnimationContentDictionary.]]></summary>
+      <syntax><![CDATA[public AnimationContentDictionary ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

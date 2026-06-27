@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CleanContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Tasks"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Tasks"
+          baseClass="Task">
+  <summary><![CDATA[An MSBuild task for deleting all the intermediate and output files that were created by a previous Content Pipeline build operation.]]></summary>
+  <syntax><![CDATA[public class CleanContent : Task]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="CleanContent()">
+      <summary><![CDATA[Instantiates a new instance of this MSBuild task for deleting all the intermediate and output files that were created by a previous Content Pipeline build operation.]]></summary>
+      <syntax><![CDATA[public CleanContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="BuildConfiguration" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the content build configuration name.]]></summary>
+      <syntax><![CDATA[public string BuildConfiguration { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IntermediateDirectory" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the directory for storing temporary build files.]]></summary>
+      <syntax><![CDATA[public string IntermediateDirectory { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="OutputDirectory" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the output directory for the final build results.]]></summary>
+      <syntax><![CDATA[public string OutputDirectory { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RootDirectory" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the base path for the entire content build process.]]></summary>
+      <syntax><![CDATA[public string RootDirectory { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TargetPlatform" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the content build target platform.]]></summary>
+      <syntax><![CDATA[[RequiredAttribute]
+public string TargetPlatform { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TargetProfile" type="string" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[[RequiredAttribute]
+public string TargetProfile { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Execute" returnType="void">
+      <summary><![CDATA[Removes all intermediate and output files that were created by a previous Content Pipeline build operation.]]></summary>
+      <overloads>
+        <overload signature="Execute()">
+          <summary><![CDATA[Removes all intermediate and output files that were created by a previous Content Pipeline build operation.]]></summary>
+          <syntax><![CDATA[public override bool Execute ()]]></syntax>
+          <returns><![CDATA[true if errors were logged; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

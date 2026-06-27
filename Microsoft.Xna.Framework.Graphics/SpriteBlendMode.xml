@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SpriteBlendMode" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[The following flags are used to specify sprite blending rendering options to the flags parameter in Begin:]]></summary>
+  <syntax><![CDATA[public enum SpriteBlendMode]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Additive"><summary><![CDATA[Enable additive blending.]]></summary></member>
+    <member name="AlphaBlend"><summary><![CDATA[Enable alpha blending.]]></summary></member>
+    <member name="None"><summary><![CDATA[No blending specified.]]></summary></member>
+  </members>
+</xna-type>

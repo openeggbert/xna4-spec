@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CurveLoopType" kind="enum"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Defines how the value of a Curve will be determined for positions before the first point on the Curve or after the last point on the Curve.]]></summary>
+  <syntax><![CDATA[public enum CurveLoopType]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Constant"><summary><![CDATA[The Curve will evaluate to its first key for positions before the first point in the Curve and to the last key for positions after the last point.]]></summary></member>
+    <member name="Cycle"><summary><![CDATA[Positions specified past the ends of the curve will wrap around to the opposite side of the Curve.]]></summary></member>
+    <member name="CycleOffset"><summary><![CDATA[Positions specified past the ends of the curve will wrap around to the opposite side of the Curve. The value will be offset by the difference between the values of the first and last CurveKey multiplied by the number of times the position wraps around. If the position is before the first point in the Curve, the difference will be subtracted from its value; otherwise, the difference will be added.]]></summary></member>
+    <member name="Linear"><summary><![CDATA[Linear interpolation will be performed to determine the value.]]></summary></member>
+    <member name="Oscillate"><summary><![CDATA[Positions specified past the ends of the Curve act as an offset from the same side of the Curve toward the opposite side.]]></summary></member>
+  </members>
+</xna-type>

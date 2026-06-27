@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamerLeftEventArgs" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="EventArgs">
+  <summary><![CDATA[Represents the arguments passed to a GamerLeft event. These arguments are passed to event handlers when a gamer leaves a network session. This class contains the NetworkGamer instance that recently left the network session.]]></summary>
+  <syntax><![CDATA[public class GamerLeftEventArgs : EventArgs]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GamerLeftEventArgs(NetworkGamer)">
+      <summary><![CDATA[Creates an instance of GamerLeftEventArgs.]]></summary>
+      <syntax><![CDATA[public GamerLeftEventArgs (
+         NetworkGamer gamer
+)]]></syntax>
+      <parameters>
+        <parameter name="gamer" type="NetworkGamer"><![CDATA[The gamer who just left the session.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Gamer" type="NetworkGamer" access="get">
+      <summary><![CDATA[Gets the gamer who just left the session.]]></summary>
+      <syntax><![CDATA[public NetworkGamer Gamer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

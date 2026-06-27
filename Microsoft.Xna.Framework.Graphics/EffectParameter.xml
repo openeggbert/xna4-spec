@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EffectParameter" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Represents an Effect parameter.]]></summary>
+  <syntax><![CDATA[public sealed class EffectParameter]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Annotations" type="EffectAnnotationCollection" access="get">
+      <summary><![CDATA[Gets the collection of EffectAnnotation objects for this parameter.]]></summary>
+      <syntax><![CDATA[public EffectAnnotationCollection Annotations { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ColumnCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of columns in the parameter description.]]></summary>
+      <syntax><![CDATA[public int ColumnCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Elements" type="EffectParameterCollection" access="get">
+      <summary><![CDATA[Gets the collection of effect parameters.]]></summary>
+      <syntax><![CDATA[public EffectParameterCollection Elements { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Gets the name of the parameter.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ParameterClass" type="EffectParameterClass" access="get">
+      <summary><![CDATA[Gets the class of the parameter.]]></summary>
+      <syntax><![CDATA[public EffectParameterClass ParameterClass { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ParameterType" type="EffectParameterType" access="get">
+      <summary><![CDATA[Gets the type of the parameter.]]></summary>
+      <syntax><![CDATA[public EffectParameterType ParameterType { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RowCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of rows in the parameter description.]]></summary>
+      <syntax><![CDATA[public int RowCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Semantic" type="string" access="get">
+      <summary><![CDATA[Gets the semantic meaning, or usage, of the parameter.]]></summary>
+      <syntax><![CDATA[public string Semantic { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StructureMembers" type="EffectParameterCollection" access="get">
+      <summary><![CDATA[Gets the collection of structure members.]]></summary>
+      <syntax><![CDATA[public EffectParameterCollection StructureMembers { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with this EffectParameter .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueBoolean" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as a Boolean.]]></summary>
+      <overloads>
+        <overload signature="GetValueBoolean()">
+          <summary><![CDATA[Gets the value of the EffectParameter as a Boolean.]]></summary>
+          <syntax><![CDATA[public bool GetValueBoolean ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as a Boolean.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueBooleanArray" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as an array of Boolean.]]></summary>
+      <overloads>
+        <overload signature="GetValueBooleanArray()">
+          <summary><![CDATA[Gets the value of the EffectParameter as an array of Boolean.]]></summary>
+          <syntax><![CDATA[public bool[] GetValueBooleanArray (
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the EffectParameter as an array of Boolean.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueInt32" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as an Int32.]]></summary>
+      <overloads>
+        <overload signature="GetValueInt32()">
+          <summary><![CDATA[Gets the value of the EffectParameter as an Int32.]]></summary>
+          <syntax><![CDATA[public int GetValueInt32 ()]]></syntax>
+          <returns><![CDATA[Gets the value of the EffectParameter as an Int32.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueInt32Array" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as an array of Int32.]]></summary>
+      <overloads>
+        <overload signature="GetValueInt32Array()">
+          <summary><![CDATA[Gets the value of the EffectParameter as an array of Int32.]]></summary>
+          <syntax><![CDATA[public int[] GetValueInt32Array (
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the EffectParameter as an array of Int32.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueMatrix" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as a Matrix.]]></summary>
+      <overloads>
+        <overload signature="GetValueMatrix()">
+          <summary><![CDATA[Gets the value of the EffectParameter as a Matrix.]]></summary>
+          <syntax><![CDATA[public Matrix GetValueMatrix ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as a Matrix.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueMatrixArray" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as an array of Matrix.]]></summary>
+      <overloads>
+        <overload signature="GetValueMatrixArray()">
+          <summary><![CDATA[Gets the value of the EffectParameter as an array of Matrix.]]></summary>
+          <syntax><![CDATA[public Matrix[] GetValueMatrixArray (
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the EffectParameter as an array of Matrix.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueMatrixTranspose" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as a Matrix transpose.]]></summary>
+      <overloads>
+        <overload signature="GetValueMatrixTranspose()">
+          <summary><![CDATA[Gets the value of the EffectParameter as a Matrix transpose.]]></summary>
+          <syntax><![CDATA[public Matrix GetValueMatrixTranspose ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as a Matrix transpose.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueMatrixTransposeArray" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as an array of Matrix transpose.]]></summary>
+      <overloads>
+        <overload signature="GetValueMatrixTransposeArray()">
+          <summary><![CDATA[Gets the value of the EffectParameter as an array of Matrix transpose.]]></summary>
+          <syntax><![CDATA[public Matrix[] GetValueMatrixTransposeArray (
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the EffectParameter as an array of Matrix transpose.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueQuaternion" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as a Quaternion.]]></summary>
+      <overloads>
+        <overload signature="GetValueQuaternion()">
+          <summary><![CDATA[Gets the value of the EffectParameter as a Quaternion.]]></summary>
+          <syntax><![CDATA[public Quaternion GetValueQuaternion ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as a Quaternion.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueQuaternionArray" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as an array of Quaternion.]]></summary>
+      <overloads>
+        <overload signature="GetValueQuaternionArray()">
+          <summary><![CDATA[Gets the value of the EffectParameter as an array of Quaternion.]]></summary>
+          <syntax><![CDATA[public Quaternion[] GetValueQuaternionArray (
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the EffectParameter as an array of Quaternion.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueSingle" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as a Single.]]></summary>
+      <overloads>
+        <overload signature="GetValueSingle()">
+          <summary><![CDATA[Gets the value of the EffectParameter as a Single.]]></summary>
+          <syntax><![CDATA[public float GetValueSingle ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as a Single.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueSingleArray" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as an array of Single.]]></summary>
+      <overloads>
+        <overload signature="GetValueSingleArray()">
+          <summary><![CDATA[Gets the value of the EffectParameter as an array of Single.]]></summary>
+          <syntax><![CDATA[public float[] GetValueSingleArray (
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the EffectParameter as an array of Single.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueString" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as an String.]]></summary>
+      <overloads>
+        <overload signature="GetValueString()">
+          <summary><![CDATA[Gets the value of the EffectParameter as an String.]]></summary>
+          <syntax><![CDATA[public string GetValueString ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as an String.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueTexture2D" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as a Texture2D.]]></summary>
+      <overloads>
+        <overload signature="GetValueTexture2D()">
+          <summary><![CDATA[Gets the value of the EffectParameter as a Texture2D.]]></summary>
+          <syntax><![CDATA[public Texture2D GetValueTexture2D ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as a Texture2D.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueTexture3D" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as a Texture3D.]]></summary>
+      <overloads>
+        <overload signature="GetValueTexture3D()">
+          <summary><![CDATA[Gets the value of the EffectParameter as a Texture3D.]]></summary>
+          <syntax><![CDATA[public Texture3D GetValueTexture3D ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as a Texture3D.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueTextureCube" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as a TextureCube.]]></summary>
+      <overloads>
+        <overload signature="GetValueTextureCube()">
+          <summary><![CDATA[Gets the value of the EffectParameter as a TextureCube.]]></summary>
+          <syntax><![CDATA[public TextureCube GetValueTextureCube ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as a TextureCube.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueVector2" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as a Vector2.]]></summary>
+      <overloads>
+        <overload signature="GetValueVector2()">
+          <summary><![CDATA[Gets the value of the EffectParameter as a Vector2.]]></summary>
+          <syntax><![CDATA[public Vector2 GetValueVector2 ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as a Vector2.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueVector2Array" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as an array of Vector2.]]></summary>
+      <overloads>
+        <overload signature="GetValueVector2Array()">
+          <summary><![CDATA[Gets the value of the EffectParameter as an array of Vector2.]]></summary>
+          <syntax><![CDATA[public Vector2[] GetValueVector2Array (
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the EffectParameter as an array of Vector2.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueVector3" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as a Vector3.]]></summary>
+      <overloads>
+        <overload signature="GetValueVector3()">
+          <summary><![CDATA[Gets the value of the EffectParameter as a Vector3.]]></summary>
+          <syntax><![CDATA[public Vector3 GetValueVector3 ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as a Vector3.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueVector3Array" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as an array of Vector3.]]></summary>
+      <overloads>
+        <overload signature="GetValueVector3Array()">
+          <summary><![CDATA[Gets the value of the EffectParameter as an array of Vector3.]]></summary>
+          <syntax><![CDATA[public Vector3[] GetValueVector3Array (
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the EffectParameter as an array of Vector3.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueVector4" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as a Vector4.]]></summary>
+      <overloads>
+        <overload signature="GetValueVector4()">
+          <summary><![CDATA[Gets the value of the EffectParameter as a Vector4.]]></summary>
+          <syntax><![CDATA[public Vector4 GetValueVector4 ()]]></syntax>
+          <returns><![CDATA[The value of the EffectParameter as a Vector4.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueVector4Array" returnType="void">
+      <summary><![CDATA[Gets the value of the EffectParameter as an array of Vector4.]]></summary>
+      <overloads>
+        <overload signature="GetValueVector4Array()">
+          <summary><![CDATA[Gets the value of the EffectParameter as an array of Vector4.]]></summary>
+          <syntax><![CDATA[public Vector4[] GetValueVector4Array (
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the EffectParameter as an array of Vector4.]]></returns>
+          <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetArrayRange" returnType="void">
+      <summary><![CDATA[Sets the range of an array to pass to the device.]]></summary>
+      <overloads>
+        <overload signature="SetArrayRange()">
+          <summary><![CDATA[Sets the range of an array to pass to the device.]]></summary>
+          <syntax><![CDATA[public void SetArrayRange (
+         int start,
+         int end
+)]]></syntax>
+          <parameters>
+            <parameter name="start" type="int"><![CDATA[The start index.]]></parameter>
+            <parameter name="end" type="int"><![CDATA[The stop index.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetValue" returnType="void">
+      <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+      <overloads>
+        <overload signature="Quaternion">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         Quaternion value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Quaternion"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         Vector3 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Boolean">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         bool value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="bool"><![CDATA[[ MarshalAsAttribute (U1)] The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix ">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         Matrix[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Matrix[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Texture">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         Texture value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Texture"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion ">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         Quaternion[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Quaternion[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32 ">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         int[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="int[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         float value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="float"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector4">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         Vector4 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single ">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         float[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="float[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         Matrix value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Matrix"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector4 ">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         Vector4[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="String">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         string value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="string"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector2">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         Vector2 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3 ">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         Vector3[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         int value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="int"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector2 ">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         Vector2[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Boolean ">
+          <summary><![CDATA[Sets the value of the EffectParameter.]]></summary>
+          <syntax><![CDATA[public void SetValue (
+         bool[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="bool[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetValueTranspose" returnType="void">
+      <summary><![CDATA[Sets the value of the EffectParameter to the transpose of a Matrix.]]></summary>
+      <overloads>
+        <overload signature="Matrix">
+          <summary><![CDATA[Sets the value of the EffectParameter to the transpose of a Matrix.]]></summary>
+          <syntax><![CDATA[public void SetValueTranspose (
+         Matrix value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Matrix"><![CDATA[The value.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix ">
+          <summary><![CDATA[Sets the value of the EffectParameter to the transpose of a Matrix.]]></summary>
+          <syntax><![CDATA[public void SetValueTranspose (
+         Matrix[] value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Matrix[]"><![CDATA[The value.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         EffectParameter left,
+         EffectParameter right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="EffectParameter"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="EffectParameter"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         EffectParameter left,
+         EffectParameter right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="EffectParameter"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="EffectParameter"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

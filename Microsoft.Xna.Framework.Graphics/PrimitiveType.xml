@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PrimitiveType" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines how data in a vertex stream is interpreted during a draw call.]]></summary>
+  <syntax><![CDATA[public enum PrimitiveType]]></syntax>
+  <remarks><![CDATA[Using triangle strips or triangle fans is often more efficient than using triangle lists because fewer vertices are duplicated.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="LineList"><summary><![CDATA[Renders the vertices as a list of isolated straight line segments. Calls that use this primitive type fail if the count is less than two or is odd.]]></summary></member>
+    <member name="LineStrip"><summary><![CDATA[Renders the vertices as a single polyline. Calls that use this primitive type fail if the count is less than two.]]></summary></member>
+    <member name="PointList"><summary><![CDATA[Renders the vertices as a collection of isolated points. This value is unsupported for indexed primitives.]]></summary></member>
+    <member name="TriangleFan"><summary><![CDATA[Renders the vertices as a triangle fan.]]></summary></member>
+    <member name="TriangleList"><summary><![CDATA[Renders the specified vertices as a sequence of isolated triangles. Each group of three vertices defines a separate triangle. Back-face culling is affected by the current winding-order render state.]]></summary></member>
+    <member name="TriangleStrip"><summary><![CDATA[Renders the vertices as a triangle strip. The back-face culling flag is flipped automatically on even-numbered triangles.]]></summary></member>
+  </members>
+</xna-type>

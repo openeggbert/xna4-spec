@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MeshBuilder" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+  <summary><![CDATA[Provides support for writing a custom importer for mesh objects.]]></summary>
+  <syntax><![CDATA[public sealed class MeshBuilder]]></syntax>
+  <remarks><![CDATA[MeshBuilder is designed to make it easier to write importers. It creates an abstraction of the internal workings of the MeshContent and GeometryContent classes and provides a simple way to create a mesh object. There are three steps to creating a mesh. Call StartMesh to get a MeshBuilder object. To initialize this object, fill the positions buffer with data by using the CreatePosition function. After retrieving the positions data, call the CreateVertexChannel generic function to specify the types of vertex channels needed—for example, normals, UVs, and color channels. Note The PositionCollection property of a MeshContent object is created automatically. Therefore, there is no need to explicitly declare a VertexChannel object for positions. After setting up the position and vertex data channel buffers, begin creating triangles. Use SetMaterial and SetOpaqueData to set the data of each triangle, and use SetVertexChannelData to set the individual vertex data of each triangle. After setting this data, call AddTriangleVertex for each vertex of each triangle. Note If you call CreatePosition or CreateVertexChannel after calling AddTriangleVertex , an InvalidOperationException exception is thrown. In the final step, call FinishMesh . After this call, the mesh is optimized automatically with calls to MergeDuplicateVertices and CalculateNormals .]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="MergeDuplicatePositions" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets the current value for position merging of the mesh.]]></summary>
+      <syntax><![CDATA[public bool MergeDuplicatePositions { get; set; }]]></syntax>
+      <remarks><![CDATA[If this property is enabled, every call to MeshBuilder.CreatePosition (Vector3) will check to see whether a position exists for which each component of that position varies no more than the current value of MergePositionTolerance from the new position. If one is found, the original position is used. This property should be used in conjunction with MergePositionTolerance . The following code demonstrates this: MeshBuilder b = MeshBuilder.StartMesh( "bill" ); b.MergeDuplicatePositions = true; b.MergePositionTolerance = 1.0f; // Additional mesh building code here. MeshContent mesh = b.FinishMesh();]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MergePositionTolerance" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the tolerance for MergeDuplicatePositions. The default value is 0.]]></summary>
+      <syntax><![CDATA[public float MergePositionTolerance { get; set; }]]></syntax>
+      <remarks><![CDATA[When MergeDuplicatePositions is enabled, each call to MeshBuilder.CreatePosition (Vector3) checks to see whether a position exists for which each component of that position varies no more than the current value of MergePositionTolerance from the new position. If one is found, the original position will be reused. Note Setting MergePositionTolerance does not also enable position merging. This must be enabled explicitly by calling MergeDuplicatePositions .]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the name of the current MeshContent object being processed. This is the same name as was passed in to StartMesh.]]></summary>
+      <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SwapWindingOrder" type="bool" access="get;set">
+      <summary><![CDATA[Reverses the triangle winding order of the specified mesh.]]></summary>
+      <syntax><![CDATA[public bool SwapWindingOrder { get; set; }]]></syntax>
+      <remarks><![CDATA[If enabled, the triangles of the finished mesh are in the opposite order that they were given to the mesh builder. For example, if the vertices of two triangles were given as 123 456, they would be changed to 321 654. This can be useful if the source data was constructed with back-face culling set to something other than what the destination game engine expects. The winding order is swapped when FinishMesh is called. Therefore, it is not necessary to modify the indices returned by CreatePosition .]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="AddTriangleVertex" returnType="void">
+      <summary><![CDATA[Adds a vertex into the index collection.]]></summary>
+      <overloads>
+        <overload signature="AddTriangleVertex()">
+          <summary><![CDATA[Adds a vertex into the index collection.]]></summary>
+          <syntax><![CDATA[public void AddTriangleVertex (
+         int indexIntoVertexCollection
+)]]></syntax>
+          <parameters>
+            <parameter name="indexIntoVertexCollection" type="int"><![CDATA[Index of the inserted vertex, in the collection. This corresponds to the value returned by CreatePosition .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[MeshBuilder supports triangle lists only. Therefore, calls to AddTriangleVertex must occur in groups of three. In addition, MeshBuilder automatically determines which GeometryContent object receives the current triangle based on the state data. This data is set by the last calls to SetMaterial and SetOpaqueData . This means that per-vertex material and opaque data are not supported. Therefore, do not call SetMaterial or SetOpaqueData when defining a triangle. For an example of the proper method, see the MeshBuilder class overview.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreatePosition" returnType="int">
+      <summary><![CDATA[Inserts the specified vertex position into the vertex channel at the specified index.]]></summary>
+      <overloads>
+        <overload signature="Vector3">
+          <summary><![CDATA[Inserts the specified vertex position into the vertex channel at the specified index.]]></summary>
+          <syntax><![CDATA[public int CreatePosition (
+         Vector3 pos
+)]]></syntax>
+          <parameters>
+            <parameter name="pos" type="Object"><![CDATA[Value of the vertex being inserted.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Index of the vertex being inserted.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single">
+          <summary><![CDATA[Inserts the specified vertex position into the vertex channel.]]></summary>
+          <syntax><![CDATA[public int CreatePosition (
+         float x,
+         float y,
+         float z
+)]]></syntax>
+          <parameters>
+            <parameter name="x" type="float"><![CDATA[Value of the x component of the vector.]]></parameter>
+            <parameter name="y" type="float"><![CDATA[Value of the y component of the vector.]]></parameter>
+            <parameter name="z" type="float"><![CDATA[Value of the z component of the vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Index of the inserted vertex.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="FinishMesh" returnType="void">
+      <summary><![CDATA[Ends the creation of a mesh.]]></summary>
+      <overloads>
+        <overload signature="FinishMesh()">
+          <summary><![CDATA[Ends the creation of a mesh.]]></summary>
+          <syntax><![CDATA[public MeshContent FinishMesh ()]]></syntax>
+          <returns><![CDATA[Resultant mesh.]]></returns>
+          <remarks><![CDATA[Once called, FinishMesh optimizes the related mesh by calling MergeDuplicateVertices . In addition, mesh normals are generated (by calling CalculateNormals ) if none currently exist. Note The related MeshBuilder object can no longer be used after this function is called.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetMaterial" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="SetMaterial()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub SetMaterial ( _
+         material As MaterialContent _
+)]]></syntax>
+          <parameters>
+            <parameter name="material" type="Object"><![CDATA[Type: MaterialContent The material to be used by the mesh.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Sets the material used by the triangle being defined next. This material, in conjunction with SetOpaqueData , determines the GeometryContent object containing the next triangle. MeshBuilder maintains the material value for all future triangles. Therefore, if multiple triangles share the same material, you need only one call to SetMaterial .]]></remarks>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetOpaqueData" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="SetOpaqueData()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub SetOpaqueData ( _
+         opaqueData As OpaqueDataDictionary _
+)]]></syntax>
+          <parameters>
+            <parameter name="opaqueData" type="Object"><![CDATA[Type: OpaqueDataDictionary Opaque data to be applied to the GeometryContent object of the next triangle.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[The opaque data is used in conjunction with the current material (set with a call to SetMaterial ) to determine the GeometryContent object that will contain the next triangle. MeshBuilder maintains the material value for all future triangles. Therefore, if multiple triangles share the same material, you need only one call to SetMaterial . SetOpaqueData can be called only on GeometryContent and MeshContent objects.]]></remarks>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetVertexChannelData" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="SetVertexChannelData()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub SetVertexChannelData ( _
+         vertexDataIndex As Integer, _
+         channelData As Object _
+)]]></syntax>
+          <parameters>
+            <parameter name="vertexDataIndex" type="Object"><![CDATA[Type: Int32 Index of the vertex data channel being set. This should match the index returned by CreateVertexChannel .]]></parameter>
+            <parameter name="channelData" type="Object"><![CDATA[Type: Object New data values for the vertex data. The data type being set must match the data type for the vertex channel specified by vertexDataIndex .]]></parameter>
+          </parameters>
+          <remarks><![CDATA[The following table lists the exceptions that can be thrown by this method: Exception Cause KeyNotFoundException If vertexDataIndex does not correspond to an actual vertex data channel created using CreateVertexChannel . InvalidOperationException If the type of channelData does not match the data type for the vertex channel specified by vertexDataIndex .]]></remarks>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="StartMesh" returnType="void">
+      <summary><![CDATA[Initializes the creation of a mesh.]]></summary>
+      <overloads>
+        <overload signature="StartMesh()">
+          <summary><![CDATA[Initializes the creation of a mesh.]]></summary>
+          <syntax><![CDATA[public static MeshBuilder StartMesh (
+         string name
+)]]></syntax>
+          <parameters>
+            <parameter name="name" type="string"><![CDATA[Name of the mesh.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Object used when building the mesh.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

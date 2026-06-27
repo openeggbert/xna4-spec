@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CreateOptions" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines options to control the focus behavior and vertex processing of a graphics device.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum CreateOptions]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="HardwareVertexProcessing"><summary><![CDATA[Specifies hardware vertex processing. If a GraphicsDevice is created with this option, vertex processing is done in hardware and cannot be changed.]]></summary></member>
+    <member name="MixedVertexProcessing"><summary><![CDATA[Specifies mixed vertex processing (both software and hardware). If a GraphicsDevice is created with this option, vertex processing is done in hardware by default, and can be switched between software and hardware. An application can create a mixed-mode GraphicsDevice to use both software and hardware vertex processing. Use this property to switch between the two vertex processing modes.]]></summary></member>
+    <member name="None"><summary><![CDATA[No options specified.]]></summary></member>
+    <member name="NoWindowChanges"><summary><![CDATA[Indicates to the Microsoft Direct3D runtime not to alter the focus window in any way. Use with caution! The burden of supporting focus management events (ALT+TAB, and so on) falls on the application, and appropriate responses (switching display mode, and so on) should be coded.]]></summary></member>
+    <member name="SinglePrecision"><summary><![CDATA[Forces single-precision processing, setting the floating-point unit to single-precision round-to-nearest mode.]]></summary></member>
+    <member name="SingleThreaded"><summary><![CDATA[Forces single-threaded processing.]]></summary></member>
+    <member name="SoftwareVertexProcessing"><summary><![CDATA[Specifies software vertex processing. If a GraphicsDevice is created with this option, vertex processing is done in software and cannot be changed.]]></summary></member>
+  </members>
+</xna-type>

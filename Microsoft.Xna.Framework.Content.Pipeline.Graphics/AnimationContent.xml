@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AnimationContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="ContentItem">
+  <summary><![CDATA[Provides properties for maintaining an animation.]]></summary>
+  <syntax><![CDATA[public class AnimationContent : ContentItem]]></syntax>
+  <remarks><![CDATA[An animation contains a collection of data channels, describing a complete set of movement for any number of bones or rigid objects. The channels are stored in the Animations dictionary. For character skinning, the animation data is usually attached to the root of a bone hierarchy. However, it can potentially belong to any node. For example, when used for rigid body animation.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="AnimationContent()">
+      <summary><![CDATA[Initializes a new instance of AnimationContent.]]></summary>
+      <syntax><![CDATA[public AnimationContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Channels" type="AnimationChannelDictionary" access="get">
+      <summary><![CDATA[Gets the collection of animation data channels. Each channel describes the movement of a single bone or rigid object.]]></summary>
+      <syntax><![CDATA[public AnimationChannelDictionary Channels { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Duration" type="TimeSpan" access="get;set">
+      <summary><![CDATA[Gets or sets the total length of the animation.]]></summary>
+      <syntax><![CDATA[public TimeSpan Duration { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

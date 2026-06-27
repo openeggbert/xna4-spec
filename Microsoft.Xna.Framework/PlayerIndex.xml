@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PlayerIndex" kind="enum"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Specifies the index of a player.]]></summary>
+  <syntax><![CDATA[public enum PlayerIndex]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="One"><summary><![CDATA[The first player.]]></summary></member>
+    <member name="Two"><summary><![CDATA[The second player.]]></summary></member>
+    <member name="Three"><summary><![CDATA[The third player.]]></summary></member>
+    <member name="Four"><summary><![CDATA[The fourth player.]]></summary></member>
+  </members>
+</xna-type>

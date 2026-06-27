@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TouchCollection" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input.Touch"
+          assembly="Microsoft.Xna.Framework.Input.Touch"
+          interfaces="IList&amp;lt;TouchLocation&amp;gt;, ICollection&amp;lt;TouchLocation&amp;gt;, IEnumerable&amp;lt;TouchLocation&amp;gt;, IEnumerable">
+  <summary><![CDATA[Provides methods and properties for accessing state information for the touch screen of a touch-enabled device.]]></summary>
+  <syntax><![CDATA[public struct TouchCollection : IList&lt;TouchLocation&gt;, ICollection&lt;TouchLocation&gt;, IEnumerable&lt;TouchLocation&gt;, IEnumerable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="TouchCollection(TouchLocation[])">
+      <summary><![CDATA[Initializes a new instance of the TouchCollection structure with a set of touch locations.]]></summary>
+      <syntax><![CDATA[public TouchCollection (
+         TouchLocation[] touches
+)]]></syntax>
+      <parameters>
+        <parameter name="touches" type="TouchLocation[]"><![CDATA[Array of touch locations.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Gets the current number of touch locations for the touch screen.]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="IsConnected" type="bool" access="get">
+      <summary><![CDATA[Indicates if the touch screen is available for use.]]></summary>
+      <syntax><![CDATA[public bool IsConnected { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="IsReadOnly" type="bool" access="get">
+      <summary><![CDATA[Determines if the touch location array is read-only.]]></summary>
+      <syntax><![CDATA[public bool IsReadOnly { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets the information of the specified touch location.]]></summary>
+      <syntax><![CDATA[public TouchLocation this [
+         int index
+] { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Add" returnType="void">
+      <summary><![CDATA[Adds a TouchLocation to the collection.]]></summary>
+      <overloads>
+        <overload signature="Add()">
+          <summary><![CDATA[Adds a TouchLocation to the collection.]]></summary>
+          <syntax><![CDATA[public void Add (
+         TouchLocation item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="TouchLocation"><![CDATA[TouchLocation to add.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Clear" returnType="void">
+      <summary><![CDATA[Removes all TouchLocation objects from the collection.]]></summary>
+      <overloads>
+        <overload signature="Clear()">
+          <summary><![CDATA[Removes all TouchLocation objects from the collection.]]></summary>
+          <syntax><![CDATA[public void Clear ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Contains" returnType="void">
+      <summary><![CDATA[Checks if the current touch collection contains the specified touch location.]]></summary>
+      <overloads>
+        <overload signature="Contains()">
+          <summary><![CDATA[Checks if the current touch collection contains the specified touch location.]]></summary>
+          <syntax><![CDATA[public bool Contains (
+         TouchLocation item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="TouchLocation"><![CDATA[Touch location to be checked against the current collection.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value is true if the item is present in the collection; otherwise it is false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CopyTo" returnType="void">
+      <summary><![CDATA[Copies the touch location to the collection at the specified index.]]></summary>
+      <overloads>
+        <overload signature="CopyTo()">
+          <summary><![CDATA[Copies the touch location to the collection at the specified index.]]></summary>
+          <syntax><![CDATA[public void CopyTo (
+         TouchLocation[] array,
+         int arrayIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="array" type="TouchLocation[]"><![CDATA[Array receiving the copied touch location.]]></parameter>
+            <parameter name="arrayIndex" type="int"><![CDATA[Target index of the collection.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="FindById" returnType="void">
+      <summary><![CDATA[Retrieves the touch location matching the specified ID.]]></summary>
+      <overloads>
+        <overload signature="FindById()">
+          <summary><![CDATA[Retrieves the touch location matching the specified ID.]]></summary>
+          <syntax><![CDATA[public bool FindById (
+         int id,
+         out TouchLocation touchLocation
+)]]></syntax>
+          <parameters>
+            <parameter name="id" type="int"><![CDATA[ID of touch location sought.]]></parameter>
+            <parameter name="touchLocation" type="TouchLocation"><![CDATA[[ OutAttribute ] Touch location item matching the specified ID.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The return value is true if the item was found; otherwise it is false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Returns an enumerator that iterates through the TouchCollection.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Returns an enumerator that iterates through the TouchCollection.]]></summary>
+          <syntax><![CDATA[public Enumerator GetEnumerator ()]]></syntax>
+          <returns><![CDATA[An TouchCollection.Enumerator for the touch collection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IndexOf" returnType="void">
+      <summary><![CDATA[Determines the index of a TouchLocation in the TouchCollection.]]></summary>
+      <overloads>
+        <overload signature="IndexOf()">
+          <summary><![CDATA[Determines the index of a TouchLocation in the TouchCollection.]]></summary>
+          <syntax><![CDATA[public int IndexOf (
+         TouchLocation item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="TouchLocation"><![CDATA[TouchLocation to locate in the collection.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The index of the specified touch location; -1 if the touch location could not be found.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Insert" returnType="void">
+      <summary><![CDATA[Inserts a new TouchLocation into the TouchCollection at a specified index.]]></summary>
+      <overloads>
+        <overload signature="Insert()">
+          <summary><![CDATA[Inserts a new TouchLocation into the TouchCollection at a specified index.]]></summary>
+          <syntax><![CDATA[public void Insert (
+         int index,
+         TouchLocation item
+)]]></syntax>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[Index in the touch collection for the new item.]]></parameter>
+            <parameter name="item" type="TouchLocation"><![CDATA[TouchLocation to be inserted.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Remove" returnType="void">
+      <summary><![CDATA[Removes the specified TouchLocation from the TouchCollection.]]></summary>
+      <overloads>
+        <overload signature="Remove()">
+          <summary><![CDATA[Removes the specified TouchLocation from the TouchCollection.]]></summary>
+          <syntax><![CDATA[public bool Remove (
+         TouchLocation item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="TouchLocation"><![CDATA[TouchLocation to be removed.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The return value is true if the item was successfully removed; otherwise it is false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="RemoveAt" returnType="void">
+      <summary><![CDATA[Removes a TouchLocation at the specified index in the TouchCollection.]]></summary>
+      <overloads>
+        <overload signature="RemoveAt()">
+          <summary><![CDATA[Removes a TouchLocation at the specified index in the TouchCollection.]]></summary>
+          <syntax><![CDATA[public void RemoveAt (
+         int index
+)]]></syntax>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[Index of the TouchLocation to remove.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

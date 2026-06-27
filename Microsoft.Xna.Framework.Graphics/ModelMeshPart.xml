@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ModelMeshPart" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Represents a batch of geometry information to submit to the graphics device during rendering. Each ModelMeshPart is a subdivision of a ModelMesh object. The ModelMesh class is split into multiple ModelMeshPart objects, typically based on material information.]]></summary>
+  <syntax><![CDATA[public sealed class ModelMeshPart]]></syntax>
+  <remarks><![CDATA[It is not necessary to use this class directly. In advanced rendering scenarios, it is possible to draw using ModelMeshPart properties in combination with the vertex and index buffers on ModelMesh . However, in most cases, ModelMesh.Draw will be sufficient.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="BaseVertex" type="int" access="get">
+      <summary><![CDATA[Gets the offset to add to each vertex index in the index buffer.]]></summary>
+      <syntax><![CDATA[public int BaseVertex { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Effect" type="Effect" access="get;set">
+      <summary><![CDATA[Gets or sets the material Effect for this mesh part.]]></summary>
+      <syntax><![CDATA[public Effect Effect { get; set; }]]></syntax>
+      <remarks><![CDATA[ModelMesh.Effects is a shortcut for iterating over the MeshParts property of the ModelMesh and looking up the ModelMeshPart.Effect property of each ModelMeshPart . ModelMesh.Effects is a collection of all the Effect properties of the for the MeshParts of this ModelMesh . Each ModelMeshPart has a single Effect which is a reference to one of the Effects of the parent ModelMesh property. By updating all the effects of the ModelMesh all of the effects of each ModelMeshPart are updated as well.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IndexBuffer" type="IndexBuffer" access="get">
+      <summary><![CDATA[Gets the index buffer for this mesh part.]]></summary>
+      <syntax><![CDATA[public IndexBuffer IndexBuffer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="NumVertices" type="int" access="get">
+      <summary><![CDATA[Gets the number of vertices used during a draw call.]]></summary>
+      <syntax><![CDATA[public int NumVertices { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PrimitiveCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of primitives to render.]]></summary>
+      <syntax><![CDATA[public int PrimitiveCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StartIndex" type="int" access="get">
+      <summary><![CDATA[Gets the location in the index array at which to start reading vertices.]]></summary>
+      <syntax><![CDATA[public int StartIndex { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StreamOffset" type="int" access="get">
+      <summary><![CDATA[Gets the offset in bytes from the beginning of the VertexBuffer.]]></summary>
+      <syntax><![CDATA[public int StreamOffset { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Tag" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets an object identifying this model mesh part.]]></summary>
+      <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexBuffer" type="VertexBuffer" access="get">
+      <summary><![CDATA[Gets the vertex buffer for this mesh part.]]></summary>
+      <syntax><![CDATA[public VertexBuffer VertexBuffer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="VertexDeclaration" type="VertexDeclaration" access="get">
+      <summary><![CDATA[Gets the vertex declaration for this model mesh part.]]></summary>
+      <syntax><![CDATA[public VertexDeclaration VertexDeclaration { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexOffset" type="int" access="get">
+      <summary><![CDATA[Gets the offset (in vertices) from the top of vertex buffer.]]></summary>
+      <syntax><![CDATA[public int VertexOffset { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="VertexStride" type="int" access="get">
+      <summary><![CDATA[Gets the size, in bytes, of the elements in this vertex stream.]]></summary>
+      <syntax><![CDATA[public int VertexStride { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MultiSampleType" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines the levels of full-scene multisampling that the device can apply.]]></summary>
+  <syntax><![CDATA[public enum MultiSampleType]]></syntax>
+  <remarks><![CDATA[When multisampling is enabled, all subsamples of a pixel are updated in one pass. However, when subsamples are used for other effects that involve multiple rendering passes, the application can specify that only some of them be affected by a given rendering pass. This latter approach enables simulation of motion blur, depth-of-field focus effects, reflection blur, and other effects. In addition to enabling full-scene multisampling when a Reset occurs, there are render states that turn various multisampling aspects on and off at fine-grained levels. For more information, see RenderState . Multisampling is valid only on a swap chain that is created or reset with SwapEffect.Discard . The multisampling antialiasing value can be set with the parameters or sub-parameters in the following methods. Module Parameters Sub-parameters CheckDeviceMultiSampleType multiSampleType , qualityLevels None GraphicsDevice presentationParameters MultiSampleType , MultiSampleQuality Reset presentationParameters MultiSampleType , MultiSampleQuality]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="SixteenSamples"><summary><![CDATA[Enables 16 levels of full-scene multisampling.]]></summary></member>
+    <member name="FifteenSamples"><summary><![CDATA[Enables 15 levels of full-scene multisampling.]]></summary></member>
+    <member name="FourteenSamples"><summary><![CDATA[Enables 14 levels of full-scene multisampling.]]></summary></member>
+    <member name="ThirteenSamples"><summary><![CDATA[Enables 13 levels of full-scene multisampling.]]></summary></member>
+    <member name="TwelveSamples"><summary><![CDATA[Enables 12 levels of full-scene multisampling.]]></summary></member>
+    <member name="ElevenSamples"><summary><![CDATA[Enables 11 levels of full-scene multisampling.]]></summary></member>
+    <member name="TenSamples"><summary><![CDATA[Enables 10 levels of full-scene multisampling.]]></summary></member>
+    <member name="NineSamples"><summary><![CDATA[Enables 9 levels of full-scene multisampling.]]></summary></member>
+    <member name="EightSamples"><summary><![CDATA[Enables 8 levels of full-scene multisampling.]]></summary></member>
+    <member name="SevenSamples"><summary><![CDATA[Enables 7 levels of full-scene multisampling.]]></summary></member>
+    <member name="SixSamples"><summary><![CDATA[Enables 6 levels of full-scene multisampling.]]></summary></member>
+    <member name="FiveSamples"><summary><![CDATA[Enables 5 levels of full-scene multisampling.]]></summary></member>
+    <member name="FourSamples"><summary><![CDATA[Enables 4 levels of full-scene multisampling.]]></summary></member>
+    <member name="ThreeSamples"><summary><![CDATA[Enables 3 levels of full-scene multisampling.]]></summary></member>
+    <member name="TwoSamples"><summary><![CDATA[Enables 2 levels of full-scene multisampling.]]></summary></member>
+    <member name="NonMaskable"><summary><![CDATA[Enables the multisample quality value.]]></summary></member>
+    <member name="None"><summary><![CDATA[Specifies no full-scene multisampling, and enables swap effects other than SwapEffect.Discard.]]></summary></member>
+  </members>
+</xna-type>

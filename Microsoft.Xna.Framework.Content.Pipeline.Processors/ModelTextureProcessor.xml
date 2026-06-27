@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ModelTextureProcessor" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          baseClass="ContentProcessor&amp;lt;TextureContent"
+          interfaces="TextureContent&amp;gt;">
+  <summary><![CDATA[Processes textures for 3D models.]]></summary>
+  <syntax><![CDATA[[ContentProcessorAttribute]
+public class ModelTextureProcessor : ContentProcessor&lt;TextureContent, TextureContent&gt;]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ModelTextureProcessor()">
+      <summary><![CDATA[Initializes a new instance of the ModelTextureProcessor class.]]></summary>
+      <syntax><![CDATA[public ModelTextureProcessor ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="ColorKeyColor" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public override Color ColorKeyColor { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="ColorKeyEnabled" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public override bool ColorKeyEnabled { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="GenerateMipmaps" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public override bool GenerateMipmaps { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="ResizeToPowerOfTwo" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public override bool ResizeToPowerOfTwo { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="TextureFormat" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public override TextureProcessorOutputFormat TextureFormat { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Process" returnType="void">
+      <summary><![CDATA[Processes a texture.]]></summary>
+      <overloads>
+        <overload signature="Process()">
+          <summary><![CDATA[Processes a texture.]]></summary>
+          <syntax><![CDATA[public virtual TextureContent Process (
+         TextureContent input,
+         ContentProcessorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="input" type="TextureContent"><![CDATA[The texture content to process.]]></parameter>
+            <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The processed texture content.]]></returns>
+          <remarks><![CDATA[Process performs color keying, replacing magenta pixels (red=255, green=0, blue=255, alpha=255) with transparent black (rgb=0, alpha=0), generates mipmaps if they are not already present, and compresses the texture into either Dxt1 or Dxt5 format, depending on whether it contains any fractional alpha values.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

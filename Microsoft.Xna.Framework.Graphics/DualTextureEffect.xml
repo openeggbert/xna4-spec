@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="DualTextureEffect" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="Effect"
+          interfaces="IEffectMatrices, IEffectFog">
+  <summary><![CDATA[Contains a configurable effect that supports two-layer multitexturing.]]></summary>
+  <syntax><![CDATA[public class DualTextureEffect : Effect, IEffectMatrices, IEffectFog]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="DualTextureEffect(DualTextureEffect)">
+      <summary><![CDATA[Creates a new DualTextureEffect by cloning parameter settings from an existing instance.]]></summary>
+      <syntax><![CDATA[protected DualTextureEffect (
+         DualTextureEffect cloneSource
+)]]></syntax>
+      <parameters>
+        <parameter name="cloneSource" type="DualTextureEffect"><![CDATA[The object to clone.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="DualTextureEffect(GraphicsDevice)">
+      <summary><![CDATA[Creates a new DualTextureEffect with default parameter settings.]]></summary>
+      <syntax><![CDATA[public DualTextureEffect (
+         GraphicsDevice device
+)]]></syntax>
+      <parameters>
+        <parameter name="device" type="GraphicsDevice"><![CDATA[The graphics device.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Alpha" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the material alpha which determines its transparency. Range is between 1 (fully opaque) and 0 (fully transparent).]]></summary>
+      <syntax><![CDATA[public float Alpha { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DiffuseColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the diffuse color for a material, the range of color values is from 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the fog color, the range of color values is from 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 FogColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogEnabled" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets the fog enable flag.]]></summary>
+      <syntax><![CDATA[public bool FogEnabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogEnd" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the maximum z value for fog, which ranges from 0 to 1.]]></summary>
+      <syntax><![CDATA[public float FogEnd { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogStart" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the minimum z value for fog, which ranges from 0 to 1.]]></summary>
+      <syntax><![CDATA[public float FogStart { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Projection" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the projection matrix.]]></summary>
+      <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Texture" type="Texture2D" access="get;set">
+      <summary><![CDATA[Gets or sets the current base texture.]]></summary>
+      <syntax><![CDATA[public Texture2D Texture { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Texture2" type="Texture2D" access="get;set">
+      <summary><![CDATA[Gets or sets the current overlay texture.]]></summary>
+      <syntax><![CDATA[public Texture2D Texture2 { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="VertexColorEnabled" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets whether per-vertex color is enabled.]]></summary>
+      <syntax><![CDATA[public bool VertexColorEnabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="View" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the view matrix.]]></summary>
+      <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="World" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the world matrix.]]></summary>
+      <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Clone" returnType="void">
+      <summary><![CDATA[Creates a clone of the current DualTextureEffect instance.]]></summary>
+      <overloads>
+        <overload signature="Clone()">
+          <summary><![CDATA[Creates a clone of the current DualTextureEffect instance.]]></summary>
+          <syntax><![CDATA[public override Effect Clone ()]]></syntax>
+          <returns><![CDATA[A cloned effect.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnApply" returnType="void">
+      <summary><![CDATA[Computes derived parameter values immediately before applying the effect.]]></summary>
+      <overloads>
+        <overload signature="OnApply()">
+          <summary><![CDATA[Computes derived parameter values immediately before applying the effect.]]></summary>
+          <syntax><![CDATA[protected internal override void OnApply ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

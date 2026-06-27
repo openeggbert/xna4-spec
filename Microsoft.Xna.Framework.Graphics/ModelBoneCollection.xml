@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ModelBoneCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="ReadOnlyCollection&amp;lt;ModelBone&amp;gt;">
+  <summary><![CDATA[Represents a set of bones associated with a model.]]></summary>
+  <syntax><![CDATA[public sealed class ModelBoneCollection : ReadOnlyCollection&lt;ModelBone&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Item" type="Object" access="get">
+      <summary><![CDATA[Retrieves a ModelBone from the collection, given the name of the bone.]]></summary>
+      <syntax><![CDATA[public ModelBone this [
+         string boneName
+] { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Returns a ModelBoneCollection.Enumerator that can iterate through a ModelBoneCollection.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Returns a ModelBoneCollection.Enumerator that can iterate through a ModelBoneCollection.]]></summary>
+          <syntax><![CDATA[public Enumerator GetEnumerator ()]]></syntax>
+          <returns><![CDATA[The ModelBoneCollection.Enumerator of the bone collection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryGetValue" returnType="void">
+      <summary><![CDATA[Finds a bone with a given name if it exists in the collection.]]></summary>
+      <overloads>
+        <overload signature="TryGetValue()">
+          <summary><![CDATA[Finds a bone with a given name if it exists in the collection.]]></summary>
+          <syntax><![CDATA[public bool TryGetValue (
+         string boneName,
+         out ModelBone value
+)]]></syntax>
+          <parameters>
+            <parameter name="boneName" type="string"><![CDATA[The name of the bone to find.]]></parameter>
+            <parameter name="value" type="ModelBone"><![CDATA[[ OutAttribute ] The bone named boneName , if found.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the named bone is found, otherwise false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

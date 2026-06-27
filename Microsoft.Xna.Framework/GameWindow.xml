@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GameWindow" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[The system window associated with a Game.]]></summary>
+  <syntax><![CDATA[public abstract class GameWindow]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="AllowUserResizing" type="Object" access="get;set">
+      <summary><![CDATA[Specifies whether to allow the user to resize the game window.]]></summary>
+      <syntax><![CDATA[[DefaultValueAttribute(false)]
+public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ClientBounds" type="Object" access="get">
+      <summary><![CDATA[The screen dimensions of the game window's client rectangle.]]></summary>
+      <syntax><![CDATA[public virtual abstract Rectangle ClientBounds { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CurrentOrientation" type="Object" access="get">
+      <summary><![CDATA[Gets the current display orientation, which reflects the physical orientation of the phone in the user's hand.]]></summary>
+      <syntax><![CDATA[public abstract DisplayOrientation CurrentOrientation { get; }]]></syntax>
+      <remarks><![CDATA[Windows Phone Specific Information Orientation settings apply only to Windows Phone-based games.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Handle" type="Object" access="get">
+      <summary><![CDATA[Gets the handle to the system window.]]></summary>
+      <syntax><![CDATA[public virtual abstract IntPtr Handle { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ScreenDeviceName" type="Object" access="get">
+      <summary><![CDATA[Gets the device name of the screen the window is currently in.]]></summary>
+      <syntax><![CDATA[public virtual abstract string ScreenDeviceName { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Title" type="string" access="get;set">
+      <summary><![CDATA[Gets and sets the title of the system window.]]></summary>
+      <syntax><![CDATA[public string Title { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="BeginScreenDeviceChange" returnType="void">
+      <summary><![CDATA[Starts a device transition (windowed to full screen or vice versa).]]></summary>
+      <overloads>
+        <overload signature="BeginScreenDeviceChange()">
+          <summary><![CDATA[Starts a device transition (windowed to full screen or vice versa).]]></summary>
+          <syntax><![CDATA[public virtual abstract void BeginScreenDeviceChange (
+         bool willBeFullScreen
+)]]></syntax>
+          <parameters>
+            <parameter name="willBeFullScreen" type="bool"><![CDATA[Specifies whether the device will be in full-screen mode upon completion of the change.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method must be called before any device change occurs (that is, before resetting the graphics device). EndScreenDeviceChange should be called to complete the transition.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndScreenDeviceChange" returnType="void">
+      <summary><![CDATA[Completes a device transition.]]></summary>
+      <overloads>
+        <overload signature="String">
+          <summary><![CDATA[Completes a device transition.]]></summary>
+          <syntax><![CDATA[public void EndScreenDeviceChange (
+         string screenDeviceName
+)]]></syntax>
+          <parameters>
+            <parameter name="screenDeviceName" type="string"><![CDATA[The desktop screen to move the window to. This should be the screen device name of the graphics device that has transitioned to full screen.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method must be called after any device change (that is, after resetting the graphics device).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, Int32, Int32">
+          <summary><![CDATA[Completes a device transition.]]></summary>
+          <syntax><![CDATA[public virtual abstract void EndScreenDeviceChange (
+         string screenDeviceName,
+         int clientWidth,
+         int clientHeight
+)]]></syntax>
+          <parameters>
+            <parameter name="screenDeviceName" type="string"><![CDATA[The desktop screen to move the window to. This should be the screen device name of the graphics device that has transitioned to full screen.]]></parameter>
+            <parameter name="clientWidth" type="int"><![CDATA[The new width of the game's client window.]]></parameter>
+            <parameter name="clientHeight" type="int"><![CDATA[The new height of the game's client window.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method must be called after any device change (that is, after resetting the graphics device).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnActivated" returnType="void">
+      <summary><![CDATA[Called when the GameWindow gets focus.]]></summary>
+      <overloads>
+        <overload signature="OnActivated()">
+          <summary><![CDATA[Called when the GameWindow gets focus.]]></summary>
+          <syntax><![CDATA[protected void OnActivated ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnClientSizeChanged" returnType="void">
+      <summary><![CDATA[Called when the size of the client window changes. Raises the ClientSizeChanged event.]]></summary>
+      <overloads>
+        <overload signature="OnClientSizeChanged()">
+          <summary><![CDATA[Called when the size of the client window changes. Raises the ClientSizeChanged event.]]></summary>
+          <syntax><![CDATA[protected void OnClientSizeChanged ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnDeactivated" returnType="void">
+      <summary><![CDATA[Called when the GameWindow loses focus.]]></summary>
+      <overloads>
+        <overload signature="OnDeactivated()">
+          <summary><![CDATA[Called when the GameWindow loses focus.]]></summary>
+          <syntax><![CDATA[protected void OnDeactivated ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnOrientationChanged" returnType="void">
+      <summary><![CDATA[Called when the GameWindow display orientation changes.]]></summary>
+      <overloads>
+        <overload signature="OnOrientationChanged()">
+          <summary><![CDATA[Called when the GameWindow display orientation changes.]]></summary>
+          <syntax><![CDATA[protected void OnOrientationChanged ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnPaint" returnType="void">
+      <summary><![CDATA[Called when the GameWindow needs to be painted.]]></summary>
+      <overloads>
+        <overload signature="OnPaint()">
+          <summary><![CDATA[Called when the GameWindow needs to be painted.]]></summary>
+          <syntax><![CDATA[protected void OnPaint ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnScreenDeviceNameChanged" returnType="void">
+      <summary><![CDATA[Called when the GameWindow is moved to a different screen. Raises the ScreenDeviceNameChanged event.]]></summary>
+      <overloads>
+        <overload signature="OnScreenDeviceNameChanged()">
+          <summary><![CDATA[Called when the GameWindow is moved to a different screen. Raises the ScreenDeviceNameChanged event.]]></summary>
+          <syntax><![CDATA[protected void OnScreenDeviceNameChanged ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetSupportedOrientations" returnType="void">
+      <summary><![CDATA[Sets the supported display orientations.]]></summary>
+      <overloads>
+        <overload signature="SetSupportedOrientations()">
+          <summary><![CDATA[Sets the supported display orientations.]]></summary>
+          <syntax><![CDATA['Declaration
+Protected Internal MustOverride Sub SetSupportedOrientations ( _
+         orientations As DisplayOrientation _
+)]]></syntax>
+          <parameters>
+            <parameter name="orientations" type="Object"><![CDATA[Type: DisplayOrientation A set of supported display orientations.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetTitle" returnType="void">
+      <summary><![CDATA[Sets the title of the GameWindow.]]></summary>
+      <overloads>
+        <overload signature="SetTitle()">
+          <summary><![CDATA[Sets the title of the GameWindow.]]></summary>
+          <syntax><![CDATA[protected virtual abstract void SetTitle (
+         string title
+)]]></syntax>
+          <parameters>
+            <parameter name="title" type="string"><![CDATA[The new title of the GameWindow .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="ClientSizeChanged" type="EventHandler">
+      <summary><![CDATA[Raised when the size of the GameWindow changes.]]></summary>
+      <syntax><![CDATA[public event EventHandler ClientSizeChanged]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="OrientationChanged" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+      <summary><![CDATA[Describes the event raised when the display orientation of the GameWindow changes. When this event occurs, the XNA Framework automatically adjusts the game orientation based on the value specified by the developer with SupportedOrientations.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; OrientationChanged]]></syntax>
+      <remarks><![CDATA[Windows Phone Specific Information Orientation settings apply only to Windows Phone-based games.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </event>
+    <event name="ScreenDeviceNameChanged" type="EventHandler">
+      <summary><![CDATA[Raised when the GameWindow moves to a different display.]]></summary>
+      <syntax><![CDATA[public event EventHandler ScreenDeviceNameChanged]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

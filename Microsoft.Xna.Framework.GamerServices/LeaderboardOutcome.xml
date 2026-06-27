@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="LeaderboardOutcome" kind="enum"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Values used to provide an outcome for a player's leaderboard entry.]]></summary>
+  <syntax><![CDATA[public enum LeaderboardOutcome]]></syntax>
+  <remarks><![CDATA[LeaderboardOutcome is used to set the "Outcome" property of a leaderboard entry. For example: SignedInGamer gamer = SignedInGamer.SignedInGamers[0]; // Retrieve LeaderboardWriter for the SignedInGamer. LeaderboardWriter writer = gamer.LeaderboardWriter; // Get leaderboard entry by specified leaderboard id. LeaderboardEntry entry = writer.GetLeaderboard( LeaderboardIdentity.Create(LeaderboardKey.BestScoreThisWeek)); // Send the outcome of this match entry.Columns.SetValue("Outcome", LeaderboardOutcome.Win); // Send additional Leaderboard data...]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <members>
+    <member name="Loss"><summary><![CDATA[Player lost the match.]]></summary></member>
+    <member name="None"><summary><![CDATA[No result reported.]]></summary></member>
+    <member name="Tie"><summary><![CDATA[Match resulted in a tie: no player won.]]></summary></member>
+    <member name="Win"><summary><![CDATA[Player won the match.]]></summary></member>
+  </members>
+</xna-type>

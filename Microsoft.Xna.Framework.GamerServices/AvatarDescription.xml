@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AvatarDescription" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Provides access to the methods and properties of the description data for an avatar.]]></summary>
+  <syntax><![CDATA[public class AvatarDescription]]></syntax>
+  <remarks><![CDATA[The AvatarDescription object contains an internal data buffer used by the avatar renderer when loading and animating a gamer's avatar. There are also methods for getting the height and gender of the avatar. AvatarDescription also provides a number of methods that you can use to create a new random AvatarDescription object or to retrieve one from an existing avatar description buffer.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="AvatarDescription(byte[])">
+      <summary><![CDATA[Creates a new instance of AvatarDescription using an existing data buffer.]]></summary>
+      <syntax><![CDATA[public AvatarDescription (
+         byte[] data
+)]]></syntax>
+      <parameters>
+        <parameter name="data" type="byte[]"><![CDATA[Existing buffer used to store the information of the newly-created avatar. Use the buffer specified by the Description property of a valid AvatarDescription object. Common scenarios include the recreation of random avatars that were created earlier or when avatar decription data is sent over a network to all signed-in gamers. Once that data is received, local avatar descriptions and renderers are created for each remote gamer avatar. Results are undefined if buffers from other sources are used.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="BodyType" type="AvatarBodyType" access="get">
+      <summary><![CDATA[Gets the body type of the avatar based on the description data.]]></summary>
+      <syntax><![CDATA[public AvatarBodyType BodyType { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Description" type="byte[]" access="get">
+      <summary><![CDATA[Internal description buffer of the avatar, stored as a byte buffer.]]></summary>
+      <syntax><![CDATA[public byte[] Description { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Height" type="float" access="get">
+      <summary><![CDATA[Height of the avatar, from the feet to the top of the head.]]></summary>
+      <syntax><![CDATA[public float Height { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="IsValid" type="bool" access="get">
+      <summary><![CDATA[Determines whether the internal data buffer is valid.]]></summary>
+      <syntax><![CDATA[public bool IsValid { get; }]]></syntax>
+      <remarks><![CDATA[This property is provided only as a quick verification method for developers that receive an AvatarDescription object from the XNA framework. For example, a value of false could indicate that the user does not have an avatar.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="BeginGetFromGamer" returnType="void">
+      <summary><![CDATA[Begins the process of getting a AvatarDescription object for a specified gamertag.]]></summary>
+      <overloads>
+        <overload signature="BeginGetFromGamer()">
+          <summary><![CDATA[Begins the process of getting a AvatarDescription object for a specified gamertag.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginGetFromGamer (
+         Gamer gamer,
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="gamer" type="Gamer"><![CDATA[Gamer to request the AvatarDescription for.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[The method to be called once the asynchronous operation has finished.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An IAsyncResult used to track the progress of the method. Call EndGetFromGamer to access these results.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateRandom" returnType="AvatarDescription" isStatic="true">
+      <summary><![CDATA[Creates an avatar of random gender, features, and clothing.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Creates an avatar of random gender, features, and clothing.]]></summary>
+          <syntax><![CDATA[public static AvatarDescription CreateRandom ()]]></syntax>
+          <returns><![CDATA[Description of the created avatar.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="AvatarBodyType">
+          <summary><![CDATA[Creates an avatar of the specified body type with random features and clothing.]]></summary>
+          <syntax><![CDATA[public static AvatarDescription CreateRandom (
+         AvatarBodyType bodyType
+)]]></syntax>
+          <parameters>
+            <parameter name="bodyType" type="AvatarBodyType"><![CDATA[Body type of the randomly-created avatar.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Description of the created avatar.]]></returns>
+          <remarks><![CDATA[It is possible that a newly-created random AvatarDescription object could be an invalid avatar description buffer. For instance, the related AvatarDescription object was created by a call to CreateRandom , from within a Windows application.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndGetFromGamer" returnType="void">
+      <summary><![CDATA[Ends the process of getting an AvatarDescription object for a specified gamertag.]]></summary>
+      <overloads>
+        <overload signature="EndGetFromGamer()">
+          <summary><![CDATA[Ends the process of getting an AvatarDescription object for a specified gamertag.]]></summary>
+          <syntax><![CDATA[public static AvatarDescription EndGetFromGamer (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[An IAsyncResult used to track the progress of the operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The AvatarDescription object for the specified gamertag.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="Changed" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+      <summary><![CDATA[Occurs when a gamer's avatar changes.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; Changed]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

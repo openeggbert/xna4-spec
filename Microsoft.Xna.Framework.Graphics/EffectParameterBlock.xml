@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EffectParameterBlock" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IDisposable">
+  <summary><![CDATA[Represents an EffectParameter state block.]]></summary>
+  <syntax><![CDATA[public class EffectParameterBlock : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="EffectParameterBlock(Effect)">
+      <summary><![CDATA[Initializes a new instance of the EffectParameterBlock class.]]></summary>
+      <syntax><![CDATA[public EffectParameterBlock (
+         Effect parent
+)]]></syntax>
+      <parameters>
+        <parameter name="parent" type="Effect"><![CDATA[The Effect used to generate the EffectParameterBlock .]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Apply" returnType="void">
+      <summary><![CDATA[Applies the parameter changes in the EffectParameterBlock to the current effect state.]]></summary>
+      <overloads>
+        <overload signature="Apply()">
+          <summary><![CDATA[Applies the parameter changes in the EffectParameterBlock to the current effect state.]]></summary>
+          <syntax><![CDATA[public void Apply ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Begin" returnType="void">
+      <summary><![CDATA[Begins capturing parameter state changes from the parent Effect.]]></summary>
+      <overloads>
+        <overload signature="Begin()">
+          <summary><![CDATA[Begins capturing parameter state changes from the parent Effect.]]></summary>
+          <syntax><![CDATA[public void Begin ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Boolean">
+          <summary><![CDATA[Releases the unmanaged resources used by the EffectParameterBlock and optionally releases the managed resources.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool 
+)]]></syntax>
+          <remarks><![CDATA[This method is called by the public Dispose method and the Finalize method. Dispose invokes the protected Dispose(Boolean) method with the disposing parameter set to true . Finalize invokes Dispose(Boolean) with disposing set to false . When the disposing parameter is true , this method releases all resources held by any managed objects that this EffectParameterBlock references. This method invokes the Dispose method of each referenced object. Note Notes to Inheritors Dispose can be called multiple times by other objects. When overriding Dispose(Boolean) , be careful not to reference objects disposed of in an earlier call to Dispose .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="End" returnType="void">
+      <summary><![CDATA[Stops capturing state changes from the parent Effect.]]></summary>
+      <overloads>
+        <overload signature="End()">
+          <summary><![CDATA[Stops capturing state changes from the parent Effect.]]></summary>
+          <syntax><![CDATA[public void End ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

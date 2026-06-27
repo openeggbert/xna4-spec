@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GameComponentCollectionEventArgs" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          baseClass="EventArgs">
+  <summary><![CDATA[Arguments used with events from the GameComponentCollection.]]></summary>
+  <syntax><![CDATA[public class GameComponentCollectionEventArgs : EventArgs]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GameComponentCollectionEventArgs(IGameComponent)">
+      <summary><![CDATA[Creates a new instance of GameComponentCollectionEventArgs.]]></summary>
+      <syntax><![CDATA[public GameComponentCollectionEventArgs (
+         IGameComponent gameComponent
+)]]></syntax>
+      <parameters>
+        <parameter name="gameComponent" type="IGameComponent"><![CDATA[The game component affected by the event.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="GameComponent" type="IGameComponent" access="get">
+      <summary><![CDATA[The game component affected by the event.]]></summary>
+      <syntax><![CDATA[public IGameComponent GameComponent { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

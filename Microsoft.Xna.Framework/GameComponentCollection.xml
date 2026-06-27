@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GameComponentCollection" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          baseClass="Collection&amp;lt;IGameComponent&amp;gt;">
+  <summary><![CDATA[A collection of game components.]]></summary>
+  <syntax><![CDATA[public sealed class GameComponentCollection : Collection&lt;IGameComponent&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GameComponentCollection()">
+      <summary><![CDATA[Initializes a new instance of this class.]]></summary>
+      <syntax><![CDATA[public GameComponentCollection ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="ComponentAdded" type="EventHandler&amp;lt;GameComponentCollectionEventArgs&amp;gt;">
+      <summary><![CDATA[Raised when a component is added to the GameComponentCollection.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;GameComponentCollectionEventArgs&gt; ComponentAdded]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="ComponentRemoved" type="EventHandler&amp;lt;GameComponentCollectionEventArgs&amp;gt;">
+      <summary><![CDATA[Raised when a component is removed from the GameComponentCollection.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;GameComponentCollectionEventArgs&gt; ComponentRemoved]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

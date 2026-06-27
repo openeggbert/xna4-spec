@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Video" kind="class"
+          namespace="Microsoft.Xna.Framework.Media"
+          assembly="Microsoft.Xna.Framework.Media">
+  <summary><![CDATA[Represents a video.]]></summary>
+  <syntax><![CDATA[public sealed class Video]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Duration" type="TimeSpan" access="get">
+      <summary><![CDATA[Gets the duration of the Video.]]></summary>
+      <syntax><![CDATA[public TimeSpan Duration { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="FramesPerSecond" type="float" access="get">
+      <summary><![CDATA[Gets the frame rate of this video.]]></summary>
+      <syntax><![CDATA[public float FramesPerSecond { get; }]]></syntax>
+      <remarks><![CDATA[24, 30, and 29.97 are common frame rates.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Height" type="int" access="get">
+      <summary><![CDATA[Gets the height of this video, in pixels.]]></summary>
+      <syntax><![CDATA[public int Height { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="VideoSoundtrackType" type="VideoSoundtrackType" access="get">
+      <summary><![CDATA[Gets the VideoSoundtrackType for this video.]]></summary>
+      <syntax><![CDATA[public VideoSoundtrackType VideoSoundtrackType { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Width" type="int" access="get">
+      <summary><![CDATA[Gets the width of this video, in pixels.]]></summary>
+      <syntax><![CDATA[public int Width { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

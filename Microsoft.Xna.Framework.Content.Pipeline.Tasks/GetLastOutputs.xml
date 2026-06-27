@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GetLastOutputs" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Tasks"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Tasks"
+          baseClass="Task">
+  <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public class GetLastOutputs : Task]]></syntax>
+  <platforms>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GetLastOutputs()">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public GetLastOutputs ()]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="IntermediateDirectory" type="string" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[[RequiredAttribute]
+public string IntermediateDirectory { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="OutputContentFiles" type="ITaskItem[]" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[[OutputAttribute]
+public ITaskItem[] OutputContentFiles { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Execute" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="Execute()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override bool Execute ()]]></syntax>
+          <returns><![CDATA[true if the task completed successfully; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

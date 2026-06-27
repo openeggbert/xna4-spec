@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GraphicsDeviceManager" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IGraphicsDeviceService, IDisposable, IGraphicsDeviceManager">
+  <summary><![CDATA[Handles the configuration and management of the graphics device.]]></summary>
+  <syntax><![CDATA[public class GraphicsDeviceManager : IGraphicsDeviceService, IDisposable, IGraphicsDeviceManager]]></syntax>
+  <remarks><![CDATA[Custom behavior of the GraphicsDeviceManager can be achieved by deriving a class from GraphicsDeviceManager . For example, to allow only widescreen devices in full-screen mode the RankDevices method could be overridden to drop non-widescreen devices (see How to: Restrict Graphics Devices to Widescreen Aspect Ratios in Full Screen ). Or, if you are creating a 2D game, you might want to create a graphics device without a depth buffer. By adding an event handler for the PreparingDeviceSettings event to the GraphicsDeviceManager , you can control the PresentationParameters properties associated with the graphics device. In the example below, the event handler is named graphics_Settings_NoDepthBuffer . graphics = new GraphicsDeviceManager( this ); graphics.PreparingDeviceSettings += new EventHandler&lt;PreparingDeviceSettingsEventArgs&gt;( graphics_Settings_NoDepthBuffer ); To ensure that no depth buffer is created, your event handler can set the EnableAutoDepthStencil property of the graphic device's PresentationParameters to false , as shown below. void graphics_Settings_NoDepthBuffer( object sender, PreparingDeviceSettingsEventArgs e ) { e.GraphicsDeviceInformation.PresentationParameters.EnableAutoDepthStencil = false; }]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GraphicsDeviceManager(Game)">
+      <summary><![CDATA[Creates a new GraphicsDeviceManager and registers it to handle the configuration and management of the graphics device for the specified Game.]]></summary>
+      <syntax><![CDATA[public GraphicsDeviceManager (
+         Game game
+)]]></syntax>
+      <parameters>
+        <parameter name="game" type="Game"><![CDATA[Game the GraphicsDeviceManager should be associated with.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[This constructor adds this GraphicsDeviceManager to the collection of game services that have been implicitly registered by adding them to the Game.Services property. Warning Although this constructor requires an instance of Game , if the application does not otherwise require an instance of Game it is often better to implement a the IGraphicsDeviceService and IGraphicsDeviceManager interfaces to provide the same services that would be provided by the GraphicsDeviceManager . Custom behavior of the GraphicsDeviceManager can be achieved by deriving a class from GraphicsDeviceManager . For example, to allow only widescreen devices in full-screen mode the RankDevices method could be overridden to drop non-widescreen devices (see How to: Restrict Graphics Devices to Widescreen Aspect Ratios in Full Screen ). Or, if you are creating a 2D game, you might want to create a graphics device without a depth buffer. By adding an event handler for the PreparingDeviceSettings event to the GraphicsDeviceManager , you can control the PresentationParameters properties associated with the graphics device. In the example below, the event handler is named graphics_Settings_NoDepthBuffer . graphics = new GraphicsDeviceManager( this ); graphics.PreparingDeviceSettings += new EventHandler&lt;PreparingDeviceSettingsEventArgs&gt;( graphics_Settings_NoDepthBuffer ); To ensure that no depth buffer is created, your event handler can set the EnableAutoDepthStencil property of the graphic device's PresentationParameters to false , as shown below. void graphics_Settings_NoDepthBuffer( object sender, PreparingDeviceSettingsEventArgs e ) { e.GraphicsDeviceInformation.PresentationParameters.EnableAutoDepthStencil = false; }]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="GraphicsDevice" type="GraphicsDevice" access="get">
+      <summary><![CDATA[Gets the GraphicsDevice associated with the GraphicsDeviceManager.]]></summary>
+      <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GraphicsProfile" type="GraphicsProfile" access="get;set">
+      <summary><![CDATA[Gets the graphics profile, which determines the graphics feature set.]]></summary>
+      <syntax><![CDATA[public GraphicsProfile GraphicsProfile { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="IsFullScreen" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets a value that indicates whether the device should start in full-screen mode.]]></summary>
+      <syntax><![CDATA[public bool IsFullScreen { get; set; }]]></syntax>
+      <remarks><![CDATA[If no devices are present that support full screen, or the underlying host supports only full screen, this value may be ignored. This value has no effect on Xbox 360.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MinimumPixelShaderProfile" type="ShaderProfile" access="get;set">
+      <summary><![CDATA[Gets or sets the minimum pixel shader version required by the GraphicsDeviceManager.]]></summary>
+      <syntax><![CDATA[public ShaderProfile MinimumPixelShaderProfile { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MinimumVertexShaderProfile" type="ShaderProfile" access="get;set">
+      <summary><![CDATA[Gets or sets the minimum vertex shader version required by the GraphicsDeviceManager.]]></summary>
+      <syntax><![CDATA[public ShaderProfile MinimumVertexShaderProfile { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PreferMultiSampling" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets a value that indicates whether to enable a multisampled back buffer.]]></summary>
+      <syntax><![CDATA[public bool PreferMultiSampling { get; set; }]]></syntax>
+      <remarks><![CDATA[PreferMultiSampling is ignored if no hardware is available that supports multisample.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PreferredBackBufferFormat" type="SurfaceFormat" access="get;set">
+      <summary><![CDATA[Gets or sets the format of the back buffer.]]></summary>
+      <syntax><![CDATA[public SurfaceFormat PreferredBackBufferFormat { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PreferredBackBufferHeight" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets the preferred back-buffer height.]]></summary>
+      <syntax><![CDATA[public int PreferredBackBufferHeight { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PreferredBackBufferWidth" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets the preferred back-buffer width.]]></summary>
+      <syntax><![CDATA[public int PreferredBackBufferWidth { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PreferredDepthStencilFormat" type="DepthFormat" access="get;set">
+      <summary><![CDATA[Gets or sets the format of the depth stencil.]]></summary>
+      <syntax><![CDATA[public DepthFormat PreferredDepthStencilFormat { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SupportedOrientations" type="DisplayOrientation" access="get;set">
+      <summary><![CDATA[Gets or sets the display orientations that are available if automatic rotation and scaling is enabled.]]></summary>
+      <syntax><![CDATA[public DisplayOrientation SupportedOrientations { get; set; }]]></syntax>
+      <remarks><![CDATA[Windows Phone Specific Information Orientation settings apply only to Windows Phone-based games. Call ApplyChanges to apply this change if you are setting this property outside of the game constructor.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="SynchronizeWithVerticalRetrace" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets a value that indicates whether to sync to the vertical trace (vsync) when presenting the back buffer.]]></summary>
+      <syntax><![CDATA[public bool SynchronizeWithVerticalRetrace { get; set; }]]></syntax>
+      <remarks><![CDATA[This value is honored (when possible) in full screen and windowed modes.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="ApplyChanges" returnType="void">
+      <summary><![CDATA[Applies any changes to device-related properties, changing the graphics device as necessary.]]></summary>
+      <overloads>
+        <overload signature="ApplyChanges()">
+          <summary><![CDATA[Applies any changes to device-related properties, changing the graphics device as necessary.]]></summary>
+          <syntax><![CDATA[public void ApplyChanges ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CanResetDevice" returnType="void">
+      <summary><![CDATA[Determines whether the given GraphicsDeviceInformation is compatible with the existing graphics device.]]></summary>
+      <overloads>
+        <overload signature="CanResetDevice()">
+          <summary><![CDATA[Determines whether the given GraphicsDeviceInformation is compatible with the existing graphics device.]]></summary>
+          <syntax><![CDATA[protected virtual bool CanResetDevice (
+         GraphicsDeviceInformation newDeviceInfo
+)]]></syntax>
+          <parameters>
+            <parameter name="newDeviceInfo" type="GraphicsDeviceInformation"><![CDATA[Information describing the desired device configuration.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if a device reset can be used to get a device compatible with the GraphicsDeviceInformation; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Releases the unmanaged resources used by the GraphicsDeviceManager and optionally releases the managed resources.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Releases the unmanaged resources used by the GraphicsDeviceManager and optionally releases the managed resources.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool disposing
+)]]></syntax>
+          <parameters>
+            <parameter name="disposing" type="bool"><![CDATA[true to release both automatic and manual resources; false to release only manual resources.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="FindBestDevice" returnType="void">
+      <summary><![CDATA[Finds the best device configuration that is compatible with the current device preferences.]]></summary>
+      <overloads>
+        <overload signature="FindBestDevice()">
+          <summary><![CDATA[Finds the best device configuration that is compatible with the current device preferences.]]></summary>
+          <syntax><![CDATA[protected virtual GraphicsDeviceInformation FindBestDevice (
+         bool anySuitableDevice
+)]]></syntax>
+          <parameters>
+            <parameter name="anySuitableDevice" type="bool"><![CDATA[true if the FindBestDevice can select devices from any available adapter; false if only the current adapter should be considered.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The best device configuration found.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnDeviceCreated" returnType="void">
+      <summary><![CDATA[Called when a device is created. Raises the DeviceCreated event.]]></summary>
+      <overloads>
+        <overload signature="OnDeviceCreated()">
+          <summary><![CDATA[Called when a device is created. Raises the DeviceCreated event.]]></summary>
+          <syntax><![CDATA[protected virtual void OnDeviceCreated (
+         Object sender,
+         EventArgs args
+)]]></syntax>
+          <parameters>
+            <parameter name="sender" type="Object"><![CDATA[The GraphicsDeviceManager .]]></parameter>
+            <parameter name="args" type="EventArgs"><![CDATA[Arguments for the DeviceCreated event.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnDeviceDisposing" returnType="void">
+      <summary><![CDATA[Called when a device is being disposed. Raises the DeviceDisposing event.]]></summary>
+      <overloads>
+        <overload signature="OnDeviceDisposing()">
+          <summary><![CDATA[Called when a device is being disposed. Raises the DeviceDisposing event.]]></summary>
+          <syntax><![CDATA[protected virtual void OnDeviceDisposing (
+         Object sender,
+         EventArgs args
+)]]></syntax>
+          <parameters>
+            <parameter name="sender" type="Object"><![CDATA[The GraphicsDeviceManager .]]></parameter>
+            <parameter name="args" type="EventArgs"><![CDATA[Arguments for the DeviceDisposing event.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnDeviceReset" returnType="void">
+      <summary><![CDATA[Called when the device has been reset. Raises the DeviceReset event.]]></summary>
+      <overloads>
+        <overload signature="OnDeviceReset()">
+          <summary><![CDATA[Called when the device has been reset. Raises the DeviceReset event.]]></summary>
+          <syntax><![CDATA[protected virtual void OnDeviceReset (
+         Object sender,
+         EventArgs args
+)]]></syntax>
+          <parameters>
+            <parameter name="sender" type="Object"><![CDATA[The GraphicsDeviceManager .]]></parameter>
+            <parameter name="args" type="EventArgs"><![CDATA[Arguments for the DeviceReset event.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnDeviceResetting" returnType="void">
+      <summary><![CDATA[Called when the device is about to be reset. Raises the DeviceResetting event.]]></summary>
+      <overloads>
+        <overload signature="OnDeviceResetting()">
+          <summary><![CDATA[Called when the device is about to be reset. Raises the DeviceResetting event.]]></summary>
+          <syntax><![CDATA[protected virtual void OnDeviceResetting (
+         Object sender,
+         EventArgs args
+)]]></syntax>
+          <parameters>
+            <parameter name="sender" type="Object"><![CDATA[The GraphicsDeviceManager .]]></parameter>
+            <parameter name="args" type="EventArgs"><![CDATA[Arguments for the DeviceResetting event.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnPreparingDeviceSettings" returnType="void">
+      <summary><![CDATA[Called when the GraphicsDeviceManager is changing the GraphicsDevice settings (during reset or recreation of the GraphicsDevice). Raises the PreparingDeviceSettings event.]]></summary>
+      <overloads>
+        <overload signature="OnPreparingDeviceSettings()">
+          <summary><![CDATA[Called when the GraphicsDeviceManager is changing the GraphicsDevice settings (during reset or recreation of the GraphicsDevice). Raises the PreparingDeviceSettings event.]]></summary>
+          <syntax><![CDATA[protected virtual void OnPreparingDeviceSettings (
+         Object sender,
+         PreparingDeviceSettingsEventArgs args
+)]]></syntax>
+          <parameters>
+            <parameter name="sender" type="Object"><![CDATA[The GraphicsDeviceManager .]]></parameter>
+            <parameter name="args" type="PreparingDeviceSettingsEventArgs"><![CDATA[The graphics device information to modify.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="RankDevices" returnType="void">
+      <summary><![CDATA[Ranks the given list of devices that satisfy the given preferences.]]></summary>
+      <overloads>
+        <overload signature="RankDevices()">
+          <summary><![CDATA[Ranks the given list of devices that satisfy the given preferences.]]></summary>
+          <syntax><![CDATA[protected virtual void RankDevices (
+         List&lt;GraphicsDeviceInformation&gt; foundDevices
+)]]></syntax>
+          <parameters>
+            <parameter name="foundDevices" type="Object"><![CDATA[The list of devices to rank.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[RankDevices orders the provided list so that devices earlier in the list are preferred over devices later in the list. This method can remove devices from the list if they do not satisfy some custom criteria.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToggleFullScreen" returnType="void">
+      <summary><![CDATA[Toggles between full screen and windowed mode.]]></summary>
+      <overloads>
+        <overload signature="ToggleFullScreen()">
+          <summary><![CDATA[Toggles between full screen and windowed mode.]]></summary>
+          <syntax><![CDATA[public void ToggleFullScreen ()]]></syntax>
+          <remarks><![CDATA[This method has no effect on the Xbox 360.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="DefaultBackBufferHeight" type="int" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[Specifies the default minimum back-buffer height.]]></summary>
+      <syntax><![CDATA[public static readonly int DefaultBackBufferHeight]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="DefaultBackBufferWidth" type="int" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[Specifies the default minimum back-buffer width.]]></summary>
+      <syntax><![CDATA[public static readonly int DefaultBackBufferWidth]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="ValidAdapterFormats" type="SurfaceFormat[]" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[Specifies the set of adapter formats supported by the GraphicsDeviceManager.]]></summary>
+      <syntax><![CDATA[public static readonly SurfaceFormat[] ValidAdapterFormats]]></syntax>
+      <remarks><![CDATA[The order of the list determines the preference of any given format.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="ValidBackBufferFormats" type="SurfaceFormat[]" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[Specifies the set of back-buffer formats supported by the GraphicsDeviceManager.]]></summary>
+      <syntax><![CDATA[public static readonly SurfaceFormat[] ValidBackBufferFormats]]></syntax>
+      <remarks><![CDATA[The order of the list determines the preference of any given format.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="ValidDeviceTypes" type="DeviceType[]" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[Specifies the set of valid device types supported by the GraphicsDeviceManager.]]></summary>
+      <syntax><![CDATA[public static readonly DeviceType[] ValidDeviceTypes]]></syntax>
+      <remarks><![CDATA[The order of the list determines the preference of any given device type.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+    <event name="DeviceCreated" type="EventHandler">
+      <summary><![CDATA[Raised when a new graphics device is created.]]></summary>
+      <syntax><![CDATA[public event EventHandler DeviceCreated]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="DeviceDisposing" type="EventHandler">
+      <summary><![CDATA[Raised when the GraphicsDeviceManager is being disposed.]]></summary>
+      <syntax><![CDATA[public event EventHandler DeviceDisposing]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="DeviceReset" type="EventHandler">
+      <summary><![CDATA[Raised when the GraphicsDeviceManager is reset.]]></summary>
+      <syntax><![CDATA[public event EventHandler DeviceReset]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="DeviceResetting" type="EventHandler">
+      <summary><![CDATA[Raised when the GraphicsDeviceManager is about to be reset.]]></summary>
+      <syntax><![CDATA[public event EventHandler DeviceResetting]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="Disposed" type="EventHandler">
+      <summary><![CDATA[Raised when the GraphicsDeviceManager is disposed.]]></summary>
+      <syntax><![CDATA[public event EventHandler Disposed]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="PreparingDeviceSettings" type="EventHandler&amp;lt;PreparingDeviceSettingsEventArgs&amp;gt;">
+      <summary><![CDATA[Raised when the GraphicsDeviceManager is changing the GraphicsDevice settings (during reset or recreation of the GraphicsDevice).]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;PreparingDeviceSettingsEventArgs&gt; PreparingDeviceSettings]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

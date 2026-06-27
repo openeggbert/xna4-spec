@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GameTimer" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IDisposable">
+  <summary><![CDATA[This class is available only when developing for Windows Phone.]]></summary>
+  <syntax><![CDATA[public sealed class GameTimer : IDisposable]]></syntax>
+  <platforms>
+    <platform>Windows Phone</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GameTimer()">
+      <summary><![CDATA[This constructor is available only when developing for Windows Phone.]]></summary>
+      <syntax><![CDATA[public GameTimer ()]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="DrawOrder" type="int" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows Phone.]]></summary>
+      <syntax><![CDATA[public int DrawOrder { get; set; }]]></syntax>
+      <remarks><![CDATA[DrawOrder indicates the order in which Draw events will be called in when more than one timer triggers the event at the same time. Events with lower DrawOrder values will occur before events with higher values.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="FrameActionOrder" type="int" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows Phone.]]></summary>
+      <syntax><![CDATA[public int FrameActionOrder { get; set; }]]></syntax>
+      <remarks><![CDATA[FrameActionOrder indicates the order in which FrameAction events will be called in when more than one timer triggers the event at the same time. Events with lower FrameActionOrder values will occur before events with higher values.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="UpdateInterval" type="TimeSpan" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows Phone.]]></summary>
+      <syntax><![CDATA[public TimeSpan UpdateInterval { get; set; }]]></syntax>
+      <remarks><![CDATA[If you explicitly set the UpdateInterval , take care not to set it to be too short; if the Update method consistently runs longer than the time interval set by UpdateInterval , game performance will suffer as a result.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="UpdateOrder" type="int" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows Phone.]]></summary>
+      <syntax><![CDATA[public int UpdateOrder { get; set; }]]></syntax>
+      <remarks><![CDATA[UpdateOrder indicates the order in which Update events will be called in when more than one timer triggers the event at the same time. Events with lower UpdateOrder values will occur before events with higher values.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ResetElapsedTime" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
+      <overloads>
+        <overload signature="ResetElapsedTime()">
+          <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
+          <syntax><![CDATA[public static void ResetElapsedTime ()]]></syntax>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Start" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
+      <overloads>
+        <overload signature="Start()">
+          <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
+          <syntax><![CDATA[public void Start ()]]></syntax>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Stop" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
+      <overloads>
+        <overload signature="Stop()">
+          <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
+          <syntax><![CDATA[public void Stop ()]]></syntax>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SuppressFrame" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
+      <overloads>
+        <overload signature="SuppressFrame()">
+          <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
+          <syntax><![CDATA[public static void SuppressFrame ()]]></syntax>
+          <remarks><![CDATA[Calling SuppressFrame on any GameTimer will cause all FrameAction , Update and Draw events that haven't been executed yet to be suppressed, even if they belong to a different GameTimer . Note If you have multiple event handlers associated with a single event, you should be aware that SuppressFrame does not stop the remaining event handlers from being called, only remaining events (and their associated handlers). This behavior is defined by the way .NET calls event handlers: once an event has been triggered, all handlers associated with that event are automatically called.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="Draw" type="EventHandler&amp;lt;GameTimerEventArgs&amp;gt;">
+      <summary><![CDATA[This event is available only when developing for Windows Phone.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;GameTimerEventArgs&gt; Draw]]></syntax>
+      <remarks><![CDATA[This action is fired after all frame and update events; this event is only fired on frames during which an Update event was fired.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </event>
+    <event name="FrameAction" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+      <summary><![CDATA[This event is available only when developing for Windows Phone.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; FrameAction]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </event>
+    <event name="Update" type="EventHandler&amp;lt;GameTimerEventArgs&amp;gt;">
+      <summary><![CDATA[This event is available only when developing for Windows Phone.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;GameTimerEventArgs&gt; Update]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

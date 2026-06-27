@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentIdentity" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <summary><![CDATA[Provides properties describing the origin of the game asset, such as the original source file and creation tool. This information is used for error reporting, and by processors that need to determine what directory the asset was originally loaded from.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public class ContentIdentity]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentIdentity(String, String, String)">
+      <summary><![CDATA[Initializes a new instance of ContentIdentity with the specified values.]]></summary>
+      <syntax><![CDATA[public ContentIdentity (
+         string sourceFilename,
+         string sourceTool,
+         string fragmentIdentifier
+)]]></syntax>
+      <parameters>
+        <parameter name="sourceFilename" type="string"><![CDATA[The absolute path to the file name of the asset source.]]></parameter>
+        <parameter name="sourceTool" type="string"><![CDATA[The name of the digital content creation (DCC) tool that created the asset.]]></parameter>
+        <parameter name="fragmentIdentifier" type="string"><![CDATA[Specific location of the content item within the larger source file. For example, this could be a line number in the file.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ContentIdentity()">
+      <summary><![CDATA[Initializes a new instance of ContentIdentity.]]></summary>
+      <syntax><![CDATA[public ContentIdentity ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ContentIdentity(String)">
+      <summary><![CDATA[Initializes a new instance of ContentIdentity with the specified values.]]></summary>
+      <syntax><![CDATA[public ContentIdentity (
+         string sourceFilename
+)]]></syntax>
+      <parameters>
+        <parameter name="sourceFilename" type="string"><![CDATA[The absolute path to the file name of the asset source.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ContentIdentity(String, String)">
+      <summary><![CDATA[Initializes a new instance of ContentIdentity with the specified values.]]></summary>
+      <syntax><![CDATA[public ContentIdentity (
+         string sourceFilename,
+         string sourceTool
+)]]></syntax>
+      <parameters>
+        <parameter name="sourceFilename" type="string"><![CDATA[The absolute path to the file name of the asset source.]]></parameter>
+        <parameter name="sourceTool" type="string"><![CDATA[The name of the digital content creation (DCC) tool that created the asset.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="FragmentIdentifier" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the specific location of the content item within the larger source file.]]></summary>
+      <syntax><![CDATA[public string FragmentIdentifier { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SourceFilename" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the file name of the asset source.]]></summary>
+      <syntax><![CDATA[public string SourceFilename { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SourceTool" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the creation tool of the asset.]]></summary>
+      <syntax><![CDATA[public string SourceTool { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,1554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Color" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IPackedVector&amp;lt;UInt32&amp;gt;, IEquatable&amp;lt;Color&amp;gt;">
+  <summary><![CDATA[Represents a color using Red, Green, Blue, and Alpha values.]]></summary>
+  <syntax><![CDATA[public struct Color : IPackedVector&lt;UInt32&gt;, IEquatable&lt;Color&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Color(Byte, Byte, Byte, Byte)">
+      <summary><![CDATA[Initializes a new instance of Color.]]></summary>
+      <syntax><![CDATA[public Color (
+         byte r,
+         byte g,
+         byte b,
+         byte a
+)]]></syntax>
+      <parameters>
+        <parameter name="r" type="byte"><![CDATA[The red component of a color.]]></parameter>
+        <parameter name="g" type="byte"><![CDATA[The green component of a color.]]></parameter>
+        <parameter name="b" type="byte"><![CDATA[The blue component of a color.]]></parameter>
+        <parameter name="a" type="byte"><![CDATA[The alpha component of a color.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Color(Vector3)">
+      <summary><![CDATA[Initializes a new instance of Color.]]></summary>
+      <syntax><![CDATA[public Color (
+         Vector3 vector
+)]]></syntax>
+      <parameters>
+        <parameter name="vector" type="Object"><![CDATA[A Vector3 containing the Red, Green, and Blue values defining a color.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Color(Byte, Byte, Byte)">
+      <summary><![CDATA[Initializes a new instance of Color.]]></summary>
+      <syntax><![CDATA[public Color (
+         byte r,
+         byte g,
+         byte b
+)]]></syntax>
+      <parameters>
+        <parameter name="r" type="byte"><![CDATA[The red component of a color.]]></parameter>
+        <parameter name="g" type="byte"><![CDATA[The green component of a color.]]></parameter>
+        <parameter name="b" type="byte"><![CDATA[The blue component of a color.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Color(Vector4)">
+      <summary><![CDATA[Initializes a new instance of Color.]]></summary>
+      <syntax><![CDATA[public Color (
+         Vector4 vector
+)]]></syntax>
+      <parameters>
+        <parameter name="vector" type="Object"><![CDATA[A Vector4 containing the Red, Green, Blue, and Alpha values defining a color.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="A" type="byte" access="get">
+      <summary><![CDATA[Gets the alpha component value.]]></summary>
+      <syntax><![CDATA[public byte A { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="AliceBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:240 G:248 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color AliceBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="AntiqueWhite" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:250 G:235 B:215 A:255.]]></summary>
+      <syntax><![CDATA[public static Color AntiqueWhite { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Aqua" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:255 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Aqua { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Aquamarine" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:127 G:255 B:212 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Aquamarine { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Azure" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:240 G:255 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Azure { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="B" type="byte" access="get">
+      <summary><![CDATA[Gets the blue component value of this Color.]]></summary>
+      <syntax><![CDATA[public byte B { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Beige" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:245 G:245 B:220 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Beige { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Bisque" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:228 B:196 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Bisque { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Black" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:0 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Black { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="BlanchedAlmond" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:235 B:205 A:255.]]></summary>
+      <syntax><![CDATA[public static Color BlanchedAlmond { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Blue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:0 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Blue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="BlueViolet" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:138 G:43 B:226 A:255.]]></summary>
+      <syntax><![CDATA[public static Color BlueViolet { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Brown" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:165 G:42 B:42 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Brown { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="BurlyWood" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:222 G:184 B:135 A:255.]]></summary>
+      <syntax><![CDATA[public static Color BurlyWood { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CadetBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:95 G:158 B:160 A:255.]]></summary>
+      <syntax><![CDATA[public static Color CadetBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Chartreuse" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:127 G:255 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Chartreuse { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Chocolate" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:210 G:105 B:30 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Chocolate { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Coral" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:127 B:80 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Coral { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CornflowerBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:100 G:149 B:237 A:255.]]></summary>
+      <syntax><![CDATA[public static Color CornflowerBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Cornsilk" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:248 B:220 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Cornsilk { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Crimson" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:220 G:20 B:60 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Crimson { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Cyan" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:255 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Cyan { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:0 B:139 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkCyan" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:139 B:139 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkCyan { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkGoldenrod" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:184 G:134 B:11 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkGoldenrod { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkGray" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:169 G:169 B:169 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkGray { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:100 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkKhaki" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:189 G:183 B:107 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkKhaki { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkMagenta" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:139 G:0 B:139 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkMagenta { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkOliveGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:85 G:107 B:47 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkOliveGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkOrange" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:140 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkOrange { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkOrchid" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:153 G:50 B:204 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkOrchid { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkRed" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:139 G:0 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkRed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkSalmon" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:233 G:150 B:122 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkSalmon { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkSeaGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:143 G:188 B:139 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkSeaGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkSlateBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:72 G:61 B:139 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkSlateBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkSlateGray" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:47 G:79 B:79 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkSlateGray { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkTurquoise" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:206 B:209 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkTurquoise { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DarkViolet" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:148 G:0 B:211 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DarkViolet { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DeepPink" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:20 B:147 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DeepPink { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DeepSkyBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:191 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DeepSkyBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DimGray" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:105 G:105 B:105 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DimGray { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DodgerBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:30 G:144 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color DodgerBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Firebrick" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:178 G:34 B:34 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Firebrick { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FloralWhite" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:250 B:240 A:255.]]></summary>
+      <syntax><![CDATA[public static Color FloralWhite { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ForestGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:34 G:139 B:34 A:255.]]></summary>
+      <syntax><![CDATA[public static Color ForestGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Fuchsia" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:0 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Fuchsia { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="G" type="byte" access="get">
+      <summary><![CDATA[Gets the green component value of this Color.]]></summary>
+      <syntax><![CDATA[public byte G { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Gainsboro" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:220 G:220 B:220 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Gainsboro { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GhostWhite" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:248 G:248 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color GhostWhite { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Gold" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:215 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Gold { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Goldenrod" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:218 G:165 B:32 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Goldenrod { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Gray" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:128 G:128 B:128 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Gray { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Green" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:128 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Green { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GreenYellow" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:173 G:255 B:47 A:255.]]></summary>
+      <syntax><![CDATA[public static Color GreenYellow { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Honeydew" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:240 G:255 B:240 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Honeydew { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="HotPink" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:105 B:180 A:255.]]></summary>
+      <syntax><![CDATA[public static Color HotPink { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IndianRed" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:205 G:92 B:92 A:255.]]></summary>
+      <syntax><![CDATA[public static Color IndianRed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Indigo" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:75 G:0 B:130 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Indigo { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Ivory" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:255 B:240 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Ivory { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Khaki" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:240 G:230 B:140 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Khaki { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Lavender" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:230 G:230 B:250 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Lavender { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LavenderBlush" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:240 B:245 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LavenderBlush { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LawnGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:124 G:252 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LawnGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LemonChiffon" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:250 B:205 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LemonChiffon { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:173 G:216 B:230 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightCoral" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:240 G:128 B:128 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightCoral { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightCyan" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:224 G:255 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightCyan { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightGoldenrodYellow" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:250 G:250 B:210 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightGoldenrodYellow { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightGray" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:211 G:211 B:211 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightGray { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:144 G:238 B:144 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightPink" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:182 B:193 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightPink { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightSalmon" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:160 B:122 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightSalmon { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightSeaGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:32 G:178 B:170 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightSeaGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightSkyBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:135 G:206 B:250 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightSkyBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightSlateGray" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:119 G:136 B:153 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightSlateGray { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightSteelBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:176 G:196 B:222 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightSteelBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightYellow" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:255 B:224 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LightYellow { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Lime" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:255 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Lime { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LimeGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:50 G:205 B:50 A:255.]]></summary>
+      <syntax><![CDATA[public static Color LimeGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Linen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:250 G:240 B:230 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Linen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Magenta" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:0 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Magenta { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Maroon" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:128 G:0 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Maroon { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MediumAquamarine" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:102 G:205 B:170 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MediumAquamarine { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MediumBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:0 B:205 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MediumBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MediumOrchid" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:186 G:85 B:211 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MediumOrchid { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MediumPurple" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:147 G:112 B:219 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MediumPurple { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MediumSeaGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:60 G:179 B:113 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MediumSeaGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MediumSlateBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:123 G:104 B:238 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MediumSlateBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MediumSpringGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:250 B:154 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MediumSpringGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MediumTurquoise" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:72 G:209 B:204 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MediumTurquoise { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MediumVioletRed" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:199 G:21 B:133 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MediumVioletRed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MidnightBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:25 G:25 B:112 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MidnightBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MintCream" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:245 G:255 B:250 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MintCream { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MistyRose" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:228 B:225 A:255.]]></summary>
+      <syntax><![CDATA[public static Color MistyRose { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Moccasin" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:228 B:181 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Moccasin { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="NavajoWhite" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:222 B:173 A:255.]]></summary>
+      <syntax><![CDATA[public static Color NavajoWhite { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Navy" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color R:0 G:0 B:128 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Navy { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="OldLace" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:253 G:245 B:230 A:255.]]></summary>
+      <syntax><![CDATA[public static Color OldLace { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Olive" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:128 G:128 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Olive { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="OliveDrab" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:107 G:142 B:35 A:255.]]></summary>
+      <syntax><![CDATA[public static Color OliveDrab { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Orange" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:165 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Orange { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="OrangeRed" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:69 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color OrangeRed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Orchid" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:218 G:112 B:214 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Orchid { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PackedValue" type="UInt32" access="get;set">
+      <summary><![CDATA[Gets the current color as a packed value.]]></summary>
+      <syntax><![CDATA[[CLSCompliantAttribute(false)]
+public UInt32 PackedValue { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PaleGoldenrod" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:238 G:232 B:170 A:255.]]></summary>
+      <syntax><![CDATA[public static Color PaleGoldenrod { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PaleGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:152 G:251 B:152 A:255.]]></summary>
+      <syntax><![CDATA[public static Color PaleGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PaleTurquoise" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:175 G:238 B:238 A:255.]]></summary>
+      <syntax><![CDATA[public static Color PaleTurquoise { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PaleVioletRed" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:219 G:112 B:147 A:255.]]></summary>
+      <syntax><![CDATA[public static Color PaleVioletRed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PapayaWhip" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:239 B:213 A:255.]]></summary>
+      <syntax><![CDATA[public static Color PapayaWhip { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PeachPuff" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:218 B:185 A:255.]]></summary>
+      <syntax><![CDATA[public static Color PeachPuff { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Peru" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:205 G:133 B:63 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Peru { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Pink" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:192 B:203 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Pink { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Plum" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:221 G:160 B:221 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Plum { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PowderBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:176 G:224 B:230 A:255.]]></summary>
+      <syntax><![CDATA[public static Color PowderBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Purple" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:128 G:0 B:128 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Purple { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="R" type="byte" access="get">
+      <summary><![CDATA[Gets the red component value of this Color.]]></summary>
+      <syntax><![CDATA[public byte R { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Red" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:0 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Red { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RosyBrown" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:188 G:143 B:143 A:255.]]></summary>
+      <syntax><![CDATA[public static Color RosyBrown { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RoyalBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:65 G:105 B:225 A:255.]]></summary>
+      <syntax><![CDATA[public static Color RoyalBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SaddleBrown" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:139 G:69 B:19 A:255.]]></summary>
+      <syntax><![CDATA[public static Color SaddleBrown { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Salmon" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:250 G:128 B:114 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Salmon { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SandyBrown" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:244 G:164 B:96 A:255.]]></summary>
+      <syntax><![CDATA[public static Color SandyBrown { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SeaGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:46 G:139 B:87 A:255.]]></summary>
+      <syntax><![CDATA[public static Color SeaGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SeaShell" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:245 B:238 A:255.]]></summary>
+      <syntax><![CDATA[public static Color SeaShell { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Sienna" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:160 G:82 B:45 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Sienna { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Silver" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:192 G:192 B:192 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Silver { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SkyBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:135 G:206 B:235 A:255.]]></summary>
+      <syntax><![CDATA[public static Color SkyBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SlateBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:106 G:90 B:205 A:255.]]></summary>
+      <syntax><![CDATA[public static Color SlateBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SlateGray" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:112 G:128 B:144 A:255.]]></summary>
+      <syntax><![CDATA[public static Color SlateGray { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Snow" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:250 B:250 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Snow { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SpringGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:255 B:127 A:255.]]></summary>
+      <syntax><![CDATA[public static Color SpringGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SteelBlue" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:70 G:130 B:180 A:255.]]></summary>
+      <syntax><![CDATA[public static Color SteelBlue { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Tan" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:210 G:180 B:140 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Tan { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Teal" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:128 B:128 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Teal { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Thistle" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:216 G:191 B:216 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Thistle { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Tomato" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:99 B:71 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Tomato { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TransparentBlack" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:0 G:0 B:0 A:0.]]></summary>
+      <syntax><![CDATA[public static Color TransparentBlack { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TransparentWhite" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:255 B:255 A:0.]]></summary>
+      <syntax><![CDATA[public static Color TransparentWhite { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Turquoise" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:64 G:224 B:208 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Turquoise { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Violet" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:238 G:130 B:238 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Violet { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wheat" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:245 G:222 B:179 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Wheat { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="White" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:255 B:255 A:255.]]></summary>
+      <syntax><![CDATA[public static Color White { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="WhiteSmoke" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:245 G:245 B:245 A:255.]]></summary>
+      <syntax><![CDATA[public static Color WhiteSmoke { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Yellow" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:255 G:255 B:0 A:255.]]></summary>
+      <syntax><![CDATA[public static Color Yellow { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="YellowGreen" type="Color" access="get" isStatic="true">
+      <summary><![CDATA[Gets a system-defined color with the value R:154 G:205 B:50 A:255.]]></summary>
+      <syntax><![CDATA[public static Color YellowGreen { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current Color .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Color">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Color other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Color"><![CDATA[The Color to compare with the current Color .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Gets a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Gets a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToVector3" returnType="void">
+      <summary><![CDATA[Returns the current color as a Vector3.]]></summary>
+      <overloads>
+        <overload signature="ToVector3()">
+          <summary><![CDATA[Returns the current color as a Vector3.]]></summary>
+          <syntax><![CDATA[public Vector3 ToVector3 ()]]></syntax>
+          <returns><![CDATA[The current color represented as a Vector3.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToVector4" returnType="void">
+      <summary><![CDATA[Returns the current color as a Vector4.]]></summary>
+      <overloads>
+        <overload signature="ToVector4()">
+          <summary><![CDATA[Returns the current color as a Vector4.]]></summary>
+          <syntax><![CDATA[public Vector4 ToVector4 ()]]></syntax>
+          <returns><![CDATA[The current color.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Color a,
+         Color b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Color"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="Color"><![CDATA[The object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Color a,
+         Color b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Color"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="Color"><![CDATA[The object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

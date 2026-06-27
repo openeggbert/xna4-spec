@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BasicEffect" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="Effect">
+  <summary><![CDATA[Represents shader model 1.1 Effect that has optional support for vertex colors, texturing, and lighting.]]></summary>
+  <syntax><![CDATA[public class BasicEffect : Effect]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="BasicEffect(GraphicsDevice, BasicEffect)">
+      <summary><![CDATA[Initializes a new instance of the BasicEffect class.]]></summary>
+      <syntax><![CDATA[protected BasicEffect (
+         GraphicsDevice device,
+         BasicEffect clone
+)]]></syntax>
+      <parameters>
+        <parameter name="device" type="GraphicsDevice"><![CDATA[The graphics device that will create the effect.]]></parameter>
+        <parameter name="clone" type="BasicEffect"><![CDATA[The effect to clone.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="BasicEffect(GraphicsDevice, EffectPool)">
+      <summary><![CDATA[Initializes a new instance of the BasicEffect class.]]></summary>
+      <syntax><![CDATA[public BasicEffect (
+         GraphicsDevice device,
+         EffectPool effectPool
+)]]></syntax>
+      <parameters>
+        <parameter name="device" type="GraphicsDevice"><![CDATA[The graphics device that will create the effect.]]></parameter>
+        <parameter name="effectPool" type="EffectPool"><![CDATA[Specifies a pool of resources to share between effects.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="BasicEffect(GraphicsDevice)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         device As GraphicsDevice _
+)]]></syntax>
+      <parameters>
+        <parameter name="device" type="Object"><![CDATA[Type: GraphicsDevice A device.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="BasicEffect(BasicEffect)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA['Declaration
+Protected Sub New ( _
+         cloneSource As BasicEffect _
+)]]></syntax>
+      <parameters>
+        <parameter name="cloneSource" type="Object"><![CDATA[Type: BasicEffect An instance of a object to copy initialization data from.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Alpha" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the alpha this effect material.]]></summary>
+      <syntax><![CDATA[public float Alpha { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="AmbientLightColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the ambient light color of this effect.]]></summary>
+      <syntax><![CDATA[public Vector3 AmbientLightColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DiffuseColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the diffuse color of this effect material. Value takes 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight0" type="BasicDirectionalLight" access="get">
+      <summary><![CDATA[Gets the first directional light for this effect.]]></summary>
+      <syntax><![CDATA[public BasicDirectionalLight DirectionalLight0 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight1" type="BasicDirectionalLight" access="get">
+      <summary><![CDATA[Gets the second directional light for this effect.]]></summary>
+      <syntax><![CDATA[public BasicDirectionalLight DirectionalLight1 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight2" type="BasicDirectionalLight" access="get">
+      <summary><![CDATA[Gets the third directional light for this effect.]]></summary>
+      <syntax><![CDATA[public BasicDirectionalLight DirectionalLight2 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="EmissiveColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the emissive color of the effect material.]]></summary>
+      <syntax><![CDATA[public Vector3 EmissiveColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FogColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the fog color for this effect.]]></summary>
+      <syntax><![CDATA[public Vector3 FogColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FogEnabled" type="bool" access="get;set">
+      <summary><![CDATA[Enables fog for this effect.]]></summary>
+      <syntax><![CDATA[public bool FogEnabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FogEnd" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the ending distance of fog.]]></summary>
+      <syntax><![CDATA[public float FogEnd { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FogStart" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the fog start distance.]]></summary>
+      <syntax><![CDATA[public float FogStart { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LightingEnabled" type="bool" access="get;set">
+      <summary><![CDATA[Enables lighting for this effect.]]></summary>
+      <syntax><![CDATA[public bool LightingEnabled { get; set; }]]></syntax>
+      <remarks><![CDATA[The lighting for BasicEffect is per-vertex and uses three directional lights: DirectionalLight0 , DirectionalLight1 , and DirectionalLight2 .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PreferPerPixelLighting" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets a value indicating that per-pixel lighting should be used if it is available for the current adapter. Per-pixel lighting is available if a graphics adapter supports Pixel Shader Model 2.0.]]></summary>
+      <syntax><![CDATA[public bool PreferPerPixelLighting { get; set; }]]></syntax>
+      <remarks><![CDATA[There are two common types of real-time lighting used in games. Per-vertex lighting is where lighting contributions are determined at each vertex and then the results are interpolated across the triangle. Depending on how tessellated the mesh is, this can result in severe artifacts. Per-pixel lighting interpolates the per-vertex normal across the triangle, but calculates the contribution at each pixel, which results in much smoother lighting, particularly when a specular highlight falls between vertices.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Projection" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the projection matrix.]]></summary>
+      <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SpecularColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the specular color of this effect material.]]></summary>
+      <syntax><![CDATA[public Vector3 SpecularColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SpecularPower" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the specular power of this effect material.]]></summary>
+      <syntax><![CDATA[public float SpecularPower { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Texture" type="Texture2D" access="get;set">
+      <summary><![CDATA[Gets or sets a texture to be applied by this effect.]]></summary>
+      <syntax><![CDATA[public Texture2D Texture { get; set; }]]></syntax>
+      <remarks><![CDATA[If the TextureFilter sampler state is not set, the default filter for BasicEffect is TextureFilter.Linear .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TextureEnabled" type="bool" access="get;set">
+      <summary><![CDATA[Enables textures for this effect.]]></summary>
+      <syntax><![CDATA[public bool TextureEnabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexColorEnabled" type="bool" access="get;set">
+      <summary><![CDATA[Enables use vertex colors for this effect.]]></summary>
+      <syntax><![CDATA[public bool VertexColorEnabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="View" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the view matrix.]]></summary>
+      <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="World" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the world matrix.]]></summary>
+      <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Clone" returnType="void">
+      <summary><![CDATA[Create a copy of this object.]]></summary>
+      <overloads>
+        <overload signature="Clone()">
+          <summary><![CDATA[Create a copy of this object.]]></summary>
+          <syntax><![CDATA[public override Effect Clone ()]]></syntax>
+          <returns><![CDATA[A copy of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EnableDefaultLighting" returnType="void">
+      <summary><![CDATA[Enables default lighting for this effect.]]></summary>
+      <overloads>
+        <overload signature="EnableDefaultLighting()">
+          <summary><![CDATA[Enables default lighting for this effect.]]></summary>
+          <syntax><![CDATA[public void EnableDefaultLighting ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnApply" returnType="void">
+      <summary><![CDATA[Computes derived parameter values immediately before applying the effect.]]></summary>
+      <overloads>
+        <overload signature="OnApply()">
+          <summary><![CDATA[Computes derived parameter values immediately before applying the effect.]]></summary>
+          <syntax><![CDATA[protected internal override void OnApply ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

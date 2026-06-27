@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="OpaqueDataDictionary" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          baseClass="NamedValueDictionary&amp;lt;Object&amp;gt;">
+  <summary><![CDATA[Provides properties that define opaque data for a game asset.]]></summary>
+  <syntax><![CDATA[public sealed class OpaqueDataDictionary : NamedValueDictionary&lt;Object&gt;]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="OpaqueDataDictionary()">
+      <summary><![CDATA[Initializes a new instance of OpaqueDataDictionary.]]></summary>
+      <syntax><![CDATA[public OpaqueDataDictionary ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="GetContentAsXml" returnType="void">
+      <summary><![CDATA[Gets the data contents and returns it as a single XML string. This format is useful for doing deep equality comparison or object hashing.]]></summary>
+      <overloads>
+        <overload signature="GetContentAsXml()">
+          <summary><![CDATA[Gets the data contents and returns it as a single XML string. This format is useful for doing deep equality comparison or object hashing.]]></summary>
+          <syntax><![CDATA[public string GetContentAsXml ()]]></syntax>
+          <returns><![CDATA[Data contents of the entry.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

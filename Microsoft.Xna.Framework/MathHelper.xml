@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MathHelper" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Contains commonly used precalculated values.]]></summary>
+  <syntax><![CDATA[public static class MathHelper]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Barycentric" returnType="void">
+      <summary><![CDATA[Returns the Cartesian coordinate for one axis of a point that is defined by a given triangle and two normalized barycentric (areal) coordinates.]]></summary>
+      <overloads>
+        <overload signature="Barycentric()">
+          <summary><![CDATA[Returns the Cartesian coordinate for one axis of a point that is defined by a given triangle and two normalized barycentric (areal) coordinates.]]></summary>
+          <syntax><![CDATA[public static float Barycentric (
+         float value1,
+         float value2,
+         float value3,
+         float amount1,
+         float amount2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="float"><![CDATA[The coordinate on one axis of vertex 1 of the defining triangle.]]></parameter>
+            <parameter name="value2" type="float"><![CDATA[The coordinate on the same axis of vertex 2 of the defining triangle.]]></parameter>
+            <parameter name="value3" type="float"><![CDATA[The coordinate on the same axis of vertex 3 of the defining triangle.]]></parameter>
+            <parameter name="amount1" type="float"><![CDATA[The normalized barycentric (areal) coordinate b2 , equal to the weighting factor for vertex 2, the coordinate of which is specified in value2 .]]></parameter>
+            <parameter name="amount2" type="float"><![CDATA[The normalized barycentric (areal) coordinate b3 , equal to the weighting factor for vertex 3, the coordinate of which is specified in value3 .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Cartesian coordinate of the specified point with respect to the axis being used.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CatmullRom" returnType="void">
+      <summary><![CDATA[Performs a Catmull-Rom interpolation using the specified positions.]]></summary>
+      <overloads>
+        <overload signature="CatmullRom()">
+          <summary><![CDATA[Performs a Catmull-Rom interpolation using the specified positions.]]></summary>
+          <syntax><![CDATA[public static float CatmullRom (
+         float value1,
+         float value2,
+         float value3,
+         float value4,
+         float amount
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="float"><![CDATA[The first position in the interpolation.]]></parameter>
+            <parameter name="value2" type="float"><![CDATA[The second position in the interpolation.]]></parameter>
+            <parameter name="value3" type="float"><![CDATA[The third position in the interpolation.]]></parameter>
+            <parameter name="value4" type="float"><![CDATA[The fourth position in the interpolation.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Weighting factor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A position that is the result of the Catmull-Rom interpolation.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Clamp" returnType="void">
+      <summary><![CDATA[Restricts a value to be within a specified range.]]></summary>
+      <overloads>
+        <overload signature="Clamp()">
+          <summary><![CDATA[Restricts a value to be within a specified range.]]></summary>
+          <syntax><![CDATA[public static float Clamp (
+         float value,
+         float min,
+         float max
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="float"><![CDATA[The value to clamp.]]></parameter>
+            <parameter name="min" type="float"><![CDATA[The minimum value.]]></parameter>
+            <parameter name="max" type="float"><![CDATA[The maximum value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The clamped value.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Distance" returnType="void">
+      <summary><![CDATA[Calculates the absolute value of the difference of two values.]]></summary>
+      <overloads>
+        <overload signature="Distance()">
+          <summary><![CDATA[Calculates the absolute value of the difference of two values.]]></summary>
+          <syntax><![CDATA[public static float Distance (
+         float value1,
+         float value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="float"><![CDATA[Source value.]]></parameter>
+            <parameter name="value2" type="float"><![CDATA[Source value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Distance between the two values.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Hermite" returnType="void">
+      <summary><![CDATA[Performs a Hermite spline interpolation.]]></summary>
+      <overloads>
+        <overload signature="Hermite()">
+          <summary><![CDATA[Performs a Hermite spline interpolation.]]></summary>
+          <syntax><![CDATA[public static float Hermite (
+         float value1,
+         float tangent1,
+         float value2,
+         float tangent2,
+         float amount
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="float"><![CDATA[Source position.]]></parameter>
+            <parameter name="tangent1" type="float"><![CDATA[Source tangent.]]></parameter>
+            <parameter name="value2" type="float"><![CDATA[Source position.]]></parameter>
+            <parameter name="tangent2" type="float"><![CDATA[Source tangent.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Weighting factor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The result of the Hermite spline interpolation.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Lerp" returnType="void">
+      <summary><![CDATA[Linearly interpolates between two values.]]></summary>
+      <overloads>
+        <overload signature="Lerp()">
+          <summary><![CDATA[Linearly interpolates between two values.]]></summary>
+          <syntax><![CDATA[public static float Lerp (
+         float value1,
+         float value2,
+         float amount
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="float"><![CDATA[Source value.]]></parameter>
+            <parameter name="value2" type="float"><![CDATA[Source value.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Value between 0 and 1 indicating the weight of value2 .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Interpolated value.]]></returns>
+          <remarks><![CDATA[This method performs the linear interpolation based on the following formula. value1 + (value2 - value1) * amount Passing amount a value of 0 will cause value1 to be returned, a value of 1 will cause value2 to be returned.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Max" returnType="void">
+      <summary><![CDATA[Returns the greater of two values.]]></summary>
+      <overloads>
+        <overload signature="Max()">
+          <summary><![CDATA[Returns the greater of two values.]]></summary>
+          <syntax><![CDATA[public static float Max (
+         float value1,
+         float value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="float"><![CDATA[Source value.]]></parameter>
+            <parameter name="value2" type="float"><![CDATA[Source value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The greater value.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Min" returnType="void">
+      <summary><![CDATA[Returns the lesser of two values.]]></summary>
+      <overloads>
+        <overload signature="Min()">
+          <summary><![CDATA[Returns the lesser of two values.]]></summary>
+          <syntax><![CDATA[public static float Min (
+         float value1,
+         float value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="float"><![CDATA[Source value.]]></parameter>
+            <parameter name="value2" type="float"><![CDATA[Source value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The lesser value.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SmoothStep" returnType="void">
+      <summary><![CDATA[Interpolates between two values using a cubic equation.]]></summary>
+      <overloads>
+        <overload signature="SmoothStep()">
+          <summary><![CDATA[Interpolates between two values using a cubic equation.]]></summary>
+          <syntax><![CDATA[public static float SmoothStep (
+         float value1,
+         float value2,
+         float amount
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="float"><![CDATA[Source value.]]></parameter>
+            <parameter name="value2" type="float"><![CDATA[Source value.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Weighting value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Interpolated value.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToDegrees" returnType="void">
+      <summary><![CDATA[Converts radians to degrees.]]></summary>
+      <overloads>
+        <overload signature="ToDegrees()">
+          <summary><![CDATA[Converts radians to degrees.]]></summary>
+          <syntax><![CDATA[public static float ToDegrees (
+         float radians
+)]]></syntax>
+          <parameters>
+            <parameter name="radians" type="float"><![CDATA[The angle in radians.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The angle in degrees.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToRadians" returnType="void">
+      <summary><![CDATA[Converts degrees to radians.]]></summary>
+      <overloads>
+        <overload signature="ToRadians()">
+          <summary><![CDATA[Converts degrees to radians.]]></summary>
+          <syntax><![CDATA[public static float ToRadians (
+         float degrees
+)]]></syntax>
+          <parameters>
+            <parameter name="degrees" type="float"><![CDATA[The angle in degrees.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The angle in radians.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="WrapAngle" returnType="void">
+      <summary><![CDATA[Reduces a given angle to a value between π and -π.]]></summary>
+      <overloads>
+        <overload signature="WrapAngle()">
+          <summary><![CDATA[Reduces a given angle to a value between π and -π.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Function WrapAngle ( _
+         angle As Single _
+) As Single]]></syntax>
+          <parameters>
+            <parameter name="angle" type="Object"><![CDATA[Type: Single The angle to reduce, in radians.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Single The new angle, in radians.]]></returns>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="E" type="float" isReadOnly="true">
+      <summary><![CDATA[Represents the mathematical constant e.]]></summary>
+      <syntax><![CDATA[public const float E]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Log10E" type="float" isReadOnly="true">
+      <summary><![CDATA[Represents the log base ten of e.]]></summary>
+      <syntax><![CDATA[public const float Log10E]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Log2E" type="float" isReadOnly="true">
+      <summary><![CDATA[Represents the log base two of e.]]></summary>
+      <syntax><![CDATA[public const float Log2E]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Pi" type="float" isReadOnly="true">
+      <summary><![CDATA[Represents the value of pi.]]></summary>
+      <syntax><![CDATA[public const float Pi]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="PiOver2" type="float" isReadOnly="true">
+      <summary><![CDATA[Represents the value of pi divided by two.]]></summary>
+      <syntax><![CDATA[public const float PiOver2]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="PiOver4" type="float" isReadOnly="true">
+      <summary><![CDATA[Represents the value of pi divided by four.]]></summary>
+      <syntax><![CDATA[public const float PiOver4]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="TwoPi" type="float" isReadOnly="true">
+      <summary><![CDATA[Represents the value of pi times two.]]></summary>
+      <syntax><![CDATA[public const float TwoPi]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

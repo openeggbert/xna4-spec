@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ModelProcessor" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          baseClass="ContentProcessor&amp;lt;NodeContent"
+          interfaces="ModelContent&amp;gt;">
+  <summary><![CDATA[Processes a game asset mesh to a model content that is optimal for runtime.]]></summary>
+  <syntax><![CDATA[public class ModelProcessor : ContentProcessor&lt;NodeContent, ModelContent&gt;]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ModelProcessor()">
+      <summary><![CDATA[Initializes a new instance of ModelProcessor.]]></summary>
+      <syntax><![CDATA[public ModelProcessor ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="ColorKeyColor" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual Color ColorKeyColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="ColorKeyEnabled" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual bool ColorKeyEnabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="DefaultEffect" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual MaterialProcessorDefaultEffect DefaultEffect { get; set; }]]></syntax>
+      <remarks><![CDATA[When ModelProcessor is instantiated, DefaultEffect is set to default to BasicEffect Class .]]></remarks>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="GenerateMipmaps" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual bool GenerateMipmaps { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="GenerateTangentFrames" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual bool GenerateTangentFrames { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="PremultiplyTextureAlpha" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[[DefaultValueAttribute(true)]
+public virtual bool PremultiplyTextureAlpha { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="PremultiplyVertexColors" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[[DefaultValueAttribute(true)]
+public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="ResizeTexturesToPowerOfTwo" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual bool ResizeTexturesToPowerOfTwo { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="RotationX" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual float RotationX { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="RotationY" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual float RotationY { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="RotationZ" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual float RotationZ { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Scale" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual float Scale { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="SwapWindingOrder" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual bool SwapWindingOrder { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="TextureFormat" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual TextureProcessorOutputFormat TextureFormat { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="ConvertMaterial" returnType="void">
+      <summary><![CDATA[Called by the framework when the MaterialContent property of a GeometryContent object is encountered in the input node collection.]]></summary>
+      <overloads>
+        <overload signature="ConvertMaterial()">
+          <summary><![CDATA[Called by the framework when the MaterialContent property of a GeometryContent object is encountered in the input node collection.]]></summary>
+          <syntax><![CDATA[protected virtual MaterialContent ConvertMaterial (
+         MaterialContent material,
+         ContentProcessorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="material" type="MaterialContent"><![CDATA[The input material content.]]></parameter>
+            <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The converted material content.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Process" returnType="void">
+      <summary><![CDATA[Converts mesh content to model content.]]></summary>
+      <overloads>
+        <overload signature="Process()">
+          <summary><![CDATA[Converts mesh content to model content.]]></summary>
+          <syntax><![CDATA[public virtual ModelContent Process (
+         NodeContent input,
+         ContentProcessorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="input" type="NodeContent"><![CDATA[The root node content.]]></parameter>
+            <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The model content.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ProcessGeometryUsingMaterial" returnType="void">
+      <summary><![CDATA[Processes all geometry using a specified material.]]></summary>
+      <overloads>
+        <overload signature="ProcessGeometryUsingMaterial()">
+          <summary><![CDATA[Processes all geometry using a specified material.]]></summary>
+          <syntax><![CDATA[protected virtual void ProcessGeometryUsingMaterial (
+         MaterialContent material,
+         IEnumerable&lt;GeometryContent&gt; geometryCollection,
+         ContentProcessorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="material" type="MaterialContent"><![CDATA[A material used in the scene.]]></parameter>
+            <parameter name="geometryCollection" type="Object"><![CDATA[A collection of all the geometry using the specified material.]]></parameter>
+            <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This function will be called for each material used by geometry in the input mesh, passing in a collection of all the geometry that is using the specified material. T he default implementation replaces null materials with a default BasicMaterialContent , validates that the geometry contains texture coordinates if a BasicMaterialContent has a texture, and sets the VertexColorEnabled property depending on whether the geometry contains vertex color data.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ProcessVertexChannel" returnType="void">
+      <summary><![CDATA[Processes geometry content vertex channels at the specified index.]]></summary>
+      <overloads>
+        <overload signature="ProcessVertexChannel()">
+          <summary><![CDATA[Processes geometry content vertex channels at the specified index.]]></summary>
+          <syntax><![CDATA[protected virtual void ProcessVertexChannel (
+         GeometryContent geometry,
+         int vertexChannelIndex,
+         ContentProcessorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="geometry" type="GeometryContent"><![CDATA[The geometry content to process.]]></parameter>
+            <parameter name="vertexChannelIndex" type="int"><![CDATA[Index of the vertex channel to process.]]></parameter>
+            <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This function will be called for each VertexChannel of Vertices found in the input mesh. Subclasses of ModelProcessor can override ProcessVertexChannel to control how vertex data is processed. The default implementation converts VertexElementUsage.Color channels to Color format, and replaces Weights channels with a pair of VertexElementUsage.BlendIndices and VertexElementUsage.BlendIndices channels (using Byte4 format for the VertexElementUsage.BlendWeight , Color for the VertexElementUsage.BlendWeight , and discarding excess weights if there are more than four per vertex).]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

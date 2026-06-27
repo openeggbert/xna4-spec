@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BoundingSphereConverter" kind="class"
+          namespace="Microsoft.Xna.Framework.Design"
+          assembly="Microsoft.Xna.Framework.Design"
+          baseClass="MathTypeConverter">
+  <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public class BoundingSphereConverter : MathTypeConverter]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="BoundingSphereConverter()">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public BoundingSphereConverter ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="ConvertFrom" returnType="Object">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ITypeDescriptorContext, CultureInfo, Object">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override Object ConvertFrom (
+         ITypeDescriptorContext context,
+         CultureInfo culture,
+         Object value
+)]]></syntax>
+          <parameters>
+            <parameter name="context" type="ITypeDescriptorContext"><![CDATA[The format context.]]></parameter>
+            <parameter name="culture" type="CultureInfo"><![CDATA[The current culture.]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[The object to convert.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The converted value.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ConvertTo" returnType="Object">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ITypeDescriptorContext, CultureInfo, Object, Type">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override Object ConvertTo (
+         ITypeDescriptorContext context,
+         CultureInfo culture,
+         Object value,
+         Type destinationType
+)]]></syntax>
+          <parameters>
+            <parameter name="context" type="ITypeDescriptorContext"><![CDATA[The format context.]]></parameter>
+            <parameter name="culture" type="CultureInfo"><![CDATA[The culture to use in the conversion.]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[The object to convert.]]></parameter>
+            <parameter name="destinationType" type="Type"><![CDATA[The destination type.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The converted value.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateInstance" returnType="Object">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ITypeDescriptorContext, IDictionary">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override Object CreateInstance (
+         ITypeDescriptorContext context,
+         IDictionary propertyValues
+)]]></syntax>
+          <parameters>
+            <parameter name="context" type="ITypeDescriptorContext"><![CDATA[The format context.]]></parameter>
+            <parameter name="propertyValues" type="IDictionary"><![CDATA[The new property values.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An object representing propertyValues, or null if the object cannot be created.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

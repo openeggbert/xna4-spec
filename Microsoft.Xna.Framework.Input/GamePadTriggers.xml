@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamePadTriggers" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input"
+          assembly="Microsoft.Xna.Framework.Input">
+  <summary><![CDATA[Structure that defines the position of the left and right triggers on an Xbox 360 Controller.]]></summary>
+  <syntax><![CDATA[public struct GamePadTriggers]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GamePadTriggers(Object, Object)">
+      <summary><![CDATA[Initializes a new instance of the GamePadTriggers class.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         leftTrigger As Single, _
+         rightTrigger As Single _
+)]]></syntax>
+      <parameters>
+        <parameter name="leftTrigger" type="Object"><![CDATA[Type: Single Left trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
+        <parameter name="rightTrigger" type="Object"><![CDATA[Type: Single Right trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Games normally use GetState to get the true gamepad state. This constructor is used instead to simulate gamepad input for passing within the game's own input subsystem.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Left" type="float" access="get">
+      <summary><![CDATA[Identifies the position of the left trigger on the Xbox 360 Controller.]]></summary>
+      <syntax><![CDATA[public float Left { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Right" type="float" access="get">
+      <summary><![CDATA[Identifies the position of the right trigger on the Xbox 360 Controller.]]></summary>
+      <syntax><![CDATA[public float Right { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether two GamePadTriggers instances are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether two GamePadTriggers instances are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         GamePadTriggers left,
+         GamePadTriggers right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GamePadTriggers"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="GamePadTriggers"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the instances are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether two GamePadTriggers instances are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether two GamePadTriggers instances are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         GamePadTriggers left,
+         GamePadTriggers right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GamePadTriggers"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="GamePadTriggers"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

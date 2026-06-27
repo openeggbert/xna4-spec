@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="StorageDevice" kind="class"
+          namespace="Microsoft.Xna.Framework.Storage"
+          assembly="Microsoft.Xna.Framework.Storage">
+  <summary><![CDATA[Represents a storage device for user data, such as a memory unit or hard drive.]]></summary>
+  <syntax><![CDATA[public sealed class StorageDevice]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="FreeSpace" type="long" access="get">
+      <summary><![CDATA[Gets the amount of free space on the device.]]></summary>
+      <syntax><![CDATA[public long FreeSpace { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsConnected" type="bool" access="get">
+      <summary><![CDATA[Gets whether the device is connected.]]></summary>
+      <syntax><![CDATA[public bool IsConnected { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TotalSpace" type="long" access="get">
+      <summary><![CDATA[Gets the amount of free space on the device.]]></summary>
+      <syntax><![CDATA[public long TotalSpace { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="BeginOpenContainer" returnType="void">
+      <summary><![CDATA[Begins the process for opening a StorageContainer containing any files for the specified title.]]></summary>
+      <overloads>
+        <overload signature="BeginOpenContainer()">
+          <summary><![CDATA[Begins the process for opening a StorageContainer containing any files for the specified title.]]></summary>
+          <syntax><![CDATA[public IAsyncResult BeginOpenContainer (
+         string displayName,
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="displayName" type="string"><![CDATA[Type: String A constant human-readable string that names the file.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[Type: AsyncCallback An AsyncCallback that represents the method called when the operation is complete.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[Type: Object A user-created object used to uniquely identify the request, or null .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <remarks><![CDATA[After the container is opened, changes to the files within the container are cached until the container is disposed. For this reason, only one container per profile can be opened concurrently on the same device. If the storage device is removed or the Xbox 360 console is powered down before the container is disposed, any changes are lost. Call the Dispose method to dispose a StorageContainer .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BeginShowSelector" returnType="IAsyncResult" isStatic="true">
+      <summary><![CDATA[Begins the process for displaying the storage device selector user interface, for specifying the player who requested the save operation, for setting the size of data to be written to the storage device, and for naming the callback implemented when the player chooses a device.]]></summary>
+      <overloads>
+        <overload signature="PlayerIndex, Int32, Int32, AsyncCallback, Object">
+          <summary><![CDATA[Begins the process for displaying the storage device selector user interface, for specifying the player who requested the save operation, for setting the size of data to be written to the storage device, and for naming the callback implemented when the player chooses a device.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowSelector (
+         PlayerIndex player,
+         int sizeInBytes,
+         int directoryCount,
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Type: PlayerIndex The PlayerIndex that represents the player who requested the save operation. On Windows, the only valid option is PlayerIndex.One .]]></parameter>
+            <parameter name="sizeInBytes" type="int"><![CDATA[Type: Int32 The size, in bytes, of the data to write to the storage device.]]></parameter>
+            <parameter name="directoryCount" type="int"><![CDATA[Type: Int32 The number of directories to write to the storage device.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[Type: AsyncCallback An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[Type: Object A user-created object used to uniquely identify the request, or null .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="AsyncCallback, Object">
+          <summary><![CDATA[Begins the process for displaying the storage device selector user interface, and for specifying a callback implemented when the player chooses a device.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowSelector (
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[Type: AsyncCallback An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[Type: Object A user-created object used to uniquely identify the request, or null .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="PlayerIndex, AsyncCallback, Object">
+          <summary><![CDATA[Begins the process for displaying the storage device selector user interface; specifies the callback implemented when the player chooses a device.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowSelector (
+         PlayerIndex player,
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="player" type="PlayerIndex"><![CDATA[Type: PlayerIndex The PlayerIndex that represents the player who requested the save operation. On Windows, the only valid option is PlayerIndex.One .]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[Type: AsyncCallback An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[Type: Object A user-created object used to uniquely identify the request, or null .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Int32, AsyncCallback, Object">
+          <summary><![CDATA[Begins the process for displaying the storage device selector user interface, and for specifying the size of the data to be written to the storage device and the callback implemented when the player chooses a device.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowSelector (
+         int sizeInBytes,
+         int directoryCount,
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="sizeInBytes" type="int"><![CDATA[Type: Int32 The size, in bytes, of data to write to the storage device.]]></parameter>
+            <parameter name="directoryCount" type="int"><![CDATA[Type: Int32 The number of directories to write to the storage device.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[Type: AsyncCallback An AsyncCallback that represents the method called when the player chooses a device.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[Type: Object A user-created object used to uniquely identify the request, or null .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BeginShowStorageDeviceGuide" returnType="IAsyncResult" isStatic="true">
+      <summary><![CDATA[Asynchronously displays the device selection UI to allow users to select a device to save data. This method has no effect on Windows.]]></summary>
+      <overloads>
+        <overload signature="PlayerIndex, AsyncCallback, Object">
+          <summary><![CDATA[Asynchronously displays the device selection UI to allow users to select a device to save data. This method has no effect on Windows.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceGuide (
+         PlayerIndex playerIndex,
+         AsyncCallback callback,
+         Object stateObject
+)]]></syntax>
+          <parameters>
+            <parameter name="playerIndex" type="PlayerIndex"><![CDATA[The PlayerIndex of the user associated with the local port (input port).]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[The method to be called once the user has selected the device.]]></parameter>
+            <parameter name="stateObject" type="Object"><![CDATA[A user-created object that uniquely identifies this request.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <remarks><![CDATA[Calling BeginShowStorageDeviceGuide when another storage device guide is on screen results in an InvalidOperationException . It is possible to trigger this exception if you call BeginShowStorageDeviceGuide immediately after calling EndShowStorageDeviceGuide (when the dialog box is still dismissing itself). To avoid this exception, avoid calling BeginShowStorageDeviceGuide twice, or do not call BeginShowStorageDeviceGuide until a few seconds after calling EndShowStorageDeviceGuide .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="AsyncCallback, Object">
+          <summary><![CDATA[Asynchronously displays the device selection UI to allow users to select a device to save data. This method has no effect on Windows.]]></summary>
+          <syntax><![CDATA[public static IAsyncResult BeginShowStorageDeviceGuide (
+         AsyncCallback callback,
+         Object stateObject
+)]]></syntax>
+          <parameters>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[The method to be called once the user has selected the device.]]></parameter>
+            <parameter name="stateObject" type="Object"><![CDATA[A user-created object that uniquely identifies this request.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <remarks><![CDATA[Calling BeginShowStorageDeviceGuide when another storage device guide is on screen results in an InvalidOperationException . It is possible to trigger this exception if you call BeginShowStorageDeviceGuide immediately after calling EndShowStorageDeviceGuide (when the dialog is still dismissing itself). To avoid this exception, avoid calling BeginShowStorageDeviceGuide twice, or do not call BeginShowStorageDeviceGuide until a few seconds after calling EndShowStorageDeviceGuide .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DeleteContainer" returnType="void">
+      <summary><![CDATA[Deletes a storage container without opening it. You can do this even if the container is corrupted.]]></summary>
+      <overloads>
+        <overload signature="DeleteContainer()">
+          <summary><![CDATA[Deletes a storage container without opening it. You can do this even if the container is corrupted.]]></summary>
+          <syntax><![CDATA[public void DeleteContainer (
+         string titleName
+)]]></syntax>
+          <parameters>
+            <parameter name="titleName" type="string"><![CDATA[Type: String The name of the storage container to delete.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[The string passed to titleName must be the same string used with StorageDevice.BeginOpenContainer . Usually a storage container is closed with StorageContainer.Dispose so that it can be re-opened with its data intact. Use DeleteContainer only when you want to delete the data permanently or when you determine the storage container has been corrupted. See the What Is Storage? for more information about using storage containers in your title.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndOpenContainer" returnType="void">
+      <summary><![CDATA[Ends the process for opening a StorageContainer.]]></summary>
+      <overloads>
+        <overload signature="EndOpenContainer()">
+          <summary><![CDATA[Ends the process for opening a StorageContainer.]]></summary>
+          <syntax><![CDATA[public StorageContainer EndOpenContainer (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[Type: IAsyncResult The IAsyncResult returned from BeginOpenContainer .]]></parameter>
+          </parameters>
+          <returns><![CDATA[A StorageContainer containing any files for the title.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndShowSelector" returnType="void">
+      <summary><![CDATA[Ends the display of the storage selector user interface.]]></summary>
+      <overloads>
+        <overload signature="EndShowSelector()">
+          <summary><![CDATA[Ends the display of the storage selector user interface.]]></summary>
+          <syntax><![CDATA[public static StorageDevice EndShowSelector (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[Type: IAsyncResult The IAsyncResult returned from BeginShowSelector .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Returns the storage device selected by the gamer, or null if the user cancelled the selection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndShowStorageDeviceGuide" returnType="void">
+      <summary><![CDATA[Ends the device selection UI.]]></summary>
+      <overloads>
+        <overload signature="EndShowStorageDeviceGuide()">
+          <summary><![CDATA[Ends the device selection UI.]]></summary>
+          <syntax><![CDATA[public static StorageDevice EndShowStorageDeviceGuide (
+         IAsyncResult asyncResult
+)]]></syntax>
+          <parameters>
+            <parameter name="asyncResult" type="IAsyncResult"><![CDATA[The IAsyncResult returned from BeginShowStorageDeviceGuide .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The storage device selected by the user.]]></returns>
+          <remarks><![CDATA[Calling BeginShowStorageDeviceGuide when another storage device guide is on screen results in an InvalidOperationException . It is possible to trigger this exception if you call BeginShowStorageDeviceGuide immediately after calling EndShowStorageDeviceGuide (when the dialog is still dismissing itself). To avoid this exception, avoid calling BeginShowStorageDeviceGuide twice, or do not call BeginShowStorageDeviceGuide until a few seconds after calling EndShowStorageDeviceGuide .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OpenContainer" returnType="void">
+      <summary><![CDATA[Opens a StorageContainer containing any files for the specified title.]]></summary>
+      <overloads>
+        <overload signature="OpenContainer()">
+          <summary><![CDATA[Opens a StorageContainer containing any files for the specified title.]]></summary>
+          <syntax><![CDATA[public StorageContainer OpenContainer (
+         string titleName
+)]]></syntax>
+          <parameters>
+            <parameter name="titleName" type="string"><![CDATA[The name of the XNA Framework title.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A StorageContainer containing any files for the title.]]></returns>
+          <remarks><![CDATA[titleName should be a constant human readable string used to identify your title and generate a title-unique storage location. After the container has been opened, changes to the files within the container are cached until the container is disposed. For this reason, only one container per profile can be opened at the same time on the same device. If the storage device is removed or the Xbox 360 console is powered down before the container is disposed, any changes are lost. Call the Dispose method to dispose a StorageContainer .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ShowStorageDeviceGuide" returnType="StorageDevice" isStatic="true">
+      <summary><![CDATA[Displays the device selector UI to allow users to select a device to save data. Has no effect on Windows.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Displays the device selector UI to allow users to select a device to save data. Has no effect on Windows.]]></summary>
+          <syntax><![CDATA[public static StorageDevice ShowStorageDeviceGuide ()]]></syntax>
+          <returns><![CDATA[The storage device selected by the user.]]></returns>
+          <remarks><![CDATA[Warning Calling this function from the main thread of an Xbox 360 game will freeze the game. Use BeginShowStorageDeviceGuide instead, or call this function from a secondary thread.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="PlayerIndex">
+          <summary><![CDATA[Displays the device selector UI to allow users to select a device to save data. Has no effect on Windows.]]></summary>
+          <syntax><![CDATA[public static StorageDevice ShowStorageDeviceGuide (
+         PlayerIndex playerIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="playerIndex" type="PlayerIndex"><![CDATA[The PlayerIndex of the user associated with the local port (input port).]]></parameter>
+          </parameters>
+          <returns><![CDATA[The storage device selected by the user.]]></returns>
+          <remarks><![CDATA[Warning Calling this function from the main thread of an Xbox 360 game will freeze the game. Use BeginShowStorageDeviceGuide instead, or call this function from a secondary thread.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="DeviceChanged" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+      <summary><![CDATA[Occurs when a device is removed or inserted.]]></summary>
+      <syntax><![CDATA[public static event EventHandler&lt;EventArgs&gt; DeviceChanged]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

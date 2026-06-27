@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MouseState" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input"
+          assembly="Microsoft.Xna.Framework.Input">
+  <summary><![CDATA[This structure is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public struct MouseState]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="MouseState(Object, Object, Object, Object, Object, Object, Object, Object)">
+      <summary><![CDATA[Initializes a new instance of the MouseState class.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         x As Integer, _
+         y As Integer, _
+         scrollWheel As Integer, _
+         leftButton As ButtonState, _
+         middleButton As ButtonState, _
+         rightButton As ButtonState, _
+         xButton1 As ButtonState, _
+         xButton2 As ButtonState _
+)]]></syntax>
+      <parameters>
+        <parameter name="x" type="Object"><![CDATA[Type: Int32 Horizontal mouse position.]]></parameter>
+        <parameter name="y" type="Object"><![CDATA[Type: Int32 Vertical mouse position.]]></parameter>
+        <parameter name="scrollWheel" type="Object"><![CDATA[Type: Int32 Mouse scroll wheel value.]]></parameter>
+        <parameter name="leftButton" type="Object"><![CDATA[Type: ButtonState Left mouse button state.]]></parameter>
+        <parameter name="middleButton" type="Object"><![CDATA[Type: ButtonState Middle mouse button state.]]></parameter>
+        <parameter name="rightButton" type="Object"><![CDATA[Type: ButtonState Right mouse button state.]]></parameter>
+        <parameter name="xButton1" type="Object"><![CDATA[Type: ButtonState XBUTTON1 state.]]></parameter>
+        <parameter name="xButton2" type="Object"><![CDATA[Type: ButtonState XBUTTON2 state.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Games normally use GetState to get the true mouse state. This constructor is used instead to simulate mouse input for passing within the game's own input subsystem.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="LeftButton" type="ButtonState" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public ButtonState LeftButton { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MiddleButton" type="ButtonState" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public ButtonState MiddleButton { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RightButton" type="ButtonState" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public ButtonState RightButton { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ScrollWheelValue" type="int" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public int ScrollWheelValue { get; }]]></syntax>
+      <remarks><![CDATA[Unlike standard Windows and WinForms mouse messages, which report a relative value for the scroll wheel, XNA reports the total scroll wheel value accumulated over the length of a game's execution. To process a wheel movement, you must compare the previous frame's wheel value to the current wheel value.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="X" type="int" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public int X { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="XButton1" type="ButtonState" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public ButtonState XButton1 { get; }]]></syntax>
+      <remarks><![CDATA[XBUTTON1 and XBUTTON2 are additional buttons used on many mouse devices, often for forward and backward navigation in Web browsers. They return the same data as standard mouse buttons.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="XButton2" type="ButtonState" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public ButtonState XButton2 { get; }]]></syntax>
+      <remarks><![CDATA[XBUTTON1 and XBUTTON2 are additional buttons used on many mouse devices, often for forward and backward navigation in Web browsers. They return the same data as standard mouse buttons.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Y" type="int" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public int Y { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         MouseState left,
+         MouseState right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="MouseState"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="MouseState"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the instances are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         MouseState left,
+         MouseState right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="MouseState"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="MouseState"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

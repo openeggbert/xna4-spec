@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CurveKeyCollection" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="ICollection&amp;lt;CurveKey&amp;gt;, IEnumerable&amp;lt;CurveKey&amp;gt;, IEnumerable">
+  <summary><![CDATA[Contains the CurveKeys making up a Curve.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute(System.ComponentModel.ExpandableObjectConverter, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)]
+[SerializableAttribute]
+public class CurveKeyCollection : ICollection&lt;CurveKey&gt;, IEnumerable&lt;CurveKey&gt;, IEnumerable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="CurveKeyCollection()">
+      <summary><![CDATA[Initializes a new instance of CurveKeyCollection.]]></summary>
+      <syntax><![CDATA[public CurveKeyCollection ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Gets the number of elements contained in the CurveKeyCollection.]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsReadOnly" type="bool" access="get">
+      <summary><![CDATA[Returns a value indicating whether the CurveKeyCollection is read-only.]]></summary>
+      <syntax><![CDATA[public bool IsReadOnly { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets the element at the specified index.]]></summary>
+      <syntax><![CDATA[public CurveKey this [
+         int index
+] { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Add" returnType="void">
+      <summary><![CDATA[Adds a CurveKey to the CurveKeyCollection.]]></summary>
+      <overloads>
+        <overload signature="Add()">
+          <summary><![CDATA[Adds a CurveKey to the CurveKeyCollection.]]></summary>
+          <syntax><![CDATA[public void Add (
+         CurveKey item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="CurveKey"><![CDATA[The CurveKey to add.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Clear" returnType="void">
+      <summary><![CDATA[Removes all CurveKeys from the CurveKeyCollection.]]></summary>
+      <overloads>
+        <overload signature="Clear()">
+          <summary><![CDATA[Removes all CurveKeys from the CurveKeyCollection.]]></summary>
+          <syntax><![CDATA[public void Clear ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Clone" returnType="void">
+      <summary><![CDATA[Creates a copy of the CurveKeyCollection.]]></summary>
+      <overloads>
+        <overload signature="Clone()">
+          <summary><![CDATA[Creates a copy of the CurveKeyCollection.]]></summary>
+          <syntax><![CDATA[public CurveKeyCollection Clone ()]]></syntax>
+          <returns><![CDATA[A new object that is a copy of this instance.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Contains" returnType="void">
+      <summary><![CDATA[Determines whether the CurveKeyCollection contains a specific CurveKey.]]></summary>
+      <overloads>
+        <overload signature="Contains()">
+          <summary><![CDATA[Determines whether the CurveKeyCollection contains a specific CurveKey.]]></summary>
+          <syntax><![CDATA[public bool Contains (
+         CurveKey item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="CurveKey"><![CDATA[true if the CurveKey is found in the CurveKeyCollection ; false otherwise.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The CurveKey to locate in the CurveKeyCollection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CopyTo" returnType="void">
+      <summary><![CDATA[Copies the CurveKeys of the CurveKeyCollection to an array, starting at the array index provided.]]></summary>
+      <overloads>
+        <overload signature="CopyTo()">
+          <summary><![CDATA[Copies the CurveKeys of the CurveKeyCollection to an array, starting at the array index provided.]]></summary>
+          <syntax><![CDATA[public void CopyTo (
+         CurveKey[] array,
+         int arrayIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="array" type="CurveKey[]"><![CDATA[The destination of the CurveKeys copied from CurveKeyCollection . The array must have zero-based indexing.]]></parameter>
+            <parameter name="arrayIndex" type="int"><![CDATA[The zero-based index in the array to start copying from.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Returns an enumerator that iterates through the CurveKeyCollection.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Returns an enumerator that iterates through the CurveKeyCollection.]]></summary>
+          <syntax><![CDATA[public IEnumerator&lt;CurveKey&gt; GetEnumerator ()]]></syntax>
+          <returns><![CDATA[An enumerator for the CurveKeyCollection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IndexOf" returnType="void">
+      <summary><![CDATA[Determines the index of a CurveKey in the CurveKeyCollection.]]></summary>
+      <overloads>
+        <overload signature="IndexOf()">
+          <summary><![CDATA[Determines the index of a CurveKey in the CurveKeyCollection.]]></summary>
+          <syntax><![CDATA[public int IndexOf (
+         CurveKey item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="CurveKey"><![CDATA[CurveKey to locate in the CurveKeyCollection .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The index of the CurveKey if found in the CurveKeyCollection; −1 otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Remove" returnType="void">
+      <summary><![CDATA[Removes the first occurrence of a specific CurveKey from the CurveKeyCollection.]]></summary>
+      <overloads>
+        <overload signature="Remove()">
+          <summary><![CDATA[Removes the first occurrence of a specific CurveKey from the CurveKeyCollection.]]></summary>
+          <syntax><![CDATA[public bool Remove (
+         CurveKey item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="CurveKey"><![CDATA[The CurveKey to remove from the CurveKeyCollection .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if CurveKey is successfully removed; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="RemoveAt" returnType="void">
+      <summary><![CDATA[Removes the CurveKey at the specified index.]]></summary>
+      <overloads>
+        <overload signature="RemoveAt()">
+          <summary><![CDATA[Removes the CurveKey at the specified index.]]></summary>
+          <syntax><![CDATA[public void RemoveAt (
+         int index
+)]]></syntax>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[The zero-based index of the item to remove.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

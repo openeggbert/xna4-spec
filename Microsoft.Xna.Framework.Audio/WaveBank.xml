@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="WaveBank" kind="class"
+          namespace="Microsoft.Xna.Framework.Audio"
+          assembly="Microsoft.Xna.Framework.Audio"
+          interfaces="IDisposable">
+  <summary><![CDATA[Represents a wave bank, which is a collection of wave files.]]></summary>
+  <syntax><![CDATA[public class WaveBank : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="WaveBank(AudioEngine, String, Int32, Int16)">
+      <summary><![CDATA[Initializes a new, streaming instance of this class, using a provided AudioEngine and streaming wave bank parameters.]]></summary>
+      <syntax><![CDATA[public WaveBank (
+         AudioEngine audioEngine,
+         string streamingWaveBankFilename,
+         int offset,
+         short packetsize
+)]]></syntax>
+      <parameters>
+        <parameter name="audioEngine" type="AudioEngine"><![CDATA[Instance of an AudioEngine to associate this wave bank with.]]></parameter>
+        <parameter name="streamingWaveBankFilename" type="string"><![CDATA[Path to the wave bank file to stream from.]]></parameter>
+        <parameter name="offset" type="int"><![CDATA[Offset within the wave bank data file. This offset must be DVD sector aligned.]]></parameter>
+        <parameter name="packetsize" type="short"><![CDATA[Stream packet size, in sectors, to use for each stream. The minimum value is 2.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[This constructor constructs a streaming wave bank whose contents are streamed from storage as needed. When setting packetsize , note that the size of a DVD sector is 2,048 bytes. Therefore, setting this value to 2 would result in a packet size of 4,096 bytes. Setting it to 3 would specify packets of 6,144 bytes, setting it to 4 would specify packets of 8,192 bytes, and so on. The optimal DVD size is a multiple of 16 (1 DVD block = 16 DVD sectors). After creating a streaming wave bank, you must call Update at least once from the AudioEngine that was used to create the streaming wave bank before attempting to play a wave from the wave bank. This properly prepares the wave bank for use. Attempts to play waves out of any wave bank before the wave bank is prepared will result in an error.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="WaveBank(AudioEngine, String)">
+      <summary><![CDATA[Initializes a new, in-memory instance of this class using a specified AudioEngine and path to a wave bank file.]]></summary>
+      <syntax><![CDATA[public WaveBank (
+         AudioEngine audioEngine,
+         string nonStreamingWaveBankFilename
+)]]></syntax>
+      <parameters>
+        <parameter name="audioEngine" type="AudioEngine"><![CDATA[Instance of an AudioEngine to associate this wave bank with.]]></parameter>
+        <parameter name="nonStreamingWaveBankFilename" type="string"><![CDATA[Path to the wave bank file to load.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[This constructor generates an in-memory version of a wave bank. The entire wave bank contents are held in memory.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsInUse" type="bool" access="get">
+      <summary><![CDATA[Returns whether the wave bank is currently in use.]]></summary>
+      <syntax><![CDATA[public bool IsInUse { get; }]]></syntax>
+      <remarks><![CDATA[This value will return true if the wave bank is currently referenced by at least one valid cue instance or other client. For example, the game itself might reference the wave bank.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsPrepared" type="bool" access="get">
+      <summary><![CDATA[Returns whether the wave bank is prepared to play.]]></summary>
+      <syntax><![CDATA[public bool IsPrepared { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool 
+)]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object to compare.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are equivalent; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         WaveBank left,
+         WaveBank right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="WaveBank"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="WaveBank"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         WaveBank left,
+         WaveBank right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="WaveBank"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="WaveBank"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_Disposing" returnType="void">
+      <summary><![CDATA[Raises the Disposing event when called from within a derived class.]]></summary>
+      <overloads>
+        <overload signature="raise_Disposing()">
+          <summary><![CDATA[Raises the Disposing event when called from within a derived class.]]></summary>
+          <syntax><![CDATA[protected void raise_Disposing (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[Invoking object reference; should be this object.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[Arguments to pass to the event handler.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="Disposing" type="EventHandler">
+      <summary><![CDATA[Occurs when Dispose is called or when this object is finalized and collected by the garbage collector of the Microsoft .NET common language runtime (CLR).]]></summary>
+      <syntax><![CDATA[public event EventHandler Disposing]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

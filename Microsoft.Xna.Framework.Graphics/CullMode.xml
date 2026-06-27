@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CullMode" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines winding orders that may be used to identify back faces for culling.]]></summary>
+  <syntax><![CDATA[public enum CullMode]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="CullClockwiseFace"><summary><![CDATA[Cull back faces with clockwise vertices.]]></summary></member>
+    <member name="CullCounterClockwiseFace"><summary><![CDATA[Cull back faces with counterclockwise vertices.]]></summary></member>
+    <member name="None"><summary><![CDATA[Do not cull back faces.]]></summary></member>
+  </members>
+</xna-type>

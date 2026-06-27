@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IntermediateReader" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate">
+  <summary><![CDATA[Provides an implementation of many of the methods of IntermediateSerializer. Deserializes and tracks state for shared resources and external references.]]></summary>
+  <syntax><![CDATA[public sealed class IntermediateReader]]></syntax>
+  <remarks><![CDATA[A new instance of IntermediateReader is constructed for each deserialize operation.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Serializer" type="IntermediateSerializer" access="get">
+      <summary><![CDATA[Gets the parent serializer.]]></summary>
+      <syntax><![CDATA[public IntermediateSerializer Serializer { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Xml" type="XmlReader" access="get">
+      <summary><![CDATA[Gets the XML input stream.]]></summary>
+      <syntax><![CDATA[public XmlReader Xml { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="MoveToElement" returnType="void">
+      <summary><![CDATA[Moves to the specified element if the element name exists.]]></summary>
+      <overloads>
+        <overload signature="MoveToElement()">
+          <summary><![CDATA[Moves to the specified element if the element name exists.]]></summary>
+          <syntax><![CDATA[public bool MoveToElement (
+         string elementName
+)]]></syntax>
+          <parameters>
+            <parameter name="elementName" type="string"><![CDATA[The element name.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified element exists and the move was successful; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadTypeName" returnType="void">
+      <summary><![CDATA[Reads and decodes a type descriptor from the XML input stream.]]></summary>
+      <overloads>
+        <overload signature="ReadTypeName()">
+          <summary><![CDATA[Reads and decodes a type descriptor from the XML input stream.]]></summary>
+          <syntax><![CDATA[public Type ReadTypeName ()]]></syntax>
+          <returns><![CDATA[The type descriptor.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

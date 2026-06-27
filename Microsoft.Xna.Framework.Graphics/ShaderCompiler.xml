@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ShaderCompiler" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public static class ShaderCompiler]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="AssembleFromFile" returnType="CompiledShader" isStatic="true">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="String, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledShader AssembleFromFile (
+         string shaderFileName,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="shaderFileName" type="string"><![CDATA[Name of the file containing the compiled shader data.]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for # include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[Target platform for the compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled shader.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Stream, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledShader AssembleFromFile (
+         Stream shaderSourceCode,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="shaderSourceCode" type="Stream"><![CDATA[Stream that contains the shader data.]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for # include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[Target platform for the compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled shader.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Stream, Int32, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledShader AssembleFromFile (
+         Stream shaderSourceCode,
+         int numberBytes,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="shaderSourceCode" type="Stream"><![CDATA[Stream that contains the shader data.]]></parameter>
+            <parameter name="numberBytes" type="int"><![CDATA[The number of bytes in shaderSourceCode .]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for # include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[Target platform for the compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled shader.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="AssembleFromSource" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="AssembleFromSource()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledShader AssembleFromSource (
+         string shaderSourceCode,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="shaderSourceCode" type="string"><![CDATA[String that contains the shader data.]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for #include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[Target platform for compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled shader.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CompileFromFile" returnType="CompiledShader" isStatic="true">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="Stream, Int32, CompilerMacro , CompilerIncludeHandler, CompilerOptions, String, ShaderProfile, TargetPlatform">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledShader CompileFromFile (
+         Stream shaderSourceCode,
+         int numberBytes,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         string functionName,
+         ShaderProfile profile,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="shaderSourceCode" type="Stream"><![CDATA[Stream that contains the shader source code.]]></parameter>
+            <parameter name="numberBytes" type="int"><![CDATA[The number of bytes in shaderSourceCode .]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for #include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="functionName" type="string"><![CDATA[The function to be compiled.]]></parameter>
+            <parameter name="profile" type="ShaderProfile"><![CDATA[A shader profile that determines the shader instruction set.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled shader.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, CompilerMacro , CompilerIncludeHandler, CompilerOptions, String, ShaderProfile, TargetPlatform">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledShader CompileFromFile (
+         string shaderFileName,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         string functionName,
+         ShaderProfile profile,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="shaderFileName" type="string"><![CDATA[Name of the file containing the shader source code.]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for #include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="functionName" type="string"><![CDATA[The function to be compiled.]]></parameter>
+            <parameter name="profile" type="ShaderProfile"><![CDATA[A shader profile that determines the shader instruction set.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled shader.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Stream, CompilerMacro , CompilerIncludeHandler, CompilerOptions, String, ShaderProfile, TargetPlatform">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledShader CompileFromFile (
+         Stream shaderSourceCode,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         string functionName,
+         ShaderProfile profile,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="shaderSourceCode" type="Stream"><![CDATA[Stream that contains the shader source code.]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for #include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="functionName" type="string"><![CDATA[The function to be compiled.]]></parameter>
+            <parameter name="profile" type="ShaderProfile"><![CDATA[A shader profile that determines the shader instruction set.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled shader.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CompileFromSource" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="CompileFromSource()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledShader CompileFromSource (
+         string shaderSourceCode,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         string functionName,
+         ShaderProfile profile,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="shaderSourceCode" type="string"><![CDATA[String that contains the shader source code.]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for #include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="functionName" type="string"><![CDATA[The function to be compiled.]]></parameter>
+            <parameter name="profile" type="ShaderProfile"><![CDATA[A shader profile that determines the shader instruction set.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[Target platform for compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled shader.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Disassemble" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="Disassemble()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static string Disassemble (
+         byte[] shaderCode,
+         bool enableColorCode,
+         string comments
+)]]></syntax>
+          <parameters>
+            <parameter name="shaderCode" type="byte[]"><![CDATA[The shader byte code to disassemble.]]></parameter>
+            <parameter name="enableColorCode" type="bool"><![CDATA[[ MarshalAsAttribute (U1)] Specifies whether to enable color coding to make the disassembly easier to read.]]></parameter>
+            <parameter name="comments" type="string"><![CDATA[A comment string to include at the top of the shader.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The disassembled shader.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

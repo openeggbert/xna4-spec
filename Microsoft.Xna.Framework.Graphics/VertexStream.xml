@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexStream" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Represents a vertex stream.]]></summary>
+  <syntax><![CDATA[public sealed class VertexStream]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="OffsetInBytes" type="int" access="get">
+      <summary><![CDATA[Gets the starting offset of the vertex stream.]]></summary>
+      <syntax><![CDATA[public int OffsetInBytes { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexBuffer" type="VertexBuffer" access="get">
+      <summary><![CDATA[Gets the vertex buffer associated with this vertex stream.]]></summary>
+      <syntax><![CDATA[public VertexBuffer VertexBuffer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexStride" type="int" access="get">
+      <summary><![CDATA[Gets the size, in bytes, of the elements in this vertex stream.]]></summary>
+      <syntax><![CDATA[public int VertexStride { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="SetFrequency" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="SetFrequency()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public void SetFrequency (
+         int frequency
+)]]></syntax>
+          <parameters>
+            <parameter name="frequency" type="int"><![CDATA[Frequency divider value.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetFrequencyOfIndexData" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="SetFrequencyOfIndexData()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public void SetFrequencyOfIndexData (
+         int frequency
+)]]></syntax>
+          <parameters>
+            <parameter name="frequency" type="int"><![CDATA[Frequency of index data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetFrequencyOfInstanceData" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="SetFrequencyOfInstanceData()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public void SetFrequencyOfInstanceData (
+         int frequency
+)]]></syntax>
+          <parameters>
+            <parameter name="frequency" type="int"><![CDATA[Frequency of instance data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetSource" returnType="void">
+      <summary><![CDATA[Sets the source of the vertex stream.]]></summary>
+      <overloads>
+        <overload signature="SetSource()">
+          <summary><![CDATA[Sets the source of the vertex stream.]]></summary>
+          <syntax><![CDATA[public void SetSource (
+         VertexBuffer vb,
+         int offsetInBytes,
+         int vertexStride
+)]]></syntax>
+          <parameters>
+            <parameter name="vb" type="VertexBuffer"><![CDATA[The vertex buffer source.]]></parameter>
+            <parameter name="offsetInBytes" type="int"><![CDATA[The starting offset.]]></parameter>
+            <parameter name="vertexStride" type="int"><![CDATA[The size, in bytes, of the elements in the vertex buffer.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

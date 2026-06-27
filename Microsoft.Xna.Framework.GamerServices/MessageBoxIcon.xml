@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MessageBoxIcon" kind="enum"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Defines the different icons for a message box.]]></summary>
+  <syntax><![CDATA[public enum MessageBoxIcon]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="Alert"><summary><![CDATA[Displays the Alert icon.]]></summary></member>
+    <member name="Error"><summary><![CDATA[Displays the Error icon.]]></summary></member>
+    <member name="None"><summary><![CDATA[No icon is displayed.]]></summary></member>
+    <member name="Warning"><summary><![CDATA[Displays the Warning icon.]]></summary></member>
+  </members>
+</xna-type>

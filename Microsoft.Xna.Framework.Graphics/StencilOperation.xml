@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="StencilOperation" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines stencil buffer operations.]]></summary>
+  <syntax><![CDATA[public enum StencilOperation]]></syntax>
+  <remarks><![CDATA[Stencil-buffer entries are integer values that range from 0 to 2 n − 1, where n is the bit depth of the stencil buffer.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Decrement"><summary><![CDATA[Decrements the stencil-buffer entry, wrapping to the maximum value if the new value is less than 0.]]></summary></member>
+    <member name="DecrementSaturation"><summary><![CDATA[Decrements the stencil-buffer entry, clamping to 0.]]></summary></member>
+    <member name="Increment"><summary><![CDATA[Increments the stencil-buffer entry, wrapping to 0 if the new value exceeds the maximum value.]]></summary></member>
+    <member name="IncrementSaturation"><summary><![CDATA[Increments the stencil-buffer entry, clamping to the maximum value.]]></summary></member>
+    <member name="Invert"><summary><![CDATA[Inverts the bits in the stencil-buffer entry.]]></summary></member>
+    <member name="Keep"><summary><![CDATA[Does not update the stencil-buffer entry. This is the default value.]]></summary></member>
+    <member name="Replace"><summary><![CDATA[Replaces the stencil-buffer entry with a reference value.]]></summary></member>
+    <member name="Zero"><summary><![CDATA[Sets the stencil-buffer entry to 0.]]></summary></member>
+  </members>
+</xna-type>

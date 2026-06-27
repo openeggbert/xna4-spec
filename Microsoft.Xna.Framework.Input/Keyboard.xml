@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Keyboard" kind="class"
+          namespace="Microsoft.Xna.Framework.Input"
+          assembly="Microsoft.Xna.Framework.Input">
+  <summary><![CDATA[Allows retrieval of keystrokes from a keyboard input device.]]></summary>
+  <syntax><![CDATA[public static class Keyboard]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="GetState" returnType="KeyboardState" isStatic="true">
+      <summary><![CDATA[Returns the current keyboard state.]]></summary>
+      <overloads>
+        <overload signature="PlayerIndex">
+          <summary><![CDATA[Returns the current Chatpad state for the specified player.]]></summary>
+          <syntax><![CDATA[public static KeyboardState GetState (
+         PlayerIndex playerIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="playerIndex" type="PlayerIndex"><![CDATA[Player index of the Chatpad to query.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Current Chatpad state.]]></returns>
+          <remarks><![CDATA[Each player can have their own Chatpad, which is queried as a keyboard. To query an attached USB keyboard instead, use the GetState method that does not require a player index. This method works on Xbox 360 platforms only. Windows does not include driver support for the ChatPad. This method is included in the assemblies for Windows, but it is effectively a null function on that platform. Calls to Keyboard.GetState(playerIndex) from a Windows application are accepted, but will never return a ChatPad state change (key press or release).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

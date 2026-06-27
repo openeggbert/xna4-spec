@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Viewport" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines the window dimensions of a render-target surface onto which a 3D volume projects.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public struct Viewport]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Viewport(Rectangle)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         bounds As Rectangle _
+)]]></syntax>
+      <parameters>
+        <parameter name="bounds" type="Object"><![CDATA[Type: Rectangle A bounding box that defines the location and size of the viewport in a render target.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Viewport(Int32, Int32, Int32, Int32)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         x As Integer, _
+         y As Integer, _
+         width As Integer, _
+         height As Integer _
+)]]></syntax>
+      <parameters>
+        <parameter name="x" type="Object"><![CDATA[Type: Int32 The x coordinate of the upper-left corner of the viewport in pixels.]]></parameter>
+        <parameter name="y" type="Object"><![CDATA[Type: Int32 The y coordinate of the upper-left corner of the viewport in pixels.]]></parameter>
+        <parameter name="width" type="Object"><![CDATA[Type: Int32 The width of the viewport in pixels.]]></parameter>
+        <parameter name="height" type="Object"><![CDATA[Type: Int32 The height of the viewport in pixels.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="AspectRatio" type="float" access="get">
+      <summary><![CDATA[Gets the aspect ratio used by the viewport]]></summary>
+      <syntax><![CDATA[public float AspectRatio { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Bounds" type="Rectangle" access="get;set">
+      <summary><![CDATA[Gets the size of this resource.]]></summary>
+      <syntax><![CDATA[public Rectangle Bounds { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Height" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets the height dimension of the viewport on the render-target surface, in pixels.]]></summary>
+      <syntax><![CDATA[public int Height { get; set; }]]></syntax>
+      <remarks><![CDATA[Unless rendering is being done only to a subset of the surface, this member should be set to the height dimension of the render target surface.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MaxDepth" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the maximum depth of the clip volume.]]></summary>
+      <syntax><![CDATA[public float MaxDepth { get; set; }]]></syntax>
+      <remarks><![CDATA[MaxDepth , together with MinDepth , specifies the range of depth values into which a scene is rendered. Most applications set this value to 1.0. Clipping is performed after the projection matrix is applied.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MinDepth" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the minimum depth of the clip volume.]]></summary>
+      <syntax><![CDATA[public float MinDepth { get; set; }]]></syntax>
+      <remarks><![CDATA[MinDepth , together with MaxDepth , specifies the range of depth values into which a scene is rendered. Most applications set this value to 0.0. Clipping is performed after the projection matrix is applied.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TitleSafeArea" type="Rectangle" access="get">
+      <summary><![CDATA[Returns the title safe area of the current viewport.]]></summary>
+      <syntax><![CDATA[public Rectangle TitleSafeArea { get; }]]></syntax>
+      <remarks><![CDATA[On television sets, text should not be displayed at the outer edges of the screen because it may not be visible to the user. The title safe area is the part of the screen where text should be displayed. This property does not compare the current location of the viewport with the title safe area of the entire display—it reduces the title safe area of the viewport uniformly.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Width" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets the width dimension of the viewport on the render-target surface, in pixels.]]></summary>
+      <syntax><![CDATA[public int Width { get; set; }]]></syntax>
+      <remarks><![CDATA[Unless rendering is being done only to a subset of the surface, this member should be set to the width dimension of the render-target surface.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="X" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets the pixel coordinate of the upper-left corner of the viewport on the render-target surface.]]></summary>
+      <syntax><![CDATA[public int X { get; set; }]]></syntax>
+      <remarks><![CDATA[Unless rendering is being done only to a subset of the surface, this member can be set to 0.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Y" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets the pixel coordinate of the upper-left corner of the viewport on the render-target surface.]]></summary>
+      <syntax><![CDATA[public int Y { get; set; }]]></syntax>
+      <remarks><![CDATA[Unless rendering is being done only to a subset of the surface, this member can be set to 0.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Project" returnType="void">
+      <summary><![CDATA[Projects a 3D vector from object space into screen space.]]></summary>
+      <overloads>
+        <overload signature="Project()">
+          <summary><![CDATA[Projects a 3D vector from object space into screen space.]]></summary>
+          <syntax><![CDATA[public Vector3 Project (
+         Vector3 source,
+         Matrix projection,
+         Matrix view,
+         Matrix world
+)]]></syntax>
+          <parameters>
+            <parameter name="source" type="Object"><![CDATA[The vector to project.]]></parameter>
+            <parameter name="projection" type="Matrix"><![CDATA[The projection matrix.]]></parameter>
+            <parameter name="view" type="Matrix"><![CDATA[The view matrix.]]></parameter>
+            <parameter name="world" type="Matrix"><![CDATA[The world matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The vector in screen space.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Unproject" returnType="void">
+      <summary><![CDATA[Projects a vector from screen space into object space.]]></summary>
+      <overloads>
+        <overload signature="Unproject()">
+          <summary><![CDATA[Projects a vector from screen space into object space.]]></summary>
+          <syntax><![CDATA[public Vector3 Unproject (
+         Vector3 source,
+         Matrix projection,
+         Matrix view,
+         Matrix world
+)]]></syntax>
+          <parameters>
+            <parameter name="source" type="Object"><![CDATA[The vector to project.]]></parameter>
+            <parameter name="projection" type="Matrix"><![CDATA[The projection matrix.]]></parameter>
+            <parameter name="view" type="Matrix"><![CDATA[The view matrix.]]></parameter>
+            <parameter name="world" type="Matrix"><![CDATA[The world matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The vector in object space.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

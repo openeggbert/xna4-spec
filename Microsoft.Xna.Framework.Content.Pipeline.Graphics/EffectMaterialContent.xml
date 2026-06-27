@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EffectMaterialContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="MaterialContent">
+  <summary><![CDATA[Provides support for representing DirectX Effect materials.]]></summary>
+  <syntax><![CDATA[public class EffectMaterialContent : MaterialContent]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="EffectMaterialContent()">
+      <summary><![CDATA[Initializes a new instance of EffectMaterialContent.]]></summary>
+      <syntax><![CDATA[public EffectMaterialContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="CompiledEffect" type="ExternalReference&amp;lt;CompiledEffect&amp;gt;" access="get;set">
+      <summary><![CDATA[Gets or sets the compiled effect property.]]></summary>
+      <syntax><![CDATA[public ExternalReference&lt;CompiledEffect&gt; CompiledEffect { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Effect" type="ExternalReference&amp;lt;EffectContent&amp;gt;" access="get;set">
+      <summary><![CDATA[Gets or sets the effect property.]]></summary>
+      <syntax><![CDATA[public ExternalReference&lt;EffectContent&gt; Effect { get; set; }]]></syntax>
+      <remarks><![CDATA[Use this value as a shortcut for accessing the EffectKey element.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+    <field name="CompiledEffectKey" type="string" isReadOnly="true">
+      <summary><![CDATA[Specifies the key of the key/data pair for the compiled effect property.]]></summary>
+      <syntax><![CDATA[public const string CompiledEffectKey]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="EffectKey" type="string" isReadOnly="true">
+      <summary><![CDATA[Use this key search for the related effect property in the OpaqueDataDictionary object.]]></summary>
+      <syntax><![CDATA[public const string EffectKey]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

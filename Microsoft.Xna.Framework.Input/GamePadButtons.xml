@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamePadButtons" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input"
+          assembly="Microsoft.Xna.Framework.Input">
+  <summary><![CDATA[Identifies whether the buttons on an Xbox 360 Controller are pressed or released.]]></summary>
+  <syntax><![CDATA[public struct GamePadButtons]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GamePadButtons(Object)">
+      <summary><![CDATA[Initializes a new instance of the GamePadButtons class, setting the specified buttons to pressed in.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         buttons As Buttons _
+)]]></syntax>
+      <parameters>
+        <parameter name="buttons" type="Object"><![CDATA[Type: Buttons Buttons to initialize as pressed. Specify a single button or combine multiple buttons using a bitwise OR operation.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Note that GamePadButtons only stores the state of digital buttons—such as A or right bumper— that are pressed in or not pressed in. Trigger or stick values specified in the buttons argument are ignored. Games normally use GetState to get the true gamepad state. This constructor is used instead to simulate gamepad input for passing within the game's own input subsystem.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="A" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the A button on the Xbox 360 Controller is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState A { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="B" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the B button on the Xbox 360 Controller is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState B { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Back" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the BACK button on the Xbox 360 Controller is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState Back { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="BigButton" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies if the BigButton button is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState BigButton { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="LeftShoulder" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the left shoulder (bumper) button on the Xbox 360 Controller is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState LeftShoulder { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LeftStick" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the left stick button on the Xbox 360 Controller is pressed (the stick is "clicked" in).]]></summary>
+      <syntax><![CDATA[public ButtonState LeftStick { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RightShoulder" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the right shoulder (bumper) button on the Xbox 360 Controller is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState RightShoulder { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RightStick" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the right stick button on the Xbox 360 Controller is pressed (the stick is "clicked" in).]]></summary>
+      <syntax><![CDATA[public ButtonState RightStick { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Start" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the START button on the Xbox 360 Controller is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState Start { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="X" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the X button on the Xbox 360 Controller is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState X { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Y" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the Y button on the Xbox 360 Controller is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState Y { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether two GamePadButtons instances are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether two GamePadButtons instances are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         GamePadButtons left,
+         GamePadButtons right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GamePadButtons"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="GamePadButtons"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the instances are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether two GamePadButtons instances are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether two GamePadButtons instances are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         GamePadButtons left,
+         GamePadButtons right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GamePadButtons"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="GamePadButtons"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

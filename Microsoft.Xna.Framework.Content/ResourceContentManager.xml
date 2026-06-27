@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ResourceContentManager" kind="class"
+          namespace="Microsoft.Xna.Framework.Content"
+          assembly="Microsoft.Xna.Framework.Content"
+          baseClass="ContentManager">
+  <summary><![CDATA[Subclass of ContentManager which is specialized to read from .resx resource files, rather than directly from individual files on disk.]]></summary>
+  <syntax><![CDATA[public class ResourceContentManager : ContentManager]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ResourceContentManager(IServiceProvider, ResourceManager)">
+      <summary><![CDATA[Creates a new instance of ResourceContentManager.]]></summary>
+      <syntax><![CDATA[public ResourceContentManager (
+         IServiceProvider serviceProvider,
+         ResourceManager resourceManager
+)]]></syntax>
+      <parameters>
+        <parameter name="serviceProvider" type="IServiceProvider"><![CDATA[The service provider the ContentManager should use to locate services.]]></parameter>
+        <parameter name="resourceManager" type="ResourceManager"><![CDATA[The resource manager for the ResourceContentManager to read from.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="OpenStream" returnType="void">
+      <summary><![CDATA[Opens a stream for reading the specified resource. Derived classes can replace this to implement pack files or asset compression.]]></summary>
+      <overloads>
+        <overload signature="OpenStream()">
+          <summary><![CDATA[Opens a stream for reading the specified resource. Derived classes can replace this to implement pack files or asset compression.]]></summary>
+          <syntax><![CDATA[protected override Stream OpenStream (
+         string assetName
+)]]></syntax>
+          <parameters>
+            <parameter name="assetName" type="string"><![CDATA[The name of the asset being read.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The opened stream.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentReader" kind="class"
+          namespace="Microsoft.Xna.Framework.Content"
+          assembly="Microsoft.Xna.Framework.Content"
+          baseClass="BinaryReader">
+  <summary><![CDATA[A worker object that implements most of ContentManager.Load. A new ContentReader is constructed for each asset loaded.]]></summary>
+  <syntax><![CDATA[public sealed class ContentReader : BinaryReader]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="AssetName" type="string" access="get">
+      <summary><![CDATA[Gets the name of the asset currently being read by this ContentReader.]]></summary>
+      <syntax><![CDATA[public string AssetName { get; }]]></syntax>
+      <remarks><![CDATA[AssetName can be useful to include in the exception message if a custom ContentTypeReader encounters an error.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ContentManager" type="ContentManager" access="get">
+      <summary><![CDATA[Gets the ContentManager associated with the ContentReader.]]></summary>
+      <syntax><![CDATA[public ContentManager ContentManager { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="ReadColor" returnType="void">
+      <summary><![CDATA[Reads a Color value from the currently open stream.]]></summary>
+      <overloads>
+        <overload signature="ReadColor()">
+          <summary><![CDATA[Reads a Color value from the currently open stream.]]></summary>
+          <syntax><![CDATA[public Color ReadColor ()]]></syntax>
+          <returns><![CDATA[The Color value that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadDouble" returnType="void">
+      <summary><![CDATA[Reads a double value from the currently open stream.]]></summary>
+      <overloads>
+        <overload signature="ReadDouble()">
+          <summary><![CDATA[Reads a double value from the currently open stream.]]></summary>
+          <syntax><![CDATA[public override double ReadDouble ()]]></syntax>
+          <returns><![CDATA[The double value that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadMatrix" returnType="void">
+      <summary><![CDATA[Reads a Matrix value from the currently open stream.]]></summary>
+      <overloads>
+        <overload signature="ReadMatrix()">
+          <summary><![CDATA[Reads a Matrix value from the currently open stream.]]></summary>
+          <syntax><![CDATA[public Matrix ReadMatrix ()]]></syntax>
+          <returns><![CDATA[The Matrix that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadQuaternion" returnType="void">
+      <summary><![CDATA[Reads a Quaternion value from the current stream.]]></summary>
+      <overloads>
+        <overload signature="ReadQuaternion()">
+          <summary><![CDATA[Reads a Quaternion value from the current stream.]]></summary>
+          <syntax><![CDATA[public Quaternion ReadQuaternion ()]]></syntax>
+          <returns><![CDATA[The Quaternion that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadSingle" returnType="void">
+      <summary><![CDATA[Reads a float value from the currently open stream.]]></summary>
+      <overloads>
+        <overload signature="ReadSingle()">
+          <summary><![CDATA[Reads a float value from the currently open stream.]]></summary>
+          <syntax><![CDATA[public override float ReadSingle ()]]></syntax>
+          <returns><![CDATA[The float value that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadVector2" returnType="void">
+      <summary><![CDATA[Reads a Vector2 value from the current stream.]]></summary>
+      <overloads>
+        <overload signature="ReadVector2()">
+          <summary><![CDATA[Reads a Vector2 value from the current stream.]]></summary>
+          <syntax><![CDATA[public Vector2 ReadVector2 ()]]></syntax>
+          <returns><![CDATA[The Vector2 that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadVector3" returnType="void">
+      <summary><![CDATA[Reads a Vector3 value from the current stream.]]></summary>
+      <overloads>
+        <overload signature="ReadVector3()">
+          <summary><![CDATA[Reads a Vector3 value from the current stream.]]></summary>
+          <syntax><![CDATA[public Vector3 ReadVector3 ()]]></syntax>
+          <returns><![CDATA[The Vector3 that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadVector4" returnType="void">
+      <summary><![CDATA[Reads a Vector4 value from the current stream.]]></summary>
+      <overloads>
+        <overload signature="ReadVector4()">
+          <summary><![CDATA[Reads a Vector4 value from the current stream.]]></summary>
+          <syntax><![CDATA[public Vector4 ReadVector4 ()]]></syntax>
+          <returns><![CDATA[The Vector4 that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

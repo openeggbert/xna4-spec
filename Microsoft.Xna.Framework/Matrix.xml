@@ -1,0 +1,1966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Matrix" kind="struct"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IEquatable&amp;lt;Matrix&amp;gt;">
+  <summary><![CDATA[Defines a matrix.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.MatrixConverter)")]
+[SerializableAttribute]
+public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
+  <remarks><![CDATA[Matrices use a row vector layout in the XNA Framework. Matrices can be either row vector or column vector. Row vector matrices view vectors as a row from left to right, while column vector matrices view vectors as a column from top to bottom. For example, the x, y, and z of a matrix's translation vector in the XNA Framework would correspond to the fields M41 , M42 , M43 .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Matrix(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)">
+      <summary><![CDATA[Initializes a new instance of Matrix.]]></summary>
+      <syntax><![CDATA[public Matrix (
+         float m11,
+         float m12,
+         float m13,
+         float m14,
+         float m21,
+         float m22,
+         float m23,
+         float m24,
+         float m31,
+         float m32,
+         float m33,
+         float m34,
+         float m41,
+         float m42,
+         float m43,
+         float m44
+)]]></syntax>
+      <parameters>
+        <parameter name="m11" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m12" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m13" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m14" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m21" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m22" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m23" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m24" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m31" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m32" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m33" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m34" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m41" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m42" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m43" type="float"><![CDATA[Value to initialize to.]]></parameter>
+        <parameter name="m44" type="float"><![CDATA[Value to initialize to.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Backward" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets and sets the backward vector of the Matrix.]]></summary>
+      <syntax><![CDATA[public Vector3 Backward { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Down" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets and sets the down vector of the Matrix.]]></summary>
+      <syntax><![CDATA[public Vector3 Down { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Forward" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets and sets the forward vector of the Matrix.]]></summary>
+      <syntax><![CDATA[public Vector3 Forward { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Identity" type="Matrix" access="get" isStatic="true">
+      <summary><![CDATA[Returns an instance of the identity matrix.]]></summary>
+      <syntax><![CDATA[public static Matrix Identity { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Left" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets and sets the left vector of the Matrix.]]></summary>
+      <syntax><![CDATA[public Vector3 Left { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Right" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets and sets the right vector of the Matrix.]]></summary>
+      <syntax><![CDATA[public Vector3 Right { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Translation" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets and sets the translation vector of the Matrix.]]></summary>
+      <syntax><![CDATA[public Vector3 Translation { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Up" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets and sets the up vector of the Matrix.]]></summary>
+      <syntax><![CDATA[public Vector3 Up { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Add" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Adds a matrix to another matrix.]]></summary>
+      <overloads>
+        <overload signature="Matrix, Matrix">
+          <summary><![CDATA[Adds a matrix to another matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix Add (
+         Matrix matrix1,
+         Matrix matrix2
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resulting matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Matrix, Matrix">
+          <summary><![CDATA[Adds a matrix to another matrix.]]></summary>
+          <syntax><![CDATA[public static void Add (
+         ref Matrix matrix1,
+         ref Matrix matrix2,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] Resulting matrix.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateBillboard" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Creates a spherical billboard that rotates around a specified object position.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;">
+          <summary><![CDATA[Creates a spherical billboard that rotates around a specified object position.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateBillboard (
+         Vector3 objectPosition,
+         Vector3 cameraPosition,
+         Vector3 cameraUpVector,
+         Nullable&lt;Vector3&gt; cameraForwardVector
+)]]></syntax>
+          <parameters>
+            <parameter name="objectPosition" type="Object"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
+            <parameter name="cameraPosition" type="Object"><![CDATA[Position of the camera.]]></parameter>
+            <parameter name="cameraUpVector" type="Object"><![CDATA[The up vector of the camera.]]></parameter>
+            <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created billboard matrix.]]></returns>
+          <remarks><![CDATA[This method computes the facing direction of the billboard from the object position and camera position. When the object and camera positions are too close, the matrix will not be accurate. To avoid this problem, the method uses the optional camera forward vector if the positions are too close.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Matrix">
+          <summary><![CDATA[Creates a spherical billboard that rotates around a specified object position.]]></summary>
+          <syntax><![CDATA[public static void CreateBillboard (
+         ref Vector3 objectPosition,
+         ref Vector3 cameraPosition,
+         ref Vector3 cameraUpVector,
+         Nullable&lt;Vector3&gt; cameraForwardVector,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="objectPosition" type="Object"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
+            <parameter name="cameraPosition" type="Object"><![CDATA[Position of the camera.]]></parameter>
+            <parameter name="cameraUpVector" type="Object"><![CDATA[The up vector of the camera.]]></parameter>
+            <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created billboard matrix.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method computes the facing direction of the billboard from the object position and camera position. When the object and camera positions are too close, the matrix will not be accurate. To avoid this problem, the method uses the optional camera forward vector if the positions are too close.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateConstrainedBillboard" returnType="void" isStatic="true">
+      <summary><![CDATA[Creates a cylindrical billboard that rotates around a specified axis.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Nullable&amp;lt;Vector3&amp;gt;, Matrix">
+          <summary><![CDATA[Creates a cylindrical billboard that rotates around a specified axis.]]></summary>
+          <syntax><![CDATA[public static void CreateConstrainedBillboard (
+         ref Vector3 objectPosition,
+         ref Vector3 cameraPosition,
+         ref Vector3 rotateAxis,
+         Nullable&lt;Vector3&gt; cameraForwardVector,
+         Nullable&lt;Vector3&gt; objectForwardVector,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="objectPosition" type="Object"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
+            <parameter name="cameraPosition" type="Object"><![CDATA[Position of the camera.]]></parameter>
+            <parameter name="rotateAxis" type="Object"><![CDATA[Axis to rotate the billboard around.]]></parameter>
+            <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
+            <parameter name="objectForwardVector" type="Object"><![CDATA[Optional forward vector of the object.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created billboard matrix.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method computes the facing direction of the billboard from the object position and camera position. When the object and camera positions are too close, the matrix will not be accurate. To avoid this problem, the method uses the optional camera forward vector if the positions are too close.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Nullable&amp;lt;Vector3&amp;gt;">
+          <summary><![CDATA[Creates a cylindrical billboard that rotates around a specified axis.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateConstrainedBillboard (
+         Vector3 objectPosition,
+         Vector3 cameraPosition,
+         Vector3 rotateAxis,
+         Nullable&lt;Vector3&gt; cameraForwardVector,
+         Nullable&lt;Vector3&gt; objectForwardVector
+)]]></syntax>
+          <parameters>
+            <parameter name="objectPosition" type="Object"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
+            <parameter name="cameraPosition" type="Object"><![CDATA[Position of the camera.]]></parameter>
+            <parameter name="rotateAxis" type="Object"><![CDATA[Axis to rotate the billboard around.]]></parameter>
+            <parameter name="cameraForwardVector" type="Object"><![CDATA[Optional forward vector of the camera.]]></parameter>
+            <parameter name="objectForwardVector" type="Object"><![CDATA[Optional forward vector of the object.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created billboard matrix.]]></returns>
+          <remarks><![CDATA[This method computes the facing direction of the billboard from the object position and camera position. When the object and camera positions are too close, the matrix will not be accurate. To avoid this problem, the method uses the optional camera forward vector if the positions are too close.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateFromAxisAngle" returnType="void" isStatic="true">
+      <summary><![CDATA[Creates a new Matrix that rotates around an arbitrary vector.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Single, Matrix">
+          <summary><![CDATA[Creates a new Matrix that rotates around an arbitrary vector.]]></summary>
+          <syntax><![CDATA[public static void CreateFromAxisAngle (
+         ref Vector3 axis,
+         float angle,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="axis" type="Object"><![CDATA[The axis to rotate around.]]></parameter>
+            <parameter name="angle" type="float"><![CDATA[The angle to rotate around the vector.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created Matrix .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Single">
+          <summary><![CDATA[Creates a new Matrix that rotates around an arbitrary vector.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateFromAxisAngle (
+         Vector3 axis,
+         float angle
+)]]></syntax>
+          <parameters>
+            <parameter name="axis" type="Object"><![CDATA[The axis to rotate around.]]></parameter>
+            <parameter name="angle" type="float"><![CDATA[The angle to rotate around the vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created Matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateFromQuaternion" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Creates a rotation Matrix from a Quaternion.]]></summary>
+      <overloads>
+        <overload signature="Quaternion">
+          <summary><![CDATA[Creates a rotation Matrix from a Quaternion.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateFromQuaternion (
+         Quaternion quaternion
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion" type="Quaternion"><![CDATA[Quaternion to create the Matrix from.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created Matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Matrix">
+          <summary><![CDATA[Creates a rotation Matrix from a Quaternion.]]></summary>
+          <syntax><![CDATA[public static void CreateFromQuaternion (
+         ref Quaternion quaternion,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion" type="Quaternion"><![CDATA[Quaternion to create the Matrix from.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created Matrix .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateFromYawPitchRoll" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Creates a new rotation matrix from a specified yaw, pitch, and roll.]]></summary>
+      <overloads>
+        <overload signature="Single, Single, Single">
+          <summary><![CDATA[Creates a new rotation matrix from a specified yaw, pitch, and roll.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateFromYawPitchRoll (
+         float yaw,
+         float pitch,
+         float roll
+)]]></syntax>
+          <parameters>
+            <parameter name="yaw" type="float"><![CDATA[Angle of rotation, in radians, around the y-axis.]]></parameter>
+            <parameter name="pitch" type="float"><![CDATA[Angle of rotation, in radians, around the x-axis.]]></parameter>
+            <parameter name="roll" type="float"><![CDATA[Angle of rotation, in radians, around the z-axis.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new rotation matrix with the specified yaw, pitch, and roll.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single, Matrix">
+          <summary><![CDATA[Fills in a rotation matrix from a specified yaw, pitch, and roll.]]></summary>
+          <syntax><![CDATA[public static void CreateFromYawPitchRoll (
+         float yaw,
+         float pitch,
+         float roll,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="yaw" type="float"><![CDATA[Angle of rotation, in radians, around the y-axis.]]></parameter>
+            <parameter name="pitch" type="float"><![CDATA[Angle of rotation, in radians, around the x-axis.]]></parameter>
+            <parameter name="roll" type="float"><![CDATA[Angle of rotation, in radians, around the z-axis.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] An existing matrix filled in to represent the specified yaw, pitch, and roll.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateLookAt" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Creates a view matrix.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Vector3">
+          <summary><![CDATA[Creates a view matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateLookAt (
+         Vector3 cameraPosition,
+         Vector3 cameraTarget,
+         Vector3 cameraUpVector
+)]]></syntax>
+          <parameters>
+            <parameter name="cameraPosition" type="Object"><![CDATA[The position of the camera.]]></parameter>
+            <parameter name="cameraTarget" type="Object"><![CDATA[The position for the camera to look at.]]></parameter>
+            <parameter name="cameraUpVector" type="Object"><![CDATA[The world's up, usually [0, 1, 0].]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created view matrix.]]></returns>
+          <remarks><![CDATA[View space, sometimes called camera space, is similar to world space in that it is typically used for the entire scene. However, in view space, the origin is at the viewer or camera.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3, Matrix">
+          <summary><![CDATA[Creates a view matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateLookAt (
+         ref Vector3 cameraPosition,
+         ref Vector3 cameraTarget,
+         ref Vector3 cameraUpVector,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="cameraPosition" type="Object"><![CDATA[The position of the camera.]]></parameter>
+            <parameter name="cameraTarget" type="Object"><![CDATA[The position for the camera to look at.]]></parameter>
+            <parameter name="cameraUpVector" type="Object"><![CDATA[The world's up, usually [0, 1, 0].]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created view matrix.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[View space, sometimes called camera space, is similar to world space in that it is typically used for the entire scene. However, in view space, the origin is at the viewer or camera.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateOrthographic" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Builds an orthogonal projection matrix.]]></summary>
+      <overloads>
+        <overload signature="Single, Single, Single, Single">
+          <summary><![CDATA[Builds an orthogonal projection matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateOrthographic (
+         float width,
+         float height,
+         float zNearPlane,
+         float zFarPlane
+)]]></syntax>
+          <parameters>
+            <parameter name="width" type="float"><![CDATA[Width of the view volume.]]></parameter>
+            <parameter name="height" type="float"><![CDATA[Height of the view volume.]]></parameter>
+            <parameter name="zNearPlane" type="float"><![CDATA[Minimum z-value of the view volume.]]></parameter>
+            <parameter name="zFarPlane" type="float"><![CDATA[Maximum z-value of the view volume.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The projection matrix.]]></returns>
+          <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has X and Y coordinates ranging from -1 to 1, and Z coordinate ranging from 0 to 1. Unlike perspective projection, in orthographic projection there is no perspective foreshortening.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single, Single, Matrix">
+          <summary><![CDATA[Builds an orthogonal projection matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateOrthographic (
+         float width,
+         float height,
+         float zNearPlane,
+         float zFarPlane,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="width" type="float"><![CDATA[Width of the view volume.]]></parameter>
+            <parameter name="height" type="float"><![CDATA[Height of the view volume.]]></parameter>
+            <parameter name="zNearPlane" type="float"><![CDATA[Minimum z-value of the view volume.]]></parameter>
+            <parameter name="zFarPlane" type="float"><![CDATA[Maximum z-value of the view volume.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The projection matrix.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has X and Y coordinates ranging from -1 to 1, and Z coordinate ranging from 0 to 1. Unlike perspective projection, in orthographic projection there is no perspective foreshortening.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateOrthographicOffCenter" returnType="void" isStatic="true">
+      <summary><![CDATA[Builds a customized, orthogonal projection matrix.]]></summary>
+      <overloads>
+        <overload signature="Single, Single, Single, Single, Single, Single, Matrix">
+          <summary><![CDATA[Builds a customized, orthogonal projection matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateOrthographicOffCenter (
+         float left,
+         float right,
+         float bottom,
+         float top,
+         float zNearPlane,
+         float zFarPlane,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="float"><![CDATA[Minimum x-value of the view volume.]]></parameter>
+            <parameter name="right" type="float"><![CDATA[Maximum x-value of the view volume.]]></parameter>
+            <parameter name="bottom" type="float"><![CDATA[Minimum y-value of the view volume.]]></parameter>
+            <parameter name="top" type="float"><![CDATA[Maximum y-value of the view volume.]]></parameter>
+            <parameter name="zNearPlane" type="float"><![CDATA[Minimum z-value of the view volume.]]></parameter>
+            <parameter name="zFarPlane" type="float"><![CDATA[Maximum z-value of the view volume.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The projection matrix.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has X and Y coordinates ranging from -1 to 1, and Z coordinate ranging from 0 to 1. Unlike perspective projection, in orthographic projection there is no perspective foreshortening.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single, Single, Single, Single">
+          <summary><![CDATA[Builds a customized, orthogonal projection matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateOrthographicOffCenter (
+         float left,
+         float right,
+         float bottom,
+         float top,
+         float zNearPlane,
+         float zFarPlane
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="float"><![CDATA[Minimum x-value of the view volume.]]></parameter>
+            <parameter name="right" type="float"><![CDATA[Maximum x-value of the view volume.]]></parameter>
+            <parameter name="bottom" type="float"><![CDATA[Minimum y-value of the view volume.]]></parameter>
+            <parameter name="top" type="float"><![CDATA[Maximum y-value of the view volume.]]></parameter>
+            <parameter name="zNearPlane" type="float"><![CDATA[Minimum z-value of the view volume.]]></parameter>
+            <parameter name="zFarPlane" type="float"><![CDATA[Maximum z-value of the view volume.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The projection matrix.]]></returns>
+          <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has X and Y coordinates ranging from -1 to 1, and Z coordinate ranging from 0 to 1. Unlike perspective projection, in orthographic projection there is no perspective foreshortening.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreatePerspective" returnType="void" isStatic="true">
+      <summary><![CDATA[Builds a perspective projection matrix.]]></summary>
+      <overloads>
+        <overload signature="Single, Single, Single, Single, Matrix">
+          <summary><![CDATA[Builds a perspective projection matrix.]]></summary>
+          <syntax><![CDATA[public static void CreatePerspective (
+         float width,
+         float height,
+         float nearPlaneDistance,
+         float farPlaneDistance,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="width" type="float"><![CDATA[Width of the view volume at the near view plane.]]></parameter>
+            <parameter name="height" type="float"><![CDATA[Height of the view volume at the near view plane.]]></parameter>
+            <parameter name="nearPlaneDistance" type="float"><![CDATA[Distance to the near view plane.]]></parameter>
+            <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to the far view plane.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The projection matrix.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single, Single">
+          <summary><![CDATA[Builds a perspective projection matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreatePerspective (
+         float width,
+         float height,
+         float nearPlaneDistance,
+         float farPlaneDistance
+)]]></syntax>
+          <parameters>
+            <parameter name="width" type="float"><![CDATA[Width of the view volume at the near view plane.]]></parameter>
+            <parameter name="height" type="float"><![CDATA[Height of the view volume at the near view plane.]]></parameter>
+            <parameter name="nearPlaneDistance" type="float"><![CDATA[Distance to the near view plane.]]></parameter>
+            <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to the far view plane.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The projection matrix.]]></returns>
+          <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreatePerspectiveFieldOfView" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Builds a perspective projection matrix based on a field of view.]]></summary>
+      <overloads>
+        <overload signature="Single, Single, Single, Single">
+          <summary><![CDATA[Builds a perspective projection matrix based on a field of view.]]></summary>
+          <syntax><![CDATA[public static Matrix CreatePerspectiveFieldOfView (
+         float fieldOfView,
+         float aspectRatio,
+         float nearPlaneDistance,
+         float farPlaneDistance
+)]]></syntax>
+          <parameters>
+            <parameter name="fieldOfView" type="float"><![CDATA[Field of view in radians.]]></parameter>
+            <parameter name="aspectRatio" type="float"><![CDATA[Aspect ratio, defined as view space width divided by height.]]></parameter>
+            <parameter name="nearPlaneDistance" type="float"><![CDATA[Distance to the near view plane.]]></parameter>
+            <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to the far view plane.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The perspective projection matrix.]]></returns>
+          <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single, Single, Matrix">
+          <summary><![CDATA[Builds a perspective projection matrix based on a field of view.]]></summary>
+          <syntax><![CDATA[public static void CreatePerspectiveFieldOfView (
+         float fieldOfView,
+         float aspectRatio,
+         float nearPlaneDistance,
+         float farPlaneDistance,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="fieldOfView" type="float"><![CDATA[Field of view in radians.]]></parameter>
+            <parameter name="aspectRatio" type="float"><![CDATA[Aspect ratio, defined as view space width divided by height.]]></parameter>
+            <parameter name="nearPlaneDistance" type="float"><![CDATA[Distance to the near view plane.]]></parameter>
+            <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to the far view plane.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The perspective projection matrix.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreatePerspectiveOffCenter" returnType="void" isStatic="true">
+      <summary><![CDATA[Builds a customized, perspective projection matrix.]]></summary>
+      <overloads>
+        <overload signature="Single, Single, Single, Single, Single, Single, Matrix">
+          <summary><![CDATA[Builds a customized, perspective projection matrix.]]></summary>
+          <syntax><![CDATA[public static void CreatePerspectiveOffCenter (
+         float left,
+         float right,
+         float bottom,
+         float top,
+         float nearPlaneDistance,
+         float farPlaneDistance,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="float"><![CDATA[Minimum x-value of the view volume at the near view plane.]]></parameter>
+            <parameter name="right" type="float"><![CDATA[Maximum x-value of the view volume at the near view plane.]]></parameter>
+            <parameter name="bottom" type="float"><![CDATA[Minimum y-value of the view volume at the near view plane.]]></parameter>
+            <parameter name="top" type="float"><![CDATA[Maximum y-value of the view volume at the near view plane.]]></parameter>
+            <parameter name="nearPlaneDistance" type="float"><![CDATA[Distance to the near view plane.]]></parameter>
+            <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to of the far view plane.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created projection matrix.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single, Single, Single, Single">
+          <summary><![CDATA[Builds a customized, perspective projection matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreatePerspectiveOffCenter (
+         float left,
+         float right,
+         float bottom,
+         float top,
+         float nearPlaneDistance,
+         float farPlaneDistance
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="float"><![CDATA[Minimum x-value of the view volume at the near view plane.]]></parameter>
+            <parameter name="right" type="float"><![CDATA[Maximum x-value of the view volume at the near view plane.]]></parameter>
+            <parameter name="bottom" type="float"><![CDATA[Minimum y-value of the view volume at the near view plane.]]></parameter>
+            <parameter name="top" type="float"><![CDATA[Maximum y-value of the view volume at the near view plane.]]></parameter>
+            <parameter name="nearPlaneDistance" type="float"><![CDATA[Distance to the near view plane.]]></parameter>
+            <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to of the far view plane.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created projection matrix.]]></returns>
+          <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateReflection" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Creates a Matrix that reflects the coordinate system about a specified Plane.]]></summary>
+      <overloads>
+        <overload signature="Plane">
+          <summary><![CDATA[Creates a Matrix that reflects the coordinate system about a specified Plane.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateReflection (
+         Plane value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Plane"><![CDATA[The Plane about which to create a reflection.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new Matrix expressing the reflection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Plane, Matrix">
+          <summary><![CDATA[Fills in an existing Matrix so that it reflects the coordinate system about a specified Plane.]]></summary>
+          <syntax><![CDATA[public static void CreateReflection (
+         ref Plane value,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Plane"><![CDATA[The Plane about which to create a reflection.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] A Matrix that creates the reflection.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateRotationX" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Returns an x-axis rotation matrix.]]></summary>
+      <overloads>
+        <overload signature="Single">
+          <summary><![CDATA[Returns an x-axis rotation matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateRotationX (
+         float radians
+)]]></syntax>
+          <parameters>
+            <parameter name="radians" type="float"><![CDATA[The rotation in radians.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The rotation matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Matrix">
+          <summary><![CDATA[Returns an x-axis rotation matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateRotationX (
+         float radians,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="radians" type="float"><![CDATA[The rotation in radians.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The rotation matrix.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateRotationY" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Returns a y-axis rotation matrix.]]></summary>
+      <overloads>
+        <overload signature="Single">
+          <summary><![CDATA[Returns a y-axis rotation matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateRotationY (
+         float radians
+)]]></syntax>
+          <parameters>
+            <parameter name="radians" type="float"><![CDATA[The rotation in radians.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The rotation matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Matrix">
+          <summary><![CDATA[Returns a y-axis rotation matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateRotationY (
+         float radians,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="radians" type="float"><![CDATA[The rotation in radians.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The rotation matrix.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateRotationZ" returnType="void" isStatic="true">
+      <summary><![CDATA[Returns an z-axis rotation matrix.]]></summary>
+      <overloads>
+        <overload signature="Single, Matrix">
+          <summary><![CDATA[Returns an z-axis rotation matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateRotationZ (
+         float radians,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="radians" type="float"><![CDATA[The rotation in radians.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The rotation matrix.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single">
+          <summary><![CDATA[Returns a z-axis rotation matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateRotationZ (
+         float radians
+)]]></syntax>
+          <parameters>
+            <parameter name="radians" type="float"><![CDATA[The rotation in radians.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The rotation matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateScale" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Creates a scaling Matrix.]]></summary>
+      <overloads>
+        <overload signature="Vector3">
+          <summary><![CDATA[Creates a scaling Matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateScale (
+         Vector3 scales
+)]]></syntax>
+          <parameters>
+            <parameter name="scales" type="Object"><![CDATA[Amounts to scale by on the x, y, and z axes.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created scaling Matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Matrix">
+          <summary><![CDATA[Creates a scaling Matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateScale (
+         ref Vector3 scales,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="scales" type="Object"><![CDATA[Amounts to scale by on the x, y, and z axes.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created scaling Matrix .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single, Matrix">
+          <summary><![CDATA[Creates a scaling Matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateScale (
+         float xScale,
+         float yScale,
+         float zScale,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="xScale" type="float"><![CDATA[Value to scale by on the x-axis.]]></parameter>
+            <parameter name="yScale" type="float"><![CDATA[Value to scale by on the y-axis.]]></parameter>
+            <parameter name="zScale" type="float"><![CDATA[Value to scale by on the z-axis.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created scaling Matrix .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single">
+          <summary><![CDATA[Creates a scaling Matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateScale (
+         float xScale,
+         float yScale,
+         float zScale
+)]]></syntax>
+          <parameters>
+            <parameter name="xScale" type="float"><![CDATA[Value to scale by on the x-axis.]]></parameter>
+            <parameter name="yScale" type="float"><![CDATA[Value to scale by on the y-axis.]]></parameter>
+            <parameter name="zScale" type="float"><![CDATA[Value to scale by on the z-axis.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created scaling Matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single">
+          <summary><![CDATA[Creates a scaling Matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateScale (
+         float scale
+)]]></syntax>
+          <parameters>
+            <parameter name="scale" type="float"><![CDATA[Amount to scale by.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created scaling Matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Matrix">
+          <summary><![CDATA[Creates a scaling Matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateScale (
+         float scale,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="scale" type="float"><![CDATA[Value to scale by.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created scaling Matrix .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateShadow" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Creates a Matrix that flattens geometry into a specified Plane as if casting a shadow from a specified light source.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Plane">
+          <summary><![CDATA[Creates a Matrix that flattens geometry into a specified Plane as if casting a shadow from a specified light source.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateShadow (
+         Vector3 lightDirection,
+         Plane plane
+)]]></syntax>
+          <parameters>
+            <parameter name="lightDirection" type="Object"><![CDATA[A Vector3 specifying the direction from which the light that will cast the shadow is coming.]]></parameter>
+            <parameter name="plane" type="Plane"><![CDATA[The Plane onto which the new matrix should flatten geometry so as to cast a shadow.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new Matrix that can be used to flatten geometry onto the specified plane from the specified direction.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Plane, Matrix">
+          <summary><![CDATA[Fills in a Matrix to flatten geometry into a specified Plane as if casting a shadow from a specified light source.]]></summary>
+          <syntax><![CDATA[public static void CreateShadow (
+         ref Vector3 lightDirection,
+         ref Plane plane,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="lightDirection" type="Object"><![CDATA[A Vector3 specifying the direction from which the light that will cast the shadow is coming.]]></parameter>
+            <parameter name="plane" type="Plane"><![CDATA[The Plane onto which the new matrix should flatten geometry so as to cast a shadow.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] A Matrix that can be used to flatten geometry onto the specified plane from the specified direction.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateTranslation" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Creates a translation Matrix.]]></summary>
+      <overloads>
+        <overload signature="Vector3">
+          <summary><![CDATA[Creates a translation Matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateTranslation (
+         Vector3 position
+)]]></syntax>
+          <parameters>
+            <parameter name="position" type="Object"><![CDATA[Amounts to translate by on the x, y, and z axes.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created translation Matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Matrix">
+          <summary><![CDATA[Creates a translation Matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateTranslation (
+         ref Vector3 position,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="position" type="Object"><![CDATA[Amounts to translate by on the x, y, and z axes.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created translation Matrix .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single, Matrix">
+          <summary><![CDATA[Creates a translation Matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateTranslation (
+         float xPosition,
+         float yPosition,
+         float zPosition,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="xPosition" type="float"><![CDATA[Value to translate by on the x-axis.]]></parameter>
+            <parameter name="yPosition" type="float"><![CDATA[Value to translate by on the y-axis.]]></parameter>
+            <parameter name="zPosition" type="float"><![CDATA[Value to translate by on the z-axis.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created translation Matrix .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single">
+          <summary><![CDATA[Creates a translation Matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateTranslation (
+         float xPosition,
+         float yPosition,
+         float zPosition
+)]]></syntax>
+          <parameters>
+            <parameter name="xPosition" type="float"><![CDATA[Value to translate by on the x-axis.]]></parameter>
+            <parameter name="yPosition" type="float"><![CDATA[Value to translate by on the y-axis.]]></parameter>
+            <parameter name="zPosition" type="float"><![CDATA[Value to translate by on the z-axis.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created translation Matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateWorld" returnType="void" isStatic="true">
+      <summary><![CDATA[Creates a world matrix with the specified parameters.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Vector3, Matrix">
+          <summary><![CDATA[Creates a world matrix with the specified parameters.]]></summary>
+          <syntax><![CDATA[public static void CreateWorld (
+         ref Vector3 position,
+         ref Vector3 forward,
+         ref Vector3 up,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="position" type="Object"><![CDATA[Position of the object. This value is used in translation operations.]]></parameter>
+            <parameter name="forward" type="Object"><![CDATA[Forward direction of the object.]]></parameter>
+            <parameter name="up" type="Object"><![CDATA[Upward direction of the object; usually [0, 1, 0].]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created world matrix.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This matrix includes rotation and translation, but not scaling.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3">
+          <summary><![CDATA[Creates a world matrix with the specified parameters.]]></summary>
+          <syntax><![CDATA[public static Matrix CreateWorld (
+         Vector3 position,
+         Vector3 forward,
+         Vector3 up
+)]]></syntax>
+          <parameters>
+            <parameter name="position" type="Object"><![CDATA[Position of the object. This value is used in translation operations.]]></parameter>
+            <parameter name="forward" type="Object"><![CDATA[Forward direction of the object.]]></parameter>
+            <parameter name="up" type="Object"><![CDATA[Upward direction of the object; usually [0, 1, 0].]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created world matrix.]]></returns>
+          <remarks><![CDATA[This matrix includes rotation and translation, but not scaling.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Decompose" returnType="void">
+      <summary><![CDATA[Extracts the scalar, translation, and rotation components from a 3D scale/rotate/translate (SRT) Matrix.]]></summary>
+      <overloads>
+        <overload signature="Decompose()">
+          <summary><![CDATA[Extracts the scalar, translation, and rotation components from a 3D scale/rotate/translate (SRT) Matrix.]]></summary>
+          <syntax><![CDATA[public bool Decompose (
+         out Vector3 scale,
+         out Quaternion rotation,
+         out Vector3 translation
+)]]></syntax>
+          <parameters>
+            <parameter name="scale" type="Object"><![CDATA[[ OutAttribute ] The scalar component of the transform matrix, expressed as a Vector3 .]]></parameter>
+            <parameter name="rotation" type="Quaternion"><![CDATA[[ OutAttribute ] The rotation component of the transform matrix, expressed as a Quaternion .]]></parameter>
+            <parameter name="translation" type="Object"><![CDATA[[ OutAttribute ] The translation component of the transform matrix, expressed as a Vector3 .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the Matrix can be decomposed; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Determinant" returnType="void">
+      <summary><![CDATA[Calculates the determinant of the matrix.]]></summary>
+      <overloads>
+        <overload signature="Determinant()">
+          <summary><![CDATA[Calculates the determinant of the matrix.]]></summary>
+          <syntax><![CDATA[public float Determinant ()]]></syntax>
+          <returns><![CDATA[The determinant of the matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Divide" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Divides the components of a matrix by the corresponding components of another matrix.]]></summary>
+      <overloads>
+        <overload signature="Matrix, Matrix">
+          <summary><![CDATA[Divides the components of a matrix by the corresponding components of another matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix Divide (
+         Matrix matrix1,
+         Matrix matrix2
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[The divisor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the division.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Single">
+          <summary><![CDATA[Divides the components of a matrix by a scalar.]]></summary>
+          <syntax><![CDATA[public static Matrix Divide (
+         Matrix matrix1,
+         float divider
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="divider" type="float"><![CDATA[The divisor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resulting matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Matrix, Matrix">
+          <summary><![CDATA[Divides the components of a matrix by the corresponding components of another matrix.]]></summary>
+          <syntax><![CDATA[public static void Divide (
+         ref Matrix matrix1,
+         ref Matrix matrix2,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[The divisor.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] Result of the division.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Single, Matrix">
+          <summary><![CDATA[Divides the components of a matrix by a scalar.]]></summary>
+          <syntax><![CDATA[public static void Divide (
+         ref Matrix matrix1,
+         float divider,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="divider" type="float"><![CDATA[The divisor.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] Result of the division.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Determines whether the specified Object is equal to the Matrix.]]></summary>
+      <overloads>
+        <overload signature="Matrix">
+          <summary><![CDATA[Determines whether the specified Object is equal to the Matrix.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Matrix other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Matrix"><![CDATA[The Object to compare with the current Matrix .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Object is equal to the current Matrix; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code of this object.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code of this object.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Invert" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Calculates the inverse of a matrix.]]></summary>
+      <overloads>
+        <overload signature="Matrix">
+          <summary><![CDATA[Calculates the inverse of a matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix Invert (
+         Matrix matrix
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The inverse of the matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Matrix">
+          <summary><![CDATA[Calculates the inverse of a matrix.]]></summary>
+          <syntax><![CDATA[public static void Invert (
+         ref Matrix matrix,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The inverse of the matrix.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Lerp" returnType="void" isStatic="true">
+      <summary><![CDATA[Linearly interpolates between the corresponding values of two matrices.]]></summary>
+      <overloads>
+        <overload signature="Matrix, Matrix, Single, Matrix">
+          <summary><![CDATA[Linearly interpolates between the corresponding values of two matrices.]]></summary>
+          <syntax><![CDATA[public static void Lerp (
+         ref Matrix matrix1,
+         ref Matrix matrix2,
+         float amount,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Interpolation value.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] Resulting matrix.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Matrix, Single">
+          <summary><![CDATA[Linearly interpolates between the corresponding values of two matrices.]]></summary>
+          <syntax><![CDATA[public static Matrix Lerp (
+         Matrix matrix1,
+         Matrix matrix2,
+         float amount
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Interpolation value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resulting matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Multiply" returnType="void" isStatic="true">
+      <summary><![CDATA[Multiplies a matrix by another matrix.]]></summary>
+      <overloads>
+        <overload signature="Matrix, Matrix, Matrix">
+          <summary><![CDATA[Multiplies a matrix by another matrix.]]></summary>
+          <syntax><![CDATA[public static void Multiply (
+         ref Matrix matrix1,
+         ref Matrix matrix2,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] Result of the multiplication.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Matrix">
+          <summary><![CDATA[Multiplies a matrix by another matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix Multiply (
+         Matrix matrix1,
+         Matrix matrix2
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Single">
+          <summary><![CDATA[Multiplies a matrix by a scalar value.]]></summary>
+          <syntax><![CDATA[public static Matrix Multiply (
+         Matrix matrix1,
+         float scaleFactor
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Single, Matrix">
+          <summary><![CDATA[Multiplies a matrix by a scalar value.]]></summary>
+          <syntax><![CDATA[public static void Multiply (
+         ref Matrix matrix1,
+         float scaleFactor,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The result of the multiplication.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Negate" returnType="void" isStatic="true">
+      <summary><![CDATA[Negates individual elements of a matrix.]]></summary>
+      <overloads>
+        <overload signature="Matrix, Matrix">
+          <summary><![CDATA[Negates individual elements of a matrix.]]></summary>
+          <syntax><![CDATA[public static void Negate (
+         ref Matrix matrix,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] Negated matrix.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix">
+          <summary><![CDATA[Negates individual elements of a matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix Negate (
+         Matrix matrix
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Negated matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Subtract" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Subtracts matrices.]]></summary>
+      <overloads>
+        <overload signature="Matrix, Matrix">
+          <summary><![CDATA[Subtracts matrices.]]></summary>
+          <syntax><![CDATA[public static Matrix Subtract (
+         Matrix matrix1,
+         Matrix matrix2
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source vector.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the subtraction.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Matrix, Matrix">
+          <summary><![CDATA[Subtracts matrices.]]></summary>
+          <syntax><![CDATA[public static void Subtract (
+         ref Matrix matrix1,
+         ref Matrix matrix2,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] Result of the subtraction.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of the current object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of the current object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String that represents the object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Transform" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Transforms a Matrix by applying a Quaternion rotation.]]></summary>
+      <overloads>
+        <overload signature="Matrix, Quaternion">
+          <summary><![CDATA[Transforms a Matrix by applying a Quaternion rotation.]]></summary>
+          <syntax><![CDATA[public static Matrix Transform (
+         Matrix value,
+         Quaternion rotation
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Matrix"><![CDATA[The Matrix to transform.]]></parameter>
+            <parameter name="rotation" type="Quaternion"><![CDATA[The rotation to apply, expressed as a Quaternion .]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new Matrix that is the result of the transform.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Quaternion, Matrix">
+          <summary><![CDATA[Transforms a Matrix by applying a Quaternion rotation.]]></summary>
+          <syntax><![CDATA[public static void Transform (
+         ref Matrix value,
+         ref Quaternion rotation,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Matrix"><![CDATA[The Matrix to transform.]]></parameter>
+            <parameter name="rotation" type="Quaternion"><![CDATA[The rotation to apply, expressed as a Quaternion .]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] An existing Matrix filled in with the result of the transform.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Transpose" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Transposes the rows and columns of a matrix.]]></summary>
+      <overloads>
+        <overload signature="Matrix">
+          <summary><![CDATA[Transposes the rows and columns of a matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix Transpose (
+         Matrix matrix
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Transposed matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Matrix">
+          <summary><![CDATA[Transposes the rows and columns of a matrix.]]></summary>
+          <syntax><![CDATA[public static void Transpose (
+         ref Matrix matrix,
+         out Matrix result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] Transposed matrix.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Addition" returnType="void">
+      <summary><![CDATA[Adds a matrix to another matrix.]]></summary>
+      <overloads>
+        <overload signature="op_Addition()">
+          <summary><![CDATA[Adds a matrix to another matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix op_Addition (
+         Matrix matrix1,
+         Matrix matrix2
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resulting matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Division" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Divides the components of a matrix by a scalar.]]></summary>
+      <overloads>
+        <overload signature="Matrix, Single">
+          <summary><![CDATA[Divides the components of a matrix by a scalar.]]></summary>
+          <syntax><![CDATA[public static Matrix op_Division (
+         Matrix matrix1,
+         float divider
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="divider" type="float"><![CDATA[The divisor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The result of the division.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Matrix">
+          <summary><![CDATA[Divides the components of a matrix by the corresponding components of another matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix op_Division (
+         Matrix matrix1,
+         Matrix matrix2
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[The divisor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resulting matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares a matrix for equality with another matrix.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares a matrix for equality with another matrix.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Matrix matrix1,
+         Matrix matrix2
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the matrices are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Tests a matrix for inequality with another matrix.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Tests a matrix for inequality with another matrix.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Matrix matrix1,
+         Matrix matrix2
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[The matrix on the left of the equal sign.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[The matrix on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the matrices are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Multiply" returnType="Matrix" isStatic="true">
+      <summary><![CDATA[Multiplies a matrix by another matrix.]]></summary>
+      <overloads>
+        <overload signature="Matrix, Matrix">
+          <summary><![CDATA[Multiplies a matrix by another matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix op_Multiply (
+         Matrix matrix1,
+         Matrix matrix2
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Matrix">
+          <summary><![CDATA[Multiplies a matrix by a scalar value.]]></summary>
+          <syntax><![CDATA[public static Matrix op_Multiply (
+         float scaleFactor,
+         Matrix matrix
+)]]></syntax>
+          <parameters>
+            <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
+            <parameter name="matrix" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Single">
+          <summary><![CDATA[Multiplies a matrix by a scalar value.]]></summary>
+          <syntax><![CDATA[public static Matrix op_Multiply (
+         Matrix matrix,
+         float scaleFactor
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Subtraction" returnType="void">
+      <summary><![CDATA[Subtracts matrices.]]></summary>
+      <overloads>
+        <overload signature="op_Subtraction()">
+          <summary><![CDATA[Subtracts matrices.]]></summary>
+          <syntax><![CDATA[public static Matrix op_Subtraction (
+         Matrix matrix1,
+         Matrix matrix2
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+            <parameter name="matrix2" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the subtraction.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_UnaryNegation" returnType="void">
+      <summary><![CDATA[Negates individual elements of a matrix.]]></summary>
+      <overloads>
+        <overload signature="op_UnaryNegation()">
+          <summary><![CDATA[Negates individual elements of a matrix.]]></summary>
+          <syntax><![CDATA[public static Matrix op_UnaryNegation (
+         Matrix matrix1
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix1" type="Matrix"><![CDATA[Source matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Negated matrix.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="M11" type="float">
+      <summary><![CDATA[Value at row 1 column 1 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M11]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M12" type="float">
+      <summary><![CDATA[Value at row 1 column 2 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M12]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M13" type="float">
+      <summary><![CDATA[Value at row 1 column 3 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M13]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M14" type="float">
+      <summary><![CDATA[Value at row 1 column 4 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M14]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M21" type="float">
+      <summary><![CDATA[Value at row 2 column 1 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M21]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M22" type="float">
+      <summary><![CDATA[Value at row 2 column 2 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M22]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M23" type="float">
+      <summary><![CDATA[Value at row 2 column 3 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M23]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M24" type="float">
+      <summary><![CDATA[Value at row 2 column 4 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M24]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M31" type="float">
+      <summary><![CDATA[Value at row 3 column 1 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M31]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M32" type="float">
+      <summary><![CDATA[Value at row 3 column 2 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M32]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M33" type="float">
+      <summary><![CDATA[Value at row 3 column 3 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M33]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M34" type="float">
+      <summary><![CDATA[Value at row 3 column 4 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M34]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M41" type="float">
+      <summary><![CDATA[Value at row 4 column 1 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M41]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M42" type="float">
+      <summary><![CDATA[Value at row 4 column 2 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M42]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M43" type="float">
+      <summary><![CDATA[Value at row 4 column 3 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M43]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="M44" type="float">
+      <summary><![CDATA[Value at row 4 column 4 of the matrix.]]></summary>
+      <syntax><![CDATA[public float M44]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

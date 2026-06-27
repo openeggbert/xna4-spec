@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamerZone" kind="enum"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[This style of social gaming preferred by this Xbox Live member.]]></summary>
+  <syntax><![CDATA[public enum GamerZone]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="Family"><summary><![CDATA[Family-friendly game play.]]></summary></member>
+    <member name="Pro"><summary><![CDATA[Competitive game play.]]></summary></member>
+    <member name="Recreation"><summary><![CDATA[Non-competitive game play.]]></summary></member>
+    <member name="Underground"><summary><![CDATA[Alternative approach to game play.]]></summary></member>
+    <member name="Unknown"><summary><![CDATA[Unknown.]]></summary></member>
+  </members>
+</xna-type>

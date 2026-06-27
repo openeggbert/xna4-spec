@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SpriteFont" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Represents a font texture.]]></summary>
+  <syntax><![CDATA[public class SpriteFont]]></syntax>
+  <remarks><![CDATA[To load a SpriteFont , click Sprite Font on the Add New Item menu. This adds an XML file to your project describing how to build a texture map for your font. At build time, XNA Game Studio Express creates a texture with the image of the characters of the font you specify, with the specified font point size. At run time, load the font using ContentManager.Load , and pass it to SpriteBatch.DrawString when drawing text. Note As with most types of software, font files are licensed rather than sold. Font licenses vary from vendor to vendor, but most don't allow redistribution of the fonts, and that includes redistribution of reproductions such as bitmaps containing the rasterized character set. This is even true of many of the licenses covering fonts that Microsoft supplies with applications and Windows. Be careful, therefore, to ensure that you have the required license rights to redistribute any font you include as a bitmap containing the rasterized character set in your game!]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Characters" type="ReadOnlyCollection&amp;lt;char&amp;gt;" access="get">
+      <summary><![CDATA[Gets a collection of all the characters that are included in the font.]]></summary>
+      <syntax><![CDATA[public ReadOnlyCollection&lt;char&gt; Characters { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="DefaultCharacter" type="Nullable&amp;lt;char&amp;gt;" access="get;set">
+      <summary><![CDATA[Gets or sets the default character for the font.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;char&gt; DefaultCharacter { get; set; }]]></syntax>
+      <remarks><![CDATA[If set to anything other than null, this character will be automatically substituted any time an attempt is made to draw or measure characters that are not in the font. If set to null, missing characters will produce an exception.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="LineSpacing" type="int" access="get">
+      <summary><![CDATA[Gets the height of a line using these font characters.]]></summary>
+      <syntax><![CDATA[public int LineSpacing { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Spacing" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the spacing of the font characters.]]></summary>
+      <syntax><![CDATA[public float Spacing { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="MeasureString" returnType="void">
+      <summary><![CDATA[Returns the height and width of a given string as a Vector2.]]></summary>
+      <overloads>
+        <overload signature="StringBuilder">
+          <summary><![CDATA[Returns the width and height of a string as a Vector2.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Function MeasureString ( _
+         text As StringBuilder _
+) As Vector2]]></syntax>
+          <parameters>
+            <parameter name="text" type="Object"><![CDATA[Type: StringBuilder The string to measure.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Vector2 The width and height, in pixels, of text, when it is rendered.]]></returns>
+          <remarks><![CDATA[Use a StringBuilder argument in place of a String argument to measure dynamically formatted text.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

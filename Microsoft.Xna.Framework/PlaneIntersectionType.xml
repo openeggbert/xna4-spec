@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PlaneIntersectionType" kind="enum"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Describes the intersection between a plane and a bounding volume.]]></summary>
+  <syntax><![CDATA[public enum PlaneIntersectionType]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Back"><summary><![CDATA[There is no intersection, and the bounding volume is in the negative half-space of the Plane.]]></summary></member>
+    <member name="Front"><summary><![CDATA[There is no intersection, and the bounding volume is in the positive half-space of the Plane.]]></summary></member>
+    <member name="Intersecting"><summary><![CDATA[The Plane is intersected.]]></summary></member>
+  </members>
+</xna-type>

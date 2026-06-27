@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EffectPass" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Represents an effect pass.]]></summary>
+  <syntax><![CDATA[public sealed class EffectPass]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Annotations" type="EffectAnnotationCollection" access="get">
+      <summary><![CDATA[Gets the set of EffectAnnotation objects for this EffectPass.]]></summary>
+      <syntax><![CDATA[public EffectAnnotationCollection Annotations { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Gets the name of this pass.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Apply" returnType="void">
+      <summary><![CDATA[Begins this pass.]]></summary>
+      <overloads>
+        <overload signature="Apply()">
+          <summary><![CDATA[Begins this pass.]]></summary>
+          <syntax><![CDATA[public void Apply ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Begin" returnType="void">
+      <summary><![CDATA[Begins a pass within the active technique.]]></summary>
+      <overloads>
+        <overload signature="Begin()">
+          <summary><![CDATA[Begins a pass within the active technique.]]></summary>
+          <syntax><![CDATA[public void Begin ()]]></syntax>
+          <remarks><![CDATA[An application sets one active pass (within one active technique) in the effect system by calling Begin . An application signals the end of the active pass by calling End . Begin and End must occur in a matching pair, within a matching pair of Effect.Begin and Effect.End calls. If the application changes any effect state using any of the Effect methods inside of a Begin / End matching pair, the application must call CommitChanges to set the update the device with the state changes. If no state changes occur within a Begin and End matching pair, it is not necessary to call CommitChanges .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="End" returnType="void">
+      <summary><![CDATA[Ends a pass within the active technique.]]></summary>
+      <overloads>
+        <overload signature="End()">
+          <summary><![CDATA[Ends a pass within the active technique.]]></summary>
+          <syntax><![CDATA[public void End ()]]></syntax>
+          <remarks><![CDATA[An application signals the end of rendering an active pass by calling End . Each End must be part of a matching pair of Begin and End calls. Begin and End must occur in a matching pair, within a matching pair of Effect.Begin and Effect.End calls. If the application changes any effect state using any of the Effect methods inside of a Begin / End matching pair, the application must call CommitChanges to set the update the device with the state changes. If no state changes occur within a Begin and End matching pair, it is not necessary to call CommitChanges .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with this EffectPass .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         EffectPass left,
+         EffectPass right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="EffectPass"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="EffectPass"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         EffectPass left,
+         EffectPass right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="EffectPass"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="EffectPass"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

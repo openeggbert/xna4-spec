@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TargetPlatform" kind="enum"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[This enumeration is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public enum TargetPlatform]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Unknown"><summary><![CDATA[Represents an unknown platform.]]></summary></member>
+    <member name="Windows"><summary><![CDATA[The Windows platform.]]></summary></member>
+    <member name="Xbox360"><summary><![CDATA[The Xbox 360 game console.]]></summary></member>
+  </members>
+</xna-type>

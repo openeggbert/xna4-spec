@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BoneContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="NodeContent">
+  <summary><![CDATA[Represents an animation skeleton.]]></summary>
+  <syntax><![CDATA[public class BoneContent : NodeContent]]></syntax>
+  <remarks><![CDATA[Animation skeletons are represented as a tree of BoneContent objects with the bind pose stored in their Transform properties. Animation data for the entire skeleton is stored in the Animations property of the root bone (represented by a BoneContent object); typically a sibling of the mesh being skinned.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="BoneContent()">
+      <summary><![CDATA[Initializes a new instance of BoneContent.]]></summary>
+      <syntax><![CDATA[public BoneContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EffectMaterial" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="Effect">
+  <summary><![CDATA[Contains an effect subclass which is used to load data for an EffectMaterialContent type.]]></summary>
+  <syntax><![CDATA[public class EffectMaterial : Effect]]></syntax>
+  <remarks><![CDATA[For most purposes, this type can be ignored, and treated exactly like a regular effect. When an EffectMaterial type is loaded from .xnb format, its parameter values and textures are also loaded and automatically set on the effect, in addition to the HLSL shader code. Use this class to write a content pipeline extension to store materials inside a custom data type.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="EffectMaterial(Effect)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA[public EffectMaterial (
+         Effect cloneSource
+)]]></syntax>
+      <parameters>
+        <parameter name="cloneSource" type="Effect"><![CDATA[An instance of an object to copy initialization data from.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

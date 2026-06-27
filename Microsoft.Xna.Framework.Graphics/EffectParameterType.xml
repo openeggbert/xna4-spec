@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EffectParameterType" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines types that can be used for effect parameters or shader constants.]]></summary>
+  <syntax><![CDATA[public enum EffectParameterType]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Bool"><summary><![CDATA[Parameter is a Boolean. Any nonzero value passed in will be mapped to 1 (TRUE) before being written into the constant table; otherwise, the value will be set to 0 in the constant table.]]></summary></member>
+    <member name="Int32"><summary><![CDATA[Parameter is an integer. Any floating-point values passed in will be rounded off (to zero decimal places) before being written into the constant table.]]></summary></member>
+    <member name="PixelShader"><summary><![CDATA[Parameter is a pixel shader.]]></summary></member>
+    <member name="Sampler"><summary><![CDATA[Parameter is a sampler.]]></summary></member>
+    <member name="Sampler1D"><summary><![CDATA[Parameter is a 1D sampler.]]></summary></member>
+    <member name="Sampler2D"><summary><![CDATA[Parameter is a 2D sampler.]]></summary></member>
+    <member name="Sampler3D"><summary><![CDATA[Parameter is a 3D sampler.]]></summary></member>
+    <member name="SamplerCube"><summary><![CDATA[Parameter is a cube sampler.]]></summary></member>
+    <member name="Single"><summary><![CDATA[Parameter is a floating-point number.]]></summary></member>
+    <member name="String"><summary><![CDATA[Parameter is a string.]]></summary></member>
+    <member name="Texture"><summary><![CDATA[Parameter is a texture.]]></summary></member>
+    <member name="Texture1D"><summary><![CDATA[Parameter is a 1D texture.]]></summary></member>
+    <member name="Texture2D"><summary><![CDATA[Parameter is a 2D texture.]]></summary></member>
+    <member name="Texture3D"><summary><![CDATA[Parameter is a 3D texture.]]></summary></member>
+    <member name="TextureCube"><summary><![CDATA[Parameter is a cube texture.]]></summary></member>
+    <member name="VertexShader"><summary><![CDATA[Parameter is a vertex shader.]]></summary></member>
+    <member name="Void"><summary><![CDATA[Parameter is a void pointer.]]></summary></member>
+  </members>
+</xna-type>

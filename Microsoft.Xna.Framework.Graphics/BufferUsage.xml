@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BufferUsage" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Specifies special usage of the buffer contents.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum BufferUsage]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="None"><summary><![CDATA[None]]></summary></member>
+    <member name="Points"><summary><![CDATA[Indicates that the vertex or index buffer will be used for drawing point sprites. The buffer is loaded in system memory if software vertex processing is needed to emulate point sprites.]]></summary></member>
+    <member name="WriteOnly"><summary><![CDATA[Indicates that the application only writes to the vertex buffer. If specified, the driver chooses the best memory location for efficient writing and rendering. Attempts to read from a write-only vertex buffer fail.]]></summary></member>
+  </members>
+</xna-type>

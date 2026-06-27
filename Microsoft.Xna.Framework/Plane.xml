@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Plane" kind="struct"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IEquatable&amp;lt;Plane&amp;gt;">
+  <summary><![CDATA[Defines a plane.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.PlaneConverter)")]
+[SerializableAttribute]
+public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
+  <remarks><![CDATA[The Plane structure represents a plane using a 3D vector normal and a distance value, as the following figure shows.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Plane(Vector4)">
+      <summary><![CDATA[Creates a new instance of Plane.]]></summary>
+      <syntax><![CDATA[public Plane (
+         Vector4 value
+)]]></syntax>
+      <parameters>
+        <parameter name="value" type="Object"><![CDATA[Vector4 with X, Y, and Z components defining the normal of the Plane . The W component defines the distance of the Plane along the normal from the origin.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Plane(Single, Single, Single, Single)">
+      <summary><![CDATA[Creates a new instance of Plane.]]></summary>
+      <syntax><![CDATA[public Plane (
+         float a,
+         float b,
+         float c,
+         float d
+)]]></syntax>
+      <parameters>
+        <parameter name="a" type="float"><![CDATA[X component of the normal defining the Plane .]]></parameter>
+        <parameter name="b" type="float"><![CDATA[Y component of the normal defining the Plane .]]></parameter>
+        <parameter name="c" type="float"><![CDATA[Z component of the normal defining the Plane .]]></parameter>
+        <parameter name="d" type="float"><![CDATA[Distance of the Plane along its normal from the origin.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Plane(Vector3, Vector3, Vector3)">
+      <summary><![CDATA[Creates a new instance of Plane.]]></summary>
+      <syntax><![CDATA[public Plane (
+         Vector3 point1,
+         Vector3 point2,
+         Vector3 point3
+)]]></syntax>
+      <parameters>
+        <parameter name="point1" type="Object"><![CDATA[One point of a triangle defining the Plane .]]></parameter>
+        <parameter name="point2" type="Object"><![CDATA[One point of a triangle defining the Plane .]]></parameter>
+        <parameter name="point3" type="Object"><![CDATA[One point of a triangle defining the Plane .]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Plane(Vector3, Single)">
+      <summary><![CDATA[Creates a new instance of Plane.]]></summary>
+      <syntax><![CDATA[public Plane (
+         Vector3 normal,
+         float d
+)]]></syntax>
+      <parameters>
+        <parameter name="normal" type="Object"><![CDATA[The normal vector to the Plane .]]></parameter>
+        <parameter name="d" type="float"><![CDATA[The Plane 's distance along its normal from the origin.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Dot" returnType="float">
+      <summary><![CDATA[Calculates the dot product of a specified Vector4 and this Plane.]]></summary>
+      <overloads>
+        <overload signature="Vector4">
+          <summary><![CDATA[Calculates the dot product of a specified Vector4 and this Plane.]]></summary>
+          <syntax><![CDATA[public float Dot (
+         Vector4 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The Vector4 to multiply this Plane by.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The dot product of the specified Vector4 and this Plane.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector4, Single">
+          <summary><![CDATA[Calculates the dot product of a specified Vector4 and this Plane.]]></summary>
+          <syntax><![CDATA[public void Dot (
+         ref Vector4 value,
+         out float result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The Vector4 to multiply this Plane by.]]></parameter>
+            <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The dot product of the specified Vector4 and this Plane .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DotCoordinate" returnType="void">
+      <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane plus the distance (D) value of the Plane.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Single">
+          <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane plus the distance (D) value of the Plane.]]></summary>
+          <syntax><![CDATA[public void DotCoordinate (
+         ref Vector3 value,
+         out float result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The Vector3 to multiply by.]]></parameter>
+            <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The resulting value.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3">
+          <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane plus the distance (D) value of the Plane.]]></summary>
+          <syntax><![CDATA[public float DotCoordinate (
+         Vector3 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The Vector3 to multiply by.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The resulting value.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DotNormal" returnType="void">
+      <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Single">
+          <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane.]]></summary>
+          <syntax><![CDATA[public void DotNormal (
+         ref Vector3 value,
+         out float result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The Vector3 to multiply by.]]></parameter>
+            <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The resulting dot product.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3">
+          <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane.]]></summary>
+          <syntax><![CDATA[public float DotNormal (
+         Vector3 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The Vector3 to multiply by.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The resulting dot product.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Determines whether the specified Plane is equal to the Plane.]]></summary>
+      <overloads>
+        <overload signature="Plane">
+          <summary><![CDATA[Determines whether the specified Plane is equal to the Plane.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Plane other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Plane"><![CDATA[The Plane to compare with the current Plane .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Plane is equal to the current Plane; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Object">
+          <summary><![CDATA[Determines whether the specified Object is equal to the Plane.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current Plane .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Object is equal to the current Plane; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this object.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this object.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[A hash code for the current Plane.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Intersects" returnType="PlaneIntersectionType">
+      <summary><![CDATA[Checks whether the current Plane intersects a specified BoundingSphere.]]></summary>
+      <overloads>
+        <overload signature="BoundingSphere">
+          <summary><![CDATA[Checks whether the current Plane intersects a specified BoundingSphere.]]></summary>
+          <syntax><![CDATA[public PlaneIntersectionType Intersects (
+         BoundingSphere sphere
+)]]></syntax>
+          <parameters>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An enumeration indicating the relationship between the Plane and the BoundingSphere.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="BoundingSphere, PlaneIntersectionType">
+          <summary><![CDATA[Checks whether the current Plane intersects a BoundingSphere.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingSphere sphere,
+         out PlaneIntersectionType result
+)]]></syntax>
+          <parameters>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with.]]></parameter>
+            <parameter name="result" type="PlaneIntersectionType"><![CDATA[[ OutAttribute ] An enumeration indicating whether the Plane intersects the BoundingSphere .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="BoundingBox">
+          <summary><![CDATA[Checks whether the current Plane intersects a specified BoundingBox.]]></summary>
+          <syntax><![CDATA[public PlaneIntersectionType Intersects (
+         BoundingBox box
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to test for intersection with.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An enumeration indicating the relationship between the Plane and the BoundingBox.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="BoundingFrustum">
+          <summary><![CDATA[Checks whether the current Plane intersects a specified BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public PlaneIntersectionType Intersects (
+         BoundingFrustum frustum
+)]]></syntax>
+          <parameters>
+            <parameter name="frustum" type="BoundingFrustum"><![CDATA[The BoundingFrustum to check for intersection with.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An enumeration indicating the relationship between the Plane and the BoundingFrustum.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="BoundingBox, PlaneIntersectionType">
+          <summary><![CDATA[Checks whether the current Plane intersects a BoundingBox.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingBox box,
+         out PlaneIntersectionType result
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with.]]></parameter>
+            <parameter name="result" type="PlaneIntersectionType"><![CDATA[[ OutAttribute ] An enumeration indicating whether the Plane intersects the BoundingBox .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Normalize" returnType="void">
+      <summary><![CDATA[Changes the coefficients of the Normal vector of this Plane to make it of unit length.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Changes the coefficients of the Normal vector of this Plane to make it of unit length.]]></summary>
+          <syntax><![CDATA[public void Normalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Plane">
+          <summary><![CDATA[Changes the coefficients of the Normal vector of a Plane to make it of unit length.]]></summary>
+          <syntax><![CDATA[public static Plane Normalize (
+         Plane value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Plane"><![CDATA[The Plane to normalize.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new Plane with a normal having unit length.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Plane, Plane">
+          <summary><![CDATA[Changes the coefficients of the Normal vector of a Plane to make it of unit length.]]></summary>
+          <syntax><![CDATA[public static void Normalize (
+         ref Plane value,
+         out Plane result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Plane"><![CDATA[The Plane to normalize.]]></parameter>
+            <parameter name="result" type="Plane"><![CDATA[[ OutAttribute ] An existing plane Plane filled in with a normalized version of the specified plane.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a String that represents the current Plane.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a String that represents the current Plane.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of the current Plane.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Transform" returnType="Plane" isStatic="true">
+      <summary><![CDATA[Transforms a normalized Plane by a Matrix.]]></summary>
+      <overloads>
+        <overload signature="Plane, Matrix">
+          <summary><![CDATA[Transforms a normalized Plane by a Matrix.]]></summary>
+          <syntax><![CDATA[public static Plane Transform (
+         Plane plane,
+         Matrix matrix
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Plane"><![CDATA[The normalized Plane to transform. This Plane must already be normalized, so that its Normal vector is of unit length, before this method is called.]]></parameter>
+            <parameter name="matrix" type="Matrix"><![CDATA[The transform Matrix to apply to the Plane .]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new Plane that results from applying the transform.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Plane, Quaternion">
+          <summary><![CDATA[Transforms a normalized Plane by a Quaternion rotation.]]></summary>
+          <syntax><![CDATA[public static Plane Transform (
+         Plane plane,
+         Quaternion rotation
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Plane"><![CDATA[The normalized Plane to transform. This Plane must already be normalized, so that its Normal vector is of unit length, before this method is called.]]></parameter>
+            <parameter name="rotation" type="Quaternion"><![CDATA[The Quaternion rotation to apply to the Plane .]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new Plane that results from applying the rotation.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Plane, Matrix, Plane">
+          <summary><![CDATA[Transforms a normalized Plane by a Matrix.]]></summary>
+          <syntax><![CDATA[public static void Transform (
+         ref Plane plane,
+         ref Matrix matrix,
+         out Plane result
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Plane"><![CDATA[The normalized Plane to transform. This Plane must already be normalized, so that its Normal vector is of unit length, before this method is called.]]></parameter>
+            <parameter name="matrix" type="Matrix"><![CDATA[The transform Matrix to apply to the Plane .]]></parameter>
+            <parameter name="result" type="Plane"><![CDATA[[ OutAttribute ] An existing Plane filled in with the results of applying the transform.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Plane, Quaternion, Plane">
+          <summary><![CDATA[Transforms a normalized Plane by a Quaternion rotation.]]></summary>
+          <syntax><![CDATA[public static void Transform (
+         ref Plane plane,
+         ref Quaternion rotation,
+         out Plane result
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Plane"><![CDATA[The normalized Plane to transform. This Plane must already be normalized, so that its Normal vector is of unit length, before this method is called.]]></parameter>
+            <parameter name="rotation" type="Quaternion"><![CDATA[The Quaternion rotation to apply to the Plane .]]></parameter>
+            <parameter name="result" type="Plane"><![CDATA[[ OutAttribute ] An existing Plane filled in with the results of applying the rotation.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether two instances of Plane are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether two instances of Plane are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Plane lhs,
+         Plane rhs
+)]]></syntax>
+          <parameters>
+            <parameter name="lhs" type="Plane"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="rhs" type="Plane"><![CDATA[The object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if left is equal to right; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether two instances of Plane are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether two instances of Plane are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Plane lhs,
+         Plane rhs
+)]]></syntax>
+          <parameters>
+            <parameter name="lhs" type="Plane"><![CDATA[The object to the left of the inequality operator.]]></parameter>
+            <parameter name="rhs" type="Plane"><![CDATA[The object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if left is not equal to right; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="D" type="float">
+      <summary><![CDATA[The distance of the Plane along its normal from the origin.]]></summary>
+      <syntax><![CDATA[public float D]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Normal" type="Vector3">
+      <summary><![CDATA[The normal vector of the Plane.]]></summary>
+      <syntax><![CDATA[public Vector3 Normal]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

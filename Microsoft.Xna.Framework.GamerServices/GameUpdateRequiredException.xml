@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GameUpdateRequiredException" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          baseClass="Exception">
+  <summary><![CDATA[The exception thrown when a game (title) update is required in order to use Xbox LIVE.]]></summary>
+  <syntax><![CDATA[public class GameUpdateRequiredException : Exception]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GameUpdateRequiredException(String)">
+      <summary><![CDATA[Initializes a new GameUpdateRequiredException with a specified error message.]]></summary>
+      <syntax><![CDATA[public GameUpdateRequiredException (
+         string message
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[Text that describes the error.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[The content of the message parameter is intended to be understood by humans. The caller of this constructor must ensure the string is localized for the current system culture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GameUpdateRequiredException()">
+      <summary><![CDATA[Initializes a new GameUpdateRequiredException.]]></summary>
+      <syntax><![CDATA[public GameUpdateRequiredException ()]]></syntax>
+      <remarks><![CDATA[When this constructor is used, both the Message and InnerException properties are null .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GameUpdateRequiredException(SerializationInfo, StreamingContext)">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[protected GameUpdateRequiredException (
+         SerializationInfo info,
+         StreamingContext context
+)]]></syntax>
+      <parameters>
+        <parameter name="info" type="SerializationInfo"><![CDATA[Describes the gamer services or multiplayer API being accessed when the exception occurred.]]></parameter>
+        <parameter name="context" type="StreamingContext"><![CDATA[Describes the stream where the exception occurred.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GameUpdateRequiredException(String, Exception)">
+      <summary><![CDATA[Initializes a new GameUpdateRequiredException, with a specified error message and a reference to the inner exception that caused the error.]]></summary>
+      <syntax><![CDATA[public GameUpdateRequiredException (
+         string message,
+         Exception innerException
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[Text that describes the error.]]></parameter>
+        <parameter name="innerException" type="Exception"><![CDATA[The exception that is the cause of the GameUpdateRequiredException . If this parameter is not null , the exception is raised in a catch block that handles the inner exception.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[The content of the message parameter is intended to be understood by humans. The caller of this constructor must ensure the string is localized for the current system culture. An exception thrown as a direct result of a previous exception should include a reference to that previous exception in the innerException parameter. The InnerException property returns the same value that is passed into this constructor, or null if the caller did not supply the inner exception parameter to the constructor.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

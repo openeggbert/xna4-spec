@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentSerializerAttribute" kind="class"
+          namespace="Microsoft.Xna.Framework.Content"
+          assembly="Microsoft.Xna.Framework.Content"
+          baseClass="Attribute">
+  <summary><![CDATA[A custom Attribute that marks a field or property to control how it is serialized or to indicate that protected or private data should be included in serialization.]]></summary>
+  <syntax><![CDATA[[AttributeUsageAttribute(384)]
+public sealed class ContentSerializerAttribute : Attribute]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentSerializerAttribute()">
+      <summary><![CDATA[Creates a new instance of ContentSerializerAttribute.]]></summary>
+      <syntax><![CDATA[public ContentSerializerAttribute ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="AllowNull" type="bool" access="get;set">
+      <summary><![CDATA[Get or set a value indicating whether this member can have a null value (default=true).]]></summary>
+      <syntax><![CDATA[public bool AllowNull { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CollectionItemName" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the XML element name for each item in a collection (default = "Item").]]></summary>
+      <syntax><![CDATA[public string CollectionItemName { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ElementName" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the XML element name (default=name of the managed type member).]]></summary>
+      <syntax><![CDATA[public string ElementName { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FlattenContent" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets a value idicating whether to write member contents directly into the current XML context rather than wrapping the member in a new XML element (default=false).]]></summary>
+      <syntax><![CDATA[public bool FlattenContent { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="HasCollectionItemName" type="bool" access="get">
+      <summary><![CDATA[Indicates whether an explicit CollectionItemName string is being used or the default value.]]></summary>
+      <syntax><![CDATA[public bool HasCollectionItemName { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Optional" type="bool" access="get;set">
+      <summary><![CDATA[Indicates whether to write this element if the member is null and skip past it if not found when deserializing XML (default=false).]]></summary>
+      <syntax><![CDATA[public bool Optional { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SharedResource" type="bool" access="get;set">
+      <summary><![CDATA[Indicates whether this member is referenced from multiple parents and should be serialized as a unique ID reference (default=false).]]></summary>
+      <syntax><![CDATA[public bool SharedResource { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Clone" returnType="void">
+      <summary><![CDATA[Creates a copy of the ContentSerializerAttribute.]]></summary>
+      <overloads>
+        <overload signature="Clone()">
+          <summary><![CDATA[Creates a copy of the ContentSerializerAttribute.]]></summary>
+          <syntax><![CDATA[public ContentSerializerAttribute Clone ()]]></syntax>
+          <returns><![CDATA[The copy.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

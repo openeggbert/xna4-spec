@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ImageFileFormat" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[This enumeration is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public enum ImageFileFormat]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Bmp"><summary><![CDATA[Microsoft Windows bitmap file format.]]></summary></member>
+    <member name="Dds"><summary><![CDATA[DirectDrawSurface file format.]]></summary></member>
+    <member name="Dib"><summary><![CDATA[Microsoft Windows bitmap file format.]]></summary></member>
+    <member name="Hdr"><summary><![CDATA[High dynamic-range file format.]]></summary></member>
+    <member name="Jpg"><summary><![CDATA[Joint Photographic Experts Group (JPEG) compressed file format.]]></summary></member>
+    <member name="Pfm"><summary><![CDATA[Portable float map file format.]]></summary></member>
+    <member name="Png"><summary><![CDATA[Portable Network Graphics file format.]]></summary></member>
+    <member name="Ppm"><summary><![CDATA[Portable pixmap file format.]]></summary></member>
+    <member name="Tga"><summary><![CDATA[Truevision Targa image file format.]]></summary></member>
+  </members>
+</xna-type>

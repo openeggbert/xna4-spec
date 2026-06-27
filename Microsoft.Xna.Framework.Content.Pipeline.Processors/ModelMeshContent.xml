@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ModelMeshContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <summary><![CDATA[Stores design-time data for a ModelMesh asset.]]></summary>
+  <syntax><![CDATA[public sealed class ModelMeshContent]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="BoundingSphere" type="BoundingSphere" access="get">
+      <summary><![CDATA[Gets the bounding sphere for this mesh.]]></summary>
+      <syntax><![CDATA[public BoundingSphere BoundingSphere { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IndexBuffer" type="IndexCollection" access="get">
+      <summary><![CDATA[Gets the index buffer associated with this mesh.]]></summary>
+      <syntax><![CDATA[public IndexCollection IndexBuffer { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MeshParts" type="ModelMeshPartContentCollection" access="get">
+      <summary><![CDATA[Gets the children mesh parts associated with this mesh.]]></summary>
+      <syntax><![CDATA[public ModelMeshPartContentCollection MeshParts { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Gets the mesh name.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ParentBone" type="ModelBoneContent" access="get">
+      <summary><![CDATA[Gets the parent bone.]]></summary>
+      <syntax><![CDATA[public ModelBoneContent ParentBone { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SourceMesh" type="MeshContent" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public MeshContent SourceMesh { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Tag" type="Object" access="get;set">
+      <summary><![CDATA[Gets a user-defined tag object.]]></summary>
+      <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexBuffer" type="VertexBufferContent" access="get">
+      <summary><![CDATA[Gets the vertex buffer associated with this mesh.]]></summary>
+      <syntax><![CDATA[public VertexBufferContent VertexBuffer { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

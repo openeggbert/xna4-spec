@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GameServiceContainer" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IServiceProvider">
+  <summary><![CDATA[A collection of game services.]]></summary>
+  <syntax><![CDATA[public class GameServiceContainer : IServiceProvider]]></syntax>
+  <remarks><![CDATA[Game services are a mechanism for maintaining loose coupling between objects that need to interact with each other. Services work through a mediator—in this case, Game.Services . Service providers register with Game.Services , and service consumers request services from Game.Services . This arrangement allows an object that requires a service to request the service without knowing the name of the service provider. Game services are defined by an interface. A class specifies the services it provides by implementing interfaces and registering the services with Game.Services . A service is registered by calling Game.Services.AddService specifying the type of service being implemented and a reference to the object providing the service. For example, to register an object that provides a service represented by the interface IMyService, you would use the following code. Services.AddService( typeof( IMyService ), myobject ); Once a service is registered, the object providing the service can be retrieved by Game.Services.GetService and specifying the desired service. For example, to retrieve IGraphicsDeviceService , you would use the following code. IGraphicsDeviceService graphicsservice = (IGraphicsDeviceService)Services.GetService( typeof(IGraphicsDeviceService) );]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GameServiceContainer()">
+      <summary><![CDATA[Initializes a new instance of this class, which represents a collection of game services.]]></summary>
+      <syntax><![CDATA[public GameServiceContainer ()]]></syntax>
+      <remarks><![CDATA[Game services are a mechanism for maintaining loose coupling between objects that need to interact with each other. Services work through a mediator—in this case, Game.Services . Service providers register with Game.Services , and service consumers request services from Game.Services . This arrangement allows an object that requires a service to request the service without knowing the name of the service provider. Game services are defined by an interface. A class specifies the services it provides by implementing interfaces and registering the services with Game.Services . A service is registered by calling Game.Services.AddService specifying the type of service being implemented and a reference to the object providing the service. For example, to register an object that provides a service represented by the interface IMyService, you would use the following code. Services.AddService( typeof( IMyService ), myobject ); Once a service is registered, the object providing the service can be retrieved by Game.Services.GetService and specifying the desired service. For example, to retrieve IGraphicsDeviceService , you would use the following code. IGraphicsDeviceService graphicsservice = (IGraphicsDeviceService)Services.GetService( typeof(IGraphicsDeviceService) );]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="AddService" returnType="void">
+      <summary><![CDATA[Adds a service to the GameServiceContainer.]]></summary>
+      <overloads>
+        <overload signature="AddService()">
+          <summary><![CDATA[Adds a service to the GameServiceContainer.]]></summary>
+          <syntax><![CDATA[public void AddService (
+         Type type,
+         Object provider
+)]]></syntax>
+          <parameters>
+            <parameter name="type" type="Type"><![CDATA[The type of service to add.]]></parameter>
+            <parameter name="provider" type="Object"><![CDATA[The service provider to add.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Game services are a mechanism for maintaining loose coupling between objects that need to interact with each other. Services work through a mediator—in this case, Game.Services . Service providers register with Game.Services , and service consumers request services from Game.Services . This arrangement allows an object that requires a service to request the service without knowing the name of the service provider. Game services are defined by an interface. A class specifies the services it provides by implementing interfaces and registering the services with Game.Services . A service is registered by calling Game.Services.AddService specifying the type of service being implemented and a reference to the object providing the service. For example, to register an object that provides a service represented by the interface IMyService, you would use the following code. Services.AddService( typeof( IMyService ), myobject ); Once a service is registered, the object providing the service can be retrieved by Game.Services.GetService and specifying the desired service. For example, to retrieve IGraphicsDeviceService , you would use the following code. IGraphicsDeviceService graphicsservice = (IGraphicsDeviceService)Services.GetService( typeof(IGraphicsDeviceService) );]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetService" returnType="void">
+      <summary><![CDATA[Gets the object providing a specified service.]]></summary>
+      <overloads>
+        <overload signature="GetService()">
+          <summary><![CDATA[Gets the object providing a specified service.]]></summary>
+          <syntax><![CDATA[public Object GetService (
+         Type type
+)]]></syntax>
+          <parameters>
+            <parameter name="type" type="Type"><![CDATA[The type of service.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object providing the service.]]></returns>
+          <remarks><![CDATA[Game services are a mechanism for maintaining loose coupling between objects that need to interact with each other. Services work through a mediator—in this case, Game.Services . Service providers register with Game.Services , and service consumers request services from Game.Services . This arrangement allows an object that requires a service to request the service without knowing the name of the service provider. Game services are defined by an interface. A class specifies the services it provides by implementing interfaces and registering the services with Game.Services . A service is registered by calling Game.Services.AddService specifying the type of service being implemented and a reference to the object providing the service. For example, to register an object that provides a service represented by the interface IMyService, you would use the following code. Services.AddService( typeof( IMyService ), myobject ); Once a service is registered, the object providing the service can be retrieved by Game.Services.GetService and specifying the desired service. For example, to retrieve IGraphicsDeviceService , you would use the following code. IGraphicsDeviceService graphicsservice = (IGraphicsDeviceService)Services.GetService( typeof(IGraphicsDeviceService) );]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="RemoveService" returnType="void">
+      <summary><![CDATA[Removes the object providing a specified service.]]></summary>
+      <overloads>
+        <overload signature="RemoveService()">
+          <summary><![CDATA[Removes the object providing a specified service.]]></summary>
+          <syntax><![CDATA[public void RemoveService (
+         Type type
+)]]></syntax>
+          <parameters>
+            <parameter name="type" type="Type"><![CDATA[The type of service.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

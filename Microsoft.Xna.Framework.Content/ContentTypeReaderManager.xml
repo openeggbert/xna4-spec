@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentTypeReaderManager" kind="class"
+          namespace="Microsoft.Xna.Framework.Content"
+          assembly="Microsoft.Xna.Framework.Content">
+  <summary><![CDATA[A manager that constructs and keeps track of type reader objects.]]></summary>
+  <syntax><![CDATA[public sealed class ContentTypeReaderManager]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="GetTypeReader" returnType="void">
+      <summary><![CDATA[Looks up a reader for the specified type.]]></summary>
+      <overloads>
+        <overload signature="GetTypeReader()">
+          <summary><![CDATA[Looks up a reader for the specified type.]]></summary>
+          <syntax><![CDATA[public ContentTypeReader GetTypeReader (
+         Type targetType
+)]]></syntax>
+          <parameters>
+            <parameter name="targetType" type="Type"><![CDATA[The type the reader will handle.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created ContentTypeReader.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

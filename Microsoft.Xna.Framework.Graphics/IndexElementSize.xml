@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IndexElementSize" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines the size of an element of an index buffer.]]></summary>
+  <syntax><![CDATA[public enum IndexElementSize]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="SixteenBits"><summary><![CDATA[Sixteen bits.]]></summary></member>
+    <member name="ThirtyTwoBits"><summary><![CDATA[Thirty-two bits.]]></summary></member>
+  </members>
+</xna-type>

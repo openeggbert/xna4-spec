@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NetworkMachine" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net">
+  <summary><![CDATA[Represents a physical machine (such as single Xbox 360 console or Windows-based computer) that is participating in a multiplayer session. It can be used to detect when more than one NetworkGamer is playing on the same actual machine.]]></summary>
+  <syntax><![CDATA[public sealed class NetworkMachine]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Gamers" type="GamerCollection&amp;lt;NetworkGamer&amp;gt;" access="get">
+      <summary><![CDATA[Gets a collection of all the gamers who are playing on this machine.]]></summary>
+      <syntax><![CDATA[public GamerCollection&lt;NetworkGamer&gt; Gamers { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="RemoveFromSession" returnType="void">
+      <summary><![CDATA[Forcibly removes this machine from the session.]]></summary>
+      <overloads>
+        <overload signature="RemoveFromSession()">
+          <summary><![CDATA[Forcibly removes this machine from the session.]]></summary>
+          <syntax><![CDATA[public void RemoveFromSession ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

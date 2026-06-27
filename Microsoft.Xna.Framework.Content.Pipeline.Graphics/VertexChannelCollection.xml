@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexChannelCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          interfaces="IList&amp;lt;VertexChannel&amp;gt;, ICollection&amp;lt;VertexChannel&amp;gt;, IEnumerable&amp;lt;VertexChannel&amp;gt;, IEnumerable">
+  <summary><![CDATA[Provides methods and properties for managing a list of vertex data channels.]]></summary>
+  <syntax><![CDATA[public sealed class VertexChannelCollection : IList&lt;VertexChannel&gt;, ICollection&lt;VertexChannel&gt;, IEnumerable&lt;VertexChannel&gt;, IEnumerable]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Gets the number of vertex channels in the collection.]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets the vertex channel at the specified index position.]]></summary>
+      <syntax><![CDATA[public VertexChannel this [
+         int index
+] { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Add" returnType="VertexChannel">
+      <summary><![CDATA[Adds a new vertex channel to the end of the collection.]]></summary>
+      <overloads>
+        <overload signature="String, Type, IEnumerable">
+          <summary><![CDATA[Adds a new vertex channel to the end of the collection.]]></summary>
+          <syntax><![CDATA[public VertexChannel Add (
+         string name,
+         Type elementType,
+         IEnumerable channelData
+)]]></syntax>
+          <parameters>
+            <parameter name="name" type="string"><![CDATA[Name of the new channel.]]></parameter>
+            <parameter name="elementType" type="Type"><![CDATA[Type of data to be contained in the new channel.]]></parameter>
+            <parameter name="channelData" type="IEnumerable"><![CDATA[Initial data for the new channel. If null, the channel is filled with the default value for that type.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The newly added vertex channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Clear" returnType="void">
+      <summary><![CDATA[Removes all vertex channels from the collection.]]></summary>
+      <overloads>
+        <overload signature="Clear()">
+          <summary><![CDATA[Removes all vertex channels from the collection.]]></summary>
+          <syntax><![CDATA[public void Clear ()]]></syntax>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Contains" returnType="bool">
+      <summary><![CDATA[Determines whether the collection contains the specified vertex channel.]]></summary>
+      <overloads>
+        <overload signature="VertexChannel">
+          <summary><![CDATA[Determines whether the collection contains the specified vertex channel.]]></summary>
+          <syntax><![CDATA[public bool Contains (
+         VertexChannel item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="VertexChannel"><![CDATA[Name of the channel being searched for.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the channel was found; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="String">
+          <summary><![CDATA[Determines whether the collection contains the specified vertex channel.]]></summary>
+          <syntax><![CDATA[public bool Contains (
+         string name
+)]]></syntax>
+          <parameters>
+            <parameter name="name" type="string"><![CDATA[Name of the channel being searched for.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the channel was found; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Gets an enumerator that iterates through the vertex channels of a collection.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Gets an enumerator that iterates through the vertex channels of a collection.]]></summary>
+          <syntax><![CDATA[public IEnumerator&lt;VertexChannel&gt; GetEnumerator ()]]></syntax>
+          <returns><![CDATA[Enumerator for the collection.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IndexOf" returnType="int">
+      <summary><![CDATA[Determines the index of the specified vertex channel.]]></summary>
+      <overloads>
+        <overload signature="VertexChannel">
+          <summary><![CDATA[Determines the index of the specified vertex channel.]]></summary>
+          <syntax><![CDATA[public int IndexOf (
+         VertexChannel item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="VertexChannel"><![CDATA[Vertex channel being searched for.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Index of the vertex channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="String">
+          <summary><![CDATA[Determines the index of a vertex channel with the specified name.]]></summary>
+          <syntax><![CDATA[public int IndexOf (
+         string name
+)]]></syntax>
+          <parameters>
+            <parameter name="name" type="string"><![CDATA[Name of the vertex channel being searched for.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Index of the vertex channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Insert" returnType="VertexChannel">
+      <summary><![CDATA[Inserts a new vertex channel at the specified position.]]></summary>
+      <overloads>
+        <overload signature="Int32, String, Type, IEnumerable">
+          <summary><![CDATA[Inserts a new vertex channel at the specified position.]]></summary>
+          <syntax><![CDATA[public VertexChannel Insert (
+         int index,
+         string name,
+         Type elementType,
+         IEnumerable channelData
+)]]></syntax>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[Index for channel insertion.]]></parameter>
+            <parameter name="name" type="string"><![CDATA[Name of the new channel.]]></parameter>
+            <parameter name="elementType" type="Type"><![CDATA[Type of the new channel.]]></parameter>
+            <parameter name="channelData" type="IEnumerable"><![CDATA[Initial data for the new channel. If null, it is filled with the default value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The inserted vertex channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Remove" returnType="bool">
+      <summary><![CDATA[Removes the specified vertex channel from the collection.]]></summary>
+      <overloads>
+        <overload signature="String">
+          <summary><![CDATA[Removes the specified vertex channel from the collection.]]></summary>
+          <syntax><![CDATA[public bool Remove (
+         string name
+)]]></syntax>
+          <parameters>
+            <parameter name="name" type="string"><![CDATA[Name of the vertex channel being removed.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the channel was removed; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="VertexChannel">
+          <summary><![CDATA[Removes the specified vertex channel from the collection.]]></summary>
+          <syntax><![CDATA[public bool Remove (
+         VertexChannel item
+)]]></syntax>
+          <parameters>
+            <parameter name="item" type="VertexChannel"><![CDATA[Name of the vertex channel being removed.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the channel was removed; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="RemoveAt" returnType="void">
+      <summary><![CDATA[Removes the vertex channel at the specified index position.]]></summary>
+      <overloads>
+        <overload signature="RemoveAt()">
+          <summary><![CDATA[Removes the vertex channel at the specified index position.]]></summary>
+          <syntax><![CDATA[public void RemoveAt (
+         int index
+)]]></syntax>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[Index of the vertex channel being removed.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

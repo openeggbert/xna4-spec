@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SaveStateMode" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines options for saving the graphics device state before and after an effect technique is applied.]]></summary>
+  <syntax><![CDATA[public enum SaveStateMode]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="None"><summary><![CDATA[No device state is saved when calling Begin or restored when calling End.]]></summary></member>
+    <member name="SaveState"><summary><![CDATA[Save all device state when calling Begin and restore device state when calling End.]]></summary></member>
+  </members>
+</xna-type>

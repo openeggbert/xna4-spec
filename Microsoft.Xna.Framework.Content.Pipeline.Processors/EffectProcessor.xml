@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EffectProcessor" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          baseClass="ContentProcessor&amp;lt;EffectContent"
+          interfaces="CompiledEffect&amp;gt;">
+  <summary><![CDATA[Processes a string representation to a platform-specific compiled effect.]]></summary>
+  <syntax><![CDATA[[ContentProcessorAttribute]
+public class EffectProcessor : ContentProcessor&lt;EffectContent, CompiledEffect&gt;]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="EffectProcessor()">
+      <summary><![CDATA[Initializes a new instance of EffectProcessor.]]></summary>
+      <syntax><![CDATA[public EffectProcessor ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="DebugMode" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual EffectProcessorDebugMode DebugMode { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Defines" type="Object" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public virtual string Defines { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Process" returnType="void">
+      <summary><![CDATA[Processes the string representation of the specified effect into a platform-specific binary format using the specified context.]]></summary>
+      <overloads>
+        <overload signature="Process()">
+          <summary><![CDATA[Processes the string representation of the specified effect into a platform-specific binary format using the specified context.]]></summary>
+          <syntax><![CDATA[public virtual CompiledEffect Process (
+         EffectContent input,
+         ContentProcessorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="input" type="EffectContent"><![CDATA[The effect string to be processed.]]></parameter>
+            <parameter name="context" type="ContentProcessorContext"><![CDATA[Context for the specified processor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A platform-specific compiled binary effect.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

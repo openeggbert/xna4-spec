@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SharedGraphicsDeviceManager" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Handles the configuration and management of a shared graphics device.]]></summary>
+  <syntax><![CDATA['Declaration
+Public Class SharedGraphicsDeviceManager
+         Implements IGraphicsDeviceService, IDisposable, Object]]></syntax>
+  <platforms>
+    <platform>Windows Phone</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Current" type="Object" access="get">
+      <summary><![CDATA[Gets the current SharedGraphicsDeviceManager.]]></summary>
+      <syntax><![CDATA['Declaration
+Public ReadOnly Property Current As SharedGraphicsDeviceManager]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="GraphicsDevice" type="Object" access="get">
+      <summary><![CDATA[Gets the GraphicsDevice associated with the SharedGraphicsDeviceManager.]]></summary>
+      <syntax><![CDATA['Declaration
+Public ReadOnly Property GraphicsDevice As GraphicsDevice]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="GraphicsProfile" type="Object" access="get">
+      <summary><![CDATA[Gets the GraphicsProfile associated with the SharedGraphicsDeviceManager.]]></summary>
+      <syntax><![CDATA['Declaration
+Public ReadOnly Property GraphicsProfile As GraphicsDevice]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="MultiSampleCount" type="Object" access="get">
+      <summary><![CDATA[Gets or sets the number of per-pixel samples.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Property MultiSampleCount As Integer]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="PreferredBackBufferFormat" type="Object" access="get">
+      <summary><![CDATA[Gets or sets the format of the back buffer.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Property PreferredBackBufferFormat As SurfaceFormat]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="PreferredBackBufferHeight" type="Object" access="get">
+      <summary><![CDATA[Gets or sets the preferred back-buffer height.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Property PreferredBackBufferHeight As Integer]]></syntax>
+      <remarks><![CDATA[If you request a back-buffer resolution that is not supported by the output device, the XNA Framework automatically selects the highest resolution supported by the output device. For example, if a graphics back buffer with a resolution of 1920 x 1080 (1080p or 1080i) is created and displayed on a device with 480i resolution, the back buffer is resized automatically to 480i.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="PreferredBackBufferWidth" type="Object" access="get">
+      <summary><![CDATA[Gets or sets the preferred back-buffer width.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Property PreferredBackBufferWidth As Integer]]></syntax>
+      <remarks><![CDATA[If you request a back-buffer resolution that is not supported by the output device, the XNA Framework automatically selects the highest resolution supported by the output device. For example, if a graphics back buffer with a resolution of 1920 x 1080 (1080p or 1080i) is created and displayed on a device with 480i resolution, the back buffer automatically is resized to 480i.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="PreferredDepthStencilFormat" type="Object" access="get">
+      <summary><![CDATA[Gets or sets the format of the depth stencil.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Property PreferredDepthStencilFormat As DepthFormat]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="PresentationInterval" type="Object" access="get">
+      <summary><![CDATA[Gets or sets the maximum rate at which the swap chain's back buffers can be presented to the front buffer.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Property PresentationInterval As DepthFormat]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="RenderTargetUsage" type="Object" access="get">
+      <summary><![CDATA[Gets or sets render target usage flags.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Property RenderTargetUsage As RenderTargetUsage]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="SynchronizeWithVerticalRetrace" type="Object" access="get">
+      <summary><![CDATA[Gets or sets a value that indicates whether to sync to the vertical trace (vsync) when presenting the back buffer.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Property SynchronizeWithVerticalRetrace As Boolean]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="ApplyChanges" returnType="void">
+      <summary><![CDATA[Applies any changes to device-related properties, changing the graphics device as necessary.]]></summary>
+      <overloads>
+        <overload signature="ApplyChanges()">
+          <summary><![CDATA[Applies any changes to device-related properties, changing the graphics device as necessary.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub ApplyChanges]]></syntax>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Releases the unmanaged resources used by the SharedGraphicsDeviceManager and optionally releases the managed resources.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Releases the unmanaged resources used by the SharedGraphicsDeviceManager and optionally releases the managed resources.]]></summary>
+          <syntax><![CDATA['Declaration
+Protected Overridable Sub Dispose ( _
+         disposing As Boolean _
+)]]></syntax>
+          <parameters>
+            <parameter name="disposing" type="Object"><![CDATA[Type: Boolean true to release both automatic and manual resources; false to release only manual resources.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="DefaultBackBufferHeight" type="Object">
+      <summary><![CDATA[Specifies the default back-buffer height.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Shared ReadOnly DefaultBackBufferHeight As Integer]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </field>
+    <field name="DefaultBackBufferWidth" type="Object">
+      <summary><![CDATA[Specifies the default back-buffer width.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Shared ReadOnly DefaultBackBufferWidth As Integer]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+    <event name="DeviceCreated" type="EventHandler">
+      <summary><![CDATA[Raised when a new graphics device is created.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Event DeviceCreated As EventHandler(Of EventArgs)]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </event>
+    <event name="DeviceDisposing" type="EventHandler">
+      <summary><![CDATA[Raised when the GraphicsDevice is being disposed.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Event DeviceDisposing As EventHandler(Of EventArgs)]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </event>
+    <event name="DeviceReset" type="EventHandler">
+      <summary><![CDATA[Raised when the GraphicsDevice is reset.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Event DeviceReset As EventHandler(Of EventArgs)]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </event>
+    <event name="DeviceResetting" type="EventHandler">
+      <summary><![CDATA[Raised when the GraphicsDevice is about to be reset.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Event DeviceResetting As EventHandler(Of EventArgs)]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </event>
+    <event name="Disposed" type="EventHandler">
+      <summary><![CDATA[Raised when the SharedGraphicsDeviceManager is disposed.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Event Disposed As EventHandler(Of EventArgs)]]></syntax>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

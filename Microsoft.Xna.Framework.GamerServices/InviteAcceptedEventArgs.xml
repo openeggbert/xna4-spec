@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="InviteAcceptedEventArgs" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          baseClass="EventArgs">
+  <summary><![CDATA[Represents the arguments passed to an InviteAccepted event.]]></summary>
+  <syntax><![CDATA[public class InviteAcceptedEventArgs : EventArgs]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="InviteAcceptedEventArgs(SignedInGamer, bool)">
+      <summary><![CDATA[Initializes a new instance of InviteAcceptedEventArgs by using a gamer that is signed in and a Boolean value that indicates if the invitation is for the current local session.]]></summary>
+      <syntax><![CDATA[public InviteAcceptedEventArgs (
+         SignedInGamer gamer,
+         bool isCurrentSession
+)]]></syntax>
+      <parameters>
+        <parameter name="gamer" type="SignedInGamer"><![CDATA[The gamer who is accepting the game invitation.]]></parameter>
+        <parameter name="isCurrentSession" type="bool"><![CDATA[Indicates if the invitation is for the current local session.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Gamer" type="SignedInGamer" access="get">
+      <summary><![CDATA[The signed-in gamer who is accepting the game invitation.]]></summary>
+      <syntax><![CDATA[public SignedInGamer Gamer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="IsCurrentSession" type="bool" access="get">
+      <summary><![CDATA[Indicates if the invitation is for the current local session.]]></summary>
+      <syntax><![CDATA[public bool IsCurrentSession { get; }]]></syntax>
+      <remarks><![CDATA[If IsCurrentSession is true , indicating that another local gamer has joined the session, call NetworkSession.AddLocalGamer to add more gamers to the session. If IsCurrentSession is false , indicating the invitation is from a session that has not been joined, call NetworkSession.JoinInvited to allow the gamer to join the remote session.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

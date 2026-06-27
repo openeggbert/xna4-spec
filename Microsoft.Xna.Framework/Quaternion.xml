@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Quaternion" kind="struct"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IEquatable&amp;lt;Quaternion&amp;gt;">
+  <summary><![CDATA[Defines a quaternion.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.QuaternionConverter)")]
+[SerializableAttribute]
+public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
+  <remarks><![CDATA[Quaternions represent a rotation and are typically used for smooth interpolation between two angles and for avoiding the gimbal lock problem that can occur with euler angles.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Quaternion(Single, Single, Single, Single)">
+      <summary><![CDATA[Initializes a new instance of Quaternion.]]></summary>
+      <syntax><![CDATA[public Quaternion (
+         float x,
+         float y,
+         float z,
+         float w
+)]]></syntax>
+      <parameters>
+        <parameter name="x" type="float"><![CDATA[The x-value of the quaternion.]]></parameter>
+        <parameter name="y" type="float"><![CDATA[The y-value of the quaternion.]]></parameter>
+        <parameter name="z" type="float"><![CDATA[The z-value of the quaternion.]]></parameter>
+        <parameter name="w" type="float"><![CDATA[The w-value of the quaternion.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Quaternion(Vector3, Single)">
+      <summary><![CDATA[Initializes a new instance of Quaternion.]]></summary>
+      <syntax><![CDATA[public Quaternion (
+         Vector3 vectorPart,
+         float scalarPart
+)]]></syntax>
+      <parameters>
+        <parameter name="vectorPart" type="Object"><![CDATA[The vector component of the quaternion.]]></parameter>
+        <parameter name="scalarPart" type="float"><![CDATA[The rotation component of the quaternion.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Identity" type="Quaternion" access="get" isStatic="true">
+      <summary><![CDATA[Returns a Quaternion representing no rotation.]]></summary>
+      <syntax><![CDATA[public static Quaternion Identity { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Add" returnType="void" isStatic="true">
+      <summary><![CDATA[Adds two Quaternions.]]></summary>
+      <overloads>
+        <overload signature="Quaternion, Quaternion, Quaternion">
+          <summary><![CDATA[Adds two Quaternions.]]></summary>
+          <syntax><![CDATA[public static void Add (
+         ref Quaternion quaternion1,
+         ref Quaternion quaternion2,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Quaternion to add.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Quaternion to add.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] Result of adding the Quaternions .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Quaternion">
+          <summary><![CDATA[Adds two Quaternions.]]></summary>
+          <syntax><![CDATA[public static Quaternion Add (
+         Quaternion quaternion1,
+         Quaternion quaternion2
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Quaternion to add.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Quaternion to add.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of adding the Quaternions.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Concatenate" returnType="void" isStatic="true">
+      <summary><![CDATA[Concatenates two Quaternions; the result represents the value1 rotation followed by the value2 rotation.]]></summary>
+      <overloads>
+        <overload signature="Quaternion, Quaternion, Quaternion">
+          <summary><![CDATA[Concatenates two Quaternions; the result represents the value1 rotation followed by the value2 rotation.]]></summary>
+          <syntax><![CDATA[public static void Concatenate (
+         ref Quaternion value1,
+         ref Quaternion value2,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Quaternion"><![CDATA[The first Quaternion rotation in the series.]]></parameter>
+            <parameter name="value2" type="Quaternion"><![CDATA[The second Quaternion rotation in the series.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] The Quaternion rotation representing the concatenation of value1 followed by value2 .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Quaternion">
+          <summary><![CDATA[Concatenates two Quaternions; the result represents the value1 rotation followed by the value2 rotation.]]></summary>
+          <syntax><![CDATA[public static Quaternion Concatenate (
+         Quaternion value1,
+         Quaternion value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Quaternion"><![CDATA[The first Quaternion rotation in the series.]]></parameter>
+            <parameter name="value2" type="Quaternion"><![CDATA[The second Quaternion rotation in the series.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new Quaternion representing the concatenation of the value1 rotation followed by the value2 rotation.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Conjugate" returnType="void">
+      <summary><![CDATA[Transforms this Quaternion into its conjugate.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Transforms this Quaternion into its conjugate.]]></summary>
+          <syntax><![CDATA[public void Conjugate ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion">
+          <summary><![CDATA[Returns the conjugate of a specified Quaternion.]]></summary>
+          <syntax><![CDATA[public static Quaternion Conjugate (
+         Quaternion value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Quaternion"><![CDATA[The Quaternion of which to return the conjugate.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new Quaternion that is the conjugate of the specified one.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Quaternion">
+          <summary><![CDATA[Returns the conjugate of a specified Quaternion.]]></summary>
+          <syntax><![CDATA[public static void Conjugate (
+         ref Quaternion value,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Quaternion"><![CDATA[The Quaternion of which to return the conjugate.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] An existing Quaternion filled in to be the conjugate of the specified one.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateFromAxisAngle" returnType="Quaternion" isStatic="true">
+      <summary><![CDATA[Creates a Quaternion from a vector and an angle to rotate about the vector.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Single">
+          <summary><![CDATA[Creates a Quaternion from a vector and an angle to rotate about the vector.]]></summary>
+          <syntax><![CDATA[public static Quaternion CreateFromAxisAngle (
+         Vector3 axis,
+         float angle
+)]]></syntax>
+          <parameters>
+            <parameter name="axis" type="Object"><![CDATA[The vector to rotate around.]]></parameter>
+            <parameter name="angle" type="float"><![CDATA[The angle to rotate around the vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created Quaternion.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Single, Quaternion">
+          <summary><![CDATA[Creates a Quaternion from a vector and an angle to rotate about the vector.]]></summary>
+          <syntax><![CDATA[public static void CreateFromAxisAngle (
+         ref Vector3 axis,
+         float angle,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="axis" type="Object"><![CDATA[The vector to rotate around.]]></parameter>
+            <parameter name="angle" type="float"><![CDATA[The angle to rotate around the vector.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] The created Quaternion .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateFromRotationMatrix" returnType="Quaternion" isStatic="true">
+      <summary><![CDATA[Creates a Quaternion from a rotation Matrix.]]></summary>
+      <overloads>
+        <overload signature="Matrix">
+          <summary><![CDATA[Creates a Quaternion from a rotation Matrix.]]></summary>
+          <syntax><![CDATA[public static Quaternion CreateFromRotationMatrix (
+         Matrix matrix
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix" type="Matrix"><![CDATA[The rotation Matrix to create the Quaternion from.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created Quaternion.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix, Quaternion">
+          <summary><![CDATA[Creates a Quaternion from a rotation Matrix.]]></summary>
+          <syntax><![CDATA[public static void CreateFromRotationMatrix (
+         ref Matrix matrix,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="matrix" type="Matrix"><![CDATA[The rotation Matrix to create the Quaternion from.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] The created Quaternion .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateFromYawPitchRoll" returnType="void" isStatic="true">
+      <summary><![CDATA[Creates a new Quaternion from specified yaw, pitch, and roll angles.]]></summary>
+      <overloads>
+        <overload signature="Single, Single, Single, Quaternion">
+          <summary><![CDATA[Creates a new Quaternion from specified yaw, pitch, and roll angles.]]></summary>
+          <syntax><![CDATA[public static void CreateFromYawPitchRoll (
+         float yaw,
+         float pitch,
+         float roll,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="yaw" type="float"><![CDATA[The yaw angle, in radians, around the y-axis.]]></parameter>
+            <parameter name="pitch" type="float"><![CDATA[The pitch angle, in radians, around the x-axis.]]></parameter>
+            <parameter name="roll" type="float"><![CDATA[The roll angle, in radians, around the z-axis.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] An existing Quaternion filled in to express the specified yaw, pitch, and roll angles.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Single, Single">
+          <summary><![CDATA[Creates a new Quaternion from specified yaw, pitch, and roll angles.]]></summary>
+          <syntax><![CDATA[public static Quaternion CreateFromYawPitchRoll (
+         float yaw,
+         float pitch,
+         float roll
+)]]></syntax>
+          <parameters>
+            <parameter name="yaw" type="float"><![CDATA[The yaw angle, in radians, around the y-axis.]]></parameter>
+            <parameter name="pitch" type="float"><![CDATA[The pitch angle, in radians, around the x-axis.]]></parameter>
+            <parameter name="roll" type="float"><![CDATA[The roll angle, in radians, around the z-axis.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new Quaternion expressing the specified yaw, pitch, and roll angles.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Divide" returnType="void" isStatic="true">
+      <summary><![CDATA[Divides a Quaternion by another Quaternion.]]></summary>
+      <overloads>
+        <overload signature="Quaternion, Quaternion, Quaternion">
+          <summary><![CDATA[Divides a Quaternion by another Quaternion.]]></summary>
+          <syntax><![CDATA[public static void Divide (
+         ref Quaternion quaternion1,
+         ref Quaternion quaternion2,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[The divisor.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] Result of the division.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Quaternion">
+          <summary><![CDATA[Divides a Quaternion by another Quaternion.]]></summary>
+          <syntax><![CDATA[public static Quaternion Divide (
+         Quaternion quaternion1,
+         Quaternion quaternion2
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[The divisor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the division.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dot" returnType="void" isStatic="true">
+      <summary><![CDATA[Calculates the dot product of two Quaternions.]]></summary>
+      <overloads>
+        <overload signature="Quaternion, Quaternion, Single">
+          <summary><![CDATA[Calculates the dot product of two Quaternions.]]></summary>
+          <syntax><![CDATA[public static void Dot (
+         ref Quaternion quaternion1,
+         ref Quaternion quaternion2,
+         out float result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+            <parameter name="result" type="float"><![CDATA[[ OutAttribute ] Dot product of the Quaternions .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Quaternion">
+          <summary><![CDATA[Calculates the dot product of two Quaternions.]]></summary>
+          <syntax><![CDATA[public static float Dot (
+         Quaternion quaternion1,
+         Quaternion quaternion2
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Dot product of the Quaternions.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Determines whether the specified Object is equal to the Quaternion.]]></summary>
+      <overloads>
+        <overload signature="Quaternion">
+          <summary><![CDATA[Determines whether the specified Object is equal to the Quaternion.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Quaternion other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Quaternion"><![CDATA[The Quaternion to compare with the current Quaternion .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Object is equal to the current Quaternion; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object to make the comparison with.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Get the hash code of this object.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Get the hash code of this object.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[The hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Inverse" returnType="void" isStatic="true">
+      <summary><![CDATA[Returns the inverse of a Quaternion.]]></summary>
+      <overloads>
+        <overload signature="Quaternion, Quaternion">
+          <summary><![CDATA[Returns the inverse of a Quaternion.]]></summary>
+          <syntax><![CDATA[public static void Inverse (
+         ref Quaternion quaternion,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] The inverse of the Quaternion .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion">
+          <summary><![CDATA[Returns the inverse of a Quaternion.]]></summary>
+          <syntax><![CDATA[public static Quaternion Inverse (
+         Quaternion quaternion
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The inverse of the Quaternion.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Length" returnType="void">
+      <summary><![CDATA[Calculates the length of a Quaternion.]]></summary>
+      <overloads>
+        <overload signature="Length()">
+          <summary><![CDATA[Calculates the length of a Quaternion.]]></summary>
+          <syntax><![CDATA[public float Length ()]]></syntax>
+          <returns><![CDATA[The length of the Quaternion.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="LengthSquared" returnType="void">
+      <summary><![CDATA[Calculates the length squared of a Quaternion.]]></summary>
+      <overloads>
+        <overload signature="LengthSquared()">
+          <summary><![CDATA[Calculates the length squared of a Quaternion.]]></summary>
+          <syntax><![CDATA[public float LengthSquared ()]]></syntax>
+          <returns><![CDATA[The length squared of the Quaternion.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Lerp" returnType="Quaternion" isStatic="true">
+      <summary><![CDATA[Linearly interpolates between two quaternions.]]></summary>
+      <overloads>
+        <overload signature="Quaternion, Quaternion, Single">
+          <summary><![CDATA[Linearly interpolates between two quaternions.]]></summary>
+          <syntax><![CDATA[public static Quaternion Lerp (
+         Quaternion quaternion1,
+         Quaternion quaternion2,
+         float amount
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Value indicating how far to interpolate between the quaternions.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The resulting quaternion.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Quaternion, Single, Quaternion">
+          <summary><![CDATA[Linearly interpolates between two quaternions.]]></summary>
+          <syntax><![CDATA[public static void Lerp (
+         ref Quaternion quaternion1,
+         ref Quaternion quaternion2,
+         float amount,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Value indicating how far to interpolate between the quaternions.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] The resulting quaternion.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Multiply" returnType="void" isStatic="true">
+      <summary><![CDATA[Multiplies a quaternion by a scalar value.]]></summary>
+      <overloads>
+        <overload signature="Quaternion, Single, Quaternion">
+          <summary><![CDATA[Multiplies a quaternion by a scalar value.]]></summary>
+          <syntax><![CDATA[public static void Multiply (
+         ref Quaternion quaternion1,
+         float scaleFactor,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] The result of the multiplication.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Quaternion">
+          <summary><![CDATA[Multiplies two quaternions.]]></summary>
+          <syntax><![CDATA[public static Quaternion Multiply (
+         Quaternion quaternion1,
+         Quaternion quaternion2
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[The quaternion on the left of the multiplication.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[The quaternion on the right of the multiplication.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Quaternion, Quaternion">
+          <summary><![CDATA[Multiplies two quaternions.]]></summary>
+          <syntax><![CDATA[public static void Multiply (
+         ref Quaternion quaternion1,
+         ref Quaternion quaternion2,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[The quaternion on the left of the multiplication.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[The quaternion on the right of the multiplication.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] The result of the multiplication.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Single">
+          <summary><![CDATA[Multiplies a quaternion by a scalar value.]]></summary>
+          <syntax><![CDATA[public static Quaternion Multiply (
+         Quaternion quaternion1,
+         float scaleFactor
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Negate" returnType="Quaternion" isStatic="true">
+      <summary><![CDATA[Flips the sign of each component of the quaternion.]]></summary>
+      <overloads>
+        <overload signature="Quaternion">
+          <summary><![CDATA[Flips the sign of each component of the quaternion.]]></summary>
+          <syntax><![CDATA[public static Quaternion Negate (
+         Quaternion quaternion
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Negated quaternion.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Quaternion">
+          <summary><![CDATA[Flips the sign of each component of the quaternion.]]></summary>
+          <syntax><![CDATA[public static void Negate (
+         ref Quaternion quaternion,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] Negated quaternion.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Normalize" returnType="void" isStatic="true">
+      <summary><![CDATA[Divides each component of the quaternion by the length of the quaternion.]]></summary>
+      <overloads>
+        <overload signature="Quaternion, Quaternion">
+          <summary><![CDATA[Divides each component of the quaternion by the length of the quaternion.]]></summary>
+          <syntax><![CDATA[public static void Normalize (
+         ref Quaternion quaternion,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] Normalized quaternion.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Divides each component of the quaternion by the length of the quaternion.]]></summary>
+          <syntax><![CDATA[public void Normalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion">
+          <summary><![CDATA[Divides each component of the quaternion by the length of the quaternion.]]></summary>
+          <syntax><![CDATA[public static Quaternion Normalize (
+         Quaternion quaternion
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Normalized quaternion.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Slerp" returnType="Quaternion" isStatic="true">
+      <summary><![CDATA[Interpolates between two quaternions, using spherical linear interpolation.]]></summary>
+      <overloads>
+        <overload signature="Quaternion, Quaternion, Single">
+          <summary><![CDATA[Interpolates between two quaternions, using spherical linear interpolation.]]></summary>
+          <syntax><![CDATA[public static Quaternion Slerp (
+         Quaternion quaternion1,
+         Quaternion quaternion2,
+         float amount
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Value that indicates how far to interpolate between the quaternions.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the interpolation.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Quaternion, Single, Quaternion">
+          <summary><![CDATA[Interpolates between two quaternions, using spherical linear interpolation.]]></summary>
+          <syntax><![CDATA[public static void Slerp (
+         ref Quaternion quaternion1,
+         ref Quaternion quaternion2,
+         float amount,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Value that indicates how far to interpolate between the quaternions.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] Result of the interpolation.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Subtract" returnType="Quaternion" isStatic="true">
+      <summary><![CDATA[Subtracts a quaternion from another quaternion.]]></summary>
+      <overloads>
+        <overload signature="Quaternion, Quaternion">
+          <summary><![CDATA[Subtracts a quaternion from another quaternion.]]></summary>
+          <syntax><![CDATA[public static Quaternion Subtract (
+         Quaternion quaternion1,
+         Quaternion quaternion2
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the subtraction.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Quaternion, Quaternion">
+          <summary><![CDATA[Subtracts a quaternion from another quaternion.]]></summary>
+          <syntax><![CDATA[public static void Subtract (
+         ref Quaternion quaternion1,
+         ref Quaternion quaternion2,
+         out Quaternion result
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="result" type="Quaternion"><![CDATA[[ OutAttribute ] Result of the subtraction.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retireves a string representation of the current object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retireves a string representation of the current object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String that represents the object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Addition" returnType="void">
+      <summary><![CDATA[Adds two Quaternions.]]></summary>
+      <overloads>
+        <overload signature="op_Addition()">
+          <summary><![CDATA[Adds two Quaternions.]]></summary>
+          <syntax><![CDATA[public static Quaternion op_Addition (
+         Quaternion quaternion1,
+         Quaternion quaternion2
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Quaternion to add.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Quaternion to add.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of adding the Quaternions.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Division" returnType="void">
+      <summary><![CDATA[Divides a Quaternion by another Quaternion.]]></summary>
+      <overloads>
+        <overload signature="op_Division()">
+          <summary><![CDATA[Divides a Quaternion by another Quaternion.]]></summary>
+          <syntax><![CDATA[public static Quaternion op_Division (
+         Quaternion quaternion1,
+         Quaternion quaternion2
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[The divisor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the division.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two Quaternions for equality.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two Quaternions for equality.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Quaternion quaternion1,
+         Quaternion quaternion2
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the Quaternions are equal, false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compare two Quaternions for inequality.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compare two Quaternions for inequality.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Quaternion quaternion1,
+         Quaternion quaternion2
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source Quaternion .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the Quaternions are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Multiply" returnType="Quaternion" isStatic="true">
+      <summary><![CDATA[Multiplies two quaternions.]]></summary>
+      <overloads>
+        <overload signature="Quaternion, Quaternion">
+          <summary><![CDATA[Multiplies two quaternions.]]></summary>
+          <syntax><![CDATA[public static Quaternion op_Multiply (
+         Quaternion quaternion1,
+         Quaternion quaternion2
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion, Single">
+          <summary><![CDATA[Multiplies a quaternion by a scalar value.]]></summary>
+          <syntax><![CDATA[public static Quaternion op_Multiply (
+         Quaternion quaternion1,
+         float scaleFactor
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Subtraction" returnType="void">
+      <summary><![CDATA[Subtracts a quaternion from another quaternion.]]></summary>
+      <overloads>
+        <overload signature="op_Subtraction()">
+          <summary><![CDATA[Subtracts a quaternion from another quaternion.]]></summary>
+          <syntax><![CDATA[public static Quaternion op_Subtraction (
+         Quaternion quaternion1,
+         Quaternion quaternion2
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion1" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+            <parameter name="quaternion2" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the subtraction.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_UnaryNegation" returnType="void">
+      <summary><![CDATA[Flips the sign of each component of the quaternion.]]></summary>
+      <overloads>
+        <overload signature="op_UnaryNegation()">
+          <summary><![CDATA[Flips the sign of each component of the quaternion.]]></summary>
+          <syntax><![CDATA[public static Quaternion op_UnaryNegation (
+         Quaternion quaternion
+)]]></syntax>
+          <parameters>
+            <parameter name="quaternion" type="Quaternion"><![CDATA[Source quaternion.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Negated quaternion.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="W" type="float">
+      <summary><![CDATA[Specifies the rotation component of the quaternion.]]></summary>
+      <syntax><![CDATA[public float W]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="X" type="float">
+      <summary><![CDATA[Specifies the x-value of the vector component of the quaternion.]]></summary>
+      <syntax><![CDATA[public float X]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Y" type="float">
+      <summary><![CDATA[Specifies the y-value of the vector component of the quaternion.]]></summary>
+      <syntax><![CDATA[public float Y]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Z" type="float">
+      <summary><![CDATA[Specifies the z-value of the vector component of the quaternion.]]></summary>
+      <syntax><![CDATA[public float Z]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="FriendGamer" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          baseClass="Gamer">
+  <summary><![CDATA[Provides the presence information of a friend of the local gamer.]]></summary>
+  <syntax><![CDATA[public sealed class FriendGamer : Gamer]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="FriendRequestReceivedFrom" type="bool" access="get">
+      <summary><![CDATA[Gets whether the local gamer who requested the friends list has received a friend request from this gamer.]]></summary>
+      <syntax><![CDATA[public bool FriendRequestReceivedFrom { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="FriendRequestSentTo" type="bool" access="get">
+      <summary><![CDATA[Gets whether the local gamer who requested the friends list has sent a friend request to this gamer.]]></summary>
+      <syntax><![CDATA[public bool FriendRequestSentTo { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="HasVoice" type="bool" access="get">
+      <summary><![CDATA[Gets whether this friend currently has voice capability.]]></summary>
+      <syntax><![CDATA[public bool HasVoice { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="InviteAccepted" type="bool" access="get">
+      <summary><![CDATA[Gets whether this friend has accepted an invitation from the local gamer who requested the friends list.]]></summary>
+      <syntax><![CDATA[public bool InviteAccepted { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="InviteReceivedFrom" type="bool" access="get">
+      <summary><![CDATA[Gets whether the local gamer who requested the friends list has received an invitation from this friend.]]></summary>
+      <syntax><![CDATA[public bool InviteReceivedFrom { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="InviteRejected" type="bool" access="get">
+      <summary><![CDATA[Gets whether this friend has rejected an invitation from the local gamer who requested the friends list.]]></summary>
+      <syntax><![CDATA[public bool InviteRejected { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="InviteSentTo" type="bool" access="get">
+      <summary><![CDATA[Gets whether the local gamer who requested the friends list has sent an invitation to this friend.]]></summary>
+      <syntax><![CDATA[public bool InviteSentTo { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsAway" type="bool" access="get">
+      <summary><![CDATA[Gets whether this friend is currently away from the computer or console.]]></summary>
+      <syntax><![CDATA[public bool IsAway { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsBusy" type="bool" access="get">
+      <summary><![CDATA[Gets whether this friend is currently busy.]]></summary>
+      <syntax><![CDATA[public bool IsBusy { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsJoinable" type="bool" access="get">
+      <summary><![CDATA[Gets whether this friend is currently in a public session that can be joined.]]></summary>
+      <syntax><![CDATA[public bool IsJoinable { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsOnline" type="bool" access="get">
+      <summary><![CDATA[Gets whether this friend is currently online.]]></summary>
+      <syntax><![CDATA[public bool IsOnline { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsPlaying" type="bool" access="get">
+      <summary><![CDATA[Gets whether this friend is currently playing a game.]]></summary>
+      <syntax><![CDATA[public bool IsPlaying { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Presence" type="string" access="get">
+      <summary><![CDATA[Gets a title-defined presence string describing what this friend is currently doing.]]></summary>
+      <syntax><![CDATA[public string Presence { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

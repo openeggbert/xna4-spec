@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IContentProcessor" kind="interface"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <summary><![CDATA[Provides methods and properties for accessing a statically typed ContentProcessor subclass, using dynamically typed object data.]]></summary>
+  <syntax><![CDATA[public interface IContentProcessor]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="InputType" type="Object" access="get">
+      <summary><![CDATA[Gets the expected object type of the input parameter to IContentProcessor.Process.]]></summary>
+      <syntax><![CDATA[public virtual abstract Type InputType { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="OutputType" type="Object" access="get">
+      <summary><![CDATA[Gets the object type returned by IContentProcessor.Process.]]></summary>
+      <syntax><![CDATA[public virtual abstract Type OutputType { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Process" returnType="void">
+      <summary><![CDATA[Processes the specified input data and returns the result.]]></summary>
+      <overloads>
+        <overload signature="Process()">
+          <summary><![CDATA[Processes the specified input data and returns the result.]]></summary>
+          <syntax><![CDATA[public Object Process (
+         Object input,
+         ContentProcessorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="input" type="Object"><![CDATA[Existing content object being processed.]]></parameter>
+            <parameter name="context" type="ContentProcessorContext"><![CDATA[Contains any required custom process parameters.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An object representing the processed input.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ConversionFormat" kind="enum"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Audio"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Audio">
+  <summary><![CDATA[This enumeration is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public enum ConversionFormat]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Adpcm"><summary><![CDATA[A PCM encoding technique using 4 bits]]></summary></member>
+    <member name="Pcm"><summary><![CDATA[8/16-bit mono/stereo PCM audio 8KHz-48KHz]]></summary></member>
+    <member name="WindowsMedia"><summary><![CDATA[Windows Media CBR formats (64 kbps, 128 kbps, 192 kbps)]]></summary></member>
+    <member name="Xma"><summary><![CDATA[The Xbox compression format]]></summary></member>
+  </members>
+</xna-type>

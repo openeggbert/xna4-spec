@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="FontDescriptionStyle" kind="enum"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+  <summary><![CDATA[Flags that describe style information to be applied to text.]]></summary>
+  <syntax><![CDATA[public enum FontDescriptionStyle]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Bold"><summary><![CDATA[Bold text.]]></summary></member>
+    <member name="Italic"><summary><![CDATA[Italic text.]]></summary></member>
+    <member name="Regular"><summary><![CDATA[Normal text.]]></summary></member>
+  </members>
+</xna-type>

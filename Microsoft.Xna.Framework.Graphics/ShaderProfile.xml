@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ShaderProfile" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines vertex and pixel shader versions.]]></summary>
+  <syntax><![CDATA[public enum ShaderProfile]]></syntax>
+  <remarks><![CDATA[These pixel shader versions identify the assembly-level shader model compilation target the HLSL compiler should use to express the final shader code. When shader compilation is completed at runtime, an application might query the using MaxVertexShaderProfile or MaxPixelShaderProfile to select a compilation target to match the capabilities of the graphics device.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="PS_1_1"><summary><![CDATA[Pixel shader version ps_1_1.]]></summary></member>
+    <member name="PS_1_2"><summary><![CDATA[Pixel shader version ps_1_2.]]></summary></member>
+    <member name="PS_1_3"><summary><![CDATA[Pixel shader version ps_1_3.]]></summary></member>
+    <member name="PS_1_4"><summary><![CDATA[Pixel shader version ps_1_4.]]></summary></member>
+    <member name="PS_2_0"><summary><![CDATA[Pixel shader version ps_2_0.]]></summary></member>
+    <member name="PS_2_A"><summary><![CDATA[Pixel shader version ps_2_a.]]></summary></member>
+    <member name="PS_2_B"><summary><![CDATA[Pixel shader version ps_2_b.]]></summary></member>
+    <member name="PS_2_SW"><summary><![CDATA[Pixel software shader version ps_2_sw.]]></summary></member>
+    <member name="PS_3_0"><summary><![CDATA[Pixel shader version ps_3_0.]]></summary></member>
+    <member name="Unknown"><summary><![CDATA[Unknown pixel shader version.]]></summary></member>
+    <member name="VS_1_1"><summary><![CDATA[Vertex shader version v_1_1.]]></summary></member>
+    <member name="VS_2_0"><summary><![CDATA[Vertex shader version v_2_0.]]></summary></member>
+    <member name="VS_2_A"><summary><![CDATA[Vertex shader version v_2_a.]]></summary></member>
+    <member name="VS_2_SW"><summary><![CDATA[Vertex software shader version v_2_sw.]]></summary></member>
+    <member name="VS_3_0"><summary><![CDATA[Vertex shader version vs_3_0.]]></summary></member>
+    <member name="XPS_3_0"><summary><![CDATA[Xbox microcode assembly pixel shader version xps_3_0. Microcode assembly language supports a superset of the ps_3_0 and vs_3_0 specifications defined by Direct3D 9.0 for Windows. It does not support earlier Direct3D vertex and pixel shader specifications.]]></summary></member>
+    <member name="XVS_3_0"><summary><![CDATA[Xbox microcode assembly vertex shader version xvs_3_0. Microcode assembly language supports a superset of the ps_3_0 and vs_3_0 specifications defined by Direct3D 9.0 for Windows. It does not support earlier Direct3D vertex and pixel shader specifications.]]></summary></member>
+  </members>
+</xna-type>

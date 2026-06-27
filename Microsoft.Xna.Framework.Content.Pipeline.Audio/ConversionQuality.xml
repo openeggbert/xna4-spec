@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ConversionQuality" kind="enum"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Audio"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Audio">
+  <summary><![CDATA[This enumeration is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public enum ConversionQuality]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Low"><summary><![CDATA[High compression yielding lower file size, but could compromise audio quality]]></summary></member>
+    <member name="Medium"><summary><![CDATA[Moderate compression resulting in a compromise between audio quality and file size]]></summary></member>
+    <member name="Best"><summary><![CDATA[Lowest compression, but the best audio quality]]></summary></member>
+  </members>
+</xna-type>

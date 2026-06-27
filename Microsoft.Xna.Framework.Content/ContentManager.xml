@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentManager" kind="class"
+          namespace="Microsoft.Xna.Framework.Content"
+          assembly="Microsoft.Xna.Framework.Content"
+          interfaces="IDisposable">
+  <summary><![CDATA[The ContentManager is the run-time component which loads managed objects from the binary files produced by the design time content pipeline. It also manages the lifespan of the loaded objects, disposing the content manager will also dispose any assets which are themselves IDisposable.]]></summary>
+  <syntax><![CDATA[public class ContentManager : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentManager(IServiceProvider)">
+      <summary><![CDATA[Initializes a new instance of ContentManager.]]></summary>
+      <syntax><![CDATA[public ContentManager (
+         IServiceProvider serviceProvider
+)]]></syntax>
+      <parameters>
+        <parameter name="serviceProvider" type="IServiceProvider"><![CDATA[The service provider that the ContentManager should use to locate services.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Warning When creating a new ContentManager , if no instance of Game is otherwise required by the application, it is often better to create a new class that implements the IServiceProvider interface rather than creating an instance of Game just to create a new instance of GraphicsDeviceManager . By default, the ContentManager searches for content in the directory where the executable is located.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ContentManager(IServiceProvider, String)">
+      <summary><![CDATA[Initializes a new instance of ContentManager.]]></summary>
+      <syntax><![CDATA[public ContentManager (
+         IServiceProvider serviceProvider,
+         string rootDirectory
+)]]></syntax>
+      <parameters>
+        <parameter name="serviceProvider" type="IServiceProvider"><![CDATA[The service provider the ContentManager should use to locate services.]]></parameter>
+        <parameter name="rootDirectory" type="string"><![CDATA[The root directory to search for content.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Warning When creating a new ContentManager , if no instance of Game is otherwise required by the application, it is often better to create a new class that implements the IServiceProvider interface rather than creating an instance of Game just to create a new instance of GraphicsDeviceManager .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="RootDirectory" type="string" access="get">
+      <summary><![CDATA[Gets the root directory associated with this ContentManager.]]></summary>
+      <syntax><![CDATA[public string RootDirectory { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ServiceProvider" type="IServiceProvider" access="get">
+      <summary><![CDATA[Gets the service provider associated with the ContentManager.]]></summary>
+      <syntax><![CDATA[public IServiceProvider ServiceProvider { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Releases the unmanaged resources used by the ContentManager and optionally releases the managed resources.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Releases the unmanaged resources used by the ContentManager and optionally releases the managed resources.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool disposing
+)]]></syntax>
+          <parameters>
+            <parameter name="disposing" type="bool"><![CDATA[true to release both managed and unmanaged resources; false to release only unmanaged resources.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Releases all resources used by the ContentManager class.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OpenStream" returnType="void">
+      <summary><![CDATA[Opens a stream for reading the specified asset. Derived classes can replace this to implement pack files or asset compression.]]></summary>
+      <overloads>
+        <overload signature="OpenStream()">
+          <summary><![CDATA[Opens a stream for reading the specified asset. Derived classes can replace this to implement pack files or asset compression.]]></summary>
+          <syntax><![CDATA[protected virtual Stream OpenStream (
+         string assetName
+)]]></syntax>
+          <parameters>
+            <parameter name="assetName" type="string"><![CDATA[The name of the asset being read.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The opened stream.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Unload" returnType="void">
+      <summary><![CDATA[Disposes all data that was loaded by this ContentManager.]]></summary>
+      <overloads>
+        <overload signature="Unload()">
+          <summary><![CDATA[Disposes all data that was loaded by this ContentManager.]]></summary>
+          <syntax><![CDATA[public virtual void Unload ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

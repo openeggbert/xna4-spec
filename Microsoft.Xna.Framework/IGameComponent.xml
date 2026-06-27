@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IGameComponent" kind="interface"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Defines an interface for game components.]]></summary>
+  <syntax><![CDATA[public interface IGameComponent]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Initialize" returnType="void">
+      <summary><![CDATA[Called when the component should be initialized. This method can be used for tasks like querying for services the component needs and setting up non-graphics resources.]]></summary>
+      <overloads>
+        <overload signature="Initialize()">
+          <summary><![CDATA[Called when the component should be initialized. This method can be used for tasks like querying for services the component needs and setting up non-graphics resources.]]></summary>
+          <syntax><![CDATA[public void Initialize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

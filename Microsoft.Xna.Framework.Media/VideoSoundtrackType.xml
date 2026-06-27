@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VideoSoundtrackType" kind="enum"
+          namespace="Microsoft.Xna.Framework.Media"
+          assembly="Microsoft.Xna.Framework.Media">
+  <summary><![CDATA[Type of sounds in a video]]></summary>
+  <syntax><![CDATA[public enum VideoSoundtrackType]]></syntax>
+  <remarks><![CDATA[A video that only contains music will be muted on playback if the MediaPlayer is playing back music.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <members>
+    <member name="Dialog"><summary><![CDATA[This video contains only dialog.]]></summary></member>
+    <member name="Music"><summary><![CDATA[This video contains only music.]]></summary></member>
+    <member name="MusicAndDialog"><summary><![CDATA[This video contains music and dialog.]]></summary></member>
+  </members>
+</xna-type>

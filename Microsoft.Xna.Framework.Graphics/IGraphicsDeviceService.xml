@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IGraphicsDeviceService" kind="interface"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines a mechanism for retrieving GraphicsDevice objects.]]></summary>
+  <syntax><![CDATA[public interface IGraphicsDeviceService]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="GraphicsDevice" type="Object" access="get">
+      <summary><![CDATA[Retrieves a graphcs device.]]></summary>
+      <syntax><![CDATA[public virtual abstract GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="DeviceCreated" type="EventHandler">
+      <summary><![CDATA[The event that occurs when a graphics device is created.]]></summary>
+      <syntax><![CDATA[public virtual abstract event EventHandler DeviceCreated]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="DeviceDisposing" type="EventHandler">
+      <summary><![CDATA[The event that occurs when a graphics device is disposing.]]></summary>
+      <syntax><![CDATA[public virtual abstract event EventHandler DeviceDisposing]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="DeviceReset" type="EventHandler">
+      <summary><![CDATA[The event that occurs when a graphics device is reset.]]></summary>
+      <syntax><![CDATA[public virtual abstract event EventHandler DeviceReset]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="DeviceResetting" type="EventHandler">
+      <summary><![CDATA[The event that occurs when a graphics device is in the process of resetting.]]></summary>
+      <syntax><![CDATA[public virtual abstract event EventHandler DeviceResetting]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

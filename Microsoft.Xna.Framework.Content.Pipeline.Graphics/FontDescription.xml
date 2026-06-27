@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="FontDescription" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="ContentItem">
+  <summary><![CDATA[Provides information to the FontDescriptionProcessor describing which font to rasterize, which font size to utilize, and which Unicode characters to include in the processor output.]]></summary>
+  <syntax><![CDATA[public class FontDescription : ContentItem]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="FontDescription(String, Single, Single, FontDescriptionStyle)">
+      <summary><![CDATA[Initializes a new instance of FontDescription and initializes its members to the specified font, size, spacing, and style.]]></summary>
+      <syntax><![CDATA[public FontDescription (
+         string fontName,
+         float size,
+         float spacing,
+         FontDescriptionStyle fontStyle
+)]]></syntax>
+      <parameters>
+        <parameter name="fontName" type="string"><![CDATA[The name of the font, such as Times New Roman .]]></parameter>
+        <parameter name="size" type="float"><![CDATA[The size, in points, of the font.]]></parameter>
+        <parameter name="spacing" type="float"><![CDATA[The amount of space, in pixels, to insert between letters in a string.]]></parameter>
+        <parameter name="fontStyle" type="FontDescriptionStyle"><![CDATA[The font style for the font.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="FontDescription(String, Single, Single, FontDescriptionStyle, Boolean)">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         fontName As String, _
+         size As Single, _
+         spacing As Single, _
+         fontStyle As FontDescriptionStyle, _
+         useKerning As Boolean _
+)]]></syntax>
+      <parameters>
+        <parameter name="fontName" type="Object"><![CDATA[Type: String The name of the font, such as Times New Roman .]]></parameter>
+        <parameter name="size" type="Object"><![CDATA[Type: Single The size, in points, of the font.]]></parameter>
+        <parameter name="spacing" type="Object"><![CDATA[Type: Single The amount of space, in pixels, to insert between letters in a string.]]></parameter>
+        <parameter name="fontStyle" type="Object"><![CDATA[Type: FontDescriptionStyle The font style for the font.]]></parameter>
+        <parameter name="useKerning" type="Object"><![CDATA[Type: Boolean true if kerning information is used when drawing characters; false otherwise.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="FontDescription(String, Single, Single)">
+      <summary><![CDATA[Initializes a new instance of FontDescription and initializes its members to the specified font, size, and spacing, using FontDescriptionStyle.Regular as the default value for Style.]]></summary>
+      <syntax><![CDATA[public FontDescription (
+         string fontName,
+         float size,
+         float spacing
+)]]></syntax>
+      <parameters>
+        <parameter name="fontName" type="string"><![CDATA[The name of the font, such as Times New Roman .]]></parameter>
+        <parameter name="size" type="float"><![CDATA[The size, in points, of the font.]]></parameter>
+        <parameter name="spacing" type="float"><![CDATA[The amount of space, in pixels, to insert between letters in a string.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Characters" type="ICollection&amp;lt;char&amp;gt;" access="get">
+      <summary><![CDATA[Gets the collection of characters provided by this FontDescription.]]></summary>
+      <syntax><![CDATA[[ContentSerializerIgnoreAttribute]
+public ICollection&lt;char&gt; Characters { get; }]]></syntax>
+      <remarks><![CDATA[Characters can be used to change the characters provided by this FontDescription . The Characters collection keeps track of duplicates automatically. It is not necessary for the user to make sure that each letter is added only once. The Characters collection will contain only one instance of each character, no matter how many times you call Add . This collection of characters can be used to implement processing for a message file. A custom processor could read the message file, which would contain all of the text that the game will need to print, and add each character it finds to Characters .]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DefaultCharacter" type="Nullable&amp;lt;char&amp;gt;" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[[ContentSerializerAttribute]
+public Nullable&lt;char&gt; DefaultCharacter { get; set; }]]></syntax>
+      <remarks><![CDATA[If set to anything other than null, this character will be automatically substituted any time an attempt is made to draw or measure characters that are not in the font. If set to null, missing characters will produce an exception.]]></remarks>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="FontName" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the name of the font, such as "Times New Roman" or "Arial". This value cannot be null or empty.]]></summary>
+      <syntax><![CDATA[[ContentSerializerAttribute]
+public string FontName { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Size" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the size, in points, of the font.]]></summary>
+      <syntax><![CDATA[public float Size { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Spacing" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the amount of space, in pixels, to insert between letters in a string.]]></summary>
+      <syntax><![CDATA[public float Spacing { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Style" type="FontDescriptionStyle" access="get;set">
+      <summary><![CDATA[Gets or sets the style of the font, expressed as a combination of one or more FontDescriptionStyle flags.]]></summary>
+      <syntax><![CDATA[public FontDescriptionStyle Style { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="UseKerning" type="bool" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[[ContentSerializerAttribute]
+public bool UseKerning { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

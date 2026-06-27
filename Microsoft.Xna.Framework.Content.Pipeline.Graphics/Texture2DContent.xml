@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Texture2DContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="TextureContent">
+  <summary><![CDATA[Represents a regular two-dimensional texture.]]></summary>
+  <syntax><![CDATA[public class Texture2DContent : TextureContent]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Texture2DContent()">
+      <summary><![CDATA[Initializes a new instance of Texture2DContent.]]></summary>
+      <syntax><![CDATA[public Texture2DContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Mipmaps" type="MipmapChain" access="get;set">
+      <summary><![CDATA[Gets or sets the collection of mipmaps containing the texture image data.]]></summary>
+      <syntax><![CDATA[public MipmapChain Mipmaps { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Validate" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="Validate()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Overrides Sub Validate ( _
+         targetProfile As Nullable(Of GraphicsProfile) _
+)]]></syntax>
+          <parameters>
+            <parameter name="targetProfile" type="Object"><![CDATA[Type: Nullable &lt; GraphicsProfile &gt; The profile identifier that defines the capabilities of the device.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

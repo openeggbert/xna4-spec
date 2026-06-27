@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AvatarExpression" kind="struct"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Contains the various components of the avatar's face, such as the left and right eyebrows.]]></summary>
+  <syntax><![CDATA[public struct AvatarExpression]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="LeftEye" type="AvatarEye" access="get;set">
+      <summary><![CDATA[Gets or sets the current texture for the avatar's left eye.]]></summary>
+      <syntax><![CDATA[public AvatarEye LeftEye { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="LeftEyebrow" type="AvatarEyebrow" access="get;set">
+      <summary><![CDATA[Gets or sets the current texture for the avatar's left eye.]]></summary>
+      <syntax><![CDATA[public AvatarEyebrow LeftEyebrow { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Mouth" type="AvatarMouth" access="get;set">
+      <summary><![CDATA[Gets or sets the current texture for the avatar's mouth.]]></summary>
+      <syntax><![CDATA[public AvatarMouth Mouth { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="RightEye" type="AvatarEye" access="get;set">
+      <summary><![CDATA[Gets or sets the current texture for the avatar's right eye.]]></summary>
+      <syntax><![CDATA[public AvatarEye RightEye { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="RightEyebrow" type="AvatarEyebrow" access="get;set">
+      <summary><![CDATA[Gets or sets the current texture for the avatar's right eyebrow.]]></summary>
+      <syntax><![CDATA[public AvatarEyebrow RightEyebrow { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

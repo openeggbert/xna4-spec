@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="DisplayOrientation" kind="enum"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Defines the display orientation.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum DisplayOrientation]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <members>
+    <member name="Default"><summary><![CDATA[The default display orientation.]]></summary></member>
+    <member name="LandscapeLeft"><summary><![CDATA[The display is rotated counterclockwise 90 degrees into a landscape orientation, where the width is greater than the height.]]></summary></member>
+    <member name="LandscapeRight"><summary><![CDATA[The display is rotated clockwise 90 degrees into a landscape orientation, where the width is greater than the height.]]></summary></member>
+    <member name="Portrait"><summary><![CDATA[The orientation is a portrait, where the height is greater than the width.]]></summary></member>
+  </members>
+</xna-type>

@@ -1,0 +1,1629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Vector3" kind="struct"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IEquatable&amp;lt;Vector3&amp;gt;">
+  <summary><![CDATA[Defines a vector with three components.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.Vector3Converter)")]
+[SerializableAttribute]
+public struct Vector3 : IEquatable&lt;Vector3&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Vector3(Single, Single, Single)">
+      <summary><![CDATA[Initializes a new instance of Vector3.]]></summary>
+      <syntax><![CDATA[public Vector3 (
+         float x,
+         float y,
+         float z
+)]]></syntax>
+      <parameters>
+        <parameter name="x" type="float"><![CDATA[Initial value for the x-component of the vector.]]></parameter>
+        <parameter name="y" type="float"><![CDATA[Initial value for the y-component of the vector.]]></parameter>
+        <parameter name="z" type="float"><![CDATA[Initial value for the z-component of the vector.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Vector3(Single)">
+      <summary><![CDATA[Creates a new instance of Vector3.]]></summary>
+      <syntax><![CDATA[public Vector3 (
+         float value
+)]]></syntax>
+      <parameters>
+        <parameter name="value" type="float"><![CDATA[Value to initialize each component to.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Vector3(Vector2, Single)">
+      <summary><![CDATA[Initializes a new instance of Vector3.]]></summary>
+      <syntax><![CDATA[public Vector3 (
+         Vector2 value,
+         float z
+)]]></syntax>
+      <parameters>
+        <parameter name="value" type="Object"><![CDATA[A vector containing the values to initialize x and y components with.]]></parameter>
+        <parameter name="z" type="float"><![CDATA[Initial value for the z-component of the vector.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Backward" type="Vector3" access="get" isStatic="true">
+      <summary><![CDATA[Returns a unit Vector3 pointing backward (0, 0, 1).]]></summary>
+      <syntax><![CDATA[public static Vector3 Backward { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Down" type="Vector3" access="get" isStatic="true">
+      <summary><![CDATA[Returns a unit Vector3 pointing down (0, −1, 0).]]></summary>
+      <syntax><![CDATA[public static Vector3 Down { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Forward" type="Vector3" access="get" isStatic="true">
+      <summary><![CDATA[Returns a unit Vector3 pointing forward (0, 0, −1).]]></summary>
+      <syntax><![CDATA[public static Vector3 Forward { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Left" type="Vector3" access="get" isStatic="true">
+      <summary><![CDATA[Returns a unit Vector3 pointing left (−1, 0, 0).]]></summary>
+      <syntax><![CDATA[public static Vector3 Left { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="One" type="Vector3" access="get" isStatic="true">
+      <summary><![CDATA[Returns a Vector3 with ones in all of its components.]]></summary>
+      <syntax><![CDATA[public static Vector3 One { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Right" type="Vector3" access="get" isStatic="true">
+      <summary><![CDATA[Returns a unit Vector3 pointing to the right (1, 0, 0).]]></summary>
+      <syntax><![CDATA[public static Vector3 Right { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="UnitX" type="Vector3" access="get" isStatic="true">
+      <summary><![CDATA[Returns the x unit Vector3 (1, 0, 0).]]></summary>
+      <syntax><![CDATA[public static Vector3 UnitX { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="UnitY" type="Vector3" access="get" isStatic="true">
+      <summary><![CDATA[Returns the y unit Vector3 (0, 1, 0).]]></summary>
+      <syntax><![CDATA[public static Vector3 UnitY { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="UnitZ" type="Vector3" access="get" isStatic="true">
+      <summary><![CDATA[Returns the z unit Vector3 (0, 0, 1).]]></summary>
+      <syntax><![CDATA[public static Vector3 UnitZ { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Up" type="Vector3" access="get" isStatic="true">
+      <summary><![CDATA[Returns a unit Vector3 pointing up (0, 1, 0).]]></summary>
+      <syntax><![CDATA[public static Vector3 Up { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Zero" type="Vector3" access="get" isStatic="true">
+      <summary><![CDATA[Returns a Vector3 with all of its components set to zero.]]></summary>
+      <syntax><![CDATA[public static Vector3 Zero { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Add" returnType="void" isStatic="true">
+      <summary><![CDATA[Adds two vectors.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Vector3">
+          <summary><![CDATA[Adds two vectors.]]></summary>
+          <syntax><![CDATA[public static void Add (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Sum of the source vectors.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Adds two vectors.]]></summary>
+          <syntax><![CDATA[public static Vector3 Add (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Sum of the source vectors.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Barycentric" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Returns a Vector3 containing the 3D Cartesian coordinates of a point specified in Barycentric coordinates relative to a 3D triangle.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Vector3, Single, Single">
+          <summary><![CDATA[Returns a Vector3 containing the 3D Cartesian coordinates of a point specified in Barycentric coordinates relative to a 3D triangle.]]></summary>
+          <syntax><![CDATA[public static Vector3 Barycentric (
+         Vector3 value1,
+         Vector3 value2,
+         Vector3 value3,
+         float amount1,
+         float amount2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 1 of the triangle.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 2 of the triangle.]]></parameter>
+            <parameter name="value3" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 3 of the triangle.]]></parameter>
+            <parameter name="amount1" type="float"><![CDATA[Barycentric coordinate b2, which expresses the weighting factor toward vertex 2 (specified in value2 ).]]></parameter>
+            <parameter name="amount2" type="float"><![CDATA[Barycentric coordinate b3, which expresses the weighting factor toward vertex 3 (specified in value3 ).]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new Vector3 containing the 3D Cartesian coordinates of the specified point.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3, Single, Single, Vector3">
+          <summary><![CDATA[Returns a Vector3 containing the 3D Cartesian coordinates of a point specified in barycentric (areal) coordinates relative to a 3D triangle.]]></summary>
+          <syntax><![CDATA[public static void Barycentric (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         ref Vector3 value3,
+         float amount1,
+         float amount2,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 1 of the triangle.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 2 of the triangle.]]></parameter>
+            <parameter name="value3" type="Object"><![CDATA[A Vector3 containing the 3D Cartesian coordinates of vertex 3 of the triangle.]]></parameter>
+            <parameter name="amount1" type="float"><![CDATA[Barycentric coordinate b2 , which expresses the weighting factor toward vertex 2 (specified in value2 ).]]></parameter>
+            <parameter name="amount2" type="float"><![CDATA[Barycentric coordinate b3 , which expresses the weighting factor toward vertex 3 (specified in value3 ).]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The 3D Cartesian coordinates of the specified point are placed in this Vector3 on exit.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CatmullRom" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Performs a Catmull-Rom interpolation using the specified positions.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Vector3, Vector3, Single">
+          <summary><![CDATA[Performs a Catmull-Rom interpolation using the specified positions.]]></summary>
+          <syntax><![CDATA[public static Vector3 CatmullRom (
+         Vector3 value1,
+         Vector3 value2,
+         Vector3 value3,
+         Vector3 value4,
+         float amount
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[The first position in the interpolation.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[The second position in the interpolation.]]></parameter>
+            <parameter name="value3" type="Object"><![CDATA[The third position in the interpolation.]]></parameter>
+            <parameter name="value4" type="Object"><![CDATA[The fourth position in the interpolation.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Weighting factor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A vector that is the result of the Catmull-Rom interpolation.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3, Vector3, Single, Vector3">
+          <summary><![CDATA[Performs a Catmull-Rom interpolation using the specified positions.]]></summary>
+          <syntax><![CDATA[public static void CatmullRom (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         ref Vector3 value3,
+         ref Vector3 value4,
+         float amount,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[The first position in the interpolation.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[The second position in the interpolation.]]></parameter>
+            <parameter name="value3" type="Object"><![CDATA[The third position in the interpolation.]]></parameter>
+            <parameter name="value4" type="Object"><![CDATA[The fourth position in the interpolation.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Weighting factor.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] A vector that is the result of the Catmull-Rom interpolation.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Clamp" returnType="void" isStatic="true">
+      <summary><![CDATA[Restricts a value to be within a specified range.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Vector3, Vector3">
+          <summary><![CDATA[Restricts a value to be within a specified range.]]></summary>
+          <syntax><![CDATA[public static void Clamp (
+         ref Vector3 value1,
+         ref Vector3 min,
+         ref Vector3 max,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[The value to clamp.]]></parameter>
+            <parameter name="min" type="Object"><![CDATA[The minimum value.]]></parameter>
+            <parameter name="max" type="Object"><![CDATA[The maximum value.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The clamped value.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3">
+          <summary><![CDATA[Restricts a value to be within a specified range.]]></summary>
+          <syntax><![CDATA[public static Vector3 Clamp (
+         Vector3 value1,
+         Vector3 min,
+         Vector3 max
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[The value to clamp.]]></parameter>
+            <parameter name="min" type="Object"><![CDATA[The minimum value.]]></parameter>
+            <parameter name="max" type="Object"><![CDATA[The maximum value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The clamped value.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Cross" returnType="void" isStatic="true">
+      <summary><![CDATA[Calculates the cross product of two vectors.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Vector3">
+          <summary><![CDATA[Calculates the cross product of two vectors.]]></summary>
+          <syntax><![CDATA[public static void Cross (
+         ref Vector3 vector1,
+         ref Vector3 vector2,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="vector1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="vector2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The cross product of the vectors.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Calculates the cross product of two vectors.]]></summary>
+          <syntax><![CDATA[public static Vector3 Cross (
+         Vector3 vector1,
+         Vector3 vector2
+)]]></syntax>
+          <parameters>
+            <parameter name="vector1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="vector2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Cross product of the source vectors.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Distance" returnType="float" isStatic="true">
+      <summary><![CDATA[Calculates the distance between two vectors.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Calculates the distance between two vectors.]]></summary>
+          <syntax><![CDATA[public static float Distance (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Distance between the source vectors.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Single">
+          <summary><![CDATA[Calculates the distance between two vectors.]]></summary>
+          <syntax><![CDATA[public static void Distance (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         out float result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The distance between the vectors.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DistanceSquared" returnType="float" isStatic="true">
+      <summary><![CDATA[Calculates the distance between two vectors squared.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Calculates the distance between two vectors squared.]]></summary>
+          <syntax><![CDATA[public static float DistanceSquared (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The distance between the source vectors squared.]]></returns>
+          <remarks><![CDATA[Distance is calculated with the following formula: Distance squared is the value before taking the square root. Distance squared can often be used in place of distance if relative comparisons are being made. For example, consider three points A, B, and C. To determine whether B or C is further from A, compare the distance between A and B to the distance between A and C. Calculating the two distances involves two square roots, which are computationally expensive. However, using distance squared provides the same information and avoids calculating two square roots.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Single">
+          <summary><![CDATA[Calculates the distance between two vectors squared.]]></summary>
+          <syntax><![CDATA[public static void DistanceSquared (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         out float result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The distance between the two vectors squared.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Distance is calculated with the formula: Distance squared is the value before taking the square root. Distance squared can often be used in place of distance if relative comparisons are being made. For example, consider three points A, B, and C. To determine whether B or C is further from A, compare the distance between A and B to the distance between A and C. Calculating the two distances involves two square roots, which are computationally expensive. However, using distance squared provides the same information and avoids calculating two square roots.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Divide" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Divides a vector by a scalar value.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Single">
+          <summary><![CDATA[Divides a vector by a scalar value.]]></summary>
+          <syntax><![CDATA[public static Vector3 Divide (
+         Vector3 value1,
+         float value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="float"><![CDATA[The divisor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The source vector divided by b.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Single, Vector3">
+          <summary><![CDATA[Divides a vector by a scalar value.]]></summary>
+          <syntax><![CDATA[public static void Divide (
+         ref Vector3 value1,
+         float value2,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="float"><![CDATA[The divisor.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the division.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3">
+          <summary><![CDATA[Divides the components of a vector by the components of another vector.]]></summary>
+          <syntax><![CDATA[public static void Divide (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[The divisor.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the division.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Divides the components of a vector by the components of another vector.]]></summary>
+          <syntax><![CDATA[public static Vector3 Divide (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Divisor vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The result of dividing the vectors.]]></returns>
+          <remarks><![CDATA[Division of a vector by another vector is not mathematically defined. This method simply divides each component of a by the matching component of b .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dot" returnType="void" isStatic="true">
+      <summary><![CDATA[Calculates the dot product of two vectors.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Single">
+          <summary><![CDATA[Calculates the dot product of two vectors.]]></summary>
+          <syntax><![CDATA[public static void Dot (
+         ref Vector3 vector1,
+         ref Vector3 vector2,
+         out float result
+)]]></syntax>
+          <parameters>
+            <parameter name="vector1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="vector2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="float"><![CDATA[[ OutAttribute ] The dot product of the two vectors.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Calculates the dot product of two vectors.]]></summary>
+          <syntax><![CDATA[public static float Dot (
+         Vector3 vector1,
+         Vector3 vector2
+)]]></syntax>
+          <parameters>
+            <parameter name="vector1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="vector2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The dot product of the two vectors.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object to make the comparison with.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3">
+          <summary><![CDATA[Determines whether the specified Object is equal to the Vector3.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Vector3 other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Object"><![CDATA[The Vector3 to compare with the current Vector3 .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Vector3 is equal to the current Vector3; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code of the vector object.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code of the vector object.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code of the vector object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Hermite" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Performs a Hermite spline interpolation.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Vector3, Vector3, Single">
+          <summary><![CDATA[Performs a Hermite spline interpolation.]]></summary>
+          <syntax><![CDATA[public static Vector3 Hermite (
+         Vector3 value1,
+         Vector3 tangent1,
+         Vector3 value2,
+         Vector3 tangent2,
+         float amount
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source position vector.]]></parameter>
+            <parameter name="tangent1" type="Object"><![CDATA[Source tangent vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source position vector.]]></parameter>
+            <parameter name="tangent2" type="Object"><![CDATA[Source tangent vector.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Weighting factor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The result of the Hermite spline interpolation.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3, Vector3, Single, Vector3">
+          <summary><![CDATA[Performs a Hermite spline interpolation.]]></summary>
+          <syntax><![CDATA[public static void Hermite (
+         ref Vector3 value1,
+         ref Vector3 tangent1,
+         ref Vector3 value2,
+         ref Vector3 tangent2,
+         float amount,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source position vector.]]></parameter>
+            <parameter name="tangent1" type="Object"><![CDATA[Source tangent vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source position vector.]]></parameter>
+            <parameter name="tangent2" type="Object"><![CDATA[Source tangent vector.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Weighting factor.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the Hermite spline interpolation.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Length" returnType="void">
+      <summary><![CDATA[Calculates the length of the vector.]]></summary>
+      <overloads>
+        <overload signature="Length()">
+          <summary><![CDATA[Calculates the length of the vector.]]></summary>
+          <syntax><![CDATA[public float Length ()]]></syntax>
+          <returns><![CDATA[The length of the vector.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="LengthSquared" returnType="void">
+      <summary><![CDATA[Calculates the length of the vector squared.]]></summary>
+      <overloads>
+        <overload signature="LengthSquared()">
+          <summary><![CDATA[Calculates the length of the vector squared.]]></summary>
+          <syntax><![CDATA[public float LengthSquared ()]]></syntax>
+          <returns><![CDATA[The length of the vector squared.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Lerp" returnType="void" isStatic="true">
+      <summary><![CDATA[Performs a linear interpolation between two vectors.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Single, Vector3">
+          <summary><![CDATA[Performs a linear interpolation between two vectors.]]></summary>
+          <syntax><![CDATA[public static void Lerp (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         float amount,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Value between 0 and 1 indicating the weight of value2 .]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the interpolation.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method performs the linear interpolation based on the following formula. value1 + (value2 - value1) * amount Passing amount a value of 0 will cause value1 to be returned; a value of 1 will cause value2 to be returned.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Single">
+          <summary><![CDATA[Performs a linear interpolation between two vectors.]]></summary>
+          <syntax><![CDATA[public static Vector3 Lerp (
+         Vector3 value1,
+         Vector3 value2,
+         float amount
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Value between 0 and 1 indicating the weight of value2 .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The linear interpolation of the two vectors.]]></returns>
+          <remarks><![CDATA[This method performs the linear interpolation based on the following formula. value1 + (value2 - value1) * amount Passing amount a value of 0 will cause value1 to be returned; a value of 1 will cause value2 to be returned.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Max" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Returns a vector that contains the highest value from each matching pair of components.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Returns a vector that contains the highest value from each matching pair of components.]]></summary>
+          <syntax><![CDATA[public static Vector3 Max (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The maximized vector.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3">
+          <summary><![CDATA[Returns a vector that contains the highest value from each matching pair of components.]]></summary>
+          <syntax><![CDATA[public static void Max (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The maximized vector.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Min" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Returns a vector that contains the lowest value from each matching pair of components.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Returns a vector that contains the lowest value from each matching pair of components.]]></summary>
+          <syntax><![CDATA[public static Vector3 Min (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The minimized vector.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3">
+          <summary><![CDATA[Returns a vector that contains the lowest value from each matching pair of components.]]></summary>
+          <syntax><![CDATA[public static void Min (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The minimized vector.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Multiply" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Multiplies a vector by a scalar value.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Single">
+          <summary><![CDATA[Multiplies a vector by a scalar value.]]></summary>
+          <syntax><![CDATA[public static Vector3 Multiply (
+         Vector3 value1,
+         float scaleFactor
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Multiplies the components of two vectors by each other.]]></summary>
+          <syntax><![CDATA[public static Vector3 Multiply (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the multiplication.]]></returns>
+          <remarks><![CDATA[Multiplication performed by this method is not vector multiplication (dot product and cross product) but multiplication of the corresponding components of each vector.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3">
+          <summary><![CDATA[Multiplies the components of two vectors by each other.]]></summary>
+          <syntax><![CDATA[public static void Multiply (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the multiplication.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Single, Vector3">
+          <summary><![CDATA[Multiplies a vector by a scalar value.]]></summary>
+          <syntax><![CDATA[public static void Multiply (
+         ref Vector3 value1,
+         float scaleFactor,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the multiplication.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Negate" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Returns a vector pointing in the opposite direction.]]></summary>
+      <overloads>
+        <overload signature="Vector3">
+          <summary><![CDATA[Returns a vector pointing in the opposite direction.]]></summary>
+          <syntax><![CDATA[public static Vector3 Negate (
+         Vector3 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Vector pointing in the opposite direction.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Returns a vector pointing in the opposite direction.]]></summary>
+          <syntax><![CDATA[public static void Negate (
+         ref Vector3 value,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Vector pointing in the opposite direction.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Normalize" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Creates a unit vector from the specified vector.]]></summary>
+      <overloads>
+        <overload signature="Vector3">
+          <summary><![CDATA[Creates a unit vector from the specified vector.]]></summary>
+          <syntax><![CDATA[public static Vector3 Normalize (
+         Vector3 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The source Vector3 .]]></parameter>
+          </parameters>
+          <returns><![CDATA[The created unit vector.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Turns the current vector into a unit vector.]]></summary>
+          <syntax><![CDATA[public void Normalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Returns a normalized version of the specified vector.]]></summary>
+          <syntax><![CDATA[public static void Normalize (
+         ref Vector3 value,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The normalized vector.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Reflect" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Returns the reflection of a vector off a surface that has the specified normal.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Returns the reflection of a vector off a surface that has the specified normal.]]></summary>
+          <syntax><![CDATA[public static Vector3 Reflect (
+         Vector3 vector,
+         Vector3 normal
+)]]></syntax>
+          <parameters>
+            <parameter name="vector" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="normal" type="Object"><![CDATA[Normal of the surface.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The reflected vector.]]></returns>
+          <remarks><![CDATA[Reflect only gives the direction of a reflection off a surface, it does not determine whether the original vector was close enough to the surface to hit it.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Vector3">
+          <summary><![CDATA[Returns the reflection of a vector off a surface that has the specified normal.]]></summary>
+          <syntax><![CDATA[public static void Reflect (
+         ref Vector3 vector,
+         ref Vector3 normal,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="vector" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="normal" type="Object"><![CDATA[Normal of the surface.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The reflected vector.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Reflect only gives the direction of a reflection off a surface, it does not determine whether the original vector was close enough to the surface to hit it.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SmoothStep" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Interpolates between two values using a cubic equation.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Single">
+          <summary><![CDATA[Interpolates between two values using a cubic equation.]]></summary>
+          <syntax><![CDATA[public static Vector3 SmoothStep (
+         Vector3 value1,
+         Vector3 value2,
+         float amount
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source value.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source value.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Weighting value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Interpolated value.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3, Single, Vector3">
+          <summary><![CDATA[Interpolates between two values using a cubic equation.]]></summary>
+          <syntax><![CDATA[public static void SmoothStep (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         float amount,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="amount" type="float"><![CDATA[Weighting value.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The interpolated value.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Subtract" returnType="void" isStatic="true">
+      <summary><![CDATA[Subtracts a vector from a vector.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3, Vector3">
+          <summary><![CDATA[Subtracts a vector from a vector.]]></summary>
+          <syntax><![CDATA[public static void Subtract (
+         ref Vector3 value1,
+         ref Vector3 value2,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The result of the subtraction.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Subtracts a vector from a vector.]]></summary>
+          <syntax><![CDATA[public static Vector3 Subtract (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the subtraction.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of the current object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of the current object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String that represents the object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Transform" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Transforms a 3D vector by the given matrix.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Matrix">
+          <summary><![CDATA[Transforms a 3D vector by the given matrix.]]></summary>
+          <syntax><![CDATA[public static Vector3 Transform (
+         Vector3 position,
+         Matrix matrix
+)]]></syntax>
+          <parameters>
+            <parameter name="position" type="Object"><![CDATA[The source vector.]]></parameter>
+            <parameter name="matrix" type="Matrix"><![CDATA[The transformation matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The transformed vector.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Quaternion">
+          <summary><![CDATA[Transforms a Vector3 by a specified Quaternion rotation.]]></summary>
+          <syntax><![CDATA[public static Vector3 Transform (
+         Vector3 value,
+         Quaternion rotation
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The Vector3 to rotate.]]></parameter>
+            <parameter name="rotation" type="Quaternion"><![CDATA[The Quaternion rotation to apply.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Returns a new Vector3 that results from the rotation.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3[], Int32, Matrix, Vector3 , Int32, Int32">
+          <summary><![CDATA[Applies a specified transform Matrix to a specified range of an array of Vector3s and writes the results into a specified range of a destination array.]]></summary>
+          <syntax><![CDATA[public static void Transform (
+         Vector3[] sourceArray,
+         int sourceIndex,
+         ref Matrix matrix,
+         Vector3[] destinationArray,
+         int destinationIndex,
+         int length
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceArray" type="Object"><![CDATA[The source array.]]></parameter>
+            <parameter name="sourceIndex" type="int"><![CDATA[The index in the source array at which to start.]]></parameter>
+            <parameter name="matrix" type="Matrix"><![CDATA[The transform Matrix to apply.]]></parameter>
+            <parameter name="destinationArray" type="Object"><![CDATA[The existing destination array.]]></parameter>
+            <parameter name="destinationIndex" type="int"><![CDATA[The index in the destination array at which to start.]]></parameter>
+            <parameter name="length" type="int"><![CDATA[The number of Vector3 s to transform.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3[], Int32, Quaternion, Vector3 , Int32, Int32">
+          <summary><![CDATA[Applies a specified Quaternion rotation to a specified range of an array of Vector3s and writes the results into a specified range of a destination array.]]></summary>
+          <syntax><![CDATA[public static void Transform (
+         Vector3[] sourceArray,
+         int sourceIndex,
+         ref Quaternion rotation,
+         Vector3[] destinationArray,
+         int destinationIndex,
+         int length
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceArray" type="Object"><![CDATA[The source array.]]></parameter>
+            <parameter name="sourceIndex" type="int"><![CDATA[The index in the source array at which to start.]]></parameter>
+            <parameter name="rotation" type="Quaternion"><![CDATA[The Quaternion rotation to apply.]]></parameter>
+            <parameter name="destinationArray" type="Object"><![CDATA[The existing destination array.]]></parameter>
+            <parameter name="destinationIndex" type="int"><![CDATA[The index in the destination array at which to start.]]></parameter>
+            <parameter name="length" type="int"><![CDATA[The number of Vector3 s to transform.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Quaternion, Vector3">
+          <summary><![CDATA[Transforms a Vector3 by a specified Quaternion rotation.]]></summary>
+          <syntax><![CDATA[public static void Transform (
+         ref Vector3 value,
+         ref Quaternion rotation,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[The Vector3 to rotate.]]></parameter>
+            <parameter name="rotation" type="Quaternion"><![CDATA[The Quaternion rotation to apply.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] An existing Vector3 filled in with the results of the rotation.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Matrix, Vector3">
+          <summary><![CDATA[Transforms a Vector3 by the given Matrix.]]></summary>
+          <syntax><![CDATA[public static void Transform (
+         ref Vector3 position,
+         ref Matrix matrix,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="position" type="Object"><![CDATA[The source Vector3 .]]></parameter>
+            <parameter name="matrix" type="Matrix"><![CDATA[The transformation Matrix .]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The transformed vector.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3[], Quaternion, Vector3 ">
+          <summary><![CDATA[Transforms a source array of Vector3s by a specified Quaternion rotation and writes the results to an existing destination array.]]></summary>
+          <syntax><![CDATA[public static void Transform (
+         Vector3[] sourceArray,
+         ref Quaternion rotation,
+         Vector3[] destinationArray
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceArray" type="Object"><![CDATA[The source array.]]></parameter>
+            <parameter name="rotation" type="Quaternion"><![CDATA[The Quaternion rotation to apply.]]></parameter>
+            <parameter name="destinationArray" type="Object"><![CDATA[An existing destination array into which the transformed Vector3 s are written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3[], Matrix, Vector3 ">
+          <summary><![CDATA[Transforms a source array of Vector3s by a specified Matrix and writes the results to an existing destination array.]]></summary>
+          <syntax><![CDATA[public static void Transform (
+         Vector3[] sourceArray,
+         ref Matrix matrix,
+         Vector3[] destinationArray
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceArray" type="Object"><![CDATA[The source array.]]></parameter>
+            <parameter name="matrix" type="Matrix"><![CDATA[The transform Matrix to apply.]]></parameter>
+            <parameter name="destinationArray" type="Object"><![CDATA[An existing destination array into which the transformed Vector3 s are written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TransformNormal" returnType="void" isStatic="true">
+      <summary><![CDATA[Transforms a vector normal by a matrix.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Matrix, Vector3">
+          <summary><![CDATA[Transforms a vector normal by a matrix.]]></summary>
+          <syntax><![CDATA[public static void TransformNormal (
+         ref Vector3 normal,
+         ref Matrix matrix,
+         out Vector3 result
+)]]></syntax>
+          <parameters>
+            <parameter name="normal" type="Object"><![CDATA[The source vector.]]></parameter>
+            <parameter name="matrix" type="Matrix"><![CDATA[The transformation Matrix .]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The Vector3 resulting from the transformation.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3[], Int32, Matrix, Vector3 , Int32, Int32">
+          <summary><![CDATA[Transforms a specified range in an array of 3D vector normals by a specified Matrix and writes the results to a specified range in a destination array.]]></summary>
+          <syntax><![CDATA[public static void TransformNormal (
+         Vector3[] sourceArray,
+         int sourceIndex,
+         ref Matrix matrix,
+         Vector3[] destinationArray,
+         int destinationIndex,
+         int length
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceArray" type="Object"><![CDATA[The source array of Vector3 normals.]]></parameter>
+            <parameter name="sourceIndex" type="int"><![CDATA[The starting index in the source array.]]></parameter>
+            <parameter name="matrix" type="Matrix"><![CDATA[The transform Matrix to apply.]]></parameter>
+            <parameter name="destinationArray" type="Object"><![CDATA[The destination Vector3 array.]]></parameter>
+            <parameter name="destinationIndex" type="int"><![CDATA[The starting index in the destination array.]]></parameter>
+            <parameter name="length" type="int"><![CDATA[The number of vectors to transform.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Matrix">
+          <summary><![CDATA[Transforms a 3D vector normal by a matrix.]]></summary>
+          <syntax><![CDATA[public static Vector3 TransformNormal (
+         Vector3 normal,
+         Matrix matrix
+)]]></syntax>
+          <parameters>
+            <parameter name="normal" type="Object"><![CDATA[The source vector.]]></parameter>
+            <parameter name="matrix" type="Matrix"><![CDATA[The transformation matrix.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The transformed vector normal.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3[], Matrix, Vector3 ">
+          <summary><![CDATA[Transforms an array of 3D vector normals by a specified Matrix.]]></summary>
+          <syntax><![CDATA[public static void TransformNormal (
+         Vector3[] sourceArray,
+         ref Matrix matrix,
+         Vector3[] destinationArray
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceArray" type="Object"><![CDATA[The array of Vector3 normals to transform.]]></parameter>
+            <parameter name="matrix" type="Matrix"><![CDATA[The transform matrix to apply.]]></parameter>
+            <parameter name="destinationArray" type="Object"><![CDATA[An existing Vector3 array into which the results of the transforms are written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Addition" returnType="void">
+      <summary><![CDATA[Adds two vectors.]]></summary>
+      <overloads>
+        <overload signature="op_Addition()">
+          <summary><![CDATA[Adds two vectors.]]></summary>
+          <syntax><![CDATA[public static Vector3 op_Addition (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Sum of the vectors.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Division" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Divides the components of a vector by the components of another vector.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Divides the components of a vector by the components of another vector.]]></summary>
+          <syntax><![CDATA[public static Vector3 op_Division (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Divisor vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The result of dividing the vectors.]]></returns>
+          <remarks><![CDATA[Division of a vector by another vector is not mathematically defined. This method simply divides each component of a by the matching component of b .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Single">
+          <summary><![CDATA[Divides a vector by a scalar value.]]></summary>
+          <syntax><![CDATA[public static Vector3 op_Division (
+         Vector3 value,
+         float divider
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="divider" type="float"><![CDATA[The divisor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The source vector divided by div.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Tests vectors for equality.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Tests vectors for equality.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the vectors are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Tests vectors for inequality.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Tests vectors for inequality.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Vector to compare.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Vector to compare.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the vectors are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Multiply" returnType="Vector3" isStatic="true">
+      <summary><![CDATA[Multiplies a vector by a scalar value.]]></summary>
+      <overloads>
+        <overload signature="Vector3, Single">
+          <summary><![CDATA[Multiplies a vector by a scalar value.]]></summary>
+          <syntax><![CDATA[public static Vector3 op_Multiply (
+         Vector3 value,
+         float scaleFactor
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3, Vector3">
+          <summary><![CDATA[Multiplies the components of two vectors by each other.]]></summary>
+          <syntax><![CDATA[public static Vector3 op_Multiply (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the multiplication.]]></returns>
+          <remarks><![CDATA[Multiplication performed by this method is not vector multiplication (dot product and cross product) but multiplication of the corresponding components of each vector.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single, Vector3">
+          <summary><![CDATA[Multiplies a vector by a scalar value.]]></summary>
+          <syntax><![CDATA[public static Vector3 op_Multiply (
+         float scaleFactor,
+         Vector3 value
+)]]></syntax>
+          <parameters>
+            <parameter name="scaleFactor" type="float"><![CDATA[Scalar value.]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the multiplication.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Subtraction" returnType="void">
+      <summary><![CDATA[Subtracts a vector from a vector.]]></summary>
+      <overloads>
+        <overload signature="op_Subtraction()">
+          <summary><![CDATA[Subtracts a vector from a vector.]]></summary>
+          <syntax><![CDATA[public static Vector3 op_Subtraction (
+         Vector3 value1,
+         Vector3 value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Source vector.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Result of the subtraction.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_UnaryNegation" returnType="void">
+      <summary><![CDATA[Returns a vector pointing in the opposite direction.]]></summary>
+      <overloads>
+        <overload signature="op_UnaryNegation()">
+          <summary><![CDATA[Returns a vector pointing in the opposite direction.]]></summary>
+          <syntax><![CDATA[public static Vector3 op_UnaryNegation (
+         Vector3 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Source vector.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Vector pointing in the opposite direction.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="X" type="float">
+      <summary><![CDATA[Gets or sets the x-component of the vector.]]></summary>
+      <syntax><![CDATA[public float X]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Y" type="float">
+      <summary><![CDATA[Gets or sets the y-component of the vector.]]></summary>
+      <syntax><![CDATA[public float Y]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Z" type="float">
+      <summary><![CDATA[Gets or sets the z-component of the vector.]]></summary>
+      <syntax><![CDATA[public float Z]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

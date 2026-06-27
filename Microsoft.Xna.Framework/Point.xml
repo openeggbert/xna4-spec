@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Point" kind="struct"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IEquatable&amp;lt;Point&amp;gt;">
+  <summary><![CDATA[Defines a point in 2D space.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.PointConverter)")]
+[SerializableAttribute]
+public struct Point : IEquatable&lt;Point&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Point(int, int)">
+      <summary><![CDATA[Initializes a new instance of Point.]]></summary>
+      <syntax><![CDATA[public Point (
+         int x,
+         int y
+)]]></syntax>
+      <parameters>
+        <parameter name="x" type="int"><![CDATA[The x-coordinate of the Point .]]></parameter>
+        <parameter name="y" type="int"><![CDATA[The y-coordinate of the Point .]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Zero" type="Point" access="get" isStatic="true">
+      <summary><![CDATA[Returns the point (0,0).]]></summary>
+      <syntax><![CDATA[public static Point Zero { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Determines whether two Point instances are equal.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Determines whether two Point instances are equal.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The object to compare this instance to.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the instances are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Point">
+          <summary><![CDATA[Determines whether two Point instances are equal.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Point other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Point"><![CDATA[The Point to compare this instance to.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the instances are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this object.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this object.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[The hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a String that represents the current Point.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a String that represents the current Point.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[A String that represents the current Point.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether two Point instances are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether two Point instances are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Point a,
+         Point b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Point"><![CDATA[Point on the left side of the equal sign.]]></parameter>
+            <parameter name="b" type="Point"><![CDATA[Point on the right side of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if a and bare equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether two Point instances are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether two Point instances are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Point a,
+         Point b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Point"><![CDATA[The Point on the left side of the equal sign.]]></parameter>
+            <parameter name="b" type="Point"><![CDATA[The Point on the right side of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the instances are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="X" type="int">
+      <summary><![CDATA[Specifies the x-coordinate of the Point.]]></summary>
+      <syntax><![CDATA[public int X]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Y" type="int">
+      <summary><![CDATA[Specifies the y-coordinate of the Point.]]></summary>
+      <syntax><![CDATA[public int Y]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

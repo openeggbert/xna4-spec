@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="InviteAcceptedEventArgs" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="EventArgs">
+  <summary><![CDATA[Represents the arguments passed to a InviteAccepted event. These arguments are passed to event handlers when a gamer accepts a game invitation. This class contains the Gamer instance that represents the gamer accepting the invitation.]]></summary>
+  <syntax><![CDATA[public class InviteAcceptedEventArgs : EventArgs]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="InviteAcceptedEventArgs(SignedInGamer)">
+      <summary><![CDATA[Creates a new instance of InviteAcceptedEventArgs.]]></summary>
+      <syntax><![CDATA[public InviteAcceptedEventArgs (
+         SignedInGamer gamer
+)]]></syntax>
+      <parameters>
+        <parameter name="gamer" type="SignedInGamer"><![CDATA[The player who has accepted the game invitation.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Gamer" type="SignedInGamer" access="get">
+      <summary><![CDATA[Gets the gamer who accepted the game invitation.]]></summary>
+      <syntax><![CDATA[public SignedInGamer Gamer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

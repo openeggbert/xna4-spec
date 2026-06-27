@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TextureContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="ContentItem">
+  <summary><![CDATA[Provides a base class for all texture objects.]]></summary>
+  <syntax><![CDATA[public abstract class TextureContent : ContentItem]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="TextureContent(MipmapChainCollection)">
+      <summary><![CDATA[Initializes a new instance of TextureContent with the specified face collection.]]></summary>
+      <syntax><![CDATA[protected TextureContent (
+         MipmapChainCollection faces
+)]]></syntax>
+      <parameters>
+        <parameter name="faces" type="MipmapChainCollection"><![CDATA[Mipmap chain containing the face collection.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Override this constructor to provide support for specialized face collections. For example, the cube map class provides a fixed-size collection of six faces, while the Texture2DContent class provides a variable-size collection.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Faces" type="MipmapChainCollection" access="get">
+      <summary><![CDATA[Collection of image faces that hold a single mipmap chain for a regular 2D texture, six chains for a cube map, or an arbitrary number for volume and array textures.]]></summary>
+      <syntax><![CDATA[public MipmapChainCollection Faces { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="ConvertBitmapType" returnType="void">
+      <summary><![CDATA[Converts all bitmaps for this texture to a different format.]]></summary>
+      <overloads>
+        <overload signature="ConvertBitmapType()">
+          <summary><![CDATA[Converts all bitmaps for this texture to a different format.]]></summary>
+          <syntax><![CDATA[public void ConvertBitmapType (
+         Type newBitmapType
+)]]></syntax>
+          <parameters>
+            <parameter name="newBitmapType" type="Type"><![CDATA[Type being converted to. The new type must be a subclass of BitmapContent , such as PixelBitmapContent or DxtBitmapContent .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GenerateMipmaps" returnType="void">
+      <summary><![CDATA[Generates a full set of mipmaps for the texture.]]></summary>
+      <overloads>
+        <overload signature="GenerateMipmaps()">
+          <summary><![CDATA[Generates a full set of mipmaps for the texture.]]></summary>
+          <syntax><![CDATA[public virtual void GenerateMipmaps (
+         bool overwriteExistingMipmaps
+)]]></syntax>
+          <parameters>
+            <parameter name="overwriteExistingMipmaps" type="bool"><![CDATA[true if the existing mipmap set is replaced with the new set; false otherwise.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Validate" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Verifies that all contents of this texture are present and correct.]]></summary>
+          <syntax><![CDATA[protected void Validate (
+         bool facesMustHaveSameMipCount
+)]]></syntax>
+          <parameters>
+            <parameter name="facesMustHaveSameMipCount" type="bool"><![CDATA[Result of the validation.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Validation is based on the following rules. One image face must be present. The mipmap chain for each face contains at least one bitmap. All bitmaps share the same type. Each face is the same size. Each face contains the same number of mipmaps. Each mipmap must be half the size of the previous. If the root bitmap is not square, the smaller axis is rounded up to 1 for the last few mipmaps before both dimensions reach zero. Derived validation methods could add more validation rules. For example, cube maps must be square.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Verifies that all contents of this texture are present and correct.]]></summary>
+          <syntax><![CDATA[public virtual void Validate ()]]></syntax>
+          <remarks><![CDATA[If texture verification fails, InvalidContentException is thrown. The base implementation of this method calls Validate with a value of true .]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ControllerSensitivity" kind="enum"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Indicates how sensitive this gamer prefers controller input to be.]]></summary>
+  <syntax><![CDATA[public enum ControllerSensitivity]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="High"><summary><![CDATA[Highly sensitive controller input is preferred.]]></summary></member>
+    <member name="Low"><summary><![CDATA[Below average sensitivity is preferred.]]></summary></member>
+    <member name="Medium"><summary><![CDATA[Average controller sensitivity is preferred.]]></summary></member>
+  </members>
+</xna-type>

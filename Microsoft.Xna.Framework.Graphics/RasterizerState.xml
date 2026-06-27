@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="RasterizerState" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="GraphicsResource">
+  <summary><![CDATA[Contains rasterizer state, which determines how to convert vector data (shapes) into raster data (pixels).]]></summary>
+  <syntax><![CDATA[public class RasterizerState : GraphicsResource]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="RasterizerState()">
+      <summary><![CDATA[Initializes a new instance of the rasterizer class.]]></summary>
+      <syntax><![CDATA[public RasterizerState ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="CullMode" type="CullMode" access="get;set">
+      <summary><![CDATA[Specifies the conditions for culling or removing triangles. The default value is CullMode.CounterClockwise.]]></summary>
+      <syntax><![CDATA[public CullMode CullMode { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DepthBias" type="float" access="get;set">
+      <summary><![CDATA[Sets or retrieves the depth bias for polygons, which is the amount of bias to apply to the depth of a primitive to alleviate depth testing problems for primitives of similar depth. The default value is 0.]]></summary>
+      <syntax><![CDATA[public float DepthBias { get; set; }]]></syntax>
+      <remarks><![CDATA[A polygon with a larger z-bias value appears in front of a polygon with a smaller value. For example, a polygon with a value of 1 is is appears drawn in front of a polygon with a value of 0.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FillMode" type="FillMode" access="get;set">
+      <summary><![CDATA[The fill mode, which defines how a triangle is filled during rendering. The default is FillMode.Solid.]]></summary>
+      <syntax><![CDATA[public FillMode FillMode { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="MultiSampleAntiAlias" type="bool" access="get;set">
+      <summary><![CDATA[Enables or disables multisample antialiasing. The default is true.]]></summary>
+      <syntax><![CDATA[public bool MultiSampleAntiAlias { get; set; }]]></syntax>
+      <remarks><![CDATA[When multisample antialiasing is enabled, full-scene antialiasing is performed by calculating sampling locations at different sample positions for each multiple sample. When disabled, each multiple sample is written with the same sample value (sampled at a pixel center) which allows non-antialiased rendering to a multisample buffer. This property has no effect when rendering to a buffer that does not support multisampling.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="ScissorTestEnable" type="bool" access="get;set">
+      <summary><![CDATA[Enables or disables scissor testing. The default is false.]]></summary>
+      <syntax><![CDATA[public bool ScissorTestEnable { get; set; }]]></syntax>
+      <remarks><![CDATA[Scissor testing can improve drawing performance by only drawing triangles (or parts of triangles) that are contained within a ScissorRectangle .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="SlopeScaleDepthBias" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets a bias value that takes into account the slope of a polygon. This bias value is applied to coplanar primitives to reduce aliasing and other rendering artifacts caused by z-fighting. The default is 0.]]></summary>
+      <syntax><![CDATA[public float SlopeScaleDepthBias { get; set; }]]></syntax>
+      <remarks><![CDATA[An application can help ensure that coplanar polygons are rendered properly by adding a bias to the z-values that the system uses when rendering sets of coplanar polygons. The following formula shows how to calculate the bias to be applied to coplanar primitives. bias = ( m × SlopeScaleDepthBias ) + DepthBias Where m is the maximum depth slope of the triangle being rendered, defined as: m = max ( abs (delta z / delta x), abs (delta z / delta y) )]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected override void Dispose (
+         bool 
+)]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="CullClockwise" type="RasterizerState" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[A built-in state object with settings for culling primitives with clockwise winding order.]]></summary>
+      <syntax><![CDATA[public static readonly RasterizerState CullClockwise]]></syntax>
+      <remarks><![CDATA[This built-in state object has the following settings: CullMode = CullMode.CullClockwiseFace,]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </field>
+    <field name="CullCounterClockwise" type="RasterizerState" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[A built-in state object with settings for culling primitives with counter-clockwise winding order.]]></summary>
+      <syntax><![CDATA[public static readonly RasterizerState CullCounterClockwise]]></syntax>
+      <remarks><![CDATA[This built-in state object has the following settings: CullMode = CullMode.CullCounterClockwiseFace,]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </field>
+    <field name="CullNone" type="RasterizerState" isStatic="true" isReadOnly="true">
+      <summary><![CDATA[A built-in state object with settings for not culling any primitives.]]></summary>
+      <syntax><![CDATA[public static readonly RasterizerState CullNone]]></syntax>
+      <remarks><![CDATA[This built-in state object has the following settings: CullMode = CullMode.None,]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TextureFilter" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines how a texture will be filtered as it is minified for each mipmap level.]]></summary>
+  <syntax><![CDATA[public enum TextureFilter]]></syntax>
+  <remarks><![CDATA[To determine whether a format supports texture filter types other than Point (which is always supported), call CheckDeviceFormat with ResourceUsage.QueryFilter . Not all valid filtering modes for a device apply to volume maps. In general, Point and Linear magnification filters are supported for volume maps. If SupportsMipVolumeMap is true (the texture capabilities can be found in TextureCapabilities ), the Point mipmap filter and the Point and Linear minification filters are supported for volume maps. The device might or might not support the Linear mipmap filter for volume maps. Devices that support anisotropic filtering for 2D maps do not necessarily support it for volume maps. However, applications that enable anisotropic filtering, even if they do not support it, receive the best available filtering (probably linear).]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Anisotropic"><summary><![CDATA[Anisotropic texture filtering used as a texture magnification or minification filter. This type of filtering compensates for distortion caused by the difference in angle between the texture polygon and the plane of the screen.]]></summary></member>
+    <member name="GaussianQuad"><summary><![CDATA[A 4-sample Gaussian filter used as a texture magnification or minification filter.]]></summary></member>
+    <member name="Linear"><summary><![CDATA[Bilinear interpolation filtering used as a texture magnification or minification filter. A weighted average of a 2×2 area of texels surrounding the desired pixel is used. The texture filter used between mipmap levels is trilinear mipmap interpolation, in which the rasterizer performs linear interpolation on pixel color, using the texels of the two nearest mipmap textures.]]></summary></member>
+    <member name="None"><summary><![CDATA[Mipmapping disabled. The rasterizer uses the magnification filter instead.]]></summary></member>
+    <member name="Point"><summary><![CDATA[Point filtering used as a texture magnification or minification filter. The texel with coordinates nearest to the desired pixel value is used. The texture filter used between mipmap levels is based on the nearest point; that is, the rasterizer uses the color from the texel of the nearest mipmap texture.]]></summary></member>
+    <member name="PyramidalQuad"><summary><![CDATA[A 4-sample tent filter used as a texture magnification or minification filter.]]></summary></member>
+  </members>
+</xna-type>

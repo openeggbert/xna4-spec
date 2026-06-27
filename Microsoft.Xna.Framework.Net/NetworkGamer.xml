@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NetworkGamer" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="Gamer">
+  <summary><![CDATA[Represents a player in a network session.]]></summary>
+  <syntax><![CDATA[public class NetworkGamer : Gamer]]></syntax>
+  <remarks><![CDATA[The NetworkSession class maintains a list of players in a network session. Some of the players may also be local players, which are represented LocalNetworkGamer .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="HasLeftSession" type="bool" access="get">
+      <summary><![CDATA[Indicates whether this gamer has left the session.]]></summary>
+      <syntax><![CDATA[public bool HasLeftSession { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="HasVoice" type="bool" access="get">
+      <summary><![CDATA[Determines if the player has a voice headset.]]></summary>
+      <syntax><![CDATA[public bool HasVoice { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Id" type="byte" access="get">
+      <summary><![CDATA[Gets a unique identifier that can be used to refer to this gamer in network packets.]]></summary>
+      <syntax><![CDATA[public byte Id { get; }]]></syntax>
+      <remarks><![CDATA[This value is synchronized across all the machines in the session, so it can be used in situations where gamer A wants to send a packet to B, and the contents of this packet must refer to gamer C. Using the identifier is preferable to sending the index of the gamer within the session, because indices could change if gamers join or leave in mid session, but this id will always remain constant. To look up a gamer once you know their id, use FindGamerById .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsGuest" type="bool" access="get">
+      <summary><![CDATA[Determines whether this gamer is logged in as a guest profile.]]></summary>
+      <syntax><![CDATA[public bool IsGuest { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsHost" type="bool" access="get">
+      <summary><![CDATA[Determines if the player is the host of the multiplayer session.]]></summary>
+      <syntax><![CDATA[public bool IsHost { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsLocal" type="bool" access="get">
+      <summary><![CDATA[Determines if the player is playing on a local machine.]]></summary>
+      <syntax><![CDATA[public bool IsLocal { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsMutedByLocalUser" type="bool" access="get">
+      <summary><![CDATA[Determines if the player is muted by one or more local users.]]></summary>
+      <syntax><![CDATA[public bool IsMutedByLocalUser { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsPrivateSlot" type="bool" access="get">
+      <summary><![CDATA[Determines if the player occupies a reserved private session slot.]]></summary>
+      <syntax><![CDATA[public bool IsPrivateSlot { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsReady" type="bool" access="get;set">
+      <summary><![CDATA[Determines whether the gamer is ready to leave the lobby screen and begin gameplay.]]></summary>
+      <syntax><![CDATA[public bool IsReady { get; set; }]]></syntax>
+      <remarks><![CDATA[The host of a multiplayer session can use the IsEveryoneReady property to detect when all players have marked themselves ready, and then call StartGame to kick off the game.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsTalking" type="bool" access="get">
+      <summary><![CDATA[Determines whether the gamer is currently sending voice data.]]></summary>
+      <syntax><![CDATA[public bool IsTalking { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Machine" type="NetworkMachine" access="get;set">
+      <summary><![CDATA[Gets an object representing the physical gaming machine this NetworkGamer is playing on.]]></summary>
+      <syntax><![CDATA[public NetworkMachine Machine { get; set; }]]></syntax>
+      <remarks><![CDATA[If there are several gamers all playing on the same gaming machine, they will all share a single value for the Machine property.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="RoundtripTime" type="TimeSpan" access="get">
+      <summary><![CDATA[Gets an estimate of the network latency involved in sending a packet round trip from the local machine to this gamer and back again.]]></summary>
+      <syntax><![CDATA[public TimeSpan RoundtripTime { get; }]]></syntax>
+      <remarks><![CDATA[This value does not include latency introduced via the MultiplayerSession.SimulateLatency property.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Session" type="NetworkSession" access="get">
+      <summary><![CDATA[Gets the multiplayer session of the gamer.]]></summary>
+      <syntax><![CDATA[public NetworkSession Session { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

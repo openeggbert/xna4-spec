@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TouchLocation" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input.Touch"
+          assembly="Microsoft.Xna.Framework.Input.Touch"
+          interfaces="IEquatable&amp;lt;TouchLocation&amp;gt;">
+  <summary><![CDATA[Provides methods and properties for interacting with a touch location on a touch screen device.]]></summary>
+  <syntax><![CDATA[public struct TouchLocation : IEquatable&lt;TouchLocation&gt;]]></syntax>
+  <remarks><![CDATA[The TouchLocation structure contains information, such as screen location, current state, and amount of pressure for a registered touch location item. A collection of current touch locations is stored in the TouchCollection object of the touch screen device.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="TouchLocation(Int32, TouchLocationState, Vector2, TouchLocationState, Vector2)">
+      <summary><![CDATA[Initializes a new TouchLocation with an ID, and a set of both current and previous state, position, and pressure values.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         id As Integer, _
+         state As TouchLocationState, _
+         position As Vector2, _
+         previousState As TouchLocationState, _
+         previousPosition As Vector2 _
+)]]></syntax>
+      <parameters>
+        <parameter name="id" type="Object"><![CDATA[Type: Int32 ID of the new touch location.]]></parameter>
+        <parameter name="state" type="Object"><![CDATA[Type: TouchLocationState State of the new touch location.]]></parameter>
+        <parameter name="position" type="Object"><![CDATA[Type: Vector2 Position, in screen coordinates, of the new touch location.]]></parameter>
+        <parameter name="previousState" type="Object"><![CDATA[Type: TouchLocationState Previous state for the new touch location.]]></parameter>
+        <parameter name="previousPosition" type="Object"><![CDATA[Type: Vector2 Previous position for the new touch location.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="TouchLocation(Int32, TouchLocationState, Vector2)">
+      <summary><![CDATA[Initializes a new TouchLocation with an ID, state, position, and pressure.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         id As Integer, _
+         state As TouchLocationState, _
+         position As Vector2 _
+)]]></syntax>
+      <parameters>
+        <parameter name="id" type="Object"><![CDATA[Type: Int32 ID of the new touch location.]]></parameter>
+        <parameter name="state" type="Object"><![CDATA[Type: TouchLocationState State of the new touch location.]]></parameter>
+        <parameter name="position" type="Object"><![CDATA[Type: Vector2 Position, in screen coordinates, of the new touch location.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Id" type="int" access="get">
+      <summary><![CDATA[Gets the ID of the touch location.]]></summary>
+      <syntax><![CDATA[public int Id { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Position" type="Vector2" access="get">
+      <summary><![CDATA[Gets the position of the touch location.]]></summary>
+      <syntax><![CDATA[public Vector2 Position { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="State" type="TouchLocationState" access="get">
+      <summary><![CDATA[Gets the state of the touch location.]]></summary>
+      <syntax><![CDATA[public TouchLocationState State { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Determines whether the current TouchLocation is equal to the specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Determines whether the current TouchLocation is equal to the specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the touch location.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current TouchLocation is equal to the specified object; otherwise false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="TouchLocation">
+          <summary><![CDATA[Determines whether the current TouchLocation is equal to the specified TouchLocation.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         TouchLocation other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="TouchLocation"><![CDATA[The TouchLocation to compare with this instance.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current TouchLocation is equal to the specified TouchLocation; otherwise false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this TouchLocation.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this TouchLocation.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Gets a string representation of the TouchLocation.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Gets a string representation of the TouchLocation.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[The string representation of this TouchLocation.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryGetPreviousLocation" returnType="void">
+      <summary><![CDATA[Attempts to get the previous location of this touch location object.]]></summary>
+      <overloads>
+        <overload signature="TryGetPreviousLocation()">
+          <summary><![CDATA[Attempts to get the previous location of this touch location object.]]></summary>
+          <syntax><![CDATA[public bool TryGetPreviousLocation (
+         out TouchLocation previousLocation
+)]]></syntax>
+          <parameters>
+            <parameter name="previousLocation" type="TouchLocation"><![CDATA[[ OutAttribute ] Previous location data, as a TouchLocation .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if a previous location was retrrieved; otherwise false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether two TouchLocation instances are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether two TouchLocation instances are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         TouchLocation value1,
+         TouchLocation value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="TouchLocation"><![CDATA[The TouchLocation to compare with the second.]]></parameter>
+            <parameter name="value2" type="TouchLocation"><![CDATA[The TouchLocation to compare with the first.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the touch locations are equal; otherwise false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether two TouchLocation instances are unequal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether two TouchLocation instances are unequal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         TouchLocation value1,
+         TouchLocation value2
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="TouchLocation"><![CDATA[The TouchLocation to compare with the second.]]></parameter>
+            <parameter name="value2" type="TouchLocation"><![CDATA[The TouchLocation to compare with the first.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the touch locations are not equal; otherwise false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

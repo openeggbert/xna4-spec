@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Ray" kind="struct"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IEquatable&amp;lt;Ray&amp;gt;">
+  <summary><![CDATA[Defines a ray.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.RayConverter)")]
+[SerializableAttribute()]
+public struct Ray : IEquatable&lt;Ray&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Ray(Object, Object)">
+      <summary><![CDATA[Creates a new instance of Ray.]]></summary>
+      <syntax><![CDATA[public Ray (
+         Vector3 position,
+         Vector3 direction
+)]]></syntax>
+      <parameters>
+        <parameter name="position" type="Object"><![CDATA[The starting point of the Ray .]]></parameter>
+        <parameter name="direction" type="Object"><![CDATA[Unit vector describing the direction of the Ray .]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Determines whether two instances of Ray are equal.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Determines whether two instances of Ray are equal.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current Ray .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Object is equal to the current Ray; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Ray">
+          <summary><![CDATA[Determines whether the specified Ray is equal to the current Ray.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Ray other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Ray"><![CDATA[The Ray to compare with the current Ray .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Ray is equal to the current Ray; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[A hash code for the current Ray.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Intersects" returnType="Nullable&amp;lt;float&amp;gt;">
+      <summary><![CDATA[Checks whether the Ray intersects a specified BoundingBox.]]></summary>
+      <overloads>
+        <overload signature="BoundingBox">
+          <summary><![CDATA[Checks whether the Ray intersects a specified BoundingBox.]]></summary>
+          <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
+         BoundingBox box
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with the Ray .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Distance at which the ray intersects the BoundingBox or null if there is no intersection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="BoundingBox, Nullable&amp;lt;Single&amp;gt;">
+          <summary><![CDATA[Checks whether the current Ray intersects a BoundingBox.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Intersects ( _
+         ref box As BoundingBox, _
+         out result As Nullable(Of Single) _
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="Object"><![CDATA[Type: BoundingBox The BoundingBox to check for intersection with.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[Type: Nullable &lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingBox or null if there is no intersection.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Plane">
+          <summary><![CDATA[Determines whether this Ray intersects a specified Plane.]]></summary>
+          <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
+         Plane plane
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Plane"><![CDATA[The Plane with which to calculate this Ray 's intersection.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The distance at which this Ray intersects the specified Plane, or null if there is no intersection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="BoundingBox, Nullable&amp;lt;Single&amp;gt;">
+          <summary><![CDATA[Checks whether the current Ray intersects a BoundingBox.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingBox box,
+         out Nullable&lt;float&gt; result
+)]]></syntax>
+          <parameters>
+            <parameter name="box" type="BoundingBox"><![CDATA[The BoundingBox to check for intersection with.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingBox or null if there is no intersection.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="BoundingSphere, Nullable&amp;lt;Single&amp;gt;">
+          <summary><![CDATA[Checks whether the current Ray intersects a BoundingSphere.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Intersects ( _
+         ref sphere As BoundingSphere, _
+         out result As Nullable(Of Single) _
+)]]></syntax>
+          <parameters>
+            <parameter name="sphere" type="Object"><![CDATA[Type: BoundingSphere The BoundingSphere to check for intersection with.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[Type: Nullable &lt; Single &gt; [ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="BoundingSphere, Nullable&amp;lt;Single&amp;gt;">
+          <summary><![CDATA[Checks whether the current Ray intersects a BoundingSphere.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref BoundingSphere sphere,
+         out Nullable&lt;float&gt; result
+)]]></syntax>
+          <parameters>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="BoundingFrustum">
+          <summary><![CDATA[Checks whether the Ray intersects a specified BoundingFrustum.]]></summary>
+          <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
+         BoundingFrustum frustum
+)]]></syntax>
+          <parameters>
+            <parameter name="frustum" type="BoundingFrustum"><![CDATA[The BoundingFrustum to check for intersection with the Ray .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Distance at which the ray intersects the BoundingFrustum or null if there is no intersection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Plane, Nullable&amp;lt;Single&amp;gt;">
+          <summary><![CDATA[Determines whether this Ray intersects a specified Plane.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Intersects ( _
+         ref plane As Plane, _
+         out result As Nullable(Of Single) _
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Object"><![CDATA[Type: Plane The Plane with which to calculate this Ray 's intersection.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[Type: Nullable &lt; Single &gt; [ OutAttribute ] The distance at which this Ray intersects the specified Plane , or null if there is no intersection.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Plane, Nullable&amp;lt;Single&amp;gt;">
+          <summary><![CDATA[Determines whether this Ray intersects a specified Plane.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref Plane plane,
+         out Nullable&lt;float&gt; result
+)]]></syntax>
+          <parameters>
+            <parameter name="plane" type="Plane"><![CDATA[The Plane with which to calculate this Ray 's intersection.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[[ OutAttribute ] The distance at which this Ray intersects the specified Plane , or null if there is no intersection.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="BoundingSphere">
+          <summary><![CDATA[Checks whether the Ray intersects a specified BoundingSphere.]]></summary>
+          <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
+         BoundingSphere sphere
+)]]></syntax>
+          <parameters>
+            <parameter name="sphere" type="BoundingSphere"><![CDATA[The BoundingSphere to check for intersection with the Ray .]]></parameter>
+          </parameters>
+          <returns><![CDATA[Distance at which the ray intersects the BoundingSphere or null if there is no intersection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a String that represents the current Ray.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a String that represents the current Ray.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of the current Ray.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether two instances of Ray are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether two instances of Ray are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Ray a,
+         Ray b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Ray"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="Ray"><![CDATA[The object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if left is equal to right; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether two instances of Ray are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether two instances of Ray are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Ray a,
+         Ray b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Ray"><![CDATA[The object to the left of the inequality operator.]]></parameter>
+            <parameter name="b" type="Ray"><![CDATA[The object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if left is not equal to right; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="Direction" type="Vector3">
+      <summary><![CDATA[Unit vector specifying the direction the Ray is pointing.]]></summary>
+      <syntax><![CDATA[public Vector3 Direction]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Position" type="Vector3">
+      <summary><![CDATA[Specifies the starting point of the Ray.]]></summary>
+      <syntax><![CDATA[public Vector3 Position]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

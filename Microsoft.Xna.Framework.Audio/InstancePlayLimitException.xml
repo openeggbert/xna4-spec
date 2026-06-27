@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="InstancePlayLimitException" kind="class"
+          namespace="Microsoft.Xna.Framework.Audio"
+          assembly="Microsoft.Xna.Framework.Audio"
+          baseClass="ExternalException">
+  <summary><![CDATA[Exception thrown when a sound or cue has reached an instance limit and can not be played.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public sealed class InstancePlayLimitException : ExternalException]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="InstancePlayLimitException(String, Exception)">
+      <summary><![CDATA[Initializes a new instance of this class with a specified error message and a reference to the inner exception that is the cause of this exception.]]></summary>
+      <syntax><![CDATA[public InstancePlayLimitException (
+         string message,
+         Exception inner
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="inner" type="Exception"><![CDATA[The exception that is the cause of the current exception. If the parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="InstancePlayLimitException()">
+      <summary><![CDATA[Initializes a new instance of this class.]]></summary>
+      <syntax><![CDATA[public InstancePlayLimitException ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="InstancePlayLimitException(String)">
+      <summary><![CDATA[Initializes a new instance of this class with a specified error message.]]></summary>
+      <syntax><![CDATA[public InstancePlayLimitException (
+         string message
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

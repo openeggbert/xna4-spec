@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Achievement" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Describes a single achievement, including the achievement name, description, picture, and whether it has been achieved by the currently signed in gamer.]]></summary>
+  <syntax><![CDATA[public sealed class Achievement]]></syntax>
+  <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Description" type="string" access="get">
+      <summary><![CDATA[Gets the localized achievement description string.]]></summary>
+      <syntax><![CDATA[public string Description { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DisplayBeforeEarned" type="bool" access="get">
+      <summary><![CDATA[Gets whether this achievement should be displayed before it is earned.]]></summary>
+      <syntax><![CDATA[public bool DisplayBeforeEarned { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="EarnedDateTime" type="DateTime" access="get">
+      <summary><![CDATA[Gets the date at which this achievement was earned.]]></summary>
+      <syntax><![CDATA[public DateTime EarnedDateTime { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="EarnedOnline" type="bool" access="get">
+      <summary><![CDATA[Gets whether this achievement was earned while online.]]></summary>
+      <syntax><![CDATA[public bool EarnedOnline { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="GamerScore" type="int" access="get">
+      <summary><![CDATA[Gets the amount of gamer score awarded for earning this achievement.]]></summary>
+      <syntax><![CDATA[public int GamerScore { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="HowToEarn" type="string" access="get">
+      <summary><![CDATA[Gets the localized description of the steps necessary to earn the achievement.]]></summary>
+      <syntax><![CDATA[public string HowToEarn { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="IsEarned" type="bool" access="get">
+      <summary><![CDATA[Gets whether the current player has earned this achievement.]]></summary>
+      <syntax><![CDATA[public bool IsEarned { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Key" type="string" access="get">
+      <summary><![CDATA[Gets the achievement key string.]]></summary>
+      <syntax><![CDATA[public string Key { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value. Achievements can be looked up from the AchievementCollection by key, and the key is passed to the SignedInGamer.BeginAwardAchievement method.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Gets the localized achievement name string, for display to the user.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetPicture" returnType="void">
+      <summary><![CDATA[Gets the image associated with this achievement.]]></summary>
+      <overloads>
+        <overload signature="GetPicture()">
+          <summary><![CDATA[Gets the image associated with this achievement.]]></summary>
+          <syntax><![CDATA[public Stream GetPicture ()]]></syntax>
+          <returns><![CDATA[A stream containing the image data for this achievement.]]></returns>
+          <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException . Use FromStream to convert the stream to a Texture2D .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

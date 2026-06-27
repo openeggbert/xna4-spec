@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PictureAlbumCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Media"
+          assembly="Microsoft.Xna.Framework.Media"
+          interfaces="IEnumerable&amp;lt;PictureAlbum&amp;gt;, IEnumerable">
+  <summary><![CDATA[A collection of picture albums in the media library.]]></summary>
+  <syntax><![CDATA[public sealed class PictureAlbumCollection : IEnumerable&lt;PictureAlbum&gt;, IEnumerable]]></syntax>
+  <remarks><![CDATA[The PictureAlbumCollection class provides access to picture albums in the device's media library. Use the PictureAlbum.Albums property to obtain a collection of picture albums that are contained within (that is, children of) a particular picture album. Use the MediaLibrary.RootPictureAlbum property to obtain the root (top-most) picture album, which contains both pictures and other picture albums. The PictureAlbumCollection does not immediately instantiate instances of all picture albums in the collection. Instead, individual PictureAlbum objects are created each time a picture album is accessed through the collection's Item indexer.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Gets the number of PictureAlbum objects in the PictureAlbumCollection.]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get">
+      <summary><![CDATA[Gets the PictureAlbum at the specified index in the PictureAlbumCollection.]]></summary>
+      <syntax><![CDATA[public PictureAlbum this [
+         int index
+] { get; }]]></syntax>
+      <remarks><![CDATA[Each call returns a new PictureAlbum instance. PictureAlbum resources such as the picture collection and children picture albums collection are cached in each PictureAlbum instance. Retrieving and maintaining references to multiple instances of the same picture album, and then accessing the picture collection ( PictureAlbum.Pictures ) or children picture albums collection ( PictureAlbum.Albums ) on each of those instances, creates multiple copies of the resources.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Releases unmanaged resources and performs other cleanup operations before garbage collection reclaims the PictureAlbumCollection.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Releases unmanaged resources and performs other cleanup operations before garbage collection reclaims the PictureAlbumCollection.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <remarks><![CDATA[This method overrides Finalize System.Object.Finalize . Application code should not call this method. The object's Finalize method is automatically invoked during garbage collection, unless a call to the GC.SuppressFinalize method has disabled finalization by the garbage collector. For more information, see Finalize Methods and Destructors , Cleaning Up Unmanaged Resources , and Overriding the Finalize Method .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Returns an enumerator that iterates through the PictureAlbumCollection.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Returns an enumerator that iterates through the PictureAlbumCollection.]]></summary>
+          <syntax><![CDATA[public IEnumerator&lt;PictureAlbum&gt; GetEnumerator ()]]></syntax>
+          <returns><![CDATA[IEnumerator for the PictureAlbumCollection.]]></returns>
+          <remarks><![CDATA[The foreach statement of the C# language ( for each in C++, For Each in Visual Basic) hides the complexity of enumerators. Therefore, using foreach instead of directly manipulating the enumerator is recommended. Enumerators can be used to read the data in the collection, but they cannot be used to modify the underlying collection. Initially, the enumerator is positioned before the first element in the collection. At this position, Current is undefined. You must call MoveNext to advance the enumerator to the first element of the collection before reading the value of Current . Current returns the same object until MoveNext is called. MoveNext sets Current to the next element. If MoveNext passes the end of the collection, the enumerator is positioned after the last element in the collection and MoveNext returns false. When the enumerator is at this position, subsequent calls to MoveNext also return false. If the last call to MoveNext returned false, Current is undefined. You cannot set Current to the first element of the collection again; you must create a new enumerator instance instead. An enumerator remains valid as long as the collection remains unchanged. If changes are made to the collection, such as adding, modifying, or deleting elements, the enumerator is irrecoverably invalidated and its behavior is undefined. The enumerator does not have exclusive access to the collection; enumerating through a collection is intrinsically not a thread-safe procedure. To guarantee thread safety during enumeration, you can lock the collection during the entire enumeration. To allow the collection to be accessed by multiple threads for reading and writing, you must implement your own synchronization. This method is an O(1) operation.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

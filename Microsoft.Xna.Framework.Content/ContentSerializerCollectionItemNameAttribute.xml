@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentSerializerCollectionItemNameAttribute" kind="class"
+          namespace="Microsoft.Xna.Framework.Content"
+          assembly="Microsoft.Xna.Framework.Content"
+          baseClass="Attribute">
+  <summary><![CDATA[A custom Attribute that marks a collection class to specify the XML element name for each item in the collection.]]></summary>
+  <syntax><![CDATA[[AttributeUsageAttribute(4)]
+public sealed class ContentSerializerCollectionItemNameAttribute : Attribute]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentSerializerCollectionItemNameAttribute(string)">
+      <summary><![CDATA[Creates a new instance of ContentSerializerCollectionItemNameAttribute.]]></summary>
+      <syntax><![CDATA[public ContentSerializerCollectionItemNameAttribute (
+         string collectionItemName
+)]]></syntax>
+      <parameters>
+        <parameter name="collectionItemName" type="string"><![CDATA[The name for each item in the collection.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="CollectionItemName" type="string" access="get">
+      <summary><![CDATA[Gets the name that will be used for each item in the collection.]]></summary>
+      <syntax><![CDATA[public string CollectionItemName { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

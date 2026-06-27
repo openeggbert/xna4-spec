@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ShaderRegisterSet" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines the data type of a shader register.]]></summary>
+  <syntax><![CDATA[public enum ShaderRegisterSet]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Boolean"><summary><![CDATA[Boolean value.]]></summary></member>
+    <member name="Float4"><summary><![CDATA[4D floating-point number.]]></summary></member>
+    <member name="Int4"><summary><![CDATA[4D integer number.]]></summary></member>
+    <member name="Sampler"><summary><![CDATA[The register contains 4D sampler data.]]></summary></member>
+  </members>
+</xna-type>

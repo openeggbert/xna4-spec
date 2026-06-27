@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentItem" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <summary><![CDATA[Provides properties that define various aspects of content stored using the intermediate file format of the XNA Framework.]]></summary>
+  <syntax><![CDATA[public class ContentItem]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentItem()">
+      <summary><![CDATA[Initializes a new instance of ContentItem.]]></summary>
+      <syntax><![CDATA[public ContentItem ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Identity" type="ContentIdentity" access="get;set">
+      <summary><![CDATA[Gets or sets the identity of the content item.]]></summary>
+      <syntax><![CDATA[public ContentIdentity Identity { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the name of the content item.]]></summary>
+      <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="OpaqueData" type="OpaqueDataDictionary" access="get">
+      <summary><![CDATA[Gets the opaque data of the content item.]]></summary>
+      <syntax><![CDATA[public OpaqueDataDictionary OpaqueData { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

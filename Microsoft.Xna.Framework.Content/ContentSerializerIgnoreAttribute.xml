@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentSerializerIgnoreAttribute" kind="class"
+          namespace="Microsoft.Xna.Framework.Content"
+          assembly="Microsoft.Xna.Framework.Content"
+          baseClass="Attribute">
+  <summary><![CDATA[A custom Attribute that marks public fields or properties to prevent them from being serialized.]]></summary>
+  <syntax><![CDATA[[AttributeUsageAttribute(384)]
+public sealed class ContentSerializerIgnoreAttribute : Attribute]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentSerializerIgnoreAttribute()">
+      <summary><![CDATA[Creates a new instance of ContentSerializerIgnoreAttribute.]]></summary>
+      <syntax><![CDATA[public ContentSerializerIgnoreAttribute ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

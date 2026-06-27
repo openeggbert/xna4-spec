@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PixelBitmapContent Generic" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="BitmapContent"
+          interfaces="IEquatable">
+  <summary><![CDATA[Provides methods for maintaining a 2D array of pixel values.]]></summary>
+  <syntax><![CDATA[public class PixelBitmapContent&lt;T&gt; : BitmapContent where T : ValueType, IEquatable]]></syntax>
+  <remarks><![CDATA[Pixel bitmaps are represented as a 2D array of independent pixel values. The pixel type will often be from the Graphics.PackedVector namespace, but can also be System.Single , Vector2 , Vector3 , or Vector4 . A pixel bitmap of Vector4 values is commonly used as an intermediate format for image manipulation operations.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

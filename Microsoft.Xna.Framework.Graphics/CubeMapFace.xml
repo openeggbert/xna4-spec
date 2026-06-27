@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CubeMapFace" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines the faces of a cube map in the TextureCube class type.]]></summary>
+  <syntax><![CDATA[public enum CubeMapFace]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="NegativeX"><summary><![CDATA[Negative x-face of the cube map.]]></summary></member>
+    <member name="NegativeY"><summary><![CDATA[Negative y-face of the cube map.]]></summary></member>
+    <member name="NegativeZ"><summary><![CDATA[Negative z-face of the cube map.]]></summary></member>
+    <member name="PositiveX"><summary><![CDATA[Positive x-face of the cube map.]]></summary></member>
+    <member name="PositiveY"><summary><![CDATA[Positive y-face of the cube map.]]></summary></member>
+    <member name="PositiveZ"><summary><![CDATA[Positive z-face of the cube map.]]></summary></member>
+  </members>
+</xna-type>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PresentOptions" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines flags that control the behavior of the back buffer and depth buffer.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum PresentOptions]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="DeviceClip"><summary><![CDATA[Clips a windowed Present blit into the window client area, within the monitor screen area of the video adapter that created the Microsoft Direct3D device. This flag works only on Microsoft Windows 2000 and Windows XP.]]></summary></member>
+    <member name="DiscardDepthStencil"><summary><![CDATA[Enables depth-buffer discarding if set when the device or swap chain is created. When this flag is set, the contents of the depth stencil buffer are invalid after either Present or DepthStencilBuffer is called. Discarding depth-buffer data can increase performance and is dependent on the driver. The debug runtime enforces discarding by clearing the depth-buffer to some constant value after calling either Present or DepthStencilBuffer with a different depth surface. Discarding depth-buffer data is illegal for all lockable formats, DepthFormat.Depth16Lockable, and DepthFormat.D32Lockable. Using the GraphicsDevice constructor to specify a lockable format and depth-buffer discarding will result in failure.]]></summary></member>
+    <member name="None"><summary><![CDATA[Use no presentation flags.]]></summary></member>
+    <member name="Video"><summary><![CDATA[Informs the driver that the back buffers contain video data.]]></summary></member>
+  </members>
+</xna-type>

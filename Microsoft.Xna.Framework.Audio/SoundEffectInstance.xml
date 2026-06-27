@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SoundEffectInstance" kind="class"
+          namespace="Microsoft.Xna.Framework.Audio"
+          assembly="Microsoft.Xna.Framework.Audio"
+          interfaces="IDisposable">
+  <summary><![CDATA[Provides a single playing, paused, or stopped instance of a SoundEffect sound.]]></summary>
+  <syntax><![CDATA[public sealed class SoundEffectInstance : IDisposable]]></syntax>
+  <remarks><![CDATA[You can create a SoundEffectInstance by calling SoundEffect.Play . Initially, the SoundEffectInstance is created as playing, but you can pause it or stop it by calling Pause or Stop . You can modify the volume, panning, and pitch of the SoundEffectInstance by setting the Volume , Pitch , and Pan properties, or by creating the instance with one of the SoundEffect.Play methods that enables a user to specify the desired properties. On Zune, a game can have a maximum of 16 total playing SoundEffectInstance instances at one time, combined across all loaded SoundEffect objects. The only limit to the total number of loaded SoundEffectInstance and SoundEffect objects is available memory. However, the user can play only 16 sound effects at one time. Attempts to play a SoundEffectInstance beyond this limit will fail. On Windows, there is no hard limit. Playing too many instances can lead to performance degradation. On Xbox 360, the limit is 300 sound effect instances loaded or playing. Dispose of old instances if you need more. (Unlike other platforms, the Xbox 360 has a limit to how many sound effect instances can exist in memory at one time.)]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsLooped" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether looping is enabled for the SoundEffectInstance.]]></summary>
+      <syntax><![CDATA[public bool IsLooped { get; }]]></syntax>
+      <remarks><![CDATA[IsLooped returns true if looping was enabled when the SoundEffectInstance was created (that is, SoundEffect.Play was called with true for the loop parameter).]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Pan" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the panning for the SoundEffectInstance.]]></summary>
+      <syntax><![CDATA[public float Pan { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Pitch" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the pitch adjustment for the SoundEffectInstance.]]></summary>
+      <syntax><![CDATA[public float Pitch { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="State" type="SoundState" access="get">
+      <summary><![CDATA[Gets the current state (playing, paused, or stopped) of the SoundEffectInstance.]]></summary>
+      <syntax><![CDATA[public SoundState State { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Volume" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the volume of the SoundEffectInstance.]]></summary>
+      <syntax><![CDATA[public float Volume { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Apply3D" returnType="void">
+      <summary><![CDATA[Applys 3D position to the sound using multiple listeners.]]></summary>
+      <overloads>
+        <overload signature="AudioListener , AudioEmitter">
+          <summary><![CDATA[Applys 3D position to the sound using multiple listeners.]]></summary>
+          <syntax><![CDATA[public void Apply3D (
+         AudioListener[] listeners,
+         AudioEmitter emitter
+)]]></syntax>
+          <parameters>
+            <parameter name="listeners" type="AudioListener[]"><![CDATA[Positions of each listener.]]></parameter>
+            <parameter name="emitter" type="AudioEmitter"><![CDATA[Position of the emitter.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="AudioListener, AudioEmitter">
+          <summary><![CDATA[Applys 3D positioning to the sound using a single listener.]]></summary>
+          <syntax><![CDATA[public void Apply3D (
+         AudioListener listener,
+         AudioEmitter emitter
+)]]></syntax>
+          <parameters>
+            <parameter name="listener" type="AudioListener"><![CDATA[Position of the listener.]]></parameter>
+            <parameter name="emitter" type="AudioEmitter"><![CDATA[Position of the emitter.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Releases the resources used by the Dispose.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Releases the unmanaged resources held by this SoundEffectInstance, and optionally releases the managed resources.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool disposing
+)]]></syntax>
+          <parameters>
+            <parameter name="disposing" type="bool"><![CDATA[Pass true to release both the managed and unmanaged resources for this SoundEffectInstance . Passing false releases only the unmanaged resources.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Releases unmanaged resources and performs other cleanup operations before the SoundEffectInstance is reclaimed by garbage collection.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Releases unmanaged resources and performs other cleanup operations before the SoundEffectInstance is reclaimed by garbage collection.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <remarks><![CDATA[This method overrides Finalize System.Object.Finalize . Application code should not call this method. The object's Finalize method is automatically invoked during garbage collection, unless a call to the GC.SuppressFinalize method has disabled finalization by the garbage collector. For more information, see Finalize Methods and Destructors , Cleaning Up Unmanaged Resources , and Overriding the Finalize Method .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Pause" returnType="void">
+      <summary><![CDATA[Pauses a SoundEffectInstance.]]></summary>
+      <overloads>
+        <overload signature="Pause()">
+          <summary><![CDATA[Pauses a SoundEffectInstance.]]></summary>
+          <syntax><![CDATA[public void Pause ()]]></syntax>
+          <remarks><![CDATA[To resume a paused SoundEffectInstance , call Play .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Play" returnType="void">
+      <summary><![CDATA[Plays or resumes a SoundEffectInstance.]]></summary>
+      <overloads>
+        <overload signature="Play()">
+          <summary><![CDATA[Plays or resumes a SoundEffectInstance.]]></summary>
+          <syntax><![CDATA[public void Play ()]]></syntax>
+          <remarks><![CDATA[If the SoundEffectInstance is paused, Play resumes playing it at the last played position. If the SoundEffectInstance is stopped, Play begins playing it. On Zune, a game can have a maximum of 16 total playing SoundEffectInstance instances at one time, combined across all loaded SoundEffect objects. The only limit to the total number of loaded SoundEffectInstance and SoundEffect objects is available memory. However, the user can play only 16 sound effects at one time. Attempts to play a SoundEffectInstance beyond this limit will fail. On Windows, there is no hard limit. Playing too many instances can lead to performance degradation. On Xbox 360, the limit is 300 sound effect instances loaded or playing. Dispose of old instances if you need more. (Unlike other platforms, the Xbox 360 has a limit to how many sound effect instances can exist in memory at one time.)]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Resume" returnType="void">
+      <summary><![CDATA[Resumes playback for a SoundEffectInstance.]]></summary>
+      <overloads>
+        <overload signature="Resume()">
+          <summary><![CDATA[Resumes playback for a SoundEffectInstance.]]></summary>
+          <syntax><![CDATA[public void Resume ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Stop" returnType="void">
+      <summary><![CDATA[Immediately stops playing a SoundEffectInstance.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Immediately stops playing a SoundEffectInstance.]]></summary>
+          <syntax><![CDATA[public void Stop ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Boolean">
+          <summary><![CDATA[Stops playing a SoundEffectInstance, either immediately or as authored.]]></summary>
+          <syntax><![CDATA[public void Stop (
+         bool immediate
+)]]></syntax>
+          <parameters>
+            <parameter name="immediate" type="bool"><![CDATA[Whether to stop playing immediately, or to break out of the loop region and play the release. Specify true to stop playing immediately, or false to break out of the loop region and play the release phase (the remainder of the sound).]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

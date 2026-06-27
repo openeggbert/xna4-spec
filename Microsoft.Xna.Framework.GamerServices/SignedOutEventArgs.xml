@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SignedOutEventArgs" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          baseClass="EventArgs">
+  <summary><![CDATA[Represents the arguments passed to a SignedOut event. These arguments are passed to event handlers when a gamer signs out. This class contains the SignedInGamer instance that recently signed out.]]></summary>
+  <syntax><![CDATA[public class SignedOutEventArgs : EventArgs]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="SignedOutEventArgs(SignedInGamer)">
+      <summary><![CDATA[Creates a new instance of SignedOutEventArgs.]]></summary>
+      <syntax><![CDATA[public SignedOutEventArgs (
+         SignedInGamer gamer
+)]]></syntax>
+      <parameters>
+        <parameter name="gamer" type="SignedInGamer"><![CDATA[The gamer that just signed out.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Gamer" type="SignedInGamer" access="get">
+      <summary><![CDATA[Gets the gamer that just signed out.]]></summary>
+      <syntax><![CDATA[public SignedInGamer Gamer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

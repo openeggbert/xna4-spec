@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PreparingDeviceSettingsEventArgs" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          baseClass="EventArgs">
+  <summary><![CDATA[Arguments for the GraphicsDeviceManager.PreparingDeviceSettings event.]]></summary>
+  <syntax><![CDATA[public class PreparingDeviceSettingsEventArgs : EventArgs]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="PreparingDeviceSettingsEventArgs(GraphicsDeviceInformation)">
+      <summary><![CDATA[Creates a new instance of PreparingDeviceSettingsEventArgs.]]></summary>
+      <syntax><![CDATA[public PreparingDeviceSettingsEventArgs (
+         GraphicsDeviceInformation graphicsDeviceInformation
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDeviceInformation" type="GraphicsDeviceInformation"><![CDATA[Information about the GraphicsDevice .]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="GraphicsDeviceInformation" type="GraphicsDeviceInformation" access="get">
+      <summary><![CDATA[Information about the GraphicsDevice.]]></summary>
+      <syntax><![CDATA[public GraphicsDeviceInformation GraphicsDeviceInformation { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

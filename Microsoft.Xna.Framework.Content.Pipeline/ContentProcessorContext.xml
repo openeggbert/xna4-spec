@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentProcessorContext" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <summary><![CDATA[Provides access to custom processor parameters, methods for converting member data, and triggering nested builds.]]></summary>
+  <syntax><![CDATA[public sealed class ContentProcessorContext]]></syntax>
+  <remarks><![CDATA[The context object, passed into a content processor, indicates any custom parameters or requests. For instance, a mesh processor could use this to force any textures used by the processor to be built when the mesh object is built.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentProcessorContext()">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public ContentProcessorContext ()]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="BuildConfiguration" type="string" access="get">
+      <summary><![CDATA[Gets the name of the current content build configuration.]]></summary>
+      <syntax><![CDATA[public string BuildConfiguration { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IntermediateDirectory" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public abstract string IntermediateDirectory { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Logger" type="ContentBuildLogger" access="get">
+      <summary><![CDATA[Gets the logger interface used for status messages or warnings.]]></summary>
+      <syntax><![CDATA[public ContentBuildLogger Logger { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="OutputDirectory" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public abstract string OutputDirectory { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="OutputFilename" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public abstract string OutputFilename { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Parameters" type="OpaqueDataDictionary" access="get">
+      <summary><![CDATA[Gets the collection of parameters used by the content processor.]]></summary>
+      <syntax><![CDATA[public OpaqueDataDictionary Parameters { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TargetPlatform" type="TargetPlatform" access="get">
+      <summary><![CDATA[Gets the current content build target platform.]]></summary>
+      <syntax><![CDATA[public TargetPlatform TargetPlatform { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TargetProfile" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public abstract GraphicsProfile TargetProfile { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="AddDependency" returnType="void">
+      <summary><![CDATA[Adds a dependency to the specified file. This causes a rebuild of the file, when modified, on subsequent incremental builds.]]></summary>
+      <overloads>
+        <overload signature="AddDependency()">
+          <summary><![CDATA[Adds a dependency to the specified file. This causes a rebuild of the file, when modified, on subsequent incremental builds.]]></summary>
+          <syntax><![CDATA[public void AddDependency (
+         string filename
+)]]></syntax>
+          <parameters>
+            <parameter name="filename" type="string"><![CDATA[Name of an asset file.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Do not call this method for data that has already been loaded by an importer or passed to the BuildAndLoadAsset method. It is only required for additional files needing to be read by the processor.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="AddOutputFile" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="AddOutputFile()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA['Declaration
+Public MustOverride Sub AddOutputFile ( _
+         filename As String _
+)]]></syntax>
+          <parameters>
+            <parameter name="filename" type="Object"><![CDATA[Type: String The name of the file.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CompilerOptions" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines optimization options that may be chosen for shader and effect code compilation.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum CompilerOptions]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="AvoidFlowControl"><summary><![CDATA[Hints to the compiler to avoid using flow-control instructions.]]></summary></member>
+    <member name="Debug"><summary><![CDATA[Inserts debug file name, line numbers, and type and symbol information during shader compile.]]></summary></member>
+    <member name="ForcePixelShaderSoftwareNoOptimizations"><summary><![CDATA[Forces the compiler to compile against the next highest available software target for pixel shaders. This flag also turns optimizations off and debugging on.]]></summary></member>
+    <member name="ForceVertexShaderSoftwareNoOptimizations"><summary><![CDATA[Forces the compiler to compile against the next highest available software target for vertex shaders. This flag also turns optimizations off and debugging on.]]></summary></member>
+    <member name="None"><summary><![CDATA[No options specified.]]></summary></member>
+    <member name="NoPreShader"><summary><![CDATA[Disables preshaders. The compiler will not pull out static expressions for evaluation on the host CPU. Additionally, the compiler will not loft any expressions when compiling stand-alone functions.]]></summary></member>
+    <member name="NotCloneable"><summary><![CDATA[Indicates the effect will be non-cloneable and will not contain any shader binary data. Setting this flag reduces effect memory usage by about 50 percent because it eliminates the need for the effect system to keep a copy of the shaders in memory.]]></summary></member>
+    <member name="PackMatrixColumnMajor"><summary><![CDATA[Unless explicitly specified, matrices will be packed in column major order (each vector will be in a single column) when passed to and from the shader. This is generally more efficient because it allows vector-matrix multiplication to be performed using a series of dot products.]]></summary></member>
+    <member name="PackMatrixRowMajor"><summary><![CDATA[Unless explicitly specified, matrices will be packed in row major order (each vector will be in a single row) when passed to or from the shader.]]></summary></member>
+    <member name="PartialPrecision"><summary><![CDATA[Forces all computations in the resulting shader to occur at partial precision. This may result in faster evaluation of shaders on some hardware.]]></summary></member>
+    <member name="PreferFlowControl"><summary><![CDATA[Hints to the compiler to prefer using flow-control instructions.]]></summary></member>
+    <member name="SkipOptimization"><summary><![CDATA[Instructs the compiler to skip optimization steps during code generation. Unless you are trying to isolate a problem in your code and you suspect the compiler, using this option is not recommended.]]></summary></member>
+    <member name="SkipValidation"><summary><![CDATA[Do not validate the generated code against known capabilities and constraints. This option is recommended only when compiling shaders that are known to work (that is, shaders that have compiled before without this option). Shaders are always validated by the runtime before they are set to the device.]]></summary></member>
+  </members>
+</xna-type>

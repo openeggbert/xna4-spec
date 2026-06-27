@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GameTime" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Snapshot of the game timing state expressed in values that can be used by variable-step (real time) or fixed-step (game time) games.]]></summary>
+  <syntax><![CDATA[public class GameTime]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GameTime()">
+      <summary><![CDATA[Creates a new instance of GameTime.]]></summary>
+      <syntax><![CDATA[public GameTime ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GameTime(TimeSpan, TimeSpan, Boolean)">
+      <summary><![CDATA[Creates a new instance of GameTime.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         totalGameTime As TimeSpan, _
+         elapsedGameTime As TimeSpan, _
+         isRunningSlowly As Boolean _
+)]]></syntax>
+      <parameters>
+        <parameter name="totalGameTime" type="Object"><![CDATA[Type: TimeSpan The amount of game time since the start of the game.]]></parameter>
+        <parameter name="elapsedGameTime" type="Object"><![CDATA[Type: TimeSpan The amount of elapsed game time since the last update.]]></parameter>
+        <parameter name="isRunningSlowly" type="Object"><![CDATA[Type: Boolean Whether the game is running multiple updates this frame.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GameTime(TimeSpan, TimeSpan, TimeSpan, TimeSpan)">
+      <summary><![CDATA[Creates a new instance of GameTime.]]></summary>
+      <syntax><![CDATA[public GameTime (
+         TimeSpan totalRealTime,
+         TimeSpan elapsedRealTime,
+         TimeSpan totalGameTime,
+         TimeSpan elapsedGameTime
+)]]></syntax>
+      <parameters>
+        <parameter name="totalRealTime" type="TimeSpan"><![CDATA[The amount of real time (wall clock) since the start of the game.]]></parameter>
+        <parameter name="elapsedRealTime" type="TimeSpan"><![CDATA[The amount of elapsed real time (wall clock) since the last frame.]]></parameter>
+        <parameter name="totalGameTime" type="TimeSpan"><![CDATA[The amount of game time since the start of the game.]]></parameter>
+        <parameter name="elapsedGameTime" type="TimeSpan"><![CDATA[The amount of elapsed game time since the last update.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GameTime(TimeSpan, TimeSpan, TimeSpan, TimeSpan, Boolean)">
+      <summary><![CDATA[Creates a new instance of GameTime.]]></summary>
+      <syntax><![CDATA[public GameTime (
+         TimeSpan totalRealTime,
+         TimeSpan elapsedRealTime,
+         TimeSpan totalGameTime,
+         TimeSpan elapsedGameTime,
+         bool isRunningSlowly
+)]]></syntax>
+      <parameters>
+        <parameter name="totalRealTime" type="TimeSpan"><![CDATA[The amount of real time (wall clock) since the start of the game.]]></parameter>
+        <parameter name="elapsedRealTime" type="TimeSpan"><![CDATA[The amount of elapsed real time (wall clock) since the last frame.]]></parameter>
+        <parameter name="totalGameTime" type="TimeSpan"><![CDATA[The amount of game time since the start of the game.]]></parameter>
+        <parameter name="elapsedGameTime" type="TimeSpan"><![CDATA[The amount of elapsed game time since the last update.]]></parameter>
+        <parameter name="isRunningSlowly" type="bool"><![CDATA[Whether the game is running multiple updates this frame.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GameTime(TimeSpan, TimeSpan)">
+      <summary><![CDATA[Creates a new instance of GameTime.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         totalGameTime As TimeSpan, _
+         elapsedGameTime As TimeSpan _
+)]]></syntax>
+      <parameters>
+        <parameter name="totalGameTime" type="Object"><![CDATA[Type: TimeSpan The amount of game time since the start of the game.]]></parameter>
+        <parameter name="elapsedGameTime" type="Object"><![CDATA[Type: TimeSpan The amount of elapsed game time since the last update.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="ElapsedGameTime" type="TimeSpan" access="get;set">
+      <summary><![CDATA[The amount of elapsed game time since the last update.]]></summary>
+      <syntax><![CDATA[public TimeSpan ElapsedGameTime { get; set; }]]></syntax>
+      <remarks><![CDATA[Fixed-step clocks update by a fixed time span upon every clock step. This results in uniform clock steps that may not actually track the wall clock time. Fixed-step clocks were popular on console systems where one had tight control over code and a fixed system performance. Fixed-step clocks are also useful when trying to achieve deterministic updates for debugging, offline rendering, or other such scenarios.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ElapsedRealTime" type="TimeSpan" access="get;set">
+      <summary><![CDATA[The amount of elapsed real time (wall clock) since the last frame.]]></summary>
+      <syntax><![CDATA[public TimeSpan ElapsedRealTime { get; set; }]]></syntax>
+      <remarks><![CDATA[Variable-step clocks automatically track the difference in real-time (wall clock) that transpired since the last clock step. This type of game timing is popular on PC games where the variable PC configurations affect update time.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsRunningSlowly" type="bool" access="get;set">
+      <summary><![CDATA[Gets a value indicating that the game loop is taking longer than its TargetElapsedTime. In this case, the game loop can be considered to be running too slowly and should do something to "catch up."]]></summary>
+      <syntax><![CDATA[public bool IsRunningSlowly { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TotalGameTime" type="TimeSpan" access="get;set">
+      <summary><![CDATA[The amount of game time since the start of the game.]]></summary>
+      <syntax><![CDATA[public TimeSpan TotalGameTime { get; set; }]]></syntax>
+      <remarks><![CDATA[Fixed-step clocks update by a fixed time span upon every clock step. This results in uniform clock steps that may not actually track the wall clock time. Fixed step clocks were popular on console systems where one had tight control over code and a fixed system performance. Fixed-step clocks are also useful when trying to achieve deterministic updates for debugging, offline rendering, or other such scenarios.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TotalRealTime" type="TimeSpan" access="get;set">
+      <summary><![CDATA[The amount of real time (wall clock) since the start of the game.]]></summary>
+      <syntax><![CDATA[public TimeSpan TotalRealTime { get; set; }]]></syntax>
+      <remarks><![CDATA[Variable-step clocks automatically track the difference in real-time (wall clock) that transpired since the last clock step. This type of game timing is popular on PC games where the variable PC configurations affect update time.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

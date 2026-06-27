@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="RenderTargetCube" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="RenderTarget">
+  <summary><![CDATA[Represents a cubic texture resource that will be written to at the end of a render pass.]]></summary>
+  <syntax><![CDATA[public class RenderTargetCube : RenderTarget]]></syntax>
+  <remarks><![CDATA[After a render pass the render target contains the color information of a rendered image. Render targets represent a linear area of display memory and usually resides in the display memory of the display card. Because of this, objects must be recreated when the device is reset.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="RenderTargetCube(GraphicsDevice, Int32, Int32, SurfaceFormat)">
+      <summary><![CDATA[Initializes a new instance of this class.]]></summary>
+      <syntax><![CDATA[public RenderTargetCube (
+         GraphicsDevice graphicsDevice,
+         int size,
+         int numberLevels,
+         SurfaceFormat format
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to associate with this render target resource.]]></parameter>
+        <parameter name="size" type="int"><![CDATA[The width and height of this cube texture resource, in pixels.]]></parameter>
+        <parameter name="numberLevels" type="int"><![CDATA[The number of downsampled surfaces to create when preprocessing the texture. These smaller versions of the texture, known as mip levels, are used when the texture is minified to fit a smaller area than the original texture size. The chain of downsampled surfaces associated with a texture is sometimes called a mipmap chain. If this is zero, all texture sublevels down to 1×1 pixels will be generated for hardware that supports mipmapped textures.]]></parameter>
+        <parameter name="format" type="SurfaceFormat"><![CDATA[Surface format of the render target.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[After a render pass the render target contains the color information of a rendered image. Render targets represent a linear area of display memory and usually resides in the display memory of the display card. Because of this, objects must be recreated when the device is reset.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="RenderTargetCube(GraphicsDevice, Int32, Boolean, SurfaceFormat, DepthFormat, Int32, RenderTargetUsage)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         graphicsDevice As GraphicsDevice, _
+         size As Integer, _
+         mipMap As Boolean, _
+         preferredFormat As SurfaceFormat, _
+         preferredDepthFormat As DepthFormat, _
+         preferredMultiSampleCount As Integer, _
+         usage As RenderTargetUsage _
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The graphics device to associate with this render target resource.]]></parameter>
+        <parameter name="size" type="Object"><![CDATA[Type: Int32 The width and height of this cube texture resource, in pixels.]]></parameter>
+        <parameter name="mipMap" type="Object"><![CDATA[Type: Boolean [ MarshalAsAttribute (U1)] True to generate a full mipmap chain, false otherwise.]]></parameter>
+        <parameter name="preferredFormat" type="Object"><![CDATA[Type: SurfaceFormat Preferred format of the surface data.]]></parameter>
+        <parameter name="preferredDepthFormat" type="Object"><![CDATA[Type: DepthFormat Preferred format of the depth data.]]></parameter>
+        <parameter name="preferredMultiSampleCount" type="Object"><![CDATA[Type: Int32 Preferred number of sample locations during multisampling.]]></parameter>
+        <parameter name="usage" type="Object"><![CDATA[Type: RenderTargetUsage Options identifying the behaviors of this texture resource.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="RenderTargetCube(GraphicsDevice, Int32, Int32, SurfaceFormat, MultiSampleType, Int32)">
+      <summary><![CDATA[Initializes a new instance of this class.]]></summary>
+      <syntax><![CDATA[public RenderTargetCube (
+         GraphicsDevice graphicsDevice,
+         int size,
+         int numberLevels,
+         SurfaceFormat format,
+         MultiSampleType multiSampleType,
+         int multiSampleQuality
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to associate with this render target resource.]]></parameter>
+        <parameter name="size" type="int"><![CDATA[The width and height of this cube texture resource, in pixels.]]></parameter>
+        <parameter name="numberLevels" type="int"><![CDATA[The number of downsampled surfaces to create when preprocessing the texture. These smaller versions of the texture, known as mip levels, are used when the texture is minified to fit a smaller area than the original texture size. The chain of downsampled surfaces associated with a texture is sometimes called a mipmap chain.]]></parameter>
+        <parameter name="format" type="SurfaceFormat"><![CDATA[Surface format of the render target.]]></parameter>
+        <parameter name="multiSampleType" type="MultiSampleType"><![CDATA[The levels of full-scene multisampling that the device can apply.]]></parameter>
+        <parameter name="multiSampleQuality" type="int"><![CDATA[The number of quality stops available for a given multisample type.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[After a render pass the render target contains the color information of a rendered image. Render targets represent a linear area of display memory and usually resides in the display memory of the display card. Because of this, objects must be recreated when the device is reset.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="RenderTargetCube(GraphicsDevice, Int32, Boolean, SurfaceFormat, DepthFormat)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         graphicsDevice As GraphicsDevice, _
+         size As Integer, _
+         mipMap As Boolean, _
+         preferredFormat As SurfaceFormat, _
+         preferredDepthFormat As DepthFormat _
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The graphics device to associate with this render target resource.]]></parameter>
+        <parameter name="size" type="Object"><![CDATA[Type: Int32 The width and height of this cube texture resource, in pixels.]]></parameter>
+        <parameter name="mipMap" type="Object"><![CDATA[Type: Boolean [ MarshalAsAttribute (U1)] True to generate a full mipmap chain, false otherwise.]]></parameter>
+        <parameter name="preferredFormat" type="Object"><![CDATA[Type: SurfaceFormat Preferred format of the surface data.]]></parameter>
+        <parameter name="preferredDepthFormat" type="Object"><![CDATA[Type: DepthFormat Preferred format of the depth data.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="DepthStencilFormat" type="DepthFormat" access="get">
+      <summary><![CDATA[Gets the depth format of this rendertarget.]]></summary>
+      <syntax><![CDATA[public DepthFormat DepthStencilFormat { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="IsContentLost" type="bool" access="get">
+      <summary><![CDATA[Determines if the data has been lost due to a lost device event.]]></summary>
+      <syntax><![CDATA[public bool IsContentLost { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="MultiSampleCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of multisample locations.]]></summary>
+      <syntax><![CDATA[public int MultiSampleCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="RenderTargetUsage" type="RenderTargetUsage" access="get">
+      <summary><![CDATA[Gets the usage mode of this rendertarget.]]></summary>
+      <syntax><![CDATA[public RenderTargetUsage RenderTargetUsage { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetTexture" returnType="void">
+      <summary><![CDATA[Gets a copy of the cube texture associated with this render target.]]></summary>
+      <overloads>
+        <overload signature="GetTexture()">
+          <summary><![CDATA[Gets a copy of the cube texture associated with this render target.]]></summary>
+          <syntax><![CDATA[public TextureCube GetTexture ()]]></syntax>
+          <returns><![CDATA[A copy of the cube texture associated with this render target.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="ContentLost" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+      <summary><![CDATA[Occurs when a resource is lost due to a device being lost.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; ContentLost]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

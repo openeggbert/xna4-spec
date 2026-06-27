@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="DirectionalLight" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Creates a DirectionalLight object.]]></summary>
+  <syntax><![CDATA[public sealed class DirectionalLight]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="DirectionalLight(EffectParameter, EffectParameter, EffectParameter, DirectionalLight)">
+      <summary><![CDATA[Creates a new DirectionalLight instance, with or without a copy of a DirectionalLight instance.]]></summary>
+      <syntax><![CDATA[public DirectionalLight (
+         EffectParameter directionParameter,
+         EffectParameter diffuseColorParameter,
+         EffectParameter specularColorParameter,
+         DirectionalLight cloneSource
+)]]></syntax>
+      <parameters>
+        <parameter name="directionParameter" type="EffectParameter"><![CDATA[The light direction.]]></parameter>
+        <parameter name="diffuseColorParameter" type="EffectParameter"><![CDATA[The diffuse color.]]></parameter>
+        <parameter name="specularColorParameter" type="EffectParameter"><![CDATA[The specular color.]]></parameter>
+        <parameter name="cloneSource" type="DirectionalLight"><![CDATA[The cloned instance to copy from.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[The initial parameter values are either copied from the cloned object or set to default values (if the cloned object is NULL). The three EffectParameters are updated whenever the direction, diffuse color, or specular color properties are changed; or you can set these to NULL if you are using the cloned object.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="DiffuseColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the diffuse color of the light.]]></summary>
+      <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Direction" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the light direction. This value must be a unit vector.]]></summary>
+      <syntax><![CDATA[public Vector3 Direction { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Enabled" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets light enable flag.]]></summary>
+      <syntax><![CDATA[public bool Enabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="SpecularColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the specular color of the light.]]></summary>
+      <syntax><![CDATA[public Vector3 SpecularColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

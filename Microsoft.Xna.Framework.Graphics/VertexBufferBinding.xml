@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexBufferBinding" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Binding structure that specifies a vertex buffer and other per-vertex parameters (such as offset and instancing) for a graphics device.]]></summary>
+  <syntax><![CDATA[public struct VertexBufferBinding]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="VertexBufferBinding(VertexBuffer, Int32, Int32)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA[public VertexBufferBinding (
+         VertexBuffer vertexBuffer,
+         int vertexOffset,
+         int instanceFrequency
+)]]></syntax>
+      <parameters>
+        <parameter name="vertexBuffer" type="VertexBuffer"><![CDATA[The vertex buffer.]]></parameter>
+        <parameter name="vertexOffset" type="int"><![CDATA[Offset (in bytes) from the beginning of the buffer to the first vertex to use.]]></parameter>
+        <parameter name="instanceFrequency" type="int"><![CDATA[Number (or frequency) of instances to draw for each draw call; 1 means draw one instance, 2 means draw 2 instances, etc. Use 0 if you are not instancing.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[The frequency is the number of times to draw the same geometry each time draw is called: 1 means draw one instance, 2 means draw two instances, and so on. Use 0 if you are not instancing.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="VertexBufferBinding(VertexBuffer, Int32)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA[public VertexBufferBinding (
+         VertexBuffer vertexBuffer,
+         int vertexOffset
+)]]></syntax>
+      <parameters>
+        <parameter name="vertexBuffer" type="VertexBuffer"><![CDATA[The vertex buffer.]]></parameter>
+        <parameter name="vertexOffset" type="int"><![CDATA[Offset (in bytes) from the beginning of the buffer to the first vertex to use.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="VertexBufferBinding(VertexBuffer)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA[public VertexBufferBinding (
+         VertexBuffer vertexBuffer
+)]]></syntax>
+      <parameters>
+        <parameter name="vertexBuffer" type="VertexBuffer"><![CDATA[The vertex buffer.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="InstanceFrequency" type="int" access="get">
+      <summary><![CDATA[Gets the instancing frequency.]]></summary>
+      <syntax><![CDATA[public int InstanceFrequency { get; }]]></syntax>
+      <remarks><![CDATA[The frequency is the number of times to draw the same geometry each time draw is called: 1 means draw one instance, 2 means draw two instances, and so on. Use 0 if you are not instancing.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="VertexBuffer" type="VertexBuffer" access="get">
+      <summary><![CDATA[Gets a vertex buffer.]]></summary>
+      <syntax><![CDATA[public VertexBuffer VertexBuffer { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="VertexOffset" type="int" access="get">
+      <summary><![CDATA[Gets the offset between the beginning of the buffer and the vertex data to use.]]></summary>
+      <syntax><![CDATA[public int VertexOffset { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

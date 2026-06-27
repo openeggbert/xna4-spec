@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="RacingCameraAngle" kind="enum"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Indicates which camera angle this gamer prefers to use in racing games.]]></summary>
+  <syntax><![CDATA[public enum RacingCameraAngle]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="Back"><summary><![CDATA[Traditional third-person camera view from behind the car.]]></summary></member>
+    <member name="Front"><summary><![CDATA[Camera view from in front of the car. The car itself is not visible.]]></summary></member>
+    <member name="Inside"><summary><![CDATA[Camera view from inside the car, looking through the windscreen.]]></summary></member>
+  </members>
+</xna-type>

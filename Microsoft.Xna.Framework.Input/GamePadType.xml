@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamePadType" kind="enum"
+          namespace="Microsoft.Xna.Framework.Input"
+          assembly="Microsoft.Xna.Framework.Input">
+  <summary><![CDATA[Describes the type of a given Xbox 360 controller.]]></summary>
+  <syntax><![CDATA[public enum GamePadType]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="ArcadeStick"><summary><![CDATA[Controller is an arcade stick.]]></summary></member>
+    <member name="DancePad"><summary><![CDATA[Controller is a dance pad.]]></summary></member>
+    <member name="FlightStick"><summary><![CDATA[Controller is a flight stick.]]></summary></member>
+    <member name="GamePad"><summary><![CDATA[Controller is the Xbox 360 Controller.]]></summary></member>
+    <member name="Unknown"><summary><![CDATA[Controller is an unknown type.]]></summary></member>
+    <member name="Wheel"><summary><![CDATA[Controller is a wheel.]]></summary></member>
+  </members>
+</xna-type>

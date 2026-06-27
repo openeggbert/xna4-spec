@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TextureWrapCoordinates" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines supported wrap coordinates.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum TextureWrapCoordinates]]></syntax>
+  <remarks><![CDATA[This enumeration is used by the Wrap0 property and the Wrap1 through Wrap15 properties.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="None"><summary><![CDATA[No texture wrap coordinates specified.]]></summary></member>
+    <member name="Zero"><summary><![CDATA[U texture wrapping (wrapping in the direction of the first dimension).]]></summary></member>
+    <member name="One"><summary><![CDATA[V texture wrapping (wrapping in the direction of the second dimension).]]></summary></member>
+    <member name="Two"><summary><![CDATA[W texture wrapping (wrapping in the direction of the third dimension).]]></summary></member>
+    <member name="Three"><summary><![CDATA[Texture wrapping in the direction of the fourth dimension.]]></summary></member>
+  </members>
+</xna-type>

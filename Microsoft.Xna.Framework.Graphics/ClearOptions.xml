@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ClearOptions" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Specifies the buffer to use when calling Clear.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum ClearOptions]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="DepthBuffer"><summary><![CDATA[A depth buffer.]]></summary></member>
+    <member name="Stencil"><summary><![CDATA[A stencil buffer.]]></summary></member>
+    <member name="Target"><summary><![CDATA[A render target.]]></summary></member>
+  </members>
+</xna-type>

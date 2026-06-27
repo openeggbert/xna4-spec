@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ShaderConstantCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IEnumerable&amp;lt;ShaderConstant&amp;gt;">
+  <summary><![CDATA[Manipulates a collection of ShaderConstant objects.]]></summary>
+  <syntax><![CDATA[public sealed class ShaderConstantCollection : IEnumerable&lt;ShaderConstant&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Count" type="int" access="get">
+      <summary><![CDATA[Gets the number of ShaderConstant objects in this ShaderConstantCollection.]]></summary>
+      <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Object" access="get">
+      <summary><![CDATA[Gets a specific ShaderConstant object using an index value.]]></summary>
+      <syntax><![CDATA[public ShaderConstant this [
+         string name
+] { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Returns an enumerator that can iterate through the ShaderConstantCollection.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Returns an enumerator that can iterate through the ShaderConstantCollection.]]></summary>
+          <syntax><![CDATA[public IEnumerator&lt;ShaderConstant&gt; GetEnumerator ()]]></syntax>
+          <returns><![CDATA[The iterator.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

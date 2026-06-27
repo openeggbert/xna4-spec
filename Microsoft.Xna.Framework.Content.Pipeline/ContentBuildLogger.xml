@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentBuildLogger" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <summary><![CDATA[Provides methods for reporting informational messages or warnings from content importers and processors.]]></summary>
+  <syntax><![CDATA[public abstract class ContentBuildLogger]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentBuildLogger()">
+      <summary><![CDATA[Initializes a new instance of ContentBuildLogger.]]></summary>
+      <syntax><![CDATA[protected ContentBuildLogger ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="LoggerRootDirectory" type="string" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public string LoggerRootDirectory { get; set; }]]></syntax>
+      <remarks><![CDATA[When building XNA content, all errors are displayed in the Error List Window of Visual Studio. Along with the data that triggered the error, the Error List displays the path and filename where the offending data was encountered. By default, the path of the offending file that is reported in the Error List is always expressed as it relates to the location of the project file that references it. When set, the LoggerRootDirectory property specifies an explicit base path for error reporting that overrides the default operation. All offending files reported in the Error List will be expressed as they relate to the base path set in LoggerRootDirectory .]]></remarks>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetCurrentFilename" returnType="void">
+      <summary><![CDATA[Gets the filename currently being processed, for use in warning and error messages.]]></summary>
+      <overloads>
+        <overload signature="GetCurrentFilename()">
+          <summary><![CDATA[Gets the filename currently being processed, for use in warning and error messages.]]></summary>
+          <syntax><![CDATA[protected string GetCurrentFilename (
+         ContentIdentity contentIdentity
+)]]></syntax>
+          <parameters>
+            <parameter name="contentIdentity" type="ContentIdentity"><![CDATA[Identity of a content item. If specified, GetCurrentFilename uses this value to refine the search. If no value os specified, the current PushFile state is used.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Name of the file being processed.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="LogImportantMessage" returnType="void">
+      <summary><![CDATA[Outputs a high-priority status message from a content importer or processor.]]></summary>
+      <overloads>
+        <overload signature="LogImportantMessage()">
+          <summary><![CDATA[Outputs a high-priority status message from a content importer or processor.]]></summary>
+          <syntax><![CDATA[public virtual abstract void LogImportantMessage (
+         string message,
+         Object[] messageArgs
+)]]></syntax>
+          <parameters>
+            <parameter name="message" type="string"><![CDATA[Message being reported.]]></parameter>
+            <parameter name="messageArgs" type="Object[]"><![CDATA[[ ParamArrayAttribute ] Arguments for the reported message.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Use LogImportantMessage only for important information, because these messages appear in the Output window of Visual Studio. Importers and processors should use this functionality only for unusual or unexpected situations.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="LogMessage" returnType="void">
+      <summary><![CDATA[Outputs a low priority status message from a content importer or processor.]]></summary>
+      <overloads>
+        <overload signature="LogMessage()">
+          <summary><![CDATA[Outputs a low priority status message from a content importer or processor.]]></summary>
+          <syntax><![CDATA[public virtual abstract void LogMessage (
+         string message,
+         Object[] messageArgs
+)]]></syntax>
+          <parameters>
+            <parameter name="message" type="string"><![CDATA[Message being reported.]]></parameter>
+            <parameter name="messageArgs" type="Object[]"><![CDATA[[ ParamArrayAttribute ] Arguments for the reported message.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This message will not usually appear in the Build Output window of Visual Studio, but it can be viewed if the content pipeline is called directly from an MSBuild task.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="LogWarning" returnType="void">
+      <summary><![CDATA[Outputs a warning message from a content importer or processor.]]></summary>
+      <overloads>
+        <overload signature="LogWarning()">
+          <summary><![CDATA[Outputs a warning message from a content importer or processor.]]></summary>
+          <syntax><![CDATA[public virtual abstract void LogWarning (
+         string helpLink,
+         ContentIdentity contentIdentity,
+         string message,
+         Object[] messageArgs
+)]]></syntax>
+          <parameters>
+            <parameter name="helpLink" type="string"><![CDATA[Link to an existing online help topic containing related information.]]></parameter>
+            <parameter name="contentIdentity" type="ContentIdentity"><![CDATA[Identity of the content item that generated the message.]]></parameter>
+            <parameter name="message" type="string"><![CDATA[Message being reported.]]></parameter>
+            <parameter name="messageArgs" type="Object[]"><![CDATA[[ ParamArrayAttribute ] Arguments for the reported message.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Use LogWarning only for important information, because these messages appear in the Error List window of Visual Studio. The message text should indicate what steps need to be taken to correct the problem.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="PopFile" returnType="void">
+      <summary><![CDATA[Outputs a message indicating that a content asset has completed processing.]]></summary>
+      <overloads>
+        <overload signature="PopFile()">
+          <summary><![CDATA[Outputs a message indicating that a content asset has completed processing.]]></summary>
+          <syntax><![CDATA[public void PopFile ()]]></syntax>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="PushFile" returnType="void">
+      <summary><![CDATA[Outputs a message indicating that a content asset has begun processing.]]></summary>
+      <overloads>
+        <overload signature="PushFile()">
+          <summary><![CDATA[Outputs a message indicating that a content asset has begun processing.]]></summary>
+          <syntax><![CDATA[public void PushFile (
+         string filename
+)]]></syntax>
+          <parameters>
+            <parameter name="filename" type="string"><![CDATA[Name of the file containing future messages.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

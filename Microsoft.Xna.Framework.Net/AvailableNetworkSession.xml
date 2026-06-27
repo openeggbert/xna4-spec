@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AvailableNetworkSession" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net">
+  <summary><![CDATA[Describes a multiplayer session that can be joined.]]></summary>
+  <syntax><![CDATA[public sealed class AvailableNetworkSession]]></syntax>
+  <remarks><![CDATA[Use the NetworkSession class to get a list of AvailableNetworkSession instances. Typically, the results populate some type of user interface, displayed by the game. The user then chooses a session, and the game adds the player to the chosen session with a call to Join .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="CurrentGamerCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of gamers in the session.]]></summary>
+      <syntax><![CDATA[public int CurrentGamerCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="HostGamertag" type="string" access="get">
+      <summary><![CDATA[Gets the gamertag of the session host.]]></summary>
+      <syntax><![CDATA[public string HostGamertag { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="OpenPrivateGamerSlots" type="int" access="get">
+      <summary><![CDATA[Gets the number of private player slots. These slots are reserved for people joining by invitation or friend presence.]]></summary>
+      <syntax><![CDATA[public int OpenPrivateGamerSlots { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="OpenPublicGamerSlots" type="int" access="get">
+      <summary><![CDATA[Gets the number of public player slots. These slots are reserved for people joining by a matchmaking service.]]></summary>
+      <syntax><![CDATA[public int OpenPublicGamerSlots { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="QualityOfService" type="QualityOfService" access="get">
+      <summary><![CDATA[Gets an estimate of the quality of network service between this local machine and the remote session.]]></summary>
+      <syntax><![CDATA[public QualityOfService QualityOfService { get; }]]></syntax>
+      <remarks><![CDATA[This measurement can take some time to complete, so the data may not be available when the search result is first returned to you.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="SessionProperties" type="NetworkSessionProperties" access="get">
+      <summary><![CDATA[Gets any custom properties that have been attached to the session.]]></summary>
+      <syntax><![CDATA[public NetworkSessionProperties SessionProperties { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

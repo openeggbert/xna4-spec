@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="DxtBitmapContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="BitmapContent">
+  <summary><![CDATA[Provides methods and properties for managing compressed textures (DXT1, DXT3, DXT5). This is the base class for all compressed textures.]]></summary>
+  <syntax><![CDATA[public abstract class DxtBitmapContent : BitmapContent]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="DxtBitmapContent(Int32, Int32, Int32)">
+      <summary><![CDATA[Initializes a new instance of DxtBitmapContent with the specified size.]]></summary>
+      <syntax><![CDATA[protected DxtBitmapContent (
+         int blockSize,
+         int width,
+         int height
+)]]></syntax>
+      <parameters>
+        <parameter name="blockSize" type="int"><![CDATA[Size of the block, in bytes.]]></parameter>
+        <parameter name="width" type="int"><![CDATA[Width of the bitmap, in pixels.]]></parameter>
+        <parameter name="height" type="int"><![CDATA[Height of the bitmap, in pixels.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="DxtBitmapContent(Int32)">
+      <summary><![CDATA[Initializes a new instance of DxtBitmapContent with the specified compression.]]></summary>
+      <syntax><![CDATA[protected DxtBitmapContent (
+         int blockSize
+)]]></syntax>
+      <parameters>
+        <parameter name="blockSize" type="int"><![CDATA[Size of the block, in bytes.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="GetPixelData" returnType="void">
+      <summary><![CDATA[Gets the bitmap content as an array of encoded bytes.]]></summary>
+      <overloads>
+        <overload signature="GetPixelData()">
+          <summary><![CDATA[Gets the bitmap content as an array of encoded bytes.]]></summary>
+          <syntax><![CDATA[public override byte[] GetPixelData ()]]></syntax>
+          <returns><![CDATA[Contents of the bitmap.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetPixelData" returnType="void">
+      <summary><![CDATA[Sets the contents of the bitmap using an encoded byte array.]]></summary>
+      <overloads>
+        <overload signature="SetPixelData()">
+          <summary><![CDATA[Sets the contents of the bitmap using an encoded byte array.]]></summary>
+          <syntax><![CDATA[public override void SetPixelData (
+         byte[] sourceData
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceData" type="byte[]"><![CDATA[Contents to be copied to destination bitmap.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryCopyFrom" returnType="void">
+      <summary><![CDATA[Attempts to copy from a specified region to another.]]></summary>
+      <overloads>
+        <overload signature="TryCopyFrom()">
+          <summary><![CDATA[Attempts to copy from a specified region to another.]]></summary>
+          <syntax><![CDATA[protected override bool TryCopyFrom (
+         BitmapContent sourceBitmap,
+         Rectangle sourceRegion,
+         Rectangle destinationRegion
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceBitmap" type="BitmapContent"><![CDATA[Bitmap being copied from.]]></parameter>
+            <parameter name="sourceRegion" type="Rectangle"><![CDATA[Region of bitmap being copied.]]></parameter>
+            <parameter name="destinationRegion" type="Rectangle"><![CDATA[Region being copied to.]]></parameter>
+          </parameters>
+          <returns><![CDATA[trueif successful; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryCopyTo" returnType="void">
+      <summary><![CDATA[Attempts to copy the specified region to another.]]></summary>
+      <overloads>
+        <overload signature="TryCopyTo()">
+          <summary><![CDATA[Attempts to copy the specified region to another.]]></summary>
+          <syntax><![CDATA[protected override bool TryCopyTo (
+         BitmapContent destinationBitmap,
+         Rectangle sourceRegion,
+         Rectangle destinationRegion
+)]]></syntax>
+          <parameters>
+            <parameter name="destinationBitmap" type="BitmapContent"><![CDATA[Bitmap being copied to.]]></parameter>
+            <parameter name="sourceRegion" type="Rectangle"><![CDATA[Region of source bitmap being copied from.]]></parameter>
+            <parameter name="destinationRegion" type="Rectangle"><![CDATA[Region of destination bitmap.]]></parameter>
+          </parameters>
+          <returns><![CDATA[trueif successful; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

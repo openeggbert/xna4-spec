@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GestureSample" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input.Touch"
+          assembly="Microsoft.Xna.Framework.Input.Touch">
+  <summary><![CDATA[A representation of data from a multitouch gesture over a span of time.]]></summary>
+  <syntax><![CDATA[public struct GestureSample]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Delta" type="Vector2" access="get">
+      <summary><![CDATA[Holds delta information about the first touchpoint in a multitouch gesture.]]></summary>
+      <syntax><![CDATA[public Vector2 Delta { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Delta2" type="Vector2" access="get">
+      <summary><![CDATA[Holds delta information about the second touchpoint in a multitouch gesture.]]></summary>
+      <syntax><![CDATA[public Vector2 Delta2 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="GestureType" type="GestureType" access="get">
+      <summary><![CDATA[The type of gesture in a multitouch gesture sample.]]></summary>
+      <syntax><![CDATA[public GestureType GestureType { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Position" type="Vector2" access="get">
+      <summary><![CDATA[Holds the current position of the first touchpoint in this gesture sample.]]></summary>
+      <syntax><![CDATA[public Vector2 Position { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Position2" type="Vector2" access="get">
+      <summary><![CDATA[Holds the current position of the the second touchpoint in this gesture sample.]]></summary>
+      <syntax><![CDATA[public Vector2 Position2 { get; }]]></syntax>
+      <remarks><![CDATA[This data is only valid for a Pinch gesture, currently the only gesture that tracks more than one finger.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Timestamp" type="TimeSpan" access="get">
+      <summary><![CDATA[Holds the starting time for this touch gesture sample.]]></summary>
+      <syntax><![CDATA[public TimeSpan Timestamp { get; }]]></syntax>
+      <remarks><![CDATA[The Timestamp is useful primarily for determining the difference between two gestures. It is not related to the game time.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

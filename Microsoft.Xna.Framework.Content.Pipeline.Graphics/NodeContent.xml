@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NodeContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="ContentItem">
+  <summary><![CDATA[Provides a base class for graphics types that define local coordinate systems.]]></summary>
+  <syntax><![CDATA[public class NodeContent : ContentItem]]></syntax>
+  <remarks><![CDATA[These objects can be arranged in a tree structure. This enables the root transform to be automatically inherited from the parent object.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="NodeContent()">
+      <summary><![CDATA[Creates an instance of NodeContent.]]></summary>
+      <syntax><![CDATA[public NodeContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="AbsoluteTransform" type="Matrix" access="get">
+      <summary><![CDATA[Gets the value of the local Transform property, multiplied by the AbsoluteTransform of the parent.]]></summary>
+      <syntax><![CDATA[public Matrix AbsoluteTransform { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Animations" type="AnimationContentDictionary" access="get">
+      <summary><![CDATA[Gets the set of animations belonging to this node.]]></summary>
+      <syntax><![CDATA[public AnimationContentDictionary Animations { get; }]]></syntax>
+      <remarks><![CDATA[Note The XNA Framework provides only partial support for animation. In the NodeContent class an intermediate object model for storing animation data inside the Content Pipeline is defined, which exposes data into that has been extracted from Autodesk FBX (.fbx) and DirectX X file (.x) formats. The built-in ModelProcessor also converts vertex channels of BoneWeightCollection data into sets of VertexElementUsage.BlendIndices and VertexElementUsage.BlendWeight channels suitable for skinned rendering on the GPU. However, the framework does not include any runtime animation classes at this time. There can be any number of animations, which are looked up by name. For character skinning, the animation data is usually attached to the root of a bone hierarchy. However, it can potentially belong to any node. For example, when used for rigid body animation.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Children" type="NodeContentCollection" access="get">
+      <summary><![CDATA[Gets the children of the NodeContent object.]]></summary>
+      <syntax><![CDATA[public NodeContentCollection Children { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Parent" type="NodeContent" access="get;set">
+      <summary><![CDATA[Gets the parent of this NodeContent object.]]></summary>
+      <syntax><![CDATA[public NodeContent Parent { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Transform" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets the transform matrix of the scene.]]></summary>
+      <syntax><![CDATA[public Matrix Transform { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

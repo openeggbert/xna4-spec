@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TouchLocationState" kind="enum"
+          namespace="Microsoft.Xna.Framework.Input.Touch"
+          assembly="Microsoft.Xna.Framework.Input.Touch">
+  <summary><![CDATA[Defines the possible states of a touch location.]]></summary>
+  <syntax><![CDATA[public enum TouchLocationState]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <members>
+    <member name="Invalid"><summary><![CDATA[This touch location position is invalid. Typically, you will encounter this state when a new touch location attempts to get the previous state of itself.]]></summary></member>
+    <member name="Moved"><summary><![CDATA[This touch location position was updated or pressed at the same position.]]></summary></member>
+    <member name="Pressed"><summary><![CDATA[This touch location position is new.]]></summary></member>
+    <member name="Released"><summary><![CDATA[This touch location position was released.]]></summary></member>
+  </members>
+</xna-type>

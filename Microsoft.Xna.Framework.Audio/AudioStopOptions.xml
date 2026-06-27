@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AudioStopOptions" kind="enum"
+          namespace="Microsoft.Xna.Framework.Audio"
+          assembly="Microsoft.Xna.Framework.Audio">
+  <summary><![CDATA[Controls how Cue objects should stop when Stop is called.]]></summary>
+  <syntax><![CDATA[public enum AudioStopOptions]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="AsAuthored"><summary><![CDATA[Indicates the cue should stop normally, playing any release phase or transition specified in the content.]]></summary></member>
+    <member name="Immediate"><summary><![CDATA[Indicates the cue should stop immediately, ignoring any release phase or transition specified in the content.]]></summary></member>
+  </members>
+</xna-type>

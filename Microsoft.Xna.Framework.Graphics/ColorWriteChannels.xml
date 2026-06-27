@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ColorWriteChannels" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines the color channels that can be chosen for a per-channel write to a render target color buffer.]]></summary>
+  <syntax><![CDATA[[FlagsAttribute]
+public enum ColorWriteChannels]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="All"><summary><![CDATA[All buffer channels.]]></summary></member>
+    <member name="Alpha"><summary><![CDATA[Alpha channel of a buffer.]]></summary></member>
+    <member name="Blue"><summary><![CDATA[Blue channel of a buffer.]]></summary></member>
+    <member name="Green"><summary><![CDATA[Green channel of a buffer.]]></summary></member>
+    <member name="None"><summary><![CDATA[No channel selected.]]></summary></member>
+    <member name="Red"><summary><![CDATA[Red channel of a buffer.]]></summary></member>
+  </members>
+</xna-type>

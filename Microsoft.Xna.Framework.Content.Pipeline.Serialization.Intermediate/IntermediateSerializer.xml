@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IntermediateSerializer" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate">
+  <summary><![CDATA[Provides methods for reading and writing XNA intermediate XML format.]]></summary>
+  <syntax><![CDATA[public sealed class IntermediateSerializer]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="GetTypeSerializer" returnType="void">
+      <summary><![CDATA[Retrieves the worker serializer for a specified type.]]></summary>
+      <overloads>
+        <overload signature="GetTypeSerializer()">
+          <summary><![CDATA[Retrieves the worker serializer for a specified type.]]></summary>
+          <syntax><![CDATA[public ContentTypeSerializer GetTypeSerializer (
+         Type type
+)]]></syntax>
+          <parameters>
+            <parameter name="type" type="Type"><![CDATA[The type.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The worker serializer]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

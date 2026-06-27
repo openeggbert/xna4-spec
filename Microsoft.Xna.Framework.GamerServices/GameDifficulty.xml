@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GameDifficulty" kind="enum"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Indicates how difficult this gamer likes things to be.]]></summary>
+  <syntax><![CDATA[public enum GameDifficulty]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="Easy"><summary><![CDATA[Below-average difficulty.]]></summary></member>
+    <member name="Hard"><summary><![CDATA[Above-average difficulty.]]></summary></member>
+    <member name="Normal"><summary><![CDATA[Average difficulty.]]></summary></member>
+  </members>
+</xna-type>

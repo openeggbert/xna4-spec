@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GameDefaults" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Describes a gamer's preferred settings.]]></summary>
+  <syntax><![CDATA[public sealed class GameDefaults]]></syntax>
+  <remarks><![CDATA[Wherever possible, games should default to the values specified in GameDefaults .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="AccelerateWithButtons" type="bool" access="get">
+      <summary><![CDATA[Gets whether the gamer prefers to use controller buttons to accelerate in racing games.]]></summary>
+      <syntax><![CDATA[public bool AccelerateWithButtons { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="AutoAim" type="bool" access="get">
+      <summary><![CDATA[Gets whether the title should automatically correct the gamer's aim.]]></summary>
+      <syntax><![CDATA[public bool AutoAim { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="AutoCenter" type="bool" access="get">
+      <summary><![CDATA[Gets whether the title should automatically center the view when the gamer moves.]]></summary>
+      <syntax><![CDATA[public bool AutoCenter { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="BrakeWithButtons" type="bool" access="get">
+      <summary><![CDATA[Gets whether the gamer prefers to use controller buttons to brake in racing games.]]></summary>
+      <syntax><![CDATA[public bool BrakeWithButtons { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="ControllerSensitivity" type="ControllerSensitivity" access="get">
+      <summary><![CDATA[Gets the preferred controller sensitivity setting for this gamer.]]></summary>
+      <syntax><![CDATA[public ControllerSensitivity ControllerSensitivity { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="GameDifficulty" type="GameDifficulty" access="get">
+      <summary><![CDATA[Gets the preferred difficulty setting for this gamer.]]></summary>
+      <syntax><![CDATA[public GameDifficulty GameDifficulty { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="InvertYAxis" type="bool" access="get">
+      <summary><![CDATA[Gets whether the gamer prefers to invert the y-axis input of the controller.]]></summary>
+      <syntax><![CDATA[public bool InvertYAxis { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="ManualTransmission" type="bool" access="get">
+      <summary><![CDATA[Gets whether the gamer prefers to drive a manual shift transmission in racing games.]]></summary>
+      <syntax><![CDATA[public bool ManualTransmission { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="MoveWithRightThumbStick" type="bool" access="get">
+      <summary><![CDATA[Gets whether the gamer prefers to move using the right thumbstick.]]></summary>
+      <syntax><![CDATA[public bool MoveWithRightThumbStick { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="PrimaryColor" type="Nullable&amp;lt;Color&amp;gt;" access="get">
+      <summary><![CDATA[Gets the preferred color for the player character.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;Color&gt; PrimaryColor { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="RacingCameraAngle" type="RacingCameraAngle" access="get">
+      <summary><![CDATA[Gets the gamer's preferred camera angle for racing games.]]></summary>
+      <syntax><![CDATA[public RacingCameraAngle RacingCameraAngle { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="SecondaryColor" type="Nullable&amp;lt;Color&amp;gt;" access="get">
+      <summary><![CDATA[Gets a secondary color selection for the player character.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;Color&gt; SecondaryColor { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

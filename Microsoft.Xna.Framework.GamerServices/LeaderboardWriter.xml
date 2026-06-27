@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="LeaderboardWriter" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Records leaderboard data for players in a NetworkSession.]]></summary>
+  <syntax><![CDATA[public sealed class LeaderboardWriter]]></syntax>
+  <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="GetLeaderboard" returnType="void">
+      <summary><![CDATA[Gets a leaderboard entry that can be used to write to a specified leaderboard.]]></summary>
+      <overloads>
+        <overload signature="GetLeaderboard()">
+          <summary><![CDATA[Gets a leaderboard entry that can be used to write to a specified leaderboard.]]></summary>
+          <syntax><![CDATA[public LeaderboardEntry GetLeaderboard (
+         LeaderboardIdentity leaderboardId
+)]]></syntax>
+          <parameters>
+            <parameter name="leaderboardId" type="LeaderboardIdentity"><![CDATA[The identity of the leaderboard to write to.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A LeaderboardEntry that can be used for writing to the leaderboard.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

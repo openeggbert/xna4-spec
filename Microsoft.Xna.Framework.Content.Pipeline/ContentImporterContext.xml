@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentImporterContext" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <summary><![CDATA[Provides properties that define logging behavior for the importer.]]></summary>
+  <syntax><![CDATA[public sealed class ContentImporterContext]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentImporterContext()">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public ContentImporterContext ()]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="IntermediateDirectory" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public abstract string IntermediateDirectory { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Logger" type="ContentBuildLogger" access="get">
+      <summary><![CDATA[Gets the logger for an importer.]]></summary>
+      <syntax><![CDATA[public ContentBuildLogger Logger { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="OutputDirectory" type="Object" access="get">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public abstract string OutputDirectory { get; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="AddDependency" returnType="void">
+      <summary><![CDATA[Adds a dependency to the specified file. This causes a rebuild of the file, when modified, on subsequent incremental builds.]]></summary>
+      <overloads>
+        <overload signature="AddDependency()">
+          <summary><![CDATA[Adds a dependency to the specified file. This causes a rebuild of the file, when modified, on subsequent incremental builds.]]></summary>
+          <syntax><![CDATA[public void AddDependency (
+         string filename
+)]]></syntax>
+          <parameters>
+            <parameter name="filename" type="string"><![CDATA[Name of an asset file.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Do not call this method for the main file passed to the Import method. It is only required for additional files needing to be read by the importer.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

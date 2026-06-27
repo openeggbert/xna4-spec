@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="HalfSingle" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
+          assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
+          interfaces="IPackedVector&amp;lt;UInt16&amp;gt;, IEquatable&amp;lt;HalfSingle&amp;gt;">
+  <summary><![CDATA[Packed vector type containing a single 16 bit floating point value.]]></summary>
+  <syntax><![CDATA[public struct HalfSingle : IPackedVector&lt;UInt16&gt;, IEquatable&lt;HalfSingle&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="HalfSingle(float)">
+      <summary><![CDATA[Initializes a new instance of the HalfSingle structure.]]></summary>
+      <syntax><![CDATA[public HalfSingle (
+         float value
+)]]></syntax>
+      <parameters>
+        <parameter name="value" type="float"><![CDATA[The initial value of the HalfSingle structure.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="PackedValue" type="UInt16" access="get;set">
+      <summary><![CDATA[Directly gets or sets the packed representation of the value.]]></summary>
+      <syntax><![CDATA[[CLSCompliantAttribute(false)]
+public UInt16 PackedValue { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="HalfSingle">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         HalfSingle other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="HalfSingle"><![CDATA[The object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for the current instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for the current instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for the instance.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToSingle" returnType="void">
+      <summary><![CDATA[Expands the HalfSingle to a Single.]]></summary>
+      <overloads>
+        <overload signature="ToSingle()">
+          <summary><![CDATA[Expands the HalfSingle to a Single.]]></summary>
+          <syntax><![CDATA[public float ToSingle ()]]></syntax>
+          <returns><![CDATA[The expanded HalfSingle.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a string representation of the current instance.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a string representation of the current instance.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String that represents the object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         HalfSingle a,
+         HalfSingle b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="HalfSingle"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="HalfSingle"><![CDATA[The object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         HalfSingle a,
+         HalfSingle b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="HalfSingle"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="HalfSingle"><![CDATA[The object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

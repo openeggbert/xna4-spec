@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="LaunchParameters" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          baseClass="Dictionary&amp;lt;string"
+          interfaces="string&amp;gt;">
+  <summary><![CDATA[The start up parameters for launching a Windows Phone or Windows game.]]></summary>
+  <syntax><![CDATA[public class LaunchParameters : Dictionary&lt;string, string&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="LaunchParameters()">
+      <summary><![CDATA[Initializes a new instance of LaunchParameters.]]></summary>
+      <syntax><![CDATA[public LaunchParameters ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

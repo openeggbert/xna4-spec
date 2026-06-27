@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CompareFunction" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines comparison functions that can be chosen for alpha, stencil, or depth-buffer tests.]]></summary>
+  <syntax><![CDATA[public enum CompareFunction]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Always"><summary><![CDATA[Always pass the test.]]></summary></member>
+    <member name="Equal"><summary><![CDATA[Accept the new pixel if its value is equal to the value of the current pixel.]]></summary></member>
+    <member name="Greater"><summary><![CDATA[Accept the new pixel if its value is greater than the value of the current pixel.]]></summary></member>
+    <member name="GreaterEqual"><summary><![CDATA[Accept the new pixel if its value is greater than or equal to the value of the current pixel.]]></summary></member>
+    <member name="Less"><summary><![CDATA[Accept the new pixel if its value is less than the value of the current pixel.]]></summary></member>
+    <member name="LessEqual"><summary><![CDATA[Accept the new pixel if its value is less than or equal to the value of the current pixel.]]></summary></member>
+    <member name="Never"><summary><![CDATA[Always fail the test.]]></summary></member>
+    <member name="NotEqual"><summary><![CDATA[Accept the new pixel if its value does not equal the value of the current pixel.]]></summary></member>
+  </members>
+</xna-type>

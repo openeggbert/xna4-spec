@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Model" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Represents a 3D model composed of multiple ModelMesh objects which may be moved independently.]]></summary>
+  <syntax><![CDATA[public sealed class Model]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Model()">
+      <summary><![CDATA[Initializes a new instance of Model.]]></summary>
+      <syntax><![CDATA[public Model ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Bones" type="ModelBoneCollection" access="get">
+      <summary><![CDATA[Gets a collection of ModelBone objects which describe how each mesh in the Meshes collection for this model relates to its parent mesh.]]></summary>
+      <syntax><![CDATA[public ModelBoneCollection Bones { get; }]]></syntax>
+      <remarks><![CDATA[Warning Please note that the transforms contained in this collection of bones does not describe the cumulative relationship of each mesh relative to all of its parent meshes in the collection, just the immediate parent of the mesh. For this information, please see CopyAbsoluteBoneTransformsTo . The transforms of each ModelBone in Bones can also be obtained using the CopyBoneTransformsTo method. For a demonstration of how to use the transforms for the parent bones of a model mesh to set the position of the mesh parts, please see How to: Render a Model .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Meshes" type="ModelMeshCollection" access="get">
+      <summary><![CDATA[Gets a collection of ModelMesh objects which compose the model. Each ModelMesh in a model may be moved independently and may be composed of multiple materials identified as ModelMeshPart objects.]]></summary>
+      <syntax><![CDATA[public ModelMeshCollection Meshes { get; }]]></syntax>
+      <remarks><![CDATA[For a demonstration of how to use the transforms for the parent bones of a model mesh to set the position of the mesh objects, please see How to: Render a Model .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Root" type="ModelBone" access="get">
+      <summary><![CDATA[Gets the root bone for this model.]]></summary>
+      <syntax><![CDATA[public ModelBone Root { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Tag" type="Object" access="get;set">
+      <summary><![CDATA[Gets or sets an object identifying this model.]]></summary>
+      <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="CopyAbsoluteBoneTransformsTo" returnType="void">
+      <summary><![CDATA[Copies a transform of each bone in a model relative to all parent bones of the bone into a given array.]]></summary>
+      <overloads>
+        <overload signature="CopyAbsoluteBoneTransformsTo()">
+          <summary><![CDATA[Copies a transform of each bone in a model relative to all parent bones of the bone into a given array.]]></summary>
+          <syntax><![CDATA[public void CopyAbsoluteBoneTransformsTo (
+         Matrix[] destinationBoneTransforms
+)]]></syntax>
+          <parameters>
+            <parameter name="destinationBoneTransforms" type="Matrix[]"><![CDATA[The array to receive bone transforms.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[In an absolute transform, each bone is transformed according to the position of all parent bones. This is the same as iterating the Bones collection and applying the transformation matrix of every parent of a ModelBone to the Transform property of each ModelBone and copying the results into an array that can be indexed into by the bone index. An array of transformation matrices for the meshes of any model can be obtained by calling CopyAbsoluteBoneTransformsTo or CopyBoneTransformsTo . The resulting array contains the transforms that describe how each ModelMesh is located relative to one another in the Model . The transformation matrix that should be applied to each ModelMesh can be obtained using the index of the to retrieve a transformation matrix from this collection. For a demonstration of how to use the transforms for the parent bones of a model mesh to set the position of the mesh parts, please see How to: Render a Model .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CopyBoneTransformsFrom" returnType="void">
+      <summary><![CDATA[Copies an array of transforms into each bone in the model.]]></summary>
+      <overloads>
+        <overload signature="CopyBoneTransformsFrom()">
+          <summary><![CDATA[Copies an array of transforms into each bone in the model.]]></summary>
+          <syntax><![CDATA[public void CopyBoneTransformsFrom (
+         Matrix[] sourceBoneTransforms
+)]]></syntax>
+          <parameters>
+            <parameter name="sourceBoneTransforms" type="Matrix[]"><![CDATA[An array containing new bone transforms.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CopyBoneTransformsTo" returnType="void">
+      <summary><![CDATA[Copies each bone transform relative only to the parent bone of the model to a given array.]]></summary>
+      <overloads>
+        <overload signature="CopyBoneTransformsTo()">
+          <summary><![CDATA[Copies each bone transform relative only to the parent bone of the model to a given array.]]></summary>
+          <syntax><![CDATA[public void CopyBoneTransformsTo (
+         Matrix[] destinationBoneTransforms
+)]]></syntax>
+          <parameters>
+            <parameter name="destinationBoneTransforms" type="Matrix[]"><![CDATA[The array to receive bone transforms.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This is the same as iterating the Bones collection and copying the Transform property into an array that can be indexed into by the bone index. An array of transformation matrices for the meshes of any model can be obtained by calling CopyAbsoluteBoneTransformsTo or CopyBoneTransformsTo . The resulting array contains the transforms that describe how each ModelMesh is located relative to one another in the Model . The transformation matrix that should be applied to each ModelMesh can be obtained using the index of the to retrieve a transformation matrix from this collection. For a demonstration of how to use the transforms for the parent bones of a model mesh to set the position of the mesh parts, please see How to: Render a Model .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Draw" returnType="void">
+      <summary><![CDATA[Render a model after applying the matrix transformations.]]></summary>
+      <overloads>
+        <overload signature="Draw()">
+          <summary><![CDATA[Render a model after applying the matrix transformations.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub Draw ( _
+         world As Matrix, _
+         view As Matrix, _
+         projection As Matrix _
+)]]></syntax>
+          <parameters>
+            <parameter name="world" type="Object"><![CDATA[Type: Matrix A world transformation matrix.]]></parameter>
+            <parameter name="view" type="Object"><![CDATA[Type: Matrix A view transformation matrix.]]></parameter>
+            <parameter name="projection" type="Object"><![CDATA[Type: Matrix A projection transformation matrix.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NetworkSessionEndReason" kind="enum"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net">
+  <summary><![CDATA[Defines the reason a session ended.]]></summary>
+  <syntax><![CDATA[public enum NetworkSessionEndReason]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="ClientSignedOut"><summary><![CDATA[This client player has signed out of session.]]></summary></member>
+    <member name="HostEndedSession"><summary><![CDATA[The host left the session, removing all active players.]]></summary></member>
+    <member name="RemovedByHost"><summary><![CDATA[The host removed this client player from the session.]]></summary></member>
+    <member name="Disconnected"><summary><![CDATA[Network connectivity problems ended the session]]></summary></member>
+  </members>
+</xna-type>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamerServicesComponent" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          baseClass="GameComponent">
+  <summary><![CDATA[Wraps the functionality of the GamerServicesDispatcher.]]></summary>
+  <syntax><![CDATA[public class GamerServicesComponent : GameComponent]]></syntax>
+  <remarks><![CDATA[If a game will use gamer services, a GamerServicesComponent should be added to the game's Components collection. GamerServicesComponent will take care of initializing and updating the GamerServicesDispatcher at the appropriate times.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GamerServicesComponent(Game)">
+      <summary><![CDATA[Creates a new GamerServicesComponent.]]></summary>
+      <syntax><![CDATA[public GamerServicesComponent (
+         Game game
+)]]></syntax>
+      <parameters>
+        <parameter name="game" type="Game"><![CDATA[The game that will be associated with this component.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Important Games for Windows - LIVE is not available to finished games. This functionality is not included in the redistributable version of the XNA Framework, and a game that attempts to use these components without XNA Game Studio installed will result in a GamerServicesNotAvailableException .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Initialize" returnType="void">
+      <summary><![CDATA[Initializes the GamerServicesDispatcher.]]></summary>
+      <overloads>
+        <overload signature="Initialize()">
+          <summary><![CDATA[Initializes the GamerServicesDispatcher.]]></summary>
+          <syntax><![CDATA[public override void Initialize ()]]></syntax>
+          <remarks><![CDATA[Important Games for Windows - LIVE is not available to finished games. This functionality is not included in the redistributable version of the XNA Framework, and a game that attempts to use these components without XNA Game Studio installed will result in a GamerServicesNotAvailableException .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Update" returnType="void">
+      <summary><![CDATA[Updates the GamerServicesDispatcher.]]></summary>
+      <overloads>
+        <overload signature="Update()">
+          <summary><![CDATA[Updates the GamerServicesDispatcher.]]></summary>
+          <syntax><![CDATA[public override void Update (
+         GameTime gameTime
+)]]></syntax>
+          <parameters>
+            <parameter name="gameTime" type="GameTime"><![CDATA[The game timing state.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

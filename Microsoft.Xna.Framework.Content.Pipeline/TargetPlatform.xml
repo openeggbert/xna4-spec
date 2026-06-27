@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TargetPlatform" kind="enum"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <summary><![CDATA[Identifiers for the target platform.]]></summary>
+  <syntax><![CDATA[public enum TargetPlatform]]></syntax>
+  <platforms>
+    <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>and Windows XP.</platform>
+  </platforms>
+  <members>
+    <member name="Windows"><summary><![CDATA[All supported versions of Windows (excluding Windows Phone)]]></summary></member>
+    <member name="Xbox360"><summary><![CDATA[Xbox 360 video game and entertainment system]]></summary></member>
+    <member name="WindowsPhone"><summary><![CDATA[Windows Phone]]></summary></member>
+  </members>
+</xna-type>

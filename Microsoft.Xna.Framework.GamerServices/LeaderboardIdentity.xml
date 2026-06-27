@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="LeaderboardIdentity" kind="struct"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Contains leaderboard identity information for a particular leaderboard.]]></summary>
+  <syntax><![CDATA[public struct LeaderboardIdentity]]></syntax>
+  <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="GameMode" type="int" access="get;set">
+      <summary><![CDATA[Provides access to the game mode for this leaderboard identity.]]></summary>
+      <syntax><![CDATA[public int GameMode { get; set; }]]></syntax>
+      <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Key" type="string" access="get;set">
+      <summary><![CDATA[The key string associated with this leaderboard identity.]]></summary>
+      <syntax><![CDATA[public string Key { get; set; }]]></syntax>
+      <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Create" returnType="LeaderboardIdentity" isStatic="true">
+      <summary><![CDATA[Creates a leaderboard identity from a leaderboard key.]]></summary>
+      <overloads>
+        <overload signature="LeaderboardKey">
+          <summary><![CDATA[Creates a leaderboard identity from a leaderboard key.]]></summary>
+          <syntax><![CDATA[public static LeaderboardIdentity Create (
+         LeaderboardKey key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="LeaderboardKey"><![CDATA[The leaderboard key to use for this leaderboard identity.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The new leaderboard identity; null if creation fails.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="LeaderboardKey, Int32">
+          <summary><![CDATA[Creates a new LeaderboardIdentity from a leaderboard key and game mode value.]]></summary>
+          <syntax><![CDATA[public static LeaderboardIdentity Create (
+         LeaderboardKey key,
+         int gameMode
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="LeaderboardKey"><![CDATA[The leaderboard key to use for this leaderboard identity.]]></parameter>
+            <parameter name="gameMode" type="int"><![CDATA[The game mode value for this leaderboard identity.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The new Leaderboard Identity. It is null if creation failed.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

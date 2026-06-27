@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="FillMode" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Describes options for filling the vertices and lines that define a primitive.]]></summary>
+  <syntax><![CDATA[public enum FillMode]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Point"><summary><![CDATA[Draw a point at each vertex.]]></summary></member>
+    <member name="Solid"><summary><![CDATA[Draw solid faces for each primitive.]]></summary></member>
+    <member name="WireFrame"><summary><![CDATA[Draw lines connecting the vertices that define a primitive face.]]></summary></member>
+  </members>
+</xna-type>

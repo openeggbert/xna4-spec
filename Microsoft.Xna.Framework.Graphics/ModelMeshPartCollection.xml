@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ModelMeshPartCollection" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="ReadOnlyCollection&amp;lt;ModelMeshPart&amp;gt;">
+  <summary><![CDATA[Represents a collection of ModelMeshPart objects.]]></summary>
+  <syntax><![CDATA[public sealed class ModelMeshPartCollection : ReadOnlyCollection&lt;ModelMeshPart&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="GetEnumerator" returnType="void">
+      <summary><![CDATA[Returns a ModelMeshPartCollection.Enumerator that can iterate through a ModelMeshPartCollection.]]></summary>
+      <overloads>
+        <overload signature="GetEnumerator()">
+          <summary><![CDATA[Returns a ModelMeshPartCollection.Enumerator that can iterate through a ModelMeshPartCollection.]]></summary>
+          <syntax><![CDATA[public Enumerator GetEnumerator ()]]></syntax>
+          <returns><![CDATA[The ModelMeshPartCollection.Enumerator of the ModelMeshPart collection.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

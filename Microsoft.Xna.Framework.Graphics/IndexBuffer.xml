@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IndexBuffer" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="GraphicsResource">
+  <summary><![CDATA[Describes the rendering order of the vertices in a vertex buffer.]]></summary>
+  <syntax><![CDATA[public class IndexBuffer : GraphicsResource]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="IndexBuffer(GraphicsDevice, IndexElementSize, Int32, BufferUsage)">
+      <summary><![CDATA[Initializes a new instance of the IndexBuffer class.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         graphicsDevice As GraphicsDevice, _
+         indexElementSize As IndexElementSize, _
+         indexCount As Integer, _
+         usage As BufferUsage _
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The GraphicsDevice object to associate with the index buffer.]]></parameter>
+        <parameter name="indexElementSize" type="Object"><![CDATA[Type: IndexElementSize The size (in bits) of each index.]]></parameter>
+        <parameter name="indexCount" type="Object"><![CDATA[Type: Int32 The number of indices.]]></parameter>
+        <parameter name="usage" type="Object"><![CDATA[Type: BufferUsage Behavior options.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="IndexBuffer(GraphicsDevice, Type, Int32, ResourceUsage, ResourceManagementMode)">
+      <summary><![CDATA[Initializes a new instance of the IndexBuffer class.]]></summary>
+      <syntax><![CDATA[public IndexBuffer (
+         GraphicsDevice graphicsDevice,
+         Type indexType,
+         int elementCount,
+         ResourceUsage usage,
+         ResourceManagementMode resourceManagementMode
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice object to associate with the index buffer.]]></parameter>
+        <parameter name="indexType" type="Type"><![CDATA[The type to use for index values.]]></parameter>
+        <parameter name="elementCount" type="int"><![CDATA[The number of values in the buffer.]]></parameter>
+        <parameter name="usage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this index buffer resource. It is good practice to match the parameter with the createOptions parameter in the GraphicsDevice constructor. If resourceManagementMode is ResourceManagementMode.Automatic , this value cannot be ResourceUsage.Dynamic .]]></parameter>
+        <parameter name="resourceManagementMode" type="ResourceManagementMode"><![CDATA[The memory management mode to use for this index buffer resource. If this value is ResourceManagementMode.Automatic , the runtime will recreate the resource when the graphics device is reset. If this value is ResourceManagementMode.Manual , this resource should be reinitialized when the graphics device is reset.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="IndexBuffer(GraphicsDevice, Int32, ResourceUsage, ResourceManagementMode, IndexElementSize)">
+      <summary><![CDATA[Initializes a new instance of the IndexBuffer class.]]></summary>
+      <syntax><![CDATA[public IndexBuffer (
+         GraphicsDevice graphicsDevice,
+         int sizeInBytes,
+         ResourceUsage usage,
+         ResourceManagementMode resourceManagementMode,
+         IndexElementSize elementSize
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice object to associate with the index buffer.]]></parameter>
+        <parameter name="sizeInBytes" type="int"><![CDATA[The size, in bytes, of the index buffer.]]></parameter>
+        <parameter name="usage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this index buffer resource. It is good practice to match the parameter with the createOptions parameter in the GraphicsDevice constructor. If resourceManagementMode is ResourceManagementMode.Automatic , this value cannot be ResourceUsage.Dynamic .]]></parameter>
+        <parameter name="resourceManagementMode" type="ResourceManagementMode"><![CDATA[The memory management mode to use for this index buffer resource. If this value is ResourceManagementMode.Automatic , the runtime will recreate the resource when the graphics device is reset. If this value is ResourceManagementMode.Manual , this resource should be reinitialized when the graphics device is reset.]]></parameter>
+        <parameter name="elementSize" type="IndexElementSize"><![CDATA[The size, in bits, of an index element.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="IndexBuffer(GraphicsDevice, Int32, ResourceUsage, IndexElementSize)">
+      <summary><![CDATA[Initializes a new instance of the IndexBuffer class.]]></summary>
+      <syntax><![CDATA[public IndexBuffer (
+         GraphicsDevice graphicsDevice,
+         int sizeInBytes,
+         ResourceUsage usage,
+         IndexElementSize elementSize
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice object to associate with the index buffer.]]></parameter>
+        <parameter name="sizeInBytes" type="int"><![CDATA[The size, in bytes, of the index buffer.]]></parameter>
+        <parameter name="usage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this index buffer resource. It is good practice to match the parameter with the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
+        <parameter name="elementSize" type="IndexElementSize"><![CDATA[The size, in bits, of an index element.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="IndexBuffer(GraphicsDevice, Type, Int32, BufferUsage)">
+      <summary><![CDATA[Initializes a new instance of the IndexBuffer class.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         graphicsDevice As GraphicsDevice, _
+         indexType As Type, _
+         indexCount As Integer, _
+         usage As BufferUsage _
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The GraphicsDevice object to associate with the index buffer.]]></parameter>
+        <parameter name="indexType" type="Object"><![CDATA[Type: Type The index value type.]]></parameter>
+        <parameter name="indexCount" type="Object"><![CDATA[Type: Int32 The number of indices.]]></parameter>
+        <parameter name="usage" type="Object"><![CDATA[Type: BufferUsage Behavior options.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="IndexBuffer(GraphicsDevice, Type, Int32, ResourceUsage)">
+      <summary><![CDATA[Initializes a new instance of the IndexBuffer class.]]></summary>
+      <syntax><![CDATA[public IndexBuffer (
+         GraphicsDevice graphicsDevice,
+         Type indexType,
+         int elementCount,
+         ResourceUsage usage
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice object to associate with the index buffer.]]></parameter>
+        <parameter name="indexType" type="Type"><![CDATA[The type to use for index values.]]></parameter>
+        <parameter name="elementCount" type="int"><![CDATA[The number of values in the buffer.]]></parameter>
+        <parameter name="usage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this index buffer resource. It is good practice to match the parameter with the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="BufferUsage" type="BufferUsage" access="get">
+      <summary><![CDATA[Gets the state of the related BufferUsage enumeration.]]></summary>
+      <syntax><![CDATA[public BufferUsage BufferUsage { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IndexCount" type="int" access="get">
+      <summary><![CDATA[Gets the number of indices in this buffer.]]></summary>
+      <syntax><![CDATA[public int IndexCount { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="IndexElementSize" type="IndexElementSize" access="get">
+      <summary><![CDATA[Gets or sets a value indicating the size of this index element.]]></summary>
+      <syntax><![CDATA[public IndexElementSize IndexElementSize { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ResourceManagementMode" type="ResourceManagementMode" access="get">
+      <summary><![CDATA[Gets the memory management mode for this index buffer resource.]]></summary>
+      <syntax><![CDATA[public ResourceManagementMode ResourceManagementMode { get; }]]></syntax>
+      <remarks><![CDATA[If this value is ResourceManagementMode.Automatic , IndexBuffer.ResourceUsage cannot be ResourceUsage.Dynamic .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ResourceUsage" type="ResourceUsage" access="get">
+      <summary><![CDATA[Gets a set of options identifying the behaviors of this resource.]]></summary>
+      <syntax><![CDATA[public ResourceUsage ResourceUsage { get; }]]></syntax>
+      <remarks><![CDATA[If ResourceManagementMode is ResourceManagementMode.Automatic , this value cannot be ResourceUsage.Dynamic .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SizeInBytes" type="int" access="get">
+      <summary><![CDATA[Gets the size, in bytes, of this IndexBuffer.]]></summary>
+      <syntax><![CDATA[public int SizeInBytes { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected override void Dispose (
+         bool 
+)]]></syntax>
+          <remarks><![CDATA[This method is called by the public Dispose method and the Finalize method. Dispose invokes the protected Dispose(Boolean) method with the disposing parameter set to true . Finalize invokes Dispose(Boolean) with disposing set to false . When the disposing parameter is true , this method releases all resources held by any managed objects that this IndexBuffer references. This method invokes the Dispose method of each referenced object. Note Notes to Inheritors Dispose can be called multiple times by other objects. When overriding Dispose(Boolean) , be careful not to reference objects disposed of in an earlier call to Dispose .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Gets a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Gets a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current IndexBuffer .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="bool" isStatic="true">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="IndexBuffer, IndexBuffer">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         IndexBuffer left,
+         IndexBuffer right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="IndexBuffer"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="IndexBuffer"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="bool" isStatic="true">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="IndexBuffer, IndexBuffer">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         IndexBuffer left,
+         IndexBuffer right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="IndexBuffer"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="IndexBuffer"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

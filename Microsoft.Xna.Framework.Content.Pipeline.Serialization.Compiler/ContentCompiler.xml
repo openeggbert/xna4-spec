@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentCompiler" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler">
+  <summary><![CDATA[Provides methods for writing compiled binary format.]]></summary>
+  <syntax><![CDATA[public sealed class ContentCompiler]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="GetTypeWriter" returnType="void">
+      <summary><![CDATA[Retrieves the worker writer for the specified type.]]></summary>
+      <overloads>
+        <overload signature="GetTypeWriter()">
+          <summary><![CDATA[Retrieves the worker writer for the specified type.]]></summary>
+          <syntax><![CDATA[public ContentTypeWriter GetTypeWriter (
+         Type type
+)]]></syntax>
+          <parameters>
+            <parameter name="type" type="Type"><![CDATA[The type.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The worker writer.]]></returns>
+          <remarks><![CDATA[This should be called from the ContentTypeWriter.Initialize method.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

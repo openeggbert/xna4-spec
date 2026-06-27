@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PacketReader" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="BinaryReader">
+  <summary><![CDATA[Provides common functionality for efficiently reading incoming network packets.]]></summary>
+  <syntax><![CDATA[public class PacketReader : BinaryReader]]></syntax>
+  <remarks><![CDATA[Commonly, your multiplayer game should create a single PacketReader instance at startup and then reuse it whenever a packet needs to be read. To read the packet, pass the PacketReader instance to ReceiveData and then use various Read methods to extract the data.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="PacketReader(Int32)">
+      <summary><![CDATA[Initializes an empty instance of PacketReader with the specified options.]]></summary>
+      <syntax><![CDATA[public PacketReader (
+         int capacity
+)]]></syntax>
+      <parameters>
+        <parameter name="capacity" type="int"><![CDATA[Initial capacity for a received network packet.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="PacketReader()">
+      <summary><![CDATA[Initializes an empty instance of PacketReader.]]></summary>
+      <syntax><![CDATA[public PacketReader ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Length" type="int" access="get">
+      <summary><![CDATA[Gets the length of the packet being read.]]></summary>
+      <syntax><![CDATA[public int Length { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Position" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets the current packet read position.]]></summary>
+      <syntax><![CDATA[public int Position { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="ReadColor" returnType="void">
+      <summary><![CDATA[Reads a Color value.]]></summary>
+      <overloads>
+        <overload signature="ReadColor()">
+          <summary><![CDATA[Reads a Color value.]]></summary>
+          <syntax><![CDATA[public Color ReadColor ()]]></syntax>
+          <returns><![CDATA[Color data received from the network packet.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadDouble" returnType="void">
+      <summary><![CDATA[Reads an 8-byte floating point value.]]></summary>
+      <overloads>
+        <overload signature="ReadDouble()">
+          <summary><![CDATA[Reads an 8-byte floating point value.]]></summary>
+          <syntax><![CDATA[public override double ReadDouble ()]]></syntax>
+          <returns><![CDATA[8-byte floating point value from the received network packet.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadMatrix" returnType="void">
+      <summary><![CDATA[Reads a Matrix value.]]></summary>
+      <overloads>
+        <overload signature="ReadMatrix()">
+          <summary><![CDATA[Reads a Matrix value.]]></summary>
+          <syntax><![CDATA[public Matrix ReadMatrix ()]]></syntax>
+          <returns><![CDATA[Matrix data from the received network packet.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadQuaternion" returnType="void">
+      <summary><![CDATA[Reads a Quaternion value.]]></summary>
+      <overloads>
+        <overload signature="ReadQuaternion()">
+          <summary><![CDATA[Reads a Quaternion value.]]></summary>
+          <syntax><![CDATA[public Quaternion ReadQuaternion ()]]></syntax>
+          <returns><![CDATA[Quaternion data from the received network packet.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadSingle" returnType="void">
+      <summary><![CDATA[Reads a 4-byte floating point value.]]></summary>
+      <overloads>
+        <overload signature="ReadSingle()">
+          <summary><![CDATA[Reads a 4-byte floating point value.]]></summary>
+          <syntax><![CDATA[public override float ReadSingle ()]]></syntax>
+          <returns><![CDATA[Reads a 4-byte floating point value from the received network packet.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadVector2" returnType="void">
+      <summary><![CDATA[Reads a Vector2 value.]]></summary>
+      <overloads>
+        <overload signature="ReadVector2()">
+          <summary><![CDATA[Reads a Vector2 value.]]></summary>
+          <syntax><![CDATA[public Vector2 ReadVector2 ()]]></syntax>
+          <returns><![CDATA[Vector data from the received network packet.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadVector3" returnType="void">
+      <summary><![CDATA[Reads a Vector3 value.]]></summary>
+      <overloads>
+        <overload signature="ReadVector3()">
+          <summary><![CDATA[Reads a Vector3 value.]]></summary>
+          <syntax><![CDATA[public Vector3 ReadVector3 ()]]></syntax>
+          <returns><![CDATA[Vector data from the received network packet.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadVector4" returnType="void">
+      <summary><![CDATA[Reads a Vector3 value.]]></summary>
+      <overloads>
+        <overload signature="ReadVector4()">
+          <summary><![CDATA[Reads a Vector3 value.]]></summary>
+          <syntax><![CDATA[public Vector4 ReadVector4 ()]]></syntax>
+          <returns><![CDATA[Vector data from the received network packet.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

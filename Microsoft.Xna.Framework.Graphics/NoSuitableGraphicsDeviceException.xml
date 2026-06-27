@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NoSuitableGraphicsDeviceException" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="Exception">
+  <summary><![CDATA[Thrown when no available graphics device fits the given device preferences.]]></summary>
+  <syntax><![CDATA[public sealed class NoSuitableGraphicsDeviceException : Exception]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="NoSuitableGraphicsDeviceException(String)">
+      <summary><![CDATA[Create a new instance of this object.]]></summary>
+      <syntax><![CDATA[public NoSuitableGraphicsDeviceException (
+         string message
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NoSuitableGraphicsDeviceException(String, Exception)">
+      <summary><![CDATA[Create a new instance of this object.]]></summary>
+      <syntax><![CDATA[public NoSuitableGraphicsDeviceException (
+         string message,
+         Exception inner
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="inner" type="Exception"><![CDATA[The exception that is the cause of the current exception. If the inner parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NoSuitableGraphicsDeviceException()">
+      <summary><![CDATA[Create a new instance of this object.]]></summary>
+      <syntax><![CDATA[public NoSuitableGraphicsDeviceException ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

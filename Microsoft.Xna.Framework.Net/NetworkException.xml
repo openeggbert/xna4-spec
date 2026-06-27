@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NetworkException" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="Exception">
+  <summary><![CDATA[Thrown if there is a network communication failure.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public class NetworkException : Exception]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="NetworkException(String)">
+      <summary><![CDATA[Initializes a new instance of NetworkException with the specified error message.]]></summary>
+      <syntax><![CDATA[public NetworkException (
+         string message
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NetworkException(SerializationInfo, StreamingContext)">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[protected NetworkException (
+         SerializationInfo info,
+         StreamingContext context
+)]]></syntax>
+      <parameters>
+        <parameter name="info" type="SerializationInfo"><![CDATA[Describes the network data being sent or received when the exception occurred.]]></parameter>
+        <parameter name="context" type="StreamingContext"><![CDATA[Describes the stream where the exception occurred.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NetworkException()">
+      <summary><![CDATA[Creates an empty instance of NetworkException.]]></summary>
+      <syntax><![CDATA[public NetworkException ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NetworkException(String, Exception)">
+      <summary><![CDATA[Initializes a new instance of NetworkException with the specified error message and the inner exception.]]></summary>
+      <syntax><![CDATA[public NetworkException (
+         string message,
+         Exception innerException
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="innerException" type="Exception"><![CDATA[The inner exception related to this exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

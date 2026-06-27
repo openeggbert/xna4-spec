@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AnimationKeyframe" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          interfaces="IComparable&amp;lt;AnimationKeyframe&amp;gt;">
+  <summary><![CDATA[Provides methods and properties for managing a keyframe. A keyframe describes the position of an animation channel at a single point in time.]]></summary>
+  <syntax><![CDATA[public sealed class AnimationKeyframe : IComparable&lt;AnimationKeyframe&gt;]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="AnimationKeyframe(TimeSpan, Matrix)">
+      <summary><![CDATA[Initializes a new instance of AnimationKeyframe with the specified time offsetand transform.]]></summary>
+      <syntax><![CDATA[public AnimationKeyframe (
+         TimeSpan time,
+         Matrix transform
+)]]></syntax>
+      <parameters>
+        <parameter name="time" type="TimeSpan"><![CDATA[Time offset of the keyframe.]]></parameter>
+        <parameter name="transform" type="Matrix"><![CDATA[Position of the keyframe.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Time" type="TimeSpan" access="get">
+      <summary><![CDATA[Gets the time offset from the start of the animation to the position described by this keyframe.]]></summary>
+      <syntax><![CDATA[public TimeSpan Time { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Transform" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the position described by this keyframe.]]></summary>
+      <syntax><![CDATA[public Matrix Transform { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="CompareTo" returnType="void">
+      <summary><![CDATA[Compares this instance of a keyframe to another.]]></summary>
+      <overloads>
+        <overload signature="CompareTo()">
+          <summary><![CDATA[Compares this instance of a keyframe to another.]]></summary>
+          <syntax><![CDATA[public int CompareTo (
+         AnimationKeyframe other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="AnimationKeyframe"><![CDATA[Keyframe being compared to.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Indication of their relative values.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="RenderState" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines the render state of a graphics device.]]></summary>
+  <syntax><![CDATA[public sealed class RenderState]]></syntax>
+  <remarks><![CDATA[The render state of the device may also be changed by setting the render state in an effect file. For more information, please see Effect States .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="AlphaBlendEnable" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets a value to enable alpha-blended transparency. The default value is false.]]></summary>
+      <syntax><![CDATA[public bool AlphaBlendEnable { get; set; }]]></syntax>
+      <remarks><![CDATA[The alpha value of a color controls its transparency. Enabling alpha blending with AlphaBlendEnable allows colors, materials, and textures on a surface to be blended with transparency onto another surface. Alpha blending is determined by the SourceBlend and DestinationBlend properties. With the default BlendFunction , the source pixel times the SourceBlend is added to the destination pixel (the pixel on the back buffer) times the DestinationBlend to produce a color that is a blend of the two pixel colors. The BlendFunction determines the operation used on the outcome of the source blend and destination blend components.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="AlphaBlendOperation" type="BlendFunction" access="get;set">
+      <summary><![CDATA[Gets or sets the arithmetic operation applied to separate alpha blending. The default is BlendFunction.Add.]]></summary>
+      <syntax><![CDATA[public BlendFunction AlphaBlendOperation { get; set; }]]></syntax>
+      <remarks><![CDATA[This value is ignored unless SeparateAlphaBlendEnabled is true . Warning This value is used for blending the alpha channel only, not for alpha blending of the entire pixel. For setting the blending mode for alpha blending operation, see BlendFunction .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="AlphaDestinationBlend" type="Blend" access="get;set">
+      <summary><![CDATA[Gets or sets the separate alpha channel blending factor. This factor represents a destination value by which to multiply the alpha channel only. The default is Blend.One.]]></summary>
+      <syntax><![CDATA[public Blend AlphaDestinationBlend { get; set; }]]></syntax>
+      <remarks><![CDATA[This value is ignored unless SeparateAlphaBlendEnabled is true . Warning This value is used for blending the alpha channel only, not for alpha blending of the entire pixel. For setting the blending mode for alpha blending of the destination color, see DestinationBlend .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="AlphaFunction" type="CompareFunction" access="get;set">
+      <summary><![CDATA[Gets or sets the comparison function for the alpha test. The default is CompareFunction.Always.]]></summary>
+      <syntax><![CDATA[public CompareFunction AlphaFunction { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="AlphaSourceBlend" type="Blend" access="get;set">
+      <summary><![CDATA[Gets or sets the separate alpha channel blending factor. This factor represents a value by which to multiply the alpha channel only. The default is Blend.One.]]></summary>
+      <syntax><![CDATA[public Blend AlphaSourceBlend { get; set; }]]></syntax>
+      <remarks><![CDATA[Warning This value is used for blending the alpha channel only, not for alpha blending of the entire pixel. For setting the blending mode for alpha blending of the source color, see SourceBlend . This value is ignored unless SeparateAlphaBlendEnabled is true .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="AlphaTestEnable" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets a render state that enables a per-pixel alpha test. The default value is false.]]></summary>
+      <syntax><![CDATA[public bool AlphaTestEnable { get; set; }]]></syntax>
+      <remarks><![CDATA[If the test passes, the pixel is processed by the frame buffer. Otherwise, all frame-buffer processing is skipped for the pixel. The test is done by comparing the incoming alpha value with the reference alpha value, using the comparison function provided by AlphaFunction . The reference alpha value is determined by the value set for ReferenceAlpha .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="BlendFactor" type="Color" access="get;set">
+      <summary><![CDATA[Gets or sets the color used for a constant-blend factor during alpha blending. The default is Color.White.]]></summary>
+      <syntax><![CDATA[public Color BlendFactor { get; set; }]]></syntax>
+      <remarks><![CDATA[Blend factoring during alpha blending is available if SupportsBlendFactor or SupportsBlendFactor is true .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="BlendFunction" type="BlendFunction" access="get;set">
+      <summary><![CDATA[Gets or sets a value to select the arithmetic operation to apply to the source and destination pixel components when AlphaBlendEnable is set to true. The default is BlendFunction.Add.]]></summary>
+      <syntax><![CDATA[public BlendFunction BlendFunction { get; set; }]]></syntax>
+      <remarks><![CDATA[The alpha value of a color controls its transparency. Enabling alpha blending with AlphaBlendEnable allows colors, materials, and textures on a surface to be blended with transparency onto another surface. Alpha blending is determined by the SourceBlend and DestinationBlend properties. With the default BlendFunction , the source pixel times the SourceBlend is added to the destination pixel (the pixel on the back buffer) times the DestinationBlend to produce a color that is a blend of the two pixel colors. The BlendFunction determines the operation used on the outcome of the source blend and destination blend components.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ColorWriteChannels" type="ColorWriteChannels" access="get;set">
+      <summary><![CDATA[Gets or sets a value that enables a per-channel write for the render target color buffer. The default value is ColorWriteChannels.None.]]></summary>
+      <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels { get; set; }]]></syntax>
+      <remarks><![CDATA[Color writing is available if SupportsColorWrite is true .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ColorWriteChannels1" type="ColorWriteChannels" access="get;set">
+      <summary><![CDATA[Gets or sets a value that enables a per-channel write for the render target color buffer. The default value is ColorWriteChannels.None.]]></summary>
+      <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels1 { get; set; }]]></syntax>
+      <remarks><![CDATA[This property works in addition to the ColorWriteChannels property. Color writing is available if SupportsColorWrite is true .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ColorWriteChannels2" type="ColorWriteChannels" access="get;set">
+      <summary><![CDATA[Gets or sets a value that enables a per-channel write for the render target color buffer. The default value is ColorWriteChannels.None.]]></summary>
+      <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels2 { get; set; }]]></syntax>
+      <remarks><![CDATA[This property works in addition to the ColorWriteChannels property. Color writing is available if SupportsColorWrite is true .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ColorWriteChannels3" type="ColorWriteChannels" access="get;set">
+      <summary><![CDATA[Gets or sets a value that enables a per-channel write for the render target color buffer. The default value is ColorWriteChannels.None.]]></summary>
+      <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels3 { get; set; }]]></syntax>
+      <remarks><![CDATA[This property works in addition to the ColorWriteChannels property. Color writing is available if SupportsColorWrite is true .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CounterClockwiseStencilDepthBufferFail" type="StencilOperation" access="get;set">
+      <summary><![CDATA[Gets or sets the stencil operation to perform if the stencil test passes and the depth-buffer test fails for a counterclockwise triangle. The default is StencilOperation.Keep.]]></summary>
+      <syntax><![CDATA[public StencilOperation CounterClockwiseStencilDepthBufferFail { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CounterClockwiseStencilFail" type="StencilOperation" access="get;set">
+      <summary><![CDATA[Gets or sets the stencil operation to perform if the stencil test fails for a counterclockwise triangle. The default is StencilOperation.Keep.]]></summary>
+      <syntax><![CDATA[public StencilOperation CounterClockwiseStencilFail { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CounterClockwiseStencilFunction" type="CompareFunction" access="get;set">
+      <summary><![CDATA[Gets or sets the comparison function to use for counterclockwise stencil tests. The default is CompareFunction.Always.]]></summary>
+      <syntax><![CDATA[public CompareFunction CounterClockwiseStencilFunction { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CounterClockwiseStencilPass" type="StencilOperation" access="get;set">
+      <summary><![CDATA[Gets or sets the stencil operation to perform if the stencil and z-tests pass for a counterclockwise triangle. The default is StencilOperation.Keep.]]></summary>
+      <syntax><![CDATA[public StencilOperation CounterClockwiseStencilPass { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CullMode" type="CullMode" access="get;set">
+      <summary><![CDATA[Specifies how back-facing triangles are culled, if at all. The default value is CullMode.CounterClockwise.]]></summary>
+      <syntax><![CDATA[public CullMode CullMode { get; set; }]]></syntax>
+      <remarks><![CDATA[When drawing sprites, SpriteBatch.Begin does not save your current render state, and will change certain render state properties that may make 3D objects render incorrectly. This includes setting CullMode to CullMode.CullCounterClockwiseFace . You can choose to either reset the render state yourself after the call to SpriteBatch.End , or call SpriteBatch.Begin and pass in SaveStateMode.SaveState , which will restore the render state after sprites are drawn.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DepthBias" type="float" access="get;set">
+      <summary><![CDATA[Sets or retrieves the depth bias for polygons. The default value is 0.]]></summary>
+      <syntax><![CDATA[public float DepthBias { get; set; }]]></syntax>
+      <remarks><![CDATA[This property specifies an integer value in the range of 0 through 16 that causes polygons that are physically coplanar to appear separate. Polygons with a high z-bias value appear in front of polygons with a low value, without requiring sorting for drawing order. For example, polygons with a value of 1 appear in front of polygons with a value of 0.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DepthBufferEnable" type="bool" access="get;set">
+      <summary><![CDATA[Enables or disables depth buffering. The default is true.]]></summary>
+      <syntax><![CDATA[public bool DepthBufferEnable { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DepthBufferFunction" type="CompareFunction" access="get;set">
+      <summary><![CDATA[Gets or sets the comparison function for the depth-buffer test. The default is CompareFunction.LessEqual]]></summary>
+      <syntax><![CDATA[public CompareFunction DepthBufferFunction { get; set; }]]></syntax>
+      <remarks><![CDATA[The depth value of the pixel is compared to the depth-buffer value. If the depth value of the pixel passes the comparison function, the pixel is written.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DepthBufferWriteEnable" type="bool" access="get;set">
+      <summary><![CDATA[Enables or disables writing to the depth buffer. The default is true.]]></summary>
+      <syntax><![CDATA[public bool DepthBufferWriteEnable { get; set; }]]></syntax>
+      <remarks><![CDATA[This property enables an application to prevent the system from updating the depth buffer with new depth values. If false , depth comparisons are still made according to the render state DepthBufferFunction , assuming that depth buffering is taking place, but depth values are not written to the buffer.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DestinationBlend" type="Blend" access="get;set">
+      <summary><![CDATA[Gets or sets the color blending factor. This factor represents a value by which to multiply the destination pixel color before adding it to the source pixel to produce a color that is a blend of the two. The default is Blend.Zero.]]></summary>
+      <syntax><![CDATA[public Blend DestinationBlend { get; set; }]]></syntax>
+      <remarks><![CDATA[The alpha value of a color controls its transparency. Enabling alpha blending with AlphaBlendEnable allows colors, materials, and textures on a surface to be blended with transparency onto another surface. Alpha blending is determined by the SourceBlend and DestinationBlend properties. With the default BlendFunction , the source pixel times the SourceBlend is added to the destination pixel (the pixel on the back buffer) times the DestinationBlend to produce a color that is a blend of the two pixel colors. The BlendFunction determines the operation used on the outcome of the source blend and destination blend components.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FillMode" type="FillMode" access="get;set">
+      <summary><![CDATA[Represents the fill mode. The default is FillMode.Solid.]]></summary>
+      <syntax><![CDATA[public FillMode FillMode { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FogColor" type="Color" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public Color FogColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FogDensity" type="float" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public float FogDensity { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid fog density values range from 0.0 through 1.0.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FogEnable" type="bool" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public bool FogEnable { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FogEnd" type="float" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public float FogEnd { get; set; }]]></syntax>
+      <remarks><![CDATA[Depth is specified in world space for vertex fog, and in either device space [0.0, 1.0] or world space for pixel fog. For pixel fog, these values are in device space when the system uses z for fog calculations, or in world space when the system uses eye-relative fog (w-fog).]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FogStart" type="float" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public float FogStart { get; set; }]]></syntax>
+      <remarks><![CDATA[Depth is specified in world space for vertex fog, and in either device space [0.0, 1.0] or world space for pixel fog. For pixel fog, these values are in device space when the system uses z for fog calculations, or in world space when the system uses eye-relative fog (w-fog).]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FogTableMode" type="FogMode" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public FogMode FogTableMode { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FogVertexMode" type="FogMode" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public FogMode FogVertexMode { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MultiSampleAntiAlias" type="bool" access="get;set">
+      <summary><![CDATA[Enables or disables multisample antialiasing. The default is true.]]></summary>
+      <syntax><![CDATA[public bool MultiSampleAntiAlias { get; set; }]]></syntax>
+      <remarks><![CDATA[When multisample antialiasing is enabled, the multiple samples are computed so that full-scene antialiasing is performed by sampling at different sample positions for each multiple sample. When disabled, the multiple samples are all written with the same sample value, sampled at the pixel center, which allows non-antialiased rendering to a multisample buffer. This render state has no effect when rendering to a single sample buffer.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="MultiSampleMask" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets a bitmask controlling modification of the samples in a multisample render target. The default is 0xffffffff.]]></summary>
+      <syntax><![CDATA[public int MultiSampleMask { get; set; }]]></syntax>
+      <remarks><![CDATA[This render state enables use of a multisample buffer as an accumulation buffer, doing multipass rendering of geometry where each pass updates a subset of samples. Given n multisamples and k enabled samples, the resulting intensity of the rendered image should be k / n . Each component RGB of every pixel is factored by k / n .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PointSize" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the size to use for point size computation in cases where point size is not specified for each vertex. The default value is the value a driver returns. If a driver returns 0 or 1, the default value is 64, which allows software point size emulation.]]></summary>
+      <syntax><![CDATA[public float PointSize { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PointSizeMax" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the maximum size of point primitives. The default is 64.0f.]]></summary>
+      <syntax><![CDATA[public float PointSizeMax { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PointSizeMin" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the minimum size of point primitives. The default is 1.0f.]]></summary>
+      <syntax><![CDATA[public float PointSizeMin { get; set; }]]></syntax>
+      <remarks><![CDATA[Point primitives are clamped to this size during rendering. Setting this to values smaller than 1.0 results in points dropping out when the point does not cover a pixel center and antialiasing is disabled or, when antialiasing is enabled, being rendered with reduced intensity.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PointSpriteEnable" type="bool" access="get;set">
+      <summary><![CDATA[Enables or disables full texture mapping on each point. The default is false.]]></summary>
+      <syntax><![CDATA[public bool PointSpriteEnable { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RangeFogEnable" type="bool" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public bool RangeFogEnable { get; set; }]]></syntax>
+      <remarks><![CDATA[In range-based fog, the distance of an object from the viewer is used to compute fog effects, not the depth of the object in the scene. In range-based fog, all fog methods work as usual, except that they use range instead of depth in the computations. Range is the correct factor to use for fog computations, but depth is commonly used instead because range is time-consuming to compute and depth is generally already available. Using depth to calculate fog has the undesirable effect of having the fogginess of peripheral objects change as the viewer's eye moves - in this case, the depth changes and the range remains constant. Because no hardware currently supports per-pixel range-based fog, range correction is offered only for vertex fog.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ReferenceAlpha" type="int" access="get;set">
+      <summary><![CDATA[Specifies a reference alpha value against which pixels are tested when alpha testing is enabled. The default value is 0.]]></summary>
+      <syntax><![CDATA[public int ReferenceAlpha { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ReferenceStencil" type="int" access="get;set">
+      <summary><![CDATA[Specifies a reference value to use for the stencil test. The default is 0.]]></summary>
+      <syntax><![CDATA[public int ReferenceStencil { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ScissorTestEnable" type="bool" access="get;set">
+      <summary><![CDATA[Enables or disables scissor testing. The default is false.]]></summary>
+      <syntax><![CDATA[public bool ScissorTestEnable { get; set; }]]></syntax>
+      <remarks><![CDATA[With scissor testing enabled, the graphics device will only draw onto parts of the screen that fall within the specified ScissorRectangle .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SeparateAlphaBlendEnabled" type="bool" access="get;set">
+      <summary><![CDATA[Enables or disables the separate blend mode for the alpha channel. The default is false.]]></summary>
+      <syntax><![CDATA[public bool SeparateAlphaBlendEnabled { get; set; }]]></syntax>
+      <remarks><![CDATA[When set to false , the render-target blending factors and operations applied to alpha are forced to be the same as those defined for color. This mode is effectively hard-wired to false on implementations that don't set SupportsSeparateAlphaBlend to true . The AlphaSourceBlend and AlphaDestinationBlend render states determine the type of separate alpha blending.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SlopeScaleDepthBias" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets a value used to determine how much bias can be applied to coplanar primitives to reduce flimmering z-fighting. The default is 0.]]></summary>
+      <syntax><![CDATA[public float SlopeScaleDepthBias { get; set; }]]></syntax>
+      <remarks><![CDATA[Polygons that are coplanar in your 3D space can be made to appear as if they are not coplanar by adding a z-bias to each one. An application can help ensure that coplanar polygons are rendered properly by adding a bias to the z-values that the system uses when rendering sets of coplanar polygons. The following formula shows how to calculate the bias to be applied to coplanar primitives. bias = ( m × SlopeScaleDepthBias ) + DepthBias Where m is the maximum depth slope of the triangle being rendered, defined as: m = max ( abs (delta z / delta x), abs (delta z / delta y) )]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SourceBlend" type="Blend" access="get;set">
+      <summary><![CDATA[Gets or sets the color blending factor. This factor represents a value by which to multiply the source pixel color before adding it to the destination pixel to produce a color that is a blend of the two. The default is Blend.One.]]></summary>
+      <syntax><![CDATA[public Blend SourceBlend { get; set; }]]></syntax>
+      <remarks><![CDATA[The alpha value of a color controls its transparency. Enabling alpha blending with AlphaBlendEnable allows colors, materials, and textures on a surface to be blended with transparency onto another surface. Alpha blending is determined by the SourceBlend and DestinationBlend properties. With the default BlendFunction , the source pixel times the SourceBlend is added to the destination pixel (the pixel on the back buffer) times the DestinationBlend to produce a color that is a blend of the two pixel colors. The BlendFunction determines the operation used on the outcome of the source blend and destination blend components.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StencilDepthBufferFail" type="StencilOperation" access="get;set">
+      <summary><![CDATA[Gets or sets the stencil operation to perform if the stencil test passes and the depth-test fails. The default is StencilOperation.Keep.]]></summary>
+      <syntax><![CDATA[public StencilOperation StencilDepthBufferFail { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StencilEnable" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets stencil enabling. The default is false.]]></summary>
+      <syntax><![CDATA[public bool StencilEnable { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StencilFail" type="StencilOperation" access="get;set">
+      <summary><![CDATA[Gets or sets the stencil operation to perform if the stencil test fails. The default is StencilOperation.Keep.]]></summary>
+      <syntax><![CDATA[public StencilOperation StencilFail { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StencilFunction" type="CompareFunction" access="get;set">
+      <summary><![CDATA[Gets or sets the comparison function for the stencil test. The default is CompareFunction.Always.]]></summary>
+      <syntax><![CDATA[public CompareFunction StencilFunction { get; set; }]]></syntax>
+      <remarks><![CDATA[The comparison function is used to compare the reference value to a stencil buffer entry. This comparison applies only to the bits in the reference value and stencil buffer entry that are set in the stencil mask by this property. If the comparison is true, the stencil test passes.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StencilMask" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets the mask applied to the reference value and each stencil buffer entry to determine the significant bits for the stencil test. The default mask is Int32.MaxValue.]]></summary>
+      <syntax><![CDATA[public int StencilMask { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StencilPass" type="StencilOperation" access="get;set">
+      <summary><![CDATA[Gets or sets the stencil operation to perform if the stencil test passes. The default is StencilOperation.Keep.]]></summary>
+      <syntax><![CDATA[public StencilOperation StencilPass { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StencilWriteMask" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets the write mask applied to values written into the stencil buffer. The default mask is Int32.MaxValue.]]></summary>
+      <syntax><![CDATA[public int StencilWriteMask { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TwoSidedStencilMode" type="bool" access="get;set">
+      <summary><![CDATA[Enables or disables two-sided stenciling. The default is false.]]></summary>
+      <syntax><![CDATA[public bool TwoSidedStencilMode { get; set; }]]></syntax>
+      <remarks><![CDATA[The application should set CullMode to CullMode to enable two-sided stencil mode. If the triangle winding order is clockwise, the StencilFunction will be used. If the winding order is counterclockwise, the CounterClockwiseStencilFunction will be used.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap0" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap0 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap1" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap1 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap10" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap10 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap11" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap11 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap12" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap12 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap13" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap13 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap14" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap14 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap15" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap15 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap2" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap2 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap3" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap3 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap4" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap4 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap5" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap5 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap6" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap6 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap7" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap7 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap8" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap8 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Wrap9" type="TextureWrapCoordinates" access="get;set">
+      <summary><![CDATA[Gets or sets the texture-wrapping behavior for multiple sets of texture coordinates. The default value for this render state is TextureWrapCoordinates.Zero (wrapping disabled in all directions).]]></summary>
+      <syntax><![CDATA[public TextureWrapCoordinates Wrap9 { get; set; }]]></syntax>
+      <remarks><![CDATA[Valid values for this render state can be Zero , One , or both. These cause the system to wrap in the direction of the first, second, third, and fourth dimensions, sometimes referred to as the s, t, r, and q directions, for a given texture.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

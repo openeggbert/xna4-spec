@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Microphone" kind="class"
+          namespace="Microsoft.Xna.Framework.Audio"
+          assembly="Microsoft.Xna.Framework.Audio">
+  <summary><![CDATA[Provides properties, methods, and fields and events for capturing audio data with microphones.]]></summary>
+  <syntax><![CDATA[public sealed class Microphone]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="All" type="ReadOnlyCollection&amp;lt;Microphone&amp;gt;" access="get" isStatic="true">
+      <summary><![CDATA[Returns the collection of all currently-available microphones.]]></summary>
+      <syntax><![CDATA[public static ReadOnlyCollection&lt;Microphone&gt; All { get; }]]></syntax>
+      <remarks><![CDATA[Windows Phone Specific Information This property will always return the default microphone on Windows Phone, and it will only return one device.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="BufferDuration" type="TimeSpan" access="get;set">
+      <summary><![CDATA[Gets or sets audio capture buffer duration of the microphone.]]></summary>
+      <syntax><![CDATA[public TimeSpan BufferDuration { get; set; }]]></syntax>
+      <remarks><![CDATA[The duration of the capture buffer must be between 100ms and 1000ms. Additionally, the capture buffer must be 10ms aligned (BufferDuration % 10 == 0). Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. BufferDuration throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Default" type="Microphone" access="get" isStatic="true">
+      <summary><![CDATA[Returns the default attached microphone.]]></summary>
+      <syntax><![CDATA[public static Microphone Default { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="IsHeadset" type="bool" access="get">
+      <summary><![CDATA[Determines if the microphone is a wired headset or a Bluetooth device.]]></summary>
+      <syntax><![CDATA[public bool IsHeadset { get; }]]></syntax>
+      <remarks><![CDATA[Always returns true for Windows Phone devices.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="SampleRate" type="int" access="get">
+      <summary><![CDATA[Returns the sample rate at which the microphone is capturing audio data.]]></summary>
+      <syntax><![CDATA[public int SampleRate { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="State" type="MicrophoneState" access="get">
+      <summary><![CDATA[Returns the recording state of the Microphone object.]]></summary>
+      <syntax><![CDATA[public MicrophoneState State { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetData" returnType="int">
+      <summary><![CDATA[Gets the latest recorded data from the microphone based on the audio capture buffer.]]></summary>
+      <overloads>
+        <overload signature="Byte ">
+          <summary><![CDATA[Gets the latest recorded data from the microphone based on the audio capture buffer.]]></summary>
+          <syntax><![CDATA[public int GetData (
+         byte[] buffer
+)]]></syntax>
+          <parameters>
+            <parameter name="buffer" type="byte[]"><![CDATA[Buffer, in bytes, containing the captured audio data. The audio format must be PCM wave data.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The buffer size, in bytes, of the audio data.]]></returns>
+          <remarks><![CDATA[Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. GetData throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications . For information about an audio format using XNA Game Studio, see Audio API Developers Guide .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="Byte , Int32, Int32">
+          <summary><![CDATA[Gets the latest captured audio data from the microphone based on the specified offset and byte count.]]></summary>
+          <syntax><![CDATA[public int GetData (
+         byte[] buffer,
+         int offset,
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="buffer" type="byte[]"><![CDATA[Buffer, in bytes, containing the captured audio data. The audio format must be PCM wave data.]]></parameter>
+            <parameter name="offset" type="int"><![CDATA[Offset, in bytes, to the starting position of the data.]]></parameter>
+            <parameter name="count" type="int"><![CDATA[Amount, in bytes, of desired audio data.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The buffer size, in bytes, of the audio data.]]></returns>
+          <remarks><![CDATA[For information about an audio format using XNA Game Studio, see Audio API Developers Guide .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetSampleDuration" returnType="void">
+      <summary><![CDATA[Returns the duration of audio playback based on the size of the buffer.]]></summary>
+      <overloads>
+        <overload signature="GetSampleDuration()">
+          <summary><![CDATA[Returns the duration of audio playback based on the size of the buffer.]]></summary>
+          <syntax><![CDATA[public TimeSpan GetSampleDuration (
+         int sizeInBytes
+)]]></syntax>
+          <parameters>
+            <parameter name="sizeInBytes" type="int"><![CDATA[Size, in bytes, of the audio data.]]></parameter>
+          </parameters>
+          <returns><![CDATA[TimeSpan object that represents the duration of the audio playback.]]></returns>
+          <remarks><![CDATA[sizeInBytes must satisfy format alignment restrictions.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetSampleSizeInBytes" returnType="void">
+      <summary><![CDATA[Returns the size of the byte array required to hold the specified duration of audio for this microphone object.]]></summary>
+      <overloads>
+        <overload signature="GetSampleSizeInBytes()">
+          <summary><![CDATA[Returns the size of the byte array required to hold the specified duration of audio for this microphone object.]]></summary>
+          <syntax><![CDATA[public int GetSampleSizeInBytes (
+         TimeSpan duration
+)]]></syntax>
+          <parameters>
+            <parameter name="duration" type="TimeSpan"><![CDATA[TimeSpan object that contains the duration of the audio sample.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Size (10 ms block aligned), in bytes, of the audio buffer.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Start" returnType="void">
+      <summary><![CDATA[Starts microphone audio capture.]]></summary>
+      <overloads>
+        <overload signature="Start()">
+          <summary><![CDATA[Starts microphone audio capture.]]></summary>
+          <syntax><![CDATA[public void Start ()]]></syntax>
+          <remarks><![CDATA[Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. Start throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Stop" returnType="void">
+      <summary><![CDATA[Stops microphone audio capture.]]></summary>
+      <overloads>
+        <overload signature="Stop()">
+          <summary><![CDATA[Stops microphone audio capture.]]></summary>
+          <syntax><![CDATA[public void Stop ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="Name" type="string" isReadOnly="true">
+      <summary><![CDATA[Returns the friendly name of the microphone.]]></summary>
+      <syntax><![CDATA[public readonly string Name]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+    <event name="BufferReady" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+      <summary><![CDATA[Event that occurs when the audio capture buffer is ready to processed.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; BufferReady]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

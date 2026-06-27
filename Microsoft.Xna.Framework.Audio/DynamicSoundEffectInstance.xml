@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="DynamicSoundEffectInstance" kind="class"
+          namespace="Microsoft.Xna.Framework.Audio"
+          assembly="Microsoft.Xna.Framework.Audio"
+          baseClass="SoundEffectInstance">
+  <summary><![CDATA[Provides properties, methods, and events for play back of the audio buffer.]]></summary>
+  <syntax><![CDATA[public sealed class DynamicSoundEffectInstance : SoundEffectInstance]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="DynamicSoundEffectInstance(int, AudioChannels)">
+      <summary><![CDATA[Initializes a new instance of this class, which creates a dynamic sound effect based on the specified sample rate and audio channel.]]></summary>
+      <syntax><![CDATA[public DynamicSoundEffectInstance (
+         int sampleRate,
+         AudioChannels channels
+)]]></syntax>
+      <parameters>
+        <parameter name="sampleRate" type="int"><![CDATA[Sample rate, in Hertz (Hz), of audio content.]]></parameter>
+        <parameter name="channels" type="AudioChannels"><![CDATA[Number of channels in the audio data.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[The sampleRate parameter must between 8000 Hz and 48000 Hz.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="IsLooped" type="Object" access="get;set">
+      <summary><![CDATA[Indicates whether the audio playback of the DynamicSoundEffectInstance object is looped.]]></summary>
+      <syntax><![CDATA[public override bool IsLooped { get; set; }]]></syntax>
+      <remarks><![CDATA[IsLooped will always return false because DynamicSoundEffectInstance instances cannot be looped.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="PendingBufferCount" type="int" access="get">
+      <summary><![CDATA[Returns the number of audio buffers in the queue awaiting playback.]]></summary>
+      <syntax><![CDATA[public int PendingBufferCount { get; }]]></syntax>
+      <remarks><![CDATA[DynamicSoundEffectInstance will update the pending buffer count as each buffer finishes playback. This means the first buffer in the queue is the currently-playing audio buffer.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetSampleDuration" returnType="void">
+      <summary><![CDATA[Returns the sample duration based on the specified size of the audio buffer.]]></summary>
+      <overloads>
+        <overload signature="GetSampleDuration()">
+          <summary><![CDATA[Returns the sample duration based on the specified size of the audio buffer.]]></summary>
+          <syntax><![CDATA[public TimeSpan GetSampleDuration (
+         int sizeInBytes
+)]]></syntax>
+          <parameters>
+            <parameter name="sizeInBytes" type="int"><![CDATA[Size, in bytes, of the audio data.]]></parameter>
+          </parameters>
+          <returns><![CDATA[TimeSpan object that represents the calculated sample duration.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetSampleSizeInBytes" returnType="void">
+      <summary><![CDATA[Returns the size of the audio buffer required to contain audio samples based on the specified duration.]]></summary>
+      <overloads>
+        <overload signature="GetSampleSizeInBytes()">
+          <summary><![CDATA[Returns the size of the audio buffer required to contain audio samples based on the specified duration.]]></summary>
+          <syntax><![CDATA[public int GetSampleSizeInBytes (
+         TimeSpan duration
+)]]></syntax>
+          <parameters>
+            <parameter name="duration" type="TimeSpan"><![CDATA[TimeSpan object that contains the duration of the audio sample.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Size, in bytes, of the audio buffer.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Play" returnType="void">
+      <summary><![CDATA[Begins or resumes audio playback.]]></summary>
+      <overloads>
+        <overload signature="Play()">
+          <summary><![CDATA[Begins or resumes audio playback.]]></summary>
+          <syntax><![CDATA[public override void Play ()]]></syntax>
+          <remarks><![CDATA[Play has no effect if the DynamicSoundEffectInstance object is playing currently. Each platform has limits on the number of sounds playing simultaneously. A InstancePlayLimitException exception is thrown if this limit is exceeded. The following table shows the limits for simultaneous playing sounds based on platform. Platform Number of sounds that can play simultaneously Windows Phone 64 Xbox 360 300 Windows No limit Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. Play throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SubmitBuffer" returnType="void">
+      <summary><![CDATA[Submits an audio buffer for playback. Playback begins at the specifed offset, and the byte count determines the size of the sample played.]]></summary>
+      <overloads>
+        <overload signature="Byte , Int32, Int32">
+          <summary><![CDATA[Submits an audio buffer for playback. Playback begins at the specifed offset, and the byte count determines the size of the sample played.]]></summary>
+          <syntax><![CDATA[public void SubmitBuffer (
+         byte[] buffer,
+         int offset,
+         int count
+)]]></syntax>
+          <parameters>
+            <parameter name="buffer" type="byte[]"><![CDATA[Buffer that contains the audio data. The audio format must be PCM wave data.]]></parameter>
+            <parameter name="offset" type="int"><![CDATA[Offset, in bytes, to the starting position of the data.]]></parameter>
+            <parameter name="count" type="int"><![CDATA[Amount, in bytes, of data sent.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[The buffer must conform to the format alignment; for example, the buffer length must be aligned to the block alignment value for the audio format type. For PCM audio format, the block alignment is calculated as BlockAlignment = BytesPerSample * AudioChannels. DynamicSoundEffectInstance supports only PCM 16-bit mono or stereo data. Therefore, BlockAlignment = 2 * AudioChannels (Channels is 2 for mono content and 4 for stereo). The offset and count values also must conform to the format alignment restrictions. For information about an audio format using XNA Game Studio, see Audio API Developers Guide . Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. SubmitBuffer throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="Byte ">
+          <summary><![CDATA[Submits an audio buffer for playback. Playback starts at the beginning, and the buffer is played in its entirety.]]></summary>
+          <syntax><![CDATA[public void SubmitBuffer (
+         byte[] buffer
+)]]></syntax>
+          <parameters>
+            <parameter name="buffer" type="byte[]"><![CDATA[Buffer that contains the audio data. The audio format must be PCM wave data.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[The buffer must conform to the format alignment. For example, the buffer length must be aligned to the block alignment value for the audio format type. For PCM audio format, the block alignment is calculated as BlockAlignment = BytesPerSample * AudioChannels. DynamicSoundEffectInstance supports only PCM 16-bit mono or stereo data. Therefore, BlockAlignment = 2 * AudioChannels (Channels is 2 for mono content and 4 for stereo). For information about an audio format using XNA Game Studio, see Audio API Developers Guide . Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. SubmitBuffer throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="BufferNeeded" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+      <summary><![CDATA[Event that occurs when the number of audio capture buffers awaiting playback is less than or equal to two.]]></summary>
+      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; BufferNeeded]]></syntax>
+      <remarks><![CDATA[Occurs when PendingBufferCount &lt;= 2. The BufferNeeded event is raised in the following situations: During DynamicSoundEffectInstance playback when the pending buffer count is less then or equal to 2. Every time the DynamicSoundEffectInstance instance completes playing a buffer, and updates the pending buffer count. When a DynamicSoundEffectInstance instance transitions from the stopped to playing state, and the pending buffer count is less than or equal to 2. Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. BufferNeeded throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

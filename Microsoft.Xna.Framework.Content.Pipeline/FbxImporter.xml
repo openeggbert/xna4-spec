@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="FbxImporter" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          baseClass="ContentImporter&amp;lt;NodeContent&amp;gt;">
+  <summary><![CDATA[Provides methods for reading AutoDesk (.fbx) files for use in the Content Pipeline.]]></summary>
+  <syntax><![CDATA[public class FbxImporter : ContentImporter&lt;NodeContent&gt;]]></syntax>
+  <platforms>
+    <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>and Windows XP.</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="FbxImporter()">
+      <summary><![CDATA[Initializes a new instance of FbxImporter.]]></summary>
+      <syntax><![CDATA[public FbxImporter ()]]></syntax>
+      <platforms>
+        <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>and Windows XP.</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Import" returnType="void">
+      <summary><![CDATA[Called by the XNA Framework when importing an .fbx file to be used as a game asset. This is the method called by the XNA Framework when an asset is to be imported into an object that can be recognized by the Content Pipeline.]]></summary>
+      <overloads>
+        <overload signature="Import()">
+          <summary><![CDATA[Called by the XNA Framework when importing an .fbx file to be used as a game asset. This is the method called by the XNA Framework when an asset is to be imported into an object that can be recognized by the Content Pipeline.]]></summary>
+          <syntax><![CDATA[[SecurityPermissionAttribute(Demand, UnmanagedCode)]
+public override NodeContent Import (
+         string filename,
+         ContentImporterContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="filename" type="string"><![CDATA[Name of a game asset file.]]></parameter>
+            <parameter name="context" type="ContentImporterContext"><![CDATA[Contains information for importing a game asset, such as a logger interface.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resulting game asset.]]></returns>
+          <platforms>
+            <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>and Windows XP.</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

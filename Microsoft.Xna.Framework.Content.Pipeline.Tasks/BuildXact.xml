@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BuildXact" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Tasks"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Tasks"
+          baseClass="Task">
+  <summary><![CDATA[An MSBuild task that provides incremental build capabilities for XACT projects.]]></summary>
+  <syntax><![CDATA[public class BuildXact : Task]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="BuildXact()">
+      <summary><![CDATA[Initializes a new instance of BuildXact.]]></summary>
+      <syntax><![CDATA[public BuildXact ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="BuildConfiguration" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the content build configuration name.]]></summary>
+      <syntax><![CDATA[public string BuildConfiguration { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IntermediateDirectory" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the directory for storing temporary build files.]]></summary>
+      <syntax><![CDATA[[RequiredAttribute]
+public string IntermediateDirectory { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IntermediateFiles" type="ITaskItem[]" access="get">
+      <summary><![CDATA[Gets the names of the intermediate files used internally by the build.]]></summary>
+      <syntax><![CDATA[[OutputAttribute]
+public ITaskItem[] IntermediateFiles { get; }]]></syntax>
+      <remarks><![CDATA[When combined with OutputXactFiles , this property gives the complete list of generated files that should be removed by a Clean build operation.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="LoggerRootDirectory" type="string" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public string LoggerRootDirectory { get; set; }]]></syntax>
+      <remarks><![CDATA[When building XACT content, all errors are displayed in the Error List Window of Visual Studio. Along with the data that triggered the error, the Error List displays the path and filename where the offending data was encountered. By default, the path of the offending file that is reported in the Error List is always expressed as relative to the location of the project file that references it. When set, the LoggerRootDirectory property specifies an explicit base path for error reporting that overrides the default operation. All offending files reported in the Error List will be expressed as relative to the base path set in LoggerRootDirectory.]]></remarks>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="OutputDirectory" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the directory for the final build results.]]></summary>
+      <syntax><![CDATA[[RequiredAttribute]
+public string OutputDirectory { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="OutputXactFiles" type="ITaskItem[]" access="get">
+      <summary><![CDATA[Gets the names of all files produced by the build, regardless of any incremental optimizations.]]></summary>
+      <syntax><![CDATA[[OutputAttribute]
+public ITaskItem[] OutputXactFiles { get; }]]></syntax>
+      <remarks><![CDATA[Pass this property value to a subsequent packfile generator task or combine with the IntermediateFiles property to get a complete list of generated files that should be removed by a Clean build operation.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RebuildAll" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets the force rebuild flag.]]></summary>
+      <syntax><![CDATA[public bool RebuildAll { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RebuiltXactFiles" type="ITaskItem[]" access="get">
+      <summary><![CDATA[Gets the names of files modified by an incremental rebuild.]]></summary>
+      <syntax><![CDATA[[OutputAttribute]
+public ITaskItem[] RebuiltXactFiles { get; }]]></syntax>
+      <remarks><![CDATA[Optimize your deploy or reload process by passing the current value of RebuiltXactFiles to a subsequent incremental deploy or reload notification task.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="RootDirectory" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the base directory for the entire content build process.]]></summary>
+      <syntax><![CDATA[public string RootDirectory { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TargetPlatform" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the content build target platform.]]></summary>
+      <syntax><![CDATA[[RequiredAttribute]
+public string TargetPlatform { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TargetProfile" type="string" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[[RequiredAttribute]
+public string TargetProfile { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="XactProjects" type="ITaskItem[]" access="get;set">
+      <summary><![CDATA[Gets or sets the XACT project files to be built.]]></summary>
+      <syntax><![CDATA[[RequiredAttribute]
+public ITaskItem[] XactProjects { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="XnaFrameworkVersion" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets XNA framework version, used to determine the xactbld.exe path.]]></summary>
+      <syntax><![CDATA[[RequiredAttribute]
+public string XnaFrameworkVersion { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Execute" returnType="void">
+      <summary><![CDATA[Executes the BuildXact task.]]></summary>
+      <overloads>
+        <overload signature="Execute()">
+          <summary><![CDATA[Executes the BuildXact task.]]></summary>
+          <syntax><![CDATA[public override bool Execute ()]]></syntax>
+          <returns><![CDATA[true to begin execution of the task; otherwise false.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

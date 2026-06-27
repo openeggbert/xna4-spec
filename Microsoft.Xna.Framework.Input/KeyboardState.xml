@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="KeyboardState" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input"
+          assembly="Microsoft.Xna.Framework.Input">
+  <summary><![CDATA[Represents a state of keystrokes recorded by a keyboard input device.]]></summary>
+  <syntax><![CDATA[public struct KeyboardState]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="KeyboardState(Object)">
+      <summary><![CDATA[Initializes a new instance of the KeyboardState class.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         keys As Keys() _
+)]]></syntax>
+      <parameters>
+        <parameter name="keys" type="Object"><![CDATA[Type: Keys Array or parameter list of Keys to initialize as pressed.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Games normally use GetState to get the true keyboard state. This constructor is used instead to simulate keyboard input for passing within the game's own input subsystem.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Item" type="Object" access="get">
+      <summary><![CDATA[Returns the state of a particular key.]]></summary>
+      <syntax><![CDATA[public KeyState this [
+         Keys key
+] { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object to compare this object to.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPressedKeys" returnType="void">
+      <summary><![CDATA[Gets an array of values that correspond to the keyboard keys that are currently being pressed.]]></summary>
+      <overloads>
+        <overload signature="GetPressedKeys()">
+          <summary><![CDATA[Gets an array of values that correspond to the keyboard keys that are currently being pressed.]]></summary>
+          <syntax><![CDATA[public Keys[] GetPressedKeys ()]]></syntax>
+          <returns><![CDATA[The keys that are currently pressed.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IsKeyDown" returnType="void">
+      <summary><![CDATA[Returns whether a specified key is currently being pressed.]]></summary>
+      <overloads>
+        <overload signature="IsKeyDown()">
+          <summary><![CDATA[Returns whether a specified key is currently being pressed.]]></summary>
+          <syntax><![CDATA[public bool IsKeyDown (
+         Keys key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="Keys"><![CDATA[Enumerated value that specifies the key to query.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the key specified by key is being held down; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IsKeyUp" returnType="void">
+      <summary><![CDATA[Returns whether a specified key is currently not pressed.]]></summary>
+      <overloads>
+        <overload signature="IsKeyUp()">
+          <summary><![CDATA[Returns whether a specified key is currently not pressed.]]></summary>
+          <syntax><![CDATA[public bool IsKeyUp (
+         Keys key
+)]]></syntax>
+          <parameters>
+            <parameter name="key" type="Keys"><![CDATA[Enumerated value that specifies the key to query.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the key specified by key is not pressed; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         KeyboardState a,
+         KeyboardState b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="KeyboardState"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="KeyboardState"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         KeyboardState a,
+         KeyboardState b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="KeyboardState"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="b" type="KeyboardState"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

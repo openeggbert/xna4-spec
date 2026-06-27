@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Effect" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IDisposable">
+  <summary><![CDATA[Used to set and query effects and choose techniques.]]></summary>
+  <syntax><![CDATA[public class Effect : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Effect(GraphicsDevice, Byte )">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         graphicsDevice As GraphicsDevice, _
+         effectCode As Byte() _
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The device.]]></parameter>
+        <parameter name="effectCode" type="Object"><![CDATA[Type: Byte The effect code.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Effect(GraphicsDevice, Stream, CompilerOptions, EffectPool)">
+      <summary><![CDATA[Initializes a new instance of this class from a compiled effect, specifying the compiled effect as a stream.]]></summary>
+      <syntax><![CDATA[public Effect (
+         GraphicsDevice graphicsDevice,
+         Stream effectCodeFileStream,
+         CompilerOptions options,
+         EffectPool pool
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device that will create the effect.]]></parameter>
+        <parameter name="effectCodeFileStream" type="Stream"><![CDATA[Stream containing the compiled byte code.]]></parameter>
+        <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+        <parameter name="pool" type="EffectPool"><![CDATA[Specifies a pool of resources to share between effects.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Tip In most cases, it is preferrable to initialize a new instance of an effect using the ContentManager.Load&lt;Effect&gt; method rather than using the Effect constructors. For an example of initializing an effect with this method, see How to: Create and Apply Custom Effects . Obtaining the compiled byte code for effectCodeFileStream is a two-part process. First, you must compile the effect by using the static method Effect.CompileEffectFromFile or Effect.CompileEffectFromSource , either of which returns an instance of CompiledEffect . CompiledEffect.GetEffectCode returns the compiled byte code from the compiled effect.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Effect(GraphicsDevice, Stream, Int32, CompilerOptions, EffectPool)">
+      <summary><![CDATA[Initializes a new instance of this class from a compiled effect, specifying the compiled effect as a stream, as well as the number of bytes in the stream.]]></summary>
+      <syntax><![CDATA[public Effect (
+         GraphicsDevice graphicsDevice,
+         Stream effectCodeFileStream,
+         int numberBytes,
+         CompilerOptions options,
+         EffectPool pool
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device that will create the effect.]]></parameter>
+        <parameter name="effectCodeFileStream" type="Stream"><![CDATA[Stream containing the compiled byte code.]]></parameter>
+        <parameter name="numberBytes" type="int"><![CDATA[The number of bytes to read from the file.]]></parameter>
+        <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+        <parameter name="pool" type="EffectPool"><![CDATA[Specifies a pool of resources to share between effects.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Tip In most cases, it is preferrable to initialize a new instance of an effect using the ContentManager.Load&lt;Effect&gt; method rather than using the Effect constructors. For an example of initializing an effect with this method, see How to: Create and Apply Custom Effects . Obtaining the compiled byte code for effectCodeFileStream is a two-part process. First, you must compile the effect by using the static method Effect.CompileEffectFromFile or Effect.CompileEffectFromSource , either of which returns an instance of CompiledEffect . CompiledEffect.GetEffectCode returns the compiled byte code from the compiled effect.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Effect(GraphicsDevice, Effect)">
+      <summary><![CDATA[Initializes a new instance of this class, specifying the graphics device to associate with this effect and the effect to clone.]]></summary>
+      <syntax><![CDATA[protected Effect (
+         GraphicsDevice graphicsDevice,
+         Effect cloneSource
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device that will create the effect.]]></parameter>
+        <parameter name="cloneSource" type="Effect"><![CDATA[The effect to clone.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Effect(GraphicsDevice, Byte , CompilerOptions, EffectPool)">
+      <summary><![CDATA[Initializes a new instance of this class from a compiled effect, specifying the compiled effect as a byte array.]]></summary>
+      <syntax><![CDATA[public Effect (
+         GraphicsDevice graphicsDevice,
+         byte[] effectCode,
+         CompilerOptions options,
+         EffectPool pool
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device that will create the effect.]]></parameter>
+        <parameter name="effectCode" type="byte[]"><![CDATA[Byte array containing the compiled byte code.]]></parameter>
+        <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+        <parameter name="pool" type="EffectPool"><![CDATA[Specifies a pool of resources to share between effects.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Tip In most cases, it is preferrable to initialize a new instance of an effect using the ContentManager.Load&lt;Effect&gt; method rather than using the Effect constructors. For an example of initializing an effect with this method, see How to: Create and Apply Custom Effects . Obtaining the compiled byte code for effectCode is a two-part process. First, you must compile the effect by using the static method Effect.CompileEffectFromFile or Effect.CompileEffectFromSource , either of which returns an instance of CompiledEffect . CompiledEffect.GetEffectCode returns the compiled byte code from the compiled effect.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Effect(Effect)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA['Declaration
+Protected Sub New ( _
+         cloneSource As Effect _
+)]]></syntax>
+      <parameters>
+        <parameter name="cloneSource" type="Object"><![CDATA[Type: Effect An object to copy.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Effect(GraphicsDevice, String, CompilerOptions, EffectPool)">
+      <summary><![CDATA[Initializes a new instance of this class from a compiled effect, specifying the compiled effect by file name.]]></summary>
+      <syntax><![CDATA[public Effect (
+         GraphicsDevice graphicsDevice,
+         string effectCodeFile,
+         CompilerOptions options,
+         EffectPool pool
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device that will create the effect.]]></parameter>
+        <parameter name="effectCodeFile" type="string"><![CDATA[A file containing a compiled byte code.]]></parameter>
+        <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+        <parameter name="pool" type="EffectPool"><![CDATA[Specifies a pool of resources to share between effects.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Obtaining the compiled byte code for effectCodeFile is a two-part process. First, the effect must be compiled using the static methods Effect.CompileEffectFromFile or Effect.CompileEffectFromSource , which returns an instance of CompiledEffect . CompiledEffect.GetEffectCode returns the compiled byte code from the compiled effect.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Creator" type="string" access="get">
+      <summary><![CDATA[Gets the name of the effect creator.]]></summary>
+      <syntax><![CDATA[public string Creator { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CurrentTechnique" type="EffectTechnique" access="get;set">
+      <summary><![CDATA[Gets or sets the active technique.]]></summary>
+      <syntax><![CDATA[public EffectTechnique CurrentTechnique { get; set; }]]></syntax>
+      <remarks><![CDATA[Note The BasicEffect class, which is derived from Effect and inherits the Techniques collection, contains only one available technique to set as the active technique. The active technique applies the settings that have been set as the properties of the BasicEffect .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="EffectPool" type="EffectPool" access="get">
+      <summary><![CDATA[Gets an EffectPool representing the pool of shared parameters.]]></summary>
+      <syntax><![CDATA[public EffectPool EffectPool { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Functions" type="EffectFunctionCollection" access="get">
+      <summary><![CDATA[Gets a collection of functions that can render the effect.]]></summary>
+      <syntax><![CDATA[public EffectFunctionCollection Functions { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="GraphicsDevice" type="GraphicsDevice" access="get">
+      <summary><![CDATA[Gets the graphics device that created the effect.]]></summary>
+      <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Parameters" type="EffectParameterCollection" access="get">
+      <summary><![CDATA[Gets a collection of parameters used for this effect.]]></summary>
+      <syntax><![CDATA[public EffectParameterCollection Parameters { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Techniques" type="EffectTechniqueCollection" access="get">
+      <summary><![CDATA[Gets a collection of techniques that are defined for this effect.]]></summary>
+      <syntax><![CDATA[public EffectTechniqueCollection Techniques { get; }]]></syntax>
+      <remarks><![CDATA[Note The BasicEffect class, which is derived from Effect and inherits the Techniques collection, contains only one available technique which will apply the settings which have been set as the properties of the BasicEffect .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Begin" returnType="void">
+      <summary><![CDATA[Begins application of the active technique.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Begins application of the active technique.]]></summary>
+          <syntax><![CDATA[public void Begin ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SaveStateMode">
+          <summary><![CDATA[Begins application of the active technique, specifying options for saving state.]]></summary>
+          <syntax><![CDATA[public void Begin (
+         SaveStateMode saveStateMode
+)]]></syntax>
+          <parameters>
+            <parameter name="saveStateMode" type="SaveStateMode"><![CDATA[Options for saving the state prior to application of the technique.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Clone" returnType="void">
+      <summary><![CDATA[Copies data from an existing object to this object.]]></summary>
+      <overloads>
+        <overload signature="Clone()">
+          <summary><![CDATA[Copies data from an existing object to this object.]]></summary>
+          <syntax><![CDATA[public virtual Effect Clone ()]]></syntax>
+          <returns><![CDATA[The cloned effect.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CommitChanges" returnType="void">
+      <summary><![CDATA[Propagates the state change that occurs inside of an active pass to the device before rendering.]]></summary>
+      <overloads>
+        <overload signature="CommitChanges()">
+          <summary><![CDATA[Propagates the state change that occurs inside of an active pass to the device before rendering.]]></summary>
+          <syntax><![CDATA[public void CommitChanges ()]]></syntax>
+          <remarks><![CDATA[If the application changes any effect state using the Effect class members that modify state inside of an Begin / End matching pair, the application must call CommitChanges before any of the various DrawPrimitives methods are called to propagate state changes to the device before rendering. If no state changes occur within an Begin / End matching pair, it is not necessary to call CommitChanges .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CompileEffectFromFile" returnType="CompiledEffect" isStatic="true">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="String, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledEffect CompileEffectFromFile (
+         string effectFile,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="effectFile" type="string"><![CDATA[The name of the file containing the effect source code.]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for #include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for the compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled effect.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Stream, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledEffect CompileEffectFromFile (
+         Stream effectFileStream,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="effectFileStream" type="Stream"><![CDATA[File stream containing the effect source code.]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for #include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for the compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled effect.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Stream, Int32, CompilerMacro , CompilerIncludeHandler, CompilerOptions, TargetPlatform">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledEffect CompileEffectFromFile (
+         Stream effectFileStream,
+         int numberBytes,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="effectFileStream" type="Stream"><![CDATA[File stream containing the effect source code.]]></parameter>
+            <parameter name="numberBytes" type="int"><![CDATA[The number of bytes in effectFileStream .]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for #include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for the compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled effect.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CompileEffectFromSource" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="CompileEffectFromSource()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static CompiledEffect CompileEffectFromSource (
+         string effectFileSource,
+         CompilerMacro[] preprocessorDefines,
+         CompilerIncludeHandler includeHandler,
+         CompilerOptions options,
+         TargetPlatform platform
+)]]></syntax>
+          <parameters>
+            <parameter name="effectFileSource" type="string"><![CDATA[String containing the effect source code.]]></parameter>
+            <parameter name="preprocessorDefines" type="CompilerMacro[]"><![CDATA[Describes preprocessor definitions used by an effect object.]]></parameter>
+            <parameter name="includeHandler" type="CompilerIncludeHandler"><![CDATA[User-implemented interface to provide callbacks for #include directives during shader compilation.]]></parameter>
+            <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
+            <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for the compilation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The compiled effect.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Disassemble" returnType="string" isStatic="true">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="Effect, Boolean">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public static string Disassemble (
+         Effect effect,
+         bool enableColorCode
+)]]></syntax>
+          <parameters>
+            <parameter name="effect" type="Effect"><![CDATA[The effect to disassemble.]]></parameter>
+            <parameter name="enableColorCode" type="bool"><![CDATA[[ MarshalAsAttribute (U1)] true to enable color coding to make the disassembly easier to read.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A string that contains the effect assembly (ASM).]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Boolean">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public string Disassemble (
+         bool enableColorCode
+)]]></syntax>
+          <parameters>
+            <parameter name="enableColorCode" type="bool"><![CDATA[[ MarshalAsAttribute (U1)] true to enable color coding to make the disassembly easier to read.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A string that contains the effect assembly (ASM).]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Releases the unmanaged resources used by the Effect and optionally releases the managed resources.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Releases the unmanaged resources used by the Effect and optionally releases the managed resources.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool 
+)]]></syntax>
+          <remarks><![CDATA[This method is called by the public Dispose method and the Finalize method. Dispose invokes the protected Dispose(Boolean) method with the disposing parameter set to true . Finalize invokes Dispose(Boolean) with disposing set to false . When the disposing parameter is true , this method releases all resources held by any managed objects that this Effect references. This method invokes the Dispose method of each referenced object. Note Notes to Inheritors Dispose can be called multiple times by other objects. When overriding Dispose(Boolean) , be careful not to reference objects disposed of in an earlier call to Dispose .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="End" returnType="void">
+      <summary><![CDATA[Ends the application of the current technique.]]></summary>
+      <overloads>
+        <overload signature="End()">
+          <summary><![CDATA[Ends the application of the current technique.]]></summary>
+          <syntax><![CDATA[public void End ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Gets a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Gets a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object to compare to this object.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnApply" returnType="void">
+      <summary><![CDATA[Applies the effect state just prior to rendering the effect.]]></summary>
+      <overloads>
+        <overload signature="OnApply()">
+          <summary><![CDATA[Applies the effect state just prior to rendering the effect.]]></summary>
+          <syntax><![CDATA[protected internal virtual void OnApply ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Effect left,
+         Effect right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="Effect"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="Effect"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Effect left,
+         Effect right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="Effect"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="Effect"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_Disposing" returnType="void">
+      <summary><![CDATA[Raises the Disposing event when called from within a derived class.]]></summary>
+      <overloads>
+        <overload signature="raise_Disposing()">
+          <summary><![CDATA[Raises the Disposing event when called from within a derived class.]]></summary>
+          <syntax><![CDATA[protected void raise_Disposing (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[Invoking object reference; should be this object.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[Arguments to pass to the event handler.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_Lost" returnType="void">
+      <summary><![CDATA[Raises an Lost event when called from within a derived class.]]></summary>
+      <overloads>
+        <overload signature="raise_Lost()">
+          <summary><![CDATA[Raises an Lost event when called from within a derived class.]]></summary>
+          <syntax><![CDATA[protected void raise_Lost (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[Invoking object reference; should be this object.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[Arguments to pass into the event handler.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_Reset" returnType="void">
+      <summary><![CDATA[Raises an Reset event when called from within a derived class.]]></summary>
+      <overloads>
+        <overload signature="raise_Reset()">
+          <summary><![CDATA[Raises an Reset event when called from within a derived class.]]></summary>
+          <syntax><![CDATA[protected void raise_Reset (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[Invoking object reference; should be this object.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[Arguments to pass into the event handler.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="Disposing" type="EventHandler">
+      <summary><![CDATA[Occurs when Dispose is called or when this object is finalized and collected by the garbage collector of the Microsoft .NET common language runtime (CLR).]]></summary>
+      <syntax><![CDATA[public event EventHandler Disposing]]></syntax>
+      <remarks><![CDATA[IsDisposed indicates whether that object has been disposed.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="Lost" type="EventHandler">
+      <summary><![CDATA[Occurs when an object is lost, normally just before a device is reset.]]></summary>
+      <syntax><![CDATA[public event EventHandler Lost]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+    <event name="Reset" type="EventHandler">
+      <summary><![CDATA[Occurs after the device is reset.]]></summary>
+      <syntax><![CDATA[public event EventHandler Reset]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

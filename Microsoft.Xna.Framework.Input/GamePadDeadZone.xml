@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamePadDeadZone" kind="enum"
+          namespace="Microsoft.Xna.Framework.Input"
+          assembly="Microsoft.Xna.Framework.Input">
+  <summary><![CDATA[Specifies a type of dead zone processing to apply to Xbox 360 controller analog sticks when calling GetState.]]></summary>
+  <syntax><![CDATA[public enum GamePadDeadZone]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Circular"><summary><![CDATA[The combined X and Y position of each stick is compared against the dead zone. This provides better control than IndependentAxes when the stick is used as a two-dimensional control surface, such as when controlling a character's view in a first-person game.]]></summary></member>
+    <member name="IndependentAxes"><summary><![CDATA[The X and Y positions of each stick are compared against the dead zone independently. This setting is the default when calling GetState.]]></summary></member>
+    <member name="None"><summary><![CDATA[The values of each stick are not processed and are returned by GetState as "raw" values. This is best if you intend to implement your own dead zone processing.]]></summary></member>
+  </members>
+</xna-type>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamePadState" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input"
+          assembly="Microsoft.Xna.Framework.Input">
+  <summary><![CDATA[Represents specific information about the state of an Xbox 360 Controller, including the current state of buttons and sticks.]]></summary>
+  <syntax><![CDATA[public struct GamePadState]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GamePadState(Vector2, Vector2, Single, Single, Buttons )">
+      <summary><![CDATA[Initializes a new instance of the GamePadState class with the specified stick, trigger, and button values.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         leftThumbStick As Vector2, _
+         rightThumbStick As Vector2, _
+         leftTrigger As Single, _
+         rightTrigger As Single, _
+         buttons As Buttons() _
+)]]></syntax>
+      <parameters>
+        <parameter name="leftThumbStick" type="Object"><![CDATA[Type: Vector2 Left stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
+        <parameter name="rightThumbStick" type="Object"><![CDATA[Type: Vector2 Right stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
+        <parameter name="leftTrigger" type="Object"><![CDATA[Type: Single Left trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
+        <parameter name="rightTrigger" type="Object"><![CDATA[Type: Single Right trigger value. This value is clamped between 0.0 and 1.0.]]></parameter>
+        <parameter name="buttons" type="Object"><![CDATA[Type: Buttons Array or parameter list of Buttons to initialize as pressed.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Games normally use GetState to get the true gamepad state. This constructor is used instead to simulate gamepad input for passing within the game's own input subsystem.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GamePadState(GamePadThumbSticks, GamePadTriggers, GamePadButtons, GamePadDPad)">
+      <summary><![CDATA[Initializes a new instance of the GamePadState class using the specified GamePadThumbSticks, GamePadTriggers, GamePadButtons, and GamePadDPad.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         thumbSticks As GamePadThumbSticks, _
+         triggers As GamePadTriggers, _
+         buttons As GamePadButtons, _
+         dPad As GamePadDPad _
+)]]></syntax>
+      <parameters>
+        <parameter name="thumbSticks" type="Object"><![CDATA[Type: GamePadThumbSticks Initial thumbstick state.]]></parameter>
+        <parameter name="triggers" type="Object"><![CDATA[Type: GamePadTriggers Initial trigger state.]]></parameter>
+        <parameter name="buttons" type="Object"><![CDATA[Type: GamePadButtons Initial button state.]]></parameter>
+        <parameter name="dPad" type="Object"><![CDATA[Type: GamePadDPad Initial directional pad state.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Games normally use GetState to get the true gamepad state. This constructor is used instead to simulate gamepad input for passing within the game's own input subsystem. Thumbstick state is different from the state indicated by the GamePadButtons.LeftStick Property or the GamePadButtons.RightStick Property . Thumbstick state refers to the position of the thumbstick, while the LeftStick or RightStick properties indicate if the stick is "clicked" in.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Buttons" type="GamePadButtons" access="get">
+      <summary><![CDATA[Returns a structure that identifies what buttons on the Xbox 360 Controller are pressed.]]></summary>
+      <syntax><![CDATA[public GamePadButtons Buttons { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DPad" type="GamePadDPad" access="get">
+      <summary><![CDATA[Returns a structure that identifies what directions of the directional pad on the Xbox 360 Controller are pressed.]]></summary>
+      <syntax><![CDATA[public GamePadDPad DPad { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsConnected" type="bool" access="get">
+      <summary><![CDATA[Indicates whether the Xbox 360 Controller is connected.]]></summary>
+      <syntax><![CDATA[public bool IsConnected { get; }]]></syntax>
+      <remarks><![CDATA[When calling GetState or GetCapabilities , check the returned structure's IsConnected property value. If the controller has been disconnected, this value will be false . When a controller is disconnected, values for its state and/or capabilities will not be valid. The controller will also not be able to receive new vibration settings.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="PacketNumber" type="int" access="get">
+      <summary><![CDATA[Gets the packet number associated with this state.]]></summary>
+      <syntax><![CDATA[public int PacketNumber { get; }]]></syntax>
+      <remarks><![CDATA[You can use PacketNumber to determine whether input state has changed. If the value of PacketNumber remains the same between two sequential calls to GetState , then there has been no change in input.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="ThumbSticks" type="GamePadThumbSticks" access="get">
+      <summary><![CDATA[Returns a structure that indicates the position of the Xbox 360 Controller sticks (thumbsticks).]]></summary>
+      <syntax><![CDATA[public GamePadThumbSticks ThumbSticks { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Triggers" type="GamePadTriggers" access="get">
+      <summary><![CDATA[Returns a structure that identifies the position of triggers on the Xbox 360 Controller.]]></summary>
+      <syntax><![CDATA[public GamePadTriggers Triggers { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IsButtonDown" returnType="void">
+      <summary><![CDATA[Determines whether specified input device buttons are pressed in this GamePadState.]]></summary>
+      <overloads>
+        <overload signature="IsButtonDown()">
+          <summary><![CDATA[Determines whether specified input device buttons are pressed in this GamePadState.]]></summary>
+          <syntax><![CDATA[public bool IsButtonDown (
+         Buttons button
+)]]></syntax>
+          <parameters>
+            <parameter name="button" type="Buttons"><![CDATA[Buttons to query. Specify a single button, or combine multiple buttons using a bitwise OR operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if all specified buttons are pressed; false otherwise.]]></returns>
+          <remarks><![CDATA[For digital buttons (such as A , START , and right bumper) the return value indicates whether the button is pressed. For analog inputs (triggers and thumbsticks), the return value indicates whether the input exceeds dead zone values. For example, a trigger will not be reported as pressed until it is pulled about 12% of its full range. IsButtonDown always uses the default dead zone processing mode, GamePadDeadZone.IndependentAxes . If multiple buttons are specified (by combining them using the bitwise OR operator), then all must be pressed (or exceed dead zone values) in order for IsButtonDown to return true .]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IsButtonUp" returnType="void">
+      <summary><![CDATA[Determines whether specified input device buttons are up (not pressed) in this GamePadState.]]></summary>
+      <overloads>
+        <overload signature="IsButtonUp()">
+          <summary><![CDATA[Determines whether specified input device buttons are up (not pressed) in this GamePadState.]]></summary>
+          <syntax><![CDATA[public bool IsButtonUp (
+         Buttons button
+)]]></syntax>
+          <parameters>
+            <parameter name="button" type="Buttons"><![CDATA[Buttons to query. Specify a single button, or combine multiple buttons using a bitwise OR operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if any specified buttons are up; false otherwise.]]></returns>
+          <remarks><![CDATA[For digital buttons (such as A , START , and right bumper) the return value indicates whether the button is up (not pressed). For analog inputs (triggers and thumbsticks), the return value indicates whether the input exceeds dead zone values. For example, a trigger will be reported as not pressed until it is pulled about 12% of its full range. IsButtonUp always uses the default dead zone processing mode, GamePadDeadZone.IndependentAxes . If multiple buttons are specified (by combining them using the bitwise OR operator), IsButtonUp returns true if any of the specified buttons are not pressed (or do not exceed dead zone values).]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether two GamePadState instances are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether two GamePadState instances are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         GamePadState left,
+         GamePadState right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GamePadState"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="GamePadState"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the instances are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether two GamePadState instances are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether two GamePadState instances are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         GamePadState left,
+         GamePadState right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GamePadState"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="GamePadState"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

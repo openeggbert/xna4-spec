@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamerCollection.GamerCollectionEnumerator Generic" kind="struct"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          interfaces="IEnumerator&amp;lt;T&amp;gt;, IDisposable, IEnumerator">
+  <summary><![CDATA[Provides the ability to iterate through the gamers in an GamerCollection.]]></summary>
+  <syntax><![CDATA[public struct GamerCollection.GamerCollectionEnumerator&lt;T&gt; : IEnumerator&lt;T&gt;, IDisposable, IEnumerator where T : Gamer]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

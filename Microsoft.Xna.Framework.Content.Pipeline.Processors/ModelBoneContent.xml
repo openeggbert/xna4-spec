@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ModelBoneContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <summary><![CDATA[Stores design-time data for a ModelBone asset.]]></summary>
+  <syntax><![CDATA[public sealed class ModelBoneContent]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Children" type="ModelBoneContentCollection" access="get;set">
+      <summary><![CDATA[Gets the children of this bone.]]></summary>
+      <syntax><![CDATA[public ModelBoneContentCollection Children { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Index" type="int" access="get">
+      <summary><![CDATA[Gets the index of this bone in a ModelBoneContentCollection.]]></summary>
+      <syntax><![CDATA[public int Index { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Gets the bone name.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Parent" type="ModelBoneContent" access="get">
+      <summary><![CDATA[Gets the parent of this bone.]]></summary>
+      <syntax><![CDATA[public ModelBoneContent Parent { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Transform" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the local transformation matrix for this bone.]]></summary>
+      <syntax><![CDATA[public Matrix Transform { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

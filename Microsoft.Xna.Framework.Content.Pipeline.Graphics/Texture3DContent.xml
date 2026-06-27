@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Texture3DContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="TextureContent">
+  <summary><![CDATA[Represents a three-dimensional volume texture.]]></summary>
+  <syntax><![CDATA[public class Texture3DContent : TextureContent]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Texture3DContent()">
+      <summary><![CDATA[Initializes a new instance of Texture3DContent.]]></summary>
+      <syntax><![CDATA[public Texture3DContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="GenerateMipmaps" returnType="void">
+      <summary><![CDATA[Generates mipmaps for a volume texture.]]></summary>
+      <overloads>
+        <overload signature="GenerateMipmaps()">
+          <summary><![CDATA[Generates mipmaps for a volume texture.]]></summary>
+          <syntax><![CDATA[public override void GenerateMipmaps (
+         bool overwriteExistingMipmaps
+)]]></syntax>
+          <parameters>
+            <parameter name="overwriteExistingMipmaps" type="bool"><![CDATA[true to overwrite existing mipmaps for the volume texture; false otherwise.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Validate" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Validates that the required contents of this volume texture are present and valid. This method verifies that mip counts are correct down each individual 2D face, and that width and height are shrinking appropriately.]]></summary>
+          <syntax><![CDATA[public override void Validate ()]]></syntax>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

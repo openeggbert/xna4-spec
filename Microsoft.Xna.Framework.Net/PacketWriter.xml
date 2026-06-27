@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PacketWriter" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="BinaryWriter">
+  <summary><![CDATA[Provides common functionality for efficiently formatting outgoing network packets.]]></summary>
+  <syntax><![CDATA[public class PacketWriter : BinaryWriter]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="PacketWriter(Int32)">
+      <summary><![CDATA[Initializes a new instance of PacketWriter with the specified capacity.]]></summary>
+      <syntax><![CDATA[public PacketWriter (
+         int capacity
+)]]></syntax>
+      <parameters>
+        <parameter name="capacity" type="int"><![CDATA[Capacity for the packet writer.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="PacketWriter()">
+      <summary><![CDATA[Initializes an empty instance of PacketWriter.]]></summary>
+      <syntax><![CDATA[public PacketWriter ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Length" type="int" access="get">
+      <summary><![CDATA[Gets the length of the packet being written.]]></summary>
+      <syntax><![CDATA[public int Length { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Position" type="int" access="get;set">
+      <summary><![CDATA[Gets or sets the current packet write position.]]></summary>
+      <syntax><![CDATA[public int Position { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Write" returnType="void">
+      <summary><![CDATA[Writes a Double value to an outgoing network packet.]]></summary>
+      <overloads>
+        <overload signature="Double">
+          <summary><![CDATA[Writes a Double value to an outgoing network packet.]]></summary>
+          <syntax><![CDATA[public override void Write (
+         double value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="double"><![CDATA[Value to be written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Color">
+          <summary><![CDATA[Writes a Color value to an outgoing network packet.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Color value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Color"><![CDATA[Value to be written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector3">
+          <summary><![CDATA[Writes a Vector3 value to an outgoing network packet.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Vector3 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Value being written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Color">
+          <summary><![CDATA[Writes a Color value to an outgoing network packet.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Color value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Color"><![CDATA[Type: Color Value to be written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="Quaternion">
+          <summary><![CDATA[Writes a Quaternion value to an outgoing network packet.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Quaternion value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Quaternion"><![CDATA[Value being written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector2">
+          <summary><![CDATA[Writes a Vector2 value to an outgoing network packet.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Vector2 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Value being written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Single">
+          <summary><![CDATA[Writes a Single value to an outgoing network packet.]]></summary>
+          <syntax><![CDATA[public override void Write (
+         float value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="float"><![CDATA[Value to be written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Vector4">
+          <summary><![CDATA[Writes a Vector4 value to an outgoing network packet.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Vector4 value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Object"><![CDATA[Value being written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+        <overload signature="Matrix">
+          <summary><![CDATA[Writes a Matrix value to an outgoing network packet.]]></summary>
+          <syntax><![CDATA[public void Write (
+         Matrix value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Matrix"><![CDATA[Value being written.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

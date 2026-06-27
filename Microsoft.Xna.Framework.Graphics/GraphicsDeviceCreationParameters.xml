@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GraphicsDeviceCreationParameters" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Describes the creation parameters for a device.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public struct GraphicsDeviceCreationParameters]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GraphicsDeviceCreationParameters(GraphicsAdapter, DeviceType, IntPtr, CreateOptions)">
+      <summary><![CDATA[Initializes a new instance of the GraphicsDeviceCreationParameters class.]]></summary>
+      <syntax><![CDATA[public GraphicsDeviceCreationParameters (
+         GraphicsAdapter graphicsAdapter,
+         DeviceType deviceType,
+         IntPtr windowHandle,
+         CreateOptions createOptions
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsAdapter" type="GraphicsAdapter"><![CDATA[The display adapter.]]></parameter>
+        <parameter name="deviceType" type="DeviceType"><![CDATA[The emulated functionality for this device.]]></parameter>
+        <parameter name="windowHandle" type="IntPtr"><![CDATA[Window handle to which focus belongs for this Direct3D device.]]></parameter>
+        <parameter name="createOptions" type="CreateOptions"><![CDATA[Combination of one or more options that control the global behavior of the device.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Adapter" type="GraphicsAdapter" access="get">
+      <summary><![CDATA[Gets the graphics adapter.]]></summary>
+      <syntax><![CDATA[public GraphicsAdapter Adapter { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="CreationOptions" type="CreateOptions" access="get">
+      <summary><![CDATA[Returns the options used to create the device.]]></summary>
+      <syntax><![CDATA[public CreateOptions CreationOptions { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="DeviceType" type="DeviceType" access="get">
+      <summary><![CDATA[Gets a information describing the amount of emulated functionality for the device.]]></summary>
+      <syntax><![CDATA[public DeviceType DeviceType { get; }]]></syntax>
+      <remarks><![CDATA[The value of these parameters mirrors the value passed to the GraphicsDevice constructor call that created the device.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="FocusWindowHandle" type="IntPtr" access="get">
+      <summary><![CDATA[Gets a pointer to the window to which focus belongs for the current device.]]></summary>
+      <syntax><![CDATA[public IntPtr FocusWindowHandle { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

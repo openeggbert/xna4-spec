@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Alpha8" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
+          assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
+          interfaces="IPackedVector&amp;lt;byte&amp;gt;, IEquatable&amp;lt;Alpha8&amp;gt;">
+  <summary><![CDATA[Packed vector type containing a single 8 bit normalized W value in the range of 0 to 1.]]></summary>
+  <syntax><![CDATA[public struct Alpha8 : IPackedVector&lt;byte&gt;, IEquatable&lt;Alpha8&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Alpha8(float)">
+      <summary><![CDATA[Initializes a new instance of the Alpha8 structure.]]></summary>
+      <syntax><![CDATA[public Alpha8 (
+         float alpha
+)]]></syntax>
+      <parameters>
+        <parameter name="alpha" type="float"><![CDATA[The initial value for the Alpha8 structure.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="PackedValue" type="byte" access="get;set">
+      <summary><![CDATA[Directly gets or sets the packed representation of the value.]]></summary>
+      <syntax><![CDATA[public byte PackedValue { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Alpha8">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Alpha8 other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Object"><![CDATA[The object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for the current instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for the current instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for the instance.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToAlpha" returnType="void">
+      <summary><![CDATA[Expands the packed representation to a System.Single.]]></summary>
+      <overloads>
+        <overload signature="ToAlpha()">
+          <summary><![CDATA[Expands the packed representation to a System.Single.]]></summary>
+          <syntax><![CDATA[public float ToAlpha ()]]></syntax>
+          <returns><![CDATA[The expanded Alpha8.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a string representation of the current instance.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a string representation of the current instance.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String that represents the object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Alpha8 a,
+         Alpha8 b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Object"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="Object"><![CDATA[The object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Alpha8 a,
+         Alpha8 b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Object"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="Object"><![CDATA[The object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NetworkSessionJoinError" kind="enum"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net">
+  <summary><![CDATA[Contains additional data about a NetworkSessionJoinException.]]></summary>
+  <syntax><![CDATA[public enum NetworkSessionJoinError]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <members>
+    <member name="SessionNotFound"><summary><![CDATA[The session could not be found. Occurs if the session has ended after the matchmaking query but before the client joined, of if there is no network connectivity between the client and session host machines.]]></summary></member>
+    <member name="SessionNotJoinable"><summary><![CDATA[The session exists but is not joinable. Occurs if the session is in progress but does not allow gamers to join a session in progress.]]></summary></member>
+    <member name="SessionFull"><summary><![CDATA[The session exists but does not have any open slots for local signed-in gamers.]]></summary></member>
+  </members>
+</xna-type>

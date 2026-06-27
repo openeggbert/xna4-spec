@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SurfaceFormat" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines various types of surface formats.]]></summary>
+  <syntax><![CDATA[public enum SurfaceFormat]]></syntax>
+  <remarks><![CDATA[In the XNA Framework, all two-dimensional (2D) images are represented by a range of memory called a surface. Within a surface, each element holds a color value representing a small section of the image, called a pixel. An image's detail level is defined by both the number of pixels needed to represent the image, and the number of bits needed for the image's color spectrum. For example, an image that is 800 pixels wide by 600 pixels high with 32 bits of color for each pixel (written as 800×600×32) is more detailed than an image that is 640 pixels wide by 480 pixels tall with 16 bits of color for each pixel (written as 640×480×16). Likewise, the more detailed image requires a larger surface to store the data. For an 800×600×32 image, the surface's array dimensions are 800×600, and each element holds a 32-bit value to represent its color. All formats are listed from left to right, most-significant bit to least-significant bit. For example, ARGB formats are ordered from the most-significant bit channel A (alpha), to the least-significant bit channel B (blue). When traversing surface data, the data is stored in memory from least-significant bit to most-significant bit, which means that the channel order in memory is from least-significant bit (blue) to most-significant bit (alpha). The default value for formats that contain undefined channels (Rg32, Alpha8, and so on) is 1. The only exception is the Alpha8 format, which is initialized to 000 for the three color channels. The order of the bits is from the most-significant byte first, so LuminanceAlpha16 indicates that the high byte of this 2-byte format is alpha. Depth16 indicates a 16-bit integer value and an application-lockable surface. Floating-point formats are also known as s10e5 formats. IEEE formats are also known as s23e8 formats. Data in mixed formats can contain a combination of unsigned data and signed data. Data in a signed format can be both positive and negative. Signed formats use combinations of (U), (V), (W), and (Q) data. Data in an unsigned format must be positive. Unsigned formats use combinations of (R)ed, (G)reen, (B)lue, (A)lpha, (L)uminance, and (P)alette data. Palette data is also referred to as color indexed data because the data is used to index a color palette.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Alpha8"><summary><![CDATA[(Unsigned format) 8-bit alpha only.]]></summary></member>
+    <member name="Bgr233"><summary><![CDATA[(Unsigned format) 8-bit BGR texture format using 2 bits for blue, 3 bits for green, and 3 bits for red.]]></summary></member>
+    <member name="Bgr24"><summary><![CDATA[(Unsigned format) 24-bit BGR pixel format with 8 bits per channel.]]></summary></member>
+    <member name="Bgr32"><summary><![CDATA[(Unsigned format) 32-bit BGR pixel format, where 8 bits are reserved for each color.]]></summary></member>
+    <member name="Bgr444"><summary><![CDATA[(Unsigned format) 16-bit BGR pixel format using 4 bits for each color.]]></summary></member>
+    <member name="Bgr555"><summary><![CDATA[(Unsigned format) 16-bit BGR pixel format where 5 bits are reserved for each color.]]></summary></member>
+    <member name="Bgr565"><summary><![CDATA[(Unsigned format) 16-bit BGR pixel format with 5 bits for blue, 6 bits for green, and 5 bits for red.]]></summary></member>
+    <member name="Bgra1010102"><summary><![CDATA[(Unsigned format) 32-bit pixel format using 10 bits each for blue, green, and red, and 2 bits for alpha.]]></summary></member>
+    <member name="Bgra2338"><summary><![CDATA[(Unsigned format) 16-bit BGRA format using 2 bits for blue, 3 bits each for red and green, and 8 bits for alpha.]]></summary></member>
+    <member name="Bgra4444"><summary><![CDATA[(Unsigned format) 16-bit BGRA pixel format with 4 bits for each channel.]]></summary></member>
+    <member name="Bgra5551"><summary><![CDATA[(Unsigned format) 16-bit BGRA pixel format where 5 bits are reserved for each color and 1 bit is reserved for alpha.]]></summary></member>
+    <member name="Color"><summary><![CDATA[(Unsigned format) 32-bit ARGB pixel format with alpha, using 8 bits per channel.]]></summary></member>
+    <member name="Depth15Stencil1"><summary><![CDATA[(Buffer format) 16-bit depth-buffer bit depth where 15 bits are reserved for the depth channel and 1 bit is reserved for the stencil channel.]]></summary></member>
+    <member name="Depth16"><summary><![CDATA[(Buffer format) 16-bit depth-buffer bit depth.]]></summary></member>
+    <member name="Depth24"><summary><![CDATA[(Buffer format) 32-bit depth-buffer bit depth using 24 bits for the depth channel.]]></summary></member>
+    <member name="Depth24Stencil4"><summary><![CDATA[(Buffer format) 32-bit depth-buffer bit depth using 24 bits for the depth channel and 4 bits for the stencil channel.]]></summary></member>
+    <member name="Depth24Stencil8"><summary><![CDATA[(Buffer format) 32-bit depth-buffer bit depth using 24 bits for the depth channel and 8 bits for the stencil channel.]]></summary></member>
+    <member name="Depth24Stencil8Single"><summary><![CDATA[(Buffer format) A non-lockable format that contains 24 bits of depth (in a 24-bit floating-point format − 20e4) and 8 bits of stencil.]]></summary></member>
+    <member name="Depth32"><summary><![CDATA[(Buffer format) 32-bit depth-buffer bit depth.]]></summary></member>
+    <member name="Dxt1"><summary><![CDATA[DXT1 compression texture format. The runtime will not allow an application to create a surface using a DXTn format unless the surface dimensions are multiples of 4. This applies to offscreen-plain surfaces, render targets, 2D textures, cube textures, and volume textures.]]></summary></member>
+    <member name="Dxt2"><summary><![CDATA[DXT2 compression texture format. The runtime will not allow an application to create a surface using a DXTn format unless the surface dimensions are multiples of 4. This applies to offscreen-plain surfaces, render targets, 2D textures, cube textures, and volume textures.]]></summary></member>
+    <member name="Dxt3"><summary><![CDATA[DXT3 compression texture format. The runtime will not allow an application to create a surface using a DXTn format unless the surface dimensions are multiples of 4. This applies to offscreen-plain surfaces, render targets, 2D textures, cube textures, and volume textures.]]></summary></member>
+    <member name="Dxt4"><summary><![CDATA[DXT4 compression texture format. The runtime will not allow an application to create a surface using a DXTn format unless the surface dimensions are multiples of 4. This applies to offscreen-plain surfaces, render targets, 2D textures, cube textures, and volume textures.]]></summary></member>
+    <member name="Dxt5"><summary><![CDATA[DXT5 compression texture format. The runtime will not allow an application to create a surface using a DXTn format unless the surface dimensions are multiples of 4. This applies to offscreen-plain surfaces, render targets, 2D textures, cube textures, and volume textures.]]></summary></member>
+    <member name="HalfSingle"><summary><![CDATA[(Floating-point format) 16-bit float format using 16 bits for the red channel.]]></summary></member>
+    <member name="HalfVector2"><summary><![CDATA[(Floating-point format) 32-bit float format using 16 bits for the red channel and 16 bits for the green channel.]]></summary></member>
+    <member name="HalfVector4"><summary><![CDATA[(Floating-point format) 64-bit float format using 16 bits for each channel (alpha, blue, green, red).]]></summary></member>
+    <member name="Luminance16"><summary><![CDATA[(Unsigned format) 16-bit luminance only.]]></summary></member>
+    <member name="Luminance8"><summary><![CDATA[(Unsigned format) 8-bit luminance only.]]></summary></member>
+    <member name="LuminanceAlpha16"><summary><![CDATA[(Unsigned format) 16-bit using 8 bits each for alpha and luminance.]]></summary></member>
+    <member name="LuminanceAlpha8"><summary><![CDATA[(Unsigned format) 8-bit using 4 bits each for alpha and luminance.]]></summary></member>
+    <member name="Multi2Bgra32"><summary><![CDATA[MultiElement texture (not compressed)]]></summary></member>
+    <member name="NormalizedAlpha1010102"><summary><![CDATA[(Mixed format) 32-bit bump-map format using 2 bits for alpha and 10 bits each for w, v, and u.]]></summary></member>
+    <member name="NormalizedByte2"><summary><![CDATA[(Signed format) 16-bit bump-map format using 8 bits each for u and v data.]]></summary></member>
+    <member name="NormalizedByte2Computed"><summary><![CDATA[(Signed format) 16-bit normal compression format. The texture sampler computes the C channel from: C = sqrt(1 − U2 − V2).]]></summary></member>
+    <member name="NormalizedByte4"><summary><![CDATA[(Signed format) 32-bit bump-map format using 8 bits for each channel.]]></summary></member>
+    <member name="NormalizedLuminance16"><summary><![CDATA[(Mixed format) 16-bit bump-map format with luminance using 6 bits for luminance, and 5 bits each for v and u.]]></summary></member>
+    <member name="NormalizedLuminance32"><summary><![CDATA[(Mixed format) 32-bit bump-map format with luminance using 8 bits for each channel.]]></summary></member>
+    <member name="NormalizedShort2"><summary><![CDATA[(Signed format) 32-bit bump-map format using 16 bits for each channel.]]></summary></member>
+    <member name="NormalizedShort4"><summary><![CDATA[(Signed format) 64-bit bump-map format using 16 bits for each component.]]></summary></member>
+    <member name="Palette8"><summary><![CDATA[(Unsigned format) 8-bit color indexed.]]></summary></member>
+    <member name="PaletteAlpha16"><summary><![CDATA[(Unsigned format) 8-bit color indexed with 8 bits of alpha.]]></summary></member>
+    <member name="Rg32"><summary><![CDATA[(Unsigned format) 32-bit pixel format using 16 bits each for red and green.]]></summary></member>
+    <member name="Rgb32"><summary><![CDATA[(Unsigned format) 32-bit RGB pixel format, where 8 bits are reserved for each color.]]></summary></member>
+    <member name="Rgba1010102"><summary><![CDATA[(Unsigned format) 32-bit RGBA pixel format using 10 bits for each color and 2 bits for alpha.]]></summary></member>
+    <member name="Rgba32"><summary><![CDATA[(Unsigned format) 32-bit RGBA pixel format with alpha, using 8 bits per channel.]]></summary></member>
+    <member name="Rgba64"><summary><![CDATA[(Unsigned format) 64-bit RGBA pixel format using 16 bits for each component.]]></summary></member>
+    <member name="Single"><summary><![CDATA[(IEEE format) 32-bit float format using 32 bits for the red channel.]]></summary></member>
+    <member name="Unknown"><summary><![CDATA[Surface format is unknown.]]></summary></member>
+    <member name="Vector2"><summary><![CDATA[(IEEE format) 64-bit float format using 32 bits for the red channel and 32 bits for the green channel.]]></summary></member>
+    <member name="Vector4"><summary><![CDATA[(IEEE format) 128-bit float format using 32 bits for each channel (alpha, blue, green, red).]]></summary></member>
+    <member name="VideoGrGb"><summary><![CDATA[A 16-bit packed RGB format analogous to VideoYuYv (U0Y0, V0Y1, U2Y2, and so on). It requires a pixel pair to properly represent the color value. The first pixel in the pair contains 8 bits of green (in the low 8 bits) and 8 bits of red (in the high 8 bits). The second pixel contains 8 bits of green (in the low 8 bits) and 8 bits of blue (in the high 8 bits). Together, the two pixels share the red and blue components, while each has a unique green component (R0G0, B0G1, R2G2, and so on). The texture sampler does not normalize the colors when looking up into a pixel shader; they remain in the range of 0.0f to 255.0f. This is true for all programmable pixel shader models. For the fixed-function pixel shader, the hardware should normalize to the 0.f to 1.f range and essentially treat it as the VideoUyVy texture. Hardware that exposes this format must have PixelShader1xMaxValue set to a value capable of handling that range.]]></summary></member>
+    <member name="VideoRgBg"><summary><![CDATA[A 16-bit packed RGB format analogous to VideoUyVy (Y0U0, Y1V0, Y2U2, and so on). It requires a pixel pair to properly represent the color value. The first pixel in the pair contains 8 bits of green (in the high 8 bits) and 8 bits of red (in the low 8 bits). The second pixel contains 8 bits of green (in the high 8 bits) and 8 bits of blue (in the low 8 bits). Together, the two pixels share the red and blue components, while each has a unique green component (G0R0, G1B0, G2R2, and so on). The texture sampler does not normalize the colors when looking up into a pixel shader; they remain in the range of 0.0f to 255.0f. This is true for all programmable pixel shader models. For the fixed-function pixel shader, the hardware should normalize to the 0.f to 1.f range and essentially treat it as the VideoUyVy texture. Hardware that exposes this format must have PixelShader1xMaxValue set to a value capable of handling that range.]]></summary></member>
+    <member name="VideoUyVy"><summary><![CDATA[YUY2 format (PC98 compliance)]]></summary></member>
+    <member name="VideoYuYv"><summary><![CDATA[VideoYuYv format (PC98 compliance)]]></summary></member>
+  </members>
+</xna-type>

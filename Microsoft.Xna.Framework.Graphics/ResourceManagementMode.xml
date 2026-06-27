@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ResourceManagementMode" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines the memory class that holds the buffers for a resource.]]></summary>
+  <syntax><![CDATA[public enum ResourceManagementMode]]></syntax>
+  <remarks><![CDATA[All pool types are valid with all resources. This includes: vertex buffers, index buffers, textures, and surfaces. The following tables indicate restrictions on pool types for render targets, depth stencils, and dynamic and mipmap usages. An × indicates a compatible combination; lack of an × indicates incompatibility. ResourceManagementMode.Manual ResourceManagementMode.Automatic ResourceUsage.RenderTarget × ResourceUsage.DepthStencil × ResourceUsage.Dynamic × ResourceUsage.AutoGenerateMipMap × × For more information on ResourceUsage types, see ResourceUsage . Pools cannot be mixed for different objects contained within one resource (mip levels in a mipmap) and, when a pool is chosen, it cannot be changed. Applications should use Automatic for most static resources because this saves the application from having to deal with lost devices. (Automatic resources are restored by the runtime.) This is especially beneficial for unified memory architecture (UMA) systems. Other dynamic resources are not a good match for Automatic . In fact, index buffers and vertex buffers cannot be created using Automatic together with ResourceUsage.Dynamic .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Automatic"><summary><![CDATA[Resources are copied automatically to device-accessible memory as needed. Automatic resources are backed by system memory and do not need to be recreated when a device is lost. Automatic resources can be locked. Only the system-memory copy is directly modified. Your changes are copied to device-accessible memory as needed.]]></summary></member>
+    <member name="Manual"><summary><![CDATA[Resources are placed in the memory pool most appropriate for the set of usages requested for the given resource. This is usually video memory, including both local video memory and AGP memory. The Manual pool is separate from Automatic, and it specifies that the resource is placed in the preferred memory for device access. Textures placed in the Manual pool cannot be locked unless they are dynamic textures or they are private, FOURCC, driver formats. To access unlockable textures, you must use functions such as GetRenderTarget. Automatic is probably a better choice than Manual for most applications. Note that some textures created in driver-proprietary pixel formats, unknown to the XNA runtime, can be locked. Also note that—unlike textures—swap chain back buffers, render targets, vertex buffers, and index buffers can be locked. When a device is lost, resources created using Manual must be released before calling Reset. When creating resources with Manual, if video card memory is already committed, automatic resources will be evicted to free enough memory to satisfy the request.]]></summary></member>
+  </members>
+</xna-type>

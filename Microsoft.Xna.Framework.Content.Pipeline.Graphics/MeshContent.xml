@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MeshContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="NodeContent">
+  <summary><![CDATA[Provides properties and methods that define various aspects of a mesh.]]></summary>
+  <syntax><![CDATA[public class MeshContent : NodeContent]]></syntax>
+  <remarks><![CDATA[A mesh has the following characteristics: It is not jointed. For example, the wheels of a car are separate meshes from the body mesh of the same car. It may contain multiple materials. For example, the car body can be a single mesh even if the windshield component uses a different texture and shader as compared to the leather seat component of the car body. Vertices containing different channels may be mixed in a single mesh. For example, the seat geometry includes tangent vectors but the windshield does not. However, using a single mesh preserves topological continuity (shared vertex identities) across material and vertex format boundaries.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="MeshContent()">
+      <summary><![CDATA[Initializes a new instance of MeshContent.]]></summary>
+      <syntax><![CDATA[public MeshContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Geometry" type="GeometryContentCollection" access="get">
+      <summary><![CDATA[Gets the list of geometry batches for the mesh.]]></summary>
+      <syntax><![CDATA[public GeometryContentCollection Geometry { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Positions" type="PositionCollection" access="get">
+      <summary><![CDATA[Gets the list of vertex position values.]]></summary>
+      <syntax><![CDATA[public PositionCollection Positions { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

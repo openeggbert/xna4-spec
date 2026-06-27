@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MathTypeConverter" kind="class"
+          namespace="Microsoft.Xna.Framework.Design"
+          assembly="Microsoft.Xna.Framework.Design"
+          baseClass="ExpandableObjectConverter">
+  <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public class MathTypeConverter : ExpandableObjectConverter]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="MathTypeConverter()">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public MathTypeConverter ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="CanConvertFrom" returnType="bool">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ITypeDescriptorContext, Type">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override bool CanConvertFrom (
+         ITypeDescriptorContext context,
+         Type sourceType
+)]]></syntax>
+          <parameters>
+            <parameter name="context" type="ITypeDescriptorContext"><![CDATA[The format context.]]></parameter>
+            <parameter name="sourceType" type="Type"><![CDATA[The type you want to convert from.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if this converter can perform the conversion; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CanConvertTo" returnType="bool">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ITypeDescriptorContext, Type">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override bool CanConvertTo (
+         ITypeDescriptorContext context,
+         Type destinationType
+)]]></syntax>
+          <parameters>
+            <parameter name="context" type="ITypeDescriptorContext"><![CDATA[The format context.]]></parameter>
+            <parameter name="destinationType" type="Type"><![CDATA[The destination type.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if this converter can perform the conversion; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetCreateInstanceSupported" returnType="bool">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ITypeDescriptorContext">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override bool GetCreateInstanceSupported (
+         ITypeDescriptorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="context" type="ITypeDescriptorContext"><![CDATA[The format context.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if changing a property on this object requires a call to CreateInstance to create a new value; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetProperties" returnType="PropertyDescriptorCollection">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ITypeDescriptorContext, Object, Attribute ">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override PropertyDescriptorCollection GetProperties (
+         ITypeDescriptorContext context,
+         Object value,
+         Attribute[] attributes
+)]]></syntax>
+          <parameters>
+            <parameter name="context" type="ITypeDescriptorContext"><![CDATA[The format context.]]></parameter>
+            <parameter name="value" type="Object"><![CDATA[The type of array for which to get properties.]]></parameter>
+            <parameter name="attributes" type="Attribute[]"><![CDATA[An array to use as a filter.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The properties that are exposed for this data type, or null if there are no properties.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetPropertiesSupported" returnType="bool">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="ITypeDescriptorContext">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public override bool GetPropertiesSupported (
+         ITypeDescriptorContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="context" type="ITypeDescriptorContext"><![CDATA[The format context.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if GetProperties should be called to find the properties of this object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="propertyDescriptions" type="Object">
+      <summary><![CDATA[This field is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[protected PropertyDescriptorCollection propertyDescriptions]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="supportStringConvert" type="Object">
+      <summary><![CDATA[This field is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[protected bool supportStringConvert]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

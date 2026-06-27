@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Rgba1010102" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
+          assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
+          interfaces="IPackedVector&amp;lt;UInt32&amp;gt;, IEquatable&amp;lt;Rgba1010102&amp;gt;">
+  <summary><![CDATA[Packed vector type containing unsigned normalized values, ranging from 0 to 1, using 10 bits each for x, y, and z, and 2 bits for w.]]></summary>
+  <syntax><![CDATA[public struct Rgba1010102 : IPackedVector&lt;UInt32&gt;, IEquatable&lt;Rgba1010102&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Rgba1010102(Single, Single, Single, Single)">
+      <summary><![CDATA[Initializes a new instance of the Rgba1010102 class.]]></summary>
+      <syntax><![CDATA[public Rgba1010102 (
+         float x,
+         float y,
+         float z,
+         float w
+)]]></syntax>
+      <parameters>
+        <parameter name="x" type="float"><![CDATA[Initial value for the x component.]]></parameter>
+        <parameter name="y" type="float"><![CDATA[Initial value for the y component.]]></parameter>
+        <parameter name="z" type="float"><![CDATA[Initial value for the z component.]]></parameter>
+        <parameter name="w" type="float"><![CDATA[Initial value for the w component.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Rgba1010102(Vector4)">
+      <summary><![CDATA[Initializes a new instance of the Rgba1010102 structure.]]></summary>
+      <syntax><![CDATA[public Rgba1010102 (
+         Vector4 vector
+)]]></syntax>
+      <parameters>
+        <parameter name="vector" type="Object"><![CDATA[A vector containing the initial values for the components of the Rgba1010102 structure.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="PackedValue" type="UInt32" access="get;set">
+      <summary><![CDATA[Directly gets or sets the packed representation of the value.]]></summary>
+      <syntax><![CDATA[[CLSCompliantAttribute(false)]
+public UInt32 PackedValue { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Rgba1010102">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Rgba1010102 other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Object"><![CDATA[The object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for the current instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for the current instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for the instance.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a string representation of the current instance.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a string representation of the current instance.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String that represents the object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToVector4" returnType="void">
+      <summary><![CDATA[Expands the packed representation into a Vector4.]]></summary>
+      <overloads>
+        <overload signature="ToVector4()">
+          <summary><![CDATA[Expands the packed representation into a Vector4.]]></summary>
+          <syntax><![CDATA[public Vector4 ToVector4 ()]]></syntax>
+          <returns><![CDATA[The expanded vector.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Rgba1010102 a,
+         Rgba1010102 b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Object"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="Object"><![CDATA[The object to the left of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Rgba1010102 a,
+         Rgba1010102 b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Object"><![CDATA[The object to the left of the equality operator.]]></parameter>
+            <parameter name="b" type="Object"><![CDATA[The object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

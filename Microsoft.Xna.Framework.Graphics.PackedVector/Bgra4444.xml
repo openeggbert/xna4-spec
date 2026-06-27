@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Bgra4444" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
+          assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
+          interfaces="IPackedVector&amp;lt;UInt16&amp;gt;, IPackedVector, IEquatable&amp;lt;Bgra4444&amp;gt;">
+  <summary><![CDATA[Packed vector type containing unsigned normalized values, ranging from 0 to 1, using 4 bits each for x, y, z, and w.]]></summary>
+  <syntax><![CDATA[public struct Bgra4444 : IPackedVector&lt;UInt16&gt;, IPackedVector, IEquatable&lt;Bgra4444&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Bgra4444(Single, Single, Single, Single)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA[public Bgra4444 (
+         float x,
+         float y,
+         float z,
+         float w
+)]]></syntax>
+      <parameters>
+        <parameter name="x" type="float"><![CDATA[Initial value for the x component.]]></parameter>
+        <parameter name="y" type="float"><![CDATA[Initial value for the y component.]]></parameter>
+        <parameter name="z" type="float"><![CDATA[Initial value for the z component.]]></parameter>
+        <parameter name="w" type="float"><![CDATA[Initial value for the w component.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="Bgra4444(Vector4)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA[public Bgra4444 (
+         Vector4 vector
+)]]></syntax>
+      <parameters>
+        <parameter name="vector" type="Object"><![CDATA[Input value for all four components (xyzw).]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="PackedValue" type="UInt16" access="get;set">
+      <summary><![CDATA[Gets or sets the packed representation of the vector.]]></summary>
+      <syntax><![CDATA[[CLSCompliantAttribute(false)]
+public UInt16 PackedValue { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Tests an object to see if it is equal to this object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Tests an object to see if it is equal to this object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The object to test.]]></parameter>
+          </parameters>
+          <returns><![CDATA[True if they are equal; otherwise false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+        <overload signature="Bgra4444">
+          <summary><![CDATA[Tests an object to see if it is equal to this object.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Bgra4444 other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Object"><![CDATA[The object to test.]]></parameter>
+          </parameters>
+          <returns><![CDATA[True if they are equal, false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this object.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this object.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[The hash code.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns a string representation.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns a string representation.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[The string that represents the object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToVector4" returnType="void">
+      <summary><![CDATA[Unpacks this object to a four-component vector.]]></summary>
+      <overloads>
+        <overload signature="ToVector4()">
+          <summary><![CDATA[Unpacks this object to a four-component vector.]]></summary>
+          <syntax><![CDATA[public Vector4 ToVector4 ()]]></syntax>
+          <returns><![CDATA[A four-component vector.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Equality operator, which compares two objects to see if they are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Equality operator, which compares two objects to see if they are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Bgra4444 a,
+         Bgra4444 b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Object"><![CDATA[The first object.]]></parameter>
+            <parameter name="b" type="Object"><![CDATA[The second object.]]></parameter>
+          </parameters>
+          <returns><![CDATA[True if the objects are equal; otherwise false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Tests two objects to see if they are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Tests two objects to see if they are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Bgra4444 a,
+         Bgra4444 b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Object"><![CDATA[The first object.]]></parameter>
+            <parameter name="b" type="Object"><![CDATA[The second object.]]></parameter>
+          </parameters>
+          <returns><![CDATA[True if the objects are not equal, false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

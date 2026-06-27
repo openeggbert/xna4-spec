@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VideoContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          baseClass="ContentItem"
+          interfaces="IDisposable">
+  <summary><![CDATA[Provides a base class for all video objects.]]></summary>
+  <syntax><![CDATA[public class VideoContent : ContentItem, IDisposable]]></syntax>
+  <platforms>
+    <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>and Windows XP.</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="VideoContent(string)">
+      <summary><![CDATA[Initializes a new copy of the VideoContent class for the specified video file.]]></summary>
+      <syntax><![CDATA[public VideoContent (
+         string filename
+)]]></syntax>
+      <parameters>
+        <parameter name="filename" type="string"><![CDATA[The file name of the video to import.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>and Windows XP.</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="BitsPerSecond" type="int" access="get">
+      <summary><![CDATA[Gets the bit rate for this video.]]></summary>
+      <syntax><![CDATA[public int BitsPerSecond { get; }]]></syntax>
+      <platforms>
+        <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>and Windows XP.</platform>
+      </platforms>
+    </property>
+    <property name="Duration" type="TimeSpan" access="get">
+      <summary><![CDATA[Gets the duration of this video.]]></summary>
+      <syntax><![CDATA[public TimeSpan Duration { get; }]]></syntax>
+      <platforms>
+        <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>and Windows XP.</platform>
+      </platforms>
+    </property>
+    <property name="Filename" type="string" access="get;set">
+      <summary><![CDATA[Gets or sets the file name for this video.]]></summary>
+      <syntax><![CDATA[[ContentSerializerAttribute]
+public string Filename { get; set; }]]></syntax>
+      <platforms>
+        <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>and Windows XP.</platform>
+      </platforms>
+    </property>
+    <property name="FramesPerSecond" type="float" access="get">
+      <summary><![CDATA[Gets the frame rate for this video.]]></summary>
+      <syntax><![CDATA[public float FramesPerSecond { get; }]]></syntax>
+      <platforms>
+        <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>and Windows XP.</platform>
+      </platforms>
+    </property>
+    <property name="Height" type="int" access="get">
+      <summary><![CDATA[Gets the height of this video.]]></summary>
+      <syntax><![CDATA[public int Height { get; }]]></syntax>
+      <platforms>
+        <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>and Windows XP.</platform>
+      </platforms>
+    </property>
+    <property name="VideoSoundtrackType" type="VideoSoundtrackType" access="get;set">
+      <summary><![CDATA[Gets or sets the type of soundtrack accompanying the video.]]></summary>
+      <syntax><![CDATA[[ContentSerializerAttribute]
+public VideoSoundtrackType VideoSoundtrackType { get; set; }]]></syntax>
+      <platforms>
+        <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>and Windows XP.</platform>
+      </platforms>
+    </property>
+    <property name="Width" type="int" access="get">
+      <summary><![CDATA[Gets the width of this video.]]></summary>
+      <syntax><![CDATA[public int Width { get; }]]></syntax>
+      <platforms>
+        <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>and Windows XP.</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>and Windows XP.</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

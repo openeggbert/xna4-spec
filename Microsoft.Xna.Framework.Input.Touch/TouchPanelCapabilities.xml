@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TouchPanelCapabilities" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input.Touch"
+          assembly="Microsoft.Xna.Framework.Input.Touch">
+  <summary><![CDATA[Provides access to information about the capabilities of the touch input device.]]></summary>
+  <syntax><![CDATA[public struct TouchPanelCapabilities]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="IsConnected" type="bool" access="get;set">
+      <summary><![CDATA[Indicates if the touch panel device is available for use.]]></summary>
+      <syntax><![CDATA[public bool IsConnected { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="MaximumTouchCount" type="int" access="get;set">
+      <summary><![CDATA[Gets the maximum number of touch locations that can be tracked by the touch pad device.]]></summary>
+      <syntax><![CDATA[public int MaximumTouchCount { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

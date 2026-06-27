@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentTypeSerializer Generic" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
+          baseClass="ContentTypeSerializer">
+  <summary><![CDATA[Provides a generic implementation of ContentTypeSerializer methods and properties for serializing and deserializing a specific managed type.]]></summary>
+  <syntax><![CDATA[public abstract class ContentTypeSerializer&lt;T&gt; : ContentTypeSerializer]]></syntax>
+  <remarks><![CDATA[This is a generic implementation of ContentTypeSerializer and, therefore, can handle strongly typed content data.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

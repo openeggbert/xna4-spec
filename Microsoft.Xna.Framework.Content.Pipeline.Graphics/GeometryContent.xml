@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GeometryContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="ContentItem">
+  <summary><![CDATA[Provides properties that define various aspects of a geometry batch.]]></summary>
+  <syntax><![CDATA[public class GeometryContent : ContentItem]]></syntax>
+  <remarks><![CDATA[A geometry batch is a subcomponent of a mesh, representing a single piece of homogeneous geometry that can be submitted to the GPU in a single draw call. It contains an indexed triangle list (using a single material) where all vertices share the same set of data channels. Vertices are made unique if there are differences in any of their data channels. Coordinates that require unique vertices on either side of a join create unique vertices.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GeometryContent()">
+      <summary><![CDATA[Creates an instance of GeometryContent.]]></summary>
+      <syntax><![CDATA[public GeometryContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Indices" type="IndexCollection" access="get">
+      <summary><![CDATA[Gets the list of triangle indices for this geometry batch. Geometry is stored as an indexed triangle list, where each group of three indices defines a single triangle.]]></summary>
+      <syntax><![CDATA[public IndexCollection Indices { get; }]]></syntax>
+      <remarks><![CDATA[Use these indices to reference into the collection of position indices and vertex channels of the geometry batch.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Material" type="MaterialContent" access="get;set">
+      <summary><![CDATA[Gets or sets the material of the parent mesh.]]></summary>
+      <syntax><![CDATA[public MaterialContent Material { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Parent" type="MeshContent" access="get;set">
+      <summary><![CDATA[Gets or sets the parent MeshContent for this object.]]></summary>
+      <syntax><![CDATA[public MeshContent Parent { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Vertices" type="VertexContent" access="get">
+      <summary><![CDATA[Gets the set of vertex batches for the geometry batch.]]></summary>
+      <syntax><![CDATA[public VertexContent Vertices { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

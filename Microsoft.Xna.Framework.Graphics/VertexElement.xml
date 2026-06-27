@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexElement" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines input vertex data to the pipeline.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public struct VertexElement]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="VertexElement(short, short, VertexElementFormat, VertexElementMethod, VertexElementUsage, byte)">
+      <summary><![CDATA[Initializes a new instance of the VertexElement class.]]></summary>
+      <syntax><![CDATA[public VertexElement (
+         short stream,
+         short offset,
+         VertexElementFormat elementFormat,
+         VertexElementMethod elementMethod,
+         VertexElementUsage elementUsage,
+         byte usageIndex
+)]]></syntax>
+      <parameters>
+        <parameter name="stream" type="short"><![CDATA[Stream number (or index) to use.]]></parameter>
+        <parameter name="offset" type="short"><![CDATA[Offset (if any) from the beginning of the stream to the beginning of the vertex data.]]></parameter>
+        <parameter name="elementFormat" type="VertexElementFormat"><![CDATA[One of several predefined types that define the vertex data size.]]></parameter>
+        <parameter name="elementMethod" type="VertexElementMethod"><![CDATA[The tessellator processing method. These methods determine how the tessellator interprets/operates on the vertex data.]]></parameter>
+        <parameter name="elementUsage" type="VertexElementUsage"><![CDATA[The intended use of the vertex data.]]></parameter>
+        <parameter name="usageIndex" type="byte"><![CDATA[Modifies the usage data to allow the user to specify multiple usage types.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Vertex data is defined using an array of VertexElement structures.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="VertexElement(Object, Object, Object, Object)">
+      <summary><![CDATA[Initializes a new instance of the VertexElement class.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         offset As Integer, _
+         elementFormat As VertexElementFormat, _
+         elementUsage As VertexElementUsage, _
+         usageIndex As Integer _
+)]]></syntax>
+      <parameters>
+        <parameter name="offset" type="Object"><![CDATA[Type: Int32 Offset (if any) from the beginning of the stream to the beginning of the vertex data.]]></parameter>
+        <parameter name="elementFormat" type="Object"><![CDATA[Type: VertexElementFormat One of several predefined types that define the vertex data size.]]></parameter>
+        <parameter name="elementUsage" type="Object"><![CDATA[Type: VertexElementUsage The intended use of the vertex data.]]></parameter>
+        <parameter name="usageIndex" type="Object"><![CDATA[Type: Int32 Modifies the usage data to allow the user to specify multiple usage types.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Vertex data is defined using an array of VertexElement structures.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Offset" type="short" access="get;set">
+      <summary><![CDATA[Retrieves or sets the offset (if any) from the beginning of the stream to the beginning of the vertex data.]]></summary>
+      <syntax><![CDATA[public short Offset { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Stream" type="short" access="get;set">
+      <summary><![CDATA[Retrieves or sets the stream number (or index) to use.]]></summary>
+      <syntax><![CDATA[public short Stream { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="UsageIndex" type="byte" access="get;set">
+      <summary><![CDATA[Modifies the usage data to allow the user to specify multiple usage types.]]></summary>
+      <syntax><![CDATA[public byte UsageIndex { get; set; }]]></syntax>
+      <remarks><![CDATA[The UsageIndex property is used in conjunction with VertexElementUsage to specify the semantic of a vertex element.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexElementFormat" type="VertexElementFormat" access="get;set">
+      <summary><![CDATA[Gets or sets the format of this vertex element.]]></summary>
+      <syntax><![CDATA[public VertexElementFormat VertexElementFormat { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexElementMethod" type="VertexElementMethod" access="get;set">
+      <summary><![CDATA[Gets or sets a value indicating which vertex data to calculate during tessellation.]]></summary>
+      <syntax><![CDATA[public VertexElementMethod VertexElementMethod { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexElementUsage" type="VertexElementUsage" access="get;set">
+      <summary><![CDATA[Gets or sets a value describing how the vertex element is to be used.]]></summary>
+      <syntax><![CDATA[public VertexElementUsage VertexElementUsage { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[The Object to compare with the current VertexElement .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         VertexElement left,
+         VertexElement right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="VertexElement"><![CDATA[Object to the left of the equality operator.]]></parameter>
+            <parameter name="right" type="VertexElement"><![CDATA[Object to the right of the equality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are the same; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         VertexElement left,
+         VertexElement right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="VertexElement"><![CDATA[Object to the left of the inequality operator.]]></parameter>
+            <parameter name="right" type="VertexElement"><![CDATA[Object to the right of the inequality operator.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are different; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

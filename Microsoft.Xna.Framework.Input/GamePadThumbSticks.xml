@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamePadThumbSticks" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input"
+          assembly="Microsoft.Xna.Framework.Input">
+  <summary><![CDATA[Structure that represents the position of left and right sticks (thumbsticks) on an Xbox 360 Controller.]]></summary>
+  <syntax><![CDATA[public struct GamePadThumbSticks]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GamePadThumbSticks(Object, Object)">
+      <summary><![CDATA[Initializes a new instance of the GamePadThumbSticks class.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         leftThumbstick As Vector2, _
+         rightThumbstick As Vector2 _
+)]]></syntax>
+      <parameters>
+        <parameter name="leftThumbstick" type="Object"><![CDATA[Type: Vector2 Left stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
+        <parameter name="rightThumbstick" type="Object"><![CDATA[Type: Vector2 Right stick value. Each axis is clamped between −1.0 and 1.0.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Games normally use GetState to get the true gamepad state. This constructor is used instead to simulate gamepad input for passing within the game's own input subsystem.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Left" type="Vector2" access="get">
+      <summary><![CDATA[Returns the position of the left Xbox 360 Controller stick (thumbstick) as a 2D vector.]]></summary>
+      <syntax><![CDATA[public Vector2 Left { get; }]]></syntax>
+      <remarks><![CDATA[Each of the thumbstick axis members is a signed value describing the position of the thumbstick. A value of 0 is centered. Negative values signify down or to the left. Positive values signify up or to the right. The controller typically does not generate thumbstick values within a dead zone, or marginal input region around the center position.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Right" type="Vector2" access="get">
+      <summary><![CDATA[Returns the position of the right Xbox 360 Controller stick (thumbstick) as a 2D vector.]]></summary>
+      <syntax><![CDATA[public Vector2 Right { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether two GamePadThumbSticks instances are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether two GamePadThumbSticks instances are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         GamePadThumbSticks left,
+         GamePadThumbSticks right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GamePadThumbSticks"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="GamePadThumbSticks"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the instances are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether two GamePadThumbSticks instances are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether two GamePadThumbSticks instances are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         GamePadThumbSticks left,
+         GamePadThumbSticks right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GamePadThumbSticks"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="GamePadThumbSticks"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

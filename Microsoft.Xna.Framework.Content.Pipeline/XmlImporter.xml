@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="XmlImporter" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          baseClass="ContentImporter&amp;lt;Object&amp;gt;">
+  <summary><![CDATA[Implements an importer for reading intermediate XML files. This is a wrapper around IntermediateSerializer.]]></summary>
+  <syntax><![CDATA[public class XmlImporter : ContentImporter&lt;Object&gt;]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="XmlImporter()">
+      <summary><![CDATA[Initializes a new instance of XmlImporter.]]></summary>
+      <syntax><![CDATA[public XmlImporter ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Import" returnType="void">
+      <summary><![CDATA[Called by the framework when importing an intermediate file containing a game asset.]]></summary>
+      <overloads>
+        <overload signature="Import()">
+          <summary><![CDATA[Called by the framework when importing an intermediate file containing a game asset.]]></summary>
+          <syntax><![CDATA[public override Object Import (
+         string filename,
+         ContentImporterContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="filename" type="string"><![CDATA[Name of the intermediate file.]]></parameter>
+            <parameter name="context" type="ContentImporterContext"><![CDATA[Contains information for importing the intermediate file, such as a logger interface.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Object representing the game asset contained by the intermediate file.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

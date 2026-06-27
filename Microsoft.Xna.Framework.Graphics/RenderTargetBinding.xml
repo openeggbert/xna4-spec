@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="RenderTargetBinding" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Binds an array of render targets.]]></summary>
+  <syntax><![CDATA[public struct RenderTargetBinding]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="RenderTargetBinding(RenderTarget2D)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA[public RenderTargetBinding (
+         RenderTarget2D renderTarget
+)]]></syntax>
+      <parameters>
+        <parameter name="renderTarget" type="Object"><![CDATA[Identifies a 2D render target.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="RenderTargetBinding(RenderTargetCube, CubeMapFace)">
+      <summary><![CDATA[Creates an instance of this object.]]></summary>
+      <syntax><![CDATA[public RenderTargetBinding (
+         RenderTargetCube renderTarget,
+         CubeMapFace cubeMapFace
+)]]></syntax>
+      <parameters>
+        <parameter name="renderTarget" type="RenderTargetCube"><![CDATA[Identifies a cubemap render target.]]></parameter>
+        <parameter name="cubeMapFace" type="CubeMapFace"><![CDATA[Cubemap face.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="CubeMapFace" type="CubeMapFace" access="get">
+      <summary><![CDATA[Gets one face of a cubemap.]]></summary>
+      <syntax><![CDATA[public CubeMapFace CubeMapFace { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="RenderTarget" type="Texture" access="get">
+      <summary><![CDATA[Gets a 2D texture.]]></summary>
+      <syntax><![CDATA[public Texture RenderTarget { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

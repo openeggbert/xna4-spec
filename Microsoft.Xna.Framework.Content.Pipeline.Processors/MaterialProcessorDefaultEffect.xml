@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MaterialProcessorDefaultEffect" kind="enum"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <summary><![CDATA[This enumeration is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public enum MaterialProcessorDefaultEffect]]></syntax>
+  <platforms>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <members>
+    <member name="AlphaTestEffect"><summary><![CDATA[4]]></summary></member>
+    <member name="BasicEffect"><summary><![CDATA[0]]></summary></member>
+    <member name="DualTextureEffect"><summary><![CDATA[3]]></summary></member>
+    <member name="EnvironmentMapEffect"><summary><![CDATA[2]]></summary></member>
+    <member name="SkinnedEffect"><summary><![CDATA[1]]></summary></member>
+  </members>
+</xna-type>

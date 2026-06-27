@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IGraphicsDeviceManager" kind="interface"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Defines the interface for an object that manages a GraphicsDevice.]]></summary>
+  <syntax><![CDATA[public interface IGraphicsDeviceManager]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="BeginDraw" returnType="void">
+      <summary><![CDATA[Starts the drawing of a frame.]]></summary>
+      <overloads>
+        <overload signature="BeginDraw()">
+          <summary><![CDATA[Starts the drawing of a frame.]]></summary>
+          <syntax><![CDATA[public bool BeginDraw ()]]></syntax>
+          <returns><![CDATA[true if the frame should be drawn; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateDevice" returnType="void">
+      <summary><![CDATA[Called to ensure that the device manager has created a valid device.]]></summary>
+      <overloads>
+        <overload signature="CreateDevice()">
+          <summary><![CDATA[Called to ensure that the device manager has created a valid device.]]></summary>
+          <syntax><![CDATA[public void CreateDevice ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndDraw" returnType="void">
+      <summary><![CDATA[Called by the game at the end of drawing; presents the final rendering.]]></summary>
+      <overloads>
+        <overload signature="EndDraw()">
+          <summary><![CDATA[Called by the game at the end of drawing; presents the final rendering.]]></summary>
+          <syntax><![CDATA[public void EndDraw ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

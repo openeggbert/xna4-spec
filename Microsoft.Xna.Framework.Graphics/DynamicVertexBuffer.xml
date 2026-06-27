@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="DynamicVertexBuffer" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="VertexBuffer">
+  <summary><![CDATA[Represents a list of 3D vertices to be streamed to the graphics device. Use DynamicVertexBuffer for dynamic vertex arrays and VertexBuffer for non-dynamic vertex arrays.]]></summary>
+  <syntax><![CDATA[public class DynamicVertexBuffer : VertexBuffer]]></syntax>
+  <remarks><![CDATA[In situations where your game frequently modifies a vertex buffer, it is recommended that the buffer be instantiated or derived from DynamicVertexBuffer instead of the VertexBuffer class. DynamicVertexBuffer is optimized for frequent vertex data modification. However, to fully maximize the benefits of this class, your data must be restored after any occurrence of a ContentLost event. This event is fired whenever the related graphics device is lost. After resetting the graphics device and restoring any static resources, the ContentLost event handler is then called. Calling SetData inside this handler restores any dynamic resource data. You can declare the event handler after constructing your dynamic vertex buffer. For example, the following code sample first constructs a dynamic vertex buffer (called vertexBuffer ), declares a ContentLost event handler (called vertexBuffer_ContentLost ). The final step initializes the data with a call to SetData . This is necessary for correct restoration of any existing particles after a lost device event. vertexBuffer = new DynamicVertexBuffer(GraphicsDevice, size, BufferUsage.Points); vertexBuffer.ContentLost += new EventHandler(vertexBuffer_ContentLost); vertexBuffer.SetData(particles);]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="DynamicVertexBuffer(GraphicsDevice, VertexDeclaration, Int32, BufferUsage)">
+      <summary><![CDATA[Creates a new instance of this object.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         graphicsDevice As GraphicsDevice, _
+         vertexDeclaration As VertexDeclaration, _
+         vertexCount As Integer, _
+         usage As BufferUsage _
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="Object"><![CDATA[Type: GraphicsDevice The graphics device.]]></parameter>
+        <parameter name="vertexDeclaration" type="Object"><![CDATA[Type: VertexDeclaration The vertex declaration, which describes per-vertex data.]]></parameter>
+        <parameter name="vertexCount" type="Object"><![CDATA[Type: Int32 The number of vertices.]]></parameter>
+        <parameter name="usage" type="Object"><![CDATA[Type: BufferUsage Behavior options; it is good practice for this to match the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="DynamicVertexBuffer(GraphicsDevice, Type, Int32, BufferUsage)">
+      <summary><![CDATA[Initializes a new instance of DynamicVertexBuffer with the specified parameters.]]></summary>
+      <syntax><![CDATA[public DynamicVertexBuffer (
+         GraphicsDevice graphicsDevice,
+         Type vertexType,
+         int elementCount,
+         BufferUsage usage
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to associate with this vertex buffer.]]></parameter>
+        <parameter name="vertexType" type="Type"><![CDATA[The type of vertices in this vertex buffer.]]></parameter>
+        <parameter name="elementCount" type="int"><![CDATA[The number of elements in this vertex buffer.]]></parameter>
+        <parameter name="usage" type="BufferUsage"><![CDATA[A set of options identifying the behaviors of this vertex buffer resource. It is good practice to match the parameter with the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="DynamicVertexBuffer(GraphicsDevice, Int32, BufferUsage)">
+      <summary><![CDATA[Initializes a new instance of DynamicVertexBuffer with the specified parameters.]]></summary>
+      <syntax><![CDATA[public DynamicVertexBuffer (
+         GraphicsDevice graphicsDevice,
+         int sizeInBytes,
+         BufferUsage usage
+)]]></syntax>
+      <parameters>
+        <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to associate with this vertex buffer.]]></parameter>
+        <parameter name="sizeInBytes" type="int"><![CDATA[The number of bytes to allocate for this vertex buffer resource.]]></parameter>
+        <parameter name="usage" type="BufferUsage"><![CDATA[A set of options identifying the behaviors of this vertex buffer resource. It is good practice to match the parameter with the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="IsContentLost" type="bool" access="get">
+      <summary><![CDATA[Determines if the index buffer data has been lost due to a lost device event.]]></summary>
+      <syntax><![CDATA[public bool IsContentLost { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected override void Dispose (
+         bool 
+)]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="raise_ContentLost" returnType="void">
+      <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+      <overloads>
+        <overload signature="raise_ContentLost()">
+          <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[protected virtual void raise_ContentLost (
+         Object value0,
+         EventArgs value1
+)]]></syntax>
+          <parameters>
+            <parameter name="value0" type="Object"><![CDATA[The source of this event.]]></parameter>
+            <parameter name="value1" type="EventArgs"><![CDATA[The event arguments that are associated with the action that raised the event.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="ContentLost" type="EventHandler">
+      <summary><![CDATA[Occurs when resources are lost due to a lost device event.]]></summary>
+      <syntax><![CDATA[public virtual event EventHandler ContentLost]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

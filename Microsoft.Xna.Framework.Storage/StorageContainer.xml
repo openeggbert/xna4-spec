@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="StorageContainer" kind="class"
+          namespace="Microsoft.Xna.Framework.Storage"
+          assembly="Microsoft.Xna.Framework.Storage"
+          interfaces="IDisposable">
+  <summary><![CDATA[Represents a logical collection of storage files.]]></summary>
+  <syntax><![CDATA[public sealed class StorageContainer : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="DisplayName" type="string" access="get">
+      <summary><![CDATA[Gets the name of the title.]]></summary>
+      <syntax><![CDATA[public string DisplayName { get; }]]></syntax>
+      <remarks><![CDATA[This is the same as the displayName passed to BeginOpenContainer .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Path" type="string" access="get">
+      <summary><![CDATA[Gets the file path to the location of the user's save game files.]]></summary>
+      <syntax><![CDATA[public string Path { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="StorageDevice" type="StorageDevice" access="get">
+      <summary><![CDATA[Gets the StorageDevice that holds the files in this container.]]></summary>
+      <syntax><![CDATA[public StorageDevice StorageDevice { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TitleLocation" type="string" access="get" isStatic="true">
+      <summary><![CDATA[Gets the file path to the location of the title storage space.]]></summary>
+      <syntax><![CDATA[public static string TitleLocation { get; }]]></syntax>
+      <remarks><![CDATA[Use this member to create full paths to files in the same location as the game executable. For example: private static FileStream OpenTitleFile( string filename, FileMode mode, FileAccess access ) { string fullpath = Path.Combine( StorageContainer.TitleLocation, filename ); return File.Open( fullpath, mode, access ); }]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="TitleName" type="string" access="get">
+      <summary><![CDATA[Gets the name of the title.]]></summary>
+      <syntax><![CDATA[public string TitleName { get; }]]></syntax>
+      <remarks><![CDATA[This is the same as the titleName passed to OpenContainer .]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="CreateDirectory" returnType="void">
+      <summary><![CDATA[Creates a new directory in the StorageContainer scope.]]></summary>
+      <overloads>
+        <overload signature="CreateDirectory()">
+          <summary><![CDATA[Creates a new directory in the StorageContainer scope.]]></summary>
+          <syntax><![CDATA[public void CreateDirectory (
+         string directory
+)]]></syntax>
+          <parameters>
+            <parameter name="directory" type="string"><![CDATA[Type: String The relative path of the directory to delete within the StorageContainer scope.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="CreateFile" returnType="void">
+      <summary><![CDATA[Creates a file at a specified path in the StorageContainer.]]></summary>
+      <overloads>
+        <overload signature="CreateFile()">
+          <summary><![CDATA[Creates a file at a specified path in the StorageContainer.]]></summary>
+          <syntax><![CDATA[public Stream CreateFile (
+         string file
+)]]></syntax>
+          <parameters>
+            <parameter name="file" type="string"><![CDATA[Type: String The relative path of the file to be created in the StorageContainer .]]></parameter>
+          </parameters>
+          <returns><![CDATA[A new file with read/write access.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Delete" returnType="void">
+      <summary><![CDATA[Deletes the storage container.]]></summary>
+      <overloads>
+        <overload signature="Delete()">
+          <summary><![CDATA[Deletes the storage container.]]></summary>
+          <syntax><![CDATA[public void Delete ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DeleteDirectory" returnType="void">
+      <summary><![CDATA[Deletes a directory in the StorageContainer scope.]]></summary>
+      <overloads>
+        <overload signature="DeleteDirectory()">
+          <summary><![CDATA[Deletes a directory in the StorageContainer scope.]]></summary>
+          <syntax><![CDATA[public void DeleteDirectory (
+         string directory
+)]]></syntax>
+          <parameters>
+            <parameter name="directory" type="string"><![CDATA[Type: String The relative path of the directory to delete within the StorageContainer scope.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DeleteFile" returnType="void">
+      <summary><![CDATA[Deletes a file in the StorageContainer.]]></summary>
+      <overloads>
+        <overload signature="DeleteFile()">
+          <summary><![CDATA[Deletes a file in the StorageContainer.]]></summary>
+          <syntax><![CDATA[public void DeleteFile (
+         string file
+)]]></syntax>
+          <parameters>
+            <parameter name="file" type="string"><![CDATA[Type: String The relative path of the file to delete within the StorageContainer .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DirectoryExists" returnType="void">
+      <summary><![CDATA[Determines whether the specified path refers to an existing directory in the StorageContainer.]]></summary>
+      <overloads>
+        <overload signature="DirectoryExists()">
+          <summary><![CDATA[Determines whether the specified path refers to an existing directory in the StorageContainer.]]></summary>
+          <syntax><![CDATA[public bool DirectoryExists (
+         string directory
+)]]></syntax>
+          <parameters>
+            <parameter name="directory" type="string"><![CDATA[Type: String The path to test.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if path refers to an existing directory in the StorageContainer and is not null; otherwise, false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <remarks><![CDATA[After the StorageContainer has been opened on a StorageDevice , changes to the files within the container are cached until the container is disposed. If the storage device is removed or the Xbox 360 is powered down before the container is disposed, any changes are lost.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="FileExists" returnType="void">
+      <summary><![CDATA[Determines whether the specified path refers to an existing file in the StorageContainer.]]></summary>
+      <overloads>
+        <overload signature="FileExists()">
+          <summary><![CDATA[Determines whether the specified path refers to an existing file in the StorageContainer.]]></summary>
+          <syntax><![CDATA[public bool FileExists (
+         string file
+)]]></syntax>
+          <parameters>
+            <parameter name="file" type="string"><![CDATA[Type: String The path and file name to test.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if path refers to an existing file in the StorageContainer and is not null; otherwise, false.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows this object to attempt to free resources and perform other cleanup operations before garbage collection reclaims the object.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <remarks><![CDATA[This method overrides System.Object.Finalize . Application code should not call this method. An object's Finalize method is automatically invoked during garbage collection unless a call to the GC.SuppressFinalize method disables finalization by the garbage collector.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetDirectoryNames" returnType="string[]">
+      <summary><![CDATA[Enumerates the directories in the root of a StorageContainer.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Enumerates the directories in the root of a StorageContainer.]]></summary>
+          <syntax><![CDATA[public string[] GetDirectoryNames ()]]></syntax>
+          <returns><![CDATA[An array of relative paths of directories in the root of the StorageContainer. A zero-length array specifies that there are no directories in the root.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="String">
+          <summary><![CDATA[Enumerates the directories in the root of a StorageContainer that conform to a search pattern.]]></summary>
+          <syntax><![CDATA[public string[] GetDirectoryNames (
+         string searchPattern
+)]]></syntax>
+          <parameters>
+            <parameter name="searchPattern" type="string"><![CDATA[Type: String A search pattern. Both single-character ("?") and multicharacter ("*") wildcards are supported.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An array of relative paths of directories in the root of the StorageContainer. A zero-length array specifies that there are no directories in the root.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetFileNames" returnType="string[]">
+      <summary><![CDATA[Enumerates files in the root directory of a StorageContainer that match a given pattern.]]></summary>
+      <overloads>
+        <overload signature="String">
+          <summary><![CDATA[Enumerates files in the root directory of a StorageContainer that match a given pattern.]]></summary>
+          <syntax><![CDATA[public string[] GetFileNames (
+         string searchPattern
+)]]></syntax>
+          <parameters>
+            <parameter name="searchPattern" type="string"><![CDATA[Type: String A search pattern. Both single-character ("?") and multicharacter ("*") wildcards are supported.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An array of relative paths of files in the the root directory of StorageContainer scope that match searchPattern. A zero-length array specifies that there are no files that match.]]></returns>
+          <remarks><![CDATA[GetFileNames applies only to the root directory of the StorageContainer . It does not examine any subdirectories.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Enumerates files in the root directory of a StorageContainer.]]></summary>
+          <syntax><![CDATA[public string[] GetFileNames ()]]></syntax>
+          <returns><![CDATA[An array of relative paths of files in the root directory of StorageContainer scope. A zero-length array specifies that there are no files.]]></returns>
+          <remarks><![CDATA[GetFileNames applies only to the root directory of the StorageContainer . It does not examine any subdirectories.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OpenFile" returnType="Stream">
+      <summary><![CDATA[Opens a file in the StorageContainer in the designated mode with the specified read/write access.]]></summary>
+      <overloads>
+        <overload signature="String, FileMode, FileAccess">
+          <summary><![CDATA[Opens a file in the StorageContainer in the designated mode with the specified read/write access.]]></summary>
+          <syntax><![CDATA[public Stream OpenFile (
+         string file,
+         FileMode fileMode,
+         FileAccess fileAccess
+)]]></syntax>
+          <parameters>
+            <parameter name="file" type="string"><![CDATA[Type: String Relative path of the file within the StorageContainer .]]></parameter>
+            <parameter name="fileMode" type="FileMode"><![CDATA[Type: FileMode One of the enumeration values that specifies how to open the file.]]></parameter>
+            <parameter name="fileAccess" type="FileAccess"><![CDATA[Type: FileAccess One of the enumeration values that specifies whether the file is opened with read, write, or read/write access.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An unshared file opened in the designated mode with the specified access.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, FileMode">
+          <summary><![CDATA[Opens a file in the StorageContainer.]]></summary>
+          <syntax><![CDATA[public Stream OpenFile (
+         string file,
+         FileMode fileMode
+)]]></syntax>
+          <parameters>
+            <parameter name="file" type="string"><![CDATA[Type: String Relative path of the file within the StorageContainer .]]></parameter>
+            <parameter name="fileMode" type="FileMode"><![CDATA[Type: FileMode One of the enumeration values that specifies how to open the file.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An unshared file with read/write access that is opened in the specified mode.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="String, FileMode, FileAccess, FileShare">
+          <summary><![CDATA[Opens a file in the StorageContainer in the designated mode with the specified read/write access and sharing permission.]]></summary>
+          <syntax><![CDATA[public Stream OpenFile (
+         string file,
+         FileMode fileMode,
+         FileAccess fileAccess,
+         FileShare fileShare
+)]]></syntax>
+          <parameters>
+            <parameter name="file" type="string"><![CDATA[Type: String Relative path of the file within the StorageContainer .]]></parameter>
+            <parameter name="fileMode" type="FileMode"><![CDATA[Type: FileMode One of the enumeration values that specifies how to open the file.]]></parameter>
+            <parameter name="fileAccess" type="FileAccess"><![CDATA[Type: FileAccess One of the enumeration values that specifies whether the file is opened with read, write, or read/write access.]]></parameter>
+            <parameter name="fileShare" type="FileShare"><![CDATA[Type: FileShare A bitwise combination of enumeration values that specify the type of access other Stream objects have to this file.]]></parameter>
+          </parameters>
+          <returns><![CDATA[A file opened in the designated mode with the specified access and sharing options.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="Disposing" type="EventHandler">
+      <summary><![CDATA[Occurs when Dispose is called or when this object is finalized and collected by the garbage collector of the Microsoft .NET common language runtime.]]></summary>
+      <syntax><![CDATA[public event EventHandler Disposing]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

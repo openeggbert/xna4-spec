@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="NetworkSessionJoinException" kind="class"
+          namespace="Microsoft.Xna.Framework.Net"
+          assembly="Microsoft.Xna.Framework.Net"
+          baseClass="NetworkException">
+  <summary><![CDATA[Thrown if an error was encountered while joining a session.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public class NetworkSessionJoinException : NetworkException]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="NetworkSessionJoinException()">
+      <summary><![CDATA[Creates an empty instance of NetworkSessionJoinException.]]></summary>
+      <syntax><![CDATA[public NetworkSessionJoinException ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NetworkSessionJoinException(String)">
+      <summary><![CDATA[Creates an instance of NetworkSessionJoinException with the specified error message.]]></summary>
+      <syntax><![CDATA[public NetworkSessionJoinException (
+         string message
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NetworkSessionJoinException(SerializationInfo, StreamingContext)">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[protected NetworkSessionJoinException (
+         SerializationInfo info,
+         StreamingContext context
+)]]></syntax>
+      <parameters>
+        <parameter name="info" type="SerializationInfo"><![CDATA[Describes information related to the session being joined when the exception occurred.]]></parameter>
+        <parameter name="context" type="StreamingContext"><![CDATA[Describes the stream where the exception occurred.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NetworkSessionJoinException(String, Exception)">
+      <summary><![CDATA[Creates an instance of NetworkSessionJoinException with the specified error message and inner exception.]]></summary>
+      <syntax><![CDATA[public NetworkSessionJoinException (
+         string message,
+         Exception innerException
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="innerException" type="Exception"><![CDATA[The inner exception related to this exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="NetworkSessionJoinException(String, NetworkSessionJoinError)">
+      <summary><![CDATA[Creates an instance of NetworkSessionJoinException with the specified error and additional information on the exception.]]></summary>
+      <syntax><![CDATA[public NetworkSessionJoinException (
+         string message,
+         NetworkSessionJoinError joinError
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="joinError" type="NetworkSessionJoinError"><![CDATA[Reason for the exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="JoinError" type="NetworkSessionJoinError" access="get;set">
+      <summary><![CDATA[Gets or sets a more detailed description of the session join failure.]]></summary>
+      <syntax><![CDATA[public NetworkSessionJoinError JoinError { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetObjectData" returnType="void">
+      <summary><![CDATA[When overridden in a derived class, returns information about the exception. In addition to the base behavior, this method provides serialization functionality.]]></summary>
+      <overloads>
+        <overload signature="GetObjectData()">
+          <summary><![CDATA[When overridden in a derived class, returns information about the exception. In addition to the base behavior, this method provides serialization functionality.]]></summary>
+          <syntax><![CDATA[public override void GetObjectData (
+         SerializationInfo info,
+         StreamingContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="info" type="SerializationInfo"><![CDATA[Information necessary for serialization and deserialization of the session item.]]></parameter>
+            <parameter name="context" type="StreamingContext"><![CDATA[Information necessary for the source and destination of a given serialized stream. Also provides an additional caller-defined context.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

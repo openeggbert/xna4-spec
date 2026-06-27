@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="LeaderboardKey" kind="enum"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Values used with LeaderboardIdentity.Create to select which leaderboard to access.]]></summary>
+  <syntax><![CDATA[public enum LeaderboardKey]]></syntax>
+  <remarks><![CDATA[Leaderboards are per title, and consist of the best scores or times for the player and his or her group of Xbox LIVE friends. Leaderboard data for other players is inaccessible.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <members>
+    <member name="BestScoreLifeTime"><summary><![CDATA[Best lifetime score for this player and his or her Xbox LIVE friends.]]></summary></member>
+    <member name="BestScoreRecent"><summary><![CDATA[Best recent scores for this player and his or her Xbox LIVE friends.]]></summary></member>
+    <member name="BestTimeLifeTime"><summary><![CDATA[Best lifetime times for this player and his or her Xbox LIVE friends.]]></summary></member>
+    <member name="BestTimeRecent"><summary><![CDATA[Best recent times for this player and his or her Xbox LIVE friends.]]></summary></member>
+  </members>
+</xna-type>

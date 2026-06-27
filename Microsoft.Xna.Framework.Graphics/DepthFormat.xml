@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="DepthFormat" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines the format of data in a depth buffer.]]></summary>
+  <syntax><![CDATA[public enum DepthFormat]]></syntax>
+  <remarks><![CDATA[All depth-stencil formats except Depth16Lockable indicate no particular bit ordering per pixel, and the driver is allowed to consume more than the indicated number of bits per depth channel (but not stencil channel).]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Depth15Stencil1"><summary><![CDATA[A 16-bit depth-buffer bit depth in which 15 bits are reserved for the depth channel and 1 bit is reserved for the stencil channel.]]></summary></member>
+    <member name="Depth16"><summary><![CDATA[A 16-bit depth-buffer bit depth.]]></summary></member>
+    <member name="Depth24"><summary><![CDATA[A 32-bit depth-buffer bit depth that uses 24 bits for the depth channel.]]></summary></member>
+    <member name="Depth24Stencil4"><summary><![CDATA[A 32-bit depth-buffer bit depth that uses 24 bits for the depth channel and 4 bits for the stencil channel.]]></summary></member>
+    <member name="Depth24Stencil8"><summary><![CDATA[A nonlockable format that contains 24 bits of depth (in a 24-bit floating-point format − 20E4) and 8 bits of stencil.]]></summary></member>
+    <member name="Depth24Stencil8Single"><summary><![CDATA[A 32-bit depth-buffer bit depth that uses 24 bits for the depth channel and 8 bits for the stencil channel.]]></summary></member>
+    <member name="Depth32"><summary><![CDATA[a 32-bit depth-buffer bit depth.]]></summary></member>
+    <member name="Unknown"><summary><![CDATA[Format is unknown.]]></summary></member>
+  </members>
+</xna-type>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MicrophoneState" kind="enum"
+          namespace="Microsoft.Xna.Framework.Audio"
+          assembly="Microsoft.Xna.Framework.Audio">
+  <summary><![CDATA[Current state of the Microphone audio capture (started or stopped).]]></summary>
+  <syntax><![CDATA[public enum MicrophoneState]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone</platform>
+  </platforms>
+  <members>
+    <member name="Started"><summary><![CDATA[The Microphone audio capture has started.]]></summary></member>
+    <member name="Stopped"><summary><![CDATA[The Microphone audio capture has stopped.]]></summary></member>
+  </members>
+</xna-type>

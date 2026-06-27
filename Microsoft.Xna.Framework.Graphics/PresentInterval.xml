@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PresentInterval" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines flags that describe the relationship between the adapter refresh rate and the rate at which Present operations are completed.]]></summary>
+  <syntax><![CDATA[public enum PresentInterval]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Default"><summary><![CDATA[Equivalent to setting One.]]></summary></member>
+    <member name="One"><summary><![CDATA[The driver waits for the vertical retrace period (the runtime will beam trace to prevent tearing). Present operations are not affected more frequently than the screen refresh rate; the runtime completes one Present operation per adapter refresh period, at most. This option is always available for both windowed and full-screen swap chains.]]></summary></member>
+    <member name="Two"><summary><![CDATA[The driver waits for the vertical retrace period. Present operations are not affected more frequently than every second screen refresh. Check the PresentInterval property to determine whether the driver supports this option.]]></summary></member>
+    <member name="Three"><summary><![CDATA[The driver waits for the vertical retrace period. Present operations are not affected more frequently than every third screen refresh. Check the PresentInterval property to determine whether the driver supports this option.]]></summary></member>
+    <member name="Four"><summary><![CDATA[The driver waits for the vertical retrace period. Present operations are not affected more frequently than every fourth screen refresh. Check the PresentInterval property to determine whether the driver supports this option.]]></summary></member>
+    <member name="Immediate"><summary><![CDATA[The runtime updates the window client area immediately, and might do so more than once during the adapter refresh period. Present operations might be affected immediately. This option is always available for both windowed and full-screen swap chains.]]></summary></member>
+  </members>
+</xna-type>

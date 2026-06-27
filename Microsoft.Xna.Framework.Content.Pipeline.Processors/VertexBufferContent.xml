@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexBufferContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          baseClass="ContentItem">
+  <summary><![CDATA[Provides methods and properties for managing a design-time vertex buffer that holds packed vertex data.]]></summary>
+  <syntax><![CDATA[public class VertexBufferContent : ContentItem]]></syntax>
+  <remarks><![CDATA[This type directly corresponds to the runtime VertexBuffer class, and when a VertexBufferContent object is passed to the content compiler, the vertex data deserializes directly into a VertexBuffer at runtime. VertexBufferContent objects are not directly created by importers. The preferred method is to store vertex data in the more flexible VertexContent class.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="VertexBufferContent(Int32)">
+      <summary><![CDATA[Initializes a new instance of VertexBufferContent of the specified size.]]></summary>
+      <syntax><![CDATA[public VertexBufferContent (
+         int size
+)]]></syntax>
+      <parameters>
+        <parameter name="size" type="int"><![CDATA[The size of the vertex buffer content, in bytes.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="VertexBufferContent()">
+      <summary><![CDATA[Initializes a new instance of VertexBufferContent.]]></summary>
+      <syntax><![CDATA[public VertexBufferContent ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="VertexData" type="byte[]" access="get">
+      <summary><![CDATA[Gets the array containing the raw bytes of the packed vertex data. Use this method to get and set the contents of the vertex buffer.]]></summary>
+      <syntax><![CDATA[public byte[] VertexData { get; }]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="VertexDeclaration" type="VertexDeclarationContent" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public VertexDeclarationContent VertexDeclaration { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="SizeOf" returnType="void">
+      <summary><![CDATA[Gets the size of the specified type, in bytes.]]></summary>
+      <overloads>
+        <overload signature="SizeOf()">
+          <summary><![CDATA[Gets the size of the specified type, in bytes.]]></summary>
+          <syntax><![CDATA[public static int SizeOf (
+         Type type
+)]]></syntax>
+          <parameters>
+            <parameter name="type" type="Type"><![CDATA[The type.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The size of the specified type, in bytes.]]></returns>
+          <remarks><![CDATA[Call this method to compute offset parameters for the Write method. If the specified data type cannot be packed into a vertex buffer—for example, if type is not a valid value type—a NotSupportedException is thrown.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Write" returnType="void">
+      <summary><![CDATA[Writes additional data into the vertex buffer. Writing begins at the specified byte offset, and each value is spaced according to the specified stride value (in bytes).]]></summary>
+      <overloads>
+        <overload signature="Int32, Int32, Type, IEnumerable">
+          <summary><![CDATA[Writes additional data into the vertex buffer. Writing begins at the specified byte offset, and each value is spaced according to the specified stride value (in bytes).]]></summary>
+          <syntax><![CDATA[public void Write (
+         int offset,
+         int stride,
+         Type dataType,
+         IEnumerable data
+)]]></syntax>
+          <parameters>
+            <parameter name="offset" type="int"><![CDATA[Offset at which to begin writing.]]></parameter>
+            <parameter name="stride" type="int"><![CDATA[Stride of the data being written, in bytes.]]></parameter>
+            <parameter name="dataType" type="Type"><![CDATA[The type of data to be written.]]></parameter>
+            <parameter name="data" type="IEnumerable"><![CDATA[The data to write.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method automatically grows the vertex buffer if an attempt is made to write past the buffer end. Write throws NotSupportedException if the specified data type cannot be packed into a vertex buffer. For example, if data is not a valid value type. Use this method to interleave vertex data channels into a single buffer. This can be done by passing the total vertex size as the stride and suitable smaller offsets for each channel. You can also concatenate entire vertex buffers by passing the length of the vertex as the offset , 1 as the stride , and the vertex data as the data parameter.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

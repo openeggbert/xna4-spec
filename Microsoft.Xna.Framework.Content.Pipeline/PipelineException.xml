@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="PipelineException" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          baseClass="Exception">
+  <summary><![CDATA[Thrown when errors are encountered during a content pipeline build.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public class PipelineException : Exception]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="PipelineException(String, Object )">
+      <summary><![CDATA[Initializes a new instance of the PipelineException class with the specified error message.]]></summary>
+      <syntax><![CDATA[public PipelineException (
+         string message,
+         Object[] messageArgs
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="messageArgs" type="Object[]"><![CDATA[[ ParamArrayAttribute ] Array of strings specifying message-related arguments.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="PipelineException(String)">
+      <summary><![CDATA[Initializes a new instance of the PipelineException class with the specified error message.]]></summary>
+      <syntax><![CDATA[public PipelineException (
+         string message
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="PipelineException()">
+      <summary><![CDATA[Creates an instance of PipelineException.]]></summary>
+      <syntax><![CDATA[public PipelineException ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="PipelineException(SerializationInfo, StreamingContext)">
+      <summary><![CDATA[Creates an instance of PipelineException with information on serialization and streaming context for the related content item.]]></summary>
+      <syntax><![CDATA[protected PipelineException (
+         SerializationInfo serializationInfo,
+         StreamingContext streamingContext
+)]]></syntax>
+      <parameters>
+        <parameter name="serializationInfo" type="SerializationInfo"><![CDATA[Information necessary for serialization and deserialization of the content item.]]></parameter>
+        <parameter name="streamingContext" type="StreamingContext"><![CDATA[Information necessary for the source and destination of a given serialized stream. Also provides an additional caller-defined context.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="PipelineException(String, Exception)">
+      <summary><![CDATA[Initializes a new instance of the PipelineException class with the specified error message and a reference to the inner exception that is the cause of this exception.]]></summary>
+      <syntax><![CDATA[public PipelineException (
+         string message,
+         Exception innerException
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="innerException" type="Exception"><![CDATA[The exception that is the cause of the current exception. If is not a null reference, the current exception is raised in a catch block that handles the inner exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

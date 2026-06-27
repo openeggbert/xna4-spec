@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AudioChannels" kind="enum"
+          namespace="Microsoft.Xna.Framework.Audio"
+          assembly="Microsoft.Xna.Framework.Audio">
+  <summary><![CDATA[Defines the number of channels in the audio data.]]></summary>
+  <syntax><![CDATA[public enum AudioChannels]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <members>
+    <member name="Mono"><summary><![CDATA[Indicates audio data is contained in one channel.]]></summary></member>
+    <member name="Stereo"><summary><![CDATA[Indicates audio data contains two channels.]]></summary></member>
+  </members>
+</xna-type>

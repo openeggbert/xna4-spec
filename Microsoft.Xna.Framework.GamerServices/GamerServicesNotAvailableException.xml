@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamerServicesNotAvailableException" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          baseClass="Exception">
+  <summary><![CDATA[Thrown if the gamer services system cannot be successfully initialized.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public class GamerServicesNotAvailableException : Exception]]></syntax>
+  <remarks><![CDATA[The following are likely causes for this exception. If the current game uses the XNA Framework Redistributable . This file does not include Games for Windows – LIVE functionality. If another Games for Windows – LIVE title is running already. Important Games for Windows - LIVE is not available to finished games. This functionality is not included in the redistributable version of the XNA Framework, and a game that attempts to use these components without XNA Game Studio installed will result in a GamerServicesNotAvailableException .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GamerServicesNotAvailableException(String, Exception)">
+      <summary><![CDATA[Initializes a new instance of GamerServicesNotAvailableException with the specified error message and the inner exception.]]></summary>
+      <syntax><![CDATA[public GamerServicesNotAvailableException (
+         string message,
+         Exception innerException
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="innerException" type="Exception"><![CDATA[The inner exception related to this exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GamerServicesNotAvailableException(SerializationInfo, StreamingContext)">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[protected GamerServicesNotAvailableException (
+         SerializationInfo info,
+         StreamingContext context
+)]]></syntax>
+      <parameters>
+        <parameter name="info" type="SerializationInfo"><![CDATA[Describes the gamer services being accessed when the exception occurred.]]></parameter>
+        <parameter name="context" type="StreamingContext"><![CDATA[Describes the stream where the exception occurred.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GamerServicesNotAvailableException()">
+      <summary><![CDATA[Creates an empty instance of GamerServicesNotAvailableException.]]></summary>
+      <syntax><![CDATA[public GamerServicesNotAvailableException ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="GamerServicesNotAvailableException(String)">
+      <summary><![CDATA[Initializes a new instance of GamerServicesNotAvailableException with the specified error message.]]></summary>
+      <syntax><![CDATA[public GamerServicesNotAvailableException (
+         string message
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

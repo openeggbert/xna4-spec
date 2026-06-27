@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IEffectLights" kind="interface"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Gets or sets lighting parameters for the current effect.]]></summary>
+  <syntax><![CDATA[public interface IEffectLights]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="AmbientLightColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the ambient light color for the current effect.]]></summary>
+      <syntax><![CDATA[public Vector3 AmbientLightColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight0" type="DirectionalLight" access="get">
+      <summary><![CDATA[Gets the first directional light for the current effect.]]></summary>
+      <syntax><![CDATA[public DirectionalLight DirectionalLight0 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight1" type="DirectionalLight" access="get">
+      <summary><![CDATA[Gets the second directional light for the current effect.]]></summary>
+      <syntax><![CDATA[public DirectionalLight DirectionalLight1 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight2" type="DirectionalLight" access="get">
+      <summary><![CDATA[Gets the third directional light for the current effect.]]></summary>
+      <syntax><![CDATA[public DirectionalLight DirectionalLight2 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="EnableDefaultLighting" returnType="void">
+      <summary><![CDATA[Enables default lighting for the current effect.]]></summary>
+      <overloads>
+        <overload signature="EnableDefaultLighting()">
+          <summary><![CDATA[Enables default lighting for the current effect.]]></summary>
+          <syntax><![CDATA[public void EnableDefaultLighting ()]]></syntax>
+          <remarks><![CDATA[A basic effect implements per-vertex lighting using three directional lights.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

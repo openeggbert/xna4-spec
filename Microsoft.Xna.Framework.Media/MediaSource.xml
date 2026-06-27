@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MediaSource" kind="class"
+          namespace="Microsoft.Xna.Framework.Media"
+          assembly="Microsoft.Xna.Framework.Media">
+  <summary><![CDATA[Provides methods and properties to access the source or sources from which the media will be read.]]></summary>
+  <syntax><![CDATA[public sealed class MediaSource]]></syntax>
+  <remarks><![CDATA[MediaSource provides access to the source or sources from which the media will be read. A source can be either the local device, or a device connected through Windows Media Connect. On Windows and Zune, the only available MediaSource is the local device. On Xbox 360, a MediaSource can either be the local device or a device connected through Windows Media Connect. Windows Media Connect is software that lets you connect your Xbox 360 console to a computer running Microsoft Windows. Connecting this way enables you to view media on the connected computer in the Xbox 360 dashboard.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="MediaSourceType" type="MediaSourceType" access="get">
+      <summary><![CDATA[Gets the MediaSourceType of this media source.]]></summary>
+      <syntax><![CDATA[public MediaSourceType MediaSourceType { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Name" type="string" access="get">
+      <summary><![CDATA[Gets the name of this media source.]]></summary>
+      <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetAvailableMediaSources" returnType="void">
+      <summary><![CDATA[Gets the available media sources.]]></summary>
+      <overloads>
+        <overload signature="GetAvailableMediaSources()">
+          <summary><![CDATA[Gets the available media sources.]]></summary>
+          <syntax><![CDATA[public static IList&lt;MediaSource&gt; GetAvailableMediaSources ()]]></syntax>
+          <returns><![CDATA[The available media sources.]]></returns>
+          <remarks><![CDATA[Gets the available media sources with which a media library can be constructed. On Zune and Windows, this method will always return a single media source: the local device. On Xbox 360, this method can return multiple sources, depending on how many computers are connected to the Xbox 360 through Windows Media Connect.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Returns the name of this media source.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Returns the name of this media source.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[The name of this media source.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

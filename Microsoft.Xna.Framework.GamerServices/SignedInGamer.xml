@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="SignedInGamer" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          baseClass="Gamer">
+  <summary><![CDATA[Represents a gamer (a profile that has an associated gamertag) on the local system.]]></summary>
+  <syntax><![CDATA[public sealed class SignedInGamer : Gamer]]></syntax>
+  <remarks><![CDATA[Gamers can be either on a local system or in a multiplayer session. For more information about gamers in a multiplayer session, see NetworkGamer .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="GameDefaults" type="GameDefaults" access="get">
+      <summary><![CDATA[Describes a gamer's preferred settings.]]></summary>
+      <syntax><![CDATA[public GameDefaults GameDefaults { get; }]]></syntax>
+      <remarks><![CDATA[Wherever possible, games should default to these values.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsGuest" type="bool" access="get">
+      <summary><![CDATA[Determines whether the gamer is the guest of an Xbox LIVE–enabled profile.]]></summary>
+      <syntax><![CDATA[public bool IsGuest { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsSignedInToLive" type="bool" access="get">
+      <summary><![CDATA[Determines whether the gamer has an Xbox LIVE–enabled profile.]]></summary>
+      <syntax><![CDATA[public bool IsSignedInToLive { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="PartySize" type="int" access="get;set">
+      <summary><![CDATA[Gets the current party size.]]></summary>
+      <syntax><![CDATA[public int PartySize { get; set; }]]></syntax>
+      <remarks><![CDATA[This is a read-only property. You cannot use it to set the party size. On platforms such as Windows Phone that do not support Xbox LIVE parties, the value of this property is always zero.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="PlayerIndex" type="PlayerIndex" access="get">
+      <summary><![CDATA[Gets the index of the gamer.]]></summary>
+      <syntax><![CDATA[public PlayerIndex PlayerIndex { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Presence" type="GamerPresence" access="get">
+      <summary><![CDATA[Gets an object that may be used to set the rich presence state for this gamer.]]></summary>
+      <syntax><![CDATA[public GamerPresence Presence { get; }]]></syntax>
+      <remarks><![CDATA[Zune Specific Information Setting presence information is not supported on the Zune platform. On the Zune platform, setting presence information for a signed-in gamer will not change the presence information on Xbox LIVE. Note Game titles will not be displayed in a player's presence information on the Xbox LIVE service until the game passes peer review. Once a game passes peer review, the presence information for a player will show three things: a confirmation the player is playing an Xbox LIVE Community Game, the game's title, and finally the presence information set by SignedInGamer.Presence . Xbox LIVE Community Game My Game Title Fighting the Boss While a game is in development, but before the game passes peer review, the presence information indicates the developer is using the XNA Creators Club. XNA Creators Club creators.xna.com Fighting the Boss]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Privileges" type="GamerPrivileges" access="get">
+      <summary><![CDATA[Describes what operations a gamer is allowed to perform.]]></summary>
+      <syntax><![CDATA[public GamerPrivileges Privileges { get; }]]></syntax>
+      <remarks><![CDATA[Privileges can be defined by parental control settings, and also will be set automatically in response to things like age, region, and whether the gamer has a LIVE Gold or LIVE Silver membership. Games do not need to explicitly check privileges, because a GamerPrivilegeException will be thrown if an unsupported operation is selected. However, these privilege bits may be useful to detect that an operation is unavailable before calling it so as to grey-out the relevant menu option.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="AwardAchievement" returnType="void">
+      <summary><![CDATA[[Deprecated] Awards the specified achievement to a locally signed-in gamer.]]></summary>
+      <overloads>
+        <overload signature="AwardAchievement()">
+          <summary><![CDATA[[Deprecated] Awards the specified achievement to a locally signed-in gamer.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Sub AwardAchievement ( _
+         achievementKey As String _
+)]]></syntax>
+          <parameters>
+            <parameter name="achievementKey" type="Object"><![CDATA[Type: String Identifier specifying the achievement to award.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Important This function is deprecated: use the asynchronous method BeginAwardAchievement to award an achievement, which also provides result information.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BeginAwardAchievement" returnType="void">
+      <summary><![CDATA[Starts an asynchronous operation to award an achievement to a locally signed-in gamer.]]></summary>
+      <overloads>
+        <overload signature="BeginAwardAchievement()">
+          <summary><![CDATA[Starts an asynchronous operation to award an achievement to a locally signed-in gamer.]]></summary>
+          <syntax><![CDATA[public IAsyncResult BeginAwardAchievement (
+         string achievementKey,
+         AsyncCallback callback,
+         Object state
+)]]></syntax>
+          <parameters>
+            <parameter name="achievementKey" type="string"><![CDATA[Identifier specifying the achievement to award.]]></parameter>
+            <parameter name="callback" type="AsyncCallback"><![CDATA[The method to be called once the asynchronous operation iss finished.]]></parameter>
+            <parameter name="state" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[An IAsyncResult used to track the progress of the method. Call EndAwardAchievement to access these results.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BeginGetAchievements" returnType="void">
+      <summary><![CDATA[Starts an asynchronous achievement query operation.]]></summary>
+      <overloads>
+        <overload signature="BeginGetAchievements()">
+          <summary><![CDATA[Starts an asynchronous achievement query operation.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Function BeginGetAchievements ( _
+         callback As AsyncCallback, _
+         asyncState As Object _
+) As IAsyncResult]]></syntax>
+          <parameters>
+            <parameter name="callback" type="Object"><![CDATA[Type: AsyncCallback The method to be called once the asynchronous operation is finished.]]></parameter>
+            <parameter name="asyncState" type="Object"><![CDATA[Type: Object State of the asynchronous operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: IAsyncResult An IAsyncResult used to track the progress of the method. Call EndGetAchievements to access these results.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndAwardAchievement" returnType="void">
+      <summary><![CDATA[Ends an asynchronous achievement award operation.]]></summary>
+      <overloads>
+        <overload signature="EndAwardAchievement()">
+          <summary><![CDATA[Ends an asynchronous achievement award operation.]]></summary>
+          <syntax><![CDATA[public void EndAwardAchievement (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[An IAsyncResult used to track the progress of the operation.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EndGetAchievements" returnType="void">
+      <summary><![CDATA[Ends an asynchronous achievement query operation.]]></summary>
+      <overloads>
+        <overload signature="EndGetAchievements()">
+          <summary><![CDATA[Ends an asynchronous achievement query operation.]]></summary>
+          <syntax><![CDATA[public AchievementCollection EndGetAchievements (
+         IAsyncResult result
+)]]></syntax>
+          <parameters>
+            <parameter name="result" type="IAsyncResult"><![CDATA[An IAsyncResult used to track the progress of the operation.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The requested achievement collection.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. The collection returned will include both earned and unearned achievements. Check Achievement.IsEarned to determine whether an achievement has been earned by the gamer.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetAchievements" returnType="void">
+      <summary><![CDATA[Returns the collection of all achievements that may be earned by this gamer.]]></summary>
+      <overloads>
+        <overload signature="GetAchievements()">
+          <summary><![CDATA[Returns the collection of all achievements that may be earned by this gamer.]]></summary>
+          <syntax><![CDATA[public AchievementCollection GetAchievements ()]]></syntax>
+          <returns><![CDATA[The requested achievement collection.]]></returns>
+          <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value. The collection returned will include both earned and unearned achievements. Check Achievement.IsEarned to determine whether an achievement has been earned by the gamer. This is a blocking call. To query asynchronously, use BeginGetAchievements and EndGetAchievements instead.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetFriends" returnType="void">
+      <summary><![CDATA[Reads the friends list of this local gamer. This includes both the gamertags of the friends and their current presence information.]]></summary>
+      <overloads>
+        <overload signature="GetFriends()">
+          <summary><![CDATA[Reads the friends list of this local gamer. This includes both the gamertags of the friends and their current presence information.]]></summary>
+          <syntax><![CDATA[public FriendCollection GetFriends ()]]></syntax>
+          <returns><![CDATA[The friends of this local gamer.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IsFriend" returnType="void">
+      <summary><![CDATA[Queries whether the specified gamer is a friend of this local gamer.]]></summary>
+      <overloads>
+        <overload signature="IsFriend()">
+          <summary><![CDATA[Queries whether the specified gamer is a friend of this local gamer.]]></summary>
+          <syntax><![CDATA[public bool IsFriend (
+         Gamer gamer
+)]]></syntax>
+          <parameters>
+            <parameter name="gamer" type="Gamer"><![CDATA[The gamer to query.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified gamer is a friend of the local gamer; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="IsHeadset" returnType="void">
+      <summary><![CDATA[Determines if the passed microphone is a headset associated with this signed-in gamer. Use this method to determine if a specific microphone is a gamer-bound headset.]]></summary>
+      <overloads>
+        <overload signature="IsHeadset()">
+          <summary><![CDATA[Determines if the passed microphone is a headset associated with this signed-in gamer. Use this method to determine if a specific microphone is a gamer-bound headset.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Function IsHeadset ( _
+         microphone As Microphone _
+) As Boolean]]></syntax>
+          <parameters>
+            <parameter name="microphone" type="Object"><![CDATA[Type: Microphone The microphone to check against this signed-in gamer.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Boolean true if the microphone is associated with this signed-in gamer; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="SignedIn" type="EventHandler&amp;lt;SignedInEventArgs&amp;gt;">
+      <summary><![CDATA[Occurs when a new gamer signs into the local system.]]></summary>
+      <syntax><![CDATA[public static event EventHandler&lt;SignedInEventArgs&gt; SignedIn]]></syntax>
+      <remarks><![CDATA[This event is raised during calls to Update . When this event is raised, the LocalGamers collection will contain the newly signed-in gamer.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </event>
+    <event name="SignedOut" type="EventHandler&amp;lt;SignedOutEventArgs&amp;gt;">
+      <summary><![CDATA[Occurs when a gamer signs out on the local system.]]></summary>
+      <syntax><![CDATA[public static event EventHandler&lt;SignedOutEventArgs&gt; SignedOut]]></syntax>
+      <remarks><![CDATA[This event is raised during calls to Update . When this event is raised, the LocalGamers collection will not longer contain the signed-out gamer.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

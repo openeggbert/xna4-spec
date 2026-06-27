@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="Rectangle" kind="struct"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework"
+          interfaces="IEquatable&amp;lt;Rectangle&amp;gt;">
+  <summary><![CDATA[Defines a rectangle.]]></summary>
+  <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.RectangleConverter)")]
+[SerializableAttribute]
+public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="Rectangle(int, int, int, int)">
+      <summary><![CDATA[Initializes a new instance of Rectangle.]]></summary>
+      <syntax><![CDATA[public Rectangle (
+         int x,
+         int y,
+         int width,
+         int height
+)]]></syntax>
+      <parameters>
+        <parameter name="x" type="int"><![CDATA[The x-coordinate of the rectangle.]]></parameter>
+        <parameter name="y" type="int"><![CDATA[The y-coordinate of the rectangle.]]></parameter>
+        <parameter name="width" type="int"><![CDATA[Width of the rectangle.]]></parameter>
+        <parameter name="height" type="int"><![CDATA[Height of the rectangle.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Bottom" type="int" access="get">
+      <summary><![CDATA[Returns the y-coordinate of the bottom of the rectangle.]]></summary>
+      <syntax><![CDATA[public int Bottom { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Center" type="Point" access="get">
+      <summary><![CDATA[Gets the Point that specifies the center of the rectangle.]]></summary>
+      <syntax><![CDATA[public Point Center { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="Empty" type="Rectangle" access="get" isStatic="true">
+      <summary><![CDATA[Returns a Rectangle with all of its values set to zero.]]></summary>
+      <syntax><![CDATA[public static Rectangle Empty { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsEmpty" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the Rectangle is empty.]]></summary>
+      <syntax><![CDATA[public bool IsEmpty { get; }]]></syntax>
+      <remarks><![CDATA[An empty rectangle has all its values set to 0.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="Left" type="int" access="get">
+      <summary><![CDATA[Returns the x-coordinate of the left side of the rectangle.]]></summary>
+      <syntax><![CDATA[public int Left { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Location" type="Point" access="get;set">
+      <summary><![CDATA[Gets or sets the upper-left value of the Rectangle.]]></summary>
+      <syntax><![CDATA[public Point Location { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </property>
+    <property name="Right" type="int" access="get">
+      <summary><![CDATA[Returns the x-coordinate of the right side of the rectangle.]]></summary>
+      <syntax><![CDATA[public int Right { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Top" type="int" access="get">
+      <summary><![CDATA[Returns the y-coordinate of the top of the rectangle.]]></summary>
+      <syntax><![CDATA[public int Top { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Contains" returnType="bool">
+      <summary><![CDATA[Determines whether this Rectangle contains a specified Point.]]></summary>
+      <overloads>
+        <overload signature="Point">
+          <summary><![CDATA[Determines whether this Rectangle contains a specified Point.]]></summary>
+          <syntax><![CDATA[public bool Contains (
+         Point value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Point"><![CDATA[The Point to evaluate.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Point is contained within this Rectangle; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Rectangle">
+          <summary><![CDATA[Determines whether this Rectangle entirely contains a specified Rectangle.]]></summary>
+          <syntax><![CDATA[public bool Contains (
+         Rectangle value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Rectangle"><![CDATA[The Rectangle to evaluate.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if this Rectangle entirely contains the specified Rectangle; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Point, Boolean">
+          <summary><![CDATA[Determines whether this Rectangle contains a specified Point.]]></summary>
+          <syntax><![CDATA[public void Contains (
+         ref Point value,
+         out bool result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Point"><![CDATA[The Point to evaluate.]]></parameter>
+            <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] true if the specified Point is contained within this Rectangle ; false otherwise.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Int32">
+          <summary><![CDATA[Determines whether this Rectangle contains a specified point represented by its x- and y-coordinates.]]></summary>
+          <syntax><![CDATA[public bool Contains (
+         int x,
+         int y
+)]]></syntax>
+          <parameters>
+            <parameter name="x" type="int"><![CDATA[The x-coordinate of the specified point.]]></parameter>
+            <parameter name="y" type="int"><![CDATA[The y-coordinate of the specified point.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified point is contained within this Rectangle; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Rectangle, Boolean">
+          <summary><![CDATA[Determines whether this Rectangle entirely contains a specified Rectangle.]]></summary>
+          <syntax><![CDATA[public void Contains (
+         ref Rectangle value,
+         out bool result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Rectangle"><![CDATA[The Rectangle to evaluate.]]></parameter>
+            <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] On exit, is true if this Rectangle entirely contains the specified Rectangle , or false if not.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Determines whether the specified Object is equal to the Rectangle.]]></summary>
+      <overloads>
+        <overload signature="Rectangle">
+          <summary><![CDATA[Determines whether the specified Object is equal to the Rectangle.]]></summary>
+          <syntax><![CDATA[public bool Equals (
+         Rectangle other
+)]]></syntax>
+          <parameters>
+            <parameter name="other" type="Rectangle"><![CDATA[The Object to compare with the current Rectangle .]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Object is equal to the current Rectangle; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object to make the comparison with.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this object.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this object.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Inflate" returnType="void">
+      <summary><![CDATA[Pushes the edges of the Rectangle out by the horizontal and vertical values specified.]]></summary>
+      <overloads>
+        <overload signature="Inflate()">
+          <summary><![CDATA[Pushes the edges of the Rectangle out by the horizontal and vertical values specified.]]></summary>
+          <syntax><![CDATA[public void Inflate (
+         int horizontalAmount,
+         int verticalAmount
+)]]></syntax>
+          <parameters>
+            <parameter name="horizontalAmount" type="int"><![CDATA[Value to push the sides out by.]]></parameter>
+            <parameter name="verticalAmount" type="int"><![CDATA[Value to push the top and bottom out by.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Each corner of the Rectangle is pushed away from the center of the rectangle by the specified amounts. This results in the width and height of the Rectangle increasing by twice the values provided.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Intersect" returnType="void">
+      <summary><![CDATA[Creates a Rectangle defining the area where one rectangle overlaps with another rectangle.]]></summary>
+      <overloads>
+        <overload signature="Rectangle, Rectangle">
+          <summary><![CDATA[Creates a Rectangle defining the area where one rectangle overlaps with another rectangle.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Function Intersect ( _
+         value1 As Rectangle, _
+         value2 As Rectangle _
+) As Rectangle]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Type: Rectangle The first Rectangle to compare.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Type: Rectangle The second Rectangle to compare.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Rectangle The area where the two parameters overlap.]]></returns>
+          <remarks><![CDATA[If the two rectangles do not overlap, the resulting Rectangle will be empty.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Rectangle, Rectangle, Rectangle">
+          <summary><![CDATA[Creates a Rectangle defining the area where one rectangle overlaps with another rectangle.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Sub Intersect ( _
+         ref value1 As Rectangle, _
+         ref value2 As Rectangle, _
+         out result As Rectangle _
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Type: Rectangle The first Rectangle to compare.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Type: Rectangle The second Rectangle to compare.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[Type: Rectangle [ OutAttribute ] The area where the two first parameters overlap.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[If the two rectangles do not overlap, the resulting Rectangle will be empty.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Intersects" returnType="void">
+      <summary><![CDATA[Determines whether a specified Rectangle intersects with this Rectangle.]]></summary>
+      <overloads>
+        <overload signature="Rectangle, Boolean">
+          <summary><![CDATA[Determines whether a specified Rectangle intersects with this Rectangle.]]></summary>
+          <syntax><![CDATA[public void Intersects (
+         ref Rectangle value,
+         out bool result
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Rectangle"><![CDATA[The Rectangle to evaluate]]></parameter>
+            <parameter name="result" type="bool"><![CDATA[[ OutAttribute ] true if the specified Rectangle intersects with this one; false otherwise.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Rectangle">
+          <summary><![CDATA[Determines whether a specified Rectangle intersects with this Rectangle.]]></summary>
+          <syntax><![CDATA[public bool Intersects (
+         Rectangle value
+)]]></syntax>
+          <parameters>
+            <parameter name="value" type="Rectangle"><![CDATA[The Rectangle to evaluate.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the specified Rectangle intersects with this one; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Offset" returnType="void">
+      <summary><![CDATA[Changes the position of the Rectangle.]]></summary>
+      <overloads>
+        <overload signature="Point">
+          <summary><![CDATA[Changes the position of the Rectangle.]]></summary>
+          <syntax><![CDATA[public void Offset (
+         Point offset
+)]]></syntax>
+          <parameters>
+            <parameter name="offset" type="Point"><![CDATA[The values to adjust the position of the Rectangle by.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32, Int32">
+          <summary><![CDATA[Changes the position of the Rectangle.]]></summary>
+          <syntax><![CDATA[public void Offset (
+         int offsetX,
+         int offsetY
+)]]></syntax>
+          <parameters>
+            <parameter name="offsetX" type="int"><![CDATA[Change in the x-position.]]></parameter>
+            <parameter name="offsetY" type="int"><![CDATA[Change in the y-position.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of the current object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of the current object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String that represents the object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Union" returnType="void">
+      <summary><![CDATA[Creates a new Rectangle that exactly contains two other rectangles.]]></summary>
+      <overloads>
+        <overload signature="Rectangle, Rectangle, Rectangle">
+          <summary><![CDATA[Creates a new Rectangle that exactly contains two other rectangles.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Sub Union ( _
+         ref value1 As Rectangle, _
+         ref value2 As Rectangle, _
+         out result As Rectangle _
+)]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Type: Rectangle The first Rectangle to contain.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Type: Rectangle The second Rectangle to contain.]]></parameter>
+            <parameter name="result" type="Object"><![CDATA[Type: Rectangle [ OutAttribute ] The Rectangle that must be the union of the first two rectangles.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="Rectangle, Rectangle">
+          <summary><![CDATA[Creates a new Rectangle that exactly contains two other rectangles.]]></summary>
+          <syntax><![CDATA['Declaration
+Public Shared Function Union ( _
+         value1 As Rectangle, _
+         value2 As Rectangle _
+) As Rectangle]]></syntax>
+          <parameters>
+            <parameter name="value1" type="Object"><![CDATA[Type: Rectangle The first Rectangle to contain.]]></parameter>
+            <parameter name="value2" type="Object"><![CDATA[Type: Rectangle The second Rectangle to contain.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: Rectangle The union of the two Rectangle parameters.]]></returns>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Compares two rectangles for equality.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Compares two rectangles for equality.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         Rectangle a,
+         Rectangle b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Rectangle"><![CDATA[Source rectangle.]]></parameter>
+            <parameter name="b" type="Rectangle"><![CDATA[Source rectangle.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the rectangles are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Compares two rectangles for inequality.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Compares two rectangles for inequality.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         Rectangle a,
+         Rectangle b
+)]]></syntax>
+          <parameters>
+            <parameter name="a" type="Rectangle"><![CDATA[Source rectangle.]]></parameter>
+            <parameter name="b" type="Rectangle"><![CDATA[Source rectangle.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the rectangles are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+    <field name="Height" type="int">
+      <summary><![CDATA[Specifies the height of the rectangle.]]></summary>
+      <syntax><![CDATA[public int Height]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Width" type="int">
+      <summary><![CDATA[Specifies the width of the rectangle.]]></summary>
+      <syntax><![CDATA[public int Width]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="X" type="int">
+      <summary><![CDATA[Specifies the x-coordinate of the rectangle.]]></summary>
+      <syntax><![CDATA[public int X]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+    <field name="Y" type="int">
+      <summary><![CDATA[Specifies the y-coordinate of the rectangle.]]></summary>
+      <syntax><![CDATA[public int Y]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

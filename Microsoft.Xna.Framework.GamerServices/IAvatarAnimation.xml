@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IAvatarAnimation" kind="interface"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices">
+  <summary><![CDATA[Provides methods and properties for animating an avatar using custom animations. Allows for easier integration between custom animations and built-in animations.]]></summary>
+  <syntax><![CDATA[public interface IAvatarAnimation]]></syntax>
+  <remarks><![CDATA[For more information, see Rendering and Animating Avatars (Xbox 360) .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="BoneTransforms" type="ReadOnlyCollection&amp;lt;Matrix&amp;gt;" access="get">
+      <summary><![CDATA[Gets the current position of the bones at the time specified by CurrentPosition.]]></summary>
+      <syntax><![CDATA[public ReadOnlyCollection&lt;Matrix&gt; BoneTransforms { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="CurrentPosition" type="TimeSpan" access="get;set">
+      <summary><![CDATA[Gets or sets the current time position in the animation.]]></summary>
+      <syntax><![CDATA[public TimeSpan CurrentPosition { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Expression" type="AvatarExpression" access="get">
+      <summary><![CDATA[Gets the expression of the related animation at the current time position.]]></summary>
+      <syntax><![CDATA[public AvatarExpression Expression { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Length" type="TimeSpan" access="get">
+      <summary><![CDATA[Gets the length of the current animation.]]></summary>
+      <syntax><![CDATA[public TimeSpan Length { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Update" returnType="void">
+      <summary><![CDATA[Updates the current time position of the avatar animation.]]></summary>
+      <overloads>
+        <overload signature="Update()">
+          <summary><![CDATA[Updates the current time position of the avatar animation.]]></summary>
+          <syntax><![CDATA[public void Update (
+         TimeSpan elapsedAnimationTime,
+         bool loop
+)]]></syntax>
+          <parameters>
+            <parameter name="elapsedAnimationTime" type="TimeSpan"><![CDATA[Elapsed time since the last animation frame. This value can be a positive or a negative time span. If the value is negative, animation playback is reversed.]]></parameter>
+            <parameter name="loop" type="bool"><![CDATA[true if animation playback is to be looped; otherwise, false .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CompiledEffectContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          baseClass="ContentItem">
+  <summary><![CDATA[Represents a compiled Effect.]]></summary>
+  <syntax><![CDATA[public class CompiledEffectContent : ContentItem]]></syntax>
+  <platforms>
+    <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>and Windows XP.</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="CompiledEffectContent(byte[])">
+      <summary><![CDATA[Creates a new instance of the CompiledEffectContent class]]></summary>
+      <syntax><![CDATA[public CompiledEffectContent (
+         byte[] effectCode
+)]]></syntax>
+      <parameters>
+        <parameter name="effectCode" type="byte[]"><![CDATA[The compiled effect code.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>and Windows XP.</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="GetEffectCode" returnType="void">
+      <summary><![CDATA[Retrieves the compiled byte code for this shader.]]></summary>
+      <overloads>
+        <overload signature="GetEffectCode()">
+          <summary><![CDATA[Retrieves the compiled byte code for this shader.]]></summary>
+          <syntax><![CDATA[public byte[] GetEffectCode ()]]></syntax>
+          <returns><![CDATA[The compiled bytecode.]]></returns>
+          <platforms>
+            <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>and Windows XP.</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

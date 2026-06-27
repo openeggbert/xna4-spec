@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="TitleContainer" kind="class"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Provides file stream access to the title's default storage location.]]></summary>
+  <syntax><![CDATA[public static class TitleContainer]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="OpenStream" returnType="void">
+      <summary><![CDATA[Returns a stream to an existing file in the default title storage location.]]></summary>
+      <overloads>
+        <overload signature="OpenStream()">
+          <summary><![CDATA[Returns a stream to an existing file in the default title storage location.]]></summary>
+          <syntax><![CDATA[public static Stream OpenStream (
+         string name
+)]]></syntax>
+          <parameters>
+            <parameter name="name" type="string"><![CDATA[The name of the file to open.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The file stream that can be used to read the file's data.]]></returns>
+          <remarks><![CDATA[The stream returned is read-only. The file to be read must already exist, or this method will fail.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

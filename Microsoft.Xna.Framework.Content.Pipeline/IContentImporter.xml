@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IContentImporter" kind="interface"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <summary><![CDATA[Accesses a statically typed ContentImporter instance from generic code using dynamic typing.]]></summary>
+  <syntax><![CDATA[public interface IContentImporter]]></syntax>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Import" returnType="void">
+      <summary><![CDATA[Imports an asset from the specified file.]]></summary>
+      <overloads>
+        <overload signature="Import()">
+          <summary><![CDATA[Imports an asset from the specified file.]]></summary>
+          <syntax><![CDATA[public Object Import (
+         string filename,
+         ContentImporterContext context
+)]]></syntax>
+          <parameters>
+            <parameter name="filename" type="string"><![CDATA[Name of the game asset file.]]></parameter>
+            <parameter name="context" type="ContentImporterContext"><![CDATA[A ContentImporterContext class containing information for importing a game asset, such as a logger interface.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resulting game asset.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

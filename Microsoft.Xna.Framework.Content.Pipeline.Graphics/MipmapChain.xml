@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="MipmapChain" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="Collection&amp;lt;BitmapContent&amp;gt;">
+  <summary><![CDATA[Provides methods for accessing a mipmap chain.]]></summary>
+  <syntax><![CDATA[public sealed class MipmapChain : Collection&lt;BitmapContent&gt;]]></syntax>
+  <remarks><![CDATA[A mipmap chain consists of one or more individual 2D bitmaps, holding scaled versions of the same underlying image. For example, if the first entry was sized 256×128, the second would be 128×64, and the third 64×32.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="MipmapChain()">
+      <summary><![CDATA[Initializes a new instance of MipmapChain.]]></summary>
+      <syntax><![CDATA[public MipmapChain ()]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="MipmapChain(BitmapContent)">
+      <summary><![CDATA[Initializes a new instance of MipmapChain with the specified mipmap.]]></summary>
+      <syntax><![CDATA[public MipmapChain (
+         BitmapContent bitmap
+)]]></syntax>
+      <parameters>
+        <parameter name="bitmap" type="BitmapContent"><![CDATA[Image containing a mipmap.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="op_Implicit" returnType="void">
+      <summary><![CDATA[Constructs a new mipmap chain containing the specified bitmap.]]></summary>
+      <overloads>
+        <overload signature="op_Implicit()">
+          <summary><![CDATA[Constructs a new mipmap chain containing the specified bitmap.]]></summary>
+          <syntax><![CDATA[public static MipmapChain op_Implicit (
+         BitmapContent bitmap
+)]]></syntax>
+          <parameters>
+            <parameter name="bitmap" type="BitmapContent"><![CDATA[Bitmap used for the mipmap chain.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resultant mipmap chain.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ModelEffectCollection.Enumerator" kind="struct"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          interfaces="IEnumerator&amp;lt;Effect&amp;gt;, IDisposable, IEnumerator">
+  <summary><![CDATA[Provides the ability to iterate through the bones in an ModelEffectCollection.]]></summary>
+  <syntax><![CDATA[public struct ModelEffectCollection.Enumerator : IEnumerator&lt;Effect&gt;, IDisposable, IEnumerator]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

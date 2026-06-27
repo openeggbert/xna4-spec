@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="IEffectMatrices" kind="interface"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Gets or sets transformation matrix parameters for the current effect.]]></summary>
+  <syntax><![CDATA[public interface IEffectMatrices]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="Projection" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the projection matrix in the current effect.]]></summary>
+      <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="View" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the view matrix in the current effect.]]></summary>
+      <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="World" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the world matrix in the current effect.]]></summary>
+      <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

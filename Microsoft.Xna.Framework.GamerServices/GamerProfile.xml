@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamerProfile" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          interfaces="IDisposable">
+  <summary><![CDATA[Profile settings describing information about a gamer such as their motto, reputation, and gamer picture. This data is accessible for both locally signed in profiles and remote gamers that you are playing with in a multiplayer session.]]></summary>
+  <syntax><![CDATA[public sealed class GamerProfile : IDisposable]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+    <platform>Zune</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+    <property name="GamerPicture" type="Texture2D" access="get">
+      <summary><![CDATA[Gets the gamer picture, which will be 64 pixels by 64 pixels.]]></summary>
+      <syntax><![CDATA[public Texture2D GamerPicture { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="GamerScore" type="int" access="get">
+      <summary><![CDATA[Gets the GamerScore of this gamer.]]></summary>
+      <syntax><![CDATA[public int GamerScore { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="GamerZone" type="GamerZone" access="get">
+      <summary><![CDATA[Gets the GamerZone setting.]]></summary>
+      <syntax><![CDATA[public GamerZone GamerZone { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Motto" type="string" access="get">
+      <summary><![CDATA[Gets the gamer motto string.]]></summary>
+      <syntax><![CDATA[public string Motto { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Region" type="RegionInfo" access="get">
+      <summary><![CDATA[Gets the region of this gamer.]]></summary>
+      <syntax><![CDATA[public RegionInfo Region { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="Reputation" type="float" access="get">
+      <summary><![CDATA[Gets the gamer reputation, as a number of stars ranging 0 to 5.]]></summary>
+      <syntax><![CDATA[public float Reputation { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="TitlesPlayed" type="int" access="get">
+      <summary><![CDATA[Gets the number of titles this gamer has played.]]></summary>
+      <syntax><![CDATA[public int TitlesPlayed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+    <property name="TotalAchievements" type="int" access="get">
+      <summary><![CDATA[Gets the total number of achievements this gamer has obtained.]]></summary>
+      <syntax><![CDATA[public int TotalAchievements { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Dispose()">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+            <platform>Zune</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetGamerPicture" returnType="void">
+      <summary><![CDATA[Gets the gamer picture associated with this profile.]]></summary>
+      <overloads>
+        <overload signature="GetGamerPicture()">
+          <summary><![CDATA[Gets the gamer picture associated with this profile.]]></summary>
+          <syntax><![CDATA[public Stream GetGamerPicture ()]]></syntax>
+          <returns><![CDATA[The gamer picture, as a stream.]]></returns>
+          <remarks><![CDATA[To convert the stream returned by this method into a Texture2D , use the FromStream member, as shown: // Read the gamer picture. Stream stream = profile.GetGamerPicture(); Texture2D picture = Texture2D.FromStream(deviceManager.GraphicsDevice, stream);]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

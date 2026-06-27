@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContentLoadException" kind="class"
+          namespace="Microsoft.Xna.Framework.Content"
+          assembly="Microsoft.Xna.Framework.Content"
+          baseClass="Exception">
+  <summary><![CDATA[Exception used to report errors from the ContentManager.Load method.]]></summary>
+  <syntax><![CDATA[[SerializableAttribute]
+public class ContentLoadException : Exception]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="ContentLoadException(SerializationInfo, StreamingContext)">
+      <summary><![CDATA[Creates a new instance of ContentLoadException.]]></summary>
+      <syntax><![CDATA[protected ContentLoadException (
+         SerializationInfo info,
+         StreamingContext context
+)]]></syntax>
+      <parameters>
+        <parameter name="info" type="SerializationInfo"><![CDATA[Describes the value types that were being loaded when the exception occurred.]]></parameter>
+        <parameter name="context" type="StreamingContext"><![CDATA[Describes the stream where the exception occurred.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ContentLoadException()">
+      <summary><![CDATA[Creates a new instance of ContentLoadException.]]></summary>
+      <syntax><![CDATA[public ContentLoadException ()]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ContentLoadException(String)">
+      <summary><![CDATA[Creates a new instance of ContentLoadException.]]></summary>
+      <syntax><![CDATA[public ContentLoadException (
+         string message
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="ContentLoadException(String, Exception)">
+      <summary><![CDATA[Creates a new instance of ContentLoadException.]]></summary>
+      <syntax><![CDATA[public ContentLoadException (
+         string message,
+         Exception innerException
+)]]></syntax>
+      <parameters>
+        <parameter name="message" type="string"><![CDATA[A message that describes the error.]]></parameter>
+        <parameter name="innerException" type="Exception"><![CDATA[The exception that is the cause of the current exception. If the parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

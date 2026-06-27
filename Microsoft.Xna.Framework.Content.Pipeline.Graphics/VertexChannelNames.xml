@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="VertexChannelNames" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+  <summary><![CDATA[Provides properties for managing a collection of vertex channel names.]]></summary>
+  <syntax><![CDATA[public static class VertexChannelNames]]></syntax>
+  <remarks><![CDATA[These vertex channel names can be passed to VertexChannelCollection.Add and looked up using the Name property of a specific vertex channel. The names are stored in the VertexChannel.Name property.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+    <method name="Binormal" returnType="void">
+      <summary><![CDATA[Gets the name of a binormal vector channel with the specified index.]]></summary>
+      <overloads>
+        <overload signature="Binormal()">
+          <summary><![CDATA[Gets the name of a binormal vector channel with the specified index.]]></summary>
+          <syntax><![CDATA[public static string Binormal (
+         int usageIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="usageIndex" type="int"><![CDATA[Zero-based index of the vector channel being retrieved.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Name of the retrieved vector channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Color" returnType="void">
+      <summary><![CDATA[Gets the name of a color channel with the specified index.]]></summary>
+      <overloads>
+        <overload signature="Color()">
+          <summary><![CDATA[Gets the name of a color channel with the specified index.]]></summary>
+          <syntax><![CDATA[public static string Color (
+         int usageIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="usageIndex" type="int"><![CDATA[Zero-based index of the color channel being retrieved.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Name of the retrieved color channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DecodeBaseName" returnType="void">
+      <summary><![CDATA[Gets a channel base name stub from the encoded string format.]]></summary>
+      <overloads>
+        <overload signature="DecodeBaseName()">
+          <summary><![CDATA[Gets a channel base name stub from the encoded string format.]]></summary>
+          <syntax><![CDATA[public static string DecodeBaseName (
+         string encodedName
+)]]></syntax>
+          <parameters>
+            <parameter name="encodedName" type="string"><![CDATA[Encoded string to be decoded.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Extracted base name.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DecodeUsageIndex" returnType="void">
+      <summary><![CDATA[Gets a channel usage index from the encoded format.]]></summary>
+      <overloads>
+        <overload signature="DecodeUsageIndex()">
+          <summary><![CDATA[Gets a channel usage index from the encoded format.]]></summary>
+          <syntax><![CDATA[public static int DecodeUsageIndex (
+         string encodedName
+)]]></syntax>
+          <parameters>
+            <parameter name="encodedName" type="string"><![CDATA[Encoded name to be decoded.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resulting channel usage index.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EncodeName" returnType="string" isStatic="true">
+      <summary><![CDATA[Combines a channel name stub and usage index into a string name.]]></summary>
+      <overloads>
+        <overload signature="String, Int32">
+          <summary><![CDATA[Combines a channel name stub and usage index into a string name.]]></summary>
+          <syntax><![CDATA[public static string EncodeName (
+         string baseName,
+         int usageIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="baseName" type="string"><![CDATA[A channel base name stub.]]></parameter>
+            <parameter name="usageIndex" type="int"><![CDATA[A channel usage index.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resulting encoded name.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="VertexElementUsage, Int32">
+          <summary><![CDATA[Combines a vertex declaration usage and usage index into a string name.]]></summary>
+          <syntax><![CDATA[public static string EncodeName (
+         VertexElementUsage vertexElementUsage,
+         int usageIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="vertexElementUsage" type="VertexElementUsage"><![CDATA[A vertex declaration.]]></parameter>
+            <parameter name="usageIndex" type="int"><![CDATA[An index for the vertex declaration.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Resulting encoded name.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Normal" returnType="string" isStatic="true">
+      <summary><![CDATA[Gets the name of the primary normal channel.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Gets the name of the primary normal channel.]]></summary>
+          <syntax><![CDATA[public static string Normal ()]]></syntax>
+          <returns><![CDATA[Primary normal channel name.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32">
+          <summary><![CDATA[Gets the name of the normal channel with the specified index.]]></summary>
+          <syntax><![CDATA[public static string Normal (
+         int usageIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="usageIndex" type="int"><![CDATA[Zero-based index of the normal channel being retrieved.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Normal channel at the specified index.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Tangent" returnType="void">
+      <summary><![CDATA[Gets the name of the tangent vector channel with the specified index.]]></summary>
+      <overloads>
+        <overload signature="Tangent()">
+          <summary><![CDATA[Gets the name of the tangent vector channel with the specified index.]]></summary>
+          <syntax><![CDATA[public static string Tangent (
+         int usageIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="usageIndex" type="int"><![CDATA[Zero-based index of the tangent vector channel being retrieved.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Name of the retrieved tangent vector channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TextureCoordinate" returnType="void">
+      <summary><![CDATA[Gets the name of the texture coordinate channel with the specified index.]]></summary>
+      <overloads>
+        <overload signature="TextureCoordinate()">
+          <summary><![CDATA[Gets the name of the texture coordinate channel with the specified index.]]></summary>
+          <syntax><![CDATA[public static string TextureCoordinate (
+         int usageIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="usageIndex" type="int"><![CDATA[Zero-based index of the texture coordinate channel being retrieved.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Name of the retrieved texture coordinate channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryDecodeUsage" returnType="void">
+      <summary><![CDATA[Gets a vertex declaration usage enumeration from the encoded string format.]]></summary>
+      <overloads>
+        <overload signature="TryDecodeUsage()">
+          <summary><![CDATA[Gets a vertex declaration usage enumeration from the encoded string format.]]></summary>
+          <syntax><![CDATA[public static bool TryDecodeUsage (
+         string encodedName,
+         out VertexElementUsage usage
+)]]></syntax>
+          <parameters>
+            <parameter name="encodedName" type="string"><![CDATA[Encoded name of a vertex declaration.]]></parameter>
+            <parameter name="usage" type="VertexElementUsage"><![CDATA[[ OutAttribute ] Value of the declaration usage for the vertex declaration.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the encoded name maps to a VertexElementUsage enumeration value; false otherwise.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Weights" returnType="string" isStatic="true">
+      <summary><![CDATA[Gets the name of the primary animation weights channel.]]></summary>
+      <overloads>
+        <overload signature="">
+          <summary><![CDATA[Gets the name of the primary animation weights channel.]]></summary>
+          <syntax><![CDATA[public static string Weights ()]]></syntax>
+          <returns><![CDATA[Name of the primary animation weights channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Int32">
+          <summary><![CDATA[Gets the name of an animation weights channel at the specified index.]]></summary>
+          <syntax><![CDATA[public static string Weights (
+         int usageIndex
+)]]></syntax>
+          <parameters>
+            <parameter name="usageIndex" type="int"><![CDATA[Index of the animation weight channel to be retrieved.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Name of the retrieved animation weights channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

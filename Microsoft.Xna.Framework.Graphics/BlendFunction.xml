@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="BlendFunction" kind="enum"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics">
+  <summary><![CDATA[Defines how to combine a source color with the destination color already on the render target for color blending.]]></summary>
+  <syntax><![CDATA[public enum BlendFunction]]></syntax>
+  <remarks><![CDATA[The alpha value of a color controls its transparency. Enabling alpha blending with AlphaBlendEnable allows colors, materials, and textures on a surface to be blended with transparency onto another surface. Alpha blending is determined by the SourceBlend and DestinationBlend properties. With the default BlendFunction , the source pixel times the SourceBlend is added to the destination pixel (the pixel on the back buffer) times the DestinationBlend to produce a color that is a blend of the two pixel colors. The BlendFunction determines the operation used on the outcome of the source blend and destination blend components.]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Add"><summary><![CDATA[The result is the destination added to the source. Result = (Source Color * Source Blend) + (Destination Color * Destination Blend)]]></summary></member>
+    <member name="Max"><summary><![CDATA[The result is the maximum of the source and destination. Result = max( (Source Color * Source Blend), (Destination Color * Destination Blend) )]]></summary></member>
+    <member name="Min"><summary><![CDATA[The result is the minimum of the source and destination. Result = min( (Source Color * Source Blend), (Destination Color * Destination Blend) )]]></summary></member>
+    <member name="ReverseSubtract"><summary><![CDATA[The result is the source subtracted from the destination. Result = (Destination Color * Destination Blend) − (Source Color * Source Blend)]]></summary></member>
+    <member name="Subtract"><summary><![CDATA[The result is the destination subtracted from the source. Result = (Source Color * Source Blend) − (Destination Color * Destination Blend)]]></summary></member>
+  </members>
+</xna-type>

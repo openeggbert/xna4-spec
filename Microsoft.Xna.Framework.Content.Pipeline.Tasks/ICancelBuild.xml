@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ICancelBuild" kind="interface"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Tasks"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Tasks"
+          interfaces="ITaskHost">
+  <summary><![CDATA[Interface used to cancel the Content Pipeline build process.]]></summary>
+  <syntax><![CDATA[public interface ICancelBuild : ITaskHost]]></syntax>
+  <remarks><![CDATA[This interface can be implemented by applications that host the BuildContent or BuildXact tasks, and passed in via the MSBuild HostObject property. The Content Pipeline build process checks whether the HostObject implements ICancelBuild , and if so, subscribes to the BuildCancelled event. The cancellation status is checked whenever the build process outputs a log message. This check can sometimes result in a slight lag between the cancel event and when the build stops, but it ensures that the build is interrupted only at well known locations, which is much more robust than if you tried to forcibly interrupt it from inside unknown third-party code.]]></remarks>
+  <platforms>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+  </constructors>
+  <properties>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+    <event name="BuildCancelled" type="EventHandler">
+      <summary><![CDATA[Notifies a Content Pipeline build task that the build process should be canceled.]]></summary>
+      <syntax><![CDATA[public virtual abstract event EventHandler BuildCancelled]]></syntax>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </event>
+  </events>
+</xna-type>

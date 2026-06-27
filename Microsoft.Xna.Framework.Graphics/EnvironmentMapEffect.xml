@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="EnvironmentMapEffect" kind="class"
+          namespace="Microsoft.Xna.Framework.Graphics"
+          assembly="Microsoft.Xna.Framework.Graphics"
+          baseClass="Effect"
+          interfaces="IEffectMatrices, IEffectLights, IEffectFog">
+  <summary><![CDATA[Contains a configurable effect that supports environment mapping.]]></summary>
+  <syntax><![CDATA[public class EnvironmentMapEffect : Effect, IEffectMatrices, IEffectLights, IEffectFog]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+    <platform>Windows Phone 7</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="EnvironmentMapEffect(EnvironmentMapEffect)">
+      <summary><![CDATA[Creates a new EnvironmentMapEffect by cloning parameter settings from an existing instance.]]></summary>
+      <syntax><![CDATA[protected EnvironmentMapEffect (
+         EnvironmentMapEffect cloneSource
+)]]></syntax>
+      <parameters>
+        <parameter name="cloneSource" type="EnvironmentMapEffect"><![CDATA[An existing instance.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+    <constructor signature="EnvironmentMapEffect(GraphicsDevice)">
+      <summary><![CDATA[Creates a new EnvironmentMapEffect with default parameter settings.]]></summary>
+      <syntax><![CDATA[public EnvironmentMapEffect (
+         GraphicsDevice device
+)]]></syntax>
+      <parameters>
+        <parameter name="device" type="GraphicsDevice"><![CDATA[The graphics device.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Alpha" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the material alpha which determines its transparency. Range is between 1 (fully opaque) and 0 (fully transparent).]]></summary>
+      <syntax><![CDATA[public float Alpha { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="AmbientLightColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the ambient color for a light, the range of color values is from 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 AmbientLightColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DiffuseColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the diffuse color for a material, the range of color values is from 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight0" type="DirectionalLight" access="get">
+      <summary><![CDATA[Gets the first directional light.]]></summary>
+      <syntax><![CDATA[public DirectionalLight DirectionalLight0 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight1" type="DirectionalLight" access="get">
+      <summary><![CDATA[Gets the second directional light.]]></summary>
+      <syntax><![CDATA[public DirectionalLight DirectionalLight1 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="DirectionalLight2" type="DirectionalLight" access="get">
+      <summary><![CDATA[Gets the third directional light.]]></summary>
+      <syntax><![CDATA[public DirectionalLight DirectionalLight2 { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="EmissiveColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the emissive color for a material, the range of color values is from 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 EmissiveColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="EnvironmentMap" type="TextureCube" access="get;set">
+      <summary><![CDATA[Gets or sets the current environment map texture.]]></summary>
+      <syntax><![CDATA[public TextureCube EnvironmentMap { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="EnvironmentMapAmount" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the amount of the environment map color (RGB) that will be blended over the base texture. The value ranges from 0 to 1; the default value is 1.]]></summary>
+      <syntax><![CDATA[public float EnvironmentMapAmount { get; set; }]]></syntax>
+      <remarks><![CDATA[If set to zero, the RGB channels of the environment map will be completely ignored (the environment map alpha may still be visible if EnvironmentMapSpecular is greater than zero).]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="EnvironmentMapSpecular" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the amount of the environment map alpha value that will be added to the base texture. The value ranges from 0 to 1; the default value is 0.]]></summary>
+      <syntax><![CDATA[public Vector3 EnvironmentMapSpecular { get; set; }]]></syntax>
+      <remarks><![CDATA[Use this value to implement cheap specular lighting, by encoding one or more specular highlight patterns into the environment map alpha channel, then setting the EnvironmentMapSpecular to the desired specular light color.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogColor" type="Vector3" access="get;set">
+      <summary><![CDATA[Gets or sets the fog color, the range of color values is from 0 to 1.]]></summary>
+      <syntax><![CDATA[public Vector3 FogColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogEnabled" type="bool" access="get;set">
+      <summary><![CDATA[Gets or sets the fog enable flag.]]></summary>
+      <syntax><![CDATA[public bool FogEnabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogEnd" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the maximum z value for fog, which ranges from 0 to 1.]]></summary>
+      <syntax><![CDATA[public float FogEnd { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FogStart" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the minimum z value for fog, which ranges from 0 to 1.]]></summary>
+      <syntax><![CDATA[public float FogStart { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="FresnelFactor" type="float" access="get;set">
+      <summary><![CDATA[Gets or sets the Fresnel factor used for the environment map blending.]]></summary>
+      <syntax><![CDATA[public float FresnelFactor { get; set; }]]></syntax>
+      <remarks><![CDATA[The default value is 1. Use 0 to disable Fresnel lighting; this makes the environment map visible independent of the viewing angle. Use a higher value to make the environment map visible around silhouette edges; use a lower value to make the environment map visible everywhere. Fresnel lighting only affects the environment map color (RGB values), alpha is not affected. Control the intensity of the color values using EnvironmentMapAmount; control the intensity of the alpha value with EnvironmentMapSpecular.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Projection" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the projection matrix.]]></summary>
+      <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Texture" type="Texture2D" access="get;set">
+      <summary><![CDATA[Gets or sets the current texture.]]></summary>
+      <syntax><![CDATA[public Texture2D Texture { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="View" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the view matrix.]]></summary>
+      <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="World" type="Matrix" access="get;set">
+      <summary><![CDATA[Gets or sets the world matrix.]]></summary>
+      <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Clone" returnType="void">
+      <summary><![CDATA[Creates a clone of the current EnvironmentMapEffect instance.]]></summary>
+      <overloads>
+        <overload signature="Clone()">
+          <summary><![CDATA[Creates a clone of the current EnvironmentMapEffect instance.]]></summary>
+          <syntax><![CDATA[public override Effect Clone ()]]></syntax>
+          <returns><![CDATA[A cloned copy of the current instance.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="EnableDefaultLighting" returnType="void">
+      <summary><![CDATA[Sets up standard key, fill, and back lighting for an EnvironmentMapEffect.]]></summary>
+      <overloads>
+        <overload signature="EnableDefaultLighting()">
+          <summary><![CDATA[Sets up standard key, fill, and back lighting for an EnvironmentMapEffect.]]></summary>
+          <syntax><![CDATA[public void EnableDefaultLighting ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="OnApply" returnType="void">
+      <summary><![CDATA[Computes derived parameter values immediately before applying the effect.]]></summary>
+      <overloads>
+        <overload signature="OnApply()">
+          <summary><![CDATA[Computes derived parameter values immediately before applying the effect.]]></summary>
+          <syntax><![CDATA[protected internal override void OnApply ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+            <platform>Windows Phone 7</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

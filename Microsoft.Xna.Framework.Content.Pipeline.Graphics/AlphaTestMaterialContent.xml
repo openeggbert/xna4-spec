@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AlphaTestMaterialContent" kind="class"
+          namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          baseClass="MaterialContent">
+  <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
+  <syntax><![CDATA[public class AlphaTestMaterialContent : MaterialContent]]></syntax>
+  <platforms>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="AlphaTestMaterialContent()">
+      <summary><![CDATA[This constructor is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public AlphaTestMaterialContent ()]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Alpha" type="Nullable&amp;lt;float&amp;gt;" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;float&gt; Alpha { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="AlphaFunction" type="Nullable&amp;lt;CompareFunction&amp;gt;" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;CompareFunction&gt; AlphaFunction { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="DiffuseColor" type="Nullable&amp;lt;Vector3&amp;gt;" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;Vector3&gt; DiffuseColor { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="ReferenceAlpha" type="Nullable&amp;lt;int&amp;gt;" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;int&gt; ReferenceAlpha { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Texture" type="ExternalReference&amp;lt;TextureContent&amp;gt;" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public ExternalReference&lt;TextureContent&gt; Texture { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="VertexColorEnabled" type="Nullable&amp;lt;bool&amp;gt;" access="get;set">
+      <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public Nullable&lt;bool&gt; VertexColorEnabled { get; set; }]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+  </methods>
+  <fields>
+    <field name="AlphaFunctionKey" type="string" isReadOnly="true">
+      <summary><![CDATA[This field is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public const string AlphaFunctionKey]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </field>
+    <field name="AlphaKey" type="string" isReadOnly="true">
+      <summary><![CDATA[This field is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public const string AlphaKey]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </field>
+    <field name="DiffuseColorKey" type="string" isReadOnly="true">
+      <summary><![CDATA[This field is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public const string DiffuseColorKey]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </field>
+    <field name="ReferenceAlphaKey" type="string" isReadOnly="true">
+      <summary><![CDATA[This field is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public const string ReferenceAlphaKey]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </field>
+    <field name="TextureKey" type="string" isReadOnly="true">
+      <summary><![CDATA[This field is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public const string TextureKey]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </field>
+    <field name="VertexColorEnabledKey" type="string" isReadOnly="true">
+      <summary><![CDATA[This field is available only when developing for Windows.]]></summary>
+      <syntax><![CDATA[public const string VertexColorEnabledKey]]></syntax>
+      <platforms>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </field>
+  </fields>
+  <events>
+  </events>
+</xna-type>

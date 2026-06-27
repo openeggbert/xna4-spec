@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="GamePadDPad" kind="struct"
+          namespace="Microsoft.Xna.Framework.Input"
+          assembly="Microsoft.Xna.Framework.Input">
+  <summary><![CDATA[Identifies which directions on the directional pad of an Xbox 360 Controller are being pressed.]]></summary>
+  <syntax><![CDATA[public struct GamePadDPad]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="GamePadDPad(Object, Object, Object, Object)">
+      <summary><![CDATA[Initializes a new instance of the GamePadDPad class.]]></summary>
+      <syntax><![CDATA['Declaration
+Public Sub New ( _
+         upValue As ButtonState, _
+         downValue As ButtonState, _
+         leftValue As ButtonState, _
+         rightValue As ButtonState _
+)]]></syntax>
+      <parameters>
+        <parameter name="upValue" type="Object"><![CDATA[Type: ButtonState Directional pad up button state.]]></parameter>
+        <parameter name="downValue" type="Object"><![CDATA[Type: ButtonState Directional pad down button state.]]></parameter>
+        <parameter name="leftValue" type="Object"><![CDATA[Type: ButtonState Directional pad left button state.]]></parameter>
+        <parameter name="rightValue" type="Object"><![CDATA[Type: ButtonState Directional pad right button state.]]></parameter>
+      </parameters>
+      <remarks><![CDATA[Games normally use GetState to get the true gamepad state. This constructor is used instead to simulate gamepad input for passing within the game's own input subsystem.]]></remarks>
+      <platforms>
+        <platform>Windows Phone</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="Down" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the Down direction on the Xbox 360 Controller directional pad is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState Down { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Left" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the Left direction on the Xbox 360 Controller directional pad is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState Left { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Right" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the Right direction on the Xbox 360 Controller directional pad is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState Right { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Up" type="ButtonState" access="get">
+      <summary><![CDATA[Identifies whether the Up direction on the Xbox 360 Controller directional pad is pressed.]]></summary>
+      <syntax><![CDATA[public ButtonState Up { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Equals" returnType="bool">
+      <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+      <overloads>
+        <overload signature="Object">
+          <summary><![CDATA[Returns a value that indicates whether the current instance is equal to a specified object.]]></summary>
+          <syntax><![CDATA[public override bool Equals (
+         Object obj
+)]]></syntax>
+          <parameters>
+            <parameter name="obj" type="Object"><![CDATA[Object with which to make the comparison.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the current instance is equal to the specified object; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="void">
+      <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+      <overloads>
+        <overload signature="GetHashCode()">
+          <summary><![CDATA[Gets the hash code for this instance.]]></summary>
+          <syntax><![CDATA[public override int GetHashCode ()]]></syntax>
+          <returns><![CDATA[Hash code for this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="void">
+      <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+      <overloads>
+        <overload signature="ToString()">
+          <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
+          <syntax><![CDATA[public override string ToString ()]]></syntax>
+          <returns><![CDATA[String representation of this object.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Equality" returnType="void">
+      <summary><![CDATA[Determines whether two GamePadDPad instances are equal.]]></summary>
+      <overloads>
+        <overload signature="op_Equality()">
+          <summary><![CDATA[Determines whether two GamePadDPad instances are equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Equality (
+         GamePadDPad left,
+         GamePadDPad right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GamePadDPad"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="GamePadDPad"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the instances are equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="op_Inequality" returnType="void">
+      <summary><![CDATA[Determines whether two GamePadDPad instances are not equal.]]></summary>
+      <overloads>
+        <overload signature="op_Inequality()">
+          <summary><![CDATA[Determines whether two GamePadDPad instances are not equal.]]></summary>
+          <syntax><![CDATA[public static bool op_Inequality (
+         GamePadDPad left,
+         GamePadDPad right
+)]]></syntax>
+          <parameters>
+            <parameter name="left" type="GamePadDPad"><![CDATA[Object on the left of the equal sign.]]></parameter>
+            <parameter name="right" type="GamePadDPad"><![CDATA[Object on the right of the equal sign.]]></parameter>
+          </parameters>
+          <returns><![CDATA[true if the objects are not equal; false otherwise.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>

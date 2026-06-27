@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="AvatarAnimation" kind="class"
+          namespace="Microsoft.Xna.Framework.GamerServices"
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          interfaces="IAvatarAnimation, IDisposable">
+  <summary><![CDATA[Provides methods and properties for animating an avatar using standard animations (for example, celebrate). For more information on the standard animations available to avatars, see AvatarAnimationPreset.]]></summary>
+  <syntax><![CDATA[public class AvatarAnimation : IAvatarAnimation, IDisposable]]></syntax>
+  <remarks><![CDATA[Use this class, in conjunction with AvatarRenderer , to provide standard animations for the avatar model. For more information, see Rendering and Animating Avatars (Xbox 360) .]]></remarks>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows 7</platform>
+    <platform>Windows Vista</platform>
+    <platform>Windows XP</platform>
+  </platforms>
+  <constructors>
+    <constructor signature="AvatarAnimation(AvatarAnimationPreset)">
+      <summary><![CDATA[Creates a new instance of AvatarAnimation, and initializes it with the specified animation.]]></summary>
+      <syntax><![CDATA[public AvatarAnimation (
+         AvatarAnimationPreset animationPreset
+)]]></syntax>
+      <parameters>
+        <parameter name="animationPreset" type="AvatarAnimationPreset"><![CDATA[The specified standard animation.]]></parameter>
+      </parameters>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </constructor>
+  </constructors>
+  <properties>
+    <property name="BoneTransforms" type="ReadOnlyCollection&amp;lt;Matrix&amp;gt;" access="get">
+      <summary><![CDATA[Gets the current position of the bones at the time specified by CurrentPosition. The positions are in local bone space relative to their parent bones.]]></summary>
+      <syntax><![CDATA[public ReadOnlyCollection&lt;Matrix&gt; BoneTransforms { get; }]]></syntax>
+      <remarks><![CDATA[You can pass this matrix list to AvatarRenderer.Draw using the bones parameter. This allows the developer to modify the position of one or more avatar bones before rendering the model.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="CurrentPosition" type="TimeSpan" access="get;set">
+      <summary><![CDATA[Gets or sets the current time position in the animation.]]></summary>
+      <syntax><![CDATA[public TimeSpan CurrentPosition { get; set; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Expression" type="AvatarExpression" access="get">
+      <summary><![CDATA[Gets the expression of the related animation at the current time position.]]></summary>
+      <syntax><![CDATA[public AvatarExpression Expression { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="IsDisposed" type="bool" access="get">
+      <summary><![CDATA[Gets the disposed state of the avatar animation.]]></summary>
+      <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+    <property name="Length" type="TimeSpan" access="get">
+      <summary><![CDATA[Gets the length of the current animation.]]></summary>
+      <syntax><![CDATA[public TimeSpan Length { get; }]]></syntax>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+      </platforms>
+    </property>
+  </properties>
+  <methods>
+    <method name="Dispose" returnType="void">
+      <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+      <overloads>
+        <overload signature="Boolean">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[protected virtual void Dispose (
+         bool disposing
+)]]></syntax>
+          <parameters>
+            <parameter name="disposing" type="bool"><![CDATA[true to release both managed and unmanaged resources; false to release only unmanaged resources.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+        <overload signature="">
+          <summary><![CDATA[Immediately releases the unmanaged resources used by this object.]]></summary>
+          <syntax><![CDATA[public void Dispose ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Finalize" returnType="void">
+      <summary><![CDATA[Allows the avatar animation to attempt to free resources, and it performs other cleanup operations before garbage collection reclaims the animation.]]></summary>
+      <overloads>
+        <overload signature="Finalize()">
+          <summary><![CDATA[Allows the avatar animation to attempt to free resources, and it performs other cleanup operations before garbage collection reclaims the animation.]]></summary>
+          <syntax><![CDATA[protected override void Finalize ()]]></syntax>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Update" returnType="void">
+      <summary><![CDATA[Updates the current time position of the avatar animation.]]></summary>
+      <overloads>
+        <overload signature="Update()">
+          <summary><![CDATA[Updates the current time position of the avatar animation.]]></summary>
+          <syntax><![CDATA[public void Update (
+         TimeSpan elapsedAnimationTime,
+         bool loop
+)]]></syntax>
+          <parameters>
+            <parameter name="elapsedAnimationTime" type="TimeSpan"><![CDATA[Elapsed time since the last animation frame. This value can be either a positive or negative time span. If the value is negative, animation playback is reversed.]]></parameter>
+            <parameter name="loop" type="bool"><![CDATA[true if the animation playback is to be looped; otherwise, false .]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+  </methods>
+  <fields>
+  </fields>
+  <events>
+  </events>
+</xna-type>
