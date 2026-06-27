@@ -154,6 +154,48 @@ td code { background: #0d1b2a; padding: 1px 5px; border-radius: 3px; font-size: 
   color: #e0e0e0; outline: none;
 }
 #search-box:focus { border-color: #7ec8e3; }
+
+/* ── Table scroll wrapper ── */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 10px 0; }
+.table-wrap table { margin: 0; }
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none; position: fixed; top: 12px; left: 12px; z-index: 200;
+  background: #0f3460; border: 1px solid #2a3a5c; border-radius: 6px;
+  padding: 8px 11px; cursor: pointer; color: #7ec8e3; font-size: 20px; line-height: 1;
+}
+
+.nav-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.55); z-index: 99;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+
+  nav {
+    position: fixed; left: 0; top: 0; bottom: 0; z-index: 100;
+    transform: translateX(-100%); transition: transform .25s ease;
+    width: 280px; min-width: 0; height: 100%;
+  }
+  nav.open { transform: translateX(0); box-shadow: 4px 0 20px rgba(0,0,0,.5); }
+  nav.open ~ .nav-overlay { display: block; }
+
+  .page-wrap { flex-direction: column; }
+  main { padding: 60px 16px 32px; max-width: 100%; }
+
+  h1 { font-size: 22px; }
+  h2 { font-size: 16px; }
+
+  .param-row { flex-direction: column; gap: 2px; }
+  .param-name, .param-type { min-width: 0; }
+
+  .type-grid { grid-template-columns: 1fr; }
+
+  .overload { padding: 10px 12px; }
+}
 """
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -210,7 +252,7 @@ def nav_html(all_types, active_file=""):
         items.append(f'<div class="nav-ns">{esc(short_ns)}</div>')
         for t in sorted(ns_groups[ns], key=lambda x: x["name"]):
             active = ' active' if t["html_path"] == active_file else ""
-            depth = "../../" if "/" in t["rel_path"] else "../"
+            depth = "../" if "/" in active_file else ""
             href = depth + t["html_path"] if active_file else t["html_path"]
             items.append(
                 f'<a class="nav-item{active}" href="{href}" data-name="{esc(t["name"].lower())}">'
@@ -230,17 +272,34 @@ def page(title, body, active_file, all_types, extra_head=""):
 {extra_head}
 </head>
 <body>
+<button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
 <div class="page-wrap">
-<nav>
+<nav id="main-nav">
   <a class="nav-logo" href="../index.html">XNA 4.0 API</a>
   <input class="nav-search" type="search" placeholder="Filter types…" id="nav-filter">
   {nav}
 </nav>
+<div class="nav-overlay" id="nav-overlay"></div>
 <main>
 {body}
 </main>
 </div>
 <script>
+(function() {{
+  var ham = document.getElementById('hamburger');
+  var nav = document.getElementById('main-nav');
+  var overlay = document.getElementById('nav-overlay');
+  function openNav() {{ nav.classList.add('open'); }}
+  function closeNav() {{ nav.classList.remove('open'); }}
+  ham.addEventListener('click', openNav);
+  overlay.addEventListener('click', closeNav);
+  document.querySelectorAll('.nav-item').forEach(function(el) {{
+    el.addEventListener('click', closeNav);
+  }});
+  window.addEventListener('resize', function() {{
+    if (window.innerWidth > 768) closeNav();
+  }});
+}})();
 document.getElementById('nav-filter').addEventListener('input', function() {{
   var q = this.value.toLowerCase();
   document.querySelectorAll('.nav-item').forEach(function(el) {{
@@ -255,6 +314,12 @@ document.getElementById('nav-filter').addEventListener('input', function() {{
     }}
     ns.style.display = anyVisible ? '' : 'none';
   }});
+}});
+document.querySelectorAll('table').forEach(function(t) {{
+  var w = document.createElement('div');
+  w.className = 'table-wrap';
+  t.parentNode.insertBefore(w, t);
+  w.appendChild(t);
 }});
 </script>
 </body>
@@ -475,17 +540,34 @@ document.getElementById('search-box').addEventListener('input', function() {
 <style>{CSS}</style>
 </head>
 <body>
+<button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
 <div class="page-wrap">
-<nav>
+<nav id="main-nav">
   <a class="nav-logo" href="index.html">XNA 4.0 API</a>
   <input class="nav-search" type="search" placeholder="Filter types…" id="nav-filter">
   {nav}
 </nav>
+<div class="nav-overlay" id="nav-overlay"></div>
 <main>
 {body}
 </main>
 </div>
 <script>
+(function() {{
+  var ham = document.getElementById('hamburger');
+  var nav = document.getElementById('main-nav');
+  var overlay = document.getElementById('nav-overlay');
+  function openNav() {{ nav.classList.add('open'); }}
+  function closeNav() {{ nav.classList.remove('open'); }}
+  ham.addEventListener('click', openNav);
+  overlay.addEventListener('click', closeNav);
+  document.querySelectorAll('.nav-item').forEach(function(el) {{
+    el.addEventListener('click', closeNav);
+  }});
+  window.addEventListener('resize', function() {{
+    if (window.innerWidth > 768) closeNav();
+  }});
+}})();
 document.getElementById('nav-filter').addEventListener('input', function() {{
   var q = this.value.toLowerCase();
   document.querySelectorAll('.nav-item').forEach(function(el) {{
