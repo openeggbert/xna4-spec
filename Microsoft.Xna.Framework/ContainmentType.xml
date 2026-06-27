@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="ContainmentType" kind="enum"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Indicates the extent to which bounding volumes intersect or contain one another.]]></summary>
+  <syntax><![CDATA[public enum ContainmentType]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Contains">
+      <summary><![CDATA[Indicates that one bounding volume completely contains the other.]]></summary>
+    </member>
+    <member name="Disjoint">
+      <summary><![CDATA[Indicates there is no overlap between the bounding volumes.]]></summary>
+    </member>
+    <member name="Intersects">
+      <summary><![CDATA[Indicates that the bounding volumes partially overlap.]]></summary>
+    </member>
+  </members>
+</xna-type>
