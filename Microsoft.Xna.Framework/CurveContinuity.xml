@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xna-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xna.xsd"
+          name="CurveContinuity" kind="enum"
+          namespace="Microsoft.Xna.Framework"
+          assembly="Microsoft.Xna.Framework">
+  <summary><![CDATA[Defines the continuity of CurveKeys on a Curve.]]></summary>
+  <syntax><![CDATA[public enum CurveContinuity]]></syntax>
+  <platforms>
+    <platform>Xbox 360</platform>
+    <platform>Windows XP SP2</platform>
+    <platform>Windows Vista</platform>
+  </platforms>
+  <members>
+    <member name="Smooth">
+      <summary><![CDATA[Interpolation can be used between this CurveKey and the next.]]></summary>
+    </member>
+    <member name="Step">
+      <summary><![CDATA[Interpolation cannot be used between this CurveKey and the next. Specifying a position between the two points returns this point.]]></summary>
+    </member>
+  </members>
+</xna-type>
