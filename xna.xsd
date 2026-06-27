@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <!-- ============================================================
+       XNA 4.0 API Specification Schema
+       Validates all type XML files (one per class/struct/enum/
+       interface/delegate) and the master index.xml.
+       ============================================================ -->
+
+  <!-- Root elements -->
+  <xs:element name="xna-type"  type="XnaType"/>
+  <xs:element name="xna-index" type="XnaIndex"/>
+
+  <!-- ============================================================
+       SIMPLE TYPES
+       ============================================================ -->
+
+  <xs:simpleType name="TypeKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="class"/>
+      <xs:enumeration value="struct"/>
+      <xs:enumeration value="enum"/>
+      <xs:enumeration value="interface"/>
+      <xs:enumeration value="delegate"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PropertyAccess">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="get"/>
+      <xs:enumeration value="set"/>
+      <xs:enumeration value="get;set"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Free text content — used for summary, remarks, syntax, returns.
+       Mixed = true allows CDATA with embedded markup from C# syntax. -->
+  <xs:complexType name="TextContent" mixed="true">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <!-- ============================================================
+       PLATFORMS
+       ============================================================ -->
+
+  <xs:complexType name="PlatformsDef">
+    <xs:sequence>
+      <xs:element name="platform" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================
+       PARAMETERS  (shared by constructors, method overloads, delegates)
+       ============================================================ -->
+
+  <xs:complexType name="ParameterDef">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ParametersDef">
+    <xs:sequence>
+      <xs:element name="parameter" type="ParameterDef" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================
+       CONSTRUCTORS
+       ============================================================ -->
+
+  <xs:complexType name="ConstructorDef">
+    <xs:sequence>
+      <xs:element name="summary"    type="TextContent"/>
+      <xs:element name="syntax"     type="TextContent"/>
+      <xs:element name="parameters" type="ParametersDef" minOccurs="0"/>
+      <xs:element name="remarks"    type="TextContent"   minOccurs="0"/>
+      <xs:element name="platforms"  type="PlatformsDef"  minOccurs="0"/>
+    </xs:sequence>
+    <!-- Human-readable unique signature, e.g. "SpriteBatch(GraphicsDevice)" -->
+    <xs:attribute name="signature" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ConstructorsDef">
+    <xs:sequence>
+      <xs:element name="constructor" type="ConstructorDef"
+                  minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================
+       PROPERTIES
+       ============================================================ -->
+
+  <xs:complexType name="PropertyDef">
+    <xs:sequence>
+      <xs:element name="summary"   type="TextContent"/>
+      <xs:element name="syntax"    type="TextContent"/>
+      <xs:element name="remarks"   type="TextContent"  minOccurs="0"/>
+      <xs:element name="platforms" type="PlatformsDef" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name"   type="xs:string"      use="required"/>
+    <xs:attribute name="type"   type="xs:string"      use="required"/>
+    <xs:attribute name="access" type="PropertyAccess" use="required"/>
+    <!-- true if declared static -->
+    <xs:attribute name="isStatic" type="xs:boolean" default="false"/>
+  </xs:complexType>
+
+  <xs:complexType name="PropertiesDef">
+    <xs:sequence>
+      <xs:element name="property" type="PropertyDef"
+                  minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================
+       METHODS  (each method groups all its overloads)
+       ============================================================ -->
+
+  <xs:complexType name="OverloadDef">
+    <xs:sequence>
+      <xs:element name="summary"    type="TextContent"/>
+      <xs:element name="syntax"     type="TextContent"/>
+      <xs:element name="parameters" type="ParametersDef" minOccurs="0"/>
+      <xs:element name="returns"    type="TextContent"   minOccurs="0"/>
+      <xs:element name="remarks"    type="TextContent"   minOccurs="0"/>
+      <xs:element name="platforms"  type="PlatformsDef"  minOccurs="0"/>
+    </xs:sequence>
+    <!-- Full C# signature string, e.g. "Draw(Texture2D, Rectangle, Color)" -->
+    <xs:attribute name="signature" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="OverloadsDef">
+    <xs:sequence>
+      <xs:element name="overload" type="OverloadDef" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="MethodDef">
+    <xs:sequence>
+      <!-- Top-level summary covers all overloads collectively -->
+      <xs:element name="summary"  type="TextContent"/>
+      <xs:element name="overloads" type="OverloadsDef"/>
+    </xs:sequence>
+    <xs:attribute name="name"       type="xs:string"  use="required"/>
+    <xs:attribute name="returnType" type="xs:string"/>
+    <xs:attribute name="isStatic"   type="xs:boolean" default="false"/>
+  </xs:complexType>
+
+  <xs:complexType name="MethodsDef">
+    <xs:sequence>
+      <xs:element name="method" type="MethodDef"
+                  minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================
+       FIELDS
+       ============================================================ -->
+
+  <xs:complexType name="FieldDef">
+    <xs:sequence>
+      <xs:element name="summary"   type="TextContent"/>
+      <xs:element name="syntax"    type="TextContent"  minOccurs="0"/>
+      <xs:element name="remarks"   type="TextContent"  minOccurs="0"/>
+      <xs:element name="platforms" type="PlatformsDef" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name"       type="xs:string"  use="required"/>
+    <xs:attribute name="type"       type="xs:string"  use="required"/>
+    <xs:attribute name="isStatic"   type="xs:boolean" default="false"/>
+    <xs:attribute name="isReadOnly" type="xs:boolean" default="false"/>
+  </xs:complexType>
+
+  <xs:complexType name="FieldsDef">
+    <xs:sequence>
+      <xs:element name="field" type="FieldDef"
+                  minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================
+       EVENTS
+       ============================================================ -->
+
+  <xs:complexType name="EventDef">
+    <xs:sequence>
+      <xs:element name="summary"   type="TextContent"/>
+      <xs:element name="syntax"    type="TextContent"  minOccurs="0"/>
+      <xs:element name="remarks"   type="TextContent"  minOccurs="0"/>
+      <xs:element name="platforms" type="PlatformsDef" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="EventsDef">
+    <xs:sequence>
+      <xs:element name="event" type="EventDef"
+                  minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================
+       ENUM MEMBERS  (only present when kind="enum")
+       ============================================================ -->
+
+  <xs:complexType name="EnumMemberDef">
+    <xs:sequence>
+      <xs:element name="summary" type="TextContent"/>
+    </xs:sequence>
+    <xs:attribute name="name"  type="xs:string" use="required"/>
+    <!-- Numeric value if stated in documentation -->
+    <xs:attribute name="value" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="EnumMembersDef">
+    <xs:sequence>
+      <xs:element name="member" type="EnumMemberDef"
+                  minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================
+       XNA-TYPE  — root element for every type XML file
+       ============================================================ -->
+
+  <xs:complexType name="XnaType">
+    <xs:sequence>
+      <xs:element name="summary"      type="TextContent"/>
+      <xs:element name="syntax"       type="TextContent"/>
+      <xs:element name="remarks"      type="TextContent"    minOccurs="0"/>
+      <xs:element name="platforms"    type="PlatformsDef"   minOccurs="0"/>
+      <!-- Sections present depends on kind: -->
+      <!-- class/struct/interface: constructors, properties, methods, fields, events -->
+      <!-- enum: members -->
+      <!-- delegate: parameters, returns -->
+      <xs:element name="constructors" type="ConstructorsDef" minOccurs="0"/>
+      <xs:element name="properties"   type="PropertiesDef"   minOccurs="0"/>
+      <xs:element name="methods"      type="MethodsDef"      minOccurs="0"/>
+      <xs:element name="fields"       type="FieldsDef"       minOccurs="0"/>
+      <xs:element name="events"       type="EventsDef"       minOccurs="0"/>
+      <xs:element name="members"      type="EnumMembersDef"  minOccurs="0"/>
+      <!-- Delegate-specific: single parameter list and return type description -->
+      <xs:element name="parameters"   type="ParametersDef"   minOccurs="0"/>
+      <xs:element name="returns"      type="TextContent"      minOccurs="0"/>
+    </xs:sequence>
+
+    <xs:attribute name="name"       type="xs:string"  use="required"/>
+    <xs:attribute name="kind"       type="TypeKind"   use="required"/>
+    <xs:attribute name="namespace"  type="xs:string"  use="required"/>
+    <xs:attribute name="assembly"   type="xs:string"  use="required"/>
+    <!-- Base class (omit for structs, enums, interfaces) -->
+    <xs:attribute name="baseClass"  type="xs:string"/>
+    <!-- Comma-separated list of implemented interfaces -->
+    <xs:attribute name="interfaces" type="xs:string"/>
+    <!-- "abstract", "sealed", "static", or omit -->
+    <xs:attribute name="modifier"   type="xs:string"/>
+  </xs:complexType>
+
+  <!-- ============================================================
+       XNA-INDEX  — root element for index.xml
+       ============================================================ -->
+
+  <xs:complexType name="TypeRef">
+    <xs:sequence>
+      <xs:element name="summary" type="TextContent"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="kind" type="TypeKind"  use="required"/>
+    <!-- Relative path from spec/ to the XML file, e.g.
+         "Microsoft.Xna.Framework.Graphics/SpriteBatch.xml" -->
+    <xs:attribute name="file" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="NamespaceRef">
+    <xs:sequence>
+      <xs:element name="type-ref" type="TypeRef"
+                  minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="name"     type="xs:string" use="required"/>
+    <xs:attribute name="assembly" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="XnaIndex">
+    <xs:sequence>
+      <xs:element name="namespace" type="NamespaceRef" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="version" type="xs:string" default="4.0"/>
+  </xs:complexType>
+
+</xs:schema>
