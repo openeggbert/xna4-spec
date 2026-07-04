@@ -174,7 +174,7 @@ public struct BoundingBox : IEquatable<BoundingBox>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateFromSphere" returnType="void" isStatic="true">
+    <method name="CreateFromSphere" returnType="BoundingBox" isStatic="true">
       <summary><![CDATA[Creates the smallest BoundingBox that will contain the specified BoundingSphere.]]></summary>
       <overloads>
         <overload signature="CreateFromSphere(BoundingSphere, BoundingBox)">
@@ -210,7 +210,7 @@ public struct BoundingBox : IEquatable<BoundingBox>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateMerged" returnType="void" isStatic="true">
+    <method name="CreateMerged" returnType="BoundingBox" isStatic="true">
       <summary><![CDATA[Creates the smallest BoundingBox that contains the two specified BoundingBox instances.]]></summary>
       <overloads>
         <overload signature="CreateMerged(BoundingBox, BoundingBox, BoundingBox)">

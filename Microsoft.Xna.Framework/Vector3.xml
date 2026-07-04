@@ -177,7 +177,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Add" returnType="void" isStatic="true">
+    <method name="Add" returnType="Vector3" isStatic="true">
       <summary><![CDATA[Adds two vectors.]]></summary>
       <overloads>
         <overload signature="Add(Vector3, Vector3, Vector3)">
@@ -321,7 +321,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Clamp" returnType="void" isStatic="true">
+    <method name="Clamp" returnType="Vector3" isStatic="true">
       <summary><![CDATA[Restricts a value to be within a specified range.]]></summary>
       <overloads>
         <overload signature="Clamp(Vector3, Vector3, Vector3, Vector3)">
@@ -365,7 +365,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Cross" returnType="void" isStatic="true">
+    <method name="Cross" returnType="Vector3" isStatic="true">
       <summary><![CDATA[Calculates the cross product of two vectors.]]></summary>
       <overloads>
         <overload signature="Cross(Vector3, Vector3, Vector3)">
@@ -563,7 +563,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Dot" returnType="void" isStatic="true">
+    <method name="Dot" returnType="float" isStatic="true">
       <summary><![CDATA[Calculates the dot product of two vectors.]]></summary>
       <overloads>
         <overload signature="Dot(Vector3, Vector3, Single)">
@@ -735,7 +735,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Lerp" returnType="void" isStatic="true">
+    <method name="Lerp" returnType="Vector3" isStatic="true">
       <summary><![CDATA[Performs a linear interpolation between two vectors.]]></summary>
       <overloads>
         <overload signature="Lerp(Vector3, Vector3, Single, Vector3)">
@@ -1104,7 +1104,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Subtract" returnType="void" isStatic="true">
+    <method name="Subtract" returnType="Vector3" isStatic="true">
       <summary><![CDATA[Subtracts a vector from a vector.]]></summary>
       <overloads>
         <overload signature="Subtract(Vector3, Vector3, Vector3)">
@@ -1318,7 +1318,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="TransformNormal" returnType="void" isStatic="true">
+    <method name="TransformNormal" returnType="Vector3" isStatic="true">
       <summary><![CDATA[Transforms a vector normal by a matrix.]]></summary>
       <overloads>
         <overload signature="TransformNormal(Vector3, Matrix, Vector3)">

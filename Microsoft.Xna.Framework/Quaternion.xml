@@ -66,7 +66,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Add" returnType="void" isStatic="true">
+    <method name="Add" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Adds two Quaternions.]]></summary>
       <overloads>
         <overload signature="Add(Quaternion, Quaternion, Quaternion)">
@@ -106,7 +106,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Concatenate" returnType="void" isStatic="true">
+    <method name="Concatenate" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Concatenates two Quaternions; the result represents the value1 rotation followed by the value2 rotation.]]></summary>
       <overloads>
         <overload signature="Concatenate(Quaternion, Quaternion, Quaternion)">
@@ -146,7 +146,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Conjugate" returnType="void">
+    <method name="Conjugate" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Transforms this Quaternion into its conjugate.]]></summary>
       <overloads>
         <overload signature="Conjugate()">
@@ -267,7 +267,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateFromYawPitchRoll" returnType="void" isStatic="true">
+    <method name="CreateFromYawPitchRoll" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Creates a new Quaternion from specified yaw, pitch, and roll angles.]]></summary>
       <overloads>
         <overload signature="CreateFromYawPitchRoll(Single, Single, Single, Quaternion)">
@@ -311,7 +311,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Divide" returnType="void" isStatic="true">
+    <method name="Divide" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Divides a Quaternion by another Quaternion.]]></summary>
       <overloads>
         <overload signature="Divide(Quaternion, Quaternion, Quaternion)">
@@ -351,7 +351,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Dot" returnType="void" isStatic="true">
+    <method name="Dot" returnType="float" isStatic="true">
       <summary><![CDATA[Calculates the dot product of two Quaternions.]]></summary>
       <overloads>
         <overload signature="Dot(Quaternion, Quaternion, Single)">
@@ -441,7 +441,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Inverse" returnType="void" isStatic="true">
+    <method name="Inverse" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Returns the inverse of a Quaternion.]]></summary>
       <overloads>
         <overload signature="Inverse(Quaternion, Quaternion)">
@@ -551,7 +551,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Multiply" returnType="void" isStatic="true">
+    <method name="Multiply" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Multiplies a quaternion by a scalar value.]]></summary>
       <overloads>
         <overload signature="Multiply(Quaternion, Single, Quaternion)">
@@ -662,7 +662,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Normalize" returnType="void" isStatic="true">
+    <method name="Normalize" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Divides each component of the quaternion by the length of the quaternion.]]></summary>
       <overloads>
         <overload signature="Normalize(Quaternion, Quaternion)">

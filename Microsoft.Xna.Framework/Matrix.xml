@@ -234,7 +234,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateConstrainedBillboard" returnType="void" isStatic="true">
+    <method name="CreateConstrainedBillboard" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a cylindrical billboard that rotates around a specified axis.]]></summary>
       <overloads>
         <overload signature="CreateConstrainedBillboard(Vector3, Vector3, Vector3, Nullable&lt;Vector3&gt;, Nullable&lt;Vector3&gt;, Matrix)">
@@ -288,7 +288,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateFromAxisAngle" returnType="void" isStatic="true">
+    <method name="CreateFromAxisAngle" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a new Matrix that rotates around an arbitrary vector.]]></summary>
       <overloads>
         <overload signature="CreateFromAxisAngle(Vector3, Single, Matrix)">
@@ -504,7 +504,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateOrthographicOffCenter" returnType="void" isStatic="true">
+    <method name="CreateOrthographicOffCenter" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Builds a customized, orthogonal projection matrix.]]></summary>
       <overloads>
         <overload signature="CreateOrthographicOffCenter(Single, Single, Single, Single, Single, Single, Matrix)">
@@ -562,7 +562,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreatePerspective" returnType="void" isStatic="true">
+    <method name="CreatePerspective" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Builds a perspective projection matrix.]]></summary>
       <overloads>
         <overload signature="CreatePerspective(Single, Single, Single, Single, Matrix)">
@@ -674,7 +674,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreatePerspectiveOffCenter" returnType="void" isStatic="true">
+    <method name="CreatePerspectiveOffCenter" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Builds a customized, perspective projection matrix.]]></summary>
       <overloads>
         <overload signature="CreatePerspectiveOffCenter(Single, Single, Single, Single, Single, Single, Matrix)">
@@ -846,7 +846,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateRotationZ" returnType="void" isStatic="true">
+    <method name="CreateRotationZ" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Returns an z-axis rotation matrix.]]></summary>
       <overloads>
         <overload signature="CreateRotationZ(Single, Matrix)">
@@ -1103,7 +1103,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateWorld" returnType="void" isStatic="true">
+    <method name="CreateWorld" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a world matrix with the specified parameters.]]></summary>
       <overloads>
         <overload signature="CreateWorld(Vector3, Vector3, Vector3, Matrix)">
@@ -1351,7 +1351,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Lerp" returnType="void" isStatic="true">
+    <method name="Lerp" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Linearly interpolates between the corresponding values of two matrices.]]></summary>
       <overloads>
         <overload signature="Lerp(Matrix, Matrix, Single, Matrix)">
@@ -1395,7 +1395,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Multiply" returnType="void" isStatic="true">
+    <method name="Multiply" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Multiplies a matrix by another matrix.]]></summary>
       <overloads>
         <overload signature="Multiply(Matrix, Matrix, Matrix)">
@@ -1470,7 +1470,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Negate" returnType="void" isStatic="true">
+    <method name="Negate" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Negates individual elements of a matrix.]]></summary>
       <overloads>
         <overload signature="Negate(Matrix, Matrix)">

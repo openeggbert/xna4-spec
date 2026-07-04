@@ -124,7 +124,7 @@ public struct Plane : IEquatable<Plane>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="DotCoordinate" returnType="void">
+    <method name="DotCoordinate" returnType="float">
       <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane plus the distance (D) value of the Plane.]]></summary>
       <overloads>
         <overload signature="DotCoordinate(Vector3, Single)">
@@ -160,7 +160,7 @@ public struct Plane : IEquatable<Plane>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="DotNormal" returnType="void">
+    <method name="DotNormal" returnType="float">
       <summary><![CDATA[Returns the dot product of a specified Vector3 and the Normal vector of this Plane.]]></summary>
       <overloads>
         <overload signature="DotNormal(Vector3, Single)">
@@ -328,7 +328,7 @@ public struct Plane : IEquatable<Plane>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Normalize" returnType="void">
+    <method name="Normalize" returnType="Plane" isStatic="true">
       <summary><![CDATA[Changes the coefficients of the Normal vector of this Plane to make it of unit length.]]></summary>
       <overloads>
         <overload signature="Normalize()">

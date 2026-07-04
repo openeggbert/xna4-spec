@@ -233,7 +233,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Clamp" returnType="void" isStatic="true">
+    <method name="Clamp" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Restricts a value to be within a specified range.]]></summary>
       <overloads>
         <overload signature="Clamp(Vector2, Vector2, Vector2, Vector2)">
@@ -277,7 +277,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Distance" returnType="void" isStatic="true">
+    <method name="Distance" returnType="float" isStatic="true">
       <summary><![CDATA[Calculates the distance between two vectors.]]></summary>
       <overloads>
         <overload signature="Distance(Vector2, Vector2, Single)">
@@ -317,7 +317,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="DistanceSquared" returnType="void" isStatic="true">
+    <method name="DistanceSquared" returnType="float" isStatic="true">
       <summary><![CDATA[Calculates the distance between two vectors squared.]]></summary>
       <overloads>
         <overload signature="DistanceSquared(Vector2, Vector2, Single)">
@@ -524,7 +524,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Hermite" returnType="void" isStatic="true">
+    <method name="Hermite" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Performs a Hermite spline interpolation.]]></summary>
       <overloads>
         <overload signature="Hermite(Vector2, Vector2, Vector2, Vector2, Single, Vector2)">
@@ -652,7 +652,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Max" returnType="void" isStatic="true">
+    <method name="Max" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Returns a vector that contains the highest value from each matching pair of components.]]></summary>
       <overloads>
         <overload signature="Max(Vector2, Vector2, Vector2)">
@@ -692,7 +692,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Min" returnType="void" isStatic="true">
+    <method name="Min" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Returns a vector that contains the lowest value from each matching pair of components.]]></summary>
       <overloads>
         <overload signature="Min(Vector2, Vector2, Vector2)">
@@ -808,7 +808,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Negate" returnType="void" isStatic="true">
+    <method name="Negate" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Returns a vector pointing in the opposite direction.]]></summary>
       <overloads>
         <overload signature="Negate(Vector2, Vector2)">
@@ -844,7 +844,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Normalize" returnType="void">
+    <method name="Normalize" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Turns the current vector into a unit vector.]]></summary>
       <overloads>
         <overload signature="Normalize()">
@@ -889,7 +889,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Reflect" returnType="void" isStatic="true">
+    <method name="Reflect" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Determines the reflect vector of the given vector and normal.]]></summary>
       <overloads>
         <overload signature="Reflect(Vector2, Vector2, Vector2)">
@@ -925,7 +925,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="SmoothStep" returnType="void" isStatic="true">
+    <method name="SmoothStep" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Interpolates between two values using a cubic equation.]]></summary>
       <overloads>
         <overload signature="SmoothStep(Vector2, Vector2, Single, Vector2)">
@@ -1024,7 +1024,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Transform" returnType="void" isStatic="true">
+    <method name="Transform" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Transforms an array of Vector2s by a specified Matrix.]]></summary>
       <overloads>
         <overload signature="Transform(Vector2[], Matrix, Vector2 )">
@@ -1183,7 +1183,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="TransformNormal" returnType="void" isStatic="true">
+    <method name="TransformNormal" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Transforms an array of Vector2 vector normals by a specified Matrix.]]></summary>
       <overloads>
         <overload signature="TransformNormal(Vector2[], Matrix, Vector2 )">

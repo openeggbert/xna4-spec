@@ -320,7 +320,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Intersects" returnType="void">
+    <method name="Intersects" returnType="bool">
       <summary><![CDATA[Determines whether a specified Rectangle intersects with this Rectangle.]]></summary>
       <overloads>
         <overload signature="Intersects(Rectangle, Boolean)">
@@ -406,7 +406,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Union" returnType="void" isStatic="true">
+    <method name="Union" returnType="Rectangle" isStatic="true">
       <summary><![CDATA[Creates a new Rectangle that exactly contains two other rectangles.]]></summary>
       <overloads>
         <overload signature="Union(Rectangle, Rectangle, Rectangle)">

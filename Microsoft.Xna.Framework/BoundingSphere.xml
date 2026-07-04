@@ -231,7 +231,7 @@ public struct BoundingSphere : IEquatable<BoundingSphere>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateMerged" returnType="void" isStatic="true">
+    <method name="CreateMerged" returnType="BoundingSphere" isStatic="true">
       <summary><![CDATA[Creates a BoundingSphere that contains the two specified BoundingSphere instances.]]></summary>
       <overloads>
         <overload signature="CreateMerged(BoundingSphere, BoundingSphere, BoundingSphere)">
@@ -321,7 +321,7 @@ public struct BoundingSphere : IEquatable<BoundingSphere>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Intersects" returnType="void">
+    <method name="Intersects" returnType="PlaneIntersectionType">
       <summary><![CDATA[Checks whether the current BoundingSphere intersects a Ray.]]></summary>
       <overloads>
         <overload signature="Intersects(Ray, Nullable&lt;Single&gt;)">
@@ -494,7 +494,7 @@ public struct BoundingSphere : IEquatable<BoundingSphere>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Transform" returnType="void">
+    <method name="Transform" returnType="BoundingSphere">
       <summary><![CDATA[Translates and scales the BoundingSphere using a given Matrix.]]></summary>
       <overloads>
         <overload signature="Transform(Matrix, BoundingSphere)">

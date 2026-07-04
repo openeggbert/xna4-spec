@@ -438,13 +438,22 @@ def gen_xml(type_name, kind, ns, main_c, members):
             lc = mlist.get(mn, ovs[0][1] if ovs else None)
             if not lc: continue
             ms = get_summary(lc)
-            # Prefer the first disambiguated overload's syntax, but a method with
-            # only one page total (no "(...)" signature suffix, e.g. a single-
-            # overload generic method) has nothing in `ovs` — fall back to `lc`
-            # so returnType/isStatic aren't left at their 'void'/false defaults.
-            fs = get_syntax(ovs[0][1]) if ovs else get_syntax(lc)
-            rt = extract_method_return(fs, mn)
-            is_s = 'public static' in fs or 'public static' in get_syntax(lc)
+            # A method with only one page total (no "(...)" signature suffix,
+            # e.g. a single-overload generic method) has nothing in `ovs` —
+            # fall back to `lc` so returnType/isStatic aren't left at their
+            # 'void'/false defaults. Many XNA math methods overload a
+            # ref/out-parameter form (returns void) alongside a direct-return
+            # convenience form (e.g. Vector2.Clamp) — scan every overload and
+            # prefer whichever one actually returns something over 'void',
+            # rather than whatever happened to be first.
+            fs_list = [get_syntax(c) for _, c in ovs] if ovs else [get_syntax(lc)]
+            rt = 'void'
+            for fs in fs_list:
+                candidate = extract_method_return(fs, mn)
+                if candidate != 'void':
+                    rt = candidate
+                    break
+            is_s = any('public static' in fs for fs in fs_list) or 'public static' in get_syntax(lc)
             a3 = f'name="{e(mn)}" returnType="{e(rt)}"'
             if is_s: a3 += ' isStatic="true"'
             out.append(f'    <method {a3}>')
