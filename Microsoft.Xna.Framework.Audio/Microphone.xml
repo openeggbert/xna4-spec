@@ -16,9 +16,9 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="All" type="ReadOnlyCollection&amp;lt;Microphone&amp;gt;" access="get" isStatic="true">
+    <property name="All" type="ReadOnlyCollection&lt;Microphone&gt;" access="get" isStatic="true">
       <summary><![CDATA[Returns the collection of all currently-available microphones.]]></summary>
-      <syntax><![CDATA[public static ReadOnlyCollection&lt;Microphone&gt; All { get; }]]></syntax>
+      <syntax><![CDATA[public static ReadOnlyCollection<Microphone> All { get; }]]></syntax>
       <remarks><![CDATA[Windows Phone Specific Information This property will always return the default microphone on Windows Phone, and it will only return one device.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -225,9 +225,9 @@
     </field>
   </fields>
   <events>
-    <event name="BufferReady" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="BufferReady" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Event that occurs when the audio capture buffer is ready to processed.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; BufferReady]]></syntax>
+      <syntax><![CDATA[public event EventHandler<EventArgs> BufferReady]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

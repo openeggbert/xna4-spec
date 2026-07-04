@@ -1296,11 +1296,11 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Present(Nullable&amp;lt;Rectangle&amp;gt;, Nullable&amp;lt;Rectangle&amp;gt;, IntPtr)">
+        <overload signature="Present(Nullable&lt;Rectangle&gt;, Nullable&lt;Rectangle&gt;, IntPtr)">
           <summary><![CDATA[Specifies the window target for a presentation and presents the display with the contents of the next buffer in the sequence of back buffers owned by the GraphicsDevice.]]></summary>
           <syntax><![CDATA[public void Present (
-         Nullable&lt;Rectangle&gt; sourceRectangle,
-         Nullable&lt;Rectangle&gt; destinationRectangle,
+         Nullable<Rectangle> sourceRectangle,
+         Nullable<Rectangle> destinationRectangle,
          IntPtr overrideWindowHandle
 )]]></syntax>
           <parameters>
@@ -2247,18 +2247,18 @@
         <platform>Windows Vista</platform>
       </platforms>
     </event>
-    <event name="ResourceCreated" type="EventHandler&amp;lt;ResourceCreatedEventArgs&amp;gt;">
+    <event name="ResourceCreated" type="EventHandler&lt;ResourceCreatedEventArgs&gt;">
       <summary><![CDATA[Occurs when a resource is created.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;ResourceCreatedEventArgs&gt; ResourceCreated]]></syntax>
+      <syntax><![CDATA[public event EventHandler<ResourceCreatedEventArgs> ResourceCreated]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
       </platforms>
     </event>
-    <event name="ResourceDestroyed" type="EventHandler&amp;lt;ResourceDestroyedEventArgs&amp;gt;">
+    <event name="ResourceDestroyed" type="EventHandler&lt;ResourceDestroyedEventArgs&gt;">
       <summary><![CDATA[Occurs when a resource is destroyed.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;ResourceDestroyedEventArgs&gt; ResourceDestroyed]]></syntax>
+      <syntax><![CDATA[public event EventHandler<ResourceDestroyedEventArgs> ResourceDestroyed]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -74,9 +74,9 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="RendererDetails" type="ReadOnlyCollection&amp;lt;RendererDetail&amp;gt;" access="get">
+    <property name="RendererDetails" type="ReadOnlyCollection&lt;RendererDetail&gt;" access="get">
       <summary><![CDATA[Gets a collection of audio renderers.]]></summary>
-      <syntax><![CDATA[public ReadOnlyCollection&lt;RendererDetail&gt; RendererDetails { get; }]]></syntax>
+      <syntax><![CDATA[public ReadOnlyCollection<RendererDetail> RendererDetails { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

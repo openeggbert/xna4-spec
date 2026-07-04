@@ -4,9 +4,9 @@
           name="GameComponentCollection" kind="class"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          baseClass="Collection&amp;lt;IGameComponent&amp;gt;">
+          baseClass="Collection&lt;IGameComponent&gt;">
   <summary><![CDATA[A collection of game components.]]></summary>
-  <syntax><![CDATA[public sealed class GameComponentCollection : Collection&lt;IGameComponent&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class GameComponentCollection : Collection<IGameComponent>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>
@@ -31,18 +31,18 @@
   <fields>
   </fields>
   <events>
-    <event name="ComponentAdded" type="EventHandler&amp;lt;GameComponentCollectionEventArgs&amp;gt;">
+    <event name="ComponentAdded" type="EventHandler&lt;GameComponentCollectionEventArgs&gt;">
       <summary><![CDATA[Raised when a component is added to the GameComponentCollection.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;GameComponentCollectionEventArgs&gt; ComponentAdded]]></syntax>
+      <syntax><![CDATA[public event EventHandler<GameComponentCollectionEventArgs> ComponentAdded]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
       </platforms>
     </event>
-    <event name="ComponentRemoved" type="EventHandler&amp;lt;GameComponentCollectionEventArgs&amp;gt;">
+    <event name="ComponentRemoved" type="EventHandler&lt;GameComponentCollectionEventArgs&gt;">
       <summary><![CDATA[Raised when a component is removed from the GameComponentCollection.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;GameComponentCollectionEventArgs&gt; ComponentRemoved]]></syntax>
+      <syntax><![CDATA[public event EventHandler<GameComponentCollectionEventArgs> ComponentRemoved]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

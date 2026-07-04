@@ -32,9 +32,9 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="BoneTransforms" type="ReadOnlyCollection&amp;lt;Matrix&amp;gt;" access="get">
+    <property name="BoneTransforms" type="ReadOnlyCollection&lt;Matrix&gt;" access="get">
       <summary><![CDATA[Gets the current position of the bones at the time specified by CurrentPosition. The positions are in local bone space relative to their parent bones.]]></summary>
-      <syntax><![CDATA[public ReadOnlyCollection&lt;Matrix&gt; BoneTransforms { get; }]]></syntax>
+      <syntax><![CDATA[public ReadOnlyCollection<Matrix> BoneTransforms { get; }]]></syntax>
       <remarks><![CDATA[You can pass this matrix list to AvatarRenderer.Draw using the bones parameter. This allows the developer to modify the position of one or more avatar bones before rendering the model.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

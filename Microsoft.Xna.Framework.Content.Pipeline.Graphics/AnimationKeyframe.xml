@@ -4,9 +4,9 @@
           name="AnimationKeyframe" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          interfaces="IComparable&amp;lt;AnimationKeyframe&amp;gt;">
+          interfaces="IComparable&lt;AnimationKeyframe&gt;">
   <summary><![CDATA[Provides methods and properties for managing a keyframe. A keyframe describes the position of an animation channel at a single point in time.]]></summary>
-  <syntax><![CDATA[public sealed class AnimationKeyframe : IComparable&lt;AnimationKeyframe&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class AnimationKeyframe : IComparable<AnimationKeyframe>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

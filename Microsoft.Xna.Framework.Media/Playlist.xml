@@ -4,9 +4,9 @@
           name="Playlist" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&amp;lt;Playlist&amp;gt;">
+          interfaces="IEquatable&lt;Playlist&gt;">
   <summary><![CDATA[Provides access to a playlist in the media library.]]></summary>
-  <syntax><![CDATA[public sealed class Playlist : IEquatable&lt;Playlist&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class Playlist : IEquatable<Playlist>]]></syntax>
   <remarks><![CDATA[The Playlist class provides information about a playlist, including the playlist's Name , Duration , and Songs . Obtain Playlist objects through the PlaylistCollection.Item indexer.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>

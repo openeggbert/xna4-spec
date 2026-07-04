@@ -106,9 +106,9 @@
         <platform>Zune</platform>
       </platforms>
     </property>
-    <property name="PrimaryColor" type="Nullable&amp;lt;Color&amp;gt;" access="get">
+    <property name="PrimaryColor" type="Nullable&lt;Color&gt;" access="get">
       <summary><![CDATA[Gets the preferred color for the player character.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;Color&gt; PrimaryColor { get; }]]></syntax>
+      <syntax><![CDATA[public Nullable<Color> PrimaryColor { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -126,9 +126,9 @@
         <platform>Zune</platform>
       </platforms>
     </property>
-    <property name="SecondaryColor" type="Nullable&amp;lt;Color&amp;gt;" access="get">
+    <property name="SecondaryColor" type="Nullable&lt;Color&gt;" access="get">
       <summary><![CDATA[Gets a secondary color selection for the player character.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;Color&gt; SecondaryColor { get; }]]></syntax>
+      <syntax><![CDATA[public Nullable<Color> SecondaryColor { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

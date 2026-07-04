@@ -4,9 +4,9 @@
           name="Normalized101010" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
           assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector&amp;lt;UInt32&amp;gt;, IEquatable&amp;lt;Normalized101010&amp;gt;">
+          interfaces="IPackedVector&lt;UInt32&gt;, IEquatable&lt;Normalized101010&gt;">
   <summary><![CDATA[Packed vector type containing signed normalized values, ranging from −1 to 1, using 10 bits each for x, y, and z, and 2 bits for w.]]></summary>
-  <syntax><![CDATA[public struct Normalized101010 : IPackedVector&lt;UInt32&gt;, IEquatable&lt;Normalized101010&gt;]]></syntax>
+  <syntax><![CDATA[public struct Normalized101010 : IPackedVector<UInt32>, IEquatable<Normalized101010>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

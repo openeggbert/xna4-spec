@@ -4,9 +4,9 @@
           name="VertexChannelCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          interfaces="IList&amp;lt;VertexChannel&amp;gt;, ICollection&amp;lt;VertexChannel&amp;gt;, IEnumerable&amp;lt;VertexChannel&amp;gt;, IEnumerable">
+          interfaces="IList&lt;VertexChannel&gt;, ICollection&lt;VertexChannel&gt;, IEnumerable&lt;VertexChannel&gt;, IEnumerable">
   <summary><![CDATA[Provides methods and properties for managing a list of vertex data channels.]]></summary>
-  <syntax><![CDATA[public sealed class VertexChannelCollection : IList&lt;VertexChannel&gt;, ICollection&lt;VertexChannel&gt;, IEnumerable&lt;VertexChannel&gt;, IEnumerable]]></syntax>
+  <syntax><![CDATA[public sealed class VertexChannelCollection : IList<VertexChannel>, ICollection<VertexChannel>, IEnumerable<VertexChannel>, IEnumerable]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>
@@ -108,7 +108,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Gets an enumerator that iterates through the vertex channels of a collection.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;VertexChannel&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<VertexChannel> GetEnumerator ()]]></syntax>
           <returns><![CDATA[Enumerator for the collection.]]></returns>
           <platforms>
             <platform>Windows XP SP2</platform>

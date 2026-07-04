@@ -4,11 +4,11 @@
           name="BoundingBox" kind="struct"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IEquatable&amp;lt;BoundingBox&amp;gt;">
+          interfaces="IEquatable&lt;BoundingBox&gt;">
   <summary><![CDATA[Defines an axis-aligned box-shaped 3D volume.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.BoundingBoxConverter)")]
 [SerializableAttribute]
-public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
+public struct BoundingBox : IEquatable<BoundingBox>]]></syntax>
   <remarks><![CDATA[The BoundingBox Structure represents the space occupied by a box. The bounding box class is axis aligned. Each face of the bounding box is perpendicular to the x-axis, the y-axis, or the z-axis. There are several benefits of using the bounding box for collision detection. The bounding box class fits rectangular shapes aligned with the axis very well. Compared to the bounding sphere class, the bounding box class provides a much tighter fit for non-rotated rectangular objects. Because the bounding box class is axis aligned, you can make certain assumptions that result in collision checks between bounding boxes being quicker than a bounding box that can be rotated. There are a few drawbacks of using the bounding box for collision detection. Rotating a bounding box causes it to no longer be axis aligned. Because of this, if you rotate a model being bounded, you will need to recreate the bounding box. Doing so can be slow, since all the points in an object are iterated through to get the bounding box. If the model has not changed orientation, you can translate the bounding box instead of recreating it. If the model being bounded is not aligned to the axis, the bounding box will have some empty space. The amount of empty space will be greatest when the object is rotated 45 degrees from an axis. Empty space in the bounding box can result in false positives when checking for collision.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>
@@ -156,7 +156,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
         <overload signature="CreateFromPoints()">
           <summary><![CDATA[Creates the smallest BoundingBox that will contain a group of points.]]></summary>
           <syntax><![CDATA[public static BoundingBox CreateFromPoints (
-         IEnumerable&lt;Vector3&gt; points
+         IEnumerable<Vector3> points
 )]]></syntax>
           <parameters>
             <parameter name="points" type="IEnumerable&lt;Vector3&gt;"><![CDATA[A list of points the BoundingBox should contain.]]></parameter>
@@ -363,7 +363,7 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
         </overload>
         <overload signature="Intersects(Ray)">
           <summary><![CDATA[Checks whether the current BoundingBox intersects a Ray.]]></summary>
-          <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
+          <syntax><![CDATA[public Nullable<float> Intersects (
          Ray ray
 )]]></syntax>
           <parameters>
@@ -438,11 +438,11 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Intersects(Ray, Nullable&amp;lt;Single&amp;gt;)">
+        <overload signature="Intersects(Ray, Nullable&lt;Single&gt;)">
           <summary><![CDATA[Checks whether the current BoundingBox intersects a Ray.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref Ray ray,
-         out Nullable&lt;float&gt; result
+         out Nullable<float> result
 )]]></syntax>
           <parameters>
             <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
@@ -454,11 +454,11 @@ public struct BoundingBox : IEquatable&lt;BoundingBox&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Intersects(Ray, Nullable&amp;lt;Single&amp;gt;)">
+        <overload signature="Intersects(Ray, Nullable&lt;Single&gt;)">
           <summary><![CDATA[Checks whether the current BoundingBox intersects a Ray.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref Ray ray,
-         out Nullable&lt;float&gt; result
+         out Nullable<float> result
 )]]></syntax>
           <parameters>
             <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>

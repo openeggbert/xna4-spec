@@ -4,11 +4,11 @@
           name="CurveKey" kind="class"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IEquatable&amp;lt;CurveKey&amp;gt;, IComparable&amp;lt;CurveKey&amp;gt;">
+          interfaces="IEquatable&lt;CurveKey&gt;, IComparable&lt;CurveKey&gt;">
   <summary><![CDATA[Represents a point in a multi-point curve.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute(System.ComponentModel.ExpandableObjectConverter, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)]
 [SerializableAttribute]
-public class CurveKey : IEquatable&lt;CurveKey&gt;, IComparable&lt;CurveKey&gt;]]></syntax>
+public class CurveKey : IEquatable<CurveKey>, IComparable<CurveKey>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

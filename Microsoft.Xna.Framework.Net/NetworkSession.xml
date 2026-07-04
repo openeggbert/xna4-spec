@@ -17,9 +17,9 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="AllGamers" type="GamerCollection&amp;lt;NetworkGamer&amp;gt;" access="get">
+    <property name="AllGamers" type="GamerCollection&lt;NetworkGamer&gt;" access="get">
       <summary><![CDATA[Gets the collection of gamers currently in the session. This is the union of everything in LocalGamers and RemoteGamers.]]></summary>
-      <syntax><![CDATA[public GamerCollection&lt;NetworkGamer&gt; AllGamers { get; }]]></syntax>
+      <syntax><![CDATA[public GamerCollection<NetworkGamer> AllGamers { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -111,9 +111,9 @@
         <platform>Zune</platform>
       </platforms>
     </property>
-    <property name="LocalGamers" type="GamerCollection&amp;lt;LocalNetworkGamer&amp;gt;" access="get">
+    <property name="LocalGamers" type="GamerCollection&lt;LocalNetworkGamer&gt;" access="get">
       <summary><![CDATA[Get the collection of local gamers for a multiplayer session.]]></summary>
-      <syntax><![CDATA[public GamerCollection&lt;LocalNetworkGamer&gt; LocalGamers { get; }]]></syntax>
+      <syntax><![CDATA[public GamerCollection<LocalNetworkGamer> LocalGamers { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -132,9 +132,9 @@
         <platform>Zune</platform>
       </platforms>
     </property>
-    <property name="PreviousGamers" type="GamerCollection&amp;lt;NetworkGamer&amp;gt;" access="get">
+    <property name="PreviousGamers" type="GamerCollection&lt;NetworkGamer&gt;" access="get">
       <summary><![CDATA[A collection of previous gamers in the network session.]]></summary>
-      <syntax><![CDATA[public GamerCollection&lt;NetworkGamer&gt; PreviousGamers { get; }]]></syntax>
+      <syntax><![CDATA[public GamerCollection<NetworkGamer> PreviousGamers { get; }]]></syntax>
       <remarks><![CDATA[The number of gamers in the PreviousGamers collection will be equal to or less than the value of MaxPreviousGamers . You can use this collection to include previous gamers in Guide calls that take a Gamer parameter.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -153,9 +153,9 @@
         <platform>Zune</platform>
       </platforms>
     </property>
-    <property name="RemoteGamers" type="GamerCollection&amp;lt;NetworkGamer&amp;gt;" access="get">
+    <property name="RemoteGamers" type="GamerCollection&lt;NetworkGamer&gt;" access="get">
       <summary><![CDATA[Gets the collection of remote gamers for a multiplayer session.]]></summary>
-      <syntax><![CDATA[public GamerCollection&lt;NetworkGamer&gt; RemoteGamers { get; }]]></syntax>
+      <syntax><![CDATA[public GamerCollection<NetworkGamer> RemoteGamers { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -299,7 +299,7 @@
           <summary><![CDATA[Starts hosting a new multiplayer session. The creation operation is performed asynchronously.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginCreate (
          NetworkSessionType sessionType,
-         IEnumerable&lt;SignedInGamer&gt; localGamers,
+         IEnumerable<SignedInGamer> localGamers,
          int maxGamers,
          int privateGamerSlots,
          NetworkSessionProperties sessionProperties,
@@ -333,7 +333,7 @@
           <summary><![CDATA[Starts a matchmaking query to search for available multiplayer sessions, specifying a collection of local gamers to add to the network session. Call EndFind to access the results of this asynchronous call.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginFind (
          NetworkSessionType sessionType,
-         IEnumerable&lt;SignedInGamer&gt; localGamers,
+         IEnumerable<SignedInGamer> localGamers,
          NetworkSessionProperties searchProperties,
          AsyncCallback callback,
          Object asyncState
@@ -431,7 +431,7 @@
         <overload signature="BeginJoinInvited(Generic IEnumerable, AsyncCallback, Object)">
           <summary><![CDATA[Starts joining an existing network session in response to an InviteAccepted notification event with the specified collection of local gamers. Call EndJoinInvited to access the asynchronous method results.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginJoinInvited (
-         IEnumerable&lt;SignedInGamer&gt; localGamers,
+         IEnumerable<SignedInGamer> localGamers,
          AsyncCallback callback,
          Object asyncState
 )]]></syntax>
@@ -479,7 +479,7 @@
           <summary><![CDATA[Starts hosting a new multiplayer session. This method blocks until the operation has completed.]]></summary>
           <syntax><![CDATA[public static NetworkSession Create (
          NetworkSessionType sessionType,
-         IEnumerable&lt;SignedInGamer&gt; localGamers,
+         IEnumerable<SignedInGamer> localGamers,
          int maxGamers,
          int privateGamerSlots,
          NetworkSessionProperties sessionProperties
@@ -685,7 +685,7 @@
           <summary><![CDATA[Issues a matchmaking query, searching for available multiplayer sessions. This method blocks until the operation has completed.]]></summary>
           <syntax><![CDATA[public static AvailableNetworkSessionCollection Find (
          NetworkSessionType sessionType,
-         IEnumerable&lt;SignedInGamer&gt; localGamers,
+         IEnumerable<SignedInGamer> localGamers,
          NetworkSessionProperties searchProperties
 )]]></syntax>
           <parameters>
@@ -752,7 +752,7 @@
         <overload signature="JoinInvited(Generic IEnumerable)">
           <summary><![CDATA[Joins an existing network session in response to an InviteAccepted notification event.]]></summary>
           <syntax><![CDATA[public static NetworkSession JoinInvited (
-         IEnumerable&lt;SignedInGamer&gt; localGamers
+         IEnumerable<SignedInGamer> localGamers
 )]]></syntax>
           <parameters>
             <parameter name="localGamers" type="IEnumerable&lt;SignedInGamer&gt;"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
@@ -854,9 +854,9 @@
     </field>
   </fields>
   <events>
-    <event name="GameEnded" type="EventHandler&amp;lt;GameEndedEventArgs&amp;gt;">
+    <event name="GameEnded" type="EventHandler&lt;GameEndedEventArgs&gt;">
       <summary><![CDATA[Occurs when the game moves from gameplay to the lobby.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;GameEndedEventArgs&gt; GameEnded]]></syntax>
+      <syntax><![CDATA[public event EventHandler<GameEndedEventArgs> GameEnded]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -864,9 +864,9 @@
         <platform>Zune</platform>
       </platforms>
     </event>
-    <event name="GameStarted" type="EventHandler&amp;lt;GameStartedEventArgs&amp;gt;">
+    <event name="GameStarted" type="EventHandler&lt;GameStartedEventArgs&gt;">
       <summary><![CDATA[Occurs when the game moves from the lobby into actual gameplay.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;GameStartedEventArgs&gt; GameStarted]]></syntax>
+      <syntax><![CDATA[public event EventHandler<GameStartedEventArgs> GameStarted]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -874,9 +874,9 @@
         <platform>Zune</platform>
       </platforms>
     </event>
-    <event name="GamerJoined" type="EventHandler&amp;lt;GamerJoinedEventArgs&amp;gt;">
+    <event name="GamerJoined" type="EventHandler&lt;GamerJoinedEventArgs&gt;">
       <summary><![CDATA[Occurs when a new player joins a multiplayer session.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;GamerJoinedEventArgs&gt; GamerJoined]]></syntax>
+      <syntax><![CDATA[public event EventHandler<GamerJoinedEventArgs> GamerJoined]]></syntax>
       <remarks><![CDATA[This event is raised for both local and remote players, including when the session is first created.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -885,9 +885,9 @@
         <platform>Zune</platform>
       </platforms>
     </event>
-    <event name="GamerLeft" type="EventHandler&amp;lt;GamerLeftEventArgs&amp;gt;">
+    <event name="GamerLeft" type="EventHandler&lt;GamerLeftEventArgs&gt;">
       <summary><![CDATA[Occurs when a player leaves the multiplayer session.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;GamerLeftEventArgs&gt; GamerLeft]]></syntax>
+      <syntax><![CDATA[public event EventHandler<GamerLeftEventArgs> GamerLeft]]></syntax>
       <remarks><![CDATA[This event is raised for both local and remote gamers.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -896,9 +896,9 @@
         <platform>Zune</platform>
       </platforms>
     </event>
-    <event name="HostChanged" type="EventHandler&amp;lt;HostChangedEventArgs&amp;gt;">
+    <event name="HostChanged" type="EventHandler&lt;HostChangedEventArgs&gt;">
       <summary><![CDATA[Occurs when the session host has changed.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;HostChangedEventArgs&gt; HostChanged]]></syntax>
+      <syntax><![CDATA[public event EventHandler<HostChangedEventArgs> HostChanged]]></syntax>
       <remarks><![CDATA[HostChanged is only raised during host migration, and not when the session is first created.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -907,9 +907,9 @@
         <platform>Zune</platform>
       </platforms>
     </event>
-    <event name="InviteAccepted" type="EventHandler&amp;lt;InviteAcceptedEventArgs&amp;gt;">
+    <event name="InviteAccepted" type="EventHandler&lt;InviteAcceptedEventArgs&gt;">
       <summary><![CDATA[Event that occurs when a user has accepted an invite to join a network session.]]></summary>
-      <syntax><![CDATA[public static event EventHandler&lt;InviteAcceptedEventArgs&gt; InviteAccepted]]></syntax>
+      <syntax><![CDATA[public static event EventHandler<InviteAcceptedEventArgs> InviteAccepted]]></syntax>
       <remarks><![CDATA[Note When someone accepts an invitation for Xbox LIVE Community Games, but the game is not installed already on his or her computer, the invited player will be taken to the game offer. The offer enables the invited player to download the game and accept the invitation to start the game. For creator games still waiting to pass peer review, the game invitation will be sent over the Xbox LIVE service to the other player. If the game is not installed the invited player will be prompted with a message indicating that he or she can get the game from the game creator. Notification of this event may be delivered at any time. However, if the game has just been launched in response to a cross-title invite, it will arrive as soon as the game starts up. In this case, the event will be raised as soon as the managed client subscribes to it. In response to this event, games should end any existing network session, and then call JoinInvited . There is no need to display any user interface before this. The system will be prompted already to confirm the user's acceptance of the invite.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -918,9 +918,9 @@
         <platform>Zune</platform>
       </platforms>
     </event>
-    <event name="SessionEnded" type="EventHandler&amp;lt;NetworkSessionEndedEventArgs&amp;gt;">
+    <event name="SessionEnded" type="EventHandler&lt;NetworkSessionEndedEventArgs&gt;">
       <summary><![CDATA[Occurs when the multiplayer session ends.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;NetworkSessionEndedEventArgs&gt; SessionEnded]]></syntax>
+      <syntax><![CDATA[public event EventHandler<NetworkSessionEndedEventArgs> SessionEnded]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -928,9 +928,9 @@
         <platform>Zune</platform>
       </platforms>
     </event>
-    <event name="WriteArbitratedLeaderboard" type="EventHandler&amp;lt;WriteLeaderboardsEventArgs&amp;gt;">
+    <event name="WriteArbitratedLeaderboard" type="EventHandler&lt;WriteLeaderboardsEventArgs&gt;">
       <summary><![CDATA[Notifies the game of its final chance to write data to arbitrated leaderboards for the specified player.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;WriteLeaderboardsEventArgs&gt; WriteArbitratedLeaderboard]]></syntax>
+      <syntax><![CDATA[public event EventHandler<WriteLeaderboardsEventArgs> WriteArbitratedLeaderboard]]></syntax>
       <remarks><![CDATA[This event occurs at the end of gameplay, immediately before the session returns to the lobby state, and when a player leaves a session during gameplay. Titles should use NetworkGamer.LeaderboardWriter to respond to this event in two ways, depending on whether or not the player is leaving during an in-progress game. If the player is leaving an in-progress game, titles should write bad statistics for the player. If the player is not leaving and the game is returning to the lobby, the game should output their final scores for the session, if they have not already done so. No other networking or gamer services methods may be called from inside this event handler.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -939,9 +939,9 @@
         <platform>Windows XP</platform>
       </platforms>
     </event>
-    <event name="WriteTrueSkill" type="EventHandler&amp;lt;WriteLeaderboardsEventArgs&amp;gt;">
+    <event name="WriteTrueSkill" type="EventHandler&lt;WriteLeaderboardsEventArgs&gt;">
       <summary><![CDATA[Notifies the game of its final chance to write TrueSkill data for the specified player.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;WriteLeaderboardsEventArgs&gt; WriteTrueSkill]]></syntax>
+      <syntax><![CDATA[public event EventHandler<WriteLeaderboardsEventArgs> WriteTrueSkill]]></syntax>
       <remarks><![CDATA[This event occurs at the end of gameplay, immediately before the session returns to the lobby state, and when a player leaves a session during gameplay. Titles should use NetworkGamer.LeaderboardWriter to respond to this event in two ways, depending on whether or not the player is leaving during an in-progress Ranked game. If the player is leaving an in-progress Ranked game, titles should write bad statistics for the player. If the player is not leaving a Ranked game and the game is returning to the lobby, the game should output their final scores for the session, if they have not already done so. No other networking or gamer services methods may be called from inside this event handler.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -950,9 +950,9 @@
         <platform>Windows XP</platform>
       </platforms>
     </event>
-    <event name="WriteUnarbitratedLeaderboard" type="EventHandler&amp;lt;WriteLeaderboardsEventArgs&amp;gt;">
+    <event name="WriteUnarbitratedLeaderboard" type="EventHandler&lt;WriteLeaderboardsEventArgs&gt;">
       <summary><![CDATA[Notifies the game of its final chance to write data to unarbitrated leaderboards for the specified player.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;WriteLeaderboardsEventArgs&gt; WriteUnarbitratedLeaderboard]]></syntax>
+      <syntax><![CDATA[public event EventHandler<WriteLeaderboardsEventArgs> WriteUnarbitratedLeaderboard]]></syntax>
       <remarks><![CDATA[This event occurs at the end of gameplay, immediately before the session returns to the lobby state, and when a player leaves a session during gameplay. Titles should use NetworkGamer.LeaderboardWriter to respond to this event by outputing their final scores for this player, if they have not already done so. No other networking or gamer services methods may be called from inside this event handler.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

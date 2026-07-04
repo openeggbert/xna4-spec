@@ -41,9 +41,9 @@
         <platform>Windows Phone 7</platform>
       </platforms>
     </property>
-    <property name="Entries" type="ReadOnlyCollection&amp;lt;LeaderboardEntry&amp;gt;" access="get">
+    <property name="Entries" type="ReadOnlyCollection&lt;LeaderboardEntry&gt;" access="get">
       <summary><![CDATA[Gets the collection of leaderboard entries for the leaderboard.]]></summary>
-      <syntax><![CDATA[public ReadOnlyCollection&lt;LeaderboardEntry&gt; Entries { get; }]]></syntax>
+      <syntax><![CDATA[public ReadOnlyCollection<LeaderboardEntry> Entries { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -156,7 +156,7 @@
           <summary><![CDATA[Begins an asynchronous read of leaderboard data, taking a leaderboard identity, a collection of gamers, a pivot gamer, and a page size.]]></summary>
           <syntax><![CDATA[public static IAsyncResult BeginRead (
          LeaderboardIdentity leaderboardId,
-         IEnumerable&lt;Gamer&gt; gamers,
+         IEnumerable<Gamer> gamers,
          Gamer pivotGamer,
          int pageSize,
          AsyncCallback callback,
@@ -403,7 +403,7 @@
           <summary><![CDATA[Reads a leaderboard synchronously, specifying a leaderboard identity, collection of gamers, pivot gamer, and page size.]]></summary>
           <syntax><![CDATA[public static LeaderboardReader Read (
          LeaderboardIdentity leaderboardId,
-         IEnumerable&lt;Gamer&gt; gamers,
+         IEnumerable<Gamer> gamers,
          Gamer pivotGamer,
          int pageSize
 )]]></syntax>

@@ -85,7 +85,7 @@
       <overloads>
         <overload signature="FlattenSkeleton()">
           <summary><![CDATA[Gets a flattened list of all bones contained by the specified skeleton.]]></summary>
-          <syntax><![CDATA[public static IList&lt;BoneContent&gt; FlattenSkeleton (
+          <syntax><![CDATA[public static IList<BoneContent> FlattenSkeleton (
          BoneContent skeleton
 )]]></syntax>
           <parameters>

@@ -4,9 +4,9 @@
           name="SignedInGamerCollection" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
-          baseClass="GamerCollection&amp;lt;SignedInGamer&amp;gt;">
+          baseClass="GamerCollection&lt;SignedInGamer&gt;">
   <summary><![CDATA[Represents a collection of gamers on the local system.]]></summary>
-  <syntax><![CDATA[public sealed class SignedInGamerCollection : GamerCollection&lt;SignedInGamer&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class SignedInGamerCollection : GamerCollection<SignedInGamer>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

@@ -324,9 +324,9 @@
   <fields>
   </fields>
   <events>
-    <event name="Disposing" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="Disposing" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Occurs when Dispose is called or when this object is finalized and collected by the garbage collector of the Microsoft .NET common language runtime (CLR).]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; Disposing]]></syntax>
+      <syntax><![CDATA[public event EventHandler<EventArgs> Disposing]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

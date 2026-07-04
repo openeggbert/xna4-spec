@@ -13,5 +13,10 @@
     <platform>Windows XP</platform>
   </platforms>
   <members>
+    <member name="Angry"><summary><![CDATA[Angry eyebrow position.]]></summary></member>
+    <member name="Confused"><summary><![CDATA[Confused eyebrow position.]]></summary></member>
+    <member name="Neutral"><summary><![CDATA[Neutral eyebrow position.]]></summary></member>
+    <member name="Raised"><summary><![CDATA[Raised eyebrow position.]]></summary></member>
+    <member name="Sad"><summary><![CDATA[Sad eyebrow position.]]></summary></member>
   </members>
 </xna-type>

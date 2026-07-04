@@ -4,10 +4,9 @@
           name="NamedValueDictionary" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
-          baseClass="T&amp;gt;"
-          interfaces="IDictionary&amp;lt;string, ICollection&amp;lt;KeyValuePair&amp;lt;string, T&amp;gt;&amp;gt;, IEnumerable&amp;lt;KeyValuePair&amp;lt;string, T&amp;gt;&amp;gt;, IEnumerable">
+          interfaces="IDictionary&lt;string, T&gt;, ICollection&lt;KeyValuePair&lt;string, T&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, T&gt;&gt;, IEnumerable">
   <summary><![CDATA[Base class for dictionaries that map string identifiers to data values.]]></summary>
-  <syntax><![CDATA[public class NamedValueDictionary&lt;T&gt; : IDictionary&lt;string, T&gt;, ICollection&lt;KeyValuePair&lt;string, T&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, T&gt;&gt;, IEnumerable]]></syntax>
+  <syntax><![CDATA[public class NamedValueDictionary<T> : IDictionary<string, T>, ICollection<KeyValuePair<string, T>>, IEnumerable<KeyValuePair<string, T>>, IEnumerable]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>
@@ -50,17 +49,17 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Keys" type="ICollection&amp;lt;string&amp;gt;" access="get">
+    <property name="Keys" type="ICollection&lt;string&gt;" access="get">
       <summary><![CDATA[Gets all keys contained in the dictionary.]]></summary>
-      <syntax><![CDATA[public ICollection&lt;string&gt; Keys { get; }]]></syntax>
+      <syntax><![CDATA[public ICollection<string> Keys { get; }]]></syntax>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Values" type="ICollection&amp;lt;T&amp;gt;" access="get">
+    <property name="Values" type="ICollection&lt;T&gt;" access="get">
       <summary><![CDATA[Gets all values contained in the dictionary.]]></summary>
-      <syntax><![CDATA[public ICollection&lt;T&gt; Values { get; }]]></syntax>
+      <syntax><![CDATA[public ICollection<T> Values { get; }]]></syntax>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -158,7 +157,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Gets an enumerator that iterates through items in a dictionary.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;KeyValuePair&lt;string, T&gt;&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<KeyValuePair<string, T>> GetEnumerator ()]]></syntax>
           <returns><![CDATA[Enumerator for iterating through the dictionary.]]></returns>
           <platforms>
             <platform>Windows XP SP2</platform>

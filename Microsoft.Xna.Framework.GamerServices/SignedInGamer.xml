@@ -280,9 +280,9 @@
   <fields>
   </fields>
   <events>
-    <event name="SignedIn" type="EventHandler&amp;lt;SignedInEventArgs&amp;gt;">
+    <event name="SignedIn" type="EventHandler&lt;SignedInEventArgs&gt;">
       <summary><![CDATA[Occurs when a new gamer signs into the local system.]]></summary>
-      <syntax><![CDATA[public static event EventHandler&lt;SignedInEventArgs&gt; SignedIn]]></syntax>
+      <syntax><![CDATA[public static event EventHandler<SignedInEventArgs> SignedIn]]></syntax>
       <remarks><![CDATA[This event is raised during calls to Update . When this event is raised, the LocalGamers collection will contain the newly signed-in gamer.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -291,9 +291,9 @@
         <platform>Zune</platform>
       </platforms>
     </event>
-    <event name="SignedOut" type="EventHandler&amp;lt;SignedOutEventArgs&amp;gt;">
+    <event name="SignedOut" type="EventHandler&lt;SignedOutEventArgs&gt;">
       <summary><![CDATA[Occurs when a gamer signs out on the local system.]]></summary>
-      <syntax><![CDATA[public static event EventHandler&lt;SignedOutEventArgs&gt; SignedOut]]></syntax>
+      <syntax><![CDATA[public static event EventHandler<SignedOutEventArgs> SignedOut]]></syntax>
       <remarks><![CDATA[This event is raised during calls to Update . When this event is raised, the LocalGamers collection will not longer contain the signed-out gamer.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

@@ -4,9 +4,9 @@
           name="Bgr565" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
           assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector&amp;lt;UInt16&amp;gt;, IEquatable&amp;lt;Bgr565&amp;gt;">
+          interfaces="IPackedVector&lt;UInt16&gt;, IEquatable&lt;Bgr565&gt;">
   <summary><![CDATA[Packed vector type containing unsigned normalized values ranging from 0 to 1. The x and z components use 5 bits, and the y component uses 6 bits.]]></summary>
-  <syntax><![CDATA[public struct Bgr565 : IPackedVector&lt;UInt16&gt;, IEquatable&lt;Bgr565&gt;]]></syntax>
+  <syntax><![CDATA[public struct Bgr565 : IPackedVector<UInt16>, IEquatable<Bgr565>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

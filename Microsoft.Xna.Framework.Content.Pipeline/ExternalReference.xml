@@ -6,7 +6,7 @@
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
           baseClass="ContentItem">
   <summary><![CDATA[Specifies external references to a data file for the content item.]]></summary>
-  <syntax><![CDATA[public sealed class ExternalReference&lt;T&gt; : ContentItem]]></syntax>
+  <syntax><![CDATA[public sealed class ExternalReference<T> : ContentItem]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

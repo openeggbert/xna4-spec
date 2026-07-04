@@ -4,10 +4,9 @@
           name="LaunchParameters" kind="class"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          baseClass="Dictionary&amp;lt;string"
-          interfaces="string&amp;gt;">
+          baseClass="Dictionary&lt;string, string&gt;">
   <summary><![CDATA[The start up parameters for launching a Windows Phone or Windows game.]]></summary>
-  <syntax><![CDATA[public class LaunchParameters : Dictionary&lt;string, string&gt;]]></syntax>
+  <syntax><![CDATA[public class LaunchParameters : Dictionary<string, string>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows 7</platform>

@@ -15,9 +15,9 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="Adapters" type="ReadOnlyCollection&amp;lt;GraphicsAdapter&amp;gt;" access="get" isStatic="true">
+    <property name="Adapters" type="ReadOnlyCollection&lt;GraphicsAdapter&gt;" access="get" isStatic="true">
       <summary><![CDATA[Collection of available adapters on the system.]]></summary>
-      <syntax><![CDATA[public static ReadOnlyCollection&lt;GraphicsAdapter&gt; Adapters { get; }]]></syntax>
+      <syntax><![CDATA[public static ReadOnlyCollection<GraphicsAdapter> Adapters { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -4,9 +4,9 @@
           name="TouchLocation" kind="struct"
           namespace="Microsoft.Xna.Framework.Input.Touch"
           assembly="Microsoft.Xna.Framework.Input.Touch"
-          interfaces="IEquatable&amp;lt;TouchLocation&amp;gt;">
+          interfaces="IEquatable&lt;TouchLocation&gt;">
   <summary><![CDATA[Provides methods and properties for interacting with a touch location on a touch screen device.]]></summary>
-  <syntax><![CDATA[public struct TouchLocation : IEquatable&lt;TouchLocation&gt;]]></syntax>
+  <syntax><![CDATA[public struct TouchLocation : IEquatable<TouchLocation>]]></syntax>
   <remarks><![CDATA[The TouchLocation structure contains information, such as screen location, current state, and amount of pressure for a registered touch location item. A collection of current touch locations is stored in the TouchCollection object of the touch screen device.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>

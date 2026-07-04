@@ -4,9 +4,9 @@
           name="NormalizedByte4" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
           assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector&amp;lt;UInt32&amp;gt;, IEquatable&amp;lt;NormalizedByte4&amp;gt;">
+          interfaces="IPackedVector&lt;UInt32&gt;, IEquatable&lt;NormalizedByte4&gt;">
   <summary><![CDATA[Packed vector type containing four 8-bit signed normalized values, ranging from −1 to 1.]]></summary>
-  <syntax><![CDATA[public struct NormalizedByte4 : IPackedVector&lt;UInt32&gt;, IEquatable&lt;NormalizedByte4&gt;]]></syntax>
+  <syntax><![CDATA[public struct NormalizedByte4 : IPackedVector<UInt32>, IEquatable<NormalizedByte4>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

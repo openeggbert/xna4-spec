@@ -4,11 +4,10 @@
           name="ModelTextureProcessor" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          baseClass="ContentProcessor&amp;lt;TextureContent"
-          interfaces="TextureContent&amp;gt;">
+          baseClass="ContentProcessor&lt;TextureContent, TextureContent&gt;">
   <summary><![CDATA[Processes textures for 3D models.]]></summary>
   <syntax><![CDATA[[ContentProcessorAttribute]
-public class ModelTextureProcessor : ContentProcessor&lt;TextureContent, TextureContent&gt;]]></syntax>
+public class ModelTextureProcessor : ContentProcessor<TextureContent, TextureContent>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

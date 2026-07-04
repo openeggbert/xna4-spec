@@ -64,9 +64,9 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="FileExtensions" type="IEnumerable&amp;lt;string&amp;gt;" access="get">
+    <property name="FileExtensions" type="IEnumerable&lt;string&gt;" access="get">
       <summary><![CDATA[Gets the supported file name extensions of the importer.]]></summary>
-      <syntax><![CDATA[public IEnumerable&lt;string&gt; FileExtensions { get; }]]></syntax>
+      <syntax><![CDATA[public IEnumerable<string> FileExtensions { get; }]]></syntax>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

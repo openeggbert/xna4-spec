@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xna-index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:noNamespaceSchemaLocation="xna.xsd"
-           version="4.0">
+<xna-index version="4.0">
   <namespace name="Microsoft.Xna.Framework" assembly="Microsoft.Xna.Framework">
     <type-ref name="BoundingBox" kind="struct" file="Microsoft.Xna.Framework/BoundingBox.xml">
       <summary><![CDATA[Defines an axis-aligned box-shaped 3D volume.]]></summary>
@@ -145,7 +143,7 @@
       <summary><![CDATA[Defines a vector with four components.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Graphics" assembly="Microsoft.Xna.Framework">
+  <namespace name="Microsoft.Xna.Framework.Graphics" assembly="Microsoft.Xna.Framework.Graphics">
     <type-ref name="AlphaTestEffect" kind="class" file="Microsoft.Xna.Framework.Graphics/AlphaTestEffect.xml">
       <summary><![CDATA[Contains a configurable effect that supports alpha testing.]]></summary>
     </type-ref>
@@ -329,6 +327,9 @@
     <type-ref name="GraphicsDevice" kind="class" file="Microsoft.Xna.Framework.Graphics/GraphicsDevice.xml">
       <summary><![CDATA[Performs primitive-based rendering, creates resources, handles system-level variables, adjusts gamma ramp levels, and creates shaders.]]></summary>
     </type-ref>
+    <type-ref name="GraphicsDeviceCapabilities" kind="class" file="Microsoft.Xna.Framework.Graphics/GraphicsDeviceCapabilities.xml">
+      <summary><![CDATA[Represents the capabilities of the hardware.]]></summary>
+    </type-ref>
     <type-ref name="GraphicsDeviceCapabilities.AddressCaps" kind="struct" file="Microsoft.Xna.Framework.Graphics/GraphicsDeviceCapabilities.AddressCaps.xml">
       <summary><![CDATA[Represents the texture addressing capabilities for Texture structures.]]></summary>
     </type-ref>
@@ -383,9 +384,6 @@
     <type-ref name="GraphicsDeviceCapabilities.VertexShaderCaps" kind="struct" file="Microsoft.Xna.Framework.Graphics/GraphicsDeviceCapabilities.VertexShaderCaps.xml">
       <summary><![CDATA[Represents vertex shader version 2_0 extended capabilities.]]></summary>
     </type-ref>
-    <type-ref name="GraphicsDeviceCapabilities" kind="class" file="Microsoft.Xna.Framework.Graphics/GraphicsDeviceCapabilities.xml">
-      <summary><![CDATA[Represents the capabilities of the hardware.]]></summary>
-    </type-ref>
     <type-ref name="GraphicsDeviceCreationParameters" kind="struct" file="Microsoft.Xna.Framework.Graphics/GraphicsDeviceCreationParameters.xml">
       <summary><![CDATA[Describes the creation parameters for a device.]]></summary>
     </type-ref>
@@ -431,35 +429,35 @@
     <type-ref name="ModelBone" kind="class" file="Microsoft.Xna.Framework.Graphics/ModelBone.xml">
       <summary><![CDATA[Represents bone data for a model.]]></summary>
     </type-ref>
-    <type-ref name="ModelBoneCollection.Enumerator" kind="struct" file="Microsoft.Xna.Framework.Graphics/ModelBoneCollection.Enumerator.xml">
-      <summary><![CDATA[Provides the ability to iterate through the bones in an ModelBoneCollection.]]></summary>
-    </type-ref>
     <type-ref name="ModelBoneCollection" kind="class" file="Microsoft.Xna.Framework.Graphics/ModelBoneCollection.xml">
       <summary><![CDATA[Represents a set of bones associated with a model.]]></summary>
     </type-ref>
-    <type-ref name="ModelEffectCollection.Enumerator" kind="struct" file="Microsoft.Xna.Framework.Graphics/ModelEffectCollection.Enumerator.xml">
-      <summary><![CDATA[Provides the ability to iterate through the bones in an ModelEffectCollection.]]></summary>
+    <type-ref name="ModelBoneCollection.Enumerator" kind="struct" file="Microsoft.Xna.Framework.Graphics/ModelBoneCollection.Enumerator.xml">
+      <summary><![CDATA[Provides the ability to iterate through the bones in an ModelBoneCollection.]]></summary>
     </type-ref>
     <type-ref name="ModelEffectCollection" kind="class" file="Microsoft.Xna.Framework.Graphics/ModelEffectCollection.xml">
       <summary><![CDATA[Represents a collection of effects associated with a model.]]></summary>
     </type-ref>
+    <type-ref name="ModelEffectCollection.Enumerator" kind="struct" file="Microsoft.Xna.Framework.Graphics/ModelEffectCollection.Enumerator.xml">
+      <summary><![CDATA[Provides the ability to iterate through the bones in an ModelEffectCollection.]]></summary>
+    </type-ref>
     <type-ref name="ModelMesh" kind="class" file="Microsoft.Xna.Framework.Graphics/ModelMesh.xml">
       <summary><![CDATA[Represents a mesh that is part of a Model.]]></summary>
-    </type-ref>
-    <type-ref name="ModelMeshCollection.Enumerator" kind="struct" file="Microsoft.Xna.Framework.Graphics/ModelMeshCollection.Enumerator.xml">
-      <summary><![CDATA[Provides the ability to iterate through the bones in an ModelMeshCollection.]]></summary>
     </type-ref>
     <type-ref name="ModelMeshCollection" kind="class" file="Microsoft.Xna.Framework.Graphics/ModelMeshCollection.xml">
       <summary><![CDATA[Represents a collection of ModelMesh objects.]]></summary>
     </type-ref>
+    <type-ref name="ModelMeshCollection.Enumerator" kind="struct" file="Microsoft.Xna.Framework.Graphics/ModelMeshCollection.Enumerator.xml">
+      <summary><![CDATA[Provides the ability to iterate through the bones in an ModelMeshCollection.]]></summary>
+    </type-ref>
     <type-ref name="ModelMeshPart" kind="class" file="Microsoft.Xna.Framework.Graphics/ModelMeshPart.xml">
       <summary><![CDATA[Represents a batch of geometry information to submit to the graphics device during rendering. Each ModelMeshPart is a subdivision of a ModelMesh object. The ModelMesh class is split into multiple ModelMeshPart objects, typically based on material information.]]></summary>
     </type-ref>
-    <type-ref name="ModelMeshPartCollection.Enumerator" kind="struct" file="Microsoft.Xna.Framework.Graphics/ModelMeshPartCollection.Enumerator.xml">
-      <summary><![CDATA[Provides the ability to iterate through the bones in an ModelMeshPartCollection.]]></summary>
-    </type-ref>
     <type-ref name="ModelMeshPartCollection" kind="class" file="Microsoft.Xna.Framework.Graphics/ModelMeshPartCollection.xml">
       <summary><![CDATA[Represents a collection of ModelMeshPart objects.]]></summary>
+    </type-ref>
+    <type-ref name="ModelMeshPartCollection.Enumerator" kind="struct" file="Microsoft.Xna.Framework.Graphics/ModelMeshPartCollection.Enumerator.xml">
+      <summary><![CDATA[Provides the ability to iterate through the bones in an ModelMeshPartCollection.]]></summary>
     </type-ref>
     <type-ref name="MultiSampleType" kind="enum" file="Microsoft.Xna.Framework.Graphics/MultiSampleType.xml">
       <summary><![CDATA[Defines the levels of full-scene multisampling that the device can apply.]]></summary>
@@ -672,7 +670,7 @@
       <summary><![CDATA[Defines the window dimensions of a render-target surface onto which a 3D volume projects.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Graphics.PackedVector" assembly="Microsoft.Xna.Framework.Graphics">
+  <namespace name="Microsoft.Xna.Framework.Graphics.PackedVector" assembly="Microsoft.Xna.Framework.Graphics.PackedVector">
     <type-ref name="Alpha8" kind="struct" file="Microsoft.Xna.Framework.Graphics.PackedVector/Alpha8.xml">
       <summary><![CDATA[Packed vector type containing a single 8 bit normalized W value in the range of 0 to 1.]]></summary>
     </type-ref>
@@ -737,7 +735,7 @@
       <summary><![CDATA[Packed vector type containing unsigned integer values, using 10 bits each for x, y, and z (ranging from 0 to 1023), and 2 bits for w (ranging from 0 to 3).]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Audio" assembly="Microsoft.Xna.Framework">
+  <namespace name="Microsoft.Xna.Framework.Audio" assembly="Microsoft.Xna.Framework.Audio">
     <type-ref name="AudioCategory" kind="struct" file="Microsoft.Xna.Framework.Audio/AudioCategory.xml">
       <summary><![CDATA[Represents a particular category of sounds.]]></summary>
     </type-ref>
@@ -796,7 +794,7 @@
       <summary><![CDATA[Represents a wave bank, which is a collection of wave files.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Input" assembly="Microsoft.Xna.Framework">
+  <namespace name="Microsoft.Xna.Framework.Input" assembly="Microsoft.Xna.Framework.Input">
     <type-ref name="ButtonState" kind="enum" file="Microsoft.Xna.Framework.Input/ButtonState.xml">
       <summary><![CDATA[Identifies the state of a mouse button or Xbox 360 Controller button.]]></summary>
     </type-ref>
@@ -849,18 +847,18 @@
       <summary><![CDATA[This structure is available only when developing for Windows.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Input.Touch" assembly="Microsoft.Xna.Framework">
+  <namespace name="Microsoft.Xna.Framework.Input.Touch" assembly="Microsoft.Xna.Framework.Input.Touch">
     <type-ref name="GestureSample" kind="struct" file="Microsoft.Xna.Framework.Input.Touch/GestureSample.xml">
       <summary><![CDATA[A representation of data from a multitouch gesture over a span of time.]]></summary>
     </type-ref>
     <type-ref name="GestureType" kind="enum" file="Microsoft.Xna.Framework.Input.Touch/GestureType.xml">
       <summary><![CDATA[Contains values that represent different multitouch gestures that can be detected by TouchPanel.ReadGesture.]]></summary>
     </type-ref>
-    <type-ref name="TouchCollection.Enumerator" kind="struct" file="Microsoft.Xna.Framework.Input.Touch/TouchCollection.Enumerator.xml">
-      <summary><![CDATA[Provides the ability to iterate through the touch locations in a TouchCollection.]]></summary>
-    </type-ref>
     <type-ref name="TouchCollection" kind="struct" file="Microsoft.Xna.Framework.Input.Touch/TouchCollection.xml">
       <summary><![CDATA[Provides methods and properties for accessing state information for the touch screen of a touch-enabled device.]]></summary>
+    </type-ref>
+    <type-ref name="TouchCollection.Enumerator" kind="struct" file="Microsoft.Xna.Framework.Input.Touch/TouchCollection.Enumerator.xml">
+      <summary><![CDATA[Provides the ability to iterate through the touch locations in a TouchCollection.]]></summary>
     </type-ref>
     <type-ref name="TouchLocation" kind="struct" file="Microsoft.Xna.Framework.Input.Touch/TouchLocation.xml">
       <summary><![CDATA[Provides methods and properties for interacting with a touch location on a touch screen device.]]></summary>
@@ -875,7 +873,7 @@
       <summary><![CDATA[Provides access to information about the capabilities of the touch input device.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Media" assembly="Microsoft.Xna.Framework">
+  <namespace name="Microsoft.Xna.Framework.Media" assembly="Microsoft.Xna.Framework.Media">
     <type-ref name="Album" kind="class" file="Microsoft.Xna.Framework.Media/Album.xml">
       <summary><![CDATA[Provides access to an album in the media library.]]></summary>
     </type-ref>
@@ -949,7 +947,7 @@
       <summary><![CDATA[Encapsulates visualization (frequency and sample) data for the currently-playing song.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Net" assembly="Microsoft.Xna.Framework">
+  <namespace name="Microsoft.Xna.Framework.Net" assembly="Microsoft.Xna.Framework.Net">
     <type-ref name="AvailableNetworkSession" kind="class" file="Microsoft.Xna.Framework.Net/AvailableNetworkSession.xml">
       <summary><![CDATA[Describes a multiplayer session that can be joined.]]></summary>
     </type-ref>
@@ -1029,7 +1027,7 @@
       <summary><![CDATA[Represents the arguments passed to a WriteArbitratedLeaderboard. WriteUnarbitratedLeaderboard, or WriteTrueSkill event.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Storage" assembly="Microsoft.Xna.Framework">
+  <namespace name="Microsoft.Xna.Framework.Storage" assembly="Microsoft.Xna.Framework.Storage">
     <type-ref name="StorageContainer" kind="class" file="Microsoft.Xna.Framework.Storage/StorageContainer.xml">
       <summary><![CDATA[Represents a logical collection of storage files.]]></summary>
     </type-ref>
@@ -1040,7 +1038,7 @@
       <summary><![CDATA[The exception that is thrown when the requested StorageDevice is not connected.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Content" assembly="Microsoft.Xna.Framework">
+  <namespace name="Microsoft.Xna.Framework.Content" assembly="Microsoft.Xna.Framework.Content">
     <type-ref name="ContentLoadException" kind="class" file="Microsoft.Xna.Framework.Content/ContentLoadException.xml">
       <summary><![CDATA[Exception used to report errors from the ContentManager.Load method.]]></summary>
     </type-ref>
@@ -1075,7 +1073,7 @@
       <summary><![CDATA[Subclass of ContentManager which is specialized to read from .resx resource files, rather than directly from individual files on disk.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.GamerServices" assembly="Microsoft.Xna.Framework">
+  <namespace name="Microsoft.Xna.Framework.GamerServices" assembly="Microsoft.Xna.Framework.GamerServices">
     <type-ref name="Achievement" kind="class" file="Microsoft.Xna.Framework.GamerServices/Achievement.xml">
       <summary><![CDATA[Describes a single achievement, including the achievement name, description, picture, and whether it has been achieved by the currently signed in gamer.]]></summary>
     </type-ref>
@@ -1136,11 +1134,11 @@
     <type-ref name="Gamer" kind="class" file="Microsoft.Xna.Framework.GamerServices/Gamer.xml">
       <summary><![CDATA[Abstract base class for types that represent game players (profiles that have an associated gamertag). The concrete types SignedInGamer and NetworkGamer derive from this.]]></summary>
     </type-ref>
-    <type-ref name="GamerCollection.GamerCollectionEnumerator" kind="struct" file="Microsoft.Xna.Framework.GamerServices/GamerCollection.GamerCollectionEnumerator.xml">
-      <summary><![CDATA[Provides the ability to iterate through the gamers in an GamerCollection.]]></summary>
-    </type-ref>
     <type-ref name="GamerCollection" kind="class" file="Microsoft.Xna.Framework.GamerServices/GamerCollection.xml">
       <summary><![CDATA[Represents a collection of gamers. This collection cannot be modified and is updated automatically during the call to Update.]]></summary>
+    </type-ref>
+    <type-ref name="GamerCollection.GamerCollectionEnumerator" kind="struct" file="Microsoft.Xna.Framework.GamerServices/GamerCollection.GamerCollectionEnumerator.xml">
+      <summary><![CDATA[Provides the ability to iterate through the gamers in an GamerCollection.]]></summary>
     </type-ref>
     <type-ref name="GamerPresence" kind="class" file="Microsoft.Xna.Framework.GamerServices/GamerPresence.xml">
       <summary><![CDATA[Provides properties to set the rich presence state for a locally signed-in gamer profile.]]></summary>
@@ -1236,7 +1234,7 @@
       <summary><![CDATA[Represents the arguments passed to a SignedOut event. These arguments are passed to event handlers when a gamer signs out. This class contains the SignedInGamer instance that recently signed out.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Design" assembly="Microsoft.Xna.Framework">
+  <namespace name="Microsoft.Xna.Framework.Design" assembly="Microsoft.Xna.Framework.Design">
     <type-ref name="BoundingBoxConverter" kind="class" file="Microsoft.Xna.Framework.Design/BoundingBoxConverter.xml">
       <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
     </type-ref>
@@ -1375,7 +1373,7 @@
       <summary><![CDATA[Implements an importer for reading intermediate XML files. This is a wrapper around IntermediateSerializer.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Audio" assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Audio" assembly="Microsoft.Xna.Framework.Content.Pipeline.Audio">
     <type-ref name="AudioContent" kind="class" file="Microsoft.Xna.Framework.Content.Pipeline.Audio/AudioContent.xml">
       <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
     </type-ref>
@@ -1392,7 +1390,7 @@
       <summary><![CDATA[This enumeration is available only when developing for Windows.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Graphics" assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Graphics" assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
     <type-ref name="AlphaTestMaterialContent" kind="class" file="Microsoft.Xna.Framework.Content.Pipeline.Graphics/AlphaTestMaterialContent.xml">
       <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
     </type-ref>
@@ -1532,7 +1530,7 @@
       <summary><![CDATA[Provides methods and properties for maintaining the vertex data of a GeometryContent.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Processors" assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Processors" assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors">
     <type-ref name="CompiledEffectContent" kind="class" file="Microsoft.Xna.Framework.Content.Pipeline.Processors/CompiledEffectContent.xml">
       <summary><![CDATA[Represents a compiled Effect.]]></summary>
     </type-ref>
@@ -1618,7 +1616,7 @@
       <summary><![CDATA[Processes videos for playback within a game.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler" assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler" assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler">
     <type-ref name="ContentCompiler" kind="class" file="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler/ContentCompiler.xml">
       <summary><![CDATA[Provides methods for writing compiled binary format.]]></summary>
     </type-ref>
@@ -1632,12 +1630,12 @@
       <summary><![CDATA[Provides an implementation for many of the ContentCompiler methods including compilation, state tracking for shared resources and creation of the header type manifest.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate" assembly="Microsoft.Xna.Framework.Content.Pipeline">
-    <type-ref name="ContentTypeSerializer.ChildCallback" kind="delegate" file="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate/ContentTypeSerializer.ChildCallback.xml">
-      <summary><![CDATA[This delegate is available only when developing for Windows.]]></summary>
-    </type-ref>
+  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate" assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate">
     <type-ref name="ContentTypeSerializer" kind="class" file="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate/ContentTypeSerializer.xml">
       <summary><![CDATA[Provides methods for serializing and deserializing a specific managed type.]]></summary>
+    </type-ref>
+    <type-ref name="ContentTypeSerializer.ChildCallback" kind="delegate" file="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate/ContentTypeSerializer.ChildCallback.xml">
+      <summary><![CDATA[This delegate is available only when developing for Windows.]]></summary>
     </type-ref>
     <type-ref name="ContentTypeSerializerAttribute" kind="class" file="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate/ContentTypeSerializerAttribute.xml">
       <summary><![CDATA[Identifies type serializer components.]]></summary>
@@ -1652,7 +1650,7 @@
       <summary><![CDATA[Provides an implementation of many of the methods of IntermediateSerializer including serialization and state tracking for shared resources and external references.]]></summary>
     </type-ref>
   </namespace>
-  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Tasks" assembly="Microsoft.Xna.Framework.Content.Pipeline">
+  <namespace name="Microsoft.Xna.Framework.Content.Pipeline.Tasks" assembly="Microsoft.Xna.Framework.Content.Pipeline.Tasks">
     <type-ref name="BuildContent" kind="class" file="Microsoft.Xna.Framework.Content.Pipeline.Tasks/BuildContent.xml">
       <summary><![CDATA[Provides methods and properties for importing and processing game assets into a binary format.]]></summary>
     </type-ref>

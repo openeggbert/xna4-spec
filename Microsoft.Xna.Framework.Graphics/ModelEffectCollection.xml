@@ -4,9 +4,9 @@
           name="ModelEffectCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ReadOnlyCollection&amp;lt;Effect&amp;gt;">
+          baseClass="ReadOnlyCollection&lt;Effect&gt;">
   <summary><![CDATA[Represents a collection of effects associated with a model.]]></summary>
-  <syntax><![CDATA[public sealed class ModelEffectCollection : ReadOnlyCollection&lt;Effect&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class ModelEffectCollection : ReadOnlyCollection<Effect>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

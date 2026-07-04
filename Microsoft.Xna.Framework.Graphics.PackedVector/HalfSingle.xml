@@ -4,9 +4,9 @@
           name="HalfSingle" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
           assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector&amp;lt;UInt16&amp;gt;, IEquatable&amp;lt;HalfSingle&amp;gt;">
+          interfaces="IPackedVector&lt;UInt16&gt;, IEquatable&lt;HalfSingle&gt;">
   <summary><![CDATA[Packed vector type containing a single 16 bit floating point value.]]></summary>
-  <syntax><![CDATA[public struct HalfSingle : IPackedVector&lt;UInt16&gt;, IEquatable&lt;HalfSingle&gt;]]></syntax>
+  <syntax><![CDATA[public struct HalfSingle : IPackedVector<UInt16>, IEquatable<HalfSingle>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

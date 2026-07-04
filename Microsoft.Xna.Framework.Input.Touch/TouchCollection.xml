@@ -4,9 +4,9 @@
           name="TouchCollection" kind="struct"
           namespace="Microsoft.Xna.Framework.Input.Touch"
           assembly="Microsoft.Xna.Framework.Input.Touch"
-          interfaces="IList&amp;lt;TouchLocation&amp;gt;, ICollection&amp;lt;TouchLocation&amp;gt;, IEnumerable&amp;lt;TouchLocation&amp;gt;, IEnumerable">
+          interfaces="IList&lt;TouchLocation&gt;, ICollection&lt;TouchLocation&gt;, IEnumerable&lt;TouchLocation&gt;, IEnumerable">
   <summary><![CDATA[Provides methods and properties for accessing state information for the touch screen of a touch-enabled device.]]></summary>
-  <syntax><![CDATA[public struct TouchCollection : IList&lt;TouchLocation&gt;, ICollection&lt;TouchLocation&gt;, IEnumerable&lt;TouchLocation&gt;, IEnumerable]]></syntax>
+  <syntax><![CDATA[public struct TouchCollection : IList<TouchLocation>, ICollection<TouchLocation>, IEnumerable<TouchLocation>, IEnumerable]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows 7</platform>

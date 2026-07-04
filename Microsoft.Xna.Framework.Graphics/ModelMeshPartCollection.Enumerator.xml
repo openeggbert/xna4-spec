@@ -4,9 +4,9 @@
           name="ModelMeshPartCollection.Enumerator" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IEnumerator&amp;lt;ModelMeshPart&amp;gt;, IDisposable, IEnumerator">
+          interfaces="IEnumerator&lt;ModelMeshPart&gt;, IDisposable, IEnumerator">
   <summary><![CDATA[Provides the ability to iterate through the bones in an ModelMeshPartCollection.]]></summary>
-  <syntax><![CDATA[public struct ModelMeshPartCollection.Enumerator : IEnumerator&lt;ModelMeshPart&gt;, IDisposable, IEnumerator]]></syntax>
+  <syntax><![CDATA[public struct ModelMeshPartCollection.Enumerator : IEnumerator<ModelMeshPart>, IDisposable, IEnumerator]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows 7</platform>

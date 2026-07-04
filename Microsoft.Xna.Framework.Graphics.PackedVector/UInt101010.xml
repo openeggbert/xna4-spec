@@ -4,9 +4,9 @@
           name="UInt101010" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
           assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector&amp;lt;UInt32&amp;gt;, IEquatable&amp;lt;UInt101010&amp;gt;">
+          interfaces="IPackedVector&lt;UInt32&gt;, IEquatable&lt;UInt101010&gt;">
   <summary><![CDATA[Packed vector type containing unsigned integer values, using 10 bits each for x, y, and z (ranging from 0 to 1023), and 2 bits for w (ranging from 0 to 3).]]></summary>
-  <syntax><![CDATA[public struct UInt101010 : IPackedVector&lt;UInt32&gt;, IEquatable&lt;UInt101010&gt;]]></syntax>
+  <syntax><![CDATA[public struct UInt101010 : IPackedVector<UInt32>, IEquatable<UInt101010>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

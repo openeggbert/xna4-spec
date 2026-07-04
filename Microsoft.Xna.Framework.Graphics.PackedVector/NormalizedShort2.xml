@@ -4,9 +4,9 @@
           name="NormalizedShort2" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
           assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector&amp;lt;UInt32&amp;gt;, IEquatable&amp;lt;NormalizedShort2&amp;gt;">
+          interfaces="IPackedVector&lt;UInt32&gt;, IEquatable&lt;NormalizedShort2&gt;">
   <summary><![CDATA[Packed vector type containing two 16-bit signed normalized values, ranging from −1 to 1.]]></summary>
-  <syntax><![CDATA[public struct NormalizedShort2 : IPackedVector&lt;UInt32&gt;, IEquatable&lt;NormalizedShort2&gt;]]></syntax>
+  <syntax><![CDATA[public struct NormalizedShort2 : IPackedVector<UInt32>, IEquatable<NormalizedShort2>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

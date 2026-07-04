@@ -4,9 +4,9 @@
           name="EffectTechniqueCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IEnumerable&amp;lt;EffectTechnique&amp;gt;">
+          interfaces="IEnumerable&lt;EffectTechnique&gt;">
   <summary><![CDATA[Manipulates a collection of EffectTechnique objects.]]></summary>
-  <syntax><![CDATA[public sealed class EffectTechniqueCollection : IEnumerable&lt;EffectTechnique&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class EffectTechniqueCollection : IEnumerable<EffectTechnique>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>
@@ -42,7 +42,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Returns an enumerator that can iterate through the collection.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;EffectTechnique&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<EffectTechnique> GetEnumerator ()]]></syntax>
           <returns><![CDATA[Enumerator for the effect technique collection.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>
@@ -57,7 +57,7 @@
       <overloads>
         <overload signature="GetValidTechniques()">
           <summary><![CDATA[Returns all of the valid techniques in this collection.]]></summary>
-          <syntax><![CDATA[public IEnumerable&lt;EffectTechnique&gt; GetValidTechniques ()]]></syntax>
+          <syntax><![CDATA[public IEnumerable<EffectTechnique> GetValidTechniques ()]]></syntax>
           <returns><![CDATA[An enumeration of all the valid techniques in this collection.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>

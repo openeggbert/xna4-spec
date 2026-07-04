@@ -4,9 +4,9 @@
           name="Artist" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&amp;lt;Artist&amp;gt;">
+          interfaces="IEquatable&lt;Artist&gt;">
   <summary><![CDATA[Provides access to artist information in the media library.]]></summary>
-  <syntax><![CDATA[public sealed class Artist : IEquatable&lt;Artist&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class Artist : IEquatable<Artist>]]></syntax>
   <remarks><![CDATA[The Artist class provides information about an artist, including the artist's Name , Albums , and Songs . You can obtain an Artist object through the ArtistCollection.Item indexer and the Album.Artist and Song.Artist properties.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>

@@ -10,10 +10,26 @@ SKIP_TEXT = ["This browser is no longer supported","Upgrade to Microsoft Edge",
              "Namespace","Assembly","Platforms","public ","protected ","internal ",
              "private ","See Also","Xbox 360"]
 
-# Handle both plain and Generic variants
 TYPE_SUFFIXES = {
     " Class": "class", " Structure": "struct", " Enumeration": "enum",
     " Interface": "interface", " Delegate": "delegate",
+}
+
+# MS docs title a generic type's own page "TypeName Generic Class/Interface/..."
+# (e.g. "IPackedVector Generic Interface" for IPackedVector<TPacked>), but title
+# that type's *own* members using the plain, non-generic name (e.g.
+# "IPackedVector.PackedValue Property" even though PackedValue is declared on
+# IPackedVector<TPacked>, not on IPackedVector). When a separate non-generic
+# "TypeName Class/Interface/..." page ALSO exists (e.g. IPackedVector itself),
+# the generic page is a pure duplicate — its members are already attributed to
+# the non-generic page and it is dropped in favor of that page. But for some
+# types (e.g. NamedValueDictionary<T>, ChildCollection<T,U>, GamerCollection<T>)
+# the generic page is the ONLY page — there is no separate non-generic type —
+# so it must be kept as that type's sole source. This is resolved dynamically
+# in main(): both variants map to the same (suffix-stripped) type_name, and the
+# non-generic page's content wins on collision; the generic page's content is
+# used only when no non-generic counterpart was found.
+GENERIC_TYPE_SUFFIXES = {
     " Generic Class": "class", " Generic Structure": "struct",
     " Generic Interface": "interface", " Generic Delegate": "delegate",
     " Generic Enumeration": "enum",
@@ -25,7 +41,9 @@ def clean(s): return re.sub(r'\s+',' ',strip(s)).strip()
 
 def get_h1(c):
     m = re.search(r'<h1[^>]*>(.*?)</h1>',c,re.DOTALL)
-    return clean(m.group(1)) if m else ""
+    # Unescape AFTER clean() strips tags: overload titles like "Method
+    # (BoundingBox, Nullable&lt;Single&gt;)" carry HTML-entity-encoded generics.
+    return _html.unescape(clean(m.group(1))) if m else ""
 
 def get_ns(c):
     m = re.search(r'Namespace:.*?>(Microsoft\.Xna[^<\s]+)',c,re.DOTALL)
@@ -44,7 +62,10 @@ def get_syntax(c):
         if txt.startswith("'") or txt.startswith('Public ') or txt.startswith('public:'):
             continue
         if txt:
-            return txt
+            # Unescape AFTER tag-stripping: generics are HTML-entity-encoded
+            # (Nullable&lt;Rectangle&gt;) in the source so the tag-stripper
+            # doesn't mistake them for real markup.
+            return _html.unescape(txt)
     return ""
 
 def get_remarks(c):
@@ -62,8 +83,7 @@ def get_returns(c):
 def get_params(c):
     m = re.search(r'<h4[^>]*id="parameters"[^>]*>.*?</h4>(.*?)(?=<h[24]|$)',c,re.DOTALL)
     if not m: return []
-    # Decode HTML entities in syntax so Nullable&lt;Rectangle&gt; → Nullable<Rectangle>
-    syn = _html.unescape(get_syntax(c)); tmap = {}
+    syn = get_syntax(c); tmap = {}
     for line in syn.split('\n'):
         line = line.strip().rstrip(',)').rstrip()
         tm = re.match(r'^(?:(?:ref|out|params)\s+)?([A-Za-z][\w<>\[\]?,\s]*?)\s+(\w+)\s*$', line)
@@ -97,7 +117,12 @@ def get_params(c):
     return params
 
 def get_enum_members(c):
-    tbl = re.search(r'<table[^>]*>(.*?)</table>',c,re.DOTALL)
+    # Anchor to the "Members" section: some pages (e.g. Avatar* enums) have an
+    # earlier unrelated table (a "Windows Specific Information" note) that would
+    # otherwise be picked up instead of the actual member-list table.
+    sec = re.search(r'<h2[^>]*id="members"[^>]*>.*?</h2>(.*?)(?=<h2|$)',c,re.DOTALL)
+    if not sec: return []
+    tbl = re.search(r'<table[^>]*>(.*?)</table>',sec.group(1),re.DOTALL)
     if not tbl: return []
     SKIP = {'Member name','Description','','\xa0','&nbsp;'}
     out = []
@@ -122,15 +147,22 @@ def plat_xml(lines, plats, ind):
         lines.append(f'{ind}</platforms>')
 
 def classify_page(h1):
+    # Check the (longer, more specific) " Generic ..." suffixes first so a page
+    # titled "X Generic Interface" doesn't get mis-matched against the shorter
+    # " Interface" suffix, which would leave a stray "Generic" stuck onto the
+    # type name (e.g. "IPackedVector Generic" instead of "IPackedVector").
+    for sfx, kind in GENERIC_TYPE_SUFFIXES.items():
+        if h1.endswith(sfx):
+            return ('type', h1[:-len(sfx)].strip(), kind, None, None, True)
     for sfx, kind in TYPE_SUFFIXES.items():
         if h1.endswith(sfx):
-            return ('type', h1[:-len(sfx)].strip(), kind, None, None)
+            return ('type', h1[:-len(sfx)].strip(), kind, None, None, False)
     # Constructor: type name may contain dots (nested types)
     m = re.match(r'^([\w.]+)\s+Constructor(?:\s+\((.*)\))?$', h1)
-    if m: return ('member', m.group(1), 'constructor', '__ctor__', m.group(2))
+    if m: return ('member', m.group(1), 'constructor', '__ctor__', m.group(2), False)
     # Member: type name may contain dots; greedy match takes all but last segment
     m = re.match(r'^([\w.]+)\.([\w]+)\s+(Property|Method|Field|Event)(?:\s+\((.*)\))?$', h1)
-    if m: return ('member', m.group(1), m.group(3).lower(), m.group(2), m.group(4))
+    if m: return ('member', m.group(1), m.group(3).lower(), m.group(2), m.group(4), False)
     return None
 
 def extract_prop_type(syn, pname):
@@ -153,6 +185,23 @@ def build_ctor_sig(type_name, params):
     if not params: return f'{type_name}()'
     return f'{type_name}({", ".join(pt for _,pt,_ in params)})'
 
+def split_base_list(after):
+    # Split a "BaseClass<A, B>, IInterface<C>, IOther" declaration tail on
+    # top-level commas only, so commas inside generic argument lists (e.g.
+    # ChildCollection<MeshContent, GeometryContent>) don't get treated as
+    # separators. Also drops a trailing "where T : ..." constraint clause.
+    after = re.split(r'\bwhere\b', after, 1)[0].strip()
+    parts, depth, cur = [], 0, ''
+    for ch in after:
+        if ch == '<': depth += 1
+        elif ch == '>': depth -= 1
+        if ch == ',' and depth <= 0:
+            parts.append(cur.strip()); cur = ''
+        else:
+            cur += ch
+    if cur.strip(): parts.append(cur.strip())
+    return [p for p in parts if p]
+
 def gen_xml(type_name, kind, ns, main_c, members):
     asm_m = re.search(r'Assembly:.*?>(Microsoft\.Xna[^<\s(]+)',main_c,re.DOTALL)
     assembly = asm_m.group(1).rstrip('.,') if asm_m else ns
@@ -161,10 +210,9 @@ def gen_xml(type_name, kind, ns, main_c, members):
     base_class = None; interfaces = None
     if ':' in syn_main:
         after = syn_main.split(':',1)[1].strip()
-        parts = [p.strip() for p in after.split(',')]
+        parts = split_base_list(after)
         ifaces = []
         for p in parts:
-            p = p.split()[0] if p.split() else p
             if p.startswith('I') or (kind in ('struct','enum') and p):
                 ifaces.append(p)
             elif kind == 'class' and not base_class and not p.startswith('I'):
@@ -371,9 +419,15 @@ def main():
         if file_ns != ns or not h1: continue
         result = classify_page(h1)
         if not result: continue
-        page_type, type_name, kind_or_mk, member_name, sig = result
+        page_type, type_name, kind_or_mk, member_name, sig, is_generic = result
         if page_type == 'type':
-            type_pages.setdefault(type_name, (kind_or_mk, content))
+            existing = type_pages.get(type_name)
+            # Prefer the non-generic page's content on collision (the generic
+            # page is then a pure duplicate — see GENERIC_TYPE_SUFFIXES above).
+            # If only a generic page exists for this type_name, keep it: it's
+            # the sole source of truth, not a redundant duplicate.
+            if existing is None or (existing[2] and not is_generic):
+                type_pages[type_name] = (kind_or_mk, content, is_generic)
         else:
             member_map[type_name].append((kind_or_mk, member_name, sig, content))
 
@@ -386,7 +440,7 @@ def main():
         if type_name in skip:
             print(f"  SKIP {type_name}")
             continue
-        kind, main_c = type_pages[type_name]
+        kind, main_c, _ = type_pages[type_name]
         members = member_map.get(type_name, [])
         try:
             xml = gen_xml(type_name, kind, ns, main_c, members)

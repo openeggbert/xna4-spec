@@ -4,11 +4,11 @@
           name="BoundingFrustum" kind="class"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IEquatable&amp;lt;BoundingFrustum&amp;gt;">
+          interfaces="IEquatable&lt;BoundingFrustum&gt;">
   <summary><![CDATA[Defines a frustum and helps determine whether forms intersect with it.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute(System.ComponentModel.ExpandableObjectConverter, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)]
 [SerializableAttribute]
-public class BoundingFrustum : IEquatable&lt;BoundingFrustum&gt;]]></syntax>
+public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
   <remarks><![CDATA[A frustum in computer graphics is generally a volume of 3D space, defined as the part of a rectangular pyramid that lies between two planes perpendicular to its center line. A frustum is often used to represent what a "camera" sees in your 3D space—for example: The BoundingFrustum class allows you to define a bounding frustum using a combined matrix that is generally the product of a view matrix and a projection matrix. You can query a BoundingFrustum object for any one of its bounding planes, for its corners, and for whether it intersects with a given object. Since objects that don't intersect with your view frustrum generally don't need to be rendered, culling them quickly can save you a lot of rendering time.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>
@@ -292,12 +292,12 @@ public class BoundingFrustum : IEquatable&lt;BoundingFrustum&gt;]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Intersects" returnType="Nullable&amp;lt;float&amp;gt;">
+    <method name="Intersects" returnType="Nullable&lt;float&gt;">
       <summary><![CDATA[Checks whether the current BoundingFrustum intersects the specified Ray.]]></summary>
       <overloads>
         <overload signature="Intersects(Ray)">
           <summary><![CDATA[Checks whether the current BoundingFrustum intersects the specified Ray.]]></summary>
-          <syntax><![CDATA[public Nullable&lt;float&gt; Intersects (
+          <syntax><![CDATA[public Nullable<float> Intersects (
          Ray ray
 )]]></syntax>
           <parameters>
@@ -386,11 +386,11 @@ public class BoundingFrustum : IEquatable&lt;BoundingFrustum&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Intersects(Ray, Nullable&amp;lt;Single&amp;gt;)">
+        <overload signature="Intersects(Ray, Nullable&lt;Single&gt;)">
           <summary><![CDATA[Checks whether the current BoundingFrustum intersects a Ray.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref Ray ray,
-         out Nullable&lt;float&gt; result
+         out Nullable<float> result
 )]]></syntax>
           <parameters>
             <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>
@@ -432,11 +432,11 @@ public class BoundingFrustum : IEquatable&lt;BoundingFrustum&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Intersects(Ray, Nullable&amp;lt;Single&amp;gt;)">
+        <overload signature="Intersects(Ray, Nullable&lt;Single&gt;)">
           <summary><![CDATA[Checks whether the current BoundingFrustum intersects a Ray.]]></summary>
           <syntax><![CDATA[public void Intersects (
          ref Ray ray,
-         out Nullable&lt;float&gt; result
+         out Nullable<float> result
 )]]></syntax>
           <parameters>
             <parameter name="ray" type="Ray"><![CDATA[The Ray to check for intersection with.]]></parameter>

@@ -38,7 +38,7 @@
     </property>
     <property name="Item" type="Object" access="get;set">
       <summary><![CDATA[Gets or sets a custom session property value at the specified index]]></summary>
-      <syntax><![CDATA[public Nullable&lt;int&gt; this [
+      <syntax><![CDATA[public Nullable<int> this [
          int index
 ] { get; set; }]]></syntax>
       <platforms>
@@ -55,7 +55,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Gets an enumerator for iterating over the custom property values.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;Nullable&lt;int&gt;&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<Nullable<int>> GetEnumerator ()]]></syntax>
           <returns><![CDATA[An enumerator for iterating over the custom property values.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>

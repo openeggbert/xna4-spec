@@ -4,9 +4,9 @@
           name="SongCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEnumerable&amp;lt;Song&amp;gt;, IEnumerable">
+          interfaces="IEnumerable&lt;Song&gt;, IEnumerable">
   <summary><![CDATA[A collection of songs in the song library.]]></summary>
-  <syntax><![CDATA[public sealed class SongCollection : IEnumerable&lt;Song&gt;, IEnumerable]]></syntax>
+  <syntax><![CDATA[public sealed class SongCollection : IEnumerable<Song>, IEnumerable]]></syntax>
   <remarks><![CDATA[The SongCollection class provides access to songs in the device's song library. Use the MediaLibrary.Songs property to obtain the following collections: All songs in the media library. Songs on a particular album. Songs associated with a particular artist. Songs associated with a particular genre. The SongCollection does not immediately instantiate instances of all songs in the collection. Instead, individual Song objects are created each time a user accesses a song through the collection's Item indexer. See the Remarks section of Item for the resource implications of maintaining references to multiple Song objects. Note All of the collections, playlists, and queues returned by methods and properties in the Microsoft.Xna.Framework.Media namespace are immutable. You cannot add or remove objects from those collections or playlists. To create a custom 'playlist' of songs, games must maintain their own list of songs to play, and play those songs one at a time by calling MediaPlayer.Play .]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>
@@ -89,7 +89,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Returns an enumerator that iterates through the SongCollection.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;Song&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<Song> GetEnumerator ()]]></syntax>
           <returns><![CDATA[IEnumerator for the SongCollection.]]></returns>
           <remarks><![CDATA[The foreach statement of the C# language ( for each in C++, For Each in Visual Basic) hides the complexity of enumerators. Therefore, using foreach instead of directly manipulating the enumerator is recommended. Enumerators can be used to read the data in the collection, but they cannot be used to modify the underlying collection. Initially, the enumerator is positioned before the first element in the collection. At this position, Current is undefined. You must call MoveNext to advance the enumerator to the first element of the collection before reading the value of Current . Current returns the same object until MoveNext is called. MoveNext sets Current to the next element. If MoveNext passes the end of the collection, the enumerator is positioned after the last element in the collection and MoveNext returns false. When the enumerator is at this position, subsequent calls to MoveNext also return false. If the last call to MoveNext returned false, Current is undefined. You cannot set Current to the first element of the collection again; you must create a new enumerator instance instead. An enumerator remains valid as long as the collection remains unchanged. If changes are made to the collection, such as adding, modifying, or deleting elements, the enumerator is irrecoverably invalidated and its behavior is undefined. The enumerator does not have exclusive access to the collection; enumerating through a collection is intrinsically not a thread-safe procedure. To guarantee thread safety during enumeration, you can lock the collection during the entire enumeration. To allow the collection to be accessed by multiple threads for reading and writing, you must implement your own synchronization. This method is an O(1) operation.]]></remarks>
           <platforms>

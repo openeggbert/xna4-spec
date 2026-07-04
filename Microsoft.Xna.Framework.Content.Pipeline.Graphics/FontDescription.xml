@@ -72,20 +72,20 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="Characters" type="ICollection&amp;lt;char&amp;gt;" access="get">
+    <property name="Characters" type="ICollection&lt;char&gt;" access="get">
       <summary><![CDATA[Gets the collection of characters provided by this FontDescription.]]></summary>
       <syntax><![CDATA[[ContentSerializerIgnoreAttribute]
-public ICollection&lt;char&gt; Characters { get; }]]></syntax>
+public ICollection<char> Characters { get; }]]></syntax>
       <remarks><![CDATA[Characters can be used to change the characters provided by this FontDescription . The Characters collection keeps track of duplicates automatically. It is not necessary for the user to make sure that each letter is added only once. The Characters collection will contain only one instance of each character, no matter how many times you call Add . This collection of characters can be used to implement processing for a message file. A custom processor could read the message file, which would contain all of the text that the game will need to print, and add each character it finds to Characters .]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="DefaultCharacter" type="Nullable&amp;lt;char&amp;gt;" access="get;set">
+    <property name="DefaultCharacter" type="Nullable&lt;char&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[ContentSerializerAttribute]
-public Nullable&lt;char&gt; DefaultCharacter { get; set; }]]></syntax>
+public Nullable<char> DefaultCharacter { get; set; }]]></syntax>
       <remarks><![CDATA[If set to anything other than null, this character will be automatically substituted any time an attempt is made to draw or measure characters that are not in the font. If set to null, missing characters will produce an exception.]]></remarks>
       <platforms>
         <platform>Windows 7</platform>

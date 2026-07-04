@@ -4,11 +4,11 @@
           name="Matrix" kind="struct"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IEquatable&amp;lt;Matrix&amp;gt;">
+          interfaces="IEquatable&lt;Matrix&gt;">
   <summary><![CDATA[Defines a matrix.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.MatrixConverter)")]
 [SerializableAttribute]
-public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
+public struct Matrix : IEquatable<Matrix>]]></syntax>
   <remarks><![CDATA[Matrices use a row vector layout in the XNA Framework. Matrices can be either row vector or column vector. Row vector matrices view vectors as a row from left to right, while column vector matrices view vectors as a column from top to bottom. For example, the x, y, and z of a matrix's translation vector in the XNA Framework would correspond to the fields M41 , M42 , M43 .]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>
@@ -179,13 +179,13 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateBillboard" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Creates a spherical billboard that rotates around a specified object position.]]></summary>
       <overloads>
-        <overload signature="CreateBillboard(Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;)">
+        <overload signature="CreateBillboard(Vector3, Vector3, Vector3, Nullable&lt;Vector3&gt;)">
           <summary><![CDATA[Creates a spherical billboard that rotates around a specified object position.]]></summary>
           <syntax><![CDATA[public static Matrix CreateBillboard (
          Vector3 objectPosition,
          Vector3 cameraPosition,
          Vector3 cameraUpVector,
-         Nullable&lt;Vector3&gt; cameraForwardVector
+         Nullable<Vector3> cameraForwardVector
 )]]></syntax>
           <parameters>
             <parameter name="objectPosition" type="Vector3"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>
@@ -201,13 +201,13 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="CreateBillboard(Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Matrix)">
+        <overload signature="CreateBillboard(Vector3, Vector3, Vector3, Nullable&lt;Vector3&gt;, Matrix)">
           <summary><![CDATA[Creates a spherical billboard that rotates around a specified object position.]]></summary>
           <syntax><![CDATA[public static void CreateBillboard (
          ref Vector3 objectPosition,
          ref Vector3 cameraPosition,
          ref Vector3 cameraUpVector,
-         Nullable&lt;Vector3&gt; cameraForwardVector,
+         Nullable<Vector3> cameraForwardVector,
          out Matrix result
 )]]></syntax>
           <parameters>
@@ -229,14 +229,14 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
     <method name="CreateConstrainedBillboard" returnType="void" isStatic="true">
       <summary><![CDATA[Creates a cylindrical billboard that rotates around a specified axis.]]></summary>
       <overloads>
-        <overload signature="CreateConstrainedBillboard(Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Nullable&amp;lt;Vector3&amp;gt;, Matrix)">
+        <overload signature="CreateConstrainedBillboard(Vector3, Vector3, Vector3, Nullable&lt;Vector3&gt;, Nullable&lt;Vector3&gt;, Matrix)">
           <summary><![CDATA[Creates a cylindrical billboard that rotates around a specified axis.]]></summary>
           <syntax><![CDATA[public static void CreateConstrainedBillboard (
          ref Vector3 objectPosition,
          ref Vector3 cameraPosition,
          ref Vector3 rotateAxis,
-         Nullable&lt;Vector3&gt; cameraForwardVector,
-         Nullable&lt;Vector3&gt; objectForwardVector,
+         Nullable<Vector3> cameraForwardVector,
+         Nullable<Vector3> objectForwardVector,
          out Matrix result
 )]]></syntax>
           <parameters>
@@ -254,14 +254,14 @@ public struct Matrix : IEquatable&lt;Matrix&gt;]]></syntax>
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="CreateConstrainedBillboard(Vector3, Vector3, Vector3, Nullable&amp;lt;Vector3&amp;gt;, Nullable&amp;lt;Vector3&amp;gt;)">
+        <overload signature="CreateConstrainedBillboard(Vector3, Vector3, Vector3, Nullable&lt;Vector3&gt;, Nullable&lt;Vector3&gt;)">
           <summary><![CDATA[Creates a cylindrical billboard that rotates around a specified axis.]]></summary>
           <syntax><![CDATA[public static Matrix CreateConstrainedBillboard (
          Vector3 objectPosition,
          Vector3 cameraPosition,
          Vector3 rotateAxis,
-         Nullable&lt;Vector3&gt; cameraForwardVector,
-         Nullable&lt;Vector3&gt; objectForwardVector
+         Nullable<Vector3> cameraForwardVector,
+         Nullable<Vector3> objectForwardVector
 )]]></syntax>
           <parameters>
             <parameter name="objectPosition" type="Vector3"><![CDATA[Position of the object the billboard will rotate around.]]></parameter>

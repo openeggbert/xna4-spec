@@ -4,9 +4,9 @@
           name="OpaqueDataDictionary" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
-          baseClass="NamedValueDictionary&amp;lt;Object&amp;gt;">
+          baseClass="NamedValueDictionary&lt;Object&gt;">
   <summary><![CDATA[Provides properties that define opaque data for a game asset.]]></summary>
-  <syntax><![CDATA[public sealed class OpaqueDataDictionary : NamedValueDictionary&lt;Object&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class OpaqueDataDictionary : NamedValueDictionary<Object>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

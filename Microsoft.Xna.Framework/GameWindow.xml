@@ -266,9 +266,9 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
         <platform>Windows Vista</platform>
       </platforms>
     </event>
-    <event name="OrientationChanged" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="OrientationChanged" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Describes the event raised when the display orientation of the GameWindow changes. When this event occurs, the XNA Framework automatically adjusts the game orientation based on the value specified by the developer with SupportedOrientations.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; OrientationChanged]]></syntax>
+      <syntax><![CDATA[public event EventHandler<EventArgs> OrientationChanged]]></syntax>
       <remarks><![CDATA[Windows Phone Specific Information Orientation settings apply only to Windows Phone-based games.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

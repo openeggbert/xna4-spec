@@ -4,9 +4,9 @@
           name="Rgba32" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
           assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector&amp;lt;UInt32&amp;gt;, IEquatable&amp;lt;Rgba32&amp;gt;">
+          interfaces="IPackedVector&lt;UInt32&gt;, IEquatable&lt;Rgba32&gt;">
   <summary><![CDATA[Packed vector type containing four 8-bit unsigned normalized values, ranging from 0 to 1.]]></summary>
-  <syntax><![CDATA[public struct Rgba32 : IPackedVector&lt;UInt32&gt;, IEquatable&lt;Rgba32&gt;]]></syntax>
+  <syntax><![CDATA[public struct Rgba32 : IPackedVector<UInt32>, IEquatable<Rgba32>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

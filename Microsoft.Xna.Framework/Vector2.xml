@@ -4,11 +4,11 @@
           name="Vector2" kind="struct"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IEquatable&amp;lt;Vector2&amp;gt;">
+          interfaces="IEquatable&lt;Vector2&gt;">
   <summary><![CDATA[Defines a vector with two components.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.Vector2Converter)")]
 [SerializableAttribute]
-public struct Vector2 : IEquatable&lt;Vector2&gt;]]></syntax>
+public struct Vector2 : IEquatable<Vector2>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

@@ -13,5 +13,7 @@
     <platform>Windows XP</platform>
   </platforms>
   <members>
+    <member name="Female"><summary><![CDATA[Female avatar.]]></summary></member>
+    <member name="Male"><summary><![CDATA[Male avatar.]]></summary></member>
   </members>
 </xna-type>

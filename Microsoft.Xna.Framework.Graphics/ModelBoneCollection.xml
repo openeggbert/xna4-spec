@@ -4,9 +4,9 @@
           name="ModelBoneCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ReadOnlyCollection&amp;lt;ModelBone&amp;gt;">
+          baseClass="ReadOnlyCollection&lt;ModelBone&gt;">
   <summary><![CDATA[Represents a set of bones associated with a model.]]></summary>
-  <syntax><![CDATA[public sealed class ModelBoneCollection : ReadOnlyCollection&lt;ModelBone&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class ModelBoneCollection : ReadOnlyCollection<ModelBone>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

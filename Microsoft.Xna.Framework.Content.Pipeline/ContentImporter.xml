@@ -6,7 +6,7 @@
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
           interfaces="IContentImporter">
   <summary><![CDATA[Implements a file format importer for use with game assets.]]></summary>
-  <syntax><![CDATA[public abstract class ContentImporter&lt;T&gt; : IContentImporter]]></syntax>
+  <syntax><![CDATA[public abstract class ContentImporter<T> : IContentImporter]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

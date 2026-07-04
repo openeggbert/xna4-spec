@@ -342,9 +342,9 @@
   <fields>
   </fields>
   <events>
-    <event name="DeviceChanged" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="DeviceChanged" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Occurs when a device is removed or inserted.]]></summary>
-      <syntax><![CDATA[public static event EventHandler&lt;EventArgs&gt; DeviceChanged]]></syntax>
+      <syntax><![CDATA[public static event EventHandler<EventArgs> DeviceChanged]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

@@ -4,9 +4,9 @@
           name="Genre" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&amp;lt;Genre&amp;gt;">
+          interfaces="IEquatable&lt;Genre&gt;">
   <summary><![CDATA[Provides access to genre information in the media library.]]></summary>
-  <syntax><![CDATA[public sealed class Genre : IEquatable&lt;Genre&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class Genre : IEquatable<Genre>]]></syntax>
   <remarks><![CDATA[The Genre class provides information about a genre, including the genre's Name , and the Albums and Songs in that genre that are on the device. You can obtain a Genre object through the GenreCollection.Item indexer and the Album.Genre and Song.Genre properties.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>

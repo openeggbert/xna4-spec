@@ -4,9 +4,9 @@
           name="EffectFunctionCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IEnumerable&amp;lt;EffectFunction&amp;gt;">
+          interfaces="IEnumerable&lt;EffectFunction&gt;">
   <summary><![CDATA[Manipulates a collection of EffectFunction objects.]]></summary>
-  <syntax><![CDATA[public sealed class EffectFunctionCollection : IEnumerable&lt;EffectFunction&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class EffectFunctionCollection : IEnumerable<EffectFunction>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>
@@ -42,7 +42,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Returns an enumerator that can iterate through the EffectFunctionCollection.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;EffectFunction&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<EffectFunction> GetEnumerator ()]]></syntax>
           <returns><![CDATA[The iterator.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>

@@ -4,11 +4,10 @@
           name="MaterialProcessor" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          baseClass="ContentProcessor&amp;lt;MaterialContent"
-          interfaces="MaterialContent&amp;gt;">
+          baseClass="ContentProcessor&lt;MaterialContent, MaterialContent&gt;">
   <summary><![CDATA[Builds the effects and textures of a MaterialContent object.]]></summary>
   <syntax><![CDATA[[ContentProcessorAttribute]
-public class MaterialProcessor : ContentProcessor&lt;MaterialContent, MaterialContent&gt;]]></syntax>
+public class MaterialProcessor : ContentProcessor<MaterialContent, MaterialContent>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>
@@ -96,8 +95,8 @@ public virtual bool PremultiplyTextureAlpha { get; set; }]]></syntax>
       <overloads>
         <overload signature="BuildEffect()">
           <summary><![CDATA[Builds effect content.]]></summary>
-          <syntax><![CDATA[protected virtual ExternalReference&lt;CompiledEffect&gt; BuildEffect (
-         ExternalReference&lt;EffectContent&gt; effect,
+          <syntax><![CDATA[protected virtual ExternalReference<CompiledEffect> BuildEffect (
+         ExternalReference<EffectContent> effect,
          ContentProcessorContext context
 )]]></syntax>
           <parameters>
@@ -118,9 +117,9 @@ public virtual bool PremultiplyTextureAlpha { get; set; }]]></syntax>
       <overloads>
         <overload signature="BuildTexture()">
           <summary><![CDATA[Builds texture content.]]></summary>
-          <syntax><![CDATA[protected virtual ExternalReference&lt;TextureContent&gt; BuildTexture (
+          <syntax><![CDATA[protected virtual ExternalReference<TextureContent> BuildTexture (
          string textureName,
-         ExternalReference&lt;TextureContent&gt; texture,
+         ExternalReference<TextureContent> texture,
          ContentProcessorContext context
 )]]></syntax>
           <parameters>

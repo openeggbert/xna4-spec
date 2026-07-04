@@ -4,9 +4,9 @@
           name="Song" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&amp;lt;Song&amp;gt;">
+          interfaces="IEquatable&lt;Song&gt;">
   <summary><![CDATA[Provides access to a song in the song library.]]></summary>
-  <syntax><![CDATA[public sealed class Song : IEquatable&lt;Song&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class Song : IEquatable<Song>]]></syntax>
   <remarks><![CDATA[The Song class provides information about a song, including the song's Name , Artist , and Album . You can obtain a Song object through the SongCollection.Item indexer and the MediaQueue.ActiveSong property.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>

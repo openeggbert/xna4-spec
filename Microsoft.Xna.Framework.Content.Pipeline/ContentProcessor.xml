@@ -6,7 +6,7 @@
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
           interfaces="IContentProcessor">
   <summary><![CDATA[Provides a base class to use when developing custom processor components. All processors must derive from this class.]]></summary>
-  <syntax><![CDATA[public abstract class ContentProcessor&lt;TInput,TOutput&gt; : IContentProcessor]]></syntax>
+  <syntax><![CDATA[public abstract class ContentProcessor<TInput,TOutput> : IContentProcessor]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

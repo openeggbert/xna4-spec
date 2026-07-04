@@ -4,9 +4,9 @@
           name="Alpha8" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
           assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector&amp;lt;byte&amp;gt;, IEquatable&amp;lt;Alpha8&amp;gt;">
+          interfaces="IPackedVector&lt;byte&gt;, IEquatable&lt;Alpha8&gt;">
   <summary><![CDATA[Packed vector type containing a single 8 bit normalized W value in the range of 0 to 1.]]></summary>
-  <syntax><![CDATA[public struct Alpha8 : IPackedVector&lt;byte&gt;, IEquatable&lt;Alpha8&gt;]]></syntax>
+  <syntax><![CDATA[public struct Alpha8 : IPackedVector<byte>, IEquatable<Alpha8>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

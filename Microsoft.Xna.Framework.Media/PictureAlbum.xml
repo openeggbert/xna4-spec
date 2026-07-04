@@ -4,9 +4,9 @@
           name="PictureAlbum" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&amp;lt;PictureAlbum&amp;gt;">
+          interfaces="IEquatable&lt;PictureAlbum&gt;">
   <summary><![CDATA[Provides access to a picture album in the media library.]]></summary>
-  <syntax><![CDATA[public sealed class PictureAlbum : IEquatable&lt;PictureAlbum&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class PictureAlbum : IEquatable<PictureAlbum>]]></syntax>
   <remarks><![CDATA[The PictureAlbum class provides information about a picture album, including the picture album's Name , Pictures , and Parent . A PictureAlbum can contain both pictures and other picture albums. Obtain PictureAlbum objects through the PictureAlbumCollection.Item indexer.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>

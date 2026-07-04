@@ -4,9 +4,9 @@
           name="AnimationChannel" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          interfaces="ICollection&amp;lt;AnimationKeyframe&amp;gt;, IEnumerable&amp;lt;AnimationKeyframe&amp;gt;, IEnumerable">
+          interfaces="ICollection&lt;AnimationKeyframe&gt;, IEnumerable&lt;AnimationKeyframe&gt;, IEnumerable">
   <summary><![CDATA[Provides methods and properties for maintaining an animation channel. An animation channel is a collection of keyframes describing the movement of a single bone or rigid object.]]></summary>
-  <syntax><![CDATA[public sealed class AnimationChannel : ICollection&lt;AnimationKeyframe&gt;, IEnumerable&lt;AnimationKeyframe&gt;, IEnumerable]]></syntax>
+  <syntax><![CDATA[public sealed class AnimationChannel : ICollection<AnimationKeyframe>, IEnumerable<AnimationKeyframe>, IEnumerable]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>
@@ -98,7 +98,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Returns an enumerator that iterates through the keyframes.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;AnimationKeyframe&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<AnimationKeyframe> GetEnumerator ()]]></syntax>
           <returns><![CDATA[Enumerator for the keyframe collection.]]></returns>
           <platforms>
             <platform>Windows XP SP2</platform>

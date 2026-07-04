@@ -13,5 +13,36 @@
     <platform>Windows XP</platform>
   </platforms>
   <members>
+    <member name="Celebrate"><summary><![CDATA[Gender-neutral, celebrating.]]></summary></member>
+    <member name="Clap"><summary><![CDATA[Gender-neutral, applauding.]]></summary></member>
+    <member name="FemaleAngry"><summary><![CDATA[Female, angry.]]></summary></member>
+    <member name="FemaleConfused"><summary><![CDATA[Female, confused.]]></summary></member>
+    <member name="FemaleCry"><summary><![CDATA[Female, cry.]]></summary></member>
+    <member name="FemaleIdleCheckNails"><summary><![CDATA[Female, checking nails.]]></summary></member>
+    <member name="FemaleIdleFixShoe"><summary><![CDATA[Female, fixing shoe.]]></summary></member>
+    <member name="FemaleIdleLookAround"><summary><![CDATA[Female, looking around.]]></summary></member>
+    <member name="FemaleIdleShiftWeight"><summary><![CDATA[Female, shifting weight from one foot to another]]></summary></member>
+    <member name="FemaleLaugh"><summary><![CDATA[Female, laughing.]]></summary></member>
+    <member name="FemaleShocked"><summary><![CDATA[Female, shocked or surprised.]]></summary></member>
+    <member name="FemaleYawn"><summary><![CDATA[Female, yawning.]]></summary></member>
+    <member name="MaleAngry"><summary><![CDATA[Male, angry.]]></summary></member>
+    <member name="MaleConfused"><summary><![CDATA[Male, confused.]]></summary></member>
+    <member name="MaleCry"><summary><![CDATA[Male, crying.]]></summary></member>
+    <member name="MaleIdleCheckHand"><summary><![CDATA[Male, checking hand.]]></summary></member>
+    <member name="MaleIdleLookAround"><summary><![CDATA[Male, looking around.]]></summary></member>
+    <member name="MaleIdleShiftWeight"><summary><![CDATA[Male, shifting weight from one foot to another.]]></summary></member>
+    <member name="MaleIdleStretch"><summary><![CDATA[Male, stretching.]]></summary></member>
+    <member name="MaleLaugh"><summary><![CDATA[Male, laughing.]]></summary></member>
+    <member name="MaleSurprised"><summary><![CDATA[Male, surprised.]]></summary></member>
+    <member name="MaleYawn"><summary><![CDATA[Male, yawning.]]></summary></member>
+    <member name="Stand0"><summary><![CDATA[Gender-neutral, standing, variation 0.]]></summary></member>
+    <member name="Stand1"><summary><![CDATA[Gender-neutral, standing, variation 1.]]></summary></member>
+    <member name="Stand2"><summary><![CDATA[Gender-neutral, standing, variation 2.]]></summary></member>
+    <member name="Stand3"><summary><![CDATA[Gender-neutral, standing, variation 3.]]></summary></member>
+    <member name="Stand4"><summary><![CDATA[Gender-neutral, standing, variation 4.]]></summary></member>
+    <member name="Stand5"><summary><![CDATA[Gender-neutral, standing, variation 5.]]></summary></member>
+    <member name="Stand6"><summary><![CDATA[Gender-neutral, standing, variation 6.]]></summary></member>
+    <member name="Stand7"><summary><![CDATA[Gender-neutral, standing, variation 7.]]></summary></member>
+    <member name="Wave"><summary><![CDATA[Gender-neutral, waving.]]></summary></member>
   </members>
 </xna-type>

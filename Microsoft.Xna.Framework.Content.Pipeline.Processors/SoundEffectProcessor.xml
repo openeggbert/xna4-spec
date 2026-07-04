@@ -4,10 +4,9 @@
           name="SoundEffectProcessor" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          baseClass="ContentProcessor&amp;lt;AudioContent"
-          interfaces="SoundEffectContent&amp;gt;">
+          baseClass="ContentProcessor&lt;AudioContent, SoundEffectContent&gt;">
   <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
-  <syntax><![CDATA[public class SoundEffectProcessor : ContentProcessor&lt;AudioContent, SoundEffectContent&gt;]]></syntax>
+  <syntax><![CDATA[public class SoundEffectProcessor : ContentProcessor<AudioContent, SoundEffectContent>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

@@ -4,11 +4,10 @@
           name="PassThroughProcessor" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          baseClass="ContentProcessor&amp;lt;Object"
-          interfaces="Object&amp;gt;">
+          baseClass="ContentProcessor&lt;Object, Object&gt;">
   <summary><![CDATA[Provides an implementation of a no-operation processor that returns an unmodified copy of the input data.]]></summary>
   <syntax><![CDATA[[ContentProcessorAttribute]
-public class PassThroughProcessor : ContentProcessor&lt;Object, Object&gt;]]></syntax>
+public class PassThroughProcessor : ContentProcessor<Object, Object>]]></syntax>
   <remarks><![CDATA[PassThroughProcessor is useful when the importer is already producing data in a game ready format. This can occur after importing textures from DDS files that have been formatted using an external tool, or when deserializing game logic data from XML using the intermediate XML importer.]]></remarks>
   <platforms>
     <platform>Windows XP SP2</platform>

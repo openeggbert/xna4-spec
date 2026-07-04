@@ -24,63 +24,63 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="Alpha" type="Nullable&amp;lt;float&amp;gt;" access="get;set">
+    <property name="Alpha" type="Nullable&lt;float&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;float&gt; Alpha { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<float> Alpha { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="DiffuseColor" type="Nullable&amp;lt;Vector3&amp;gt;" access="get;set">
+    <property name="DiffuseColor" type="Nullable&lt;Vector3&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;Vector3&gt; DiffuseColor { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<Vector3> DiffuseColor { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="EmissiveColor" type="Nullable&amp;lt;Vector3&amp;gt;" access="get;set">
+    <property name="EmissiveColor" type="Nullable&lt;Vector3&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;Vector3&gt; EmissiveColor { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<Vector3> EmissiveColor { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="SpecularColor" type="Nullable&amp;lt;Vector3&amp;gt;" access="get;set">
+    <property name="SpecularColor" type="Nullable&lt;Vector3&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;Vector3&gt; SpecularColor { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<Vector3> SpecularColor { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="SpecularPower" type="Nullable&amp;lt;float&amp;gt;" access="get;set">
+    <property name="SpecularPower" type="Nullable&lt;float&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;float&gt; SpecularPower { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<float> SpecularPower { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="Texture" type="ExternalReference&amp;lt;TextureContent&amp;gt;" access="get;set">
+    <property name="Texture" type="ExternalReference&lt;TextureContent&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public ExternalReference&lt;TextureContent&gt; Texture { get; set; }]]></syntax>
+      <syntax><![CDATA[public ExternalReference<TextureContent> Texture { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="WeightsPerVertex" type="Nullable&amp;lt;int&amp;gt;" access="get;set">
+    <property name="WeightsPerVertex" type="Nullable&lt;int&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;int&gt; WeightsPerVertex { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<int> WeightsPerVertex { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>

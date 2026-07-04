@@ -142,37 +142,37 @@
     </field>
   </fields>
   <events>
-    <event name="DeviceCreated" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="DeviceCreated" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Raised when a new graphics device is created.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; DeviceCreated]]></syntax>
+      <syntax><![CDATA[public event EventHandler<EventArgs> DeviceCreated]]></syntax>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
     </event>
-    <event name="DeviceDisposing" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="DeviceDisposing" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Raised when the GraphicsDevice is being disposed.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; DeviceDisposing]]></syntax>
+      <syntax><![CDATA[public event EventHandler<EventArgs> DeviceDisposing]]></syntax>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
     </event>
-    <event name="DeviceReset" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="DeviceReset" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Raised when the GraphicsDevice is reset.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; DeviceReset]]></syntax>
+      <syntax><![CDATA[public event EventHandler<EventArgs> DeviceReset]]></syntax>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
     </event>
-    <event name="DeviceResetting" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="DeviceResetting" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Raised when the GraphicsDevice is about to be reset.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; DeviceResetting]]></syntax>
+      <syntax><![CDATA[public event EventHandler<EventArgs> DeviceResetting]]></syntax>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
     </event>
-    <event name="Disposed" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="Disposed" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Raised when the SharedGraphicsDeviceManager is disposed.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; Disposed]]></syntax>
+      <syntax><![CDATA[public event EventHandler<EventArgs> Disposed]]></syntax>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>

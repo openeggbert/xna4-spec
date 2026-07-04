@@ -15,9 +15,9 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="Gamers" type="GamerCollection&amp;lt;NetworkGamer&amp;gt;" access="get">
+    <property name="Gamers" type="GamerCollection&lt;NetworkGamer&gt;" access="get">
       <summary><![CDATA[Gets a collection of all the gamers who are playing on this machine.]]></summary>
-      <syntax><![CDATA[public GamerCollection&lt;NetworkGamer&gt; Gamers { get; }]]></syntax>
+      <syntax><![CDATA[public GamerCollection<NetworkGamer> Gamers { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

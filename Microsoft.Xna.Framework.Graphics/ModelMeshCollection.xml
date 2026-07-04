@@ -4,9 +4,9 @@
           name="ModelMeshCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ReadOnlyCollection&amp;lt;ModelMesh&amp;gt;">
+          baseClass="ReadOnlyCollection&lt;ModelMesh&gt;">
   <summary><![CDATA[Represents a collection of ModelMesh objects.]]></summary>
-  <syntax><![CDATA[public sealed class ModelMeshCollection : ReadOnlyCollection&lt;ModelMesh&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class ModelMeshCollection : ReadOnlyCollection<ModelMesh>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

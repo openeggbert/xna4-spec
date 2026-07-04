@@ -53,9 +53,9 @@ public sealed class ProcessorParameter]]></syntax>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="PossibleEnumValues" type="ReadOnlyCollection&amp;lt;string&amp;gt;" access="get">
+    <property name="PossibleEnumValues" type="ReadOnlyCollection&lt;string&gt;" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public ReadOnlyCollection&lt;string&gt; PossibleEnumValues { get; }]]></syntax>
+      <syntax><![CDATA[public ReadOnlyCollection<string> PossibleEnumValues { get; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>

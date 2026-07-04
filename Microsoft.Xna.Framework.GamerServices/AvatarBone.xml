@@ -13,5 +13,60 @@
     <platform>Windows XP</platform>
   </platforms>
   <members>
+    <member name="AnkleLeft"><summary><![CDATA[11]]></summary></member>
+    <member name="AnkleRight"><summary><![CDATA[15]]></summary></member>
+    <member name="BackLower"><summary><![CDATA[1]]></summary></member>
+    <member name="BackUpper"><summary><![CDATA[5]]></summary></member>
+    <member name="CollarLeft"><summary><![CDATA[12]]></summary></member>
+    <member name="CollarRight"><summary><![CDATA[16]]></summary></member>
+    <member name="ElbowLeft"><summary><![CDATA[25]]></summary></member>
+    <member name="ElbowRight"><summary><![CDATA[28]]></summary></member>
+    <member name="FingerIndex2Left"><summary><![CDATA[51]]></summary></member>
+    <member name="FingerIndex2Right"><summary><![CDATA[56]]></summary></member>
+    <member name="FingerIndex3Left"><summary><![CDATA[61]]></summary></member>
+    <member name="FingerIndex3Right"><summary><![CDATA[66]]></summary></member>
+    <member name="FingerIndexLeft"><summary><![CDATA[37]]></summary></member>
+    <member name="FingerIndexRight"><summary><![CDATA[44]]></summary></member>
+    <member name="FingerMiddle2Left"><summary><![CDATA[52]]></summary></member>
+    <member name="FingerMiddle2Right"><summary><![CDATA[57]]></summary></member>
+    <member name="FingerMiddle3Left"><summary><![CDATA[62]]></summary></member>
+    <member name="FingerMiddle3Right"><summary><![CDATA[67]]></summary></member>
+    <member name="FingerMiddleLeft"><summary><![CDATA[38]]></summary></member>
+    <member name="FingerMiddleRight"><summary><![CDATA[45]]></summary></member>
+    <member name="FingerRing2Left"><summary><![CDATA[53]]></summary></member>
+    <member name="FingerRing2Right"><summary><![CDATA[58]]></summary></member>
+    <member name="FingerRing3Left"><summary><![CDATA[63]]></summary></member>
+    <member name="FingerRing3Right"><summary><![CDATA[68]]></summary></member>
+    <member name="FingerRingLeft"><summary><![CDATA[39]]></summary></member>
+    <member name="FingerRingRight"><summary><![CDATA[46]]></summary></member>
+    <member name="FingerSmall2Left"><summary><![CDATA[54]]></summary></member>
+    <member name="FingerSmall2Right"><summary><![CDATA[59]]></summary></member>
+    <member name="FingerSmall3Left"><summary><![CDATA[64]]></summary></member>
+    <member name="FingerSmall3Right"><summary><![CDATA[69]]></summary></member>
+    <member name="FingerSmallLeft"><summary><![CDATA[40]]></summary></member>
+    <member name="FingerSmallRight"><summary><![CDATA[47]]></summary></member>
+    <member name="FingerThumb2Left"><summary><![CDATA[55]]></summary></member>
+    <member name="FingerThumb2Right"><summary><![CDATA[60]]></summary></member>
+    <member name="FingerThumb3Left"><summary><![CDATA[65]]></summary></member>
+    <member name="FingerThumb3Right"><summary><![CDATA[70]]></summary></member>
+    <member name="FingerThumbLeft"><summary><![CDATA[43]]></summary></member>
+    <member name="FingerThumbRight"><summary><![CDATA[50]]></summary></member>
+    <member name="Head"><summary><![CDATA[19]]></summary></member>
+    <member name="HipLeft"><summary><![CDATA[2]]></summary></member>
+    <member name="HipRight"><summary><![CDATA[3]]></summary></member>
+    <member name="KneeLeft"><summary><![CDATA[6]]></summary></member>
+    <member name="Neck"><summary><![CDATA[14]]></summary></member>
+    <member name="PropLeft"><summary><![CDATA[41]]></summary></member>
+    <member name="PropRight"><summary><![CDATA[48]]></summary></member>
+    <member name="KneeRight"><summary><![CDATA[8]]></summary></member>
+    <member name="Root"><summary><![CDATA[0]]></summary></member>
+    <member name="ShoulderLeft"><summary><![CDATA[20]]></summary></member>
+    <member name="ShoulderRight"><summary><![CDATA[22]]></summary></member>
+    <member name="SpecialLeft"><summary><![CDATA[42]]></summary></member>
+    <member name="SpecialRight"><summary><![CDATA[49]]></summary></member>
+    <member name="ToeLeft"><summary><![CDATA[21]]></summary></member>
+    <member name="ToeRight"><summary><![CDATA[23]]></summary></member>
+    <member name="WristLeft"><summary><![CDATA[33]]></summary></member>
+    <member name="WristRight"><summary><![CDATA[36]]></summary></member>
   </members>
 </xna-type>

@@ -4,11 +4,11 @@
           name="Color" kind="struct"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IPackedVector&amp;lt;uint&amp;gt;, IPackedVector, IEquatable&amp;lt;Color&amp;gt;">
+          interfaces="IPackedVector&lt;uint&gt;, IPackedVector, IEquatable&lt;Color&gt;">
   <summary><![CDATA[Represents a four-component color using red, green, blue, and alpha data.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute(Microsoft.Xna.Framework.Design.ColorConverter, Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f48fa5f25d27e8ff)]
 [SerializableAttribute]
-public struct Color : IPackedVector&lt;uint&gt;, IPackedVector, IEquatable&lt;Color&gt;]]></syntax>
+public struct Color : IPackedVector<uint>, IPackedVector, IEquatable<Color>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows 7</platform>

@@ -4,11 +4,11 @@
           name="XImporter" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
-          baseClass="ContentImporter&amp;lt;NodeContent&amp;gt;"
+          baseClass="ContentImporter&lt;NodeContent&gt;"
           interfaces="IDisposable">
   <summary><![CDATA[Provides methods for reading DirectX Object (.x) files for use in the Content Pipeline.]]></summary>
   <syntax><![CDATA[[SecurityPermissionAttribute(Demand, UnmanagedCode)]
-public class XImporter : ContentImporter&lt;NodeContent&gt;, IDisposable]]></syntax>
+public class XImporter : ContentImporter<NodeContent>, IDisposable]]></syntax>
   <platforms>
     <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
     <platform>Xbox 360</platform>

@@ -43,7 +43,7 @@
       <overloads>
         <overload signature="GetAvailableMediaSources()">
           <summary><![CDATA[Gets the available media sources.]]></summary>
-          <syntax><![CDATA[public static IList&lt;MediaSource&gt; GetAvailableMediaSources ()]]></syntax>
+          <syntax><![CDATA[public static IList<MediaSource> GetAvailableMediaSources ()]]></syntax>
           <returns><![CDATA[The available media sources.]]></returns>
           <remarks><![CDATA[Gets the available media sources with which a media library can be constructed. On Zune and Windows, this method will always return a single media source: the local device. On Xbox 360, this method can return multiple sources, depending on how many computers are connected to the Xbox 360 through Windows Media Connect.]]></remarks>
           <platforms>

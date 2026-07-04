@@ -4,10 +4,10 @@
           name="ProcessorParameterCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
-          baseClass="ReadOnlyCollection&amp;lt;ProcessorParameter&amp;gt;">
+          baseClass="ReadOnlyCollection&lt;ProcessorParameter&gt;">
   <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
   <syntax><![CDATA[[SerializableAttribute]
-public sealed class ProcessorParameterCollection : ReadOnlyCollection&lt;ProcessorParameter&gt;]]></syntax>
+public sealed class ProcessorParameterCollection : ReadOnlyCollection<ProcessorParameter>]]></syntax>
   <platforms>
     <platform>Windows 7</platform>
     <platform>Windows Vista</platform>

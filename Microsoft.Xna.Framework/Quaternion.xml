@@ -4,11 +4,11 @@
           name="Quaternion" kind="struct"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IEquatable&amp;lt;Quaternion&amp;gt;">
+          interfaces="IEquatable&lt;Quaternion&gt;">
   <summary><![CDATA[Defines a quaternion.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.QuaternionConverter)")]
 [SerializableAttribute]
-public struct Quaternion : IEquatable&lt;Quaternion&gt;]]></syntax>
+public struct Quaternion : IEquatable<Quaternion>]]></syntax>
   <remarks><![CDATA[Quaternions represent a rotation and are typically used for smooth interpolation between two angles and for avoiding the gimbal lock problem that can occur with euler angles.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>

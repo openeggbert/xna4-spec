@@ -4,10 +4,9 @@
           name="PropertyDictionary" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
-          baseClass="Object&amp;gt;"
-          interfaces="IDictionary&amp;lt;string, ICollection&amp;lt;KeyValuePair&amp;lt;string, Object&amp;gt;&amp;gt;, IEnumerable&amp;lt;KeyValuePair&amp;lt;string, Object&amp;gt;&amp;gt;, IEnumerable">
+          interfaces="IDictionary&lt;string, Object&gt;, ICollection&lt;KeyValuePair&lt;string, Object&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, Object&gt;&gt;, IEnumerable">
   <summary><![CDATA[Holds a set of properties used to define presence states or leaderboard column values.]]></summary>
-  <syntax><![CDATA[public sealed class PropertyDictionary : IDictionary&lt;string, Object&gt;, ICollection&lt;KeyValuePair&lt;string, Object&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, Object&gt;&gt;, IEnumerable]]></syntax>
+  <syntax><![CDATA[public sealed class PropertyDictionary : IDictionary<string, Object>, ICollection<KeyValuePair<string, Object>>, IEnumerable<KeyValuePair<string, Object>>, IEnumerable]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows 7</platform>
@@ -71,7 +70,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Returns an enumerator that iterates through a collection of key/value pairs that represent elements in the PropertyDictionary.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;KeyValuePair&lt;string, Object&gt;&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<KeyValuePair<string, Object>> GetEnumerator ()]]></syntax>
           <returns><![CDATA[An that iterates through a collection of key/value pairs that represent elements in the PropertyDictionary.]]></returns>
           <remarks><![CDATA[The C# foreach statement hides the complexity of using enumerators. Therefore, using foreach is recommended instead of directly manipulating the enumerator. Enumerators can be used to read the data in the collection, but can not be used to modify the underlying collection.]]></remarks>
           <platforms>

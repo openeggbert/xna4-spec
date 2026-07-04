@@ -4,9 +4,9 @@
           name="PositionCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="Collection&amp;lt;Vector3&amp;gt;">
+          baseClass="Collection&lt;Vector3&gt;">
   <summary><![CDATA[Provides a collection of vertex position values.]]></summary>
-  <syntax><![CDATA[public sealed class PositionCollection : Collection&lt;Vector3&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class PositionCollection : Collection<Vector3>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

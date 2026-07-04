@@ -4,9 +4,9 @@
           name="Short4" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
           assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector&amp;lt;UInt64&amp;gt;, IEquatable&amp;lt;Short4&amp;gt;">
+          interfaces="IPackedVector&lt;UInt64&gt;, IEquatable&lt;Short4&gt;">
   <summary><![CDATA[Packed vector type containing four 16-bit signed integer values.]]></summary>
-  <syntax><![CDATA[public struct Short4 : IPackedVector&lt;UInt64&gt;, IEquatable&lt;Short4&gt;]]></syntax>
+  <syntax><![CDATA[public struct Short4 : IPackedVector<UInt64>, IEquatable<Short4>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

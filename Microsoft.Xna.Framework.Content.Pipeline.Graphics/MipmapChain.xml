@@ -4,9 +4,9 @@
           name="MipmapChain" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="Collection&amp;lt;BitmapContent&amp;gt;">
+          baseClass="Collection&lt;BitmapContent&gt;">
   <summary><![CDATA[Provides methods for accessing a mipmap chain.]]></summary>
-  <syntax><![CDATA[public sealed class MipmapChain : Collection&lt;BitmapContent&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class MipmapChain : Collection<BitmapContent>]]></syntax>
   <remarks><![CDATA[A mipmap chain consists of one or more individual 2D bitmaps, holding scaled versions of the same underlying image. For example, if the first entry was sized 256×128, the second would be 128×64, and the third 64×32.]]></remarks>
   <platforms>
     <platform>Windows XP SP2</platform>

@@ -170,9 +170,9 @@
   <fields>
   </fields>
   <events>
-    <event name="BufferNeeded" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="BufferNeeded" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Event that occurs when the number of audio capture buffers awaiting playback is less than or equal to two.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; BufferNeeded]]></syntax>
+      <syntax><![CDATA[public event EventHandler<EventArgs> BufferNeeded]]></syntax>
       <remarks><![CDATA[Occurs when PendingBufferCount &lt;= 2. The BufferNeeded event is raised in the following situations: During DynamicSoundEffectInstance playback when the pending buffer count is less then or equal to 2. Every time the DynamicSoundEffectInstance instance completes playing a buffer, and updates the pending buffer count. When a DynamicSoundEffectInstance instance transitions from the stopped to playing state, and the pending buffer count is less than or equal to 2. Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. BufferNeeded throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

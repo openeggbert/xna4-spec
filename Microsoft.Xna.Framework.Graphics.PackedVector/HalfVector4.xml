@@ -4,9 +4,9 @@
           name="HalfVector4" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
           assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector&amp;lt;UInt64&amp;gt;, IEquatable&amp;lt;HalfVector4&amp;gt;">
+          interfaces="IPackedVector&lt;UInt64&gt;, IEquatable&lt;HalfVector4&gt;">
   <summary><![CDATA[Packed vector type containing four 16-bit floating-point values.]]></summary>
-  <syntax><![CDATA[public struct HalfVector4 : IPackedVector&lt;UInt64&gt;, IEquatable&lt;HalfVector4&gt;]]></syntax>
+  <syntax><![CDATA[public struct HalfVector4 : IPackedVector<UInt64>, IEquatable<HalfVector4>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

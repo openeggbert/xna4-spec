@@ -4,9 +4,9 @@
           name="MipmapChainCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="Collection&amp;lt;MipmapChain&amp;gt;">
+          baseClass="Collection&lt;MipmapChain&gt;">
   <summary><![CDATA[Provides methods for maintaining a mipmap chain.]]></summary>
-  <syntax><![CDATA[public sealed class MipmapChainCollection : Collection&lt;MipmapChain&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class MipmapChainCollection : Collection<MipmapChain>]]></syntax>
   <remarks><![CDATA[The collection holds a single mipmap chain for a regular 2D texture, six for a cube map, or an arbitrary number for volume and array textures.]]></remarks>
   <platforms>
     <platform>Windows XP SP2</platform>

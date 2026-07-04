@@ -4,10 +4,10 @@
           name="AvailableNetworkSessionCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Net"
           assembly="Microsoft.Xna.Framework.Net"
-          baseClass="ReadOnlyCollection&amp;lt;AvailableNetworkSession&amp;gt;"
+          baseClass="ReadOnlyCollection&lt;AvailableNetworkSession&gt;"
           interfaces="IDisposable">
   <summary><![CDATA[Represents a collection of sessions available for joining.]]></summary>
-  <syntax><![CDATA[public sealed class AvailableNetworkSessionCollection : ReadOnlyCollection&lt;AvailableNetworkSession&gt;, IDisposable]]></syntax>
+  <syntax><![CDATA[public sealed class AvailableNetworkSessionCollection : ReadOnlyCollection<AvailableNetworkSession>, IDisposable]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

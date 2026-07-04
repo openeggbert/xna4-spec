@@ -24,54 +24,54 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="Alpha" type="Nullable&amp;lt;float&amp;gt;" access="get;set">
+    <property name="Alpha" type="Nullable&lt;float&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;float&gt; Alpha { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<float> Alpha { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="AlphaFunction" type="Nullable&amp;lt;CompareFunction&amp;gt;" access="get;set">
+    <property name="AlphaFunction" type="Nullable&lt;CompareFunction&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;CompareFunction&gt; AlphaFunction { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<CompareFunction> AlphaFunction { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="DiffuseColor" type="Nullable&amp;lt;Vector3&amp;gt;" access="get;set">
+    <property name="DiffuseColor" type="Nullable&lt;Vector3&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;Vector3&gt; DiffuseColor { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<Vector3> DiffuseColor { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="ReferenceAlpha" type="Nullable&amp;lt;int&amp;gt;" access="get;set">
+    <property name="ReferenceAlpha" type="Nullable&lt;int&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;int&gt; ReferenceAlpha { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<int> ReferenceAlpha { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="Texture" type="ExternalReference&amp;lt;TextureContent&amp;gt;" access="get;set">
+    <property name="Texture" type="ExternalReference&lt;TextureContent&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public ExternalReference&lt;TextureContent&gt; Texture { get; set; }]]></syntax>
+      <syntax><![CDATA[public ExternalReference<TextureContent> Texture { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="VertexColorEnabled" type="Nullable&amp;lt;bool&amp;gt;" access="get;set">
+    <property name="VertexColorEnabled" type="Nullable&lt;bool&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;bool&gt; VertexColorEnabled { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<bool> VertexColorEnabled { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>

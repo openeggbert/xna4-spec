@@ -4,11 +4,10 @@
           name="FontDescriptionProcessor" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          baseClass="ContentProcessor&amp;lt;FontDescription"
-          interfaces="SpriteFontContent&amp;gt;">
+          baseClass="ContentProcessor&lt;FontDescription, SpriteFontContent&gt;">
   <summary><![CDATA[Provides methods to convert a font description class containing the name and size of a font into SpriteFontContent.]]></summary>
   <syntax><![CDATA[[ContentProcessorAttribute]
-public class FontDescriptionProcessor : ContentProcessor&lt;FontDescription, SpriteFontContent&gt;]]></syntax>
+public class FontDescriptionProcessor : ContentProcessor<FontDescription, SpriteFontContent>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

@@ -13,5 +13,19 @@
     <platform>Windows XP</platform>
   </platforms>
   <members>
+    <member name="Angry"><summary><![CDATA[Angry eye position.]]></summary></member>
+    <member name="Blink"><summary><![CDATA[Blinking eye position.]]></summary></member>
+    <member name="Confused"><summary><![CDATA[Confused eye position.]]></summary></member>
+    <member name="Happy"><summary><![CDATA[Happy eye position.]]></summary></member>
+    <member name="Laughing"><summary><![CDATA[Laughing eye position.]]></summary></member>
+    <member name="LookDown"><summary><![CDATA[Looking down eye position.]]></summary></member>
+    <member name="LookLeft"><summary><![CDATA[Looking left position.]]></summary></member>
+    <member name="LookRight"><summary><![CDATA[Looking right eye position.]]></summary></member>
+    <member name="LookUp"><summary><![CDATA[Looking up eye position.]]></summary></member>
+    <member name="Neutral"><summary><![CDATA[Neutral eye position.]]></summary></member>
+    <member name="Sad"><summary><![CDATA[Sad eye position.]]></summary></member>
+    <member name="Shocked"><summary><![CDATA[Shocked eye position.]]></summary></member>
+    <member name="Sleeping"><summary><![CDATA[Sleeping eye position.]]></summary></member>
+    <member name="Yawning"><summary><![CDATA[Yawning eye position.]]></summary></member>
   </members>
 </xna-type>

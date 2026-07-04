@@ -59,9 +59,9 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="BindPose" type="ReadOnlyCollection&amp;lt;Matrix&amp;gt;" access="get">
+    <property name="BindPose" type="ReadOnlyCollection&lt;Matrix&gt;" access="get">
       <summary><![CDATA[Gets the collection of bind pose positions for each bone of the avatar model. These positions are in local space, and are relative to the parent bone.]]></summary>
-      <syntax><![CDATA[public ReadOnlyCollection&lt;Matrix&gt; BindPose { get; }]]></syntax>
+      <syntax><![CDATA[public ReadOnlyCollection<Matrix> BindPose { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -99,9 +99,9 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="ParentBones" type="ReadOnlyCollection&amp;lt;int&amp;gt;" access="get">
+    <property name="ParentBones" type="ReadOnlyCollection&lt;int&gt;" access="get">
       <summary><![CDATA[Collection of the parent indices for each bone in the related BindPose collection.]]></summary>
-      <syntax><![CDATA[public ReadOnlyCollection&lt;int&gt; ParentBones { get; }]]></syntax>
+      <syntax><![CDATA[public ReadOnlyCollection<int> ParentBones { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -199,7 +199,7 @@
         <overload signature="Draw(Generic IList, AvatarExpression)">
           <summary><![CDATA[Draws the avatar to the current render target.]]></summary>
           <syntax><![CDATA[public void Draw (
-         IList&lt;Matrix&gt; bones,
+         IList<Matrix> bones,
          AvatarExpression expression
 )]]></syntax>
           <parameters>

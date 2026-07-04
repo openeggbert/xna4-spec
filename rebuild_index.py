@@ -3,7 +3,7 @@
 import os, re, xml.etree.ElementTree as ET
 import xml.sax.saxutils as sax
 
-SPEC_DIR = "/rv/tmp/xna_learn.microsoft.com/spec/"
+SPEC_DIR = os.path.dirname(os.path.abspath(__file__)) + "/"
 INDEX_PATH = os.path.join(SPEC_DIR, "index.xml")
 
 def e(t): return sax.escape(str(t)) if t else ""

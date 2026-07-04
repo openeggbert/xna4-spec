@@ -38,7 +38,7 @@
       <overloads>
         <overload signature="GetTexture()">
           <summary><![CDATA[Gets a value from the Textures collection.]]></summary>
-          <syntax><![CDATA[protected ExternalReference&lt;TextureContent&gt; GetTexture (
+          <syntax><![CDATA[protected ExternalReference<TextureContent> GetTexture (
          string key
 )]]></syntax>
           <parameters>
@@ -59,7 +59,7 @@
           <summary><![CDATA[Sets a value in the contained TextureReferenceDictionary object.]]></summary>
           <syntax><![CDATA[protected void SetTexture (
          string key,
-         ExternalReference&lt;TextureContent&gt; value
+         ExternalReference<TextureContent> value
 )]]></syntax>
           <parameters>
             <parameter name="key" type="string"><![CDATA[Name of the key being modified.]]></parameter>

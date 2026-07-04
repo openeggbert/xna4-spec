@@ -4,10 +4,10 @@
           name="FriendCollection" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
-          baseClass="GamerCollection&amp;lt;FriendGamer&amp;gt;"
+          baseClass="GamerCollection&lt;FriendGamer&gt;"
           interfaces="IDisposable">
   <summary><![CDATA[Represents the complete friends list of a local gamer.]]></summary>
-  <syntax><![CDATA[public sealed class FriendCollection : GamerCollection&lt;FriendGamer&gt;, IDisposable]]></syntax>
+  <syntax><![CDATA[public sealed class FriendCollection : GamerCollection<FriendGamer>, IDisposable]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

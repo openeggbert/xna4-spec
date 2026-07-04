@@ -4,9 +4,9 @@
           name="GamerCollection.GamerCollectionEnumerator" kind="struct"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
-          interfaces="IEnumerator&amp;lt;T&amp;gt;, IDisposable, IEnumerator">
+          interfaces="IEnumerator&lt;T&gt;, IDisposable, IEnumerator">
   <summary><![CDATA[Provides the ability to iterate through the gamers in an GamerCollection.]]></summary>
-  <syntax><![CDATA[public struct GamerCollection.GamerCollectionEnumerator&lt;T&gt; : IEnumerator&lt;T&gt;, IDisposable, IEnumerator where T : Gamer]]></syntax>
+  <syntax><![CDATA[public struct GamerCollection.GamerCollectionEnumerator<T> : IEnumerator<T>, IDisposable, IEnumerator where T : Gamer]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

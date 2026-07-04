@@ -4,9 +4,9 @@
           name="ShaderConstantCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IEnumerable&amp;lt;ShaderConstant&amp;gt;">
+          interfaces="IEnumerable&lt;ShaderConstant&gt;">
   <summary><![CDATA[Manipulates a collection of ShaderConstant objects.]]></summary>
-  <syntax><![CDATA[public sealed class ShaderConstantCollection : IEnumerable&lt;ShaderConstant&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class ShaderConstantCollection : IEnumerable<ShaderConstant>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>
@@ -42,7 +42,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Returns an enumerator that can iterate through the ShaderConstantCollection.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;ShaderConstant&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<ShaderConstant> GetEnumerator ()]]></syntax>
           <returns><![CDATA[The iterator.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>

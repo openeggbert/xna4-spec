@@ -110,7 +110,7 @@
           <syntax><![CDATA[public static IAsyncResult BeginShowMessageBox (
          string title,
          string text,
-         IEnumerable&lt;string&gt; buttons,
+         IEnumerable<string> buttons,
          int focusButton,
          MessageBoxIcon icon,
          AsyncCallback callback,
@@ -271,7 +271,7 @@
       <overloads>
         <overload signature="EndShowMessageBox()">
           <summary><![CDATA[Ends the display of a message box.]]></summary>
-          <syntax><![CDATA[public static Nullable&lt;int&gt; EndShowMessageBox (
+          <syntax><![CDATA[public static Nullable<int> EndShowMessageBox (
          IAsyncResult result
 )]]></syntax>
           <parameters>
@@ -328,7 +328,7 @@
           <syntax><![CDATA[public static void ShowComposeMessage (
          PlayerIndex player,
          string text,
-         IEnumerable&lt;Gamer&gt; recipients
+         IEnumerable<Gamer> recipients
 )]]></syntax>
           <parameters>
             <parameter name="player" type="PlayerIndex"><![CDATA[Gamer composing the message.]]></parameter>

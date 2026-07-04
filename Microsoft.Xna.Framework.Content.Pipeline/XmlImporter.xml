@@ -4,9 +4,9 @@
           name="XmlImporter" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
-          baseClass="ContentImporter&amp;lt;Object&amp;gt;">
+          baseClass="ContentImporter&lt;Object&gt;">
   <summary><![CDATA[Implements an importer for reading intermediate XML files. This is a wrapper around IntermediateSerializer.]]></summary>
-  <syntax><![CDATA[public class XmlImporter : ContentImporter&lt;Object&gt;]]></syntax>
+  <syntax><![CDATA[public class XmlImporter : ContentImporter<Object>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

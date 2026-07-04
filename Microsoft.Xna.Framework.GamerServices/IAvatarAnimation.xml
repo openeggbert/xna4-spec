@@ -16,9 +16,9 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="BoneTransforms" type="ReadOnlyCollection&amp;lt;Matrix&amp;gt;" access="get">
+    <property name="BoneTransforms" type="ReadOnlyCollection&lt;Matrix&gt;" access="get">
       <summary><![CDATA[Gets the current position of the bones at the time specified by CurrentPosition.]]></summary>
-      <syntax><![CDATA[public ReadOnlyCollection&lt;Matrix&gt; BoneTransforms { get; }]]></syntax>
+      <syntax><![CDATA[public ReadOnlyCollection<Matrix> BoneTransforms { get; }]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

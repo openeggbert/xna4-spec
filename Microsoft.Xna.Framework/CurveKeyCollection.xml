@@ -4,11 +4,11 @@
           name="CurveKeyCollection" kind="class"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="ICollection&amp;lt;CurveKey&amp;gt;, IEnumerable&amp;lt;CurveKey&amp;gt;, IEnumerable">
+          interfaces="ICollection&lt;CurveKey&gt;, IEnumerable&lt;CurveKey&gt;, IEnumerable">
   <summary><![CDATA[Contains the CurveKeys making up a Curve.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute(System.ComponentModel.ExpandableObjectConverter, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)]
 [SerializableAttribute]
-public class CurveKeyCollection : ICollection&lt;CurveKey&gt;, IEnumerable&lt;CurveKey&gt;, IEnumerable]]></syntax>
+public class CurveKeyCollection : ICollection<CurveKey>, IEnumerable<CurveKey>, IEnumerable]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>
@@ -151,7 +151,7 @@ public class CurveKeyCollection : ICollection&lt;CurveKey&gt;, IEnumerable&lt;Cu
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Returns an enumerator that iterates through the CurveKeyCollection.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;CurveKey&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<CurveKey> GetEnumerator ()]]></syntax>
           <returns><![CDATA[An enumerator for the CurveKeyCollection.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>

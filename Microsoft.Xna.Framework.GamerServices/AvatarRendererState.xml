@@ -13,5 +13,8 @@
     <platform>Windows XP</platform>
   </platforms>
   <members>
+    <member name="Loading"><summary><![CDATA[0]]></summary></member>
+    <member name="Ready"><summary><![CDATA[1]]></summary></member>
+    <member name="Unavailable"><summary><![CDATA[2]]></summary></member>
   </members>
 </xna-type>

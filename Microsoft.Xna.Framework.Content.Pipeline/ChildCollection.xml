@@ -4,9 +4,9 @@
           name="ChildCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
-          baseClass="Collection&amp;lt;TChild&amp;gt;">
+          baseClass="Collection&lt;TChild&gt;">
   <summary><![CDATA[Provides a collection of child objects for a content item.]]></summary>
-  <syntax><![CDATA[public abstract class ChildCollection&lt;TParent,TChild&gt; : Collection&lt;TChild&gt;]]></syntax>
+  <syntax><![CDATA[public abstract class ChildCollection<TParent,TChild> : Collection<TChild>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

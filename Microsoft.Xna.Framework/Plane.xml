@@ -4,11 +4,11 @@
           name="Plane" kind="struct"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IEquatable&amp;lt;Plane&amp;gt;">
+          interfaces="IEquatable&lt;Plane&gt;">
   <summary><![CDATA[Defines a plane.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.PlaneConverter)")]
 [SerializableAttribute]
-public struct Plane : IEquatable&lt;Plane&gt;]]></syntax>
+public struct Plane : IEquatable<Plane>]]></syntax>
   <remarks><![CDATA[The Plane structure represents a plane using a 3D vector normal and a distance value, as the following figure shows.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>

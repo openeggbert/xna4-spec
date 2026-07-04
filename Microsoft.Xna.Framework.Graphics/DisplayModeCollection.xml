@@ -4,9 +4,9 @@
           name="DisplayModeCollection" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IEnumerable&amp;lt;DisplayMode&amp;gt;">
+          interfaces="IEnumerable&lt;DisplayMode&gt;">
   <summary><![CDATA[Manipulates a collection of DisplayMode structures.]]></summary>
-  <syntax><![CDATA[public struct DisplayModeCollection : IEnumerable&lt;DisplayMode&gt;]]></syntax>
+  <syntax><![CDATA[public struct DisplayModeCollection : IEnumerable<DisplayMode>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>
@@ -17,7 +17,7 @@
   <properties>
     <property name="Item" type="Object" access="get">
       <summary><![CDATA[Retrieves the DisplayMode structure with the specified format.]]></summary>
-      <syntax><![CDATA[public IEnumerable&lt;DisplayMode&gt; this [
+      <syntax><![CDATA[public IEnumerable<DisplayMode> this [
          SurfaceFormat format
 ] { get; }]]></syntax>
       <platforms>
@@ -53,7 +53,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Gets an enumerator that can iterate through the DisplayModeCollection.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;DisplayMode&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<DisplayMode> GetEnumerator ()]]></syntax>
           <returns><![CDATA[Enumerator that can iterate through the DisplayModeCollection.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>

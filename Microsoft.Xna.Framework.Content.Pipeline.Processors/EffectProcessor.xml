@@ -4,11 +4,10 @@
           name="EffectProcessor" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          baseClass="ContentProcessor&amp;lt;EffectContent"
-          interfaces="CompiledEffect&amp;gt;">
+          baseClass="ContentProcessor&lt;EffectContent, CompiledEffect&gt;">
   <summary><![CDATA[Processes a string representation to a platform-specific compiled effect.]]></summary>
   <syntax><![CDATA[[ContentProcessorAttribute]
-public class EffectProcessor : ContentProcessor&lt;EffectContent, CompiledEffect&gt;]]></syntax>
+public class EffectProcessor : ContentProcessor<EffectContent, CompiledEffect>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

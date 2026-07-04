@@ -4,10 +4,10 @@
           name="FontDescriptionImporter" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
-          baseClass="ContentImporter&amp;lt;FontDescription&amp;gt;">
+          baseClass="ContentImporter&lt;FontDescription&gt;">
   <summary><![CDATA[Provides methods for reading .spritefont files for use in the Content Pipeline.]]></summary>
   <syntax><![CDATA[[ContentImporterAttribute(".spritefont")]
-public class FontDescriptionImporter : ContentImporter&lt;FontDescription&gt;]]></syntax>
+public class FontDescriptionImporter : ContentImporter<FontDescription>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

@@ -4,9 +4,9 @@
           name="Color" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IPackedVector&amp;lt;UInt32&amp;gt;, IEquatable&amp;lt;Color&amp;gt;">
+          interfaces="IPackedVector&lt;UInt32&gt;, IEquatable&lt;Color&gt;">
   <summary><![CDATA[Represents a color using Red, Green, Blue, and Alpha values.]]></summary>
-  <syntax><![CDATA[public struct Color : IPackedVector&lt;UInt32&gt;, IEquatable&lt;Color&gt;]]></syntax>
+  <syntax><![CDATA[public struct Color : IPackedVector<UInt32>, IEquatable<Color>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

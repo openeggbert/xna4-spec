@@ -24,45 +24,45 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="Alpha" type="Nullable&amp;lt;float&amp;gt;" access="get;set">
+    <property name="Alpha" type="Nullable&lt;float&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;float&gt; Alpha { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<float> Alpha { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="DiffuseColor" type="Nullable&amp;lt;Vector3&amp;gt;" access="get;set">
+    <property name="DiffuseColor" type="Nullable&lt;Vector3&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;Vector3&gt; DiffuseColor { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<Vector3> DiffuseColor { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="EmissiveColor" type="Nullable&amp;lt;Vector3&amp;gt;" access="get;set">
+    <property name="EmissiveColor" type="Nullable&lt;Vector3&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;Vector3&gt; EmissiveColor { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<Vector3> EmissiveColor { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="EnvironmentMap" type="ExternalReference&amp;lt;TextureContent&amp;gt;" access="get;set">
+    <property name="EnvironmentMap" type="ExternalReference&lt;TextureContent&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public ExternalReference&lt;TextureContent&gt; EnvironmentMap { get; set; }]]></syntax>
+      <syntax><![CDATA[public ExternalReference<TextureContent> EnvironmentMap { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="EnvironmentMapAmount" type="Nullable&amp;lt;float&amp;gt;" access="get;set">
+    <property name="EnvironmentMapAmount" type="Nullable&lt;float&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;float&gt; EnvironmentMapAmount { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<float> EnvironmentMapAmount { get; set; }]]></syntax>
       <remarks><![CDATA[If set to zero, the RGB channels of the environment map will be completely ignored (the environment map alpha may still be visible if EnvironmentMapSpecular is greater than zero).]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -70,9 +70,9 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="EnvironmentMapSpecular" type="Nullable&amp;lt;Vector3&amp;gt;" access="get;set">
+    <property name="EnvironmentMapSpecular" type="Nullable&lt;Vector3&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;Vector3&gt; EnvironmentMapSpecular { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<Vector3> EnvironmentMapSpecular { get; set; }]]></syntax>
       <remarks><![CDATA[Use this value to implement cheap specular lighting, by encoding one or more specular highlight patterns into the environment map alpha channel, then setting the EnvironmentMapSpecular to the desired specular light color.]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -80,9 +80,9 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="FresnelFactor" type="Nullable&amp;lt;float&amp;gt;" access="get;set">
+    <property name="FresnelFactor" type="Nullable&lt;float&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public Nullable&lt;float&gt; FresnelFactor { get; set; }]]></syntax>
+      <syntax><![CDATA[public Nullable<float> FresnelFactor { get; set; }]]></syntax>
       <remarks><![CDATA[The default value is 1. Use 0 to disable Fresnel lighting; this makes the environment map visible independent of the viewing angle. Use a higher value to make the environment map visible around silhouette edges; use a lower value to make the environment map visible everywhere. Fresnel lighting only affects the environment map color (RGB values), alpha is not affected. Control the intensity of the color values using EnvironmentMapAmount; control the intensity of the alpha value with EnvironmentMapSpecular.]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -90,9 +90,9 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="Texture" type="ExternalReference&amp;lt;TextureContent&amp;gt;" access="get;set">
+    <property name="Texture" type="ExternalReference&lt;TextureContent&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public ExternalReference&lt;TextureContent&gt; Texture { get; set; }]]></syntax>
+      <syntax><![CDATA[public ExternalReference<TextureContent> Texture { get; set; }]]></syntax>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>

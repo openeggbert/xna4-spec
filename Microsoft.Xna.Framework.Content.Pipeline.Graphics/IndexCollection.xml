@@ -4,9 +4,9 @@
           name="IndexCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="Collection&amp;lt;int&amp;gt;">
+          baseClass="Collection&lt;int&gt;">
   <summary><![CDATA[Provides methods for maintaining a list of index values.]]></summary>
-  <syntax><![CDATA[public sealed class IndexCollection : Collection&lt;int&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class IndexCollection : Collection<int>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>
@@ -30,7 +30,7 @@
         <overload signature="AddRange()">
           <summary><![CDATA[Appends the specified indices into the collection.]]></summary>
           <syntax><![CDATA[public void AddRange (
-         IEnumerable&lt;int&gt; indices
+         IEnumerable<int> indices
 )]]></syntax>
           <parameters>
             <parameter name="indices" type="IEnumerable&lt;int&gt;"><![CDATA[Index into the Positions member of the parent.]]></parameter>

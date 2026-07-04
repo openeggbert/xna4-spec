@@ -31,9 +31,9 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="Data" type="ReadOnlyCollection&amp;lt;byte&amp;gt;" access="get">
+    <property name="Data" type="ReadOnlyCollection&lt;byte&gt;" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
-      <syntax><![CDATA[public ReadOnlyCollection&lt;byte&gt; Data { get; }]]></syntax>
+      <syntax><![CDATA[public ReadOnlyCollection<byte> Data { get; }]]></syntax>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

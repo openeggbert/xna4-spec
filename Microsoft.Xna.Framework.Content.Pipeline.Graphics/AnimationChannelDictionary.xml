@@ -4,9 +4,9 @@
           name="AnimationChannelDictionary" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="NamedValueDictionary&amp;lt;AnimationChannel&amp;gt;">
+          baseClass="NamedValueDictionary&lt;AnimationChannel&gt;">
   <summary><![CDATA[Collection of animation data channels, one per bone or rigid object.]]></summary>
-  <syntax><![CDATA[public sealed class AnimationChannelDictionary : NamedValueDictionary&lt;AnimationChannel&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class AnimationChannelDictionary : NamedValueDictionary<AnimationChannel>]]></syntax>
   <remarks><![CDATA[This collection is based on the name of the object being animated by each channel. Typically, target objects are an instance of BoneContent but can be any NodeContent subclass.]]></remarks>
   <platforms>
     <platform>Windows XP SP2</platform>

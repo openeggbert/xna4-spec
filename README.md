@@ -37,24 +37,24 @@ spec/
 |-----------|-------|
 | Microsoft.Xna.Framework | 47 |
 | Microsoft.Xna.Framework.Graphics | 175 |
-| Microsoft.Xna.Framework.Graphics.PackedVector | 22 |
+| Microsoft.Xna.Framework.Graphics.PackedVector | 21 |
 | Microsoft.Xna.Framework.Audio | 19 |
 | Microsoft.Xna.Framework.Input | 17 |
 | Microsoft.Xna.Framework.Input.Touch | 8 |
 | Microsoft.Xna.Framework.Media | 24 |
 | Microsoft.Xna.Framework.Net | 26 |
 | Microsoft.Xna.Framework.Storage | 3 |
-| Microsoft.Xna.Framework.Content | 12 |
-| Microsoft.Xna.Framework.GamerServices | 54 |
+| Microsoft.Xna.Framework.Content | 11 |
+| Microsoft.Xna.Framework.GamerServices | 53 |
 | Microsoft.Xna.Framework.Design | 13 |
 | Microsoft.Xna.Framework.Content.Pipeline | 32 |
 | Microsoft.Xna.Framework.Content.Pipeline.Audio | 5 |
-| Microsoft.Xna.Framework.Content.Pipeline.Graphics | 47 |
+| Microsoft.Xna.Framework.Content.Pipeline.Graphics | 46 |
 | Microsoft.Xna.Framework.Content.Pipeline.Processors | 28 |
-| Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler | 5 |
-| Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate | 7 |
+| Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler | 4 |
+| Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate | 6 |
 | Microsoft.Xna.Framework.Content.Pipeline.Tasks | 6 |
-| **Total** | **550** |
+| **Total** | **544** |
 
 ## Source
 

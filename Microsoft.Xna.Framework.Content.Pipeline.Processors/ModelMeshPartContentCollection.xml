@@ -4,9 +4,9 @@
           name="ModelMeshPartContentCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          baseClass="ReadOnlyCollection&amp;lt;ModelMeshPartContent&amp;gt;">
+          baseClass="ReadOnlyCollection&lt;ModelMeshPartContent&gt;">
   <summary><![CDATA[Collection of ModelMeshPartContent objects.]]></summary>
-  <syntax><![CDATA[public sealed class ModelMeshPartContentCollection : ReadOnlyCollection&lt;ModelMeshPartContent&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class ModelMeshPartContentCollection : ReadOnlyCollection<ModelMeshPartContent>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

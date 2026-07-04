@@ -4,9 +4,9 @@
           name="Album" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&amp;lt;Album&amp;gt;">
+          interfaces="IEquatable&lt;Album&gt;">
   <summary><![CDATA[Provides access to an album in the media library.]]></summary>
-  <syntax><![CDATA[public sealed class Album : IEquatable&lt;Album&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class Album : IEquatable<Album>]]></syntax>
   <remarks><![CDATA[The Album class provides information about an album, including the album's Name , Artist , and Songs . You can obtain an Album object through the AlbumCollection.Item indexer and the Song.Album property.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>

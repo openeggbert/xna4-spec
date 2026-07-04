@@ -4,10 +4,9 @@
           name="ModelProcessor" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          baseClass="ContentProcessor&amp;lt;NodeContent"
-          interfaces="ModelContent&amp;gt;">
+          baseClass="ContentProcessor&lt;NodeContent, ModelContent&gt;">
   <summary><![CDATA[Processes a game asset mesh to a model content that is optimal for runtime.]]></summary>
-  <syntax><![CDATA[public class ModelProcessor : ContentProcessor&lt;NodeContent, ModelContent&gt;]]></syntax>
+  <syntax><![CDATA[public class ModelProcessor : ContentProcessor<NodeContent, ModelContent>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>
@@ -203,7 +202,7 @@ public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
           <summary><![CDATA[Processes all geometry using a specified material.]]></summary>
           <syntax><![CDATA[protected virtual void ProcessGeometryUsingMaterial (
          MaterialContent material,
-         IEnumerable&lt;GeometryContent&gt; geometryCollection,
+         IEnumerable<GeometryContent> geometryCollection,
          ContentProcessorContext context
 )]]></syntax>
           <parameters>

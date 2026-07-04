@@ -22,17 +22,17 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="CompiledEffect" type="ExternalReference&amp;lt;CompiledEffect&amp;gt;" access="get;set">
+    <property name="CompiledEffect" type="ExternalReference&lt;CompiledEffect&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the compiled effect property.]]></summary>
-      <syntax><![CDATA[public ExternalReference&lt;CompiledEffect&gt; CompiledEffect { get; set; }]]></syntax>
+      <syntax><![CDATA[public ExternalReference<CompiledEffect> CompiledEffect { get; set; }]]></syntax>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Effect" type="ExternalReference&amp;lt;EffectContent&amp;gt;" access="get;set">
+    <property name="Effect" type="ExternalReference&lt;EffectContent&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the effect property.]]></summary>
-      <syntax><![CDATA[public ExternalReference&lt;EffectContent&gt; Effect { get; set; }]]></syntax>
+      <syntax><![CDATA[public ExternalReference<EffectContent> Effect { get; set; }]]></syntax>
       <remarks><![CDATA[Use this value as a shortcut for accessing the EffectKey element.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>

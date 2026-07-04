@@ -271,12 +271,12 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Draw(Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, Vector2, SpriteEffects, Single)">
+        <overload signature="Draw(Texture2D, Vector2, Nullable&lt;Rectangle&gt;, Color, Single, Vector2, Vector2, SpriteEffects, Single)">
           <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, screen position, source rectangle, color tint, rotation, origin, scale, effects, and sort depth.]]></summary>
           <syntax><![CDATA[public void Draw (
          Texture2D texture,
          Vector2 position,
-         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Nullable<Rectangle> sourceRectangle,
          Color color,
          float rotation,
          Vector2 origin,
@@ -319,12 +319,12 @@
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Draw(Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color)">
+        <overload signature="Draw(Texture2D, Vector2, Nullable&lt;Rectangle&gt;, Color)">
           <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, position, source rectangle, and color.]]></summary>
           <syntax><![CDATA[public void Draw (
          Texture2D texture,
          Vector2 position,
-         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Nullable<Rectangle> sourceRectangle,
          Color color
 )]]></syntax>
           <parameters>
@@ -338,12 +338,12 @@
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Draw(Texture2D, Rectangle, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, SpriteEffects, Single)">
+        <overload signature="Draw(Texture2D, Rectangle, Nullable&lt;Rectangle&gt;, Color, Single, Vector2, SpriteEffects, Single)">
           <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, destination and source rectangles, color tint, rotation, origin, effects, and sort depth.]]></summary>
           <syntax><![CDATA[public void Draw (
          Texture2D texture,
          Rectangle destinationRectangle,
-         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Nullable<Rectangle> sourceRectangle,
          Color color,
          float rotation,
          Vector2 origin,
@@ -367,12 +367,12 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Draw(Texture2D, Rectangle, Nullable&amp;lt;Rectangle&amp;gt;, Color)">
+        <overload signature="Draw(Texture2D, Rectangle, Nullable&lt;Rectangle&gt;, Color)">
           <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, destination rectangle, source rectangle, and color.]]></summary>
           <syntax><![CDATA[public void Draw (
          Texture2D texture,
          Rectangle destinationRectangle,
-         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Nullable<Rectangle> sourceRectangle,
          Color color
 )]]></syntax>
           <parameters>
@@ -386,12 +386,12 @@
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Draw(Texture2D, Rectangle, Nullable&amp;lt;Rectangle&amp;gt;, Color)">
+        <overload signature="Draw(Texture2D, Rectangle, Nullable&lt;Rectangle&gt;, Color)">
           <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, destination and source rectangles, and color tint.]]></summary>
           <syntax><![CDATA[public void Draw (
          Texture2D texture,
          Rectangle destinationRectangle,
-         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Nullable<Rectangle> sourceRectangle,
          Color color
 )]]></syntax>
           <parameters>
@@ -407,12 +407,12 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Draw(Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, Vector2, SpriteEffects, Single)">
+        <overload signature="Draw(Texture2D, Vector2, Nullable&lt;Rectangle&gt;, Color, Single, Vector2, Vector2, SpriteEffects, Single)">
           <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, position, source rectangle, color, rotation, origin, scale, effects and layer.]]></summary>
           <syntax><![CDATA[public void Draw (
          Texture2D texture,
          Vector2 position,
-         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Nullable<Rectangle> sourceRectangle,
          Color color,
          float rotation,
          Vector2 origin,
@@ -436,12 +436,12 @@
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Draw(Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, Single, SpriteEffects, Single)">
+        <overload signature="Draw(Texture2D, Vector2, Nullable&lt;Rectangle&gt;, Color, Single, Vector2, Single, SpriteEffects, Single)">
           <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, position, source rectangle, color, rotation, origin, scale, effects, and layer.]]></summary>
           <syntax><![CDATA[public void Draw (
          Texture2D texture,
          Vector2 position,
-         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Nullable<Rectangle> sourceRectangle,
          Color color,
          float rotation,
          Vector2 origin,
@@ -465,12 +465,12 @@
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Draw(Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color)">
+        <overload signature="Draw(Texture2D, Vector2, Nullable&lt;Rectangle&gt;, Color)">
           <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, screen position, source rectangle, and color tint.]]></summary>
           <syntax><![CDATA[public void Draw (
          Texture2D texture,
          Vector2 position,
-         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Nullable<Rectangle> sourceRectangle,
          Color color
 )]]></syntax>
           <parameters>
@@ -503,12 +503,12 @@
             <platform>Windows Phone</platform>
           </platforms>
         </overload>
-        <overload signature="Draw(Texture2D, Rectangle, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, SpriteEffects, Single)">
+        <overload signature="Draw(Texture2D, Rectangle, Nullable&lt;Rectangle&gt;, Color, Single, Vector2, SpriteEffects, Single)">
           <summary><![CDATA[Adds a sprite to a batch of sprites for rendering using the specified texture, destination rectangle, source rectangle, color, rotation, origin, effects and layer.]]></summary>
           <syntax><![CDATA[public void Draw (
          Texture2D texture,
          Rectangle destinationRectangle,
-         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Nullable<Rectangle> sourceRectangle,
          Color color,
          float rotation,
          Vector2 origin,
@@ -549,12 +549,12 @@
             <platform>Windows Vista</platform>
           </platforms>
         </overload>
-        <overload signature="Draw(Texture2D, Vector2, Nullable&amp;lt;Rectangle&amp;gt;, Color, Single, Vector2, Single, SpriteEffects, Single)">
+        <overload signature="Draw(Texture2D, Vector2, Nullable&lt;Rectangle&gt;, Color, Single, Vector2, Single, SpriteEffects, Single)">
           <summary><![CDATA[Adds a sprite to the batch of sprites to be rendered, specifying the texture, screen position, optional source rectangle, color tint, rotation, origin, scale, effects, and sort depth.]]></summary>
           <syntax><![CDATA[public void Draw (
          Texture2D texture,
          Vector2 position,
-         Nullable&lt;Rectangle&gt; sourceRectangle,
+         Nullable<Rectangle> sourceRectangle,
          Color color,
          float rotation,
          Vector2 origin,

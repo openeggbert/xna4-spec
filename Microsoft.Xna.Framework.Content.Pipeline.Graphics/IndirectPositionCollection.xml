@@ -4,9 +4,9 @@
           name="IndirectPositionCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          interfaces="IList&amp;lt;Vector3&amp;gt;, ICollection&amp;lt;Vector3&amp;gt;, IEnumerable&amp;lt;Vector3&amp;gt;, IEnumerable">
+          interfaces="IList&lt;Vector3&gt;, ICollection&lt;Vector3&gt;, IEnumerable&lt;Vector3&gt;, IEnumerable">
   <summary><![CDATA[Provides methods for maintaining a list of vertex positions.]]></summary>
-  <syntax><![CDATA[public sealed class IndirectPositionCollection : IList&lt;Vector3&gt;, ICollection&lt;Vector3&gt;, IEnumerable&lt;Vector3&gt;, IEnumerable]]></syntax>
+  <syntax><![CDATA[public sealed class IndirectPositionCollection : IList<Vector3>, ICollection<Vector3>, IEnumerable<Vector3>, IEnumerable]]></syntax>
   <remarks><![CDATA[This class is designed to collect the vertex positions for a VertexContent object. Use the contents of the PositionIndices property (of the contained VertexContent object) to index into the Positions property of the parent mesh.]]></remarks>
   <platforms>
     <platform>Windows XP SP2</platform>
@@ -79,7 +79,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Gets an enumerator interface for reading the position values.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;Vector3&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<Vector3> GetEnumerator ()]]></syntax>
           <returns><![CDATA[Interface for enumerating the collection of position values.]]></returns>
           <platforms>
             <platform>Windows XP SP2</platform>

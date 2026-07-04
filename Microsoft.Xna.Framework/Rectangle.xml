@@ -4,11 +4,11 @@
           name="Rectangle" kind="struct"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IEquatable&amp;lt;Rectangle&amp;gt;">
+          interfaces="IEquatable&lt;Rectangle&gt;">
   <summary><![CDATA[Defines a rectangle.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.RectangleConverter)")]
 [SerializableAttribute]
-public struct Rectangle : IEquatable&lt;Rectangle&gt;]]></syntax>
+public struct Rectangle : IEquatable<Rectangle>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

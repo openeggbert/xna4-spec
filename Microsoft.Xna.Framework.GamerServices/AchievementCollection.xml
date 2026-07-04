@@ -4,9 +4,9 @@
           name="AchievementCollection" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
-          interfaces="IList&amp;lt;Achievement&amp;gt;, ICollection&amp;lt;Achievement&amp;gt;, IEnumerable&amp;lt;Achievement&amp;gt;, IEnumerable, IDisposable">
+          interfaces="IList&lt;Achievement&gt;, ICollection&lt;Achievement&gt;, IEnumerable&lt;Achievement&gt;, IEnumerable, IDisposable">
   <summary><![CDATA[Collection holding the achievements belonging to a signed-in gamer.]]></summary>
-  <syntax><![CDATA[public sealed class AchievementCollection : IList&lt;Achievement&gt;, ICollection&lt;Achievement&gt;, IEnumerable&lt;Achievement&gt;, IEnumerable, IDisposable]]></syntax>
+  <syntax><![CDATA[public sealed class AchievementCollection : IList<Achievement>, ICollection<Achievement>, IEnumerable<Achievement>, IEnumerable, IDisposable]]></syntax>
   <remarks><![CDATA[This collection may be indexed by key string or integer order. When you are indexing achievements by integer order or iterating over the collection, achievements are ordered with earned achievements first. They are sorted by most-recently earned, then sorted by unearned non-hidden achievements in the order they were defined using XLAST, and finally sorted by any unearned hidden achievements in XLAST order.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>
@@ -80,7 +80,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Gets an enumerator that can iterate through this AchievementCollection.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;Achievement&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<Achievement> GetEnumerator ()]]></syntax>
           <returns><![CDATA[An enumerator for this AchievementCollection.]]></returns>
           <remarks><![CDATA[Warning This method retrieves a calculated result only for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this method returns immediately with a predetermined default value.]]></remarks>
           <platforms>

@@ -4,9 +4,9 @@
           name="Picture" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&amp;lt;Picture&amp;gt;">
+          interfaces="IEquatable&lt;Picture&gt;">
   <summary><![CDATA[Provides access to a picture in the media library.]]></summary>
-  <syntax><![CDATA[public sealed class Picture : IEquatable&lt;Picture&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class Picture : IEquatable<Picture>]]></syntax>
   <remarks><![CDATA[The Picture class provides information about a picture, including the picture's graphic ( GetTexture ), thumbnail ( GetThumbnail ), Name , Date , and Height and Width . You can obtain a Picture object through the PictureCollection.Item indexer.]]></remarks>
   <platforms>
     <platform>Xbox 360</platform>

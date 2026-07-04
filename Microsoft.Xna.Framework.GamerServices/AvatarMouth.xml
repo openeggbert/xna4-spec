@@ -13,5 +13,19 @@
     <platform>Windows XP</platform>
   </platforms>
   <members>
+    <member name="Angry"><summary><![CDATA[Angry mouth position.]]></summary></member>
+    <member name="Confused"><summary><![CDATA[Confused mouth position.]]></summary></member>
+    <member name="Happy"><summary><![CDATA[Happy mouth position.]]></summary></member>
+    <member name="Laughing"><summary><![CDATA[Laughing mouth position.]]></summary></member>
+    <member name="Neutral"><summary><![CDATA[Neutral mouth position.]]></summary></member>
+    <member name="PhoneticAi"><summary><![CDATA[Phonetic "ai" mouth position (for lip sync).]]></summary></member>
+    <member name="PhoneticDth"><summary><![CDATA[Phonetic "dth" mouth position (for lip sync).]]></summary></member>
+    <member name="PhoneticEe"><summary><![CDATA[Phonetic "ee" mouth position (for lip sync).]]></summary></member>
+    <member name="PhoneticFv"><summary><![CDATA[Phonetic "fv" mouth position (for lip sync).]]></summary></member>
+    <member name="PhoneticL"><summary><![CDATA[Phonetic "l" mouth position (for lip sync).]]></summary></member>
+    <member name="PhoneticO"><summary><![CDATA[Phonetic "o" mouth position (for lip sync).]]></summary></member>
+    <member name="PhoneticW"><summary><![CDATA[Phonetic "w" mouth position (for lip sync).]]></summary></member>
+    <member name="Sad"><summary><![CDATA[Sad mouth position.]]></summary></member>
+    <member name="Shocked"><summary><![CDATA[Shocked mouth position.]]></summary></member>
   </members>
 </xna-type>

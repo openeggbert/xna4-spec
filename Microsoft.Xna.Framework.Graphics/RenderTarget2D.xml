@@ -191,9 +191,9 @@
   <fields>
   </fields>
   <events>
-    <event name="ContentLost" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="ContentLost" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Occurs when resources are lost due to a lost device event.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; ContentLost]]></syntax>
+      <syntax><![CDATA[public event EventHandler<EventArgs> ContentLost]]></syntax>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

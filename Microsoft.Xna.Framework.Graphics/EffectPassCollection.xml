@@ -4,9 +4,9 @@
           name="EffectPassCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IEnumerable&amp;lt;EffectPass&amp;gt;">
+          interfaces="IEnumerable&lt;EffectPass&gt;">
   <summary><![CDATA[Manipulates a collection of EffectPass objects.]]></summary>
-  <syntax><![CDATA[public sealed class EffectPassCollection : IEnumerable&lt;EffectPass&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class EffectPassCollection : IEnumerable<EffectPass>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>
@@ -42,7 +42,7 @@
       <overloads>
         <overload signature="GetEnumerator()">
           <summary><![CDATA[Returns an enumerator that can iterate through the collection.]]></summary>
-          <syntax><![CDATA[public IEnumerator&lt;EffectPass&gt; GetEnumerator ()]]></syntax>
+          <syntax><![CDATA[public IEnumerator<EffectPass> GetEnumerator ()]]></syntax>
           <returns><![CDATA[Enumerator that can iterate through the collection.]]></returns>
           <platforms>
             <platform>Xbox 360</platform>

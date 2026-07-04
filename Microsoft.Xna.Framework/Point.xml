@@ -4,11 +4,11 @@
           name="Point" kind="struct"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IEquatable&amp;lt;Point&amp;gt;">
+          interfaces="IEquatable&lt;Point&gt;">
   <summary><![CDATA[Defines a point in 2D space.]]></summary>
   <syntax><![CDATA[[TypeConverterAttribute("typeof(Microsoft.Xna.Framework.Design.PointConverter)")]
 [SerializableAttribute]
-public struct Point : IEquatable&lt;Point&gt;]]></syntax>
+public struct Point : IEquatable<Point>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

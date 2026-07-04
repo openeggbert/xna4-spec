@@ -119,24 +119,24 @@
   <fields>
   </fields>
   <events>
-    <event name="Draw" type="EventHandler&amp;lt;GameTimerEventArgs&amp;gt;">
+    <event name="Draw" type="EventHandler&lt;GameTimerEventArgs&gt;">
       <summary><![CDATA[This event is available only when developing for Windows Phone.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;GameTimerEventArgs&gt; Draw]]></syntax>
+      <syntax><![CDATA[public event EventHandler<GameTimerEventArgs> Draw]]></syntax>
       <remarks><![CDATA[This action is fired after all frame and update events; this event is only fired on frames during which an Update event was fired.]]></remarks>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
     </event>
-    <event name="FrameAction" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="FrameAction" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[This event is available only when developing for Windows Phone.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;EventArgs&gt; FrameAction]]></syntax>
+      <syntax><![CDATA[public event EventHandler<EventArgs> FrameAction]]></syntax>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
     </event>
-    <event name="Update" type="EventHandler&amp;lt;GameTimerEventArgs&amp;gt;">
+    <event name="Update" type="EventHandler&lt;GameTimerEventArgs&gt;">
       <summary><![CDATA[This event is available only when developing for Windows Phone.]]></summary>
-      <syntax><![CDATA[public event EventHandler&lt;GameTimerEventArgs&gt; Update]]></syntax>
+      <syntax><![CDATA[public event EventHandler<GameTimerEventArgs> Update]]></syntax>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>

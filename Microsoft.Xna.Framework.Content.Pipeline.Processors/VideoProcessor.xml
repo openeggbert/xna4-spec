@@ -4,10 +4,9 @@
           name="VideoProcessor" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          baseClass="ContentProcessor&amp;lt;VideoContent"
-          interfaces="VideoContent&amp;gt;">
+          baseClass="ContentProcessor&lt;VideoContent, VideoContent&gt;">
   <summary><![CDATA[Processes videos for playback within a game.]]></summary>
-  <syntax><![CDATA[public class VideoProcessor : ContentProcessor&lt;VideoContent, VideoContent&gt;]]></syntax>
+  <syntax><![CDATA[public class VideoProcessor : ContentProcessor<VideoContent, VideoContent>]]></syntax>
   <platforms>
     <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
     <platform>Xbox 360</platform>

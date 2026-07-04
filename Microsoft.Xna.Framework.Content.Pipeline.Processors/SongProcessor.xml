@@ -4,10 +4,9 @@
           name="SongProcessor" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          baseClass="ContentProcessor&amp;lt;AudioContent"
-          interfaces="SongContent&amp;gt;">
+          baseClass="ContentProcessor&lt;AudioContent, SongContent&gt;">
   <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
-  <syntax><![CDATA[public class SongProcessor : ContentProcessor&lt;AudioContent, SongContent&gt;]]></syntax>
+  <syntax><![CDATA[public class SongProcessor : ContentProcessor<AudioContent, SongContent>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

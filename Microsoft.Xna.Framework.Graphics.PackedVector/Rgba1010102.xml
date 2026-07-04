@@ -4,9 +4,9 @@
           name="Rgba1010102" kind="struct"
           namespace="Microsoft.Xna.Framework.Graphics.PackedVector"
           assembly="Microsoft.Xna.Framework.Graphics.PackedVector"
-          interfaces="IPackedVector&amp;lt;UInt32&amp;gt;, IEquatable&amp;lt;Rgba1010102&amp;gt;">
+          interfaces="IPackedVector&lt;UInt32&gt;, IEquatable&lt;Rgba1010102&gt;">
   <summary><![CDATA[Packed vector type containing unsigned normalized values, ranging from 0 to 1, using 10 bits each for x, y, and z, and 2 bits for w.]]></summary>
-  <syntax><![CDATA[public struct Rgba1010102 : IPackedVector&lt;UInt32&gt;, IEquatable&lt;Rgba1010102&gt;]]></syntax>
+  <syntax><![CDATA[public struct Rgba1010102 : IPackedVector<UInt32>, IEquatable<Rgba1010102>]]></syntax>
   <platforms>
     <platform>Xbox 360</platform>
     <platform>Windows XP SP2</platform>

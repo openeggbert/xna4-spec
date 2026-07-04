@@ -4,9 +4,9 @@
           name="AnimationContentDictionary" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="NamedValueDictionary&amp;lt;AnimationContent&amp;gt;">
+          baseClass="NamedValueDictionary&lt;AnimationContent&gt;">
   <summary><![CDATA[Collection of named animations.]]></summary>
-  <syntax><![CDATA[public sealed class AnimationContentDictionary : NamedValueDictionary&lt;AnimationContent&gt;]]></syntax>
+  <syntax><![CDATA[public sealed class AnimationContentDictionary : NamedValueDictionary<AnimationContent>]]></syntax>
   <platforms>
     <platform>Windows XP SP2</platform>
     <platform>Windows Vista</platform>

@@ -38,7 +38,7 @@
         <overload signature="Validate()">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public override void Validate (
-         Nullable&lt;GraphicsProfile&gt; targetProfile
+         Nullable<GraphicsProfile> targetProfile
 )]]></syntax>
           <parameters>
             <parameter name="targetProfile" type="Nullable&lt;GraphicsProfile&gt;"><![CDATA[&lt; GraphicsProfile &gt; The profile identifier that defines the capabilities of the device.]]></parameter>

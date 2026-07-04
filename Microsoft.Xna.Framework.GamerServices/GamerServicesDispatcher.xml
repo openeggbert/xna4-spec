@@ -78,9 +78,9 @@
   <fields>
   </fields>
   <events>
-    <event name="InstallingTitleUpdate" type="EventHandler&amp;lt;EventArgs&amp;gt;">
+    <event name="InstallingTitleUpdate" type="EventHandler&lt;EventArgs&gt;">
       <summary><![CDATA[Notifies the game when a Games for Windows - LIVE title update is being installed.]]></summary>
-      <syntax><![CDATA[public static event EventHandler&lt;EventArgs&gt; InstallingTitleUpdate]]></syntax>
+      <syntax><![CDATA[public static event EventHandler<EventArgs> InstallingTitleUpdate]]></syntax>
       <remarks><![CDATA[Gamer services and networking functionality is no longer available after this event has been raised: games should typically exit in response to InstallingTitleUpdate . If you are using the GamerServicesComponent , this event is automatically hooked up to call Exit , so you do not need to do anything special to handle title updates.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
