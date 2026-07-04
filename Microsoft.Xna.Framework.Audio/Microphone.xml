@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="Microphone" kind="class"
           namespace="Microsoft.Xna.Framework.Audio"
-          assembly="Microsoft.Xna.Framework.Audio">
+          assembly="Microsoft.Xna.Framework.Audio"
+          modifier="sealed">
   <summary><![CDATA[Provides properties, methods, and fields and events for capturing audio data with microphones.]]></summary>
   <syntax><![CDATA[public sealed class Microphone]]></syntax>
   <platforms>
@@ -19,6 +20,7 @@
     <property name="All" type="ReadOnlyCollection&lt;Microphone&gt;" access="get" isStatic="true">
       <summary><![CDATA[Returns the collection of all currently-available microphones.]]></summary>
       <syntax><![CDATA[public static ReadOnlyCollection<Microphone> All { get; }]]></syntax>
+      <value><![CDATA[The collection of microphones.]]></value>
       <remarks><![CDATA[Windows Phone Specific Information This property will always return the default microphone on Windows Phone, and it will only return one device.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -31,6 +33,11 @@
     <property name="BufferDuration" type="TimeSpan" access="get;set">
       <summary><![CDATA[Gets or sets audio capture buffer duration of the microphone.]]></summary>
       <syntax><![CDATA[public TimeSpan BufferDuration { get; set; }]]></syntax>
+      <value><![CDATA[The duration of the audio capture buffer.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[The exception that is thrown if BufferDuration is less than 100 milliseconds or is greater than 1000 milliseconds.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[The exception that is thrown if BufferDuration is not aligned by 10 milliseconds.]]></exception>
+      </exceptions>
       <remarks><![CDATA[The duration of the capture buffer must be between 100ms and 1000ms. Additionally, the capture buffer must be 10ms aligned (BufferDuration % 10 == 0). Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. BufferDuration throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -43,6 +50,7 @@
     <property name="Default" type="Microphone" access="get" isStatic="true">
       <summary><![CDATA[Returns the default attached microphone.]]></summary>
       <syntax><![CDATA[public static Microphone Default { get; }]]></syntax>
+      <value><![CDATA[The default microphone; returns null if there are no microphones attached.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -54,6 +62,7 @@
     <property name="IsHeadset" type="bool" access="get">
       <summary><![CDATA[Determines if the microphone is a wired headset or a Bluetooth device.]]></summary>
       <syntax><![CDATA[public bool IsHeadset { get; }]]></syntax>
+      <value><![CDATA[If the microphone is a headset, the value is true; otherwise it is false.]]></value>
       <remarks><![CDATA[Always returns true for Windows Phone devices.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -66,6 +75,7 @@
     <property name="SampleRate" type="int" access="get">
       <summary><![CDATA[Returns the sample rate at which the microphone is capturing audio data.]]></summary>
       <syntax><![CDATA[public int SampleRate { get; }]]></syntax>
+      <value><![CDATA[Sample rate of audio data being captured, in Hertz (Hz).]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -77,6 +87,7 @@
     <property name="State" type="MicrophoneState" access="get">
       <summary><![CDATA[Returns the recording state of the Microphone object.]]></summary>
       <syntax><![CDATA[public MicrophoneState State { get; }]]></syntax>
+      <value><![CDATA[Enumeration that indicates whether the recording state of the Microphone has started or stopped.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -99,6 +110,9 @@
             <parameter name="buffer" type="byte[]"><![CDATA[Buffer, in bytes, containing the captured audio data. The audio format must be PCM wave data.]]></parameter>
           </parameters>
           <returns><![CDATA[The buffer size, in bytes, of the audio data.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[buffer is null, has zero length, or does not satisfy alignment requirements.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. GetData throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications . For information about an audio format using XNA Game Studio, see Audio API Developers Guide .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -121,6 +135,9 @@
             <parameter name="count" type="int"><![CDATA[Amount, in bytes, of desired audio data.]]></parameter>
           </parameters>
           <returns><![CDATA[The buffer size, in bytes, of the audio data.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The exception thrown when the following arguments are invalid: buffer is null, has zero length, or does not satisfy alignment requirements. offset is less than zero, is greater than or equal to the size of the buffer, or does not satisfy alignment requirements. The sum of count and offset is greater than the size of the buffer, count is less than or equal to zero, or does not satisfy alignment requirements.]]></exception>
+          </exceptions>
           <remarks><![CDATA[For information about an audio format using XNA Game Studio, see Audio API Developers Guide .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -132,7 +149,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetSampleDuration" returnType="void">
+    <method name="GetSampleDuration" returnType="TimeSpan">
       <summary><![CDATA[Returns the duration of audio playback based on the size of the buffer.]]></summary>
       <overloads>
         <overload signature="GetSampleDuration()">
@@ -155,7 +172,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetSampleSizeInBytes" returnType="void">
+    <method name="GetSampleSizeInBytes" returnType="int">
       <summary><![CDATA[Returns the size of the byte array required to hold the specified duration of audio for this microphone object.]]></summary>
       <overloads>
         <overload signature="GetSampleSizeInBytes()">

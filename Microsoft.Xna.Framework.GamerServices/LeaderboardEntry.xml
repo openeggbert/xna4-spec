@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="LeaderboardEntry" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
-          assembly="Microsoft.Xna.Framework.GamerServices">
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          modifier="sealed">
   <summary><![CDATA[Class representing a single row of a leaderboard, holding all the information a specific gamer has uploaded to the board.]]></summary>
   <syntax><![CDATA[public sealed class LeaderboardEntry]]></syntax>
   <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
@@ -20,6 +21,7 @@
     <property name="Columns" type="PropertyDictionary" access="get">
       <summary><![CDATA[Provides access to the columns for this leaderboard entry.]]></summary>
       <syntax><![CDATA[public PropertyDictionary Columns { get; }]]></syntax>
+      <value><![CDATA[A PropertyDictionary containing columns information for this leaderboard entry.]]></value>
       <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -32,6 +34,7 @@
     <property name="Gamer" type="Gamer" access="get">
       <summary><![CDATA[Provides access to gamer information for this leaderboard entry.]]></summary>
       <syntax><![CDATA[public Gamer Gamer { get; }]]></syntax>
+      <value><![CDATA[The gamer associated with this leaderboard entry.]]></value>
       <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -44,6 +47,7 @@
     <property name="Rating" type="long" access="get;set">
       <summary><![CDATA[Provides access to the rating associated with this leaderboard entry.]]></summary>
       <syntax><![CDATA[public long Rating { get; set; }]]></syntax>
+      <value><![CDATA[The rating for this leaderboard entry.]]></value>
       <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

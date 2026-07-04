@@ -43,6 +43,7 @@
     <property name="CacheImportedData" type="bool" access="get;set">
       <summary><![CDATA[Gets and sets the caching of the content during importation.]]></summary>
       <syntax><![CDATA[public bool CacheImportedData { get; set; }]]></syntax>
+      <value><![CDATA[If true, imported content is cached in an intermediate file (managed by XNA). By default, caching is not enabled.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -51,6 +52,7 @@
     <property name="DefaultProcessor" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the name of the default processor for content read by this importer.]]></summary>
       <syntax><![CDATA[public string DefaultProcessor { get; set; }]]></syntax>
+      <value><![CDATA[Name of the processor to be used as the default.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -59,6 +61,7 @@
     <property name="DisplayName" type="Object" access="get;set">
       <summary><![CDATA[Gets or sets the string representing the importer in a user interface. This name is not used by the content pipeline and should not be passed to the BuildAssets task. It is used for display purposes only.]]></summary>
       <syntax><![CDATA[public virtual string DisplayName { get; set; }]]></syntax>
+      <value><![CDATA[Name displayed in the user interface.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -67,6 +70,7 @@
     <property name="FileExtensions" type="IEnumerable&lt;string&gt;" access="get">
       <summary><![CDATA[Gets the supported file name extensions of the importer.]]></summary>
       <syntax><![CDATA[public IEnumerable<string> FileExtensions { get; }]]></syntax>
+      <value><![CDATA[An enumerated list of supported file name extensions. Extensions are prefixed by '.' .]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

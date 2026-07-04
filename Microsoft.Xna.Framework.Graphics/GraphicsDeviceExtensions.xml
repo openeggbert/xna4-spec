@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="GraphicsDeviceExtensions" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="static">
   <summary><![CDATA[System.Object &nbsp;&nbsp;Microsoft.Xna.Framework.Graphics.GraphicsDeviceExtensions]]></summary>
   <syntax><![CDATA[public static class GraphicsDeviceExtensions]]></syntax>
   <constructors>
@@ -11,7 +12,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="SetSharingMode" returnType="void">
+    <method name="SetSharingMode" returnType="void" isStatic="true">
       <summary><![CDATA[Enables or disables sharing a graphics device between Silverlight and XNA.]]></summary>
       <overloads>
         <overload signature="SetSharingMode()">

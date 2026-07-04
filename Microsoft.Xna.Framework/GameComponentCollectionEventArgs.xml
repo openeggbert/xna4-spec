@@ -32,6 +32,7 @@
     <property name="GameComponent" type="IGameComponent" access="get">
       <summary><![CDATA[The game component affected by the event.]]></summary>
       <syntax><![CDATA[public IGameComponent GameComponent { get; }]]></syntax>
+      <value><![CDATA[The game component affected by the event.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

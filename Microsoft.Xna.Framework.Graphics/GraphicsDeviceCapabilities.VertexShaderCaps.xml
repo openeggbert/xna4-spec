@@ -17,6 +17,7 @@
     <property name="DynamicFlowControlDepth" type="int" access="get">
       <summary><![CDATA[Gets a value specifying the depth of the dynamic flow control instruction nesting.]]></summary>
       <syntax><![CDATA[public int DynamicFlowControlDepth { get; }]]></syntax>
+      <value><![CDATA[The depth of the dynamic flow control instruction nesting; either 0 or 24.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="NumberTemps" type="int" access="get">
       <summary><![CDATA[Gets a value specifying the number of temporary registers supported.]]></summary>
       <syntax><![CDATA[public int NumberTemps { get; }]]></syntax>
+      <value><![CDATA[The number of temporary registers supported.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +37,7 @@
     <property name="StaticFlowControlDepth" type="int" access="get">
       <summary><![CDATA[Gets a value specifying the depth of nesting of the loop - vs/rep - vs and call - vs/callnz bool - vs instructions.]]></summary>
       <syntax><![CDATA[public int StaticFlowControlDepth { get; }]]></syntax>
+      <value><![CDATA[The depth of nesting of the loop - vs/rep - vs and call - vs/callnz bool - vs instructions.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +47,7 @@
     <property name="SupportsPredication" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether instruction predication is supported.]]></summary>
       <syntax><![CDATA[public bool SupportsPredication { get; }]]></syntax>
+      <value><![CDATA[true if instruction predication is supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -52,7 +56,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

@@ -17,6 +17,7 @@
     <property name="DrawOrder" type="Object" access="get">
       <summary><![CDATA[The order in which to draw this object relative to other objects. Objects with a lower value are drawn first.]]></summary>
       <syntax><![CDATA[public virtual abstract int DrawOrder { get; }]]></syntax>
+      <value><![CDATA[Order in which to draw this object relative to other objects.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="Visible" type="Object" access="get">
       <summary><![CDATA[Indicates whether IDrawable.Draw should be called in Game.Draw for this game component.]]></summary>
       <syntax><![CDATA[public virtual abstract bool Visible { get; }]]></syntax>
+      <value><![CDATA[true if Draw should be called; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

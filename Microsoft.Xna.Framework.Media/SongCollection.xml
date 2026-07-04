@@ -4,7 +4,8 @@
           name="SongCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEnumerable&lt;Song&gt;, IEnumerable">
+          interfaces="IEnumerable&lt;Song&gt;, IEnumerable"
+          modifier="sealed">
   <summary><![CDATA[A collection of songs in the song library.]]></summary>
   <syntax><![CDATA[public sealed class SongCollection : IEnumerable<Song>, IEnumerable]]></syntax>
   <remarks><![CDATA[The SongCollection class provides access to songs in the device's song library. Use the MediaLibrary.Songs property to obtain the following collections: All songs in the media library. Songs on a particular album. Songs associated with a particular artist. Songs associated with a particular genre. The SongCollection does not immediately instantiate instances of all songs in the collection. Instead, individual Song objects are created each time a user accesses a song through the collection's Item indexer. See the Remarks section of Item for the resource implications of maintaining references to multiple Song objects. Note All of the collections, playlists, and queues returned by methods and properties in the Microsoft.Xna.Framework.Media namespace are immutable. You cannot add or remove objects from those collections or playlists. To create a custom 'playlist' of songs, games must maintain their own list of songs to play, and play those songs one at a time by calling MediaPlayer.Play .]]></remarks>
@@ -20,6 +21,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of Song objects in the SongCollection.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[Number of Song objects in this SongCollection.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -30,6 +32,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -43,6 +46,7 @@
       <syntax><![CDATA[public Song this [
          int index
 ] { get; }]]></syntax>
+      <value><![CDATA[A new Song representing the song at the specified index in this SongCollection.]]></value>
       <remarks><![CDATA[Each call returns a new Song instance. Song resources such as the album, artist, and genre are cached in each Song instance. Retrieving and maintaining references to multiple instances of the same song, and then accessing the album, artist, or genre on each of those instances, creates multiple copies of the album, artist, or genre. Because large numbers of album art textures can consume considerable memory, it is not advisable to hold a large number of Song objects on which Song.Album . GetAlbumArt has been called.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -84,7 +88,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="IEnumerator&lt;Song&gt;">
       <summary><![CDATA[Returns an enumerator that iterates through the SongCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">

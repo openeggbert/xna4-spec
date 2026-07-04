@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="IntermediateSerializer" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
+          modifier="sealed">
   <summary><![CDATA[Provides methods for reading and writing XNA intermediate XML format.]]></summary>
   <syntax><![CDATA[public sealed class IntermediateSerializer]]></syntax>
   <platforms>
@@ -15,7 +16,31 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetTypeSerializer" returnType="void">
+    <method name="Deserialize" returnType="T" isStatic="true">
+      <summary><![CDATA[Deserializes an intermediate XML file into a managed object.]]></summary>
+      <overloads>
+        <overload signature="Deserialize()">
+          <summary><![CDATA[Deserializes an intermediate XML file into a managed object.]]></summary>
+          <syntax><![CDATA[public static T Deserialize<T> (
+         XmlReader input,
+         string referenceRelocationPath
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type to deserialize.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="input" type="XmlReader"><![CDATA[Intermediate XML file.]]></parameter>
+            <parameter name="referenceRelocationPath" type="string"><![CDATA[Final name of the output file used to relative encode external reference filenames.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The deserialized type.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetTypeSerializer" returnType="ContentTypeSerializer">
       <summary><![CDATA[Retrieves the worker serializer for a specified type.]]></summary>
       <overloads>
         <overload signature="GetTypeSerializer()">
@@ -27,6 +52,31 @@
             <parameter name="type" type="Type"><![CDATA[The type.]]></parameter>
           </parameters>
           <returns><![CDATA[The worker serializer]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Serialize" returnType="void" isStatic="true">
+      <summary><![CDATA[Serializes an object into an intermediate XML file.]]></summary>
+      <overloads>
+        <overload signature="Serialize()">
+          <summary><![CDATA[Serializes an object into an intermediate XML file.]]></summary>
+          <syntax><![CDATA[public static void Serialize<T> (
+         XmlWriter output,
+         T value,
+         string referenceRelocationPath
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of value .]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="output" type="XmlWriter"><![CDATA[The output XML stream.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[The object to be serialized.]]></parameter>
+            <parameter name="referenceRelocationPath" type="string"><![CDATA[Final name of the output file, used to relative encode external reference filenames.]]></parameter>
+          </parameters>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>

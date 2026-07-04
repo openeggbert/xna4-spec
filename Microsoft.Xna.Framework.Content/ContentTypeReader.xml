@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ContentTypeReader" kind="class"
           namespace="Microsoft.Xna.Framework.Content"
-          assembly="Microsoft.Xna.Framework.Content">
+          assembly="Microsoft.Xna.Framework.Content"
+          modifier="abstract">
   <summary><![CDATA[Worker for reading a specific managed type from a binary format.]]></summary>
   <syntax><![CDATA[public abstract class ContentTypeReader]]></syntax>
   <platforms>
@@ -40,6 +41,7 @@
     <property name="CanDeserializeIntoExistingObject" type="Object" access="get">
       <summary><![CDATA[Determines if deserialization into an existing object is possible.]]></summary>
       <syntax><![CDATA[public virtual bool CanDeserializeIntoExistingObject { get; }]]></syntax>
+      <value><![CDATA[true if the object can be deserialized into; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -51,6 +53,7 @@
     <property name="TargetType" type="Type" access="get">
       <summary><![CDATA[Gets the type handled by this reader component.]]></summary>
       <syntax><![CDATA[public Type TargetType { get; }]]></syntax>
+      <value><![CDATA[The type handled by this reader component.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -60,6 +63,7 @@
     <property name="TypeVersion" type="Object" access="get">
       <summary><![CDATA[Gets a format version number for this type.]]></summary>
       <syntax><![CDATA[public virtual int TypeVersion { get; }]]></syntax>
+      <value><![CDATA[The version number for this type.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -114,6 +118,9 @@
             <parameter name="existingInstance" type="Object"><![CDATA[An existing object to read into.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Object The object that was read.]]></returns>
+          <exceptions>
+            <exception type="ContentLoadException"><![CDATA[Error loading the object. File contains an object of a type other than the type requested.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>

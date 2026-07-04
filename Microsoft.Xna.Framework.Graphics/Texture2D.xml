@@ -32,6 +32,12 @@
         <parameter name="usage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this texture resource. If the texture is to be used as a destination texture in a call to GraphicsDevice.ResolveBackBuffer , this value must be ResourceUsage.ResolveTarget .]]></parameter>
         <parameter name="format" type="SurfaceFormat"><![CDATA[A SurfaceFormat value specifying the requested pixel format for the texture. The returned texture may be of a different format if the device does not support the requested format. Applications should check the format of the returned texture to ensure that it matches the requested format.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentException"><![CDATA[One of the following conditions is true: width is larger than MaxTextureWidth. height is larger than MaxTextureHeight. numberLevels is greater than 32. Textures have a maximum of 32 levels. usage is not a valid value. Texture resources cannot be created with usage type ResourceUsage.ResolveTarget. Texture resource can only be created with the following ResourceUsage options: ResourceUsage.AutoGenerateMipMap, ResourceUsage.Dynamic, ResourceUsage.Tiled, ResourceUsage.Linear and ResourceUsage.Automatic. format is SurfaceFormat.Unknown. Textures cannot be created using SurfaceFormat.Unknown. resourceManagementMode is not a valid value. resourceManagementMode must be either ResourceManagementMode.Manual or ResourceManagementMode.Automatic. The parameters specified are not compatible: format and numberLevels are incompatible. Multi-element textures of type SurfaceFormat.Multi2Bgra32 cannot be mipmapped, set numberLevels to 1. usage and numberLevels are incompatible. Textures specifying the usage ResourceUsage.AutoGenerateMipMap must set numberLevels to either 0 or 1. usage and resourceManagementMode are incompatible. Textures using ResourceManagementMode.Automatic cannot specify ResourceUsage.Dynamic or ResourceUsage.ResolveTarget. The format and usage requested are not supported by the graphics device. The device does not support creating a texture of the given format with the given ResourceUsage.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[width or height is less than or equal to zero. width and height must be greater than zero.]]></exception>
+        <exception type="OutOfVideoMemoryException"><![CDATA[Unable to create this resource on the graphics device.]]></exception>
+      </exceptions>
       <remarks><![CDATA[A texel represents the smallest unit of a texture that can be read from or written to by the GPU. A texel is composed of 1 to 4 components. Specifically, a texel may be any one of the available texture formats represented in the SurfaceFormat enumeration. A Texture2D resource contains a 2D grid of texels. Each texel is addressable by a u, v vector. Since it is a texture resource, it may contain mipmap levels. Figure 1 shows a fully populated 2D texture resource. Figure 1.&nbsp;&nbsp;Texture2D Resource Architecture This texture resource contains a single 3×5 texture with three mipmap levels.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -51,6 +57,9 @@
         <parameter name="width" type="Int32"><![CDATA[Texture width.]]></parameter>
         <parameter name="height" type="Int32"><![CDATA[Texture height.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="NotSupportedException"><![CDATA[One or more of the following is true: The profile does not support the requested format. The profile supports a maximum texture size of 2048. The profile supports a maximum texture aspect ratio of 2048. The profile requires mipmapped texture size to be a power of two. To use a non power of two size, remove the mipmaps. The profile requires DXT compressed texture size to be a power of two. To use a non power of two size, disable DXT compression.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -75,6 +84,12 @@
         <parameter name="format" type="SurfaceFormat"><![CDATA[A SurfaceFormat value specifying the requested pixel format for the texture. The returned texture may be of a different format if the device does not support the requested format. Applications should check the format of the returned texture to ensure that it matches the requested format.]]></parameter>
         <parameter name="resourceManagementMode" type="ResourceManagementMode"><![CDATA[The memory management mode for this texture resource. If this value is ResourceManagementMode.Automatic , the runtime will recreate the resource when the graphics device is reset. If this value is ResourceManagementMode.Manual , this resource should be reinitialized when the graphics device is reset.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentException"><![CDATA[One of the following conditions is true: width is larger than MaxTextureWidth. height is larger than MaxTextureHeight. numberLevels is greater than 32. Textures have a maximum of 32 levels. usage is not a valid value. Texture resources can only be created with the following ResourceUsage options: ResourceUsage.AutoGenerateMipMap, ResourceUsage.ResolveTarget, ResourceUsage.Dynamic, ResourceUsage.Tiled, ResourceUsage.Linear and ResourceUsage.Automatic. format is SurfaceFormat.Unknown. Textures cannot be created using SurfaceFormat.Unknown. resourceManagementMode is not a valid value. resourceManagementMode must be either ResourceManagementMode.Manual or ResourceManagementMode.Automatic. The parameters specified are not compatible: format and numberLevels are incompatible. Multi-element textures of type SurfaceFormat.Multi2Bgra32 cannot be mipmapped, set numberLevels to 1. usage and numberLevels are incompatible. Textures specifying the usage ResourceUsage.AutoGenerateMipMap must set numberLevels to either 0 or 1. usage and resourceManagementMode are incompatible. Textures using ResourceManagementMode.Automatic cannot specify ResourceUsage.Dynamic or ResourceUsage.ResolveTarget. The format and usage requested are not supported by the graphics device. The device does not support creating a texture of the given format with the given ResourceUsage.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[width or height is less than or equal to zero. width and height must be greater than zero.]]></exception>
+        <exception type="OutOfVideoMemoryException"><![CDATA[Unable to create this resource on the graphics device.]]></exception>
+      </exceptions>
       <remarks><![CDATA[A texel represents the smallest unit of a texture that can be read from or written to by the GPU. A texel is composed of 1 to 4 components. Specifically, a texel may be any one of the available texture formats represented in the SurfaceFormat enumeration. A Texture2D resource contains a 2D grid of texels. Each texel is addressable by a u, v vector. Since it is a texture resource, it may contain mipmap levels. Figure 1 shows a fully populated 2D texture resource. Figure 1.&nbsp;&nbsp;Texture2D Resource Architecture This texture resource contains a single 3×5 texture with three mipmap levels.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -98,6 +113,9 @@
         <parameter name="mipMap" type="Boolean"><![CDATA[[ MarshalAsAttribute (U1)] True to generate a full mipmap chain; false otherwise.]]></parameter>
         <parameter name="format" type="SurfaceFormat"><![CDATA[Texture data format.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="NotSupportedException"><![CDATA[One or more of the following is true: The profile does not support the requested format. The profile supports a maximum texture size of 2048. The profile supports a maximum texture aspect ratio of 2048. The profile requires mipmapped texture size to be a power of two. To use a non power of two size, remove the mipmaps. The profile requires DXT compressed texture size to be a power of two. To use a non power of two size, disable DXT compression.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -107,6 +125,7 @@
     <property name="Bounds" type="Rectangle" access="get">
       <summary><![CDATA[Gets the size of this resource.]]></summary>
       <syntax><![CDATA[public Rectangle Bounds { get; }]]></syntax>
+      <value><![CDATA[A bounding-box rectangle.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -117,6 +136,7 @@
     <property name="Format" type="SurfaceFormat" access="get">
       <summary><![CDATA[Gets the pixel format of this texture resource.]]></summary>
       <syntax><![CDATA[public SurfaceFormat Format { get; }]]></syntax>
+      <value><![CDATA[The pixel format of this texture resource.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -126,6 +146,7 @@
     <property name="Height" type="int" access="get">
       <summary><![CDATA[Gets the height of this texture resource, in pixels.]]></summary>
       <syntax><![CDATA[public int Height { get; }]]></syntax>
+      <value><![CDATA[The height of this texture resource, in pixels.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -135,6 +156,7 @@
     <property name="ResourceManagementMode" type="ResourceManagementMode" access="get">
       <summary><![CDATA[Gets the class of memory allocated for this texture resource.]]></summary>
       <syntax><![CDATA[public ResourceManagementMode ResourceManagementMode { get; }]]></syntax>
+      <value><![CDATA[The class of memory allocated for this texture resource. If this value is ResourceManagementMode.Automatic, the runtime will recreate the resource when the graphics device is reset. If this value is ResourceManagementMode.Manual, this resource should be re-initialized when the graphics device is reset.]]></value>
       <remarks><![CDATA[On Windows, GetData and SetData will fail if Texture2D.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target. If this value is ResourceManagementMode.Automatic , Texture2D.ResourceUsage cannot be ResourceUsage.Dynamic .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -145,6 +167,7 @@
     <property name="ResourceUsage" type="ResourceUsage" access="get">
       <summary><![CDATA[Gets a set of options identifying the behaviors of this resource.]]></summary>
       <syntax><![CDATA[public ResourceUsage ResourceUsage { get; }]]></syntax>
+      <value><![CDATA[A set of options identifying the behaviors of this resource.]]></value>
       <remarks><![CDATA[If Texture2D.ResourceManagementMode is ResourceManagementMode.Automatic , this value cannot be ResourceUsage.Dynamic .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -155,6 +178,7 @@
     <property name="Width" type="int" access="get">
       <summary><![CDATA[Gets the width of this texture resource, in pixels.]]></summary>
       <syntax><![CDATA[public int Width { get; }]]></syntax>
+      <value><![CDATA[The width of this texture resource, in pixels.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -231,6 +255,11 @@
             <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[The parameters to use when creating this texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -252,6 +281,11 @@
             <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[The parameters to use when creating this texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -271,6 +305,15 @@
             <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[The parameters to use when creating this texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[filename is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The filename parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in filename was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[filename is in an invalid format.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -288,6 +331,15 @@
             <parameter name="filename" type="string"><![CDATA[The name of the file containing the texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[filename is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The filename parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in filename was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[filename is in an invalid format.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -309,6 +361,15 @@
             <parameter name="height" type="int"><![CDATA[The height, in pixels, of the texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[filename is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The filename parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in filename was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[filename is in an invalid format.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -328,6 +389,11 @@
             <parameter name="numberBytes" type="int"><![CDATA[The number of bytes in textureStream .]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -345,6 +411,11 @@
             <parameter name="textureStream" type="Stream"><![CDATA[Stream containing the texture data.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -403,7 +474,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -460,7 +531,133 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="SetData" returnType="void">
+      <summary><![CDATA[Copies array data to the texture at mipmap level 0.]]></summary>
+      <overloads>
+        <overload signature="SetData(T )">
+          <summary><![CDATA[Copies array data to the texture at mipmap level 0.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         T[] data
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="data" type="T[]"><![CDATA[The array of data to copy. The number of elements in the array must be equal to the size of the texture, which is Width × Height .]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The size of the data passed in is too large or too small for this resource.]]></exception>
+          </exceptions>
+          <remarks><![CDATA[On Windows, GetData and SetData will fail if Texture2D.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target. Warning In the Draw method of an Xbox 360 game, vertex buffers, index buffers, and textures should not be written using SetData when they are intended to be used for rendering. This condition may lead to graphics corruption or crashes. This is because, in cases where the size of the back buffer and depth-stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. When predicated tiling has been triggered, the drawing commands contained in the Draw function are not submitted until Present is called. (Note that Draw implicitly calls Present at the end of this method.) In this case, these resources are not available for modification until the GPU is finished with presenting the entire frame.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(Int32, Nullable&lt;Rectangle&gt;, T , Int32, Int32)">
+          <summary><![CDATA[Sets 2D texture data, specifying a mipmap level, source rectangle, start index, and number of elements.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         int level,
+         Nullable<Rectangle> rect,
+         T[] data,
+         int startIndex,
+         int elementCount
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="level" type="Int32"><![CDATA[Mipmap level.]]></parameter>
+            <parameter name="rect" type="Nullable&lt;Rectangle&gt;"><![CDATA[&lt; Rectangle &gt; A bounding box that defines the position and location (in pixels) of the data.]]></parameter>
+            <parameter name="data" type="T"><![CDATA[Array of data.]]></parameter>
+            <parameter name="startIndex" type="Int32"><![CDATA[Index of the first element to set.]]></parameter>
+            <parameter name="elementCount" type="Int32"><![CDATA[Number of elements to set.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(T , Int32, Int32, SetDataOptions)">
+          <summary><![CDATA[Copies array data to the texture at mipmap level 0.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         T[] data,
+         int startIndex,
+         int elementCount,
+         SetDataOptions options
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array. Generally the type for this array will allow for elements in the same size as specified for the Format property of the texture.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="data" type="T[]"><![CDATA[The array of data to copy.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[The index of the element in the array at which to start copying.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[The number of elements to copy. This must be equal to the size of the texture, which is Width × Height .]]></parameter>
+            <parameter name="options" type="SetDataOptions"><![CDATA[Option that specifies whether existing data in the buffer will be kept after this operation.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The size of the data passed in is too large or too small for this resource.]]></exception>
+          </exceptions>
+          <remarks><![CDATA[On Windows, GetData and SetData will fail if Texture2D.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target. Warning In the Draw method of an Xbox 360 game, vertex buffers, index buffers, and textures should not be written using when they are intended to be used for rendering. This condition may lead to graphics corruption or crashes. This is because, in cases where the size of the back buffer and depth-stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. When predicated tiling has been triggered, the drawing commands contained in the Draw function are not submitted until Present is called. (Note that Draw implicitly calls Present at the end of this method.) In this case, these resources are not available for modification until the GPU is finished with presenting the entire frame.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(Int32, Nullable&lt;Rectangle&gt;, T , Int32, Int32, SetDataOptions)">
+          <summary><![CDATA[Copies array data to the texture.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         int level,
+         Nullable<Rectangle> rect,
+         T[] data,
+         int startIndex,
+         int elementCount,
+         SetDataOptions options
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data to set.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="level" type="int"><![CDATA[The mipmap level where the data will be placed.]]></parameter>
+            <parameter name="rect" type="Nullable&lt;Rectangle&gt;"><![CDATA[The section of the texture where the data will be placed. null indicates the data will be copied over the entire texture.]]></parameter>
+            <parameter name="data" type="T[]"><![CDATA[The array of data to copy. If rect is null, the number of elements in the array must be equal to the size of the texture, which is Width × Height ; otherwise, the number of elements in the array should equal the size of the rectangle specified.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[The index of the element in the array at which to start copying.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[The number of elements to copy.]]></parameter>
+            <parameter name="options" type="SetDataOptions"><![CDATA[Option that specifies whether existing data in the buffer will be kept after this operation.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The size of the data passed in is too large or too small for this resource.]]></exception>
+          </exceptions>
+          <remarks><![CDATA[On Windows, GetData and SetData will fail if Texture2D.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target. Warning In the Draw method of an Xbox 360 game, vertex buffers, index buffers, and textures should not be written using when they are intended to be used for rendering. This condition may lead to graphics corruption or crashes. This is because, in cases where the size of the back buffer and depth-stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. When predicated tiling has been triggered, the drawing commands contained in the Draw function are not submitted until Present is called. (Note that Draw implicitly calls Present at the end of this method.) In this case, these resources are not available for modification until the GPU is finished with presenting the entire frame.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(T , Int32, Int32)">
+          <summary><![CDATA[Sets 2D texture data, specifying a start index, and number of elements.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         T[] data,
+         int startIndex,
+         int elementCount
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="data" type="T"><![CDATA[Array of data.]]></parameter>
+            <parameter name="startIndex" type="Int32"><![CDATA[Index of the first element to set.]]></parameter>
+            <parameter name="elementCount" type="Int32"><![CDATA[Number of elements to set.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

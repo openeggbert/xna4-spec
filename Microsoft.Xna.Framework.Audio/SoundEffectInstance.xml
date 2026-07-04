@@ -4,7 +4,8 @@
           name="SoundEffectInstance" kind="class"
           namespace="Microsoft.Xna.Framework.Audio"
           assembly="Microsoft.Xna.Framework.Audio"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="sealed">
   <summary><![CDATA[Provides a single playing, paused, or stopped instance of a SoundEffect sound.]]></summary>
   <syntax><![CDATA[public sealed class SoundEffectInstance : IDisposable]]></syntax>
   <remarks><![CDATA[You can create a SoundEffectInstance by calling SoundEffect.Play . Initially, the SoundEffectInstance is created as playing, but you can pause it or stop it by calling Pause or Stop . You can modify the volume, panning, and pitch of the SoundEffectInstance by setting the Volume , Pitch , and Pan properties, or by creating the instance with one of the SoundEffect.Play methods that enables a user to specify the desired properties. On Zune, a game can have a maximum of 16 total playing SoundEffectInstance instances at one time, combined across all loaded SoundEffect objects. The only limit to the total number of loaded SoundEffectInstance and SoundEffect objects is available memory. However, the user can play only 16 sound effects at one time. Attempts to play a SoundEffectInstance beyond this limit will fail. On Windows, there is no hard limit. Playing too many instances can lead to performance degradation. On Xbox 360, the limit is 300 sound effect instances loaded or playing. Dispose of old instances if you need more. (Unlike other platforms, the Xbox 360 has a limit to how many sound effect instances can exist in memory at one time.)]]></remarks>
@@ -20,6 +21,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -30,6 +32,7 @@
     <property name="IsLooped" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether looping is enabled for the SoundEffectInstance.]]></summary>
       <syntax><![CDATA[public bool IsLooped { get; }]]></syntax>
+      <value><![CDATA[true if the SoundEffectInstance was played with looping enabled; false otherwise.]]></value>
       <remarks><![CDATA[IsLooped returns true if looping was enabled when the SoundEffectInstance was created (that is, SoundEffect.Play was called with true for the loop parameter).]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -41,6 +44,7 @@
     <property name="Pan" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the panning for the SoundEffectInstance.]]></summary>
       <syntax><![CDATA[public float Pan { get; set; }]]></syntax>
+      <value><![CDATA[Panning, ranging from -1.0f (full left) to 1.0f (full right). 0.0f is centered.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -51,6 +55,7 @@
     <property name="Pitch" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the pitch adjustment for the SoundEffectInstance.]]></summary>
       <syntax><![CDATA[public float Pitch { get; set; }]]></syntax>
+      <value><![CDATA[Pitch adjustment, ranging from -1.0f (down one octave) to 1.0f (up one octave). 0.0f is unity (normal) pitch.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -61,6 +66,7 @@
     <property name="State" type="SoundState" access="get">
       <summary><![CDATA[Gets the current state (playing, paused, or stopped) of the SoundEffectInstance.]]></summary>
       <syntax><![CDATA[public SoundState State { get; }]]></syntax>
+      <value><![CDATA[SoundState that represents the current state of the SoundEffectInstance.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -71,6 +77,7 @@
     <property name="Volume" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the volume of the SoundEffectInstance.]]></summary>
       <syntax><![CDATA[public float Volume { get; set; }]]></syntax>
+      <value><![CDATA[Volume, ranging from 0.0f (silence) to 1.0f (full volume). 1.0f is full volume relative to SoundEffect.MasterVolume.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

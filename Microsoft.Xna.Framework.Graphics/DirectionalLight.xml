@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="DirectionalLight" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Creates a DirectionalLight object.]]></summary>
   <syntax><![CDATA[public sealed class DirectionalLight]]></syntax>
   <platforms>
@@ -42,6 +43,7 @@
     <property name="DiffuseColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the diffuse color of the light.]]></summary>
       <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <value><![CDATA[The diffuse color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -53,6 +55,7 @@
     <property name="Direction" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the light direction. This value must be a unit vector.]]></summary>
       <syntax><![CDATA[public Vector3 Direction { get; set; }]]></syntax>
+      <value><![CDATA[The light direction.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -64,6 +67,7 @@
     <property name="Enabled" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets light enable flag.]]></summary>
       <syntax><![CDATA[public bool Enabled { get; set; }]]></syntax>
+      <value><![CDATA[The light enable flag.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -75,6 +79,7 @@
     <property name="SpecularColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the specular color of the light.]]></summary>
       <syntax><![CDATA[public Vector3 SpecularColor { get; set; }]]></syntax>
+      <value><![CDATA[The specular color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

@@ -18,6 +18,9 @@
     <constructor signature="BlendState()">
       <summary><![CDATA[Creates an instance of the BlendState class with default values, using additive color and alpha blending.]]></summary>
       <syntax><![CDATA[public BlendState ()]]></syntax>
+      <exceptions>
+        <exception type="OutOfMemoryException"><![CDATA[There is not enough memory to create this resource.]]></exception>
+      </exceptions>
       <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -32,6 +35,7 @@
     <property name="AlphaBlendFunction" type="BlendFunction" access="get;set">
       <summary><![CDATA[Gets or sets the arithmetic operation when blending alpha values. The default is BlendFunction.Add.]]></summary>
       <syntax><![CDATA[public BlendFunction AlphaBlendFunction { get; set; }]]></syntax>
+      <value><![CDATA[A value from the BlendFunction enumeration.]]></value>
       <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -44,6 +48,7 @@
     <property name="AlphaDestinationBlend" type="Blend" access="get;set">
       <summary><![CDATA[Gets or sets the blend factor for the destination alpha, which is the percentage of the destination alpha included in the blended result. The default is Blend.One.]]></summary>
       <syntax><![CDATA[public Blend AlphaDestinationBlend { get; set; }]]></syntax>
+      <value><![CDATA[A value from the Blend enumeration.]]></value>
       <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -56,6 +61,7 @@
     <property name="AlphaSourceBlend" type="Blend" access="get;set">
       <summary><![CDATA[Gets or sets the alpha blend factor. The default is Blend.One.]]></summary>
       <syntax><![CDATA[public Blend AlphaSourceBlend { get; set; }]]></syntax>
+      <value><![CDATA[The blend factor.]]></value>
       <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -68,6 +74,7 @@
     <property name="BlendFactor" type="Color" access="get;set">
       <summary><![CDATA[Gets or sets the four-component (RGBA) blend factor for alpha blending.]]></summary>
       <syntax><![CDATA[public Color BlendFactor { get; set; }]]></syntax>
+      <value><![CDATA[A four-component (RGBA) blend factor.]]></value>
       <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -80,6 +87,7 @@
     <property name="ColorBlendFunction" type="BlendFunction" access="get;set">
       <summary><![CDATA[Gets or sets the arithmetic operation when blending color values. The default is BlendFunction.Add.]]></summary>
       <syntax><![CDATA[public BlendFunction ColorBlendFunction { get; set; }]]></syntax>
+      <value><![CDATA[A value from the BlendFunction enumeration.]]></value>
       <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -92,6 +100,7 @@
     <property name="ColorDestinationBlend" type="Blend" access="get;set">
       <summary><![CDATA[Gets or sets the blend factor for the destination color. The default is Blend.One.]]></summary>
       <syntax><![CDATA[public Blend ColorDestinationBlend { get; set; }]]></syntax>
+      <value><![CDATA[The blend factor.]]></value>
       <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -104,6 +113,7 @@
     <property name="ColorSourceBlend" type="Blend" access="get;set">
       <summary><![CDATA[Gets or sets the blend factor for the source color. The default is Blend.One.]]></summary>
       <syntax><![CDATA[public Blend ColorSourceBlend { get; set; }]]></syntax>
+      <value><![CDATA[The blend factor.]]></value>
       <remarks><![CDATA[For more information about blending, see What Is Color Blending? .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -116,6 +126,7 @@
     <property name="ColorWriteChannels" type="ColorWriteChannels" access="get;set">
       <summary><![CDATA[Gets or sets which color channels (RGBA) are enabled for writing during color blending. The default value is ColorWriteChannels.None.]]></summary>
       <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels { get; set; }]]></syntax>
+      <value><![CDATA[Any value from the ColorWriteChannels enumeration.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -127,6 +138,7 @@
     <property name="ColorWriteChannels1" type="ColorWriteChannels" access="get;set">
       <summary><![CDATA[Gets or sets which color channels (RGBA) are enabled for writing during color blending. The default value is ColorWriteChannels.None.]]></summary>
       <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels1 { get; set; }]]></syntax>
+      <value><![CDATA[Any value from the ColorWriteChannels enumeration.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -138,6 +150,7 @@
     <property name="ColorWriteChannels2" type="ColorWriteChannels" access="get;set">
       <summary><![CDATA[Gets or sets which color channels (RGBA) are enabled for writing during color blending. The default value is ColorWriteChannels.None.]]></summary>
       <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels2 { get; set; }]]></syntax>
+      <value><![CDATA[Any value from the ColorWriteChannels enumeration.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -149,6 +162,7 @@
     <property name="ColorWriteChannels3" type="ColorWriteChannels" access="get;set">
       <summary><![CDATA[Gets or sets which color channels (RGBA) are enabled for writing during color blending. The default value is ColorWriteChannels.None.]]></summary>
       <syntax><![CDATA[public ColorWriteChannels ColorWriteChannels3 { get; set; }]]></syntax>
+      <value><![CDATA[Any value from the ColorWriteChannels enumeration.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -160,6 +174,7 @@
     <property name="MultiSampleMask" type="int" access="get;set">
       <summary><![CDATA[Gets or sets a bitmask which defines which samples can be written during multisampling. The default is 0xffffffff.]]></summary>
       <syntax><![CDATA[public int MultiSampleMask { get; set; }]]></syntax>
+      <value><![CDATA[A bitmask which defines multisample write locations.]]></value>
       <remarks><![CDATA[Each bit enables writing to a multisample location. As an example, the first 8 bits enable the first eight samples for an 8-sample render target. The mask has no effect when not multisampling.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

@@ -4,7 +4,8 @@
           name="CompilationFailedException" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ExternalException">
+          baseClass="ExternalException"
+          modifier="sealed">
   <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
   <syntax><![CDATA[[SerializableAttribute]
 public sealed class CompilationFailedException : ExternalException]]></syntax>

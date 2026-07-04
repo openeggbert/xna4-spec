@@ -4,7 +4,8 @@
           name="NodeContentCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="ChildCollection&lt;NodeContent, NodeContent&gt;">
+          baseClass="ChildCollection&lt;NodeContent, NodeContent&gt;"
+          modifier="sealed">
   <summary><![CDATA[Provides a collection of all NodeContent objects in a spatial hierarchy.]]></summary>
   <syntax><![CDATA[public sealed class NodeContentCollection : ChildCollection<NodeContent, NodeContent>]]></syntax>
   <platforms>

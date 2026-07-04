@@ -4,7 +4,8 @@
           name="InstancePlayLimitException" kind="class"
           namespace="Microsoft.Xna.Framework.Audio"
           assembly="Microsoft.Xna.Framework.Audio"
-          baseClass="ExternalException">
+          baseClass="ExternalException"
+          modifier="sealed">
   <summary><![CDATA[Exception thrown when a sound or cue has reached an instance limit and can not be played.]]></summary>
   <syntax><![CDATA[[SerializableAttribute]
 public sealed class InstancePlayLimitException : ExternalException]]></syntax>

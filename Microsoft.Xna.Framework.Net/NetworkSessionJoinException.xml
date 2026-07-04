@@ -94,6 +94,7 @@ public class NetworkSessionJoinException : NetworkException]]></syntax>
     <property name="JoinError" type="NetworkSessionJoinError" access="get;set">
       <summary><![CDATA[Gets or sets a more detailed description of the session join failure.]]></summary>
       <syntax><![CDATA[public NetworkSessionJoinError JoinError { get; set; }]]></syntax>
+      <value><![CDATA[Contains information about the session join failure.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="StorageDevice" kind="class"
           namespace="Microsoft.Xna.Framework.Storage"
-          assembly="Microsoft.Xna.Framework.Storage">
+          assembly="Microsoft.Xna.Framework.Storage"
+          modifier="sealed">
   <summary><![CDATA[Represents a storage device for user data, such as a memory unit or hard drive.]]></summary>
   <syntax><![CDATA[public sealed class StorageDevice]]></syntax>
   <platforms>
@@ -17,6 +18,10 @@
     <property name="FreeSpace" type="long" access="get">
       <summary><![CDATA[Gets the amount of free space on the device.]]></summary>
       <syntax><![CDATA[public long FreeSpace { get; }]]></syntax>
+      <value><![CDATA[Free space on the device, in bytes.]]></value>
+      <exceptions>
+        <exception type="StorageDeviceNotConnectedException"><![CDATA[The storage device bound to the container is not connected.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +31,7 @@
     <property name="IsConnected" type="bool" access="get">
       <summary><![CDATA[Gets whether the device is connected.]]></summary>
       <syntax><![CDATA[public bool IsConnected { get; }]]></syntax>
+      <value><![CDATA[true if the device is connected; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +41,10 @@
     <property name="TotalSpace" type="long" access="get">
       <summary><![CDATA[Gets the amount of free space on the device.]]></summary>
       <syntax><![CDATA[public long TotalSpace { get; }]]></syntax>
+      <value><![CDATA[Free space on the device, in bytes.]]></value>
+      <exceptions>
+        <exception type="StorageDeviceNotConnectedException"><![CDATA[The storage device bound to the container is not connected.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -43,7 +53,7 @@
     </property>
   </properties>
   <methods>
-    <method name="BeginOpenContainer" returnType="void">
+    <method name="BeginOpenContainer" returnType="IAsyncResult">
       <summary><![CDATA[Begins the process for opening a StorageContainer containing any files for the specified title.]]></summary>
       <overloads>
         <overload signature="BeginOpenContainer()">
@@ -59,6 +69,10 @@
             <parameter name="state" type="Object"><![CDATA[A user-created object used to uniquely identify the request, or null .]]></parameter>
           </parameters>
           <returns><![CDATA[The IAsyncResult used to determine when the asynchronous request is finished.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[displayName is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[A container is already open for the PlayerIndex set in BeginShowSelector. A new container cannot be opened until all previous containers used by this PlayerIndex are disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[After the container is opened, changes to the files within the container are cached until the container is disposed. For this reason, only one container per profile can be opened concurrently on the same device. If the storage device is removed or the Xbox 360 console is powered down before the container is disposed, any changes are lost. Call the Dispose method to dispose a StorageContainer .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -174,6 +188,10 @@
             <parameter name="stateObject" type="Object"><![CDATA[A user-created object that uniquely identifies this request.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The storage selection user interface could not be shown. This may occur if the user interface is already being shown.]]></exception>
+            <exception type="StorageDeviceNotConnectedException"><![CDATA[The storage device bound to the container is not connected.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Calling BeginShowStorageDeviceGuide when another storage device guide is on screen results in an InvalidOperationException . It is possible to trigger this exception if you call BeginShowStorageDeviceGuide immediately after calling EndShowStorageDeviceGuide (when the dialog box is still dismissing itself). To avoid this exception, avoid calling BeginShowStorageDeviceGuide twice, or do not call BeginShowStorageDeviceGuide until a few seconds after calling EndShowStorageDeviceGuide .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -192,6 +210,10 @@
             <parameter name="stateObject" type="Object"><![CDATA[A user-created object that uniquely identifies this request.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The storage selection user interface could not be shown. This may occur if the user interface is already being shown.]]></exception>
+            <exception type="StorageDeviceNotConnectedException"><![CDATA[The storage device bound to the container is not connected.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Calling BeginShowStorageDeviceGuide when another storage device guide is on screen results in an InvalidOperationException . It is possible to trigger this exception if you call BeginShowStorageDeviceGuide immediately after calling EndShowStorageDeviceGuide (when the dialog is still dismissing itself). To avoid this exception, avoid calling BeginShowStorageDeviceGuide twice, or do not call BeginShowStorageDeviceGuide until a few seconds after calling EndShowStorageDeviceGuide .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -212,6 +234,10 @@
           <parameters>
             <parameter name="titleName" type="String"><![CDATA[The name of the storage container to delete.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[titleName is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The container is currently open. A container cannot be deleted if it is open. Note No exception will be thrown if the container does not exist.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The string passed to titleName must be the same string used with StorageDevice.BeginOpenContainer . Usually a storage container is closed with StorageContainer.Dispose so that it can be re-opened with its data intact. Use DeleteContainer only when you want to delete the data permanently or when you determine the storage container has been corrupted. See the What Is Storage? for more information about using storage containers in your title.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -222,7 +248,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndOpenContainer" returnType="void">
+    <method name="EndOpenContainer" returnType="StorageContainer">
       <summary><![CDATA[Ends the process for opening a StorageContainer.]]></summary>
       <overloads>
         <overload signature="EndOpenContainer()">
@@ -243,7 +269,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndShowSelector" returnType="void">
+    <method name="EndShowSelector" returnType="StorageDevice" isStatic="true">
       <summary><![CDATA[Ends the display of the storage selector user interface.]]></summary>
       <overloads>
         <overload signature="EndShowSelector()">
@@ -264,7 +290,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndShowStorageDeviceGuide" returnType="void">
+    <method name="EndShowStorageDeviceGuide" returnType="StorageDevice" isStatic="true">
       <summary><![CDATA[Ends the device selection UI.]]></summary>
       <overloads>
         <overload signature="EndShowStorageDeviceGuide()">
@@ -276,6 +302,10 @@
             <parameter name="asyncResult" type="IAsyncResult"><![CDATA[The IAsyncResult returned from BeginShowStorageDeviceGuide .]]></parameter>
           </parameters>
           <returns><![CDATA[The storage device selected by the user.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[You must pass to this method the returned IAsyncResult from BeginShowStorageDeviceGuide.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[An unknown error occcured.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Calling BeginShowStorageDeviceGuide when another storage device guide is on screen results in an InvalidOperationException . It is possible to trigger this exception if you call BeginShowStorageDeviceGuide immediately after calling EndShowStorageDeviceGuide (when the dialog is still dismissing itself). To avoid this exception, avoid calling BeginShowStorageDeviceGuide twice, or do not call BeginShowStorageDeviceGuide until a few seconds after calling EndShowStorageDeviceGuide .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -285,7 +315,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="OpenContainer" returnType="void">
+    <method name="OpenContainer" returnType="StorageContainer">
       <summary><![CDATA[Opens a StorageContainer containing any files for the specified title.]]></summary>
       <overloads>
         <overload signature="OpenContainer()">
@@ -297,6 +327,10 @@
             <parameter name="titleName" type="string"><![CDATA[The name of the XNA Framework title.]]></parameter>
           </parameters>
           <returns><![CDATA[A StorageContainer containing any files for the title.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[titleName is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[A container is already open for the PlayerIndex set in BeginShowStorageDeviceGuide. A new container cannot be opened until all previous containers used by this PlayerIndex have been disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[titleName should be a constant human readable string used to identify your title and generate a title-unique storage location. After the container has been opened, changes to the files within the container are cached until the container is disposed. For this reason, only one container per profile can be opened at the same time on the same device. If the storage device is removed or the Xbox 360 console is powered down before the container is disposed, any changes are lost. Call the Dispose method to dispose a StorageContainer .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>

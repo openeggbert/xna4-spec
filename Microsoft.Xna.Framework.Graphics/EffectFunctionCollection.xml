@@ -4,7 +4,8 @@
           name="EffectFunctionCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IEnumerable&lt;EffectFunction&gt;">
+          interfaces="IEnumerable&lt;EffectFunction&gt;"
+          modifier="sealed">
   <summary><![CDATA[Manipulates a collection of EffectFunction objects.]]></summary>
   <syntax><![CDATA[public sealed class EffectFunctionCollection : IEnumerable<EffectFunction>]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of EffectFunction objects in this EffectFunctionCollection.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[The number of EffectFunction objects in this EffectFunctionCollection.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -29,6 +31,7 @@
       <syntax><![CDATA[public EffectFunction this [
          int index
 ] { get; }]]></syntax>
+      <value><![CDATA[The EffectFunction object at index index.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -37,7 +40,7 @@
     </property>
   </properties>
   <methods>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="IEnumerator&lt;EffectFunction&gt;">
       <summary><![CDATA[Returns an enumerator that can iterate through the EffectFunctionCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">

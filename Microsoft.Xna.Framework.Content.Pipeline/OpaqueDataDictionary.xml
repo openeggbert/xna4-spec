@@ -4,7 +4,8 @@
           name="OpaqueDataDictionary" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
-          baseClass="NamedValueDictionary&lt;Object&gt;">
+          baseClass="NamedValueDictionary&lt;Object&gt;"
+          modifier="sealed">
   <summary><![CDATA[Provides properties that define opaque data for a game asset.]]></summary>
   <syntax><![CDATA[public sealed class OpaqueDataDictionary : NamedValueDictionary<Object>]]></syntax>
   <platforms>
@@ -24,13 +25,38 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetContentAsXml" returnType="void">
+    <method name="GetContentAsXml" returnType="string">
       <summary><![CDATA[Gets the data contents and returns it as a single XML string. This format is useful for doing deep equality comparison or object hashing.]]></summary>
       <overloads>
         <overload signature="GetContentAsXml()">
           <summary><![CDATA[Gets the data contents and returns it as a single XML string. This format is useful for doing deep equality comparison or object hashing.]]></summary>
           <syntax><![CDATA[public string GetContentAsXml ()]]></syntax>
           <returns><![CDATA[Data contents of the entry.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValue" returnType="T">
+      <summary><![CDATA[Gets the value of the specified key/value pair of the asset.]]></summary>
+      <overloads>
+        <overload signature="GetValue()">
+          <summary><![CDATA[Gets the value of the specified key/value pair of the asset.]]></summary>
+          <syntax><![CDATA[public T GetValue<T> (
+         string key,
+         T defaultValue
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[The name of the key.]]></parameter>
+            <parameter name="defaultValue" type="T"><![CDATA[The value to return if the key cannot be found. This can be null for reference types, 0 for primitive types, and a zero-filled structure for structure types.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The value of the retrieved opaque data.]]></returns>
+          <remarks><![CDATA[GetValue looks only for values of a specific type. If the entry is of a different type, the defaultvalue is returned.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>

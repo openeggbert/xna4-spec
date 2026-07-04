@@ -38,6 +38,7 @@ public struct GraphicsDeviceCreationParameters]]></syntax>
     <property name="Adapter" type="GraphicsAdapter" access="get">
       <summary><![CDATA[Gets the graphics adapter.]]></summary>
       <syntax><![CDATA[public GraphicsAdapter Adapter { get; }]]></syntax>
+      <value><![CDATA[The graphics adapter.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -47,6 +48,7 @@ public struct GraphicsDeviceCreationParameters]]></syntax>
     <property name="CreationOptions" type="CreateOptions" access="get">
       <summary><![CDATA[Returns the options used to create the device.]]></summary>
       <syntax><![CDATA[public CreateOptions CreationOptions { get; }]]></syntax>
+      <value><![CDATA[The options used to create the device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -56,6 +58,7 @@ public struct GraphicsDeviceCreationParameters]]></syntax>
     <property name="DeviceType" type="DeviceType" access="get">
       <summary><![CDATA[Gets a information describing the amount of emulated functionality for the device.]]></summary>
       <syntax><![CDATA[public DeviceType DeviceType { get; }]]></syntax>
+      <value><![CDATA[The amount of emulated functionality for the device.]]></value>
       <remarks><![CDATA[The value of these parameters mirrors the value passed to the GraphicsDevice constructor call that created the device.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -66,6 +69,7 @@ public struct GraphicsDeviceCreationParameters]]></syntax>
     <property name="FocusWindowHandle" type="IntPtr" access="get">
       <summary><![CDATA[Gets a pointer to the window to which focus belongs for the current device.]]></summary>
       <syntax><![CDATA[public IntPtr FocusWindowHandle { get; }]]></syntax>
+      <value><![CDATA[Value that points to the window to which focus belongs for the device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -74,7 +78,7 @@ public struct GraphicsDeviceCreationParameters]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

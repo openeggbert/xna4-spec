@@ -4,7 +4,8 @@
           name="LocalNetworkGamer" kind="class"
           namespace="Microsoft.Xna.Framework.Net"
           assembly="Microsoft.Xna.Framework.Net"
-          baseClass="NetworkGamer">
+          baseClass="NetworkGamer"
+          modifier="sealed">
   <summary><![CDATA[Represents a local player in a network session.]]></summary>
   <syntax><![CDATA[public sealed class LocalNetworkGamer : NetworkGamer]]></syntax>
   <platforms>
@@ -19,6 +20,7 @@
     <property name="IsDataAvailable" type="bool" access="get">
       <summary><![CDATA[Determines if there is incoming packet data for this player.]]></summary>
       <syntax><![CDATA[public bool IsDataAvailable { get; }]]></syntax>
+      <value><![CDATA[true if there are one or more packets waiting; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -29,6 +31,7 @@
     <property name="SignedInGamer" type="SignedInGamer" access="get">
       <summary><![CDATA[Gets the SignedInGamer instance for this SignedInGamer object.]]></summary>
       <syntax><![CDATA[public SignedInGamer SignedInGamer { get; }]]></syntax>
+      <value><![CDATA[The related SignedInGamer instance.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -51,6 +54,11 @@
             <parameter name="remoteGamer" type="NetworkGamer"><![CDATA[A remote gamer in the session.]]></parameter>
             <parameter name="enable" type="bool"><![CDATA[true if voice is enabled; false otherwise.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[This NetworkGamer belongs to a different network session.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[remoteGamer is null.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[This NetworkGamer is no longer valid. The gamer may have left the session.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Call this method for local gamer instances only. By default, voice is enabled for all gamers. However, you can selectively turn it off to enable features such as team chat. Also, you can dynamically turn it on or off, depending on the player's location in the game world, to achieve a proximity voice effect.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -77,6 +85,11 @@
             <parameter name="sender" type="NetworkGamer"><![CDATA[[ OutAttribute ] Gamer who sent this packet.]]></parameter>
           </parameters>
           <returns><![CDATA[Number of bytes read from the network packet. Returns 0 if no packet is available.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The specified array is too small to receive the incoming network packet.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[data is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[offset cannot be larger than the amount of data available for storage.]]></exception>
+          </exceptions>
           <remarks><![CDATA[ReceiveData copies the packet data into the array specified by data , returning the number of bytes read. If several independent packets are available, only one is returned for each ReceiveData call.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -96,6 +109,10 @@
             <parameter name="sender" type="NetworkGamer"><![CDATA[[ OutAttribute ] Gamer who sent this packet.]]></parameter>
           </parameters>
           <returns><![CDATA[Number of bytes read from the network packet. Returns 0 if no packet is available.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The specified array is too small to receive the incoming network packet.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[data is null.]]></exception>
+          </exceptions>
           <remarks><![CDATA[If several independent packets are available, only one will be returned on each call to ReceiveData .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -115,6 +132,10 @@
             <parameter name="sender" type="NetworkGamer"><![CDATA[[ OutAttribute ] Gamer who sent this packet.]]></parameter>
           </parameters>
           <returns><![CDATA[Number of bytes read from the network packet. Returns 0 if no packet is available.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The specified array is too small to receive the incoming network packet.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[data is null.]]></exception>
+          </exceptions>
           <remarks><![CDATA[ReceiveData copies the packet data into the array specified by data , returning the number of bytes read. If several independent packets are available, only one is returned for each ReceiveData call.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -138,6 +159,10 @@
             <parameter name="data" type="byte[]"><![CDATA[Byte array containing session data.]]></parameter>
             <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[data is null.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[The NetworkGamer sending this message is no longer valid. The gamer may have left the session.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -157,6 +182,11 @@
             <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
             <parameter name="recipient" type="NetworkGamer"><![CDATA[Gamer to receive the data packet.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The NetworkGamer specified as the recipient does not belong to this network session.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[data or recipient is null.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[The NetworkGamer specified as either the sender or the recipient is no longer valid. The gamer may have left the session.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -176,6 +206,11 @@
             <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
             <parameter name="recipient" type="NetworkGamer"><![CDATA[Gamer receiving the data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The NetworkGamer specified as the recipient does not belong to this network session.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[data or recipient is null.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[The NetworkGamer specified as either the sender or the recipient is no longer valid. The gamer may have left the session.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -199,6 +234,12 @@
             <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
             <parameter name="recipient" type="NetworkGamer"><![CDATA[Gamer to receive the data packet.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The NetworkGamer specified as the recipient does not belong to this network session.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[data or recipient is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[offset must be greater than zero, and no larger than the amount of data available. count must be greater than zero, and offset + count must be no larger than the amount of data available.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[The NetworkGamer specified as either the sender or the recipient is no longer valid. The gamer may have left the session.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -220,6 +261,11 @@
             <parameter name="count" type="int"><![CDATA[Amount, in bytes, of data sent.]]></parameter>
             <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[data is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[offset must be greater than zero, and no larger than the amount of data available. count must be greater than zero, and offset + count must be no larger than the amount of data available.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[The NetworkGamer sending this message is no longer valid. The gamer may have left the session.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -237,6 +283,10 @@
             <parameter name="data" type="PacketWriter"><![CDATA[Byte array containing session data.]]></parameter>
             <parameter name="options" type="SendDataOptions"><![CDATA[Enumeration containing data send options.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[data is null.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[The NetworkGamer sending this message is no longer valid. The gamer may have left the session.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

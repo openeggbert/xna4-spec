@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="Keyboard" kind="class"
           namespace="Microsoft.Xna.Framework.Input"
-          assembly="Microsoft.Xna.Framework.Input">
+          assembly="Microsoft.Xna.Framework.Input"
+          modifier="static">
   <summary><![CDATA[Allows retrieval of keystrokes from a keyboard input device.]]></summary>
   <syntax><![CDATA[public static class Keyboard]]></syntax>
   <platforms>
@@ -28,6 +29,9 @@
             <parameter name="playerIndex" type="PlayerIndex"><![CDATA[Player index of the Chatpad to query.]]></parameter>
           </parameters>
           <returns><![CDATA[Current Chatpad state.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[An invalid operation occurred when querying the Chatpad state.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Each player can have their own Chatpad, which is queried as a keyboard. To query an attached USB keyboard instead, use the GetState method that does not require a player index. This method works on Xbox 360 platforms only. Windows does not include driver support for the ChatPad. This method is included in the assemblies for Windows, but it is effectively a null function on that platform. Calls to Keyboard.GetState(playerIndex) from a Windows application are accepted, but will never return a ChatPad state change (key press or release).]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>

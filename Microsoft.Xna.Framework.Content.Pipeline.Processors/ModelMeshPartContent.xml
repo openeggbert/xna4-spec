@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ModelMeshPartContent" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          modifier="sealed">
   <summary><![CDATA[Stores design-time data for a ModelMeshPart asset.]]></summary>
   <syntax><![CDATA[public sealed class ModelMeshPartContent]]></syntax>
   <platforms>
@@ -16,6 +17,7 @@
     <property name="BaseVertex" type="int" access="get">
       <summary><![CDATA[Gets the offset from the start of the index buffer to the first vertex index.]]></summary>
       <syntax><![CDATA[public int BaseVertex { get; }]]></syntax>
+      <value><![CDATA[The offset from the start of the index buffer to the first vertex index.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -24,6 +26,7 @@
     <property name="IndexBuffer" type="IndexCollection" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public IndexCollection IndexBuffer { get; }]]></syntax>
+      <value><![CDATA[The index buffer associated with this mesh part.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -33,6 +36,7 @@
     <property name="Material" type="MaterialContent" access="get;set">
       <summary><![CDATA[Gets the material of this mesh part.]]></summary>
       <syntax><![CDATA[public MaterialContent Material { get; set; }]]></syntax>
+      <value><![CDATA[The material of this mesh part.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -41,6 +45,7 @@
     <property name="NumVertices" type="int" access="get">
       <summary><![CDATA[Gets the number of vertices used in this mesh part.]]></summary>
       <syntax><![CDATA[public int NumVertices { get; }]]></syntax>
+      <value><![CDATA[The number of vertices used in this mesh part.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -49,6 +54,7 @@
     <property name="PrimitiveCount" type="int" access="get">
       <summary><![CDATA[Gets the number of primitives to render for this mesh part.]]></summary>
       <syntax><![CDATA[public int PrimitiveCount { get; }]]></syntax>
+      <value><![CDATA[The number of primitives in this mesh part.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -57,6 +63,7 @@
     <property name="StartIndex" type="int" access="get">
       <summary><![CDATA[Gets the location in the index buffer at which to start reading vertices.]]></summary>
       <syntax><![CDATA[public int StartIndex { get; }]]></syntax>
+      <value><![CDATA[The location in the index buffer at which to start reading vertices.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -65,6 +72,7 @@
     <property name="StreamOffset" type="int" access="get">
       <summary><![CDATA[Gets the offset, in bytes, from the first index of the of vertex buffer for this mesh part.]]></summary>
       <syntax><![CDATA[public int StreamOffset { get; }]]></syntax>
+      <value><![CDATA[The offset, in bytes, from the first index of the of vertex buffer for this mesh part.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -73,6 +81,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Gets a user-defined tag object.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[A user-defined tag object.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -81,6 +90,7 @@
     <property name="VertexBuffer" type="VertexBufferContent" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public VertexBufferContent VertexBuffer { get; }]]></syntax>
+      <value><![CDATA[The vertex buffer associated with this mesh part.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -90,6 +100,7 @@
     <property name="VertexOffset" type="int" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public int VertexOffset { get; }]]></syntax>
+      <value><![CDATA[The offset, in bytes, from the first index of the of vertex buffer for this mesh part.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -98,7 +109,7 @@
     </property>
   </properties>
   <methods>
-    <method name="GetVertexDeclaration" returnType="void">
+    <method name="GetVertexDeclaration" returnType="VertexElement[]">
       <summary><![CDATA[Gets the vertex declaration for this mesh part.]]></summary>
       <overloads>
         <overload signature="GetVertexDeclaration()">

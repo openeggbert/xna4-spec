@@ -59,6 +59,7 @@
       <summary><![CDATA[Gets or sets the packed representation of the vector.]]></summary>
       <syntax><![CDATA[[CLSCompliantAttribute(false)]
 public UInt16 PackedValue { get; set; }]]></syntax>
+      <value><![CDATA[The packed vector.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -108,7 +109,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this object.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -125,7 +126,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a string representation.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -142,7 +143,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToVector4" returnType="void">
+    <method name="ToVector4" returnType="Vector4">
       <summary><![CDATA[Unpacks this object to a four-component vector.]]></summary>
       <overloads>
         <overload signature="ToVector4()">
@@ -159,7 +160,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Equality operator, which compares two objects to see if they are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -183,7 +184,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Tests two objects to see if they are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

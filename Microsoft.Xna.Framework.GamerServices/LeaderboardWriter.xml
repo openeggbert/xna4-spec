@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="LeaderboardWriter" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
-          assembly="Microsoft.Xna.Framework.GamerServices">
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          modifier="sealed">
   <summary><![CDATA[Records leaderboard data for players in a NetworkSession.]]></summary>
   <syntax><![CDATA[public sealed class LeaderboardWriter]]></syntax>
   <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
@@ -19,7 +20,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetLeaderboard" returnType="void">
+    <method name="GetLeaderboard" returnType="LeaderboardEntry">
       <summary><![CDATA[Gets a leaderboard entry that can be used to write to a specified leaderboard.]]></summary>
       <overloads>
         <overload signature="GetLeaderboard()">

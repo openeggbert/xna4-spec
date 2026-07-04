@@ -17,6 +17,7 @@
     <property name="SupportsLocalViewer" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device can do local viewer.]]></summary>
       <syntax><![CDATA[public bool SupportsLocalViewer { get; }]]></syntax>
+      <value><![CDATA[true if the device can do local viewer; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="SupportsNoTextureGenerationNonLocalViewer" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports texture generation in non-local viewer mode.]]></summary>
       <syntax><![CDATA[public bool SupportsNoTextureGenerationNonLocalViewer { get; }]]></syntax>
+      <value><![CDATA[true if the device does not support texture generation in non-local viewer mode; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +37,7 @@
     <property name="SupportsTextureGeneration" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device can do texture generation.]]></summary>
       <syntax><![CDATA[public bool SupportsTextureGeneration { get; }]]></syntax>
+      <value><![CDATA[true if the device can do texture generation; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +47,7 @@
     <property name="SupportsTextureGenerationSphereMap" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports use of the specified texture coordinates for sphere mapping.]]></summary>
       <syntax><![CDATA[public bool SupportsTextureGenerationSphereMap { get; }]]></syntax>
+      <value><![CDATA[true if the device supports use of the specified texture coordinates for sphere mapping; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -52,7 +56,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

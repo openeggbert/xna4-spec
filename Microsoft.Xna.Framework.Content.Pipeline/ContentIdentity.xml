@@ -70,6 +70,7 @@ public class ContentIdentity]]></syntax>
     <property name="FragmentIdentifier" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the specific location of the content item within the larger source file.]]></summary>
       <syntax><![CDATA[public string FragmentIdentifier { get; set; }]]></syntax>
+      <value><![CDATA[Location of the content item. This location can be in various forms. For example, this could indicate a line number within the source file.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -78,6 +79,7 @@ public class ContentIdentity]]></syntax>
     <property name="SourceFilename" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the file name of the asset source.]]></summary>
       <syntax><![CDATA[public string SourceFilename { get; set; }]]></syntax>
+      <value><![CDATA[The absolute path to the file name of the asset source.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -86,6 +88,7 @@ public class ContentIdentity]]></syntax>
     <property name="SourceTool" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the creation tool of the asset.]]></summary>
       <syntax><![CDATA[public string SourceTool { get; set; }]]></syntax>
+      <value><![CDATA[The name of the digital content creation (DCC) tool that created the asset.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

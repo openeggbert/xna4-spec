@@ -18,6 +18,7 @@
     <property name="FogColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the fog color.]]></summary>
       <syntax><![CDATA[public Vector3 FogColor { get; set; }]]></syntax>
+      <value><![CDATA[Three-component color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -28,6 +29,7 @@
     <property name="FogEnabled" type="bool" access="get;set">
       <summary><![CDATA[Enables or disables fog.]]></summary>
       <syntax><![CDATA[public bool FogEnabled { get; set; }]]></syntax>
+      <value><![CDATA[True to enable fog, false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -38,6 +40,7 @@
     <property name="FogEnd" type="float" access="get;set">
       <summary><![CDATA[Gets or sets maximum z value for fog.]]></summary>
       <syntax><![CDATA[public float FogEnd { get; set; }]]></syntax>
+      <value><![CDATA[The distance from the camera to stop adding fog, in world space.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -48,6 +51,7 @@
     <property name="FogStart" type="float" access="get;set">
       <summary><![CDATA[Gets or sets minimum z value for fog.]]></summary>
       <syntax><![CDATA[public float FogStart { get; set; }]]></syntax>
+      <value><![CDATA[The distance from the camera to begin adding fog, in world space.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

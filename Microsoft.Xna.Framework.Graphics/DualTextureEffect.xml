@@ -53,6 +53,7 @@
     <property name="Alpha" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the material alpha which determines its transparency. Range is between 1 (fully opaque) and 0 (fully transparent).]]></summary>
       <syntax><![CDATA[public float Alpha { get; set; }]]></syntax>
+      <value><![CDATA[The material alpha value.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -64,6 +65,7 @@
     <property name="DiffuseColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the diffuse color for a material, the range of color values is from 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <value><![CDATA[The material diffuse color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -75,6 +77,7 @@
     <property name="FogColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the fog color, the range of color values is from 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 FogColor { get; set; }]]></syntax>
+      <value><![CDATA[The fog color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -86,6 +89,7 @@
     <property name="FogEnabled" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets the fog enable flag.]]></summary>
       <syntax><![CDATA[public bool FogEnabled { get; set; }]]></syntax>
+      <value><![CDATA[The fog enable flag.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -97,6 +101,7 @@
     <property name="FogEnd" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the maximum z value for fog, which ranges from 0 to 1.]]></summary>
       <syntax><![CDATA[public float FogEnd { get; set; }]]></syntax>
+      <value><![CDATA[The distance to stop adding fog.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -108,6 +113,7 @@
     <property name="FogStart" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the minimum z value for fog, which ranges from 0 to 1.]]></summary>
       <syntax><![CDATA[public float FogStart { get; set; }]]></syntax>
+      <value><![CDATA[The distance to begin adding fog.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -119,6 +125,7 @@
     <property name="Projection" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the projection matrix.]]></summary>
       <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <value><![CDATA[A matrix that contains the projection transform.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -130,6 +137,7 @@
     <property name="Texture" type="Texture2D" access="get;set">
       <summary><![CDATA[Gets or sets the current base texture.]]></summary>
       <syntax><![CDATA[public Texture2D Texture { get; set; }]]></syntax>
+      <value><![CDATA[The base texture.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -141,6 +149,7 @@
     <property name="Texture2" type="Texture2D" access="get;set">
       <summary><![CDATA[Gets or sets the current overlay texture.]]></summary>
       <syntax><![CDATA[public Texture2D Texture2 { get; set; }]]></syntax>
+      <value><![CDATA[The overlay texture.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -152,6 +161,7 @@
     <property name="VertexColorEnabled" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets whether per-vertex color is enabled.]]></summary>
       <syntax><![CDATA[public bool VertexColorEnabled { get; set; }]]></syntax>
+      <value><![CDATA[True to enable per-vertex color; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -163,6 +173,7 @@
     <property name="View" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the view matrix.]]></summary>
       <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <value><![CDATA[A matrix that contains a view transform.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -174,6 +185,7 @@
     <property name="World" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the world matrix.]]></summary>
       <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <value><![CDATA[A matrix that contains a world transform.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -184,7 +196,7 @@
     </property>
   </properties>
   <methods>
-    <method name="Clone" returnType="void">
+    <method name="Clone" returnType="Effect">
       <summary><![CDATA[Creates a clone of the current DualTextureEffect instance.]]></summary>
       <overloads>
         <overload signature="Clone()">

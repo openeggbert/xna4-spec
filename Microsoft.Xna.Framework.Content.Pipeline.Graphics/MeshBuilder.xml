@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="MeshBuilder" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Provides support for writing a custom importer for mesh objects.]]></summary>
   <syntax><![CDATA[public sealed class MeshBuilder]]></syntax>
   <remarks><![CDATA[MeshBuilder is designed to make it easier to write importers. It creates an abstraction of the internal workings of the MeshContent and GeometryContent classes and provides a simple way to create a mesh object. There are three steps to creating a mesh. Call StartMesh to get a MeshBuilder object. To initialize this object, fill the positions buffer with data by using the CreatePosition function. After retrieving the positions data, call the CreateVertexChannel generic function to specify the types of vertex channels needed—for example, normals, UVs, and color channels. Note The PositionCollection property of a MeshContent object is created automatically. Therefore, there is no need to explicitly declare a VertexChannel object for positions. After setting up the position and vertex data channel buffers, begin creating triangles. Use SetMaterial and SetOpaqueData to set the data of each triangle, and use SetVertexChannelData to set the individual vertex data of each triangle. After setting this data, call AddTriangleVertex for each vertex of each triangle. Note If you call CreatePosition or CreateVertexChannel after calling AddTriangleVertex , an InvalidOperationException exception is thrown. In the final step, call FinishMesh . After this call, the mesh is optimized automatically with calls to MergeDuplicateVertices and CalculateNormals .]]></remarks>
@@ -17,6 +18,7 @@
     <property name="MergeDuplicatePositions" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets the current value for position merging of the mesh.]]></summary>
       <syntax><![CDATA[public bool MergeDuplicatePositions { get; set; }]]></syntax>
+      <value><![CDATA[Current value of the property.]]></value>
       <remarks><![CDATA[If this property is enabled, every call to MeshBuilder.CreatePosition (Vector3) will check to see whether a position exists for which each component of that position varies no more than the current value of MergePositionTolerance from the new position. If one is found, the original position is used. This property should be used in conjunction with MergePositionTolerance . The following code demonstrates this: MeshBuilder b = MeshBuilder.StartMesh( "bill" ); b.MergeDuplicatePositions = true; b.MergePositionTolerance = 1.0f; // Additional mesh building code here. MeshContent mesh = b.FinishMesh();]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -26,6 +28,7 @@
     <property name="MergePositionTolerance" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the tolerance for MergeDuplicatePositions. The default value is 0.]]></summary>
       <syntax><![CDATA[public float MergePositionTolerance { get; set; }]]></syntax>
+      <value><![CDATA[Tolerance value used by the mesh.]]></value>
       <remarks><![CDATA[When MergeDuplicatePositions is enabled, each call to MeshBuilder.CreatePosition (Vector3) checks to see whether a position exists for which each component of that position varies no more than the current value of MergePositionTolerance from the new position. If one is found, the original position will be reused. Note Setting MergePositionTolerance does not also enable position merging. This must be enabled explicitly by calling MergeDuplicatePositions .]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -35,6 +38,7 @@
     <property name="Name" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the name of the current MeshContent object being processed. This is the same name as was passed in to StartMesh.]]></summary>
       <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <value><![CDATA[Name of the MeshContent object.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -43,6 +47,7 @@
     <property name="SwapWindingOrder" type="bool" access="get;set">
       <summary><![CDATA[Reverses the triangle winding order of the specified mesh.]]></summary>
       <syntax><![CDATA[public bool SwapWindingOrder { get; set; }]]></syntax>
+      <value><![CDATA[Current value of the winding order.]]></value>
       <remarks><![CDATA[If enabled, the triangles of the finished mesh are in the opposite order that they were given to the mesh builder. For example, if the vertices of two triangles were given as 123 456, they would be changed to 321 654. This can be useful if the source data was constructed with back-face culling set to something other than what the destination game engine expects. The winding order is swapped when FinishMesh is called. Therefore, it is not necessary to modify the indices returned by CreatePosition .]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -107,7 +112,29 @@
         </overload>
       </overloads>
     </method>
-    <method name="FinishMesh" returnType="void">
+    <method name="CreateVertexChannel" returnType="int">
+      <summary><![CDATA[Creates a vertex data channel for use by the mesh. Typically, the data channel holds texture coordinates, normals, and other per-vertex data.]]></summary>
+      <overloads>
+        <overload signature="CreateVertexChannel()">
+          <summary><![CDATA[Creates a vertex data channel for use by the mesh. Typically, the data channel holds texture coordinates, normals, and other per-vertex data.]]></summary>
+          <syntax><![CDATA[public int CreateVertexChannel<T> (
+         string usage
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[Type of the data channel.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="usage" type="string"><![CDATA[Describes how the channel is used. Use this parameter as a look-up into a VertexChannelCollection . It is strongly recommended that you choose a from the following list. Binormal]]></parameter>
+          </parameters>
+          <returns><![CDATA[Index identifying the new data channel. Use this as a parameter when calling SetVertexChannelData.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="FinishMesh" returnType="MeshContent">
       <summary><![CDATA[Ends the creation of a mesh.]]></summary>
       <overloads>
         <overload signature="FinishMesh()">
@@ -184,7 +211,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="StartMesh" returnType="void">
+    <method name="StartMesh" returnType="MeshBuilder" isStatic="true">
       <summary><![CDATA[Initializes the creation of a mesh.]]></summary>
       <overloads>
         <overload signature="StartMesh()">

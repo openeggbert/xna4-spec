@@ -29,6 +29,7 @@ public class Curve]]></syntax>
     <property name="IsConstant" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the curve is constant.]]></summary>
       <syntax><![CDATA[public bool IsConstant { get; }]]></syntax>
+      <value><![CDATA[true is the curve is constant (has one or fewer points); false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -38,6 +39,7 @@ public class Curve]]></syntax>
     <property name="Keys" type="CurveKeyCollection" access="get">
       <summary><![CDATA[The points that make up the curve.]]></summary>
       <syntax><![CDATA[public CurveKeyCollection Keys { get; }]]></syntax>
+      <value><![CDATA[Points that make up the curve.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -47,6 +49,7 @@ public class Curve]]></syntax>
     <property name="PostLoop" type="CurveLoopType" access="get;set">
       <summary><![CDATA[Specifies how to handle weighting values that are greater than the last control point in the curve.]]></summary>
       <syntax><![CDATA[public CurveLoopType PostLoop { get; set; }]]></syntax>
+      <value><![CDATA[Specifies how to handle weighting values.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -56,6 +59,7 @@ public class Curve]]></syntax>
     <property name="PreLoop" type="CurveLoopType" access="get;set">
       <summary><![CDATA[Specifies how to handle weighting values that are less than the first control point in the curve.]]></summary>
       <syntax><![CDATA[public CurveLoopType PreLoop { get; set; }]]></syntax>
+      <value><![CDATA[Specifies how to handle weighting values.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -64,7 +68,7 @@ public class Curve]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Clone" returnType="void">
+    <method name="Clone" returnType="Curve">
       <summary><![CDATA[Creates a copy of the Curve.]]></summary>
       <overloads>
         <overload signature="Clone()">
@@ -153,7 +157,7 @@ public class Curve]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Evaluate" returnType="void">
+    <method name="Evaluate" returnType="float">
       <summary><![CDATA[Finds the value at a position on the Curve.]]></summary>
       <overloads>
         <overload signature="Evaluate()">

@@ -17,6 +17,7 @@
     <property name="SupportsByte4" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether vertex declarations support VertexElementFormat.Byte4.]]></summary>
       <syntax><![CDATA[public bool SupportsByte4 { get; }]]></syntax>
+      <value><![CDATA[true if vertex declarations support VertexElementFormat.Byte4; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="SupportsHalfVector2" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether vertex declarations support VertexElementFormat.HalfVector2]]></summary>
       <syntax><![CDATA[public bool SupportsHalfVector2 { get; }]]></syntax>
+      <value><![CDATA[true if vertex declarations support VertexElementFormat.HalfVector2; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +37,7 @@
     <property name="SupportsHalfVector4" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether vertex declarations support VertexElementFormat.HalfVector4.]]></summary>
       <syntax><![CDATA[public bool SupportsHalfVector4 { get; }]]></syntax>
+      <value><![CDATA[true if vertex declarations support VertexElementFormat.HalfVector4; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +47,7 @@
     <property name="SupportsNormalized101010" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether vertex declarations support VertexElementFormat.Normalized101010.]]></summary>
       <syntax><![CDATA[public bool SupportsNormalized101010 { get; }]]></syntax>
+      <value><![CDATA[true if vertex declarations support VertexElementFormat.Normalized101010; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +57,7 @@
     <property name="SupportsNormalizedShort2" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether vertex declarations support VertexElementFormat.NormalizedShort2.]]></summary>
       <syntax><![CDATA[public bool SupportsNormalizedShort2 { get; }]]></syntax>
+      <value><![CDATA[true if vertex declarations support VertexElementFormat.NormalizedShort2; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,6 +67,7 @@
     <property name="SupportsNormalizedShort4" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether vertex declarations support VertexElementFormat.NormalizedShort4.]]></summary>
       <syntax><![CDATA[public bool SupportsNormalizedShort4 { get; }]]></syntax>
+      <value><![CDATA[true if vertex declarations support VertexElementFormat.NormalizedShort4; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -71,6 +77,7 @@
     <property name="SupportsRg32" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether vertex declarations support VertexElementFormat.Rg32.]]></summary>
       <syntax><![CDATA[public bool SupportsRg32 { get; }]]></syntax>
+      <value><![CDATA[true if vertex declarations support VertexElementFormat.Rg32; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -80,6 +87,7 @@
     <property name="SupportsRgba32" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether vertex declarations support VertexElementFormat.Rgba32.]]></summary>
       <syntax><![CDATA[public bool SupportsRgba32 { get; }]]></syntax>
+      <value><![CDATA[true if vertex declarations support VertexElementFormat.Rgba32; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -89,6 +97,7 @@
     <property name="SupportsRgba64" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether vertex declarations support VertexElementFormat.Rgba64.]]></summary>
       <syntax><![CDATA[public bool SupportsRgba64 { get; }]]></syntax>
+      <value><![CDATA[true if vertex declarations support VertexElementFormat.Rgba64; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -98,6 +107,7 @@
     <property name="SupportsUInt101010" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether vertex declarations support VertexElementFormat.UInt101010.]]></summary>
       <syntax><![CDATA[public bool SupportsUInt101010 { get; }]]></syntax>
+      <value><![CDATA[true if vertex declarations support VertexElementFormat.UInt101010; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -106,7 +116,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

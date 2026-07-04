@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ProcessorParameter" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          modifier="sealed">
   <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
   <syntax><![CDATA[[SerializableAttribute]
 public sealed class ProcessorParameter]]></syntax>
@@ -18,6 +19,7 @@ public sealed class ProcessorParameter]]></syntax>
     <property name="DefaultValue" type="Object" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public Object DefaultValue { get; set; }]]></syntax>
+      <value><![CDATA[Default value of the processor parameter.]]></value>
       <remarks><![CDATA[Not all types are supported. For a complete list of supported values, see Parameterized Processors . DefaultValue is treated as a suggestion to the designer UI and is not enforced by the content pipeline. This value may be null .]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -28,6 +30,7 @@ public sealed class ProcessorParameter]]></syntax>
     <property name="Description" type="string" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public string Description { get; set; }]]></syntax>
+      <value><![CDATA[Parameter description.]]></value>
       <remarks><![CDATA[The description appears as a tooltip, displayed by the designer UI. This value may be null .]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -38,6 +41,7 @@ public sealed class ProcessorParameter]]></syntax>
     <property name="DisplayName" type="string" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public string DisplayName { get; set; }]]></syntax>
+      <value><![CDATA[Friendly name of the parameter.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -47,6 +51,7 @@ public sealed class ProcessorParameter]]></syntax>
     <property name="IsEnum" type="bool" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public bool IsEnum { get; }]]></syntax>
+      <value><![CDATA[true if the parameter is an enumeration; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -56,6 +61,7 @@ public sealed class ProcessorParameter]]></syntax>
     <property name="PossibleEnumValues" type="ReadOnlyCollection&lt;string&gt;" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public ReadOnlyCollection<string> PossibleEnumValues { get; }]]></syntax>
+      <value><![CDATA[Available values for the parameter.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -65,6 +71,7 @@ public sealed class ProcessorParameter]]></syntax>
     <property name="PropertyName" type="string" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public string PropertyName { get; }]]></syntax>
+      <value><![CDATA[Name of the property used to identify a specific processor parameter.]]></value>
       <remarks><![CDATA[Corresponds to the property name, as defined in the C# code. This differs from the friendly parameter name, stored in the DisplayName property.]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -75,6 +82,7 @@ public sealed class ProcessorParameter]]></syntax>
     <property name="PropertyType" type="string" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public string PropertyType { get; }]]></syntax>
+      <value><![CDATA[Type of the processor parameter. For a list of accepted types, see Parameterized Processors.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>

@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="VectorConverter" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          modifier="static">
   <summary><![CDATA[Provides methods for converting data between different packed vector representations.]]></summary>
   <syntax><![CDATA[public static class VectorConverter]]></syntax>
   <platforms>
@@ -15,7 +16,26 @@
   <properties>
   </properties>
   <methods>
-    <method name="TryGetSurfaceFormat" returnType="void">
+    <method name="GetConverter" returnType="void" isStatic="true">
+      <summary><![CDATA[Gets a Converter delegate that can convert one packed vector representation to another.]]></summary>
+      <overloads>
+        <overload signature="GetConverter()">
+          <summary><![CDATA[Gets a Converter delegate that can convert one packed vector representation to another.]]></summary>
+          <syntax><![CDATA[public static Converter<TInput, TOutput> GetConverter<TInput,TOutput> ()]]></syntax>
+          <type-parameters>
+            <type-parameter name="TInput"><![CDATA[Source type for the conversion.]]></type-parameter>
+            <type-parameter name="TOutput"><![CDATA[Output type for the conversion.]]></type-parameter>
+          </type-parameters>
+          <returns><![CDATA[A Converter delegate that encodes or decodes TInput to TOutput.]]></returns>
+          <remarks><![CDATA[The input and output types must be either a value type that implements IPackedVector or one of Single , Vector2 , Vector3 , or Vector4 .]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="TryGetSurfaceFormat" returnType="bool" isStatic="true">
       <summary><![CDATA[Gets the GPU texture format that corresponds to a managed vector type.]]></summary>
       <overloads>
         <overload signature="TryGetSurfaceFormat()">
@@ -73,7 +93,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TryGetVertexElementFormat" returnType="void">
+    <method name="TryGetVertexElementFormat" returnType="bool" isStatic="true">
       <summary><![CDATA[Gets the GPU vertex format that corresponds to a managed vector type.]]></summary>
       <overloads>
         <overload signature="TryGetVertexElementFormat()">

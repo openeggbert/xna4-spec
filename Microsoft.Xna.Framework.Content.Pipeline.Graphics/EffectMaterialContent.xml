@@ -25,6 +25,7 @@
     <property name="CompiledEffect" type="ExternalReference&lt;CompiledEffect&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the compiled effect property.]]></summary>
       <syntax><![CDATA[public ExternalReference<CompiledEffect> CompiledEffect { get; set; }]]></syntax>
+      <value><![CDATA[Reference to a compiled effect or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -33,6 +34,7 @@
     <property name="Effect" type="ExternalReference&lt;EffectContent&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the effect property.]]></summary>
       <syntax><![CDATA[public ExternalReference<EffectContent> Effect { get; set; }]]></syntax>
+      <value><![CDATA[Reference to an external DirectX Effect file.]]></value>
       <remarks><![CDATA[Use this value as a shortcut for accessing the EffectKey element.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>

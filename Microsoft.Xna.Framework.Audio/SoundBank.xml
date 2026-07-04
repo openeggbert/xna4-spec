@@ -23,6 +23,11 @@
         <parameter name="audioEngine" type="AudioEngine"><![CDATA[Audio engine that will be associated with this sound bank.]]></parameter>
         <parameter name="filename" type="string"><![CDATA[Path to the sound bank file.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[The audioEngine or filename parameter is null.]]></exception>
+        <exception type="ArgumentException"><![CDATA[XACT could not load the data provided. Make sure you are using the correct version of the XACT tool.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create the SoundBank resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -34,6 +39,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -43,6 +49,7 @@
     <property name="IsInUse" type="bool" access="get">
       <summary><![CDATA[Returns whether the sound bank is currently in use.]]></summary>
       <syntax><![CDATA[public bool IsInUse { get; }]]></syntax>
+      <value><![CDATA[true if the sound bank is in use; false otherwise.]]></value>
       <remarks><![CDATA[This value will return true if the sound bank is currently referenced by at least one valid cue instance or other client. For example, the game itself might reference the sound bank.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -111,7 +118,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetCue" returnType="void">
+    <method name="GetCue" returnType="Cue">
       <summary><![CDATA[Gets a cue from the sound bank.]]></summary>
       <overloads>
         <overload signature="GetCue()">
@@ -123,6 +130,9 @@
             <parameter name="name" type="string"><![CDATA[Friendly name of the cue to get.]]></parameter>
           </parameters>
           <returns><![CDATA[Cue object.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[The name parameter is null.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Each Cue instance that you retrieve is unique, even when retrieving multiple cues with the same name. This allows multiple instances of the same Cue to exist and play simultaneously. The Cue instance that you retrieve using this method is valid only as long as it is in scope. If the Cue instance is allowed to go out of scope, such as in the case of the Cue being retrieved and played without otherwise being stored, the Cue is marked to be disposed by the garbage collector. This will result in the Cue stopping playback at an indeterminate time when the garbage collector disposes of the Cue . To prevent this behavior, store Cue objects to prevent them from falling out of scope. Alternatively, you can call PlayCue to play a cue immediately that will not fall out of scope.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -132,7 +142,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -162,6 +172,10 @@
             <parameter name="listener" type="AudioListener"><![CDATA[AudioListener that specifies listener 3D audio information.]]></parameter>
             <parameter name="emitter" type="AudioEmitter"><![CDATA[AudioEmitter that specifies emitter 3D audio information.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[The name parameter is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The name parameter specifies a cue that does not exist.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The 3D audio information in the specified listener and emitter is used to initialize the cue instance and apply a static positional 3D audio effect (the direction from which the player hears the sound). Position and velocity are not updated over time; the 3D audio effects are calculated based on the emitter and listener position at the time of the call. Typically, this is used for short-lived sounds, or when the object and listener are stationary for the duration of the sound but placed somewhere in the world space. For example, a sound that is played off to the right will continue to sound as if it is coming from the right, even if the listener moves or turns. For very short sounds, this may be imperceptable and thus acceptable. As another example, a voice that comes from the player's vehicle will always be the same distance and direction relative to the player, so static positioning in this case would be correct. Attenuation and doppler effects, if enabled, will also be static for the duration of the sound. To enable dynamic 3D audio when the emitter or listener are moving, use GetCue and Apply3D instead. Each Cue instance that you play is unique, even when playing multiple cues with the same name. This allows multiple instances of the same Cue to play simultaneously. Calling this method does not return a Cue object. Therefore, once the cue has started playing, it cannot be controlled through any methods of Cue , such as Stop , Pause , or Resume . The cue will play until its authored end, at which point it will be released. Because no Cue object is retrieved, cues played using this method are also unable to use Apply3D to apply dynamic 3D effects to the cue. To retrieve a cue that you can control during playback, or apply dynamic 3D effects to, use GetCue . For more information about 3D audio, see How To: Apply Basic 3D Positional Effects to a Cue and How To: Apply Attenuation and Doppler 3D Audio Effects .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -171,7 +185,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -193,7 +207,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

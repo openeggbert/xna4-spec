@@ -4,7 +4,8 @@
           name="SignedInGamer" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
-          baseClass="Gamer">
+          baseClass="Gamer"
+          modifier="sealed">
   <summary><![CDATA[Represents a gamer (a profile that has an associated gamertag) on the local system.]]></summary>
   <syntax><![CDATA[public sealed class SignedInGamer : Gamer]]></syntax>
   <remarks><![CDATA[Gamers can be either on a local system or in a multiplayer session. For more information about gamers in a multiplayer session, see NetworkGamer .]]></remarks>
@@ -20,6 +21,7 @@
     <property name="GameDefaults" type="GameDefaults" access="get">
       <summary><![CDATA[Describes a gamer's preferred settings.]]></summary>
       <syntax><![CDATA[public GameDefaults GameDefaults { get; }]]></syntax>
+      <value><![CDATA[The gamer's preferred settings.]]></value>
       <remarks><![CDATA[Wherever possible, games should default to these values.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -31,6 +33,7 @@
     <property name="IsGuest" type="bool" access="get">
       <summary><![CDATA[Determines whether the gamer is the guest of an Xbox LIVE–enabled profile.]]></summary>
       <syntax><![CDATA[public bool IsGuest { get; }]]></syntax>
+      <value><![CDATA[true if the gamer is a guest; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -41,6 +44,7 @@
     <property name="IsSignedInToLive" type="bool" access="get">
       <summary><![CDATA[Determines whether the gamer has an Xbox LIVE–enabled profile.]]></summary>
       <syntax><![CDATA[public bool IsSignedInToLive { get; }]]></syntax>
+      <value><![CDATA[true if the gamer is able to sign in to Xbox LIVE; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -51,6 +55,7 @@
     <property name="PartySize" type="int" access="get;set">
       <summary><![CDATA[Gets the current party size.]]></summary>
       <syntax><![CDATA[public int PartySize { get; set; }]]></syntax>
+      <value><![CDATA[The current number of members in this signed-in gamer's LIVE Party.]]></value>
       <remarks><![CDATA[This is a read-only property. You cannot use it to set the party size. On platforms such as Windows Phone that do not support Xbox LIVE parties, the value of this property is always zero.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -62,6 +67,10 @@
     <property name="PlayerIndex" type="PlayerIndex" access="get">
       <summary><![CDATA[Gets the index of the gamer.]]></summary>
       <syntax><![CDATA[public PlayerIndex PlayerIndex { get; }]]></syntax>
+      <value><![CDATA[Index of the gamer.]]></value>
+      <exceptions>
+        <exception type="ObjectDisposedException"><![CDATA[Thrown if the associated profile is no longer valid. For example, the profile may have signed out.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -72,6 +81,7 @@
     <property name="Presence" type="GamerPresence" access="get">
       <summary><![CDATA[Gets an object that may be used to set the rich presence state for this gamer.]]></summary>
       <syntax><![CDATA[public GamerPresence Presence { get; }]]></syntax>
+      <value><![CDATA[An object that may be used to set the rich presence state for this gamer.]]></value>
       <remarks><![CDATA[Zune Specific Information Setting presence information is not supported on the Zune platform. On the Zune platform, setting presence information for a signed-in gamer will not change the presence information on Xbox LIVE. Note Game titles will not be displayed in a player's presence information on the Xbox LIVE service until the game passes peer review. Once a game passes peer review, the presence information for a player will show three things: a confirmation the player is playing an Xbox LIVE Community Game, the game's title, and finally the presence information set by SignedInGamer.Presence . Xbox LIVE Community Game My Game Title Fighting the Boss While a game is in development, but before the game passes peer review, the presence information indicates the developer is using the XNA Creators Club. XNA Creators Club creators.xna.com Fighting the Boss]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -83,6 +93,7 @@
     <property name="Privileges" type="GamerPrivileges" access="get">
       <summary><![CDATA[Describes what operations a gamer is allowed to perform.]]></summary>
       <syntax><![CDATA[public GamerPrivileges Privileges { get; }]]></syntax>
+      <value><![CDATA[The operations a gamer is allowed to perform.]]></value>
       <remarks><![CDATA[Privileges can be defined by parental control settings, and also will be set automatically in response to things like age, region, and whether the gamer has a LIVE Gold or LIVE Silver membership. Games do not need to explicitly check privileges, because a GamerPrivilegeException will be thrown if an unsupported operation is selected. However, these privilege bits may be useful to detect that an operation is unavailable before calling it so as to grey-out the relevant menu option.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -111,7 +122,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="BeginAwardAchievement" returnType="void">
+    <method name="BeginAwardAchievement" returnType="IAsyncResult">
       <summary><![CDATA[Starts an asynchronous operation to award an achievement to a locally signed-in gamer.]]></summary>
       <overloads>
         <overload signature="BeginAwardAchievement()">
@@ -138,7 +149,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="BeginGetAchievements" returnType="void">
+    <method name="BeginGetAchievements" returnType="IAsyncResult">
       <summary><![CDATA[Starts an asynchronous achievement query operation.]]></summary>
       <overloads>
         <overload signature="BeginGetAchievements()">
@@ -181,7 +192,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndGetAchievements" returnType="void">
+    <method name="EndGetAchievements" returnType="AchievementCollection">
       <summary><![CDATA[Ends an asynchronous achievement query operation.]]></summary>
       <overloads>
         <overload signature="EndGetAchievements()">
@@ -204,7 +215,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetAchievements" returnType="void">
+    <method name="GetAchievements" returnType="AchievementCollection">
       <summary><![CDATA[Returns the collection of all achievements that may be earned by this gamer.]]></summary>
       <overloads>
         <overload signature="GetAchievements()">
@@ -221,13 +232,17 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetFriends" returnType="void">
+    <method name="GetFriends" returnType="FriendCollection">
       <summary><![CDATA[Reads the friends list of this local gamer. This includes both the gamertags of the friends and their current presence information.]]></summary>
       <overloads>
         <overload signature="GetFriends()">
           <summary><![CDATA[Reads the friends list of this local gamer. This includes both the gamertags of the friends and their current presence information.]]></summary>
           <syntax><![CDATA[public FriendCollection GetFriends ()]]></syntax>
           <returns><![CDATA[The friends of this local gamer.]]></returns>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[This object has already been disposed.]]></exception>
+            <exception type="GamerPrivilegeException"><![CDATA[A signed-in gamer profile is required to perform this operation. A LIVE profile may also be required. There are no profiles currently signed in, or the profile is not signed in to LIVE.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -237,7 +252,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="IsFriend" returnType="void">
+    <method name="IsFriend" returnType="bool">
       <summary><![CDATA[Queries whether the specified gamer is a friend of this local gamer.]]></summary>
       <overloads>
         <overload signature="IsFriend()">
@@ -249,6 +264,11 @@
             <parameter name="gamer" type="Gamer"><![CDATA[The gamer to query.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the specified gamer is a friend of the local gamer; false otherwise.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[gamer is null.]]></exception>
+            <exception type="GamerPrivilegeException"><![CDATA[A signed in gamer profile is required to perform this operation. A LIVE profile may also be required. There are no profiles currently signed in, or the profile is not signed in to LIVE.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[The gamer object has already been disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -258,7 +278,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="IsHeadset" returnType="void">
+    <method name="IsHeadset" returnType="bool">
       <summary><![CDATA[Determines if the passed microphone is a headset associated with this signed-in gamer. Use this method to determine if a specific microphone is a gamer-bound headset.]]></summary>
       <overloads>
         <overload signature="IsHeadset()">

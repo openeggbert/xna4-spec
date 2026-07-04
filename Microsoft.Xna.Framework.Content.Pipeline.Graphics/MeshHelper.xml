@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="MeshHelper" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          modifier="static">
   <summary><![CDATA[Provides methods for manipulating mesh data.]]></summary>
   <syntax><![CDATA[public static class MeshHelper]]></syntax>
   <platforms>
@@ -15,7 +16,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="CalculateNormals" returnType="void">
+    <method name="CalculateNormals" returnType="void" isStatic="true">
       <summary><![CDATA[Computes new normals for the specified mesh.]]></summary>
       <overloads>
         <overload signature="CalculateNormals()">
@@ -36,7 +37,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="CalculateTangentFrames" returnType="void">
+    <method name="CalculateTangentFrames" returnType="void" isStatic="true">
       <summary><![CDATA[Compute tangent frames for the given mesh.]]></summary>
       <overloads>
         <overload signature="CalculateTangentFrames()">
@@ -61,7 +62,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="FindSkeleton" returnType="void">
+    <method name="FindSkeleton" returnType="BoneContent" isStatic="true">
       <summary><![CDATA[Searches for the root bone of the contained skeleton. This node is used to animate the skeleton.]]></summary>
       <overloads>
         <overload signature="FindSkeleton()">
@@ -80,7 +81,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="FlattenSkeleton" returnType="void">
+    <method name="FlattenSkeleton" returnType="IList&lt;BoneContent&gt;" isStatic="true">
       <summary><![CDATA[Gets a flattened list of all bones contained by the specified skeleton.]]></summary>
       <overloads>
         <overload signature="FlattenSkeleton()">
@@ -100,7 +101,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="MergeDuplicatePositions" returnType="void">
+    <method name="MergeDuplicatePositions" returnType="void" isStatic="true">
       <summary><![CDATA[Processes the PositionCollection collection of the specified mesh, merging any values that are closer together than the specified tolerance threshold.]]></summary>
       <overloads>
         <overload signature="MergeDuplicatePositions()">
@@ -152,7 +153,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="OptimizeForCache" returnType="void">
+    <method name="OptimizeForCache" returnType="void" isStatic="true">
       <summary><![CDATA[Reorders the indices and vertices of the mesh for optimal GPU cache performance.]]></summary>
       <overloads>
         <overload signature="OptimizeForCache()">
@@ -170,7 +171,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="SwapWindingOrder" returnType="void">
+    <method name="SwapWindingOrder" returnType="void" isStatic="true">
       <summary><![CDATA[Reverses the triangle winding order of the specified mesh.]]></summary>
       <overloads>
         <overload signature="SwapWindingOrder()">
@@ -189,7 +190,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TransformScene" returnType="void">
+    <method name="TransformScene" returnType="void" isStatic="true">
       <summary><![CDATA[Applies a transformation to the contents of a scene hierarchy.]]></summary>
       <overloads>
         <overload signature="TransformScene()">

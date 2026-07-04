@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="EffectAnnotation" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Represents an annotation to an EffectParameter.]]></summary>
   <syntax><![CDATA[public sealed class EffectAnnotation]]></syntax>
   <platforms>
@@ -17,6 +18,7 @@
     <property name="ColumnCount" type="int" access="get">
       <summary><![CDATA[Gets the number of columns in this effect annotation.]]></summary>
       <syntax><![CDATA[public int ColumnCount { get; }]]></syntax>
+      <value><![CDATA[The number of columns in this effect annotation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +28,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of the effect annotation.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of the effect annotation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +38,7 @@
     <property name="ParameterClass" type="EffectParameterClass" access="get">
       <summary><![CDATA[Gets the parameter class of this effect annotation.]]></summary>
       <syntax><![CDATA[public EffectParameterClass ParameterClass { get; }]]></syntax>
+      <value><![CDATA[The parameter class of this effect annotation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +48,7 @@
     <property name="ParameterType" type="EffectParameterType" access="get">
       <summary><![CDATA[Gets the parameter type of this effect annotation.]]></summary>
       <syntax><![CDATA[public EffectParameterType ParameterType { get; }]]></syntax>
+      <value><![CDATA[The parameter type of this effect annotation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +58,7 @@
     <property name="RowCount" type="int" access="get">
       <summary><![CDATA[Gets the row count of this effect annotation.]]></summary>
       <syntax><![CDATA[public int RowCount { get; }]]></syntax>
+      <value><![CDATA[The row count of this effect annotation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,6 +68,7 @@
     <property name="Semantic" type="string" access="get">
       <summary><![CDATA[Gets the semantic of this effect annotation.]]></summary>
       <syntax><![CDATA[public string Semantic { get; }]]></syntax>
+      <value><![CDATA[The semantic of this effect annotation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -90,7 +97,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -105,7 +112,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueBoolean" returnType="void">
+    <method name="GetValueBoolean" returnType="bool">
       <summary><![CDATA[Gets the value of the EffectAnnotation as a Boolean.]]></summary>
       <overloads>
         <overload signature="GetValueBoolean()">
@@ -120,7 +127,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueInt32" returnType="void">
+    <method name="GetValueInt32" returnType="int">
       <summary><![CDATA[Gets the value of the EffectAnnotation as a Int32.]]></summary>
       <overloads>
         <overload signature="GetValueInt32()">
@@ -135,7 +142,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueMatrix" returnType="void">
+    <method name="GetValueMatrix" returnType="Matrix">
       <summary><![CDATA[Gets the value of the EffectAnnotation as a Int32.]]></summary>
       <overloads>
         <overload signature="GetValueMatrix()">
@@ -150,7 +157,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueSingle" returnType="void">
+    <method name="GetValueSingle" returnType="float">
       <summary><![CDATA[Gets the value of the EffectAnnotation as a Single.]]></summary>
       <overloads>
         <overload signature="GetValueSingle()">
@@ -165,7 +172,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueString" returnType="void">
+    <method name="GetValueString" returnType="string">
       <summary><![CDATA[Gets the value of the EffectAnnotation as a String.]]></summary>
       <overloads>
         <overload signature="GetValueString()">
@@ -180,7 +187,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueVector2" returnType="void">
+    <method name="GetValueVector2" returnType="Vector2">
       <summary><![CDATA[Gets the value of the EffectAnnotation as a Vector2.]]></summary>
       <overloads>
         <overload signature="GetValueVector2()">
@@ -195,7 +202,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueVector3" returnType="void">
+    <method name="GetValueVector3" returnType="Vector3">
       <summary><![CDATA[Gets the value of the EffectAnnotation as a Vector3.]]></summary>
       <overloads>
         <overload signature="GetValueVector3()">
@@ -210,7 +217,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueVector4" returnType="void">
+    <method name="GetValueVector4" returnType="Vector4">
       <summary><![CDATA[Gets the value of the EffectAnnotation as a Vector4.]]></summary>
       <overloads>
         <overload signature="GetValueVector4()">
@@ -225,7 +232,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -247,7 +254,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

@@ -17,6 +17,7 @@
     <property name="HasFogVertexClamped" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device clamps fog blend factor per vertex.]]></summary>
       <syntax><![CDATA[public bool HasFogVertexClamped { get; }]]></syntax>
+      <value><![CDATA[true if the device clamps fog blend factor per vertex; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="IsNullReference" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device is a null reference device that does not render.]]></summary>
       <syntax><![CDATA[public bool IsNullReference { get; }]]></syntax>
+      <value><![CDATA[true if the device is a null reference device; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +37,7 @@
     <property name="SupportsBlendOperation" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports blending operations other than BlendFunction.Add.]]></summary>
       <syntax><![CDATA[public bool SupportsBlendOperation { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports other blend operations; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +47,7 @@
     <property name="SupportsClipPlaneScaledPoints" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device correctly clips scaled points of size greater than 1.0 to user-defined clipping planes.]]></summary>
       <syntax><![CDATA[public bool SupportsClipPlaneScaledPoints { get; }]]></syntax>
+      <value><![CDATA[true if the device correctly clips scaled points; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +57,7 @@
     <property name="SupportsClipTransformedVertices" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device clips post-transformed vertex primitives.]]></summary>
       <syntax><![CDATA[public bool SupportsClipTransformedVertices { get; }]]></syntax>
+      <value><![CDATA[true if the device clips post-transformed vertex primitives; false otherwise.]]></value>
       <remarks><![CDATA[Specify ResourceUsage.DoNotClip when the pipeline should not do any clipping. For this case, additional software clipping may need to be performed at draw time, requiring the vertex buffer to be in system memory.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -63,6 +68,7 @@
     <property name="SupportsColorWrite" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports per-channel writes for the render-target color buffer through the ColorWriteChannels state.]]></summary>
       <syntax><![CDATA[public bool SupportsColorWrite { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-channel writes; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -72,6 +78,7 @@
     <property name="SupportsCullClockwiseFace" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the driver supports clockwise triangle culling through the CullMode state.]]></summary>
       <syntax><![CDATA[public bool SupportsCullClockwiseFace { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports clockwise triangle culling; false otherwise.]]></value>
       <remarks><![CDATA[This applies only to triangle primitives.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -82,6 +89,7 @@
     <property name="SupportsCullCounterClockwiseFace" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the driver supports counterclockwise triangle culling through the CullMode state.]]></summary>
       <syntax><![CDATA[public bool SupportsCullCounterClockwiseFace { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports counterclockwise triangle culling; false otherwise.]]></value>
       <remarks><![CDATA[This applies only to triangle primitives.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -92,6 +100,7 @@
     <property name="SupportsCullNone" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the driver does not perform triangle culling.]]></summary>
       <syntax><![CDATA[public bool SupportsCullNone { get; }]]></syntax>
+      <value><![CDATA[true if the driver does not perform triangle culling; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -101,6 +110,7 @@
     <property name="SupportsFogAndSpecularAlpha" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the driver supports separate fog and specular alpha.]]></summary>
       <syntax><![CDATA[public bool SupportsFogAndSpecularAlpha { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports separate fog and specular alpha; false otherwise.]]></value>
       <remarks><![CDATA[Many devices use the specular alpha channel to store the fog factor.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -111,6 +121,7 @@
     <property name="SupportsIndependentWriteMasks" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports independent write masks for multiple element textures or multiple render targets.]]></summary>
       <syntax><![CDATA[public bool SupportsIndependentWriteMasks { get; }]]></syntax>
+      <value><![CDATA[true if the device supports independent write masks; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -120,6 +131,7 @@
     <property name="SupportsMaskZ" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device can enable and disable modification of the depth buffer on pixel operations.]]></summary>
       <syntax><![CDATA[public bool SupportsMaskZ { get; }]]></syntax>
+      <value><![CDATA[true if the device can enable and disable modification of the depth buffer; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -129,6 +141,7 @@
     <property name="SupportsMultipleRenderTargetsIndependentBitDepths" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports different bit depths for multiple render targets.]]></summary>
       <syntax><![CDATA[public bool SupportsMultipleRenderTargetsIndependentBitDepths { get; }]]></syntax>
+      <value><![CDATA[true if the device supports different bit depths for multiple render targets; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -138,6 +151,7 @@
     <property name="SupportsMultipleRenderTargetsPostPixelShaderBlending" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports post-pixel shader operations for multiple render targets.]]></summary>
       <syntax><![CDATA[public bool SupportsMultipleRenderTargetsPostPixelShaderBlending { get; }]]></syntax>
+      <value><![CDATA[true if the device supports post-pixel shader operations for multiple render targets; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -147,6 +161,7 @@
     <property name="SupportsPerStageConstant" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports per-stage constants.]]></summary>
       <syntax><![CDATA[public bool SupportsPerStageConstant { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage constants; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -156,6 +171,7 @@
     <property name="SupportsSeparateAlphaBlend" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports separate blend settings for the alpha channel.]]></summary>
       <syntax><![CDATA[public bool SupportsSeparateAlphaBlend { get; }]]></syntax>
+      <value><![CDATA[true if the device supports separate blend settings for the alpha channel; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -165,6 +181,7 @@
     <property name="SupportsTextureStageStateArgumentTemp" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports texture argument values for the temporary register.]]></summary>
       <syntax><![CDATA[public bool SupportsTextureStageStateArgumentTemp { get; }]]></syntax>
+      <value><![CDATA[true if the device supports texture argument values for the temporary register; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -173,7 +190,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

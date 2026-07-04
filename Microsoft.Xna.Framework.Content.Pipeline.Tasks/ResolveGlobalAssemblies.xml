@@ -26,6 +26,7 @@
       <summary><![CDATA[Gets or sets the file names of the global assemblies to be modified. Any file names that are already pointing to the root directory of XNA Game Studio Express remain unchanged.]]></summary>
       <syntax><![CDATA[[OutputAttribute]
 public ITaskItem[] Assemblies { get; set; }]]></syntax>
+      <value><![CDATA[File names to be modified or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -35,6 +36,7 @@ public ITaskItem[] Assemblies { get; set; }]]></syntax>
       <summary><![CDATA[Gets or sets the XNA framework version, used to determine the xactbld.exe path.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public string XnaFrameworkVersion { get; set; }]]></syntax>
+      <value><![CDATA[Version of the XNA framework or the value to be set. Currently, 1.0 is the only valid value.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -42,7 +44,7 @@ public string XnaFrameworkVersion { get; set; }]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Execute" returnType="void">
+    <method name="Execute" returnType="bool">
       <summary><![CDATA[Executes the ResolveGlobalAssemblies task.]]></summary>
       <overloads>
         <overload signature="Execute()">

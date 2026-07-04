@@ -4,7 +4,8 @@
           name="AnimationContentDictionary" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="NamedValueDictionary&lt;AnimationContent&gt;">
+          baseClass="NamedValueDictionary&lt;AnimationContent&gt;"
+          modifier="sealed">
   <summary><![CDATA[Collection of named animations.]]></summary>
   <syntax><![CDATA[public sealed class AnimationContentDictionary : NamedValueDictionary<AnimationContent>]]></syntax>
   <platforms>

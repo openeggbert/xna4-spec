@@ -26,6 +26,7 @@
     <property name="BuildConfiguration" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the content build configuration name.]]></summary>
       <syntax><![CDATA[public string BuildConfiguration { get; set; }]]></syntax>
+      <value><![CDATA[Name of the configuration.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -34,6 +35,7 @@
     <property name="CompressContent" type="bool" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public bool CompressContent { get; set; }]]></syntax>
+      <value><![CDATA[If true, all content types that permit compression will be compressed when built (the default). If false, no content will be compressed.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -43,6 +45,7 @@
     <property name="IntermediateDirectory" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the directory for storing temporary build files.]]></summary>
       <syntax><![CDATA[public string IntermediateDirectory { get; set; }]]></syntax>
+      <value><![CDATA[Directory containing the intermediate build files.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -52,6 +55,7 @@
       <summary><![CDATA[Gets all file names produced by the build, regardless of any incremental optimizations. This list can be used as input for a subsequent pack file generator task.]]></summary>
       <syntax><![CDATA[[OutputAttribute]
 public ITaskItem[] IntermediateFiles { get; }]]></syntax>
+      <value><![CDATA[Array of file names produced by the content build.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -60,6 +64,7 @@ public ITaskItem[] IntermediateFiles { get; }]]></syntax>
     <property name="LoggerRootDirectory" type="string" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public string LoggerRootDirectory { get; set; }]]></syntax>
+      <value><![CDATA[Current name of the base directory or the value to be set.]]></value>
       <remarks><![CDATA[When building XNA content, all errors are displayed in the Error List Window of Visual Studio. Along with the data that triggered the error, the Error List displays the path and filename where the offending data was encountered. By default, the path of the offending file that is reported in the Error List is always expressed as relative to the location of the project file that references it. When set, the LoggerRootDirectory property specifies an explicit base path for error reporting that overrides the default operation. All offending files reported in the Error List will be expressed as relative to the base path set in LoggerRootDirectory.]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -71,6 +76,7 @@ public ITaskItem[] IntermediateFiles { get; }]]></syntax>
       <summary><![CDATA[Gets all file names produced by the build, regardless of any incremental optimizations. This list can be used as input for a subsequent pack file generator task.]]></summary>
       <syntax><![CDATA[[OutputAttribute]
 public ITaskItem[] OutputContentFiles { get; }]]></syntax>
+      <value><![CDATA[Array of file names produced by the content build.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -79,6 +85,7 @@ public ITaskItem[] OutputContentFiles { get; }]]></syntax>
     <property name="OutputDirectory" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the output directory for the final build results.]]></summary>
       <syntax><![CDATA[public string OutputDirectory { get; set; }]]></syntax>
+      <value><![CDATA[Output directory for final build result files]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -88,6 +95,7 @@ public ITaskItem[] OutputContentFiles { get; }]]></syntax>
       <summary><![CDATA[Gets or sets the names of assemblies that provide Importer&lt;T&gt; or ContentProcessor&lt;T&gt; components for use by the build.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public ITaskItem[] PipelineAssemblies { get; set; }]]></syntax>
+      <value><![CDATA[Current pipeline assemblies or the values to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -96,6 +104,7 @@ public ITaskItem[] PipelineAssemblies { get; set; }]]></syntax>
     <property name="PipelineAssemblyDependencies" type="ITaskItem[]" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public ITaskItem[] PipelineAssemblyDependencies { get; set; }]]></syntax>
+      <value><![CDATA[Array of content build dependencies.]]></value>
       <remarks><![CDATA[Any dependencies must be loaded by the task. In addition, these dependencies won't be searched for ContentImporter or ContentProcessor components.]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -106,6 +115,7 @@ public ITaskItem[] PipelineAssemblies { get; set; }]]></syntax>
     <property name="RebuildAll" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets the force rebuild flag.]]></summary>
       <syntax><![CDATA[public bool RebuildAll { get; set; }]]></syntax>
+      <value><![CDATA[Current value of the force rebuild flag.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -115,6 +125,7 @@ public ITaskItem[] PipelineAssemblies { get; set; }]]></syntax>
       <summary><![CDATA[Gets the list of file names modified by an incremental rebuild. This list is suitable for passing to a subsequent incremental deploy or reload notification task.]]></summary>
       <syntax><![CDATA[[OutputAttribute]
 public ITaskItem[] RebuiltContentFiles { get; }]]></syntax>
+      <value><![CDATA[Array of file names modified by an incremental rebuild.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -123,6 +134,7 @@ public ITaskItem[] RebuiltContentFiles { get; }]]></syntax>
     <property name="RootDirectory" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the base path for the entire content build process.]]></summary>
       <syntax><![CDATA[public string RootDirectory { get; set; }]]></syntax>
+      <value><![CDATA[Base path of the content build process.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -132,6 +144,7 @@ public ITaskItem[] RebuiltContentFiles { get; }]]></syntax>
       <summary><![CDATA[Gets or sets the source asset files to be built.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public ITaskItem[] SourceAssets { get; set; }]]></syntax>
+      <value><![CDATA[Current source asset files to be built or the values to be set.]]></value>
       <remarks><![CDATA[This task list can be decorated with the following metadata attributes. Attribute Name Description Name Final name of the compiled asset. This value is passed to the runtime content loader. If you omit this value, it defaults to the source file name with no extension. Importer Importer used to read the source asset. If you omit this value, the importer is deduced from the source file extension. Processor Content processor used to convert the asset data. If you omit this value, data passes through the pipeline with no custom processing.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -142,6 +155,7 @@ public ITaskItem[] SourceAssets { get; set; }]]></syntax>
       <summary><![CDATA[Gets or sets the content build target platform.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public string TargetPlatform { get; set; }]]></syntax>
+      <value><![CDATA[Target of the content build. For a list of possible values, see TargetPlatform Enumeration.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -151,6 +165,7 @@ public string TargetPlatform { get; set; }]]></syntax>
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public string TargetProfile { get; set; }]]></syntax>
+      <value><![CDATA[Target graphics profile of the content build. For a list of possible values, see GraphicsProfile Enumeration.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -159,7 +174,7 @@ public string TargetProfile { get; set; }]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Execute" returnType="void">
+    <method name="Execute" returnType="bool">
       <summary><![CDATA[Executes the related build task.]]></summary>
       <overloads>
         <overload signature="Execute()">

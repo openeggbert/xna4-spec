@@ -34,6 +34,7 @@
     <property name="Enabled" type="bool" access="get;set">
       <summary><![CDATA[Indicates whether GameComponent.Update should be called when Game.Update is called.]]></summary>
       <syntax><![CDATA[public bool Enabled { get; set; }]]></syntax>
+      <value><![CDATA[true if GameComponent.Update should be called; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -43,6 +44,7 @@
     <property name="Game" type="Object" access="get">
       <summary><![CDATA[Gets and sets the Game associated with this GameComponent.]]></summary>
       <syntax><![CDATA[protected Game Game { get; }]]></syntax>
+      <value><![CDATA[The Game associated with this GameComponent.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -52,6 +54,7 @@
     <property name="UpdateOrder" type="int" access="get;set">
       <summary><![CDATA[Indicates the order in which the GameComponent should be updated relative to other GameComponent instances. Lower values are updated first.]]></summary>
       <syntax><![CDATA[public int UpdateOrder { get; set; }]]></syntax>
+      <value><![CDATA[The order in which the GameComponent should be updated.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

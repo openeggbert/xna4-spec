@@ -30,6 +30,11 @@
         <parameter name="usage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this resource.]]></parameter>
         <parameter name="format" type="SurfaceFormat"><![CDATA[The format of all levels in the cube texture.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentException"><![CDATA[One of the following conditions is true: The edgeLength requested would result in a resource too large for the graphics device. numberLevels is too large. It is either greater than 32, or if less than 32 it would result in a cube texture that is too large for this graphics device. Textures have a maximum of 32 levels. usage is not a valid value. Texture resources can only be created with the following ResourceUsage options: ResourceUsage.AutoGenerateMipMap, ResourceUsage.ResolveTarget, ResourceUsage.Dynamic, ResourceUsage.Tiled, ResourceUsage.Linear and ResourceUsage.Automatic. format is SurfaceFormat.Unknown. Textures cannot be created using SurfaceFormat.Unknown. resourceManagementMode is not a valid value. resourceManagementMode must be either ResourceManagementMode.Manual or ResourceManagementMode.Automatic. The parameters specified are not compatible: format and numberLevels are incompatible. Multi-element textures of type SurfaceFormat.Multi2Bgra32 cannot be mipmapped, set numberLevels to 1. usage and numberLevels are incompatible. Textures specifying the usage ResourceUsage.AutoGenerateMipMap must set numberLevels to either 0 or 1. usage and resourceManagementMode are incompatible. Textures using ResourceManagementMode.Automatic cannot specify ResourceUsage.Dynamic or ResourceUsage.ResolveTarget.]]></exception>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[edgeLength is less than or equal to zero. edgeLength must be greater than or equal to zero.]]></exception>
+      </exceptions>
       <remarks><![CDATA[A mipmap (texture) is a collection of successively downsampled (mipmapped) surfaces. An application can discover support for automatic generation of mipmaps in a particular format by calling CheckDeviceFormat with ResourceUsage.AutoGenerateMipMap . A texel represents the smallest unit of a texture that can be read from or written to by the GPU. A texel is composed of 1 to 4 components. Specifically, a texel may be any one of the available texture formats represented in the SurfaceFormat enumeration. A cube texture is a collection of six textures, one for each face of the cube. All faces must be present in the cube texture. Also, a cube map surface must be the same pixel size in all three dimensions (x, y, and z). Figure 1 shows a fully populated texture cube. Figure 1.&nbsp;&nbsp;TextureCube Resource Architecture]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -51,6 +56,9 @@
         <parameter name="mipMap" type="Boolean"><![CDATA[[ MarshalAsAttribute (U1)] True to generate a full mipmap chain, false otherwise.]]></parameter>
         <parameter name="format" type="SurfaceFormat"><![CDATA[Surface data format.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="NotSupportedException"><![CDATA[One or more of the following is true: The profile does not support the requested format. The profile supports a maximum texture size of 2048. The profile requires texture size to be a power of two.]]></exception>
+      </exceptions>
       <remarks><![CDATA[To initialize the resource from an existing file, use ContentManager.Load .]]></remarks>
       <platforms>
         <platform>Windows Phone</platform>
@@ -74,6 +82,11 @@
         <parameter name="format" type="SurfaceFormat"><![CDATA[The format of all levels in the cube texture.]]></parameter>
         <parameter name="resourceManagementMode" type="ResourceManagementMode"><![CDATA[The resource management mode to use for this cube texture resource. If this value is ResourceManagementMode.Automatic , the runtime will recreate the resource when the graphics device is reset. If this value is ResourceManagementMode.Manual , this resource should be reinitialized when the graphics device is reset.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentException"><![CDATA[One of the following conditions is true: The edgeLength requested would result in a resource too large for the graphics device. numberLevels is too large. It is either greater than 32, or if less than 32 it would result in a cube texture that is too large for this graphics device. Textures have a maximum of 32 levels. usage is not a valid value. Texture resources can only be created with the following ResourceUsage options: ResourceUsage.AutoGenerateMipMap, ResourceUsage.ResolveTarget, ResourceUsage.Dynamic, ResourceUsage.Tiled, ResourceUsage.Linear and ResourceUsage.Automatic. format is SurfaceFormat.Unknown. Textures cannot be created using SurfaceFormat.Unknown. resourceManagementMode is not a valid value. resourceManagementMode must be either ResourceManagementMode.Manual or ResourceManagementMode.Automatic. The parameters specified are not compatible: format and numberLevels are incompatible. Multi-element textures of type SurfaceFormat.Multi2Bgra32 cannot be mipmapped, set numberLevels to 1. usage and numberLevels are incompatible. Textures specifying the usage ResourceUsage.AutoGenerateMipMap must set numberLevels to either 0 or 1. usage and resourceManagementMode are incompatible. Textures using ResourceManagementMode.Automatic cannot specify ResourceUsage.Dynamic or ResourceUsage.ResolveTarget.]]></exception>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[edgeLength is less than or equal to zero. edgeLength must be greater than or equal to zero.]]></exception>
+      </exceptions>
       <remarks><![CDATA[A texel represents the smallest unit of a texture that can be read from or written to by the GPU. A texel is composed of 1 to 4 components. Specifically, a texel may be any one of the available texture formats represented in the SurfaceFormat enumeration. A cube texture is a collection of six textures, one for each face of the cube. All faces must be present in the cube texture. Also, a cube map surface must be the same pixel size in all three dimensions (x, y, and z). Figure 1 shows a fully populated texture cube. Figure 1.&nbsp;&nbsp;TextureCube Resource Architecture]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -86,6 +99,7 @@
     <property name="Format" type="SurfaceFormat" access="get">
       <summary><![CDATA[Gets the pixel format for this texture resource.]]></summary>
       <syntax><![CDATA[public SurfaceFormat Format { get; }]]></syntax>
+      <value><![CDATA[The pixel format of this texture resource.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -95,6 +109,7 @@
     <property name="ResourceManagementMode" type="ResourceManagementMode" access="get">
       <summary><![CDATA[Gets the class of memory allocated for this cube texture resource.]]></summary>
       <syntax><![CDATA[public ResourceManagementMode ResourceManagementMode { get; }]]></syntax>
+      <value><![CDATA[The class of memory allocated for this cube texture resource. If this value is ResourceManagementMode.Automatic, the runtime will recreate the resource when the graphics device is reset. If this value is ResourceManagementMode.Manual, this resource should be reinitialized when the graphics device is reset.]]></value>
       <remarks><![CDATA[On Windows, GetData and SetData will fail if TextureCube.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target. If this value is ResourceManagementMode.Automatic , TextureCube.ResourceUsage cannot be ResourceUsage.Dynamic .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -105,6 +120,7 @@
     <property name="ResourceUsage" type="ResourceUsage" access="get">
       <summary><![CDATA[Gets a set of options identifying the behaviors of this resource.]]></summary>
       <syntax><![CDATA[public ResourceUsage ResourceUsage { get; }]]></syntax>
+      <value><![CDATA[A set of options identifying the behaviors of this resource.]]></value>
       <remarks><![CDATA[If ResourceManagementMode is ResourceManagementMode.Automatic , this value cannot be ResourceUsage.Dynamic .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -115,6 +131,7 @@
     <property name="Size" type="int" access="get">
       <summary><![CDATA[Gets the width and height of this texture resource, in pixels.]]></summary>
       <syntax><![CDATA[public int Size { get; }]]></syntax>
+      <value><![CDATA[The size of this texture resource, in pixels.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -191,6 +208,11 @@
             <parameter name="numberBytes" type="int"><![CDATA[The number of bytes in textureStream .]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -208,6 +230,11 @@
             <parameter name="textureStream" type="Stream"><![CDATA[Stream containing the texture data.]]></parameter>
           </parameters>
           <returns><![CDATA[The cube texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -227,6 +254,11 @@
             <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[The parameters to use when creating this texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -248,6 +280,11 @@
             <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[The parameters to use when creating this texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The volume texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -265,6 +302,15 @@
             <parameter name="filename" type="string"><![CDATA[The name of the file containing the texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[filename is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The filename parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in filename was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[filename is in an invalid format.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -284,6 +330,15 @@
             <parameter name="size" type="int"><![CDATA[Width and height of the cube texture, in pixels.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[filename is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The filename parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in filename was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[filename is in an invalid format.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -303,6 +358,15 @@
             <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[The parameters to use when creating this texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[filename is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The filename parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in filename was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[filename is in an invalid format.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -311,7 +375,96 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetData" returnType="void">
+      <summary><![CDATA[Returns a copy of the texture data.]]></summary>
+      <overloads>
+        <overload signature="GetData(CubeMapFace, T )">
+          <summary><![CDATA[Returns a copy of the texture data.]]></summary>
+          <syntax><![CDATA[public void GetData<T> (
+         CubeMapFace faceType,
+         T[] data
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data in the texture buffer.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="faceType" type="CubeMapFace"><![CDATA[The cube map face type.]]></parameter>
+            <parameter name="data" type="T[]"><![CDATA[The array into which to copy the data.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[data must be of sufficient length to receive the data.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[This TextureCube was created with a usage type of ResourceUsage.WriteOnly. Calling GetData on a resource that was created with ResourceUsage.WriteOnly is not supported.]]></exception>
+          </exceptions>
+          <remarks><![CDATA[On Windows, GetData and SetData will fail if TextureCube.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GetData(CubeMapFace, T , Int32, Int32)">
+          <summary><![CDATA[Returns a copy of the texture data, specifying the start index and number of elements in the vertex buffer.]]></summary>
+          <syntax><![CDATA[public void GetData<T> (
+         CubeMapFace faceType,
+         T[] data,
+         int startIndex,
+         int elementCount
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data in the texture buffer.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="faceType" type="CubeMapFace"><![CDATA[The cube map face type.]]></parameter>
+            <parameter name="data" type="T[]"><![CDATA[The array into which to copy the data.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[Index in the array at which to begin the copy.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[Number of elements in the array.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[data must be of sufficient length to receive the data.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[This TextureCube was created with a usage type of ResourceUsage.WriteOnly. Calling GetData on a resource that was created with ResourceUsage.WriteOnly is not supported.]]></exception>
+          </exceptions>
+          <remarks><![CDATA[On Windows, GetData and SetData will fail if TextureCube.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GetData(CubeMapFace, Int32, Nullable&lt;Rectangle&gt;, T , Int32, Int32)">
+          <summary><![CDATA[Returns a copy of the texture data, specifying the start index, staring offset, number of elements, region to copy, and level where the data is to be placed.]]></summary>
+          <syntax><![CDATA[public void GetData<T> (
+         CubeMapFace faceType,
+         int level,
+         Nullable<Rectangle> rect,
+         T[] data,
+         int startIndex,
+         int elementCount
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data in the texture buffer.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="faceType" type="CubeMapFace"><![CDATA[The cube map face type.]]></parameter>
+            <parameter name="level" type="int"><![CDATA[The mipmap level where the data will be placed.]]></parameter>
+            <parameter name="rect" type="Nullable&lt;Rectangle&gt;"><![CDATA[The section of the texture where the data will be placed. null indicates the data will be copied over the entire texture.]]></parameter>
+            <parameter name="data" type="T[]"><![CDATA[The array into which to copy the data.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[Index in the array at which to begin the copy.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[Number of elements in the array.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[data must be of sufficient length to receive the data.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[This TextureCube was created with a usage type of ResourceUsage.WriteOnly. Calling GetData on a resource that was created with ResourceUsage.WriteOnly is not supported.]]></exception>
+          </exceptions>
+          <remarks><![CDATA[On Windows, GetData and SetData will fail if TextureCube.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -326,7 +479,134 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="SetData" returnType="void">
+      <summary><![CDATA[Copies array data to the texture at mipmap level 0.]]></summary>
+      <overloads>
+        <overload signature="SetData(CubeMapFace, T )">
+          <summary><![CDATA[Copies array data to the texture at mipmap level 0.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         CubeMapFace faceType,
+         T[] data
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="faceType" type="CubeMapFace"><![CDATA[The cube map face type.]]></parameter>
+            <parameter name="data" type="T[]"><![CDATA[The array of data to copy. The number of elements in the array must be equal to the size of the texture.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[On Windows, GetData and SetData will fail if TextureCube.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target. Warning In the Draw method of an Xbox 360 game, vertex buffers, index buffers, and textures should not be written using when they are intended to be used for rendering. This condition may lead to graphics corruption or crashes. This is because, in cases where the size of the back buffer and depth-stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. When predicated tiling has been triggered, the drawing commands contained in the Draw function are not submitted until Present is called. (Note that Draw implicitly calls Present at the end of this method.) In this case, these resources are not available for modification until the GPU is finished with presenting the entire frame.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(CubeMapFace, Int32, Nullable&lt;Rectangle&gt;, T , Int32, Int32)">
+          <summary><![CDATA[Sets cube texture data, specifying a cubemap face, mipmap level, source rectangle, start index, and number of elements.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         CubeMapFace cubeMapFace,
+         int level,
+         Nullable<Rectangle> rect,
+         T[] data,
+         int startIndex,
+         int elementCount
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="cubeMapFace" type="CubeMapFace"><![CDATA[Cubemap face.]]></parameter>
+            <parameter name="level" type="Int32"><![CDATA[Mipmap level.]]></parameter>
+            <parameter name="rect" type="Nullable&lt;Rectangle&gt;"><![CDATA[&lt; Rectangle &gt; Region in the texture to set the data; use null to set data to the entire texture.]]></parameter>
+            <parameter name="data" type="T"><![CDATA[Array of data.]]></parameter>
+            <parameter name="startIndex" type="Int32"><![CDATA[Index of the first element to set.]]></parameter>
+            <parameter name="elementCount" type="Int32"><![CDATA[Number of elements to set.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(CubeMapFace, T , Int32, Int32, SetDataOptions)">
+          <summary><![CDATA[Copies array data to the texture at mipmap level 0, specifying a start offset.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         CubeMapFace faceType,
+         T[] data,
+         int startIndex,
+         int elementCount,
+         SetDataOptions options
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="faceType" type="CubeMapFace"><![CDATA[The cube map face type.]]></parameter>
+            <parameter name="data" type="T[]"><![CDATA[The array of data to copy.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[Start offset in the array.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[Number of elements in the array. This must be equal to the size of the texture.]]></parameter>
+            <parameter name="options" type="SetDataOptions"><![CDATA[Option specifying if existing data in the buffer will be kept after this operation.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[On Windows, GetData and SetData will fail if TextureCube.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target. Warning In the Draw method of an Xbox 360 game, vertex buffers, index buffers, and textures should not be written using when they are intended to be used for rendering. This condition may lead to graphics corruption or crashes. This is because, in cases where the size of the back buffer and depth-stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. When predicated tiling has been triggered, the drawing commands contained in the Draw function are not submitted until Present is called. (Note that Draw implicitly calls Present at the end of this method.) In this case, these resources are not available for modification until the GPU is finished with presenting the entire frame.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(CubeMapFace, T , Int32, Int32)">
+          <summary><![CDATA[Sets cube texture data, specifying a cubemap face, start index, and number of elements.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         CubeMapFace cubeMapFace,
+         T[] data,
+         int startIndex,
+         int elementCount
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="cubeMapFace" type="CubeMapFace"><![CDATA[The cubemap face.]]></parameter>
+            <parameter name="data" type="T"><![CDATA[Array of data.]]></parameter>
+            <parameter name="startIndex" type="Int32"><![CDATA[Index of the first element to set.]]></parameter>
+            <parameter name="elementCount" type="Int32"><![CDATA[Number of elements to set.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(CubeMapFace, Int32, Nullable&lt;Rectangle&gt;, T , Int32, Int32, SetDataOptions)">
+          <summary><![CDATA[Copies array data to the texture, specifying a start offset, mipmap level, and subregion to copy.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         CubeMapFace faceType,
+         int level,
+         Nullable<Rectangle> rect,
+         T[] data,
+         int startIndex,
+         int elementCount,
+         SetDataOptions options
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="faceType" type="CubeMapFace"><![CDATA[The cube map face type.]]></parameter>
+            <parameter name="level" type="int"><![CDATA[The mipmap level where the data will be placed.]]></parameter>
+            <parameter name="rect" type="Nullable&lt;Rectangle&gt;"><![CDATA[The section of the texture where the data will be placed. null indicates the data will be copied over the entire texture.]]></parameter>
+            <parameter name="data" type="T[]"><![CDATA[The array of data to copy.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[Start offset in the array.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[Number of elements in the array. The number of elements to copy must be equal to the size of the texture.]]></parameter>
+            <parameter name="options" type="SetDataOptions"><![CDATA[Option specifying if existing data in the buffer will be kept after this operation.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[On Windows, GetData and SetData will fail if TextureCube.ResourceManagementMode is ResourceManagementMode.Manual and the format cannot be used as a render target. Warning In the Draw method of an Xbox 360 game, vertex buffers, index buffers, and textures should not be written using when they are intended to be used for rendering. This condition may lead to graphics corruption or crashes. This is because, in cases where the size of the back buffer and depth-stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. When predicated tiling has been triggered, the drawing commands contained in the Draw function are not submitted until Present is called. (Note that Draw implicitly calls Present at the end of this method.) In this case, these resources are not available for modification until the GPU is finished with presenting the entire frame.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a String that represents the current TextureCube.]]></summary>
       <overloads>
         <overload signature="ToString()">

@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="NetworkMachine" kind="class"
           namespace="Microsoft.Xna.Framework.Net"
-          assembly="Microsoft.Xna.Framework.Net">
+          assembly="Microsoft.Xna.Framework.Net"
+          modifier="sealed">
   <summary><![CDATA[Represents a physical machine (such as single Xbox 360 console or Windows-based computer) that is participating in a multiplayer session. It can be used to detect when more than one NetworkGamer is playing on the same actual machine.]]></summary>
   <syntax><![CDATA[public sealed class NetworkMachine]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="Gamers" type="GamerCollection&lt;NetworkGamer&gt;" access="get">
       <summary><![CDATA[Gets a collection of all the gamers who are playing on this machine.]]></summary>
       <syntax><![CDATA[public GamerCollection<NetworkGamer> Gamers { get; }]]></syntax>
+      <value><![CDATA[A collection of all the gamers who are playing on this machine.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -33,6 +35,10 @@
         <overload signature="RemoveFromSession()">
           <summary><![CDATA[Forcibly removes this machine from the session.]]></summary>
           <syntax><![CDATA[public void RemoveFromSession ()]]></syntax>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[There are no gamers on this machine, or the gamer is no longer valid.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The local NetworkMachine cannot be removed from the session. This method can only be called by the session host.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

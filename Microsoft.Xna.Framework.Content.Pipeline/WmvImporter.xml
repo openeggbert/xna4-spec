@@ -30,7 +30,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="Import" returnType="void">
+    <method name="Import" returnType="VideoContent">
       <summary><![CDATA[Called by the XNA Framework when importing a Windows Media Video (.wmv) file to be used as a game asset. This is the method called by the XNA Framework when an asset is to be imported into an object that can be recognized by the Content Pipeline.]]></summary>
       <overloads>
         <overload signature="Import()">

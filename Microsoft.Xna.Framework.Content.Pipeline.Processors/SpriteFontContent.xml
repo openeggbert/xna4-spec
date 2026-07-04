@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="SpriteFontContent" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          modifier="sealed">
   <summary><![CDATA[Provides methods and properties for managing a design-time SpriteFont Class holding packed font data.]]></summary>
   <syntax><![CDATA[public sealed class SpriteFontContent]]></syntax>
   <remarks><![CDATA[This class is the output of the built-in font processors, FontDescriptionProcessor and FontTextureProcessor .]]></remarks>

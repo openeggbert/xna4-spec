@@ -17,6 +17,7 @@
     <property name="Current" type="SharedGraphicsDeviceManager" access="get">
       <summary><![CDATA[Gets the current SharedGraphicsDeviceManager.]]></summary>
       <syntax><![CDATA[public SharedGraphicsDeviceManager Current { get; }]]></syntax>
+      <value><![CDATA[Type: SharedGraphicsDeviceManager The current SharedGraphicsDeviceManager.]]></value>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -24,6 +25,7 @@
     <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the GraphicsDevice associated with the SharedGraphicsDeviceManager.]]></summary>
       <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[Type: GraphicsDevice The SharedGraphicsDeviceManager.]]></value>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -31,6 +33,7 @@
     <property name="GraphicsProfile" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the GraphicsProfile associated with the SharedGraphicsDeviceManager.]]></summary>
       <syntax><![CDATA[public GraphicsDevice GraphicsProfile { get; }]]></syntax>
+      <value><![CDATA[Type: GraphicsDevice The SharedGraphicsDeviceManager.]]></value>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -38,6 +41,7 @@
     <property name="MultiSampleCount" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the number of per-pixel samples.]]></summary>
       <syntax><![CDATA[public int MultiSampleCount { get; set; }]]></syntax>
+      <value><![CDATA[Type: Int32 The number of per-pixel samples.]]></value>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -45,6 +49,10 @@
     <property name="PreferredBackBufferFormat" type="SurfaceFormat" access="get;set">
       <summary><![CDATA[Gets or sets the format of the back buffer.]]></summary>
       <syntax><![CDATA[public SurfaceFormat PreferredBackBufferFormat { get; set; }]]></syntax>
+      <value><![CDATA[Type: SurfaceFormat The format of the back buffer.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[The BackBufferFormat requested is invalid. Use one of the following: SurfaceFormat.Bgr565 SurfaceFormat.Bgr555 SurfaceFormat.Bgra5551 SurfaceFormat.Bgr32 SurfaceFormat.Color SurfaceFormat.Bgra1010102]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -52,6 +60,10 @@
     <property name="PreferredBackBufferHeight" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the preferred back-buffer height.]]></summary>
       <syntax><![CDATA[public int PreferredBackBufferHeight { get; set; }]]></syntax>
+      <value><![CDATA[Type: Int32 The preferred back-buffer height.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[BackBufferHeight is not greater than zero.]]></exception>
+      </exceptions>
       <remarks><![CDATA[If you request a back-buffer resolution that is not supported by the output device, the XNA Framework automatically selects the highest resolution supported by the output device. For example, if a graphics back buffer with a resolution of 1920 x 1080 (1080p or 1080i) is created and displayed on a device with 480i resolution, the back buffer is resized automatically to 480i.]]></remarks>
       <platforms>
         <platform>Windows Phone</platform>
@@ -60,6 +72,10 @@
     <property name="PreferredBackBufferWidth" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the preferred back-buffer width.]]></summary>
       <syntax><![CDATA[public int PreferredBackBufferWidth { get; set; }]]></syntax>
+      <value><![CDATA[Type: Int32 The preferred back-buffer width.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[BackBufferWidth is not greater than zero.]]></exception>
+      </exceptions>
       <remarks><![CDATA[If you request a back-buffer resolution that is not supported by the output device, the XNA Framework automatically selects the highest resolution supported by the output device. For example, if a graphics back buffer with a resolution of 1920 x 1080 (1080p or 1080i) is created and displayed on a device with 480i resolution, the back buffer automatically is resized to 480i.]]></remarks>
       <platforms>
         <platform>Windows Phone</platform>
@@ -68,6 +84,10 @@
     <property name="PreferredDepthStencilFormat" type="DepthFormat" access="get;set">
       <summary><![CDATA[Gets or sets the format of the depth stencil.]]></summary>
       <syntax><![CDATA[public DepthFormat PreferredDepthStencilFormat { get; set; }]]></syntax>
+      <value><![CDATA[Type: DepthFormat The format of the depth stencil.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[The DepthStencilFormat requested is an invalid format. Use one of the following: DepthFormat.Depth32 DepthFormat.Depth15Stencil1 DepthFormat.Depth24Stencil8 DepthFormat.Depth24 DepthFormat.Depth24Stencil4 DepthFormat.Depth16 DepthFormat.Depth24Stencil8Single]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -75,6 +95,10 @@
     <property name="PresentationInterval" type="DepthFormat" access="get;set">
       <summary><![CDATA[Gets or sets the maximum rate at which the swap chain's back buffers can be presented to the front buffer.]]></summary>
       <syntax><![CDATA[public DepthFormat PresentationInterval { get; set; }]]></syntax>
+      <value><![CDATA[Type: DepthFormat The format of the depth stencil.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[The DepthStencilFormat requested is an invalid format. Use one of the following: DepthFormat.Depth32 DepthFormat.Depth15Stencil1 DepthFormat.Depth24Stencil8 DepthFormat.Depth24 DepthFormat.Depth24Stencil4 DepthFormat.Depth16 DepthFormat.Depth24Stencil8Single]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -82,6 +106,7 @@
     <property name="RenderTargetUsage" type="RenderTargetUsage" access="get;set">
       <summary><![CDATA[Gets or sets render target usage flags.]]></summary>
       <syntax><![CDATA[public RenderTargetUsage RenderTargetUsage { get; set; }]]></syntax>
+      <value><![CDATA[Type: RenderTargetUsage Usage flags for the render target.]]></value>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -89,6 +114,7 @@
     <property name="SynchronizeWithVerticalRetrace" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets a value that indicates whether to sync to the vertical trace (vsync) when presenting the back buffer.]]></summary>
       <syntax><![CDATA[public bool SynchronizeWithVerticalRetrace { get; set; }]]></syntax>
+      <value><![CDATA[Type: Boolean True to synchronize the presentation of the back buffer to the vertical trace; false otherwise.]]></value>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>

@@ -26,6 +26,7 @@
     <property name="Textures" type="TextureReferenceDictionary" access="get">
       <summary><![CDATA[Gets the texture collection of the material.]]></summary>
       <syntax><![CDATA[public TextureReferenceDictionary Textures { get; }]]></syntax>
+      <value><![CDATA[Collection of textures used by the material.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -33,6 +34,28 @@
     </property>
   </properties>
   <methods>
+    <method name="GetReferenceTypeProperty" returnType="void">
+      <summary><![CDATA[Gets a reference type from the OpaqueDataDictionary collection.]]></summary>
+      <overloads>
+        <overload signature="GetReferenceTypeProperty()">
+          <summary><![CDATA[Gets a reference type from the OpaqueDataDictionary collection.]]></summary>
+          <syntax><![CDATA[protected T GetReferenceTypeProperty<T> (
+         string key
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Key of the property being retrieved.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type of the related opaque data.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
     <method name="GetTexture" returnType="void">
       <summary><![CDATA[Gets a value from the Textures collection.]]></summary>
       <overloads>
@@ -45,6 +68,51 @@
             <parameter name="key" type="string"><![CDATA[Key of the texture being retrieved.]]></parameter>
           </parameters>
           <returns><![CDATA[Reference to a texture from the collection.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetValueTypeProperty" returnType="void">
+      <summary><![CDATA[Gets a value type from the OpaqueDataDictionary collection.]]></summary>
+      <overloads>
+        <overload signature="GetValueTypeProperty()">
+          <summary><![CDATA[Gets a value type from the OpaqueDataDictionary collection.]]></summary>
+          <syntax><![CDATA[protected Nullable<T> GetValueTypeProperty<T> (
+         string key
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Key of the value type being retrieved.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Index of the value type beng retrieved.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="SetProperty" returnType="void">
+      <summary><![CDATA[Sets a value in the contained OpaqueDataDictionary object.]]></summary>
+      <overloads>
+        <overload signature="SetProperty()">
+          <summary><![CDATA[Sets a value in the contained OpaqueDataDictionary object.]]></summary>
+          <syntax><![CDATA[protected void SetProperty<T> (
+         string key,
+         T value
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[Type of the element being set.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="key" type="string"><![CDATA[Name of the key being modified.]]></parameter>
+            <parameter name="value" type="T"><![CDATA[Value being set.]]></parameter>
+          </parameters>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>

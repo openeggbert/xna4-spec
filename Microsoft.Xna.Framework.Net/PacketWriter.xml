@@ -44,6 +44,7 @@
     <property name="Length" type="int" access="get">
       <summary><![CDATA[Gets the length of the packet being written.]]></summary>
       <syntax><![CDATA[public int Length { get; }]]></syntax>
+      <value><![CDATA[Length of the packet.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -54,6 +55,7 @@
     <property name="Position" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the current packet write position.]]></summary>
       <syntax><![CDATA[public int Position { get; set; }]]></syntax>
+      <value><![CDATA[Current position of the packet.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

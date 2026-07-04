@@ -24,7 +24,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="Import" returnType="void">
+    <method name="Import" returnType="Object">
       <summary><![CDATA[Called by the framework when importing an intermediate file containing a game asset.]]></summary>
       <overloads>
         <overload signature="Import()">

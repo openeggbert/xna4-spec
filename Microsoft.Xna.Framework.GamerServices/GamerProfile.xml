@@ -4,7 +4,8 @@
           name="GamerProfile" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="sealed">
   <summary><![CDATA[Profile settings describing information about a gamer such as their motto, reputation, and gamer picture. This data is accessible for both locally signed in profiles and remote gamers that you are playing with in a multiplayer session.]]></summary>
   <syntax><![CDATA[public sealed class GamerProfile : IDisposable]]></syntax>
   <platforms>
@@ -19,6 +20,7 @@
     <property name="GamerPicture" type="Texture2D" access="get">
       <summary><![CDATA[Gets the gamer picture, which will be 64 pixels by 64 pixels.]]></summary>
       <syntax><![CDATA[public Texture2D GamerPicture { get; }]]></syntax>
+      <value><![CDATA[The gamer picture, which will be 64 pixels by 64 pixels.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -29,6 +31,7 @@
     <property name="GamerScore" type="int" access="get">
       <summary><![CDATA[Gets the GamerScore of this gamer.]]></summary>
       <syntax><![CDATA[public int GamerScore { get; }]]></syntax>
+      <value><![CDATA[The GamerScore of this gamer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -39,6 +42,7 @@
     <property name="GamerZone" type="GamerZone" access="get">
       <summary><![CDATA[Gets the GamerZone setting.]]></summary>
       <syntax><![CDATA[public GamerZone GamerZone { get; }]]></syntax>
+      <value><![CDATA[The GamerZone setting.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -49,6 +53,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -59,6 +64,7 @@
     <property name="Motto" type="string" access="get">
       <summary><![CDATA[Gets the gamer motto string.]]></summary>
       <syntax><![CDATA[public string Motto { get; }]]></syntax>
+      <value><![CDATA[The gamer motto.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -69,6 +75,7 @@
     <property name="Region" type="RegionInfo" access="get">
       <summary><![CDATA[Gets the region of this gamer.]]></summary>
       <syntax><![CDATA[public RegionInfo Region { get; }]]></syntax>
+      <value><![CDATA[The region of this gamer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -79,6 +86,7 @@
     <property name="Reputation" type="float" access="get">
       <summary><![CDATA[Gets the gamer reputation, as a number of stars ranging 0 to 5.]]></summary>
       <syntax><![CDATA[public float Reputation { get; }]]></syntax>
+      <value><![CDATA[The gamer reputation, representing a number of stars ranging 0 to 5.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -89,6 +97,7 @@
     <property name="TitlesPlayed" type="int" access="get">
       <summary><![CDATA[Gets the number of titles this gamer has played.]]></summary>
       <syntax><![CDATA[public int TitlesPlayed { get; }]]></syntax>
+      <value><![CDATA[The number of titles this gamer has played.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -99,6 +108,7 @@
     <property name="TotalAchievements" type="int" access="get">
       <summary><![CDATA[Gets the total number of achievements this gamer has obtained.]]></summary>
       <syntax><![CDATA[public int TotalAchievements { get; }]]></syntax>
+      <value><![CDATA[The total number of achievements this gamer has obtained.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -123,7 +133,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetGamerPicture" returnType="void">
+    <method name="GetGamerPicture" returnType="Stream">
       <summary><![CDATA[Gets the gamer picture associated with this profile.]]></summary>
       <overloads>
         <overload signature="GetGamerPicture()">

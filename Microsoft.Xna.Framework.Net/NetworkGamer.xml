@@ -20,6 +20,7 @@
     <property name="HasLeftSession" type="bool" access="get">
       <summary><![CDATA[Indicates whether this gamer has left the session.]]></summary>
       <syntax><![CDATA[public bool HasLeftSession { get; }]]></syntax>
+      <value><![CDATA[true if the player has left the session; false, otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -30,6 +31,7 @@
     <property name="HasVoice" type="bool" access="get">
       <summary><![CDATA[Determines if the player has a voice headset.]]></summary>
       <syntax><![CDATA[public bool HasVoice { get; }]]></syntax>
+      <value><![CDATA[true if a headset is present; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -40,6 +42,7 @@
     <property name="Id" type="byte" access="get">
       <summary><![CDATA[Gets a unique identifier that can be used to refer to this gamer in network packets.]]></summary>
       <syntax><![CDATA[public byte Id { get; }]]></syntax>
+      <value><![CDATA[A unique identifier that can be used to refer to this gamer in network packets.]]></value>
       <remarks><![CDATA[This value is synchronized across all the machines in the session, so it can be used in situations where gamer A wants to send a packet to B, and the contents of this packet must refer to gamer C. Using the identifier is preferable to sending the index of the gamer within the session, because indices could change if gamers join or leave in mid session, but this id will always remain constant. To look up a gamer once you know their id, use FindGamerById .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -51,6 +54,7 @@
     <property name="IsGuest" type="bool" access="get">
       <summary><![CDATA[Determines whether this gamer is logged in as a guest profile.]]></summary>
       <syntax><![CDATA[public bool IsGuest { get; }]]></syntax>
+      <value><![CDATA[true if this gamer is logged in as a guest profile; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -61,6 +65,7 @@
     <property name="IsHost" type="bool" access="get">
       <summary><![CDATA[Determines if the player is the host of the multiplayer session.]]></summary>
       <syntax><![CDATA[public bool IsHost { get; }]]></syntax>
+      <value><![CDATA[true if the player is the host; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -71,6 +76,7 @@
     <property name="IsLocal" type="bool" access="get">
       <summary><![CDATA[Determines if the player is playing on a local machine.]]></summary>
       <syntax><![CDATA[public bool IsLocal { get; }]]></syntax>
+      <value><![CDATA[true if the player is local; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -81,6 +87,7 @@
     <property name="IsMutedByLocalUser" type="bool" access="get">
       <summary><![CDATA[Determines if the player is muted by one or more local users.]]></summary>
       <syntax><![CDATA[public bool IsMutedByLocalUser { get; }]]></syntax>
+      <value><![CDATA[true if the player is muted by one or more players in the session; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -91,6 +98,7 @@
     <property name="IsPrivateSlot" type="bool" access="get">
       <summary><![CDATA[Determines if the player occupies a reserved private session slot.]]></summary>
       <syntax><![CDATA[public bool IsPrivateSlot { get; }]]></syntax>
+      <value><![CDATA[true if the player occupies a reserved private session slot; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -101,6 +109,11 @@
     <property name="IsReady" type="bool" access="get;set">
       <summary><![CDATA[Determines whether the gamer is ready to leave the lobby screen and begin gameplay.]]></summary>
       <syntax><![CDATA[public bool IsReady { get; set; }]]></syntax>
+      <value><![CDATA[true if the gamer is ready to start playing; false otherwise.]]></value>
+      <exceptions>
+        <exception type="InvalidOperationException"><![CDATA[This operation is only valid when the session state is NetworkSessionState.Lobby. This method cannot be called on remote gamer instances. It is only valid when NetworkGamer.IsLocal is true. If you are looping over the contents of the NetworkSession.AllGamers collection, consider using NetworkSession.LocalGamers instead.]]></exception>
+        <exception type="ObjectDisposedException"><![CDATA[This NetworkGamer is no longer valid. The gamer may have left the session.]]></exception>
+      </exceptions>
       <remarks><![CDATA[The host of a multiplayer session can use the IsEveryoneReady property to detect when all players have marked themselves ready, and then call StartGame to kick off the game.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -112,6 +125,7 @@
     <property name="IsTalking" type="bool" access="get">
       <summary><![CDATA[Determines whether the gamer is currently sending voice data.]]></summary>
       <syntax><![CDATA[public bool IsTalking { get; }]]></syntax>
+      <value><![CDATA[true if the gamer is sending voice data; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -122,6 +136,7 @@
     <property name="Machine" type="NetworkMachine" access="get;set">
       <summary><![CDATA[Gets an object representing the physical gaming machine this NetworkGamer is playing on.]]></summary>
       <syntax><![CDATA[public NetworkMachine Machine { get; set; }]]></syntax>
+      <value><![CDATA[An object representing the physical gaming machine this NetworkGamer is playing on.]]></value>
       <remarks><![CDATA[If there are several gamers all playing on the same gaming machine, they will all share a single value for the Machine property.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -133,6 +148,7 @@
     <property name="RoundtripTime" type="TimeSpan" access="get">
       <summary><![CDATA[Gets an estimate of the network latency involved in sending a packet round trip from the local machine to this gamer and back again.]]></summary>
       <syntax><![CDATA[public TimeSpan RoundtripTime { get; }]]></syntax>
+      <value><![CDATA[An estimate of the network latency involved in sending a packet round trip from the local machine to this gamer and back again.]]></value>
       <remarks><![CDATA[This value does not include latency introduced via the MultiplayerSession.SimulateLatency property.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -144,6 +160,7 @@
     <property name="Session" type="NetworkSession" access="get">
       <summary><![CDATA[Gets the multiplayer session of the gamer.]]></summary>
       <syntax><![CDATA[public NetworkSession Session { get; }]]></syntax>
+      <value><![CDATA[Session that contains the gamer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

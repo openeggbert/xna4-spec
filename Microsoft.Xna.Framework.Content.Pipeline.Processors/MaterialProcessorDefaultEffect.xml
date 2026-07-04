@@ -12,10 +12,10 @@
     <platform>Windows XP</platform>
   </platforms>
   <members>
-    <member name="AlphaTestEffect"><summary><![CDATA[4]]></summary></member>
-    <member name="BasicEffect"><summary><![CDATA[0]]></summary></member>
-    <member name="DualTextureEffect"><summary><![CDATA[3]]></summary></member>
-    <member name="EnvironmentMapEffect"><summary><![CDATA[2]]></summary></member>
-    <member name="SkinnedEffect"><summary><![CDATA[1]]></summary></member>
+    <member name="AlphaTestEffect" value="4"><summary><![CDATA[An AlphaTestEffect Class effect.]]></summary></member>
+    <member name="BasicEffect" value="0"><summary><![CDATA[An BasicEffect Class effect.]]></summary></member>
+    <member name="DualTextureEffect" value="3"><summary><![CDATA[An DualTextureEffect Class effect.]]></summary></member>
+    <member name="EnvironmentMapEffect" value="2"><summary><![CDATA[An EnvironmentMapEffect Class effect.]]></summary></member>
+    <member name="SkinnedEffect" value="1"><summary><![CDATA[An SkinnedEffect Class effect.]]></summary></member>
   </members>
 </xna-type>

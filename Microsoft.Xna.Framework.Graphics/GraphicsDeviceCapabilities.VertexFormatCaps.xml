@@ -17,6 +17,7 @@
     <property name="NumberSimultaneousTextureCoordinates" type="short" access="get">
       <summary><![CDATA[Gets the total number of texture coordinate sets that the device can simultaneously use for multiple texture blending.]]></summary>
       <syntax><![CDATA[public short NumberSimultaneousTextureCoordinates { get; }]]></syntax>
+      <value><![CDATA[The total number of texture coordinate sets that the device can simultaneously use for multiple texture blending. (You can use up to eight texture coordinate sets for any vertex, but the device can blend using only the specified number of texture coordinate sets.)]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="SupportsDoNotStripElements" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether vertex elements should not be stripped.]]></summary>
       <syntax><![CDATA[public bool SupportsDoNotStripElements { get; }]]></syntax>
+      <value><![CDATA[true if vertex elements should not be stripped; otherwise false.]]></value>
       <remarks><![CDATA[If the vertex format contains elements that are not used with the current render states, there is no need to regenerate the vertices. If this property is false, stripping extraneous elements from the vertex format provides better performance.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -36,6 +38,7 @@
     <property name="SupportsPointSize" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether point size comes from point size data in the vertex declaration.]]></summary>
       <syntax><![CDATA[public bool SupportsPointSize { get; }]]></syntax>
+      <value><![CDATA[true if point size comes from point size data in the vertex declaration; otherwise false.]]></value>
       <remarks><![CDATA[If this property is false, point size is determined by PointSize . If an application provides point size in both the render state and the vertex declaration, the vertex data overrides the render-state data.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -45,7 +48,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

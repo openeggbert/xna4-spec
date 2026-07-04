@@ -27,6 +27,7 @@ public class FontTextureProcessor : ContentProcessor<Texture2DContent, SpriteFon
     <property name="FirstCharacter" type="Object" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual char FirstCharacter { get; set; }]]></syntax>
+      <value><![CDATA[The start character of the font texture being processed.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -37,6 +38,7 @@ public class FontTextureProcessor : ContentProcessor<Texture2DContent, SpriteFon
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[DefaultValueAttribute(true)]
 public virtual bool PremultiplyAlpha { get; set; }]]></syntax>
+      <value><![CDATA[true if alpha premultiply is enabled; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -46,6 +48,7 @@ public virtual bool PremultiplyAlpha { get; set; }]]></syntax>
     <property name="TextureFormat" type="Object" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual TextureProcessorOutputFormat TextureFormat { get; set; }]]></syntax>
+      <value><![CDATA[The output SurfaceFormat of textures.]]></value>
       <remarks><![CDATA[Textures can be left unchanged from the source asset, converted to the Color format, or DXT compressed.]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -75,7 +78,7 @@ public virtual bool PremultiplyAlpha { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Process" returnType="void">
+    <method name="Process" returnType="SpriteFontContent">
       <summary><![CDATA[Creates SpriteFontContent from a bitmap.]]></summary>
       <overloads>
         <overload signature="Process()">

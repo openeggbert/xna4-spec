@@ -4,7 +4,8 @@
           name="Song" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&lt;Song&gt;">
+          interfaces="IEquatable&lt;Song&gt;"
+          modifier="sealed">
   <summary><![CDATA[Provides access to a song in the song library.]]></summary>
   <syntax><![CDATA[public sealed class Song : IEquatable<Song>]]></syntax>
   <remarks><![CDATA[The Song class provides information about a song, including the song's Name , Artist , and Album . You can obtain a Song object through the SongCollection.Item indexer and the MediaQueue.ActiveSong property.]]></remarks>
@@ -20,6 +21,7 @@
     <property name="Album" type="Album" access="get">
       <summary><![CDATA[Gets the Album on which the Song appears.]]></summary>
       <syntax><![CDATA[public Album Album { get; }]]></syntax>
+      <value><![CDATA[Album on which this Song appears.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -30,6 +32,7 @@
     <property name="Artist" type="Artist" access="get">
       <summary><![CDATA[Gets the Artist of the Song.]]></summary>
       <syntax><![CDATA[public Artist Artist { get; }]]></syntax>
+      <value><![CDATA[Artist of this Song.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -40,6 +43,7 @@
     <property name="Duration" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the duration of the Song.]]></summary>
       <syntax><![CDATA[public TimeSpan Duration { get; }]]></syntax>
+      <value><![CDATA[Duration of the song, as a TimeSpan structure.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -50,6 +54,7 @@
     <property name="Genre" type="Genre" access="get">
       <summary><![CDATA[Gets the Genre of the Song.]]></summary>
       <syntax><![CDATA[public Genre Genre { get; }]]></syntax>
+      <value><![CDATA[Genre of this Song.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -60,6 +65,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -71,6 +77,7 @@
     <property name="IsProtected" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the song is DRM protected content.]]></summary>
       <syntax><![CDATA[public bool IsProtected { get; }]]></syntax>
+      <value><![CDATA[true if this Song is DRM protected; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -81,6 +88,7 @@
     <property name="IsRated" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the song has been rated by the user.]]></summary>
       <syntax><![CDATA[public bool IsRated { get; }]]></syntax>
+      <value><![CDATA[true if this Song has been rated by the user; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -91,6 +99,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of the Song.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of this Song.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -101,6 +110,7 @@
     <property name="PlayCount" type="int" access="get">
       <summary><![CDATA[Gets the song play count.]]></summary>
       <syntax><![CDATA[public int PlayCount { get; }]]></syntax>
+      <value><![CDATA[Song play count.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -111,6 +121,7 @@
     <property name="Rating" type="int" access="get">
       <summary><![CDATA[Gets the user's rating for the Song.]]></summary>
       <syntax><![CDATA[public int Rating { get; }]]></syntax>
+      <value><![CDATA[User's rating for this Song, or 0 if the song is unrated.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -121,6 +132,7 @@
     <property name="TrackNumber" type="int" access="get">
       <summary><![CDATA[Gets the track number of the song on the song's Album.]]></summary>
       <syntax><![CDATA[public int TrackNumber { get; }]]></syntax>
+      <value><![CDATA[Track number of this Song on the song's Album.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -198,7 +210,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="FromUri" returnType="void">
+    <method name="FromUri" returnType="Song" isStatic="true">
       <summary><![CDATA[Constructs a new Song object based on the specified URI.]]></summary>
       <overloads>
         <overload signature="FromUri()">
@@ -218,7 +230,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -234,7 +246,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a String representation of the Song.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -250,7 +262,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified Song instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -273,7 +285,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified Song instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

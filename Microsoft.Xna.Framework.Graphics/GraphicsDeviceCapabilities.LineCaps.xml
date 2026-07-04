@@ -17,6 +17,7 @@
     <property name="SupportsAlphaCompare" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports alpha-test comparisons.]]></summary>
       <syntax><![CDATA[public bool SupportsAlphaCompare { get; }]]></syntax>
+      <value><![CDATA[true if the device supports alpha-test comparisons; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="SupportsAntiAlias" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports antialiased lines.]]></summary>
       <syntax><![CDATA[public bool SupportsAntiAlias { get; }]]></syntax>
+      <value><![CDATA[true if the device supports antialiased lines; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +37,7 @@
     <property name="SupportsBlend" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports source blending.]]></summary>
       <syntax><![CDATA[public bool SupportsBlend { get; }]]></syntax>
+      <value><![CDATA[true if the device supports source blending; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +47,7 @@
     <property name="SupportsDepthBufferTest" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports depth buffer comparisons.]]></summary>
       <syntax><![CDATA[public bool SupportsDepthBufferTest { get; }]]></syntax>
+      <value><![CDATA[true if the device supports depth buffer comparisons; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +57,7 @@
     <property name="SupportsFog" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports fog.]]></summary>
       <syntax><![CDATA[public bool SupportsFog { get; }]]></syntax>
+      <value><![CDATA[true if the device supports fog; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,6 +67,7 @@
     <property name="SupportsTextureMapping" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports texture mapping.]]></summary>
       <syntax><![CDATA[public bool SupportsTextureMapping { get; }]]></syntax>
+      <value><![CDATA[true if the device supports texture mapping; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -70,7 +76,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

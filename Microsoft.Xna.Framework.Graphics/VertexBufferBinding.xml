@@ -74,6 +74,7 @@
     <property name="InstanceFrequency" type="int" access="get">
       <summary><![CDATA[Gets the instancing frequency.]]></summary>
       <syntax><![CDATA[public int InstanceFrequency { get; }]]></syntax>
+      <value><![CDATA[The number of instances to draw for each draw call.]]></value>
       <remarks><![CDATA[The frequency is the number of times to draw the same geometry each time draw is called: 1 means draw one instance, 2 means draw two instances, and so on. Use 0 if you are not instancing.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -86,6 +87,7 @@
     <property name="VertexBuffer" type="VertexBuffer" access="get">
       <summary><![CDATA[Gets a vertex buffer.]]></summary>
       <syntax><![CDATA[public VertexBuffer VertexBuffer { get; }]]></syntax>
+      <value><![CDATA[A vertex buffer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -97,6 +99,7 @@
     <property name="VertexOffset" type="int" access="get">
       <summary><![CDATA[Gets the offset between the beginning of the buffer and the vertex data to use.]]></summary>
       <syntax><![CDATA[public int VertexOffset { get; }]]></syntax>
+      <value><![CDATA[The offset (in bytes).]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

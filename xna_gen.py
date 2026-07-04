@@ -80,6 +80,40 @@ def get_returns(c):
     m = re.search(r'<h4[^>]*id="return-value"[^>]*>.*?</h4>\s*<p[^>]*>(.*?)</p>',c,re.DOTALL)
     return clean(m.group(1)) if m else ""
 
+def get_property_value(c):
+    m = re.search(r'<h4[^>]*id="property-value"[^>]*>.*?</h4>\s*<p[^>]*>(.*?)</p>',c,re.DOTALL)
+    return clean(m.group(1)) if m else ""
+
+def get_exceptions(c):
+    sec = re.search(r'<h2[^>]*id="exceptions"[^>]*>.*?</h2>(.*?)(?=<h2|$)',c,re.DOTALL)
+    if not sec: return []
+    tbl = re.search(r'<table[^>]*>(.*?)</table>',sec.group(1),re.DOTALL)
+    if not tbl: return []
+    SKIP = {'Exception type','Condition','','\xa0','&nbsp;'}
+    out = []
+    for row in re.findall(r'<tr[^>]*>(.*?)</tr>',tbl.group(1),re.DOTALL):
+        cells = [clean(x) for x in re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>',row,re.DOTALL)]
+        cells = [cc for cc in cells if cc]
+        if len(cells)>=2 and cells[0] not in SKIP:
+            out.append((cells[0], cells[1]))
+    return out
+
+def get_type_params(c):
+    m = re.search(r'<h4[^>]*id="type-parameters"[^>]*>.*?</h4>(.*?)(?=<h4|$)',c,re.DOTALL)
+    if not m: return []
+    out = []
+    for li in re.findall(r'<li>(.*?)</li>',m.group(1),re.DOTALL):
+        nm = re.search(r'<em>(.*?)</em>',li)
+        if not nm: continue
+        pn = clean(nm.group(1))
+        pd = clean(re.sub(r'<[^>]+>',' ', li.replace(nm.group(0), '')))
+        out.append((pn, pd))
+    return out
+
+def get_modifier(syn):
+    m = re.search(r'\bpublic\s+(abstract|sealed|static)\b', syn)
+    return m.group(1) if m else None
+
 def get_params(c):
     m = re.search(r'<h4[^>]*id="parameters"[^>]*>.*?</h4>(.*?)(?=<h[24]|$)',c,re.DOTALL)
     if not m: return []
@@ -124,14 +158,23 @@ def get_enum_members(c):
     if not sec: return []
     tbl = re.search(r'<table[^>]*>(.*?)</table>',sec.group(1),re.DOTALL)
     if not tbl: return []
-    SKIP = {'Member name','Description','','\xa0','&nbsp;'}
+    SKIP = {'Member name','Description','Value','','\xa0','&nbsp;'}
+    # Most enum tables are (icon, Member name, Description); a handful (e.g.
+    # EffectProcessorDebugMode, AvatarBone) add a Value column, which would
+    # otherwise get mistaken for the description.
+    head = re.search(r'<thead[^>]*>(.*?)</thead>',tbl.group(1),re.DOTALL)
+    headers = [clean(x) for x in re.findall(r'<th[^>]*>(.*?)</th>',head.group(1),re.DOTALL)] if head else []
+    has_value_col = 'Value' in headers
     out = []
     for row in re.findall(r'<tr[^>]*>(.*?)</tr>',tbl.group(1),re.DOTALL):
         cells = [clean(x).replace('&nbsp;',' ').replace('&amp;','&').strip()
                  for x in re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>',row,re.DOTALL)]
         cells = [cc for cc in cells if cc]
-        if len(cells)>=2 and cells[0] not in SKIP:
-            out.append((cells[0], cells[1]))
+        if not cells or cells[0] in SKIP: continue
+        if has_value_col and len(cells) >= 3:
+            out.append((cells[0], cells[2], cells[1]))  # name, description, value
+        elif len(cells) >= 2:
+            out.append((cells[0], cells[1], None))  # name, description, no value
     return out
 
 def prop_access(syn):
@@ -145,6 +188,20 @@ def plat_xml(lines, plats, ind):
         lines.append(f'{ind}<platforms>')
         for p in plats: lines.append(f'{ind}  <platform>{e(p)}</platform>')
         lines.append(f'{ind}</platforms>')
+
+def exc_xml(lines, excs, ind):
+    if excs:
+        lines.append(f'{ind}<exceptions>')
+        for et, cond in excs:
+            lines.append(f'{ind}  <exception type="{e(et)}">{cdata(cond)}</exception>')
+        lines.append(f'{ind}</exceptions>')
+
+def type_params_xml(lines, tps, ind):
+    if tps:
+        lines.append(f'{ind}<type-parameters>')
+        for pn, pd in tps:
+            lines.append(f'{ind}  <type-parameter name="{e(pn)}">{cdata(pd)}</type-parameter>')
+        lines.append(f'{ind}</type-parameters>')
 
 def classify_page(h1):
     # Check the (longer, more specific) " Generic ..." suffixes first so a page
@@ -160,9 +217,25 @@ def classify_page(h1):
     # Constructor: type name may contain dots (nested types)
     m = re.match(r'^([\w.]+)\s+Constructor(?:\s+\((.*)\))?$', h1)
     if m: return ('member', m.group(1), 'constructor', '__ctor__', m.group(2), False)
-    # Member: type name may contain dots; greedy match takes all but last segment
-    m = re.match(r'^([\w.]+)\.([\w]+)\s+(Property|Method|Field|Event)(?:\s+\((.*)\))?$', h1)
-    if m: return ('member', m.group(1), m.group(3).lower(), m.group(2), m.group(4), False)
+    # Member: type name may contain dots; greedy match takes all but last segment.
+    # "Generic " may appear right before the kind word for a generic overload
+    # (e.g. "ContentManager.Load Generic Method" for ContentManager.Load<T>) —
+    # distinct from the type-level "X Generic Class" naming handled above.
+    m = re.match(r'^([\w.]+)\.([\w]+)\s+(?:Generic\s+)?(Property|Method|Field|Event)(?:\s+\((.*)\))?$', h1)
+    if m:
+        type_name, member_name, kind_word, sig = m.group(1), m.group(2), m.group(3), m.group(4)
+        # Explicit interface implementation, e.g. "ContentProcessor.Microsoft.Xna
+        # .Framework.Content.Pipeline.IContentProcessor.InputType Property": the
+        # greedy match above swallows the fully-qualified interface name into
+        # type_name. A namespace root (Microsoft/System) never appears as a
+        # nested-type segment in this API, so the first one marks where the
+        # interface qualifier starts; only what precedes it is the real type.
+        segs = type_name.split('.')
+        for i, s in enumerate(segs):
+            if s in ('Microsoft', 'System'):
+                type_name = '.'.join(segs[:i])
+                break
+        return ('member', type_name, kind_word.lower(), member_name, sig, False)
     return None
 
 def extract_prop_type(syn, pname):
@@ -220,6 +293,7 @@ def gen_xml(type_name, kind, ns, main_c, members):
             else:
                 ifaces.append(p)
         if ifaces: interfaces = ', '.join(ifaces)
+    modifier = get_modifier(syn_main)
 
     ctors  = defaultdict(list)
     props  = {}
@@ -250,6 +324,7 @@ def gen_xml(type_name, kind, ns, main_c, members):
     a += f'\n          assembly="{e(assembly)}"'
     if base_class: a += f'\n          baseClass="{e(base_class)}"'
     if interfaces: a += f'\n          interfaces="{e(interfaces)}"'
+    if modifier: a += f'\n          modifier="{e(modifier)}"'
     out.append(f'          {a}>')
     out.append(f'  <summary>{cdata(get_summary(main_c))}</summary>')
     out.append(f'  <syntax>{cdata(syn_main)}</syntax>')
@@ -259,8 +334,10 @@ def gen_xml(type_name, kind, ns, main_c, members):
 
     if kind == 'enum':
         out.append('  <members>')
-        for mn, md in get_enum_members(main_c):
-            out.append(f'    <member name="{e(mn)}"><summary>{cdata(md)}</summary></member>')
+        for mn, md, mv in get_enum_members(main_c):
+            a5 = f'name="{e(mn)}"'
+            if mv is not None: a5 += f' value="{e(mv)}"'
+            out.append(f'    <member {a5}><summary>{cdata(md)}</summary></member>')
         out.append('  </members>')
     elif kind == 'delegate':
         # Delegates use <parameters> and <returns>, not class sections
@@ -287,6 +364,7 @@ def gen_xml(type_name, kind, ns, main_c, members):
                     for pn,pt,pd in ps:
                         out.append(f'        <parameter name="{e(pn)}" type="{e(pt)}">{cdata(pd)}</parameter>')
                     out.append('      </parameters>')
+                exc_xml(out, get_exceptions(c), '      ')
                 rr = get_remarks(c)
                 if rr: out.append(f'      <remarks>{cdata(rr)}</remarks>')
                 plat_xml(out, get_platforms(c), '      ')
@@ -303,6 +381,9 @@ def gen_xml(type_name, kind, ns, main_c, members):
             out.append(f'    <property {a2}>')
             out.append(f'      <summary>{cdata(get_summary(c))}</summary>')
             out.append(f'      <syntax>{cdata(syn)}</syntax>')
+            pv = get_property_value(c)
+            if pv: out.append(f'      <value>{cdata(pv)}</value>')
+            exc_xml(out, get_exceptions(c), '      ')
             rr = get_remarks(c)
             if rr: out.append(f'      <remarks>{cdata(rr)}</remarks>')
             plat_xml(out, get_platforms(c), '      ')
@@ -316,11 +397,13 @@ def gen_xml(type_name, kind, ns, main_c, members):
             lc = mlist.get(mn, ovs[0][1] if ovs else None)
             if not lc: continue
             ms = get_summary(lc)
-            rt = 'void'; is_s = False
-            if ovs:
-                fs = get_syntax(ovs[0][1])
-                rt = extract_method_return(fs, mn)
-                is_s = 'public static' in fs or 'public static' in get_syntax(lc)
+            # Prefer the first disambiguated overload's syntax, but a method with
+            # only one page total (no "(...)" signature suffix, e.g. a single-
+            # overload generic method) has nothing in `ovs` — fall back to `lc`
+            # so returnType/isStatic aren't left at their 'void'/false defaults.
+            fs = get_syntax(ovs[0][1]) if ovs else get_syntax(lc)
+            rt = extract_method_return(fs, mn)
+            is_s = 'public static' in fs or 'public static' in get_syntax(lc)
             a3 = f'name="{e(mn)}" returnType="{e(rt)}"'
             if is_s: a3 += ' isStatic="true"'
             out.append(f'    <method {a3}>')
@@ -328,30 +411,36 @@ def gen_xml(type_name, kind, ns, main_c, members):
             out.append('      <overloads>')
             for sig, c in ovs:
                 ps = get_params(c); oret = get_returns(c); ore = get_remarks(c)
+                tps = get_type_params(c)
                 sig_str = f'{mn}({sig})' if sig else f'{mn}()'
                 out.append(f'        <overload signature="{e(sig_str)}">')
                 out.append(f'          <summary>{cdata(get_summary(c))}</summary>')
                 out.append(f'          <syntax>{cdata(get_syntax(c))}</syntax>')
+                type_params_xml(out, tps, '          ')
                 if ps:
                     out.append('          <parameters>')
                     for pn,pt,pd in ps:
                         out.append(f'            <parameter name="{e(pn)}" type="{e(pt)}">{cdata(pd)}</parameter>')
                     out.append('          </parameters>')
                 if oret: out.append(f'          <returns>{cdata(oret)}</returns>')
+                exc_xml(out, get_exceptions(c), '          ')
                 if ore: out.append(f'          <remarks>{cdata(ore)}</remarks>')
                 plat_xml(out, get_platforms(c), '          ')
                 out.append('        </overload>')
             if not ovs:
                 c = lc; ps = get_params(c); oret = get_returns(c); ore = get_remarks(c)
+                tps = get_type_params(c)
                 out.append(f'        <overload signature="{e(mn)}()">')
                 out.append(f'          <summary>{cdata(get_summary(c))}</summary>')
                 out.append(f'          <syntax>{cdata(get_syntax(c))}</syntax>')
+                type_params_xml(out, tps, '          ')
                 if ps:
                     out.append('          <parameters>')
                     for pn,pt,pd in ps:
                         out.append(f'            <parameter name="{e(pn)}" type="{e(pt)}">{cdata(pd)}</parameter>')
                     out.append('          </parameters>')
                 if oret: out.append(f'          <returns>{cdata(oret)}</returns>')
+                exc_xml(out, get_exceptions(c), '          ')
                 if ore: out.append(f'          <remarks>{cdata(ore)}</remarks>')
                 plat_xml(out, get_platforms(c), '          ')
                 out.append('        </overload>')

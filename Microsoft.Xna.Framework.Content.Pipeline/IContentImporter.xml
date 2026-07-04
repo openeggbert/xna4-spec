@@ -15,7 +15,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="Import" returnType="void">
+    <method name="Import" returnType="Object">
       <summary><![CDATA[Imports an asset from the specified file.]]></summary>
       <overloads>
         <overload signature="Import()">

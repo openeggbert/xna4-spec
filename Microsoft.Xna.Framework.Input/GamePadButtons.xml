@@ -30,6 +30,7 @@
     <property name="A" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the A button on the Xbox 360 Controller is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState A { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -39,6 +40,7 @@
     <property name="B" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the B button on the Xbox 360 Controller is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState B { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -48,6 +50,7 @@
     <property name="Back" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the BACK button on the Xbox 360 Controller is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState Back { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -57,6 +60,7 @@
     <property name="BigButton" type="ButtonState" access="get">
       <summary><![CDATA[Identifies if the BigButton button is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState BigButton { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -68,6 +72,7 @@
     <property name="LeftShoulder" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the left shoulder (bumper) button on the Xbox 360 Controller is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState LeftShoulder { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -77,6 +82,7 @@
     <property name="LeftStick" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the left stick button on the Xbox 360 Controller is pressed (the stick is "clicked" in).]]></summary>
       <syntax><![CDATA[public ButtonState LeftStick { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -86,6 +92,7 @@
     <property name="RightShoulder" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the right shoulder (bumper) button on the Xbox 360 Controller is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState RightShoulder { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -95,6 +102,7 @@
     <property name="RightStick" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the right stick button on the Xbox 360 Controller is pressed (the stick is "clicked" in).]]></summary>
       <syntax><![CDATA[public ButtonState RightStick { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -104,6 +112,7 @@
     <property name="Start" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the START button on the Xbox 360 Controller is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState Start { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -113,6 +122,7 @@
     <property name="X" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the X button on the Xbox 360 Controller is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState X { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -122,6 +132,7 @@
     <property name="Y" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the Y button on the Xbox 360 Controller is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState Y { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -150,7 +161,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -165,7 +176,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -180,7 +191,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two GamePadButtons instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -202,7 +213,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two GamePadButtons instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

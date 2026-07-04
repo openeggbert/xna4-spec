@@ -102,6 +102,7 @@ public class InvalidContentException : Exception]]></syntax>
     <property name="ContentIdentity" type="ContentIdentity" access="get;set">
       <summary><![CDATA[Gets or sets the identity of the content item that caused the exception.]]></summary>
       <syntax><![CDATA[public ContentIdentity ContentIdentity { get; set; }]]></syntax>
+      <value><![CDATA[The identity of the bad content item.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

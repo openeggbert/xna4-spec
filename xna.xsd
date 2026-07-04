@@ -69,6 +69,36 @@
     </xs:sequence>
   </xs:complexType>
 
+  <!-- Generic type parameters, e.g. <T> on a generic method overload -->
+  <xs:complexType name="TypeParameterDef">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="TypeParametersDef">
+    <xs:sequence>
+      <xs:element name="type-parameter" type="TypeParameterDef" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Exceptions a constructor/method overload/property can throw -->
+  <xs:complexType name="ExceptionDef">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ExceptionsDef">
+    <xs:sequence>
+      <xs:element name="exception" type="ExceptionDef" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
   <!-- ============================================================
        CONSTRUCTORS
        ============================================================ -->
@@ -78,6 +108,7 @@
       <xs:element name="summary"    type="TextContent"/>
       <xs:element name="syntax"     type="TextContent"/>
       <xs:element name="parameters" type="ParametersDef" minOccurs="0"/>
+      <xs:element name="exceptions" type="ExceptionsDef" minOccurs="0"/>
       <xs:element name="remarks"    type="TextContent"   minOccurs="0"/>
       <xs:element name="platforms"  type="PlatformsDef"  minOccurs="0"/>
     </xs:sequence>
@@ -98,10 +129,13 @@
 
   <xs:complexType name="PropertyDef">
     <xs:sequence>
-      <xs:element name="summary"   type="TextContent"/>
-      <xs:element name="syntax"    type="TextContent"/>
-      <xs:element name="remarks"   type="TextContent"  minOccurs="0"/>
-      <xs:element name="platforms" type="PlatformsDef" minOccurs="0"/>
+      <xs:element name="summary"    type="TextContent"/>
+      <xs:element name="syntax"     type="TextContent"/>
+      <!-- "Property Value" section: describes what the property represents/returns -->
+      <xs:element name="value"      type="TextContent"   minOccurs="0"/>
+      <xs:element name="exceptions" type="ExceptionsDef" minOccurs="0"/>
+      <xs:element name="remarks"    type="TextContent"   minOccurs="0"/>
+      <xs:element name="platforms"  type="PlatformsDef"  minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="name"   type="xs:string"      use="required"/>
     <xs:attribute name="type"   type="xs:string"      use="required"/>
@@ -123,12 +157,15 @@
 
   <xs:complexType name="OverloadDef">
     <xs:sequence>
-      <xs:element name="summary"    type="TextContent"/>
-      <xs:element name="syntax"     type="TextContent"/>
-      <xs:element name="parameters" type="ParametersDef" minOccurs="0"/>
-      <xs:element name="returns"    type="TextContent"   minOccurs="0"/>
-      <xs:element name="remarks"    type="TextContent"   minOccurs="0"/>
-      <xs:element name="platforms"  type="PlatformsDef"  minOccurs="0"/>
+      <xs:element name="summary"         type="TextContent"       />
+      <xs:element name="syntax"          type="TextContent"       />
+      <!-- Generic method's own <T> parameters, e.g. ContentManager.Load<T> -->
+      <xs:element name="type-parameters" type="TypeParametersDef" minOccurs="0"/>
+      <xs:element name="parameters"      type="ParametersDef"     minOccurs="0"/>
+      <xs:element name="returns"         type="TextContent"       minOccurs="0"/>
+      <xs:element name="exceptions"      type="ExceptionsDef"     minOccurs="0"/>
+      <xs:element name="remarks"         type="TextContent"       minOccurs="0"/>
+      <xs:element name="platforms"       type="PlatformsDef"      minOccurs="0"/>
     </xs:sequence>
     <!-- Full C# signature string, e.g. "Draw(Texture2D, Rectangle, Color)" -->
     <xs:attribute name="signature" type="xs:string" use="required"/>

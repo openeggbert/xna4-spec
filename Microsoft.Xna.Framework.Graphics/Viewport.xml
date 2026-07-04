@@ -48,6 +48,7 @@ public struct Viewport]]></syntax>
     <property name="AspectRatio" type="float" access="get">
       <summary><![CDATA[Gets the aspect ratio used by the viewport]]></summary>
       <syntax><![CDATA[public float AspectRatio { get; }]]></syntax>
+      <value><![CDATA[The aspect ratio of the viewport.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -58,6 +59,7 @@ public struct Viewport]]></syntax>
     <property name="Bounds" type="Rectangle" access="get;set">
       <summary><![CDATA[Gets the size of this resource.]]></summary>
       <syntax><![CDATA[public Rectangle Bounds { get; set; }]]></syntax>
+      <value><![CDATA[A bounding-box rectangle.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -68,6 +70,7 @@ public struct Viewport]]></syntax>
     <property name="Height" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the height dimension of the viewport on the render-target surface, in pixels.]]></summary>
       <syntax><![CDATA[public int Height { get; set; }]]></syntax>
+      <value><![CDATA[The height, in pixels, of the viewport to set or get.]]></value>
       <remarks><![CDATA[Unless rendering is being done only to a subset of the surface, this member should be set to the height dimension of the render target surface.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -78,6 +81,7 @@ public struct Viewport]]></syntax>
     <property name="MaxDepth" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the maximum depth of the clip volume.]]></summary>
       <syntax><![CDATA[public float MaxDepth { get; set; }]]></syntax>
+      <value><![CDATA[The maximum depth of the clipping volume.]]></value>
       <remarks><![CDATA[MaxDepth , together with MinDepth , specifies the range of depth values into which a scene is rendered. Most applications set this value to 1.0. Clipping is performed after the projection matrix is applied.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -88,6 +92,7 @@ public struct Viewport]]></syntax>
     <property name="MinDepth" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the minimum depth of the clip volume.]]></summary>
       <syntax><![CDATA[public float MinDepth { get; set; }]]></syntax>
+      <value><![CDATA[The minimum depth of the clipping volume.]]></value>
       <remarks><![CDATA[MinDepth , together with MaxDepth , specifies the range of depth values into which a scene is rendered. Most applications set this value to 0.0. Clipping is performed after the projection matrix is applied.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -98,6 +103,7 @@ public struct Viewport]]></syntax>
     <property name="TitleSafeArea" type="Rectangle" access="get">
       <summary><![CDATA[Returns the title safe area of the current viewport.]]></summary>
       <syntax><![CDATA[public Rectangle TitleSafeArea { get; }]]></syntax>
+      <value><![CDATA[The title safe area.]]></value>
       <remarks><![CDATA[On television sets, text should not be displayed at the outer edges of the screen because it may not be visible to the user. The title safe area is the part of the screen where text should be displayed. This property does not compare the current location of the viewport with the title safe area of the entire display—it reduces the title safe area of the viewport uniformly.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -109,6 +115,7 @@ public struct Viewport]]></syntax>
     <property name="Width" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the width dimension of the viewport on the render-target surface, in pixels.]]></summary>
       <syntax><![CDATA[public int Width { get; set; }]]></syntax>
+      <value><![CDATA[The width, in pixels, of the viewport to set or get.]]></value>
       <remarks><![CDATA[Unless rendering is being done only to a subset of the surface, this member should be set to the width dimension of the render-target surface.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -119,6 +126,7 @@ public struct Viewport]]></syntax>
     <property name="X" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the pixel coordinate of the upper-left corner of the viewport on the render-target surface.]]></summary>
       <syntax><![CDATA[public int X { get; set; }]]></syntax>
+      <value><![CDATA[The upper-left corner of the viewport to set or get.]]></value>
       <remarks><![CDATA[Unless rendering is being done only to a subset of the surface, this member can be set to 0.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -129,6 +137,7 @@ public struct Viewport]]></syntax>
     <property name="Y" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the pixel coordinate of the upper-left corner of the viewport on the render-target surface.]]></summary>
       <syntax><![CDATA[public int Y { get; set; }]]></syntax>
+      <value><![CDATA[The upper-left corner of the viewport to set or get.]]></value>
       <remarks><![CDATA[Unless rendering is being done only to a subset of the surface, this member can be set to 0.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -138,7 +147,7 @@ public struct Viewport]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Project" returnType="void">
+    <method name="Project" returnType="Vector3">
       <summary><![CDATA[Projects a 3D vector from object space into screen space.]]></summary>
       <overloads>
         <overload signature="Project()">
@@ -164,7 +173,7 @@ public struct Viewport]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -179,7 +188,7 @@ public struct Viewport]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Unproject" returnType="void">
+    <method name="Unproject" returnType="Vector3">
       <summary><![CDATA[Projects a vector from screen space into object space.]]></summary>
       <overloads>
         <overload signature="Unproject()">

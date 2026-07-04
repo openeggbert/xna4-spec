@@ -25,7 +25,7 @@ public class FontDescriptionProcessor : ContentProcessor<FontDescription, Sprite
   <properties>
   </properties>
   <methods>
-    <method name="Process" returnType="void">
+    <method name="Process" returnType="SpriteFontContent">
       <summary><![CDATA[Creates SpriteFontContent from a FontDescription object.]]></summary>
       <overloads>
         <overload signature="Process()">

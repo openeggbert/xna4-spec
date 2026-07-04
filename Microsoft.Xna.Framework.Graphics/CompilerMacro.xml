@@ -17,6 +17,7 @@ public struct CompilerMacro]]></syntax>
     <property name="Definition" type="string" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public string Definition { get; set; }]]></syntax>
+      <value><![CDATA[The definition of the macro.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -25,6 +26,7 @@ public struct CompilerMacro]]></syntax>
     <property name="Name" type="string" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <value><![CDATA[The name of the macro.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -32,7 +34,7 @@ public struct CompilerMacro]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="ToString()">

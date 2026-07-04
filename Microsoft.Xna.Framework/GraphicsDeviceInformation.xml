@@ -26,6 +26,10 @@
     <property name="Adapter" type="GraphicsAdapter" access="get;set">
       <summary><![CDATA[Specifies which graphics adapter to create the device on.]]></summary>
       <syntax><![CDATA[public GraphicsAdapter Adapter { get; set; }]]></syntax>
+      <value><![CDATA[The graphics adapter to create the device on.]]></value>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[Adapter is null. Try using DefaultAdapter instead.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +39,7 @@
     <property name="CreationOptions" type="CreateOptions" access="get;set">
       <summary><![CDATA[Specifies the creation options to use when creating a graphics device.]]></summary>
       <syntax><![CDATA[public CreateOptions CreationOptions { get; set; }]]></syntax>
+      <value><![CDATA[The creation options to use when creating a graphics device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +49,7 @@
     <property name="DeviceType" type="DeviceType" access="get;set">
       <summary><![CDATA[Specifies the type of device to create (hardware, reference, null).]]></summary>
       <syntax><![CDATA[public DeviceType DeviceType { get; set; }]]></syntax>
+      <value><![CDATA[The type of device to create.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +59,7 @@
     <property name="GraphicsProfile" type="GraphicsProfile" access="get;set">
       <summary><![CDATA[Gets the graphics profile, which determines the graphics feature set.]]></summary>
       <syntax><![CDATA[public GraphicsProfile GraphicsProfile { get; set; }]]></syntax>
+      <value><![CDATA[The graphics profile.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -63,6 +70,7 @@
     <property name="PresentationParameters" type="PresentationParameters" access="get;set">
       <summary><![CDATA[Specifies the presentation parameters to use when creating a graphics device.]]></summary>
       <syntax><![CDATA[public PresentationParameters PresentationParameters { get; set; }]]></syntax>
+      <value><![CDATA[The presentation parameters to use when creating a graphics device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -71,7 +79,7 @@
     </property>
   </properties>
   <methods>
-    <method name="Clone" returnType="void">
+    <method name="Clone" returnType="GraphicsDeviceInformation">
       <summary><![CDATA[Creates a clone of this object.]]></summary>
       <overloads>
         <overload signature="Clone()">
@@ -106,7 +114,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this object.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">

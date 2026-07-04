@@ -4,7 +4,8 @@
           name="ContentSerializerCollectionItemNameAttribute" kind="class"
           namespace="Microsoft.Xna.Framework.Content"
           assembly="Microsoft.Xna.Framework.Content"
-          baseClass="Attribute">
+          baseClass="Attribute"
+          modifier="sealed">
   <summary><![CDATA[A custom Attribute that marks a collection class to specify the XML element name for each item in the collection.]]></summary>
   <syntax><![CDATA[[AttributeUsageAttribute(4)]
 public sealed class ContentSerializerCollectionItemNameAttribute : Attribute]]></syntax>
@@ -22,6 +23,9 @@ public sealed class ContentSerializerCollectionItemNameAttribute : Attribute]]><
       <parameters>
         <parameter name="collectionItemName" type="string"><![CDATA[The name for each item in the collection.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[collectionItemName is null.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -33,6 +37,7 @@ public sealed class ContentSerializerCollectionItemNameAttribute : Attribute]]><
     <property name="CollectionItemName" type="string" access="get">
       <summary><![CDATA[Gets the name that will be used for each item in the collection.]]></summary>
       <syntax><![CDATA[public string CollectionItemName { get; }]]></syntax>
+      <value><![CDATA[The name used for each item in the collection.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

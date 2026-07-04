@@ -4,7 +4,8 @@
           name="Cue" kind="class"
           namespace="Microsoft.Xna.Framework.Audio"
           assembly="Microsoft.Xna.Framework.Audio"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="sealed">
   <summary><![CDATA[Defines methods for managing the playback of sounds.]]></summary>
   <syntax><![CDATA[public sealed class Cue : IDisposable]]></syntax>
   <remarks><![CDATA[Cues are what programmers use to play sounds. Cues are typically played when certain game events occur, such as footsteps or gunshots. A cue is composed of one or more sounds, so when the cue is triggered, the set of associated sounds is heard. A sound specifies how one or more waves should be played. A sound also has specific properties such as volume and pitch. The sound designer can adjust these properties. The advantage to using the Audio API to reference cues rather than specific sounds is that an audio designer can reassign sounds to a cue in the sound bank without programmer intervention. For example, a sound designer can try various gunshot waves associated with a particular game event without requiring the programmer to change code or rename sounds. Cues and sounds are referenced through SoundBank objects. The waves that compose a sound are referenced through WaveBank objects.]]></remarks>
@@ -19,6 +20,7 @@
     <property name="IsCreated" type="bool" access="get">
       <summary><![CDATA[Returns whether the cue has been created.]]></summary>
       <syntax><![CDATA[public bool IsCreated { get; }]]></syntax>
+      <value><![CDATA[true if the cue is created; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -28,6 +30,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the object has been disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object has been disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -37,6 +40,7 @@
     <property name="IsPaused" type="bool" access="get">
       <summary><![CDATA[Returns whether the cue is currently paused.]]></summary>
       <syntax><![CDATA[public bool IsPaused { get; }]]></syntax>
+      <value><![CDATA[true if the cue is paused; false otherwise.]]></value>
       <remarks><![CDATA[IsPlaying and IsPaused both return true if a cue is paused while playing.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -47,6 +51,7 @@
     <property name="IsPlaying" type="bool" access="get">
       <summary><![CDATA[Returns whether the cue is playing.]]></summary>
       <syntax><![CDATA[public bool IsPlaying { get; }]]></syntax>
+      <value><![CDATA[true if the cue is playing; false otherwise.]]></value>
       <remarks><![CDATA[IsPlaying and IsPaused both return true if a cue is paused while playing.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -57,6 +62,7 @@
     <property name="IsPrepared" type="bool" access="get">
       <summary><![CDATA[Returns whether the cue is prepared to play.]]></summary>
       <syntax><![CDATA[public bool IsPrepared { get; }]]></syntax>
+      <value><![CDATA[true if the cue is prepared to play; false otherwise.]]></value>
       <remarks><![CDATA[This property returns true only if the cue is prepared but has not yet been played. Cues that are played return true for IsPlaying if they are currently playing or true for IsStopped if they are stopped.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -67,6 +73,7 @@
     <property name="IsPreparing" type="bool" access="get">
       <summary><![CDATA[Returns whether the cue is preparing to play.]]></summary>
       <syntax><![CDATA[public bool IsPreparing { get; }]]></syntax>
+      <value><![CDATA[true if the cue is preparing to play; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -76,6 +83,7 @@
     <property name="IsStopped" type="bool" access="get">
       <summary><![CDATA[Returns whether the cue is currently stopped.]]></summary>
       <syntax><![CDATA[public bool IsStopped { get; }]]></syntax>
+      <value><![CDATA[true if the cue is stopped; false if otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -85,6 +93,7 @@
     <property name="IsStopping" type="bool" access="get">
       <summary><![CDATA[Returns whether the cue is stopping playback.]]></summary>
       <syntax><![CDATA[public bool IsStopping { get; }]]></syntax>
+      <value><![CDATA[true if the cue is stopping; false if otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -94,6 +103,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Returns the friendly name of the cue.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[Friendly name of the cue.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -115,6 +125,10 @@
             <parameter name="listener" type="AudioListener"><![CDATA[The listener to calculate.]]></parameter>
             <parameter name="emitter" type="AudioEmitter"><![CDATA[The emitter to calculate.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[Both listener and emitter must be non-null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[You must call the Cue.Apply3D method before you call the Cue.Play method.]]></exception>
+          </exceptions>
           <remarks><![CDATA[If you want to apply 3D effects to a Cue , you must call this method before you call the Play method. Not doing so will throw an exception the next time Apply3D is called. Calling this method automatically sets the speaker mix for any sound played by this cue to a value calculated by the difference in Position values between listener and emitter . In preparation for the mix, the sound is converted to monoaural. Any stereo information in the sound is discarded. Calling this method sets the cue-instance variables Distance , DopplerPitchScalar , and OrientationAngle to the resulting values of the 3D calculation between listener and emitter . These values do not modify sound attenuation over distance, or pitch shifting via Doppler values, on their own. You must set up a Runtime Parameter Curve (RPC) that defines how to map the cue-instance variable values to pitch and volume shifts, and associate sounds to these curves in the Microsoft Cross-Platform Audio Creation Tool (XACT).]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -158,7 +172,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -173,7 +187,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVariable" returnType="void">
+    <method name="GetVariable" returnType="float">
       <summary><![CDATA[Gets a cue-instance variable value based on its friendly name.]]></summary>
       <overloads>
         <overload signature="GetVariable()">
@@ -185,6 +199,9 @@
             <parameter name="name" type="string"><![CDATA[Friendly name of the variable.]]></parameter>
           </parameters>
           <returns><![CDATA[Value of the variable.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[The name parameter is null.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Cue-instance variables are useful when multiple instantiations of a single cue (and its associated sounds) are required (for example, a "car" cue where there may be more than one car at any given time). While a global variable allows multiple audio elements to be controlled in unison, a cue instance variable grants discrete control of each instance of a cue, even for each copy of the same cue.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -249,6 +266,9 @@
             <parameter name="name" type="string"><![CDATA[Friendly name of the variable to set.]]></parameter>
             <parameter name="value" type="float"><![CDATA[Value to assign to the variable.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[The name parameter is null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -276,7 +296,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -298,7 +318,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

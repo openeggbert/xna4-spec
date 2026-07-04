@@ -31,7 +31,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="TryGetFormat" returnType="void">
+    <method name="TryGetFormat" returnType="bool">
       <summary><![CDATA[Attempts to get the GPU texture format of this bitmap type.]]></summary>
       <overloads>
         <overload signature="TryGetFormat()">

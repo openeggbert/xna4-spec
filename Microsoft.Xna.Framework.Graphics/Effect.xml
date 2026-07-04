@@ -23,6 +23,9 @@
         <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The device.]]></parameter>
         <parameter name="effectCode" type="Byte"><![CDATA[The effect code.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="OutOfMemoryException"><![CDATA[There is not enough memory to create this resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -41,6 +44,11 @@
         <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
         <parameter name="pool" type="EffectPool"><![CDATA[Specifies a pool of resources to share between effects.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null. The graphics device must not be null when creating new resources.]]></exception>
+        <exception type="ObjectDisposedException"><![CDATA[Effect was called after pool was disposed.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[The code contained in effectCodeFileStream is not compiled. Creating an effect requires that the shader code has been compiled. The code contained in effectCodeFileStream does not have a size that is a multiple of four bytes. Effect and shader code must have a size that is a multiple of four bytes. Unable to create the effect resource on the graphics device.]]></exception>
+      </exceptions>
       <remarks><![CDATA[Tip In most cases, it is preferrable to initialize a new instance of an effect using the ContentManager.Load&lt;Effect&gt; method rather than using the Effect constructors. For an example of initializing an effect with this method, see How to: Create and Apply Custom Effects . Obtaining the compiled byte code for effectCodeFileStream is a two-part process. First, you must compile the effect by using the static method Effect.CompileEffectFromFile or Effect.CompileEffectFromSource , either of which returns an instance of CompiledEffect . CompiledEffect.GetEffectCode returns the compiled byte code from the compiled effect.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -64,6 +72,11 @@
         <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
         <parameter name="pool" type="EffectPool"><![CDATA[Specifies a pool of resources to share between effects.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null. The graphics device must not be null when creating new resources.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: effectCodeFileStream does not contain enough data to accommodate the number of bytes requested by the numberBytes parameter. The code contained in effectCodeFileStream is not compiled. Creating an effect requires that the shader code has been compiled. The code contained in effectCodeFileStream does not have a size that is a multiple of four bytes. Effect and shader code must have a size that is a multiple of four bytes. Unable to create the effect resource on the graphics device.]]></exception>
+        <exception type="ObjectDisposedException"><![CDATA[Effect was called after pool was disposed.]]></exception>
+      </exceptions>
       <remarks><![CDATA[Tip In most cases, it is preferrable to initialize a new instance of an effect using the ContentManager.Load&lt;Effect&gt; method rather than using the Effect constructors. For an example of initializing an effect with this method, see How to: Create and Apply Custom Effects . Obtaining the compiled byte code for effectCodeFileStream is a two-part process. First, you must compile the effect by using the static method Effect.CompileEffectFromFile or Effect.CompileEffectFromSource , either of which returns an instance of CompiledEffect . CompiledEffect.GetEffectCode returns the compiled byte code from the compiled effect.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -81,6 +94,11 @@
         <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device that will create the effect.]]></parameter>
         <parameter name="cloneSource" type="Effect"><![CDATA[The effect to clone.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[cloneSource or graphicsDevice is null.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create the effect resource on the graphics device.]]></exception>
+        <exception type="ObjectDisposedException"><![CDATA[Effect was called after cloneSource was disposed.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -101,6 +119,11 @@
         <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
         <parameter name="pool" type="EffectPool"><![CDATA[Specifies a pool of resources to share between effects.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[effectCode or graphicsDevice is null.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: The code contained in effectCode is not compiled. Creating an effect requires that the shader code has been compiled. The code contained in effectCode does not have a size that is a multiple of four bytes. Effect and shader code must have a size that is a multiple of four bytes. Unable to create the effect resource on the graphics device.]]></exception>
+        <exception type="ObjectDisposedException"><![CDATA[Effect was called after pool was disposed.]]></exception>
+      </exceptions>
       <remarks><![CDATA[Tip In most cases, it is preferrable to initialize a new instance of an effect using the ContentManager.Load&lt;Effect&gt; method rather than using the Effect constructors. For an example of initializing an effect with this method, see How to: Create and Apply Custom Effects . Obtaining the compiled byte code for effectCode is a two-part process. First, you must compile the effect by using the static method Effect.CompileEffectFromFile or Effect.CompileEffectFromSource , either of which returns an instance of CompiledEffect . CompiledEffect.GetEffectCode returns the compiled byte code from the compiled effect.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -116,6 +139,9 @@
       <parameters>
         <parameter name="cloneSource" type="Effect"><![CDATA[An object to copy.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="OutOfMemoryException"><![CDATA[There is not enough memory to create this resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -134,6 +160,11 @@
         <parameter name="options" type="CompilerOptions"><![CDATA[Compilation optimization options.]]></parameter>
         <parameter name="pool" type="EffectPool"><![CDATA[Specifies a pool of resources to share between effects.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null. The graphics device must not be null when creating new resources.]]></exception>
+        <exception type="ObjectDisposedException"><![CDATA[Effect was called after pool was disposed.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[The code contained in effectCodeFile is not compiled. Creating an effect requires that the shader code has been compiled. The code contained in effectCodeFile does not have a size that is a multiple of four bytes. Effect and shader code must have a size that is a multiple of four bytes. Unable to create the effect resource on the graphics device.]]></exception>
+      </exceptions>
       <remarks><![CDATA[Obtaining the compiled byte code for effectCodeFile is a two-part process. First, the effect must be compiled using the static methods Effect.CompileEffectFromFile or Effect.CompileEffectFromSource , which returns an instance of CompiledEffect . CompiledEffect.GetEffectCode returns the compiled byte code from the compiled effect.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -146,6 +177,7 @@
     <property name="Creator" type="string" access="get">
       <summary><![CDATA[Gets the name of the effect creator.]]></summary>
       <syntax><![CDATA[public string Creator { get; }]]></syntax>
+      <value><![CDATA[The name of the effect creator.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -155,6 +187,10 @@
     <property name="CurrentTechnique" type="EffectTechnique" access="get;set">
       <summary><![CDATA[Gets or sets the active technique.]]></summary>
       <syntax><![CDATA[public EffectTechnique CurrentTechnique { get; set; }]]></syntax>
+      <value><![CDATA[The current technique.]]></value>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[CurrentTechnique is null. CurrentTechnique cannot be null.]]></exception>
+      </exceptions>
       <remarks><![CDATA[Note The BasicEffect class, which is derived from Effect and inherits the Techniques collection, contains only one available technique to set as the active technique. The active technique applies the settings that have been set as the properties of the BasicEffect .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -165,6 +201,7 @@
     <property name="EffectPool" type="EffectPool" access="get">
       <summary><![CDATA[Gets an EffectPool representing the pool of shared parameters.]]></summary>
       <syntax><![CDATA[public EffectPool EffectPool { get; }]]></syntax>
+      <value><![CDATA[The pool of shared parameters.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -174,6 +211,7 @@
     <property name="Functions" type="EffectFunctionCollection" access="get">
       <summary><![CDATA[Gets a collection of functions that can render the effect.]]></summary>
       <syntax><![CDATA[public EffectFunctionCollection Functions { get; }]]></syntax>
+      <value><![CDATA[Collection of functions that can render the effect.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -183,6 +221,7 @@
     <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the graphics device that created the effect.]]></summary>
       <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[The graphics device that created the effect.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -192,6 +231,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -201,6 +241,7 @@
     <property name="Parameters" type="EffectParameterCollection" access="get">
       <summary><![CDATA[Gets a collection of parameters used for this effect.]]></summary>
       <syntax><![CDATA[public EffectParameterCollection Parameters { get; }]]></syntax>
+      <value><![CDATA[The collection of parameters used for this effect.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -210,6 +251,7 @@
     <property name="Techniques" type="EffectTechniqueCollection" access="get">
       <summary><![CDATA[Gets a collection of techniques that are defined for this effect.]]></summary>
       <syntax><![CDATA[public EffectTechniqueCollection Techniques { get; }]]></syntax>
+      <value><![CDATA[A collection of techniques that are defined for this effect.]]></value>
       <remarks><![CDATA[Note The BasicEffect class, which is derived from Effect and inherits the Techniques collection, contains only one available technique which will apply the settings which have been set as the properties of the BasicEffect .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -225,6 +267,9 @@
         <overload signature="Begin()">
           <summary><![CDATA[Begins application of the active technique.]]></summary>
           <syntax><![CDATA[public void Begin ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin has been called before calling End after the last call to Begin. Begin cannot be called again until End has been successfully called.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -239,6 +284,9 @@
           <parameters>
             <parameter name="saveStateMode" type="SaveStateMode"><![CDATA[Options for saving the state prior to application of the technique.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin has been called before calling End after the last call to Begin. Begin cannot be called again until End has been successfully called.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -247,7 +295,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Clone" returnType="void">
+    <method name="Clone" returnType="Effect">
       <summary><![CDATA[Copies data from an existing object to this object.]]></summary>
       <overloads>
         <overload signature="Clone()">
@@ -299,6 +347,15 @@
             <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for the compilation.]]></parameter>
           </parameters>
           <returns><![CDATA[The compiled effect.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[effectFile is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[effectFile is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The effectFile parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in effectFile was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[effectFile is in an invalid format.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -321,6 +378,11 @@
             <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for the compilation.]]></parameter>
           </parameters>
           <returns><![CDATA[The compiled effect.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[effectFileStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[effectFileStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[effectFileStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -345,6 +407,11 @@
             <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for the compilation.]]></parameter>
           </parameters>
           <returns><![CDATA[The compiled effect.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[effectFileStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[effectFileStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[effectFileStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -352,7 +419,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="CompileEffectFromSource" returnType="void">
+    <method name="CompileEffectFromSource" returnType="CompiledEffect" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="CompileEffectFromSource()">
@@ -393,6 +460,9 @@
             <parameter name="enableColorCode" type="bool"><![CDATA[[ MarshalAsAttribute (U1)] true to enable color coding to make the disassembly easier to read.]]></parameter>
           </parameters>
           <returns><![CDATA[A string that contains the effect assembly (ASM).]]></returns>
+          <exceptions>
+            <exception type="InsufficientMemoryException"><![CDATA[Microsoft Direct3D could not allocate sufficient memory to complete the call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -407,6 +477,9 @@
             <parameter name="enableColorCode" type="bool"><![CDATA[[ MarshalAsAttribute (U1)] true to enable color coding to make the disassembly easier to read.]]></parameter>
           </parameters>
           <returns><![CDATA[A string that contains the effect assembly (ASM).]]></returns>
+          <exceptions>
+            <exception type="InsufficientMemoryException"><![CDATA[Microsoft Direct3D could not allocate sufficient memory to complete the call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -446,6 +519,9 @@
         <overload signature="End()">
           <summary><![CDATA[Ends the application of the current technique.]]></summary>
           <syntax><![CDATA[public void End ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[End was called, but Begin has not yet been called. Begin must be called successfully before End can be called.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -488,7 +564,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -518,7 +594,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -533,7 +609,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -555,7 +631,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

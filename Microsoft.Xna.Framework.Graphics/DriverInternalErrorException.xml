@@ -4,7 +4,8 @@
           name="DriverInternalErrorException" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ExternalException">
+          baseClass="ExternalException"
+          modifier="sealed">
   <summary><![CDATA[The exception that is thrown when an internal driver error occurs. Applications should destroy and recreate the device when receiving this error.]]></summary>
   <syntax><![CDATA[[SerializableAttribute]
 public sealed class DriverInternalErrorException : ExternalException]]></syntax>

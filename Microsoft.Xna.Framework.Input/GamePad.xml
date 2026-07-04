@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="GamePad" kind="class"
           namespace="Microsoft.Xna.Framework.Input"
-          assembly="Microsoft.Xna.Framework.Input">
+          assembly="Microsoft.Xna.Framework.Input"
+          modifier="static">
   <summary><![CDATA[Allows retrieval of user interaction with an Xbox 360 Controller and setting of controller vibration motors.]]></summary>
   <syntax><![CDATA[public static class GamePad]]></syntax>
   <platforms>
@@ -16,7 +17,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetCapabilities" returnType="void">
+    <method name="GetCapabilities" returnType="GamePadCapabilities" isStatic="true">
       <summary><![CDATA[Retrieves the capabilities of an Xbox 360 Controller.]]></summary>
       <overloads>
         <overload signature="GetCapabilities()">
@@ -28,6 +29,9 @@
             <parameter name="playerIndex" type="PlayerIndex"><![CDATA[Index of the controller to query.]]></parameter>
           </parameters>
           <returns><![CDATA[The capabilities of the controller.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[An unknown error has occurred. Verify that the correct playerIndex is being requested.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -48,6 +52,9 @@
             <parameter name="playerIndex" type="PlayerIndex"><![CDATA[Player index for the controller you want to query.]]></parameter>
           </parameters>
           <returns><![CDATA[The current state of the controller.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[An unknown error has occurred. Verify that the correct playerIndex is being requested.]]></exception>
+          </exceptions>
           <remarks><![CDATA[When calling GetState , check the returned structure's IsConnected property value. If the controller has been disconnected, this value will be false . When a controller is disconnected, values for its state will not be valid. The controller will also not be able to receive new vibration settings. This method uses the GamePadDeadZone.IndependentAxes dead zone to smooth the values of the analog sticks. To specify a different dead zone type, or to specify no dead-zone processing, pass a GamePadDeadZone value to this method.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -66,6 +73,9 @@
             <parameter name="deadZoneMode" type="GamePadDeadZone"><![CDATA[Enumerated value that specifies what dead zone type to use.]]></parameter>
           </parameters>
           <returns><![CDATA[The current state of the controller.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[An unknown error has occurred. Verify that the correct playerIndex is being requested.]]></exception>
+          </exceptions>
           <remarks><![CDATA[When calling GetState , check the returned structure's IsConnected property value. If the controller has been disconnected, this value will be false . When a controller is disconnected, values for its state will not be valid. The controller will also not be able to receive new vibration settings. The deadZoneMode parameter specifies the type of dead-zone processing to apply to the analog sticks on the controller. By applying a dead zone, controller inputs will report values near the center and edges of their ranges more accurately. If you wish to do your own dead-zone processing, use GamePadDeadZone.None .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -75,7 +85,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="SetVibration" returnType="void">
+    <method name="SetVibration" returnType="bool" isStatic="true">
       <summary><![CDATA[Sets the vibration motor speeds on an Xbox 360 Controller.]]></summary>
       <overloads>
         <overload signature="SetVibration()">
@@ -91,6 +101,9 @@
             <parameter name="rightMotor" type="float"><![CDATA[The speed of the right motor, between 0.0 and 1.0. This motor is a high-frequency motor.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the vibration motors were successfully set; false if the controller was unable to process the request.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[An unknown error has occurred. Verify that the correct playerIndex is being requested.]]></exception>
+          </exceptions>
           <remarks><![CDATA[If this method returns false , it means that the controller is either disconnected or too busy to accept the new vibration settings. It is not advisable to loop in wait for this method to return true .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>

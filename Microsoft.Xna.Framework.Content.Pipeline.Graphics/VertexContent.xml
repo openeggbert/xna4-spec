@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="VertexContent" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Provides methods and properties for maintaining the vertex data of a GeometryContent.]]></summary>
   <syntax><![CDATA[public sealed class VertexContent]]></syntax>
   <remarks><![CDATA[This class combines a collection of arbitrarily named data channels with a list of position indices that reference the Positions collection of the parent MeshContent .]]></remarks>
@@ -17,6 +18,7 @@
     <property name="Channels" type="VertexChannelCollection" access="get">
       <summary><![CDATA[Gets the list of named vertex data channels in the VertexContent.]]></summary>
       <syntax><![CDATA[public VertexChannelCollection Channels { get; }]]></syntax>
+      <value><![CDATA[Collection of vertex data channels.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -25,6 +27,7 @@
     <property name="PositionIndices" type="VertexChannel&lt;int&gt;" access="get">
       <summary><![CDATA[Gets the list of position indices.]]></summary>
       <syntax><![CDATA[public VertexChannel<int> PositionIndices { get; }]]></syntax>
+      <value><![CDATA[Position of the position index being retrieved.]]></value>
       <remarks><![CDATA[This list adds a level of indirection between the actual triangle indices and the Positions member of the parent. This indirection preserves the topological vertex identity in cases where a single vertex position is used by triangles that straddle a discontinuity in some other data channel. For example, the following code gets the position of the first vertex of the first triangle in a GeometryContent object: parent.Positions[Vertices.PositionIndices[Indices[0]]]]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -34,6 +37,7 @@
     <property name="Positions" type="IndirectPositionCollection" access="get">
       <summary><![CDATA[Gets position data from the parent mesh object.]]></summary>
       <syntax><![CDATA[public IndirectPositionCollection Positions { get; }]]></syntax>
+      <value><![CDATA[Collection of vertex positions for the mesh.]]></value>
       <remarks><![CDATA[The collection returned from this call provides a virtualized view of the vertex positions for this batch. The collection uses the contents of the PositionIndices property to index into the parent Positions . This collection is read-only. If you need to modify any contained values, edit the PositionIndices or Positions members directly.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -43,6 +47,7 @@
     <property name="VertexCount" type="int" access="get">
       <summary><![CDATA[Number of vertices for the content.]]></summary>
       <syntax><![CDATA[public int VertexCount { get; }]]></syntax>
+      <value><![CDATA[Number of vertices.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -50,7 +55,7 @@
     </property>
   </properties>
   <methods>
-    <method name="Add" returnType="void">
+    <method name="Add" returnType="int">
       <summary><![CDATA[Appends a new vertex index to the end of the PositionIndices collection.]]></summary>
       <overloads>
         <overload signature="Add()">
@@ -87,13 +92,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="CreateVertexBuffer" returnType="void">
+    <method name="CreateVertexBuffer" returnType="VertexBufferContent">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="CreateVertexBuffer()">
           <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
           <syntax><![CDATA[public VertexBufferContent CreateVertexBuffer ()]]></syntax>
           <returns><![CDATA[A packed vertex buffer.]]></returns>
+          <exceptions>
+            <exception type="InvalidContentException"><![CDATA[One or more of the vertex channel types are invalid or an unrecognized name was passed to VertexElementUsage.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows 7</platform>
             <platform>Windows Vista</platform>

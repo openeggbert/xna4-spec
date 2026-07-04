@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="VertexStream" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Represents a vertex stream.]]></summary>
   <syntax><![CDATA[public sealed class VertexStream]]></syntax>
   <platforms>
@@ -17,6 +18,7 @@
     <property name="OffsetInBytes" type="int" access="get">
       <summary><![CDATA[Gets the starting offset of the vertex stream.]]></summary>
       <syntax><![CDATA[public int OffsetInBytes { get; }]]></syntax>
+      <value><![CDATA[Starting offset of the vertex stream.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +28,7 @@
     <property name="VertexBuffer" type="VertexBuffer" access="get">
       <summary><![CDATA[Gets the vertex buffer associated with this vertex stream.]]></summary>
       <syntax><![CDATA[public VertexBuffer VertexBuffer { get; }]]></syntax>
+      <value><![CDATA[Vertex buffer associated with this vertex stream.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +38,7 @@
     <property name="VertexStride" type="int" access="get">
       <summary><![CDATA[Gets the size, in bytes, of the elements in this vertex stream.]]></summary>
       <syntax><![CDATA[public int VertexStride { get; }]]></syntax>
+      <value><![CDATA[Size, in bytes, of the elements in this vertex stream.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -112,6 +116,10 @@
             <parameter name="offsetInBytes" type="int"><![CDATA[The starting offset.]]></parameter>
             <parameter name="vertexStride" type="int"><![CDATA[The size, in bytes, of the elements in the vertex buffer.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The requested vertex stream is invalid.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[SetSource was called after the GraphicsDevice was disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

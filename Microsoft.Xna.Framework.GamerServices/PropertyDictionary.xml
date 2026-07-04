@@ -4,7 +4,8 @@
           name="PropertyDictionary" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
-          interfaces="IDictionary&lt;string, Object&gt;, ICollection&lt;KeyValuePair&lt;string, Object&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, Object&gt;&gt;, IEnumerable">
+          interfaces="IDictionary&lt;string, Object&gt;, ICollection&lt;KeyValuePair&lt;string, Object&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, Object&gt;&gt;, IEnumerable"
+          modifier="sealed">
   <summary><![CDATA[Holds a set of properties used to define presence states or leaderboard column values.]]></summary>
   <syntax><![CDATA[public sealed class PropertyDictionary : IDictionary<string, Object>, ICollection<KeyValuePair<string, Object>>, IEnumerable<KeyValuePair<string, Object>>, IEnumerable]]></syntax>
   <platforms>
@@ -20,6 +21,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of elements contained in this PropertyDictionary.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[The number of elements in this PropertyDictionary.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -33,6 +35,7 @@
       <syntax><![CDATA[public Object this [
          string key
 ] { get; set; }]]></syntax>
+      <value><![CDATA[The element that corresponds to the specified key.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -43,7 +46,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ContainsKey" returnType="void">
+    <method name="ContainsKey" returnType="bool">
       <summary><![CDATA[Determines whether the PropertyDictionary contains an element with the specified key.]]></summary>
       <overloads>
         <overload signature="ContainsKey()">
@@ -83,7 +86,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueDateTime" returnType="void">
+    <method name="GetValueDateTime" returnType="DateTime">
       <summary><![CDATA[Gets the value of the property with the specified key, as a System.DateTime.]]></summary>
       <overloads>
         <overload signature="GetValueDateTime()">
@@ -106,7 +109,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueDouble" returnType="void">
+    <method name="GetValueDouble" returnType="double">
       <summary><![CDATA[Gets the value of the property with the specified key, as a System.Double.]]></summary>
       <overloads>
         <overload signature="GetValueDouble()">
@@ -129,7 +132,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueInt32" returnType="void">
+    <method name="GetValueInt32" returnType="int">
       <summary><![CDATA[Gets the value of the property with the specified key, as a System.Int32.]]></summary>
       <overloads>
         <overload signature="GetValueInt32()">
@@ -152,7 +155,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueInt64" returnType="void">
+    <method name="GetValueInt64" returnType="long">
       <summary><![CDATA[Gets the value of the property with the specified key, as a System.Int64.]]></summary>
       <overloads>
         <overload signature="GetValueInt64()">
@@ -175,7 +178,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueOutcome" returnType="void">
+    <method name="GetValueOutcome" returnType="LeaderboardOutcome">
       <summary><![CDATA[Gets the value of the property with the specified key, as a LeaderboardOutcome.]]></summary>
       <overloads>
         <overload signature="GetValueOutcome()">
@@ -198,7 +201,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueSingle" returnType="void">
+    <method name="GetValueSingle" returnType="float">
       <summary><![CDATA[Gets the value of the property with the specified key, as a System.Single.]]></summary>
       <overloads>
         <overload signature="GetValueSingle()">
@@ -221,7 +224,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueStream" returnType="void">
+    <method name="GetValueStream" returnType="Stream">
       <summary><![CDATA[Gets the value of the property with the specified key, as a System.IO.Stream.]]></summary>
       <overloads>
         <overload signature="GetValueStream()">
@@ -244,7 +247,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueString" returnType="void">
+    <method name="GetValueString" returnType="string">
       <summary><![CDATA[Gets the value of the property with the specified key, as a System.String.]]></summary>
       <overloads>
         <overload signature="GetValueString()">
@@ -267,7 +270,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueTimeSpan" returnType="void">
+    <method name="GetValueTimeSpan" returnType="TimeSpan">
       <summary><![CDATA[Gets the value of the property with the specified key, as a System.TimeSpan.]]></summary>
       <overloads>
         <overload signature="GetValueTimeSpan()">
@@ -447,7 +450,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TryGetValue" returnType="void">
+    <method name="TryGetValue" returnType="bool">
       <summary><![CDATA[Determines if a value for the specified key exists in the PropertyDictionary.]]></summary>
       <overloads>
         <overload signature="TryGetValue()">

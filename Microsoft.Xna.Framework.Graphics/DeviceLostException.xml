@@ -4,7 +4,8 @@
           name="DeviceLostException" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ExternalException">
+          baseClass="ExternalException"
+          modifier="sealed">
   <summary><![CDATA[The exception that is thrown when the device has been lost but cannot be reset at this time. Therefore, rendering is not possible.]]></summary>
   <syntax><![CDATA[[SerializableAttribute]
 public sealed class DeviceLostException : ExternalException]]></syntax>

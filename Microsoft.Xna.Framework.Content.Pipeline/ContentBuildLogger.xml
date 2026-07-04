@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ContentBuildLogger" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          modifier="abstract">
   <summary><![CDATA[Provides methods for reporting informational messages or warnings from content importers and processors.]]></summary>
   <syntax><![CDATA[public abstract class ContentBuildLogger]]></syntax>
   <platforms>
@@ -24,6 +25,7 @@
     <property name="LoggerRootDirectory" type="string" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public string LoggerRootDirectory { get; set; }]]></syntax>
+      <value><![CDATA[Current name of the base directory or the value to be set.]]></value>
       <remarks><![CDATA[When building XNA content, all errors are displayed in the Error List Window of Visual Studio. Along with the data that triggered the error, the Error List displays the path and filename where the offending data was encountered. By default, the path of the offending file that is reported in the Error List is always expressed as it relates to the location of the project file that references it. When set, the LoggerRootDirectory property specifies an explicit base path for error reporting that overrides the default operation. All offending files reported in the Error List will be expressed as they relate to the base path set in LoggerRootDirectory .]]></remarks>
       <platforms>
         <platform>Windows 7</platform>

@@ -4,7 +4,8 @@
           name="BitmapContent" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="ContentItem">
+          baseClass="ContentItem"
+          modifier="abstract">
   <summary><![CDATA[Provides properties and methods for creating and maintaining a bitmap resource.]]></summary>
   <syntax><![CDATA[public abstract class BitmapContent : ContentItem]]></syntax>
   <remarks><![CDATA[The BitmapContent class represents a single two-dimensional image with a fixed size and fixed format. Various pixel encodings are supported by subclasses of the bitmap type. Higher level constructs such as textures that may contain multiple mipmap images or cube map faces are stored as collections of multiple bitmaps.]]></remarks>
@@ -41,6 +42,7 @@
     <property name="Height" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the height of the bitmap, in pixels.]]></summary>
       <syntax><![CDATA[public int Height { get; set; }]]></syntax>
+      <value><![CDATA[Height of the bitmap.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -49,6 +51,7 @@
     <property name="Width" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the width of the bitmap, in pixels.]]></summary>
       <syntax><![CDATA[public int Width { get; set; }]]></syntax>
+      <value><![CDATA[Width of the bitmap.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -95,7 +98,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelData" returnType="void">
+    <method name="GetPixelData" returnType="byte[]">
       <summary><![CDATA[Reads encoded bitmap content.]]></summary>
       <overloads>
         <overload signature="GetPixelData()">
@@ -127,7 +130,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a string description of the bitmap resource.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -188,7 +191,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TryGetFormat" returnType="void">
+    <method name="TryGetFormat" returnType="bool">
       <summary><![CDATA[Gets the corresponding GPU texture format for the specified bitmap type.]]></summary>
       <overloads>
         <overload signature="TryGetFormat()">

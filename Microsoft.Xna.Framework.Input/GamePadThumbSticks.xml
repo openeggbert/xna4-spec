@@ -32,6 +32,7 @@
     <property name="Left" type="Vector2" access="get">
       <summary><![CDATA[Returns the position of the left Xbox 360 Controller stick (thumbstick) as a 2D vector.]]></summary>
       <syntax><![CDATA[public Vector2 Left { get; }]]></syntax>
+      <value><![CDATA[Two-dimensional vector that identifies the position of the left stick. Each axis is represented as a floating-point value from −1.0 to 1.0.]]></value>
       <remarks><![CDATA[Each of the thumbstick axis members is a signed value describing the position of the thumbstick. A value of 0 is centered. Negative values signify down or to the left. Positive values signify up or to the right. The controller typically does not generate thumbstick values within a dead zone, or marginal input region around the center position.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -42,6 +43,7 @@
     <property name="Right" type="Vector2" access="get">
       <summary><![CDATA[Returns the position of the right Xbox 360 Controller stick (thumbstick) as a 2D vector.]]></summary>
       <syntax><![CDATA[public Vector2 Right { get; }]]></syntax>
+      <value><![CDATA[Two-dimensional vector that identifies the position of the right stick. Each axis is represented as a floating-point value from −1.0 to 1.0.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -70,7 +72,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -85,7 +87,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -100,7 +102,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two GamePadThumbSticks instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -122,7 +124,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two GamePadThumbSticks instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

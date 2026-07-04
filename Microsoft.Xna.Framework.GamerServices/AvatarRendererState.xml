@@ -13,8 +13,8 @@
     <platform>Windows XP</platform>
   </platforms>
   <members>
-    <member name="Loading"><summary><![CDATA[0]]></summary></member>
-    <member name="Ready"><summary><![CDATA[1]]></summary></member>
-    <member name="Unavailable"><summary><![CDATA[2]]></summary></member>
+    <member name="Loading" value="0"><summary><![CDATA[The avatar is still loading required assets.]]></summary></member>
+    <member name="Ready" value="1"><summary><![CDATA[Loading is complete.]]></summary></member>
+    <member name="Unavailable" value="2"><summary><![CDATA[The avatar is unavailable.]]></summary></member>
   </members>
 </xna-type>

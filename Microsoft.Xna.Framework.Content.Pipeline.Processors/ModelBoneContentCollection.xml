@@ -4,7 +4,8 @@
           name="ModelBoneContentCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          baseClass="ReadOnlyCollection&lt;ModelBoneContent&gt;">
+          baseClass="ReadOnlyCollection&lt;ModelBoneContent&gt;"
+          modifier="sealed">
   <summary><![CDATA[A collection of ModelBoneContent objects.]]></summary>
   <syntax><![CDATA[public sealed class ModelBoneContentCollection : ReadOnlyCollection<ModelBoneContent>]]></syntax>
   <platforms>

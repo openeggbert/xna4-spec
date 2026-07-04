@@ -17,6 +17,7 @@
     <property name="CanAutoGenerateMipMap" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the driver is capable of automatically generating mipmaps.]]></summary>
       <syntax><![CDATA[public bool CanAutoGenerateMipMap { get; }]]></syntax>
+      <value><![CDATA[true if the driver is capable of automatically generating mipmaps; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="CanCalibrateGamma" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the system has a calibrator installed that can automatically adjust the gamma ramp.]]></summary>
       <syntax><![CDATA[public bool CanCalibrateGamma { get; }]]></syntax>
+      <value><![CDATA[true if the system has a calibrator installed that can automatically adjust the gamma ramp; false otherwise.]]></value>
       <remarks><![CDATA[To invoke the calibrator when setting new gamma levels, set calibrate to true when calling SetGammaRamp . Calibrating gamma ramps incurs some processing overhead and should not be used frequently.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -36,6 +38,7 @@
     <property name="CanManageResource" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the driver is capable of managing resources.]]></summary>
       <syntax><![CDATA[public bool CanManageResource { get; }]]></syntax>
+      <value><![CDATA[true if the driver is capable of managing resources; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -45,6 +48,7 @@
     <property name="ReadScanLine" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the display hardware is capable of returning the current scan line.]]></summary>
       <syntax><![CDATA[public bool ReadScanLine { get; }]]></syntax>
+      <value><![CDATA[true if the driver display hardware is capable of returning the current scan line; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -54,6 +58,7 @@
     <property name="SupportsAlphaFullScreenFlipOrDiscard" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device can respect the AlphaBlendEnable render state in full-screen mode while using the FLIP or DISCARD swap effect.]]></summary>
       <syntax><![CDATA[public bool SupportsAlphaFullScreenFlipOrDiscard { get; }]]></syntax>
+      <value><![CDATA[true if the driver the device can respect the AlphaBlendEnable render state in full-screen mode while using the FLIP or DISCARD swap effect; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -63,6 +68,7 @@
     <property name="SupportsCopyToSystemMemory" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device can accelerate a memory copy from local video memory to system memory.]]></summary>
       <syntax><![CDATA[public bool SupportsCopyToSystemMemory { get; }]]></syntax>
+      <value><![CDATA[true if the device can accelerate a memory copy from local video memory to system memory; false otherwise.]]></value>
       <remarks><![CDATA[This setting guarantees that GetRenderTarget calls will be hardware accelerated. If this setting is false , those calls will succeed but will be slower.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -73,6 +79,7 @@
     <property name="SupportsCopyToVideoMemory" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device can accelerate a memory copy from system memory to local video memory.]]></summary>
       <syntax><![CDATA[public bool SupportsCopyToVideoMemory { get; }]]></syntax>
+      <value><![CDATA[true if the device can accelerate a memory copy from system memory to local video memory; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -82,6 +89,7 @@
     <property name="SupportsDynamicTextures" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the driver supports dynamic textures.]]></summary>
       <syntax><![CDATA[public bool SupportsDynamicTextures { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports dynamic textures; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -91,6 +99,7 @@
     <property name="SupportsFullScreenGamma" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the driver supports dynamic gamma ramp adjustment in full-screen mode.]]></summary>
       <syntax><![CDATA[public bool SupportsFullScreenGamma { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports dynamic gamma ramp adjustment in full-screen mode; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -100,6 +109,7 @@
     <property name="SupportsLinearToSrgbPresentation" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device can perform gamma correction from a windowed back buffer (containing linear content) to an sRGB desktop.]]></summary>
       <syntax><![CDATA[public bool SupportsLinearToSrgbPresentation { get; }]]></syntax>
+      <value><![CDATA[true if the device can perform gamma correction from a windowed back buffer to an sRGB desktop; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -108,7 +118,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

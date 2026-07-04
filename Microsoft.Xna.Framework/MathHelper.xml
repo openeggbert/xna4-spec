@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="MathHelper" kind="class"
           namespace="Microsoft.Xna.Framework"
-          assembly="Microsoft.Xna.Framework">
+          assembly="Microsoft.Xna.Framework"
+          modifier="static">
   <summary><![CDATA[Contains commonly used precalculated values.]]></summary>
   <syntax><![CDATA[public static class MathHelper]]></syntax>
   <platforms>
@@ -16,7 +17,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="Barycentric" returnType="void">
+    <method name="Barycentric" returnType="float" isStatic="true">
       <summary><![CDATA[Returns the Cartesian coordinate for one axis of a point that is defined by a given triangle and two normalized barycentric (areal) coordinates.]]></summary>
       <overloads>
         <overload signature="Barycentric()">
@@ -44,7 +45,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="CatmullRom" returnType="void">
+    <method name="CatmullRom" returnType="float" isStatic="true">
       <summary><![CDATA[Performs a Catmull-Rom interpolation using the specified positions.]]></summary>
       <overloads>
         <overload signature="CatmullRom()">
@@ -72,7 +73,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Clamp" returnType="void">
+    <method name="Clamp" returnType="float" isStatic="true">
       <summary><![CDATA[Restricts a value to be within a specified range.]]></summary>
       <overloads>
         <overload signature="Clamp()">
@@ -96,7 +97,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Distance" returnType="void">
+    <method name="Distance" returnType="float" isStatic="true">
       <summary><![CDATA[Calculates the absolute value of the difference of two values.]]></summary>
       <overloads>
         <overload signature="Distance()">
@@ -118,7 +119,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Hermite" returnType="void">
+    <method name="Hermite" returnType="float" isStatic="true">
       <summary><![CDATA[Performs a Hermite spline interpolation.]]></summary>
       <overloads>
         <overload signature="Hermite()">
@@ -146,7 +147,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Lerp" returnType="void">
+    <method name="Lerp" returnType="float" isStatic="true">
       <summary><![CDATA[Linearly interpolates between two values.]]></summary>
       <overloads>
         <overload signature="Lerp()">
@@ -171,7 +172,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Max" returnType="void">
+    <method name="Max" returnType="float" isStatic="true">
       <summary><![CDATA[Returns the greater of two values.]]></summary>
       <overloads>
         <overload signature="Max()">
@@ -193,7 +194,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Min" returnType="void">
+    <method name="Min" returnType="float" isStatic="true">
       <summary><![CDATA[Returns the lesser of two values.]]></summary>
       <overloads>
         <overload signature="Min()">
@@ -215,7 +216,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="SmoothStep" returnType="void">
+    <method name="SmoothStep" returnType="float" isStatic="true">
       <summary><![CDATA[Interpolates between two values using a cubic equation.]]></summary>
       <overloads>
         <overload signature="SmoothStep()">
@@ -239,7 +240,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToDegrees" returnType="void">
+    <method name="ToDegrees" returnType="float" isStatic="true">
       <summary><![CDATA[Converts radians to degrees.]]></summary>
       <overloads>
         <overload signature="ToDegrees()">
@@ -259,7 +260,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToRadians" returnType="void">
+    <method name="ToRadians" returnType="float" isStatic="true">
       <summary><![CDATA[Converts degrees to radians.]]></summary>
       <overloads>
         <overload signature="ToRadians()">
@@ -279,7 +280,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="WrapAngle" returnType="void">
+    <method name="WrapAngle" returnType="float" isStatic="true">
       <summary><![CDATA[Reduces a given angle to a value between π and -π.]]></summary>
       <overloads>
         <overload signature="WrapAngle()">

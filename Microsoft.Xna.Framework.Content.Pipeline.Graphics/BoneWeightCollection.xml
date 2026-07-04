@@ -4,7 +4,8 @@
           name="BoneWeightCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="Collection&lt;BoneWeight&gt;">
+          baseClass="Collection&lt;BoneWeight&gt;"
+          modifier="sealed">
   <summary><![CDATA[Collection of bone weights of a vertex.]]></summary>
   <syntax><![CDATA[public sealed class BoneWeightCollection : Collection<BoneWeight>]]></syntax>
   <remarks><![CDATA[These objects are stored in the Weights property of a vertex data channel object. The complete set of weights should sum to one.]]></remarks>

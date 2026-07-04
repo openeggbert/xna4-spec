@@ -51,6 +51,9 @@
         <overload signature="Begin()">
           <summary><![CDATA[Begins capturing parameter state changes from the parent Effect.]]></summary>
           <syntax><![CDATA[public void Begin ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin has been called before calling End after the last call to Begin. Begin cannot be called again until End has been successfully called.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -91,6 +94,9 @@
         <overload signature="End()">
           <summary><![CDATA[Stops capturing state changes from the parent Effect.]]></summary>
           <syntax><![CDATA[public void End ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[End was called, but Begin has not yet been called. Begin must be called successfully before End can be called.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

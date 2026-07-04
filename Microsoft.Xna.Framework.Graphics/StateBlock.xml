@@ -22,6 +22,10 @@
       <parameters>
         <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The device to associate with the state block.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create this StateBlock resource on the graphics device.]]></exception>
+      </exceptions>
       <remarks><![CDATA[StateBlock objects must be recreated when the device is reset.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -34,6 +38,7 @@
     <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the GraphicsDevice associated with this StateBlock.]]></summary>
       <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[The GraphicsDevice associated with this StateBlock.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -43,6 +48,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -52,6 +58,7 @@
     <property name="Name" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the name of the StateBlock.]]></summary>
       <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <value><![CDATA[The name of the StateBlock.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -61,6 +68,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Gets or sets the resource manager tag for the StateBlock.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[The resource manager tag for the StateBlock.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -159,7 +167,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -174,7 +182,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -189,7 +197,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -211,7 +219,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

@@ -19,6 +19,7 @@
     <property name="Delta" type="Vector2" access="get">
       <summary><![CDATA[Holds delta information about the first touchpoint in a multitouch gesture.]]></summary>
       <syntax><![CDATA[public Vector2 Delta { get; }]]></syntax>
+      <value><![CDATA[A vector that represents the difference between the location of the first touchpoint provided by this sample and the last sample with the same GestureType.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -30,6 +31,7 @@
     <property name="Delta2" type="Vector2" access="get">
       <summary><![CDATA[Holds delta information about the second touchpoint in a multitouch gesture.]]></summary>
       <syntax><![CDATA[public Vector2 Delta2 { get; }]]></syntax>
+      <value><![CDATA[A vector representing the difference between the location of the second touchpoint provided by this sample and the last sample with the same GestureType.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -41,6 +43,7 @@
     <property name="GestureType" type="GestureType" access="get">
       <summary><![CDATA[The type of gesture in a multitouch gesture sample.]]></summary>
       <syntax><![CDATA[public GestureType GestureType { get; }]]></syntax>
+      <value><![CDATA[The gesture type represented by this sample data.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -52,6 +55,7 @@
     <property name="Position" type="Vector2" access="get">
       <summary><![CDATA[Holds the current position of the first touchpoint in this gesture sample.]]></summary>
       <syntax><![CDATA[public Vector2 Position { get; }]]></syntax>
+      <value><![CDATA[A vector representing the current position of the first touchpoint in this gesture sample.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -63,6 +67,7 @@
     <property name="Position2" type="Vector2" access="get">
       <summary><![CDATA[Holds the current position of the the second touchpoint in this gesture sample.]]></summary>
       <syntax><![CDATA[public Vector2 Position2 { get; }]]></syntax>
+      <value><![CDATA[A vector that represents the current position of the the second touchpoint in this gesture sample.]]></value>
       <remarks><![CDATA[This data is only valid for a Pinch gesture, currently the only gesture that tracks more than one finger.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -75,6 +80,7 @@
     <property name="Timestamp" type="TimeSpan" access="get">
       <summary><![CDATA[Holds the starting time for this touch gesture sample.]]></summary>
       <syntax><![CDATA[public TimeSpan Timestamp { get; }]]></syntax>
+      <value><![CDATA[The starting time for this gesture sample.]]></value>
       <remarks><![CDATA[The Timestamp is useful primarily for determining the difference between two gestures. It is not related to the game time.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

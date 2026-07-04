@@ -34,6 +34,7 @@
     <property name="BodyType" type="AvatarBodyType" access="get">
       <summary><![CDATA[Gets the body type of the avatar based on the description data.]]></summary>
       <syntax><![CDATA[public AvatarBodyType BodyType { get; }]]></syntax>
+      <value><![CDATA[Body type of the avatar.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -44,6 +45,7 @@
     <property name="Description" type="byte[]" access="get">
       <summary><![CDATA[Internal description buffer of the avatar, stored as a byte buffer.]]></summary>
       <syntax><![CDATA[public byte[] Description { get; }]]></syntax>
+      <value><![CDATA[Description buffer of the avatar.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -54,6 +56,7 @@
     <property name="Height" type="float" access="get">
       <summary><![CDATA[Height of the avatar, from the feet to the top of the head.]]></summary>
       <syntax><![CDATA[public float Height { get; }]]></syntax>
+      <value><![CDATA[Height, in meters, of the avatar.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -64,6 +67,7 @@
     <property name="IsValid" type="bool" access="get">
       <summary><![CDATA[Determines whether the internal data buffer is valid.]]></summary>
       <syntax><![CDATA[public bool IsValid { get; }]]></syntax>
+      <value><![CDATA[true if the related AvatarDescription object contains a valid avatar description, usable by an AvatarRenderer object; otherwise, false.]]></value>
       <remarks><![CDATA[This property is provided only as a quick verification method for developers that receive an AvatarDescription object from the XNA framework. For example, a value of false could indicate that the user does not have an avatar.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -74,7 +78,7 @@
     </property>
   </properties>
   <methods>
-    <method name="BeginGetFromGamer" returnType="void">
+    <method name="BeginGetFromGamer" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Begins the process of getting a AvatarDescription object for a specified gamertag.]]></summary>
       <overloads>
         <overload signature="BeginGetFromGamer()">
@@ -132,7 +136,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndGetFromGamer" returnType="void">
+    <method name="EndGetFromGamer" returnType="AvatarDescription" isStatic="true">
       <summary><![CDATA[Ends the process of getting an AvatarDescription object for a specified gamertag.]]></summary>
       <overloads>
         <overload signature="EndGetFromGamer()">

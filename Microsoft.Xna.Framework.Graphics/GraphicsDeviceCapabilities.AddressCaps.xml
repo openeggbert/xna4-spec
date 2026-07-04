@@ -17,6 +17,7 @@
     <property name="SupportsBorder" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports the setting of coordinates outside the range [0.0, 1.0] to the border color.]]></summary>
       <syntax><![CDATA[public bool SupportsBorder { get; }]]></syntax>
+      <value><![CDATA[true if the device supports the setting of coordinates outside the range to the border color; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="SupportsClamp" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports the clamping of textures to addresses.]]></summary>
       <syntax><![CDATA[public bool SupportsClamp { get; }]]></syntax>
+      <value><![CDATA[true if the device supports clamping textures to addresses; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +37,7 @@
     <property name="SupportsIndependentUV" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device can separate the texture-addressing modes of the texture's u and v coordinates.]]></summary>
       <syntax><![CDATA[public bool SupportsIndependentUV { get; }]]></syntax>
+      <value><![CDATA[true if the device supports separating the texture-addressing modes of the u and v coordinates; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +47,7 @@
     <property name="SupportsMirror" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether a device can mirror textures to addresses.]]></summary>
       <syntax><![CDATA[public bool SupportsMirror { get; }]]></syntax>
+      <value><![CDATA[true if the device supports mirroring textures to addresses; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +57,7 @@
     <property name="SupportsMirrorOnce" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether a device can take the absolute value of the texture coordinate (thus, mirroring around 0) and then clamp to the maximum value.]]></summary>
       <syntax><![CDATA[public bool SupportsMirrorOnce { get; }]]></syntax>
+      <value><![CDATA[true if the device can mirror once; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,6 +67,7 @@
     <property name="SupportsWrap" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether a device can wrap textures to addresses.]]></summary>
       <syntax><![CDATA[public bool SupportsWrap { get; }]]></syntax>
+      <value><![CDATA[true if the device can wrap textures to addresses; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -70,7 +76,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

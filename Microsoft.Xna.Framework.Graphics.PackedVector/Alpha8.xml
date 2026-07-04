@@ -32,6 +32,7 @@
     <property name="PackedValue" type="byte" access="get;set">
       <summary><![CDATA[Directly gets or sets the packed representation of the value.]]></summary>
       <syntax><![CDATA[public byte PackedValue { get; set; }]]></syntax>
+      <value><![CDATA[The packed representation of the value.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -75,7 +76,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for the current instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -90,7 +91,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToAlpha" returnType="void">
+    <method name="ToAlpha" returnType="float">
       <summary><![CDATA[Expands the packed representation to a System.Single.]]></summary>
       <overloads>
         <overload signature="ToAlpha()">
@@ -105,7 +106,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a string representation of the current instance.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -120,7 +121,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -142,7 +143,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

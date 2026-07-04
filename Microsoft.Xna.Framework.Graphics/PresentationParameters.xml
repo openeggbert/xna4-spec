@@ -28,6 +28,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="AutoDepthStencilFormat" type="DepthFormat" access="get;set">
       <summary><![CDATA[Gets or sets a value specifying the format of the depth-stencil surface that the device will automatically create.]]></summary>
       <syntax><![CDATA[public DepthFormat AutoDepthStencilFormat { get; set; }]]></syntax>
+      <value><![CDATA[The format of the depth-stencil surface that the device will automatically create.]]></value>
       <remarks><![CDATA[This member is ignored unless EnableAutoDepthStencil is true . Warning In cases where the size of the back buffer and depth stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. Using a depth-stencil surface directly affects the size of the back buffer and depth-stencil buffer and may trigger predicated tiling.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -38,6 +39,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="BackBufferCount" type="int" access="get;set">
       <summary><![CDATA[Gets or sets a value specifying how many back buffers to create.]]></summary>
       <syntax><![CDATA[public int BackBufferCount { get; set; }]]></syntax>
+      <value><![CDATA[The number of back buffers to create. Can be 0, 1, 2, or 3. 0 is considered 1.]]></value>
       <remarks><![CDATA[When an instance of this class is returned from a method (for example, the GraphicsDevice constructor), BackBufferCount is set to the number of back buffers that can be created. For that reason, an application can call the method twice and expect the second call to successfully create back buffers. SwapEffect.Copy requires exactly one back buffer.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -48,6 +50,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="BackBufferFormat" type="SurfaceFormat" access="get;set">
       <summary><![CDATA[Gets or sets the format of the back buffer.]]></summary>
       <syntax><![CDATA[public SurfaceFormat BackBufferFormat { get; set; }]]></syntax>
+      <value><![CDATA[The format of the back buffer.]]></value>
       <remarks><![CDATA[For windowed applications, the back-buffer format no longer needs to match the display-mode format because color conversion can now be done by the hardware (if the hardware supports color conversion). The set of possible back-buffer formats is constrained, but the runtime will allow any valid back-buffer format to be presented to any desktop format. (There is the additional requirement that the device be operable in the desktop mode; devices typically do not operate in 8-bits-per-pixel modes.) Full screen applications cannot do color conversion. Warning In cases where the size of the back buffer and depth stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. The format of the back buffer chosen with the BackBufferFormat property directly affects the size of the back buffer and may trigger predicated tiling.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -58,6 +61,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="BackBufferHeight" type="int" access="get;set">
       <summary><![CDATA[Gets or sets a value indicating the height of the new swap chain's back buffer.]]></summary>
       <syntax><![CDATA[public int BackBufferHeight { get; set; }]]></syntax>
+      <value><![CDATA[The height of the back buffer, in pixels.]]></value>
       <remarks><![CDATA[If IsFullScreen is true , BackBufferHeight and BackBufferWidth must equal the width and height of one of the enumerated display modes found through SupportedDisplayModes . If IsFullScreen is false and either of these values is zero, the corresponding dimension of the client area of the DeviceWindowHandle (or the focus window, if DeviceWindowHandle is Zero ) is taken.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -68,6 +72,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="BackBufferWidth" type="int" access="get;set">
       <summary><![CDATA[Gets or sets a value indicating the width of the new swap chain's back buffer.]]></summary>
       <syntax><![CDATA[public int BackBufferWidth { get; set; }]]></syntax>
+      <value><![CDATA[The width of the back buffer, in pixels.]]></value>
       <remarks><![CDATA[If IsFullScreen is true , BackBufferHeight and BackBufferWidth must equal the width and height of one of the enumerated display modes found through SupportedDisplayModes . If IsFullScreen is false and either of these values is zero, the corresponding dimension of the client area of the DeviceWindowHandle (or the focus window, if DeviceWindowHandle is Zero ) is taken.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -78,6 +83,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="Bounds" type="Rectangle" access="get">
       <summary><![CDATA[Gets the size of this resource.]]></summary>
       <syntax><![CDATA[public Rectangle Bounds { get; }]]></syntax>
+      <value><![CDATA[A bounding-box rectangle.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -88,6 +94,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="DepthStencilFormat" type="DepthFormat" access="get;set">
       <summary><![CDATA[Gets or sets the depth stencil data format.]]></summary>
       <syntax><![CDATA[public DepthFormat DepthStencilFormat { get; set; }]]></syntax>
+      <value><![CDATA[The data format.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -98,6 +105,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="DeviceWindowHandle" type="IntPtr" access="get;set">
       <summary><![CDATA[Gets or sets the handle to the device window.]]></summary>
       <syntax><![CDATA[public IntPtr DeviceWindowHandle { get; set; }]]></syntax>
+      <value><![CDATA[The handle to the device window.]]></value>
       <remarks><![CDATA[The device window determines the location and size of the back buffer on screen. This is used by Direct3D when the back buffer contents are copied to the front buffer during Present . For a full screen application, this is a handle to the top window (which is the focus window). For applications that use multiple full screen devices (such as a multimonitor system), exactly one device can use the focus window as the device window. All other devices must have unique device windows. For a windowed-mode application, this handle will be the default target window for Present . If this handle is Zero , the focus window will be taken. Note that the runtime does not attempt to reflect user changes in window size. The back buffer is not implicitly reset when this window is reset. However, the Present method does automatically track window position changes.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -108,6 +116,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="DisplayOrientation" type="DisplayOrientation" access="get;set">
       <summary><![CDATA[Gets or sets the orientation of the display. The default value is DisplayOrientation.Default, which means orientation is determined automatically from your BackBufferWidth and BackBufferHeight.]]></summary>
       <syntax><![CDATA[public DisplayOrientation DisplayOrientation { get; set; }]]></syntax>
+      <value><![CDATA[The orientation of the display.]]></value>
       <remarks><![CDATA[Windows Phone Specific Information Orientation settings apply only to Windows Phone-based games.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -119,6 +128,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="EnableAutoDepthStencil" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets a value indicating whether Direct3D will manage depth buffers for the application.]]></summary>
       <syntax><![CDATA[public bool EnableAutoDepthStencil { get; set; }]]></syntax>
+      <value><![CDATA[true if Direct3D will manage depth buffers for the application; false otherwise.]]></value>
       <remarks><![CDATA[If EnableAutoDepthStencil is true , the device will create a depth-stencil buffer when it is created. The depth-stencil buffer will be automatically set as the render target of the device. When the device is reset, the depth-stencil buffer will be automatically destroyed and recreated in the new size. If EnableAutoDepthStencil is true , then AutoDepthStencilFormat must be a valid depth-stencil format.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -129,6 +139,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="FullScreenRefreshRateInHz" type="int" access="get;set">
       <summary><![CDATA[Gets or sets a value indicating the rate at which the display adapter will refresh the screen.]]></summary>
       <syntax><![CDATA[public int FullScreenRefreshRateInHz { get; set; }]]></syntax>
+      <value><![CDATA[The refresh rate in hertz, or 0 in windowed mode.]]></value>
       <remarks><![CDATA[For full screen mode, the refresh rate must be one of the refresh rates found in SupportedDisplayModes .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -139,6 +150,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="IsFullScreen" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets a value indicating whether the application is in full screen mode.]]></summary>
       <syntax><![CDATA[public bool IsFullScreen { get; set; }]]></syntax>
+      <value><![CDATA[true if the application is running full screen; false if the application is running in a window.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -148,6 +160,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="MultiSampleCount" type="int" access="get;set">
       <summary><![CDATA[Gets or sets a value indicating the number of sample locations during multisampling.]]></summary>
       <syntax><![CDATA[public int MultiSampleCount { get; set; }]]></syntax>
+      <value><![CDATA[The number of sample locations.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -158,6 +171,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="MultiSampleQuality" type="int" access="get;set">
       <summary><![CDATA[Gets or sets a value indicating the multisample quality level.]]></summary>
       <syntax><![CDATA[public int MultiSampleQuality { get; set; }]]></syntax>
+      <value><![CDATA[The multisample quality level. The valid range is from 0 to one less than the value returned by CheckDeviceMultiSampleType.]]></value>
       <remarks><![CDATA[Paired values of render targets or of depth-stencil surfaces and MultiSampleType must match.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -168,6 +182,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="MultiSampleType" type="MultiSampleType" access="get;set">
       <summary><![CDATA[Gets or sets the multisample type.]]></summary>
       <syntax><![CDATA[public MultiSampleType MultiSampleType { get; set; }]]></syntax>
+      <value><![CDATA[The multisample type. Must be MultiSampleType.None unless SwapEffect has been set to SwapEffect.Discard. Multisampling is supported only if SwapEffect is SwapEffect.Discard.]]></value>
       <remarks><![CDATA[Warning In cases where the size of the back buffer and depth stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. The multisampling chosen with the MultiSampleType property directly affects the size of the back buffer and may trigger predicated tiling.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -178,6 +193,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="PresentOptions" type="PresentOptions" access="get;set">
       <summary><![CDATA[Gets or sets miscellaneous presentation flags.]]></summary>
       <syntax><![CDATA[public PresentOptions PresentOptions { get; set; }]]></syntax>
+      <value><![CDATA[Presentation flags.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -187,6 +203,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="PresentationInterval" type="PresentInterval" access="get;set">
       <summary><![CDATA[Gets or sets the maximum rate at which the swap chain's back buffers can be presented to the front buffer.]]></summary>
       <syntax><![CDATA[public PresentInterval PresentationInterval { get; set; }]]></syntax>
+      <value><![CDATA[The maximum rate at which the swap chain's back buffers can be presented to the front buffer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -196,6 +213,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="RenderTargetUsage" type="RenderTargetUsage" access="get;set">
       <summary><![CDATA[Gets or sets render target usage flags.]]></summary>
       <syntax><![CDATA[public RenderTargetUsage RenderTargetUsage { get; set; }]]></syntax>
+      <value><![CDATA[Usage flags for the render target.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -206,6 +224,7 @@ public class PresentationParameters : IDisposable]]></syntax>
     <property name="SwapEffect" type="SwapEffect" access="get;set">
       <summary><![CDATA[Gets or sets the swap effect.]]></summary>
       <syntax><![CDATA[public SwapEffect SwapEffect { get; set; }]]></syntax>
+      <value><![CDATA[The swap effect to use.]]></value>
       <remarks><![CDATA[The runtime will guarantee the implied semantics concerning buffer swap behavior; therefore, if IsFullScreen is false and SwapEffect is set to SwapEffect.Flip , the runtime will create one extra back buffer and copy whichever becomes the front buffer at presentation time. SwapEffect.Copy requires that BackBufferCount be set to 1. SwapEffect.Discard will be enforced in the debug runtime by filling any buffer with noise after it is presented.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -229,7 +248,7 @@ public class PresentationParameters : IDisposable]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Clone" returnType="void">
+    <method name="Clone" returnType="PresentationParameters">
       <summary><![CDATA[Creates a copy of this PresentationParameters object.]]></summary>
       <overloads>
         <overload signature="Clone()">
@@ -291,7 +310,7 @@ public class PresentationParameters : IDisposable]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -306,7 +325,7 @@ public class PresentationParameters : IDisposable]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -321,7 +340,7 @@ public class PresentationParameters : IDisposable]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -343,7 +362,7 @@ public class PresentationParameters : IDisposable]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

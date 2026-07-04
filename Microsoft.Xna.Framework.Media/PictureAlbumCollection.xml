@@ -4,7 +4,8 @@
           name="PictureAlbumCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEnumerable&lt;PictureAlbum&gt;, IEnumerable">
+          interfaces="IEnumerable&lt;PictureAlbum&gt;, IEnumerable"
+          modifier="sealed">
   <summary><![CDATA[A collection of picture albums in the media library.]]></summary>
   <syntax><![CDATA[public sealed class PictureAlbumCollection : IEnumerable<PictureAlbum>, IEnumerable]]></syntax>
   <remarks><![CDATA[The PictureAlbumCollection class provides access to picture albums in the device's media library. Use the PictureAlbum.Albums property to obtain a collection of picture albums that are contained within (that is, children of) a particular picture album. Use the MediaLibrary.RootPictureAlbum property to obtain the root (top-most) picture album, which contains both pictures and other picture albums. The PictureAlbumCollection does not immediately instantiate instances of all picture albums in the collection. Instead, individual PictureAlbum objects are created each time a picture album is accessed through the collection's Item indexer.]]></remarks>
@@ -20,6 +21,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of PictureAlbum objects in the PictureAlbumCollection.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[Number of PictureAlbum objects in this PictureAlbumCollection.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -30,6 +32,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -43,6 +46,7 @@
       <syntax><![CDATA[public PictureAlbum this [
          int index
 ] { get; }]]></syntax>
+      <value><![CDATA[A new PictureAlbum representing the picture album at the specified index in this PictureAlbumCollection.]]></value>
       <remarks><![CDATA[Each call returns a new PictureAlbum instance. PictureAlbum resources such as the picture collection and children picture albums collection are cached in each PictureAlbum instance. Retrieving and maintaining references to multiple instances of the same picture album, and then accessing the picture collection ( PictureAlbum.Pictures ) or children picture albums collection ( PictureAlbum.Albums ) on each of those instances, creates multiple copies of the resources.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -84,7 +88,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="IEnumerator&lt;PictureAlbum&gt;">
       <summary><![CDATA[Returns an enumerator that iterates through the PictureAlbumCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">

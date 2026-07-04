@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="VertexStreamCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Collection of VertexStream objects.]]></summary>
   <syntax><![CDATA[public sealed class VertexStreamCollection]]></syntax>
   <platforms>
@@ -19,6 +20,7 @@
       <syntax><![CDATA[public VertexStream this [
          int index
 ] { get; }]]></syntax>
+      <value><![CDATA[The vertex stream at the requested index.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

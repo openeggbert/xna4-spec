@@ -38,6 +38,7 @@
     <property name="Gamer" type="SignedInGamer" access="get">
       <summary><![CDATA[The signed-in gamer who is accepting the game invitation.]]></summary>
       <syntax><![CDATA[public SignedInGamer Gamer { get; }]]></syntax>
+      <value><![CDATA[The signed-in gamer who is accepting the game invitation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -49,6 +50,7 @@
     <property name="IsCurrentSession" type="bool" access="get">
       <summary><![CDATA[Indicates if the invitation is for the current local session.]]></summary>
       <syntax><![CDATA[public bool IsCurrentSession { get; }]]></syntax>
+      <value><![CDATA[Returns true if the invitation is for the current local session, and false if it is not.]]></value>
       <remarks><![CDATA[If IsCurrentSession is true , indicating that another local gamer has joined the session, call NetworkSession.AddLocalGamer to add more gamers to the session. If IsCurrentSession is false , indicating the invitation is from a session that has not been joined, call NetworkSession.JoinInvited to allow the gamer to join the remote session.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

@@ -28,6 +28,7 @@
     <property name="Components" type="GameComponentCollection" access="get">
       <summary><![CDATA[Gets the collection of GameComponents owned by the game.]]></summary>
       <syntax><![CDATA[public GameComponentCollection Components { get; }]]></syntax>
+      <value><![CDATA[The collection of game GameComponents.]]></value>
       <remarks><![CDATA[Game components provide a modular way of adding functionality to a game. You create a game component by deriving the new component either from the GameComponent class, or, if the component loads and draws graphics content, from the DrawableGameComponent class. You then add game logic and rendering code to the game component by overriding GameComponent.Update , DrawableGameComponent.Draw and GameComponent.Initialize . A game component is registered with a game by passing the component to Game.Components.Add . A registered component will have its draw, update, and initialize methods called from the Game.Initialize , Game.Update , and Game.Draw methods.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -38,6 +39,7 @@
     <property name="Content" type="ContentManager" access="get;set">
       <summary><![CDATA[Gets or sets the current ContentManager.]]></summary>
       <syntax><![CDATA[public ContentManager Content { get; set; }]]></syntax>
+      <value><![CDATA[The current ContentManager.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -48,6 +50,10 @@
     <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the current GraphicsDevice.]]></summary>
       <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[The current GraphicsDevice.]]></value>
+      <exceptions>
+        <exception type="InvalidOperationException"><![CDATA[This property requires a graphics device service in the game service container.]]></exception>
+      </exceptions>
       <remarks><![CDATA[Do not access this property until LoadContent is called.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -59,6 +65,10 @@
     <property name="InactiveSleepTime" type="TimeSpan" access="get;set">
       <summary><![CDATA[Gets or sets the time to sleep when the game is inactive.]]></summary>
       <syntax><![CDATA[public TimeSpan InactiveSleepTime { get; set; }]]></syntax>
+      <value><![CDATA[The time to sleep when the game is inactive.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[The value specified for InactiveSleepTime is not greater than or equal to zero. Specify zero or a positive value.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -68,6 +78,7 @@
     <property name="IsActive" type="bool" access="get">
       <summary><![CDATA[Indicates whether the game is currently the active application.]]></summary>
       <syntax><![CDATA[public bool IsActive { get; }]]></syntax>
+      <value><![CDATA[true if the game is active; false otherwise.]]></value>
       <remarks><![CDATA[On Windows, a game is active if it is not minimized and has the current input focus. On Xbox 360, the game is active if the user is not interacting with the Dashboard.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -78,6 +89,7 @@
     <property name="IsFixedTimeStep" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets a value indicating whether to use fixed time steps.]]></summary>
       <syntax><![CDATA[public bool IsFixedTimeStep { get; set; }]]></syntax>
+      <value><![CDATA[true if using fixed time steps; false otherwise.]]></value>
       <remarks><![CDATA[The default value for IsFixedTimeStep is true . A fixed-step Game tries to call its Update method on the fixed interval specified in TargetElapsedTime . Setting Game.IsFixedTimeStep to true causes a Game to use a fixed-step game loop. Using a fixed step allows game logic to use the update as its basic unit of time and assume that Update will be called at the interval specified. When an update runs slower than expected, Game meets this assumption by calling Update extra times and dropping the frames associated with those updates to catch up. This ensures that Update will have been called the expected number of times when the game loop catches up from a slow down. When using a fixed-step game loop, rates such as the distance a sprite moves can be expressed as game units per Update . This enables you to simply increment the position of the sprite by the sprite's movement rate each Update .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -88,6 +100,7 @@
     <property name="IsMouseVisible" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets a value indicating whether the mouse cursor should be visible.]]></summary>
       <syntax><![CDATA[public bool IsMouseVisible { get; set; }]]></syntax>
+      <value><![CDATA[true if the mouse cursor should be visible; false otherwise.]]></value>
       <remarks><![CDATA[Note This property applies only to Windows development. The Mouse and MouseState objects are not supported on Xbox 360.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -98,6 +111,7 @@
     <property name="LaunchParameters" type="LaunchParameters" access="get">
       <summary><![CDATA[Gets the start up parameters in LaunchParameters.]]></summary>
       <syntax><![CDATA[public LaunchParameters LaunchParameters { get; }]]></syntax>
+      <value><![CDATA[The start up parameters.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -108,6 +122,7 @@
     <property name="Services" type="GameServiceContainer" access="get">
       <summary><![CDATA[Gets the GameServiceContainer holding all the service providers attached to the Game.]]></summary>
       <syntax><![CDATA[public GameServiceContainer Services { get; }]]></syntax>
+      <value><![CDATA[The GameServiceContainer holding all the service providers attached to the Game.]]></value>
       <remarks><![CDATA[Game services are a mechanism for maintaining loose coupling between objects that need to interact with each other. Services work through a mediator—in this case, Game.Services . Service providers register with Game.Services , and service consumers request services from Game.Services . This arrangement allows an object that requires a service to request the service without knowing the name of the service provider. Game services are defined by an interface. A class specifies the services it provides by implementing interfaces and registering the services with Game.Services . A service is registered by calling Game.Services.AddService specifying the type of service being implemented and a reference to the object providing the service. For example, to register an object that provides a service represented by the interface IMyService, you would use the following code. Services.AddService( typeof( IMyService ), myobject ); Once a service is registered, the object providing the service can be retrieved by Game.Services.GetService and specifying the desired service. For example, to retrieve IGraphicsDeviceService , you would use the following code. IGraphicsDeviceService graphicsservice = (IGraphicsDeviceService)Services.GetService( typeof(IGraphicsDeviceService) );]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -118,6 +133,10 @@
     <property name="TargetElapsedTime" type="TimeSpan" access="get;set">
       <summary><![CDATA[Gets or sets the target time between calls to Update when IsFixedTimeStep is true.]]></summary>
       <syntax><![CDATA[public TimeSpan TargetElapsedTime { get; set; }]]></syntax>
+      <value><![CDATA[The target time period for the game loop.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[The value specified for TargetElapsedTime is not greater than zero. Specify a nonzero positive value.]]></exception>
+      </exceptions>
       <remarks><![CDATA[The default value for TargetElapsedTime is 1/60th of a second. A fixed-step Game tries to call its Update method on the fixed interval specified in TargetElapsedTime . Setting Game.IsFixedTimeStep to true causes a Game to use a fixed-step game loop. Using a fixed step allows game logic to use the update as its basic unit of time and assume that Update will be called at the interval specified. When an update runs slower than expected, Game meets this assumption by calling Update extra times and dropping the frames associated with those updates to catch up. This ensures that Update will have been called the expected number of times when the game loop catches up from a slow down. When using a fixed-step game loop, rates such as the distance a sprite moves can be expressed as game units per Update . This enables you to simply increment the position of the sprite by the sprite's movement rate each Update .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -128,6 +147,7 @@
     <property name="Window" type="GameWindow" access="get">
       <summary><![CDATA[Gets the underlying operating system window.]]></summary>
       <syntax><![CDATA[public GameWindow Window { get; }]]></syntax>
+      <value><![CDATA[The underlying operating system window.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -248,6 +268,9 @@
         <overload signature="Exit()">
           <summary><![CDATA[Exits the game.]]></summary>
           <syntax><![CDATA[public void Exit ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The current platform does not allow games to exit.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -410,6 +433,10 @@
         <overload signature="Run()">
           <summary><![CDATA[Call this method to initialize the game, begin running the game loop, and start processing events for the game.]]></summary>
           <syntax><![CDATA[public void Run ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Run has been called multiple times in the same application.]]></exception>
+            <exception type="ArgumentException"><![CDATA[Invalid arguments have been requested for the creation of the graphics device. Invalid back buffer options have been requested: BackBufferCount is not between 0 and 3. BackBufferFormat is not valid. Try SurfaceFormat.Bgr565, SurfaceFormat.Bgr555, SurfaceFormat.Bgra5551, SurfaceFormat.Bgr32, SurfaceFormat.Color, SurfaceFormat.Bgra1010102. The selected BackBufferFormat and IsFullScreen values are not valid for the selected adapter format and device type. The BackBufferWidth and BackBufferHeight values do not correspond to a valid display mode. FullScreenRefreshRateInHz does not match a valid display mode for the specified BackBufferWidth and BackBufferHeight. Invalid PresentationParameters.PresentationInterval or SwapEffect options have been requested: On Xbox 360, PresentationParameters.PresentationInterval has been assigned the invalid value PresentInterval.Four. SwapEffect.Copy has been assigned to the PresentationParameters.SwapEffect property, but BackBufferCount is not 1. When using SwapEffect.Copy, BackBufferCount must be 1. SwapEffect is not one of the following: SwapEffect.Copy, SwapEffect.Discard, or SwapEffect.Flip. Invalid multisampling options have been requested: Multisampling has been enabled, but SwapEffect.Discard has not been specified for the SwapEffect property. SwapEffect.Discard is required when enabling multisampling. The selected MultiSampleType is not compatible with the current BackBufferFormat and IsFullScreen value for the selected adapter. The selected MultiSampleQuality value is invalid for the selected MultiSampleType. Invalid depth stencil options have been requested: AutoDepthStencilFormat is not supported as a depth/stencil format when using the selected adapter BackBufferFormat. PresentOptions has been set to PresentOptions.DiscardDepthStencil, but EnableAutoDepthStencil is not true. Multiple PresentationParameters have been specified and EnableAutoDepthStencil is true, but EnableAutoDepthStencil, BackBufferFormat, BackBufferWidth, and BackBufferHeight are not the same for all adapters. IsFullScreen is true, but: BackBufferWidth and BackBufferHeight are not nonzero. PresentationInterval is not one of the following: PresentInterval.Default, PresentInterval.Immediate, PresentInterval.One, PresentInterval.Two PresentInterval.Three, or PresentInterval.Four. FullScreenRefreshRateInHz is not nonzero. The selected adapter does not support the selected full screen PresentationInterval. IsFullScreen is false, but: PresentationInterval is not one of the following: PresentInterval.Default, PresentInterval.Immediate, or PresentInterval.One. FullScreenRefreshRateInHz is not zero.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method calls the game Initialize and BeginRun methods before it begins the game loop and starts processing events for the game.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>

@@ -16,6 +16,7 @@
     <property name="InputType" type="Object" access="get">
       <summary><![CDATA[Gets the expected object type of the input parameter to IContentProcessor.Process.]]></summary>
       <syntax><![CDATA[public virtual abstract Type InputType { get; }]]></syntax>
+      <value><![CDATA[Object type of the input parameter.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -24,6 +25,7 @@
     <property name="OutputType" type="Object" access="get">
       <summary><![CDATA[Gets the object type returned by IContentProcessor.Process.]]></summary>
       <syntax><![CDATA[public virtual abstract Type OutputType { get; }]]></syntax>
+      <value><![CDATA[Type of object returned by the processor.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -31,7 +33,7 @@
     </property>
   </properties>
   <methods>
-    <method name="Process" returnType="void">
+    <method name="Process" returnType="Object">
       <summary><![CDATA[Processes the specified input data and returns the result.]]></summary>
       <overloads>
         <overload signature="Process()">

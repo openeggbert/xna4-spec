@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="SignedInGamerExtensions" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
-          assembly="Microsoft.Xna.Framework.GamerServices">
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          modifier="static">
   <summary><![CDATA[Provides additional services to Gamer Services for Xbox LIVE.]]></summary>
   <syntax><![CDATA[[ExtensionAttribute]
 public static class SignedInGamerExtensions]]></syntax>
@@ -16,7 +17,7 @@ public static class SignedInGamerExtensions]]></syntax>
   <properties>
   </properties>
   <methods>
-    <method name="AwardAvatarAssets" returnType="void">
+    <method name="AwardAvatarAssets" returnType="void" isStatic="true">
       <summary><![CDATA[Awards an Avatar asset]]></summary>
       <overloads>
         <overload signature="AwardAvatarAssets()">
@@ -37,7 +38,7 @@ public static void AwardAvatarAssets (
         </overload>
       </overloads>
     </method>
-    <method name="BeginAwardAvatarAssets" returnType="void">
+    <method name="BeginAwardAvatarAssets" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Begins the asyncronous process of awarding the specified avatar assets to a signed in gamer.]]></summary>
       <overloads>
         <overload signature="BeginAwardAvatarAssets()">
@@ -63,7 +64,7 @@ public static IAsyncResult BeginAwardAvatarAssets (
         </overload>
       </overloads>
     </method>
-    <method name="EndAwardAvatarAssets" returnType="void">
+    <method name="EndAwardAvatarAssets" returnType="void" isStatic="true">
       <summary><![CDATA[Call this function after the system has finished awarding the avatar asset.]]></summary>
       <overloads>
         <overload signature="EndAwardAvatarAssets()">

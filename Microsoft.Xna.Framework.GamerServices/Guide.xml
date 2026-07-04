@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="Guide" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
-          assembly="Microsoft.Xna.Framework.GamerServices">
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          modifier="static">
   <summary><![CDATA[Provides access to the Guide user interface. This interface contains message boxes, a text entry system, and other common interface elements.]]></summary>
   <syntax><![CDATA[public static class Guide]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="IsScreenSaverEnabled" type="bool" access="get;set" isStatic="true">
       <summary><![CDATA[Gets or sets the current state of the screen saver. This property has no effect for Windows games.]]></summary>
       <syntax><![CDATA[public static bool IsScreenSaverEnabled { get; set; }]]></syntax>
+      <value><![CDATA[true if the screen saver is enabled; false otherwise.]]></value>
       <remarks><![CDATA[The IsScreenSaverEnabled property is a per-game property. Disabling the screen saver for this game does not permanently disable the screen saver. Use this method when displaying cutscenes or during other periods where the gamer could become inactive for a long period of time.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -28,6 +30,7 @@
     <property name="IsTrialMode" type="bool" access="get;set" isStatic="true">
       <summary><![CDATA[Determines whether the game is running currently in limited trial mode.]]></summary>
       <syntax><![CDATA[public static bool IsTrialMode { get; set; }]]></syntax>
+      <value><![CDATA[true if the game is running currently in limited trial mode; false otherwise.]]></value>
       <remarks><![CDATA[Best Practice When a trial game is exiting, you can present a marketplace offer using the Guide.ShowMarketplace method. You can write code that is performed on game exit in the Game.Exit method.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -39,6 +42,10 @@
     <property name="IsVisible" type="bool" access="get;set" isStatic="true">
       <summary><![CDATA[Determines whether a Guide user interface screen is active.]]></summary>
       <syntax><![CDATA[public static bool IsVisible { get; set; }]]></syntax>
+      <value><![CDATA[true if a user interface screen is displayed; false otherwise. It is not possible to bring up another Guide user interface screen, if IsVisible is true.]]></value>
+      <exceptions>
+        <exception type="InvalidOperationException"><![CDATA[The gamer services functionality must be initialized before this property is accessed.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -49,6 +56,7 @@
     <property name="NotificationPosition" type="NotificationPosition" access="get;set" isStatic="true">
       <summary><![CDATA[Determines where notifications appear on the screen.]]></summary>
       <syntax><![CDATA[public static NotificationPosition NotificationPosition { get; set; }]]></syntax>
+      <value><![CDATA[Defines the positioning of the notification message box.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -58,6 +66,7 @@
     <property name="SimulateTrialMode" type="bool" access="get;set" isStatic="true">
       <summary><![CDATA[Allows titles to simulate trial mode restrictions when testing using the Development configuration. Setting this property to true in the game constructor will artificially force IsTrialMode to return true.]]></summary>
       <syntax><![CDATA[public static bool SimulateTrialMode { get; set; }]]></syntax>
+      <value><![CDATA[true to simulate trial mode restrictions in a Development configuration; false otherwise.]]></value>
       <remarks><![CDATA[You can set SimulateTrialMode to false at some later point (perhaps calling the ShowMarketplace API at the same time) to simulate purchasing the full game.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -92,6 +101,10 @@
             <parameter name="usePasswordMode" type="bool"><![CDATA[Specify true to enable password mode, or false to disable it. If the password mode is specified, the characters that the player types are not echoed in the input area.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[title, description, or defaultText is larger than the maximum allowed string length of 260 characters.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[player is not a valid value. On Windows and Windows Phone, the only valid option is PlayerIndex.One.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows 7</platform>
@@ -126,6 +139,9 @@
             <parameter name="state" type="Object"><![CDATA[User-created object uniquely identifying this request.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Either IsInitialized was not called previously, or a Guide user interface screen currently is active.]]></exception>
+          </exceptions>
           <remarks><![CDATA[On Xbox 360, this overload allows any player on the system to respond to the message.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -226,7 +242,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="DelayNotifications" returnType="void">
+    <method name="DelayNotifications" returnType="void" isStatic="true">
       <summary><![CDATA[Delays system notifications for the specified amount of time.]]></summary>
       <overloads>
         <overload signature="DelayNotifications()">
@@ -246,7 +262,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndShowKeyboardInput" returnType="void">
+    <method name="EndShowKeyboardInput" returnType="string" isStatic="true">
       <summary><![CDATA[Ends the display of the keyboard input dialog box.]]></summary>
       <overloads>
         <overload signature="EndShowKeyboardInput()">
@@ -266,7 +282,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndShowMessageBox" returnType="void">
+    <method name="EndShowMessageBox" returnType="Nullable&lt;int&gt;" isStatic="true">
       <summary><![CDATA[Ends the display of a message box.]]></summary>
       <overloads>
         <overload signature="EndShowMessageBox()">
@@ -287,7 +303,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndShowStorageDeviceSelector" returnType="void">
+    <method name="EndShowStorageDeviceSelector" returnType="StorageDevice" isStatic="true">
       <summary><![CDATA[Ends the display of the storage selector user interface.]]></summary>
       <overloads>
         <overload signature="EndShowStorageDeviceSelector()">
@@ -308,19 +324,22 @@
         </overload>
       </overloads>
     </method>
-    <method name="Show" returnType="void">
+    <method name="Show" returnType="void" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Zune.]]></summary>
       <overloads>
         <overload signature="Show()">
           <summary><![CDATA[This method is available only when developing for Zune.]]></summary>
           <syntax><![CDATA[public static void Show ()]]></syntax>
+          <exceptions>
+            <exception type="GuideAlreadyVisibleException"><![CDATA[The Guide is already being displayed on the target device.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Zune</platform>
           </platforms>
         </overload>
       </overloads>
     </method>
-    <method name="ShowComposeMessage" returnType="void">
+    <method name="ShowComposeMessage" returnType="void" isStatic="true">
       <summary><![CDATA[Shows the Compose Message user interface. A gamer uses this user interface to write messages to other gamers.]]></summary>
       <overloads>
         <overload signature="ShowComposeMessage()">
@@ -335,6 +354,10 @@
             <parameter name="text" type="string"><![CDATA[Text of the message.]]></parameter>
             <parameter name="recipients" type="IEnumerable&lt;Gamer&gt;"><![CDATA[Collection of gamers receiving the message. If this is null , the Select Gamertag user interface is displayed.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[For Windows applications, this exception is thrown if player is not PlayerIndex.One.]]></exception>
+            <exception type="ArgumentException"><![CDATA[The message text is null, empty, or exceeds 200 characters. This exception is also thrown if any recipients have a value of null or if there are more than 100 recipients.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Best Practice You can check GamerPrivileges.AllowCommunication to determine if a player is allowed to send and receive communications prior to displaying a menu option that would call this method.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -344,7 +367,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShowFriendRequest" returnType="void">
+    <method name="ShowFriendRequest" returnType="void" isStatic="true">
       <summary><![CDATA[Shows the Friend Request user interface.]]></summary>
       <overloads>
         <overload signature="ShowFriendRequest()">
@@ -365,7 +388,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShowFriends" returnType="void">
+    <method name="ShowFriends" returnType="void" isStatic="true">
       <summary><![CDATA[Shows the Friends user interface.]]></summary>
       <overloads>
         <overload signature="ShowFriends()">
@@ -406,7 +429,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShowGamerCard" returnType="void">
+    <method name="ShowGamerCard" returnType="void" isStatic="true">
       <summary><![CDATA[Shows the Gamer Card user interface.]]></summary>
       <overloads>
         <overload signature="ShowGamerCard()">
@@ -428,7 +451,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShowMarketplace" returnType="void">
+    <method name="ShowMarketplace" returnType="void" isStatic="true">
       <summary><![CDATA[Displays the marketplace user interface.]]></summary>
       <overloads>
         <overload signature="ShowMarketplace()">
@@ -448,7 +471,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShowMessages" returnType="void">
+    <method name="ShowMessages" returnType="void" isStatic="true">
       <summary><![CDATA[Shows the Messages user interface.]]></summary>
       <overloads>
         <overload signature="ShowMessages()">
@@ -467,7 +490,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShowParty" returnType="void">
+    <method name="ShowParty" returnType="void" isStatic="true">
       <summary><![CDATA[Shows the Xbox LIVE Party screen.]]></summary>
       <overloads>
         <overload signature="ShowParty()">
@@ -485,7 +508,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShowPartySessions" returnType="void">
+    <method name="ShowPartySessions" returnType="void" isStatic="true">
       <summary><![CDATA[Shows the Play with Party Member screen.]]></summary>
       <overloads>
         <overload signature="ShowPartySessions()">
@@ -503,7 +526,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShowPlayerReview" returnType="void">
+    <method name="ShowPlayerReview" returnType="void" isStatic="true">
       <summary><![CDATA[Shows the Player Review user interface.]]></summary>
       <overloads>
         <overload signature="ShowPlayerReview()">
@@ -524,7 +547,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShowPlayers" returnType="void">
+    <method name="ShowPlayers" returnType="void" isStatic="true">
       <summary><![CDATA[Shows the Players user interface.]]></summary>
       <overloads>
         <overload signature="ShowPlayers()">
@@ -543,7 +566,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShowSignIn" returnType="void">
+    <method name="ShowSignIn" returnType="void" isStatic="true">
       <summary><![CDATA[Shows the user interface a gamer uses for signing into Xbox LIVE.]]></summary>
       <overloads>
         <overload signature="ShowSignIn()">
@@ -556,6 +579,9 @@
             <parameter name="paneCount" type="int"><![CDATA[Number of panes displayed at sign in. Each pane accepts a single gamer. On Windows, only a single pane can be displayed. On Xbox 360, valid values are 1, 2, and 4.]]></parameter>
             <parameter name="onlineOnly" type="bool"><![CDATA[Determines the profile types being displayed. true if only online profiles are displayed; false otherwise. If is true , local gamers can sign in as guests of a profile currently signed in.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The paneCount argument is invalid. The valid options for this parameter are 1, 2, and 4.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

@@ -4,7 +4,8 @@
           name="LeaderboardReader" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="sealed">
   <summary><![CDATA[Reads data from leaderboards.]]></summary>
   <syntax><![CDATA[public sealed class LeaderboardReader : IDisposable]]></syntax>
   <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
@@ -21,6 +22,7 @@
     <property name="CanPageDown" type="bool" access="get">
       <summary><![CDATA[Provides information about whether there are more leaderboard entries after the current page of entries.]]></summary>
       <syntax><![CDATA[public bool CanPageDown { get; }]]></syntax>
+      <value><![CDATA[true if there is more leaderboard information after this page of entries, false otherwise.]]></value>
       <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -33,6 +35,7 @@
     <property name="CanPageUp" type="bool" access="get">
       <summary><![CDATA[Provides information about whether there are more leaderboard entries before the current page of entries.]]></summary>
       <syntax><![CDATA[public bool CanPageUp { get; }]]></syntax>
+      <value><![CDATA[Returns true if there is more leaderboard information before this page of entries; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -44,6 +47,7 @@
     <property name="Entries" type="ReadOnlyCollection&lt;LeaderboardEntry&gt;" access="get">
       <summary><![CDATA[Gets the collection of leaderboard entries for the leaderboard.]]></summary>
       <syntax><![CDATA[public ReadOnlyCollection<LeaderboardEntry> Entries { get; }]]></syntax>
+      <value><![CDATA[Gets a collection of leaderboard entries for the leaderboard that is currently being read.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -55,6 +59,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Provides information about whether this leaderboard reader is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the leaderboard reader is disposed and no longer usable; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -66,6 +71,7 @@
     <property name="LeaderboardIdentity" type="LeaderboardIdentity" access="get">
       <summary><![CDATA[Provides the identity of the leaderboard.]]></summary>
       <syntax><![CDATA[public LeaderboardIdentity LeaderboardIdentity { get; }]]></syntax>
+      <value><![CDATA[The identity of the leaderboard currently being read.]]></value>
       <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -78,6 +84,7 @@
     <property name="PageStart" type="int" access="get">
       <summary><![CDATA[Gets the index of the leaderboard entry at the start of the current page.]]></summary>
       <syntax><![CDATA[public int PageStart { get; }]]></syntax>
+      <value><![CDATA[The index of the leaderboard entry at the start of the current page. This can be used with the Entries property to get individual leaderboard entries from the collection.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -89,6 +96,7 @@
     <property name="TotalLeaderboardSize" type="int" access="get">
       <summary><![CDATA[Provides information about the total number of entries in the leaderboard.]]></summary>
       <syntax><![CDATA[public int TotalLeaderboardSize { get; }]]></syntax>
+      <value><![CDATA[The total number of entries in the leaderboard that is currently being read.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -99,7 +107,7 @@
     </property>
   </properties>
   <methods>
-    <method name="BeginPageDown" returnType="void">
+    <method name="BeginPageDown" returnType="IAsyncResult">
       <summary><![CDATA[Begins an asynchronous read of the page of leaderboard data after the current page.]]></summary>
       <overloads>
         <overload signature="BeginPageDown()">
@@ -124,7 +132,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="BeginPageUp" returnType="void">
+    <method name="BeginPageUp" returnType="IAsyncResult">
       <summary><![CDATA[Begins an asynchronous read of the page of leaderboard data before the current page.]]></summary>
       <overloads>
         <overload signature="BeginPageUp()">
@@ -295,7 +303,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndRead" returnType="void">
+    <method name="EndRead" returnType="LeaderboardReader" isStatic="true">
       <summary><![CDATA[Checks the result of an asynchronous Read operation.]]></summary>
       <overloads>
         <overload signature="EndRead()">

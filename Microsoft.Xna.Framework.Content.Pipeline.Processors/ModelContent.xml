@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ModelContent" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          modifier="sealed">
   <summary><![CDATA[Stores design-time data for a Model asset.]]></summary>
   <syntax><![CDATA[public sealed class ModelContent]]></syntax>
   <platforms>
@@ -16,6 +17,7 @@
     <property name="Bones" type="ModelBoneContentCollection" access="get">
       <summary><![CDATA[Gets the collection of bones that are referenced by this model.]]></summary>
       <syntax><![CDATA[public ModelBoneContentCollection Bones { get; }]]></syntax>
+      <value><![CDATA[The collection of bones that are referenced by this model.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -24,6 +26,7 @@
     <property name="Meshes" type="ModelMeshContentCollection" access="get">
       <summary><![CDATA[Gets the collection of meshes that are associated with this model.]]></summary>
       <syntax><![CDATA[public ModelMeshContentCollection Meshes { get; }]]></syntax>
+      <value><![CDATA[The collection of meshes that are associated with this model.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -32,6 +35,7 @@
     <property name="Root" type="ModelBoneContent" access="get">
       <summary><![CDATA[Gets the root bone of this model]]></summary>
       <syntax><![CDATA[public ModelBoneContent Root { get; }]]></syntax>
+      <value><![CDATA[The root bone of this model.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -40,6 +44,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Gets a user defined tag object.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[User-defined tag object.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

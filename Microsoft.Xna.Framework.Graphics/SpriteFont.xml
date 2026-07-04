@@ -18,6 +18,7 @@
     <property name="Characters" type="ReadOnlyCollection&lt;char&gt;" access="get">
       <summary><![CDATA[Gets a collection of all the characters that are included in the font.]]></summary>
       <syntax><![CDATA[public ReadOnlyCollection<char> Characters { get; }]]></syntax>
+      <value><![CDATA[The collection of all characters included in this font.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -28,6 +29,7 @@
     <property name="DefaultCharacter" type="Nullable&lt;char&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the default character for the font.]]></summary>
       <syntax><![CDATA[public Nullable<char> DefaultCharacter { get; set; }]]></syntax>
+      <value><![CDATA[The default character for this font.]]></value>
       <remarks><![CDATA[If set to anything other than null, this character will be automatically substituted any time an attempt is made to draw or measure characters that are not in the font. If set to null, missing characters will produce an exception.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -39,6 +41,7 @@
     <property name="LineSpacing" type="int" access="get">
       <summary><![CDATA[Gets the height of a line using these font characters.]]></summary>
       <syntax><![CDATA[public int LineSpacing { get; }]]></syntax>
+      <value><![CDATA[The height of one line, in pixels.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -48,6 +51,7 @@
     <property name="Spacing" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the spacing of the font characters.]]></summary>
       <syntax><![CDATA[public float Spacing { get; set; }]]></syntax>
+      <value><![CDATA[The spacing, in pixels, of the font characters.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -68,6 +72,10 @@
             <parameter name="text" type="StringBuilder"><![CDATA[The string to measure.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: Vector2 The width and height, in pixels, of text, when it is rendered.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[text cannot be null.]]></exception>
+            <exception type="ArgumentException"><![CDATA[There is a character in text that was not imported by the SpriteFont. You must include all the characters in the character regions in the sprite font file. For more information, see How to: Extend the Font Description Processor to Support Additional Characters.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Use a StringBuilder argument in place of a String argument to measure dynamically formatted text.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>

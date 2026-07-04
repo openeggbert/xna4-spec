@@ -21,6 +21,10 @@
       <parameters>
         <parameter name="elements" type="VertexElement"><![CDATA[[ ParamArrayAttribute ] An array of per-vertex elements.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="NotSupportedException"><![CDATA[One or more of the following is true: The vertex stride and the vertex element offset must be multiples of four. The first element does not fit within the specified vertex stride. Duplicate elements. The first and second elements overlap. The profile supports a maximum vertex stride of 255. The profile supports a maximum of 16 simultaneous vertex elements. The profile does not support the format requested.]]></exception>
+        <exception type="OutOfMemoryException"><![CDATA[There is not enough memory to create this resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -35,6 +39,10 @@
         <parameter name="vertexStride" type="Int32"><![CDATA[The number of bytes per element.]]></parameter>
         <parameter name="elements" type="VertexElement"><![CDATA[[ ParamArrayAttribute ] An array of per-vertex elements.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="NotSupportedException"><![CDATA[One or more of the following is true: The vertex stride and the vertex element offset must be multiples of four. The first element does not fit within the specified vertex stride. Duplicate elements. The first and second elements overlap. The profile supports a maximum vertex stride of 255. The profile supports a maximum of 16 simultaneous vertex elements. The profile does not support the format requested.]]></exception>
+        <exception type="OutOfMemoryException"><![CDATA[There is not enough memory to create this resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -49,6 +57,11 @@
         <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The GraphicsDevice associated with the vertex elements.]]></parameter>
         <parameter name="elements" type="VertexElement[]"><![CDATA[An array of vertex elements.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice or elements is null.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[elements does not contain any elements, or is too large for the graphics device.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create this VertexDeclaration resource on the graphics device.]]></exception>
+      </exceptions>
       <remarks><![CDATA[VertexDeclaration objects must be recreated when the device is reset.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -61,6 +74,7 @@
     <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the GraphicsDevice associated with this vertex declaration.]]></summary>
       <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[The GraphicsDevice associated with this vertex declaration.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -70,6 +84,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -79,6 +94,7 @@
     <property name="Name" type="string" access="get;set">
       <summary><![CDATA[Returns the name of this vertex declaration.]]></summary>
       <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <value><![CDATA[The name of this vertex declaration.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -88,6 +104,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Returns the resource tags for this vertex declaration.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[The resource tags for this vertex declaration.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -97,6 +114,7 @@
     <property name="VertexStride" type="int" access="get">
       <summary><![CDATA[The number of bytes from one vertex to the next.]]></summary>
       <syntax><![CDATA[public int VertexStride { get; }]]></syntax>
+      <value><![CDATA[The stride (in bytes).]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -168,7 +186,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -183,7 +201,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexElements" returnType="void">
+    <method name="GetVertexElements" returnType="VertexElement[]">
       <summary><![CDATA[Gets the vertex shader declaration.]]></summary>
       <overloads>
         <overload signature="GetVertexElements()">
@@ -235,7 +253,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -250,7 +268,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -272,7 +290,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

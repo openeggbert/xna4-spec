@@ -33,6 +33,7 @@
     <property name="DrawOrder" type="int" access="get;set">
       <summary><![CDATA[Order in which the component should be drawn, relative to other components that are in the same GameComponentCollection.]]></summary>
       <syntax><![CDATA[public int DrawOrder { get; set; }]]></syntax>
+      <value><![CDATA[Order in which the component should be drawn.]]></value>
       <remarks><![CDATA[This value can be any integer. Components in the GameComponentCollection are drawn in ascending order based on their DrawOrder .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -43,6 +44,7 @@
     <property name="GraphicsDevice" type="Object" access="get">
       <summary><![CDATA[The GraphicsDevice the DrawableGameComponent is associated with.]]></summary>
       <syntax><![CDATA[protected GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[GraphicsDevice the DrawableGameComponent is associated with.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -52,6 +54,7 @@
     <property name="Visible" type="bool" access="get;set">
       <summary><![CDATA[Indicates whether Draw should be called.]]></summary>
       <syntax><![CDATA[public bool Visible { get; set; }]]></syntax>
+      <value><![CDATA[true Draw should be called; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -105,6 +108,9 @@
         <overload signature="Initialize()">
           <summary><![CDATA[Initializes the component. Override this method to load any non-graphics resources and query for any required services.]]></summary>
           <syntax><![CDATA[public override void Initialize ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[There is no IGraphicsDeviceService available in the GameServiceContainer that this DrawableGameComponent is associated with. Usually this means there is no GraphicsDeviceManager associated with the services of a Game.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Game services are a mechanism for maintaining loose coupling between objects that need to interact with each other. Services work through a mediator—in this case, Game.Services . Service providers register with Game.Services , and service consumers request services from Game.Services . This arrangement allows an object that requires a service to request the service without knowing the name of the service provider. Game services are defined by an interface. A class specifies the services it provides by implementing interfaces and registering the services with Game.Services . A service is registered by calling Game.Services.AddService specifying the type of service being implemented and a reference to the object providing the service. For example, to register an object that provides a service represented by the interface IMyService, you would use the following code. Services.AddService( typeof( IMyService ), myobject ); Once a service is registered, the object providing the service can be retrieved by Game.Services.GetService and specifying the desired service. For example, to retrieve IGraphicsDeviceService , you would use the following code. IGraphicsDeviceService graphicsservice = (IGraphicsDeviceService)Services.GetService( typeof(IGraphicsDeviceService) );]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>

@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="FrameworkDispatcher" kind="class"
           namespace="Microsoft.Xna.Framework"
-          assembly="Microsoft.Xna.Framework">
+          assembly="Microsoft.Xna.Framework"
+          modifier="static">
   <summary><![CDATA[Implements the Windows-specific portion of a FrameworkDispatcher class.]]></summary>
   <syntax><![CDATA[public static class FrameworkDispatcher]]></syntax>
   <platforms>
@@ -17,7 +18,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="Update" returnType="void">
+    <method name="Update" returnType="void" isStatic="true">
       <summary><![CDATA[Updates the status of various framework components (such as power state and media) and raises related events. If your game does not use the Game class, you must call this method (the recommendation is once per frame) yourself.]]></summary>
       <overloads>
         <overload signature="Update()">

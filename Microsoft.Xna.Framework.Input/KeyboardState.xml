@@ -32,6 +32,7 @@
       <syntax><![CDATA[public KeyState this [
          Keys key
 ] { get; }]]></syntax>
+      <value><![CDATA[The state of the key specified by key.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -60,7 +61,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -75,7 +76,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPressedKeys" returnType="void">
+    <method name="GetPressedKeys" returnType="Keys[]">
       <summary><![CDATA[Gets an array of values that correspond to the keyboard keys that are currently being pressed.]]></summary>
       <overloads>
         <overload signature="GetPressedKeys()">
@@ -90,7 +91,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="IsKeyDown" returnType="void">
+    <method name="IsKeyDown" returnType="bool">
       <summary><![CDATA[Returns whether a specified key is currently being pressed.]]></summary>
       <overloads>
         <overload signature="IsKeyDown()">
@@ -110,7 +111,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="IsKeyUp" returnType="void">
+    <method name="IsKeyUp" returnType="bool">
       <summary><![CDATA[Returns whether a specified key is currently not pressed.]]></summary>
       <overloads>
         <overload signature="IsKeyUp()">
@@ -130,7 +131,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -152,7 +153,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

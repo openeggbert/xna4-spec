@@ -4,7 +4,8 @@
           name="GeometryContentCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="ChildCollection&lt;MeshContent, GeometryContent&gt;">
+          baseClass="ChildCollection&lt;MeshContent, GeometryContent&gt;"
+          modifier="sealed">
   <summary><![CDATA[Provides methods for maintaining a collection of geometry batches that make up a mesh.]]></summary>
   <syntax><![CDATA[public sealed class GeometryContentCollection : ChildCollection<MeshContent, GeometryContent>]]></syntax>
   <platforms>

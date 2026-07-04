@@ -53,6 +53,7 @@
       <summary><![CDATA[Directly gets or sets the packed representation of the value.]]></summary>
       <syntax><![CDATA[[CLSCompliantAttribute(false)]
 public UInt16 PackedValue { get; set; }]]></syntax>
+      <value><![CDATA[The packed representation of the value.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -96,7 +97,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for the current instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -111,7 +112,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a string representation of the current instance.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -126,7 +127,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToVector4" returnType="void">
+    <method name="ToVector4" returnType="Vector4">
       <summary><![CDATA[Expands the packed representation into a Vector4.]]></summary>
       <overloads>
         <overload signature="ToVector4()">
@@ -141,7 +142,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -163,7 +164,7 @@ public UInt16 PackedValue { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares the current instance of a class to another instance to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

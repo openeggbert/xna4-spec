@@ -25,6 +25,7 @@
     <property name="BuildConfiguration" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the content build configuration name.]]></summary>
       <syntax><![CDATA[public string BuildConfiguration { get; set; }]]></syntax>
+      <value><![CDATA[The content build configuration name.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -33,6 +34,7 @@
     <property name="IntermediateDirectory" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the directory for storing temporary build files.]]></summary>
       <syntax><![CDATA[public string IntermediateDirectory { get; set; }]]></syntax>
+      <value><![CDATA[The directory for storing temporary build files.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -41,6 +43,7 @@
     <property name="OutputDirectory" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the output directory for the final build results.]]></summary>
       <syntax><![CDATA[public string OutputDirectory { get; set; }]]></syntax>
+      <value><![CDATA[The output directory for the final build results.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -49,6 +52,7 @@
     <property name="RootDirectory" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the base path for the entire content build process.]]></summary>
       <syntax><![CDATA[public string RootDirectory { get; set; }]]></syntax>
+      <value><![CDATA[The base path for the entire content build process.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -58,6 +62,7 @@
       <summary><![CDATA[Gets or sets the content build target platform.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public string TargetPlatform { get; set; }]]></syntax>
+      <value><![CDATA[The content build target platform.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -67,6 +72,7 @@ public string TargetPlatform { get; set; }]]></syntax>
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public string TargetProfile { get; set; }]]></syntax>
+      <value><![CDATA[Target graphics profile of the content build. For a list of possible values, see GraphicsProfile Enumeration.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -75,7 +81,7 @@ public string TargetProfile { get; set; }]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Execute" returnType="void">
+    <method name="Execute" returnType="bool">
       <summary><![CDATA[Removes all intermediate and output files that were created by a previous Content Pipeline build operation.]]></summary>
       <overloads>
         <overload signature="Execute()">

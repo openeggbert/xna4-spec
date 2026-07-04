@@ -4,7 +4,8 @@
           name="DeviceStillDrawingException" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ExternalException">
+          baseClass="ExternalException"
+          modifier="sealed">
   <summary><![CDATA[The error that is thrown when the device is still drawing.]]></summary>
   <syntax><![CDATA[[SerializableAttribute]
 public sealed class DeviceStillDrawingException : ExternalException]]></syntax>

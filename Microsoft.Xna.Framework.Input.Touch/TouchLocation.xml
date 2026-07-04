@@ -57,6 +57,7 @@
     <property name="Id" type="int" access="get">
       <summary><![CDATA[Gets the ID of the touch location.]]></summary>
       <syntax><![CDATA[public int Id { get; }]]></syntax>
+      <value><![CDATA[ID of the touch location.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -68,6 +69,7 @@
     <property name="Position" type="Vector2" access="get">
       <summary><![CDATA[Gets the position of the touch location.]]></summary>
       <syntax><![CDATA[public Vector2 Position { get; }]]></syntax>
+      <value><![CDATA[Posiiton, in screen coordinates, of the touch location.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -79,6 +81,7 @@
     <property name="State" type="TouchLocationState" access="get">
       <summary><![CDATA[Gets the state of the touch location.]]></summary>
       <syntax><![CDATA[public TouchLocationState State { get; }]]></syntax>
+      <value><![CDATA[State of the touch location, as a TouchLocationState.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -128,7 +131,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this TouchLocation.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -145,7 +148,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Gets a string representation of the TouchLocation.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -162,7 +165,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TryGetPreviousLocation" returnType="void">
+    <method name="TryGetPreviousLocation" returnType="bool">
       <summary><![CDATA[Attempts to get the previous location of this touch location object.]]></summary>
       <overloads>
         <overload signature="TryGetPreviousLocation()">
@@ -184,7 +187,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two TouchLocation instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -208,7 +211,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two TouchLocation instances are unequal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

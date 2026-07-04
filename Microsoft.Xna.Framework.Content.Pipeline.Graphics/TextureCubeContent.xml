@@ -30,6 +30,9 @@
         <overload signature="Validate()">
           <summary><![CDATA[Verifies that all contents of the cube map are present and correct.]]></summary>
           <syntax><![CDATA[public override void Validate ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidContentException"><![CDATA[The cube map texture is not a valid one.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>

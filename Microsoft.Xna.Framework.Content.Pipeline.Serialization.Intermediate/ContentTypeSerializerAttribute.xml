@@ -4,7 +4,8 @@
           name="ContentTypeSerializerAttribute" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
-          baseClass="Attribute">
+          baseClass="Attribute"
+          modifier="sealed">
   <summary><![CDATA[Identifies type serializer components.]]></summary>
   <syntax><![CDATA[[AttributeUsageAttribute(4)]
 public sealed class ContentTypeSerializerAttribute : Attribute]]></syntax>

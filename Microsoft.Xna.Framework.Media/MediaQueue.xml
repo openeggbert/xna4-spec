@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="MediaQueue" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
-          assembly="Microsoft.Xna.Framework.Media">
+          assembly="Microsoft.Xna.Framework.Media"
+          modifier="sealed">
   <summary><![CDATA[Provides methods and properties to access and control the queue of playing songs.]]></summary>
   <syntax><![CDATA[public sealed class MediaQueue]]></syntax>
   <remarks><![CDATA[MediaQueue provides properties and methods that query and control the queue of playing songs. The ActiveSong property returns the currently playing Song . ActiveSongIndex gets or set the queue index of the currently playing song. Count returns the number of songs in the queue. The Item indexer returns the Song at the specified index in the queue. MediaQueue is a read-only queue of songs. With MediaQueue , you can control which song is playing in the queue, but you cannot add or remove songs from the queue. Either MediaPlayer.Play or the songs already queued up when the game starts determine the songs that are in the queue of playing songs. Note All of the collections, playlists, and queues returned by methods and properties in the Microsoft.Xna.Framework.Media namespace are immutable. You cannot add or remove objects from those collections or playlists. To create a custom 'playlist' of songs, games must maintain their own list of songs to play, and play those songs one at a time by calling MediaPlayer.Play .]]></remarks>
@@ -19,6 +20,7 @@
     <property name="ActiveSong" type="Song" access="get">
       <summary><![CDATA[Gets the current Song in the queue of playing songs.]]></summary>
       <syntax><![CDATA[public Song ActiveSong { get; }]]></syntax>
+      <value><![CDATA[Current Song in the queue of playing songs.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -29,6 +31,7 @@
     <property name="ActiveSongIndex" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the index of the current (active) song in the queue of playing songs.]]></summary>
       <syntax><![CDATA[public int ActiveSongIndex { get; set; }]]></syntax>
+      <value><![CDATA[Index of the current song in the queue of playing songs.]]></value>
       <remarks><![CDATA[Changing the active song index does not alter the current media state (playing, paused, or stopped).]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -40,6 +43,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the count of songs in the MediaQueue.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[Count of songs in this MediaQueue.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -52,6 +56,7 @@
       <syntax><![CDATA[public Song this [
          int index
 ] { get; }]]></syntax>
+      <value><![CDATA[A new Song representing the song at the specified index in this MediaQueue.]]></value>
       <remarks><![CDATA[Each call returns a new Song instance.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

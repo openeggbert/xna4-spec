@@ -45,6 +45,7 @@
     <property name="Length" type="int" access="get">
       <summary><![CDATA[Gets the length of the packet being read.]]></summary>
       <syntax><![CDATA[public int Length { get; }]]></syntax>
+      <value><![CDATA[Length of the packet.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -55,6 +56,7 @@
     <property name="Position" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the current packet read position.]]></summary>
       <syntax><![CDATA[public int Position { get; set; }]]></syntax>
+      <value><![CDATA[Current position of the packet.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -64,7 +66,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ReadColor" returnType="void">
+    <method name="ReadColor" returnType="Color">
       <summary><![CDATA[Reads a Color value.]]></summary>
       <overloads>
         <overload signature="ReadColor()">
@@ -80,7 +82,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadDouble" returnType="void">
+    <method name="ReadDouble" returnType="double">
       <summary><![CDATA[Reads an 8-byte floating point value.]]></summary>
       <overloads>
         <overload signature="ReadDouble()">
@@ -96,7 +98,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadMatrix" returnType="void">
+    <method name="ReadMatrix" returnType="Matrix">
       <summary><![CDATA[Reads a Matrix value.]]></summary>
       <overloads>
         <overload signature="ReadMatrix()">
@@ -112,7 +114,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadQuaternion" returnType="void">
+    <method name="ReadQuaternion" returnType="Quaternion">
       <summary><![CDATA[Reads a Quaternion value.]]></summary>
       <overloads>
         <overload signature="ReadQuaternion()">
@@ -128,7 +130,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadSingle" returnType="void">
+    <method name="ReadSingle" returnType="float">
       <summary><![CDATA[Reads a 4-byte floating point value.]]></summary>
       <overloads>
         <overload signature="ReadSingle()">
@@ -144,7 +146,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadVector2" returnType="void">
+    <method name="ReadVector2" returnType="Vector2">
       <summary><![CDATA[Reads a Vector2 value.]]></summary>
       <overloads>
         <overload signature="ReadVector2()">
@@ -160,7 +162,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadVector3" returnType="void">
+    <method name="ReadVector3" returnType="Vector3">
       <summary><![CDATA[Reads a Vector3 value.]]></summary>
       <overloads>
         <overload signature="ReadVector3()">
@@ -176,7 +178,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadVector4" returnType="void">
+    <method name="ReadVector4" returnType="Vector4">
       <summary><![CDATA[Reads a Vector3 value.]]></summary>
       <overloads>
         <overload signature="ReadVector4()">

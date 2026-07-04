@@ -18,6 +18,7 @@
     <property name="LeftEye" type="AvatarEye" access="get;set">
       <summary><![CDATA[Gets or sets the current texture for the avatar's left eye.]]></summary>
       <syntax><![CDATA[public AvatarEye LeftEye { get; set; }]]></syntax>
+      <value><![CDATA[Texture of the avatar's left eye.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -28,6 +29,7 @@
     <property name="LeftEyebrow" type="AvatarEyebrow" access="get;set">
       <summary><![CDATA[Gets or sets the current texture for the avatar's left eye.]]></summary>
       <syntax><![CDATA[public AvatarEyebrow LeftEyebrow { get; set; }]]></syntax>
+      <value><![CDATA[Texture of the avatar's left eyebrow.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -38,6 +40,7 @@
     <property name="Mouth" type="AvatarMouth" access="get;set">
       <summary><![CDATA[Gets or sets the current texture for the avatar's mouth.]]></summary>
       <syntax><![CDATA[public AvatarMouth Mouth { get; set; }]]></syntax>
+      <value><![CDATA[Texture of the avatar's mouth.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -48,6 +51,7 @@
     <property name="RightEye" type="AvatarEye" access="get;set">
       <summary><![CDATA[Gets or sets the current texture for the avatar's right eye.]]></summary>
       <syntax><![CDATA[public AvatarEye RightEye { get; set; }]]></syntax>
+      <value><![CDATA[Texture of the avatar's right eye.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -58,6 +62,7 @@
     <property name="RightEyebrow" type="AvatarEyebrow" access="get;set">
       <summary><![CDATA[Gets or sets the current texture for the avatar's right eyebrow.]]></summary>
       <syntax><![CDATA[public AvatarEyebrow RightEyebrow { get; set; }]]></syntax>
+      <value><![CDATA[Texture of the avatar's right eyebrow.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

@@ -4,7 +4,8 @@
           name="DynamicSoundEffectInstance" kind="class"
           namespace="Microsoft.Xna.Framework.Audio"
           assembly="Microsoft.Xna.Framework.Audio"
-          baseClass="SoundEffectInstance">
+          baseClass="SoundEffectInstance"
+          modifier="sealed">
   <summary><![CDATA[Provides properties, methods, and events for play back of the audio buffer.]]></summary>
   <syntax><![CDATA[public sealed class DynamicSoundEffectInstance : SoundEffectInstance]]></syntax>
   <platforms>
@@ -25,6 +26,9 @@
         <parameter name="sampleRate" type="int"><![CDATA[Sample rate, in Hertz (Hz), of audio content.]]></parameter>
         <parameter name="channels" type="AudioChannels"><![CDATA[Number of channels in the audio data.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[The value specified for sampleRate is less than 8000 Hz or greater than 48000 Hz. The value specified for channels is something other than mono or stereo.]]></exception>
+      </exceptions>
       <remarks><![CDATA[The sampleRate parameter must between 8000 Hz and 48000 Hz.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -39,6 +43,11 @@
     <property name="IsLooped" type="Object" access="get;set">
       <summary><![CDATA[Indicates whether the audio playback of the DynamicSoundEffectInstance object is looped.]]></summary>
       <syntax><![CDATA[public override bool IsLooped { get; set; }]]></syntax>
+      <value><![CDATA[Always returns false.]]></value>
+      <exceptions>
+        <exception type="ObjectDisposedException"><![CDATA[The exception that is thrown if IsLooped is called after DynamicSoundEffectInstance has been disposed.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[The exception that is thrown when IsLooped is set to true.]]></exception>
+      </exceptions>
       <remarks><![CDATA[IsLooped will always return false because DynamicSoundEffectInstance instances cannot be looped.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -51,6 +60,10 @@
     <property name="PendingBufferCount" type="int" access="get">
       <summary><![CDATA[Returns the number of audio buffers in the queue awaiting playback.]]></summary>
       <syntax><![CDATA[public int PendingBufferCount { get; }]]></syntax>
+      <value><![CDATA[The number of audio buffers in the queue.]]></value>
+      <exceptions>
+        <exception type="ObjectDisposedException"><![CDATA[The exception that is thrown if PendingBufferCount is called after DynamicSoundEffectInstance has been disposed.]]></exception>
+      </exceptions>
       <remarks><![CDATA[DynamicSoundEffectInstance will update the pending buffer count as each buffer finishes playback. This means the first buffer in the queue is the currently-playing audio buffer.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -62,7 +75,7 @@
     </property>
   </properties>
   <methods>
-    <method name="GetSampleDuration" returnType="void">
+    <method name="GetSampleDuration" returnType="TimeSpan">
       <summary><![CDATA[Returns the sample duration based on the specified size of the audio buffer.]]></summary>
       <overloads>
         <overload signature="GetSampleDuration()">
@@ -74,6 +87,9 @@
             <parameter name="sizeInBytes" type="int"><![CDATA[Size, in bytes, of the audio data.]]></parameter>
           </parameters>
           <returns><![CDATA[TimeSpan object that represents the calculated sample duration.]]></returns>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[The exception that is thrown if GetSampleDuration is called after DynamicSoundEffectInstance has been disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows 7</platform>
@@ -84,7 +100,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetSampleSizeInBytes" returnType="void">
+    <method name="GetSampleSizeInBytes" returnType="int">
       <summary><![CDATA[Returns the size of the audio buffer required to contain audio samples based on the specified duration.]]></summary>
       <overloads>
         <overload signature="GetSampleSizeInBytes()">
@@ -96,6 +112,9 @@
             <parameter name="duration" type="TimeSpan"><![CDATA[TimeSpan object that contains the duration of the audio sample.]]></parameter>
           </parameters>
           <returns><![CDATA[Size, in bytes, of the audio buffer.]]></returns>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[The exception that is thrown if GetSampleSizeInBytes is called after DynamicSoundEffectInstance has been disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows 7</platform>
@@ -112,6 +131,11 @@
         <overload signature="Play()">
           <summary><![CDATA[Begins or resumes audio playback.]]></summary>
           <syntax><![CDATA[public override void Play ()]]></syntax>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[Exception thrown if Play is called after DynamicSoundEffectInstance is disposed.]]></exception>
+            <exception type="InstancePlayLimitException"><![CDATA[Exception thrown when the amount of concurrent DynamicSoundEffectInstance sounds playing exceeds the platform limit.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Exception thrown when playback of the DynamicSoundEffectInstance fails.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Play has no effect if the DynamicSoundEffectInstance object is playing currently. Each platform has limits on the number of sounds playing simultaneously. A InstancePlayLimitException exception is thrown if this limit is exceeded. The following table shows the limits for simultaneous playing sounds based on platform. Platform Number of sounds that can play simultaneously Windows Phone 64 Xbox 360 300 Windows No limit Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. Play throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -138,6 +162,11 @@
             <parameter name="offset" type="int"><![CDATA[Offset, in bytes, to the starting position of the data.]]></parameter>
             <parameter name="count" type="int"><![CDATA[Amount, in bytes, of data sent.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[The exception thrown if SubmitBuffer is called after DynamicSoundEffectInstance is disposed.]]></exception>
+            <exception type="ArgumentException"><![CDATA[The exception thrown when buffer is null, is zero length, or does not satisfy format alignment restrictions. This exception also is thrown if offset is less than zero or is greater than or equal to the size of the buffer.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[The exception thrown when count is less than or equal to zero, or if the sum of offset and count exceeds the size of the buffer.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The buffer must conform to the format alignment; for example, the buffer length must be aligned to the block alignment value for the audio format type. For PCM audio format, the block alignment is calculated as BlockAlignment = BytesPerSample * AudioChannels. DynamicSoundEffectInstance supports only PCM 16-bit mono or stereo data. Therefore, BlockAlignment = 2 * AudioChannels (Channels is 2 for mono content and 4 for stereo). The offset and count values also must conform to the format alignment restrictions. For information about an audio format using XNA Game Studio, see Audio API Developers Guide . Silverlight applications must ensure that FrameworkDispatcher.Update is called regularly in order for "fire and forget" sounds to work correctly. SubmitBuffer throws an InvalidOperationException if FrameworkDispatcher.Update has not been called at least once before making this call. For more information, see Enable XNA Framework Events in Windows Phone Applications .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>

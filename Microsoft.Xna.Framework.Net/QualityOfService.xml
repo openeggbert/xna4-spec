@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="QualityOfService" kind="class"
           namespace="Microsoft.Xna.Framework.Net"
-          assembly="Microsoft.Xna.Framework.Net">
+          assembly="Microsoft.Xna.Framework.Net"
+          modifier="sealed">
   <summary><![CDATA[Describes the quality of the network connection between this machine and the host of a multiplayer session that was discovered with a matchmaking query.]]></summary>
   <syntax><![CDATA[public sealed class QualityOfService]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="AverageRoundtripTime" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the average (median) round trip time of all the network packets that were sent during the quality of service measurement process.]]></summary>
       <syntax><![CDATA[public TimeSpan AverageRoundtripTime { get; }]]></syntax>
+      <value><![CDATA[The average (median) round trip time of all the network packets that were sent during the quality of service measurement process. Will return zero if the query has not yet completed. You can check if the query is complete using IsAvailable.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -28,6 +30,7 @@
     <property name="BytesPerSecondDownstream" type="int" access="get">
       <summary><![CDATA[Gets an estimate of the available downstream network bandwidth from the session host to this machine, measured in bytes per second.]]></summary>
       <syntax><![CDATA[public int BytesPerSecondDownstream { get; }]]></syntax>
+      <value><![CDATA[An estimate of the available downstream network bandwidth from the session host to this machine, measured in bytes per second. Will return zero if the query has not yet completed. You can check if the query is complete using IsAvailable.]]></value>
       <remarks><![CDATA[The bandwidth algorithm used for BytesPerSecondUpstream and BytesPerSecondDownstream gives only an estimate of bandwidth and there is a possibility it may not accurately reflect the true bandwidth provided by the player's internet service provider. To avoid inaccurately representing the true bandwidth to the player, games should avoid displaying BytesPerSecondUpstream and BytesPerSecondDownstream . Even though the results of these properties provide only rough estimates, the values can be useful for relative comparisons or host stack ranking. For instance, these properties might be used for choosing a host gaming machine with a bandwidth twice as large as another gaming machine or sorting a list based on bandwidth.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -39,6 +42,7 @@
     <property name="BytesPerSecondUpstream" type="int" access="get">
       <summary><![CDATA[Gets an estimate of the available upstream network bandwidth from this machine to the session host, measured in bytes per second.]]></summary>
       <syntax><![CDATA[public int BytesPerSecondUpstream { get; }]]></syntax>
+      <value><![CDATA[An estimate of the available upstream network bandwidth from this machine to the session host, measured in bytes per second. Will return zero if the query has not yet completed. You can check if the query is complete using IsAvailable.]]></value>
       <remarks><![CDATA[The bandwidth algorithm used for BytesPerSecondUpstream and BytesPerSecondDownstream gives only an estimate of bandwidth and there is a possibility it may not accurately reflect the true bandwidth provided by the player's internet service provider. To avoid inaccurately representing the true bandwidth to the player, games should avoid displaying BytesPerSecondUpstream and BytesPerSecondDownstream . Even though the results of these properties provide only rough estimates, the values can be useful for relative comparisons or host stack ranking. For instance, these properties might be used for choosing a host gaming machine with a bandwidth twice as large as another gaming machine or sorting a list based on bandwidth.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -50,6 +54,7 @@
     <property name="IsAvailable" type="bool" access="get">
       <summary><![CDATA[Checks whether this quality of service operation has completed.]]></summary>
       <syntax><![CDATA[public bool IsAvailable { get; }]]></syntax>
+      <value><![CDATA[true if quality of service data is available; false otherwise.]]></value>
       <remarks><![CDATA[Matchmaking search results are returned before the quality of service probing has finished, so as to avoid an excessive delay before you can display the list of sessions to the user, but the quality of service checks continue in the background even after the search results are available. Initially the IsAvailable property will be set to false , and all the other properties will be zero, but after the probing finishes this will become true and the other properties will be filled in with some actual data.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -61,6 +66,7 @@
     <property name="MinimumRoundtripTime" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the minimum round trip time of any network packet that was sent during the quality of service measurement process.]]></summary>
       <syntax><![CDATA[public TimeSpan MinimumRoundtripTime { get; }]]></syntax>
+      <value><![CDATA[The minimum round trip time of any network packet that was sent during the quality of service measurement process. Will return zero if the query has not yet completed. You can check if the query is complete using IsAvailable.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

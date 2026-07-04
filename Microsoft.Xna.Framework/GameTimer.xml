@@ -4,7 +4,8 @@
           name="GameTimer" kind="class"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="sealed">
   <summary><![CDATA[This class is available only when developing for Windows Phone.]]></summary>
   <syntax><![CDATA[public sealed class GameTimer : IDisposable]]></syntax>
   <platforms>
@@ -23,6 +24,7 @@
     <property name="DrawOrder" type="int" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows Phone.]]></summary>
       <syntax><![CDATA[public int DrawOrder { get; set; }]]></syntax>
+      <value><![CDATA[The draw action sort order.]]></value>
       <remarks><![CDATA[DrawOrder indicates the order in which Draw events will be called in when more than one timer triggers the event at the same time. Events with lower DrawOrder values will occur before events with higher values.]]></remarks>
       <platforms>
         <platform>Windows Phone</platform>
@@ -31,6 +33,7 @@
     <property name="FrameActionOrder" type="int" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows Phone.]]></summary>
       <syntax><![CDATA[public int FrameActionOrder { get; set; }]]></syntax>
+      <value><![CDATA[The frame action sort order.]]></value>
       <remarks><![CDATA[FrameActionOrder indicates the order in which FrameAction events will be called in when more than one timer triggers the event at the same time. Events with lower FrameActionOrder values will occur before events with higher values.]]></remarks>
       <platforms>
         <platform>Windows Phone</platform>
@@ -39,6 +42,7 @@
     <property name="UpdateInterval" type="TimeSpan" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows Phone.]]></summary>
       <syntax><![CDATA[public TimeSpan UpdateInterval { get; set; }]]></syntax>
+      <value><![CDATA[The interval at which the Update event is invoked for this GameTimer. If set to TimeSpan.Zero, the Update method is invoked at a variable time step.]]></value>
       <remarks><![CDATA[If you explicitly set the UpdateInterval , take care not to set it to be too short; if the Update method consistently runs longer than the time interval set by UpdateInterval , game performance will suffer as a result.]]></remarks>
       <platforms>
         <platform>Windows Phone</platform>
@@ -47,6 +51,7 @@
     <property name="UpdateOrder" type="int" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows Phone.]]></summary>
       <syntax><![CDATA[public int UpdateOrder { get; set; }]]></syntax>
+      <value><![CDATA[The update action sort order.]]></value>
       <remarks><![CDATA[UpdateOrder indicates the order in which Update events will be called in when more than one timer triggers the event at the same time. Events with lower UpdateOrder values will occur before events with higher values.]]></remarks>
       <platforms>
         <platform>Windows Phone</platform>
@@ -66,7 +71,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ResetElapsedTime" returnType="void">
+    <method name="ResetElapsedTime" returnType="void" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
       <overloads>
         <overload signature="ResetElapsedTime()">
@@ -102,7 +107,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="SuppressFrame" returnType="void">
+    <method name="SuppressFrame" returnType="void" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows Phone.]]></summary>
       <overloads>
         <overload signature="SuppressFrame()">

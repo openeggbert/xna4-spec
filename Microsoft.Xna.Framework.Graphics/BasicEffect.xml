@@ -74,6 +74,7 @@
     <property name="Alpha" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the alpha this effect material.]]></summary>
       <syntax><![CDATA[public float Alpha { get; set; }]]></syntax>
+      <value><![CDATA[The alpha of this effect material.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -83,6 +84,7 @@
     <property name="AmbientLightColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the ambient light color of this effect.]]></summary>
       <syntax><![CDATA[public Vector3 AmbientLightColor { get; set; }]]></syntax>
+      <value><![CDATA[The ambient light color of this effect. Valid values are between 0 and 1.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -92,6 +94,7 @@
     <property name="DiffuseColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the diffuse color of this effect material. Value takes 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <value><![CDATA[The diffuse color of this effect material. Valid values are between 0 and 1.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -101,6 +104,7 @@
     <property name="DirectionalLight0" type="BasicDirectionalLight" access="get">
       <summary><![CDATA[Gets the first directional light for this effect.]]></summary>
       <syntax><![CDATA[public BasicDirectionalLight DirectionalLight0 { get; }]]></syntax>
+      <value><![CDATA[A directional light for this effect.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -110,6 +114,7 @@
     <property name="DirectionalLight1" type="BasicDirectionalLight" access="get">
       <summary><![CDATA[Gets the second directional light for this effect.]]></summary>
       <syntax><![CDATA[public BasicDirectionalLight DirectionalLight1 { get; }]]></syntax>
+      <value><![CDATA[A directional light for this effect.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -119,6 +124,7 @@
     <property name="DirectionalLight2" type="BasicDirectionalLight" access="get">
       <summary><![CDATA[Gets the third directional light for this effect.]]></summary>
       <syntax><![CDATA[public BasicDirectionalLight DirectionalLight2 { get; }]]></syntax>
+      <value><![CDATA[A directional light for this effect.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -128,6 +134,7 @@
     <property name="EmissiveColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the emissive color of the effect material.]]></summary>
       <syntax><![CDATA[public Vector3 EmissiveColor { get; set; }]]></syntax>
+      <value><![CDATA[The emissive color of the effect material. Valid values are between 0 and 1.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -137,6 +144,7 @@
     <property name="FogColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the fog color for this effect.]]></summary>
       <syntax><![CDATA[public Vector3 FogColor { get; set; }]]></syntax>
+      <value><![CDATA[The fog color for this effect.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -146,6 +154,7 @@
     <property name="FogEnabled" type="bool" access="get;set">
       <summary><![CDATA[Enables fog for this effect.]]></summary>
       <syntax><![CDATA[public bool FogEnabled { get; set; }]]></syntax>
+      <value><![CDATA[true to enable fog; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -155,6 +164,7 @@
     <property name="FogEnd" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the ending distance of fog.]]></summary>
       <syntax><![CDATA[public float FogEnd { get; set; }]]></syntax>
+      <value><![CDATA[Fog end distance specified as a positive value.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -164,6 +174,7 @@
     <property name="FogStart" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the fog start distance.]]></summary>
       <syntax><![CDATA[public float FogStart { get; set; }]]></syntax>
+      <value><![CDATA[Fog start distance specified as a positive value.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -173,6 +184,7 @@
     <property name="LightingEnabled" type="bool" access="get;set">
       <summary><![CDATA[Enables lighting for this effect.]]></summary>
       <syntax><![CDATA[public bool LightingEnabled { get; set; }]]></syntax>
+      <value><![CDATA[true to enable lighting; false otherwise.]]></value>
       <remarks><![CDATA[The lighting for BasicEffect is per-vertex and uses three directional lights: DirectionalLight0 , DirectionalLight1 , and DirectionalLight2 .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -183,6 +195,7 @@
     <property name="PreferPerPixelLighting" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets a value indicating that per-pixel lighting should be used if it is available for the current adapter. Per-pixel lighting is available if a graphics adapter supports Pixel Shader Model 2.0.]]></summary>
       <syntax><![CDATA[public bool PreferPerPixelLighting { get; set; }]]></syntax>
+      <value><![CDATA[true to use per-pixel lighting if it is available; false to disable per-pixel lighting. The default value is true. When PreferPerPixelLighting is true, if the graphics adapter does not support a minimum of Pixel Shader Model 2.0, BasicEffect will automatically fall-back to per-vertex lighting. When PreferPerPixelLighting is false, per-vertex lighting is used regardless of whether per-pixel lighting is supported by the graphics adapter.]]></value>
       <remarks><![CDATA[There are two common types of real-time lighting used in games. Per-vertex lighting is where lighting contributions are determined at each vertex and then the results are interpolated across the triangle. Depending on how tessellated the mesh is, this can result in severe artifacts. Per-pixel lighting interpolates the per-vertex normal across the triangle, but calculates the contribution at each pixel, which results in much smoother lighting, particularly when a specular highlight falls between vertices.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -193,6 +206,7 @@
     <property name="Projection" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the projection matrix.]]></summary>
       <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <value><![CDATA[The projection matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -202,6 +216,7 @@
     <property name="SpecularColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the specular color of this effect material.]]></summary>
       <syntax><![CDATA[public Vector3 SpecularColor { get; set; }]]></syntax>
+      <value><![CDATA[The specular color of this effect material. Valid values are between 0 and 1.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -211,6 +226,7 @@
     <property name="SpecularPower" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the specular power of this effect material.]]></summary>
       <syntax><![CDATA[public float SpecularPower { get; set; }]]></syntax>
+      <value><![CDATA[The specular power of this effect material.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -220,6 +236,7 @@
     <property name="Texture" type="Texture2D" access="get;set">
       <summary><![CDATA[Gets or sets a texture to be applied by this effect.]]></summary>
       <syntax><![CDATA[public Texture2D Texture { get; set; }]]></syntax>
+      <value><![CDATA[Texture to be applied by this effect.]]></value>
       <remarks><![CDATA[If the TextureFilter sampler state is not set, the default filter for BasicEffect is TextureFilter.Linear .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -230,6 +247,7 @@
     <property name="TextureEnabled" type="bool" access="get;set">
       <summary><![CDATA[Enables textures for this effect.]]></summary>
       <syntax><![CDATA[public bool TextureEnabled { get; set; }]]></syntax>
+      <value><![CDATA[true to enable textures; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -239,6 +257,7 @@
     <property name="VertexColorEnabled" type="bool" access="get;set">
       <summary><![CDATA[Enables use vertex colors for this effect.]]></summary>
       <syntax><![CDATA[public bool VertexColorEnabled { get; set; }]]></syntax>
+      <value><![CDATA[true to enable vertex colors; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -248,6 +267,7 @@
     <property name="View" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the view matrix.]]></summary>
       <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <value><![CDATA[The view matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -257,6 +277,7 @@
     <property name="World" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the world matrix.]]></summary>
       <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <value><![CDATA[The world matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -265,7 +286,7 @@
     </property>
   </properties>
   <methods>
-    <method name="Clone" returnType="void">
+    <method name="Clone" returnType="Effect">
       <summary><![CDATA[Create a copy of this object.]]></summary>
       <overloads>
         <overload signature="Clone()">

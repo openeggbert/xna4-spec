@@ -17,6 +17,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Specifies the friendly name of this category.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[Friendly name of this category.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -56,7 +57,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -138,7 +139,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a String representation of this AudioCategory.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -154,7 +155,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified AudioCategory instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -174,7 +175,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified AudioCategory instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

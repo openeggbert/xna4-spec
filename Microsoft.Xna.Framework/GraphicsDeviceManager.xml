@@ -22,6 +22,10 @@
       <parameters>
         <parameter name="game" type="Game"><![CDATA[Game the GraphicsDeviceManager should be associated with.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[The game parameter is null.]]></exception>
+        <exception type="ArgumentException"><![CDATA[A graphics device manager has already been added to Services and registered as the graphics device manager for the application. The graphics device manager cannot be changed once it is set.]]></exception>
+      </exceptions>
       <remarks><![CDATA[This constructor adds this GraphicsDeviceManager to the collection of game services that have been implicitly registered by adding them to the Game.Services property. Warning Although this constructor requires an instance of Game , if the application does not otherwise require an instance of Game it is often better to implement a the IGraphicsDeviceService and IGraphicsDeviceManager interfaces to provide the same services that would be provided by the GraphicsDeviceManager . Custom behavior of the GraphicsDeviceManager can be achieved by deriving a class from GraphicsDeviceManager . For example, to allow only widescreen devices in full-screen mode the RankDevices method could be overridden to drop non-widescreen devices (see How to: Restrict Graphics Devices to Widescreen Aspect Ratios in Full Screen ). Or, if you are creating a 2D game, you might want to create a graphics device without a depth buffer. By adding an event handler for the PreparingDeviceSettings event to the GraphicsDeviceManager , you can control the PresentationParameters properties associated with the graphics device. In the example below, the event handler is named graphics_Settings_NoDepthBuffer . graphics = new GraphicsDeviceManager( this ); graphics.PreparingDeviceSettings += new EventHandler&lt;PreparingDeviceSettingsEventArgs&gt;( graphics_Settings_NoDepthBuffer ); To ensure that no depth buffer is created, your event handler can set the EnableAutoDepthStencil property of the graphic device's PresentationParameters to false , as shown below. void graphics_Settings_NoDepthBuffer( object sender, PreparingDeviceSettingsEventArgs e ) { e.GraphicsDeviceInformation.PresentationParameters.EnableAutoDepthStencil = false; }]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -34,6 +38,7 @@
     <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the GraphicsDevice associated with the GraphicsDeviceManager.]]></summary>
       <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[The GraphicsDevice associated with the GraphicsDeviceManager.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -43,6 +48,7 @@
     <property name="GraphicsProfile" type="GraphicsProfile" access="get;set">
       <summary><![CDATA[Gets the graphics profile, which determines the graphics feature set.]]></summary>
       <syntax><![CDATA[public GraphicsProfile GraphicsProfile { get; set; }]]></syntax>
+      <value><![CDATA[The graphics profile.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -53,6 +59,7 @@
     <property name="IsFullScreen" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets a value that indicates whether the device should start in full-screen mode.]]></summary>
       <syntax><![CDATA[public bool IsFullScreen { get; set; }]]></syntax>
+      <value><![CDATA[Value that indicates whether the device should start in full-screen mode.]]></value>
       <remarks><![CDATA[If no devices are present that support full screen, or the underlying host supports only full screen, this value may be ignored. This value has no effect on Xbox 360.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -63,6 +70,10 @@
     <property name="MinimumPixelShaderProfile" type="ShaderProfile" access="get;set">
       <summary><![CDATA[Gets or sets the minimum pixel shader version required by the GraphicsDeviceManager.]]></summary>
       <syntax><![CDATA[public ShaderProfile MinimumPixelShaderProfile { get; set; }]]></syntax>
+      <value><![CDATA[The minimum pixel shader version required by the GraphicsDeviceManager.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[MinimumPixelShaderProfile is not a valid pixel shader profile. Use one of the following: ShaderProfile.PS_1_1 ShaderProfile.PS_1_2 ShaderProfile.PS_1_3 ShaderProfile.PS_1_4 ShaderProfile.PS_2_0 ShaderProfile.PS_2_A ShaderProfile.PS_2_B ShaderProfile.PS_2_SW ShaderProfile.PS_3_0 ShaderProfile.XPS_3_0]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -72,6 +83,10 @@
     <property name="MinimumVertexShaderProfile" type="ShaderProfile" access="get;set">
       <summary><![CDATA[Gets or sets the minimum vertex shader version required by the GraphicsDeviceManager.]]></summary>
       <syntax><![CDATA[public ShaderProfile MinimumVertexShaderProfile { get; set; }]]></syntax>
+      <value><![CDATA[The minimum vertex shader version required by the GraphicsDeviceManager.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[MinimumVertexShaderProfile is not a valid vertex shader profile. Use one of the following: ShaderProfile.VS_1_1 ShaderProfile.VS_2_0 ShaderProfile.VS_2_A ShaderProfile.VS_2_SW ShaderProfile.VS_3_0 ShaderProfile.XVS_3_0]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -81,6 +96,7 @@
     <property name="PreferMultiSampling" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets a value that indicates whether to enable a multisampled back buffer.]]></summary>
       <syntax><![CDATA[public bool PreferMultiSampling { get; set; }]]></syntax>
+      <value><![CDATA[Value indicating whether multisample is enabled on the back buffer.]]></value>
       <remarks><![CDATA[PreferMultiSampling is ignored if no hardware is available that supports multisample.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -91,6 +107,10 @@
     <property name="PreferredBackBufferFormat" type="SurfaceFormat" access="get;set">
       <summary><![CDATA[Gets or sets the format of the back buffer.]]></summary>
       <syntax><![CDATA[public SurfaceFormat PreferredBackBufferFormat { get; set; }]]></syntax>
+      <value><![CDATA[The format of the back buffer.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[The BackBufferFormat requested is not valid. Use one of the following: SurfaceFormat.Bgr565 SurfaceFormat.Bgr555 SurfaceFormat.Bgra5551 SurfaceFormat.Bgr32 SurfaceFormat.Color SurfaceFormat.Bgra1010102]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -100,6 +120,10 @@
     <property name="PreferredBackBufferHeight" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the preferred back-buffer height.]]></summary>
       <syntax><![CDATA[public int PreferredBackBufferHeight { get; set; }]]></syntax>
+      <value><![CDATA[The preferred back-buffer height.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[BackBufferHeight is not greater than zero.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -109,6 +133,10 @@
     <property name="PreferredBackBufferWidth" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the preferred back-buffer width.]]></summary>
       <syntax><![CDATA[public int PreferredBackBufferWidth { get; set; }]]></syntax>
+      <value><![CDATA[The preferred back-buffer width.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[BackBufferWidth is not greater than zero.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -118,6 +146,10 @@
     <property name="PreferredDepthStencilFormat" type="DepthFormat" access="get;set">
       <summary><![CDATA[Gets or sets the format of the depth stencil.]]></summary>
       <syntax><![CDATA[public DepthFormat PreferredDepthStencilFormat { get; set; }]]></syntax>
+      <value><![CDATA[The format of the depth stencil.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[The DepthStencilFormat requested is an invalid format. Use one of the following: DepthFormat.Depth32 DepthFormat.Depth15Stencil1 DepthFormat.Depth24Stencil8 DepthFormat.Depth24 DepthFormat.Depth24Stencil4 DepthFormat.Depth16 DepthFormat.Depth24Stencil8Single]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -127,6 +159,7 @@
     <property name="SupportedOrientations" type="DisplayOrientation" access="get;set">
       <summary><![CDATA[Gets or sets the display orientations that are available if automatic rotation and scaling is enabled.]]></summary>
       <syntax><![CDATA[public DisplayOrientation SupportedOrientations { get; set; }]]></syntax>
+      <value><![CDATA[The supported display orientations.]]></value>
       <remarks><![CDATA[Windows Phone Specific Information Orientation settings apply only to Windows Phone-based games. Call ApplyChanges to apply this change if you are setting this property outside of the game constructor.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -139,6 +172,7 @@
     <property name="SynchronizeWithVerticalRetrace" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets a value that indicates whether to sync to the vertical trace (vsync) when presenting the back buffer.]]></summary>
       <syntax><![CDATA[public bool SynchronizeWithVerticalRetrace { get; set; }]]></syntax>
+      <value><![CDATA[Value that indicates whether to sync to the vertical trace (vsync) when presenting the back buffer.]]></value>
       <remarks><![CDATA[This value is honored (when possible) in full screen and windowed modes.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -154,6 +188,11 @@
         <overload signature="ApplyChanges()">
           <summary><![CDATA[Applies any changes to device-related properties, changing the graphics device as necessary.]]></summary>
           <syntax><![CDATA[public void ApplyChanges ()]]></syntax>
+          <exceptions>
+            <exception type="NoSuitableGraphicsDeviceException"><![CDATA[One of the following conditions has occurred: Could not find a Direct3D device that has a Direct3D9-level driver and supports a minimum of Pixel Shader Model 1.1. Could not find a Direct3D device compatible with the current device preferences. The process of ranking devices removed all compatible devices. Direct3D hardware acceleration is not available or has been disabled. Verify that a Direct3D-enabled graphics device is installed, and check the display properties to verify that Hardware acceleration is set to Full. Remote Desktop is in use. Direct3D is not available when you are using Remote Desktop.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[This graphics device manager has not been added to Services and registered as the graphics device manager for the application. Device settings cannot be changed or committed unless the device has been registered.]]></exception>
+            <exception type="ArgumentException"><![CDATA[Invalid arguments have been requested for the creation of the graphics device. Invalid back buffer options have been requested: BackBufferCount is not between 0 and 3. BackBufferFormat is not valid. Try SurfaceFormat.Bgr565, SurfaceFormat.Bgr555, SurfaceFormat.Bgra5551, SurfaceFormat.Bgr32, SurfaceFormat.Color, SurfaceFormat.Bgra1010102. The selected BackBufferFormat and IsFullScreen values are not valid for the selected adapter format and device type. The BackBufferWidth and BackBufferHeight values do not correspond to a valid display mode. FullScreenRefreshRateInHz does not match a valid display mode for the specified BackBufferWidth and BackBufferHeight. Invalid PresentationParameters.PresentationInterval or SwapEffect options have been requested: On Xbox 360, PresentationParameters.PresentationInterval has been assigned the invalid value PresentInterval.Four. SwapEffect.Copy has been assigned to the PresentationParameters.SwapEffect property, but BackBufferCount is not 1. When using SwapEffect.Copy, BackBufferCount must be 1. SwapEffect is not one of the following: SwapEffect.Copy, SwapEffect.Discard, or SwapEffect.Flip. Invalid multisampling options have been requested: Multisampling has been enabled, but SwapEffect.Discard has not been specified for the SwapEffect property. SwapEffect.Discard is required when enabling multisampling. The selected MultiSampleType is not compatible with the current BackBufferFormat and the IsFullScreen value for the selected adapter. The selected MultiSampleQuality value is invalid for the selected MultiSampleType. Invalid depth stencil options have been requested: AutoDepthStencilFormat is not supported as a depth/stencil format when using the selected adapter BackBufferFormat. PresentOptions has been set to PresentOptions.DiscardDepthStencil, but EnableAutoDepthStencil is not true. Multiple PresentationParameters have been specified and EnableAutoDepthStencil is true, but EnableAutoDepthStencil, BackBufferFormat, BackBufferWidth, and BackBufferHeight are not the same for all adapters. IsFullScreen is true, but: BackBufferWidth and BackBufferHeight are not nonzero. PresentationInterval is not one of the following: PresentInterval.Default, PresentInterval.Immediate, PresentInterval.One, PresentInterval.Two PresentInterval.Three, or PresentInterval.Four. FullScreenRefreshRateInHz is not nonzero. The selected adapter does not support the selected full screen PresentationInterval. IsFullScreen is false, but: PresentationInterval is not one of the following: PresentInterval.Default, PresentInterval.Immediate, or PresentInterval.One. FullScreenRefreshRateInHz is not zero.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -352,6 +391,11 @@
         <overload signature="ToggleFullScreen()">
           <summary><![CDATA[Toggles between full screen and windowed mode.]]></summary>
           <syntax><![CDATA[public void ToggleFullScreen ()]]></syntax>
+          <exceptions>
+            <exception type="NoSuitableGraphicsDeviceException"><![CDATA[One of the following conditions has occurred: Could not find a Direct3D device that has a Direct3D9-level driver and supports a minimum of Pixel Shader Model 1.1. Could not find a Direct3D device compatible with the current device preferences. The process of ranking devices removed all compatible devices. Direct3D hardware acceleration is not available or has been disabled. Verify that a Direct3D-enabled graphics device is installed, and check the display properties to verify that Hardware acceleration is set to Full. Remote Desktop is in use. Direct3D is not available when you are using Remote Desktop.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[This graphics device manager has not been added to Services and registered as the graphics device manager for the application. Device settings cannot be changed or committed unless the device has been registered.]]></exception>
+            <exception type="ArgumentException"><![CDATA[Full-screen mode is not compatible with the current back buffer settings: The selected BackBufferFormat and IsFullScreen values are not valid for the selected adapter format and device type. FullScreenRefreshRateInHz does not match a valid display mode for the specified BackBufferWidth and BackBufferHeight. The selected MultiSampleType is not compatible with the current BackBufferFormat and the IsFullScreen value for the selected adapter. IsFullScreen is true, but: BackBufferWidth and BackBufferHeight are not nonzero. PresentationInterval is not one of the following: PresentInterval.Default, PresentInterval.Immediate, PresentInterval.One, PresentInterval.Two PresentInterval.Three, or PresentInterval.Four. FullScreenRefreshRateInHz is not nonzero. The selected adapter does not support the selected full screen PresentationInterval. IsFullScreen is false, but: PresentationInterval is not one of the following: PresentInterval.Default, PresentInterval.Immediate, or PresentInterval.One. FullScreenRefreshRateInHz is not zero.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method has no effect on the Xbox 360.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>

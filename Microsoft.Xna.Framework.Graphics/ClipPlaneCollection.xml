@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ClipPlaneCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Manipulates a collection of ClipPlane objects.]]></summary>
   <syntax><![CDATA[public sealed class ClipPlaneCollection]]></syntax>
   <platforms>
@@ -19,6 +20,10 @@
       <syntax><![CDATA[public ClipPlane this [
          int index
 ] { get; }]]></syntax>
+      <value><![CDATA[The ClipPlane object at index index.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[index was out of range.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ContentTypeSerializer" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
+          modifier="abstract">
   <summary><![CDATA[Provides methods for serializing and deserializing a specific managed type.]]></summary>
   <syntax><![CDATA[public abstract class ContentTypeSerializer]]></syntax>
   <platforms>
@@ -65,6 +66,7 @@
     <property name="CanDeserializeIntoExistingObject" type="Object" access="get">
       <summary><![CDATA[Gets a value indicating whether this component may load data into an existing object or if it must it construct a new instance of the object before loading the data.]]></summary>
       <syntax><![CDATA[public virtual bool CanDeserializeIntoExistingObject { get; }]]></syntax>
+      <value><![CDATA[true if this component can load data into an existing object; false if a new instance of the object must be constructed.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -73,6 +75,7 @@
     <property name="TargetType" type="Type" access="get">
       <summary><![CDATA[Gets the type handled by this serializer component.]]></summary>
       <syntax><![CDATA[public Type TargetType { get; }]]></syntax>
+      <value><![CDATA[The type handled by this serializer component.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -81,6 +84,7 @@
     <property name="XmlTypeName" type="string" access="get">
       <summary><![CDATA[Gets a short-form XML name for the target type, or null if there is none.]]></summary>
       <syntax><![CDATA[public string XmlTypeName { get; }]]></syntax>
+      <value><![CDATA[A short-form XML name for the target type, or null if there is none.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

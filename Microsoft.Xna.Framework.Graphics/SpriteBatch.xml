@@ -21,6 +21,9 @@
       <parameters>
         <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device where sprites will be drawn.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -32,6 +35,7 @@
     <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the graphics device associated with this SpriteBatch.]]></summary>
       <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[The graphics device associated with this SpriteBatch.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -41,6 +45,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -50,6 +55,7 @@
     <property name="Name" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the name of this sprite batch.]]></summary>
       <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <value><![CDATA[The name of this sprite batch.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -59,6 +65,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Gets or sets an object that uniquely identifies this sprite batch.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[An object that uniquely identifies this sprite batch.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -90,6 +97,9 @@
             <parameter name="effect" type="Effect"><![CDATA[Effect state options.]]></parameter>
             <parameter name="transformMatrix" type="Matrix"><![CDATA[Transformation matrix for scale, rotate, translate options.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin has been called before calling End after the last call to Begin. Begin cannot be called again until End has been successfully called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -111,6 +121,9 @@
             <parameter name="depthStencilState" type="DepthStencilState"><![CDATA[Depth and stencil options.]]></parameter>
             <parameter name="rasterizerState" type="RasterizerState"><![CDATA[Rasterization options.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin has been called before calling End after the last call to Begin. Begin cannot be called again until End has been successfully called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -145,6 +158,9 @@
           <parameters>
             <parameter name="blendMode" type="SpriteBlendMode"><![CDATA[Blending options to use when rendering.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin has been called before calling End after the last call to Begin. Begin cannot be called again until End has been successfully called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End . Begin sets the following render states: CullMode DepthBufferEnable AlphaBlendEnable AlphaTestEnable AlphaBlendOperation SourceBlend DestinationBlend SeparateAlphaBlendEnabled AlphaFunction ReferenceAlpha Begin sets the following sampler states: AddressU AddressV MagFilter MinFilter MipFilter MipMapLevelOfDetailBias MaxMipLevel This version of Begin sets SpriteSortMode to Deferred , and SaveStateMode to None . When SaveStateMode is set to None , the caller must reset the render and sampler states if they are used elsewhere.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -162,6 +178,9 @@
             <parameter name="sortMode" type="SpriteSortMode"><![CDATA[Sprite drawing order.]]></parameter>
             <parameter name="blendState" type="BlendState"><![CDATA[Blending options.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin has been called before calling End after the last call to Begin. Begin cannot be called again until End has been successfully called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -170,6 +189,9 @@
         <overload signature="Begin()">
           <summary><![CDATA[Prepares the graphics device for drawing sprites.]]></summary>
           <syntax><![CDATA[public void Begin ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin has been called before calling End after the last call to Begin. Begin cannot be called again until End has been successfully called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End . Begin sets the following render states: CullMode DepthBufferEnable AlphaBlendEnable AlphaTestEnable AlphaBlendOperation SourceBlend DestinationBlend SeparateAlphaBlendEnabled AlphaFunction ReferenceAlpha Begin sets the following sampler states: AddressU AddressV MagFilter MinFilter MipFilter MipMapLevelOfDetailBias MaxMipLevel This version of Begin sets SpriteBlendMode to AlphaBlend , SpriteSortMode to Deferred , and SaveStateMode to None . When SaveStateMode is set to None , the caller must reset the render and sampler states if they are used elsewhere.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -189,6 +211,9 @@
             <parameter name="sortMode" type="SpriteSortMode"><![CDATA[Sorting options to use when rendering.]]></parameter>
             <parameter name="stateMode" type="SaveStateMode"><![CDATA[Rendering state options.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin has been called before calling End after the last call to Begin. Begin cannot be called again until End has been successfully called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End . Begin sets the following render states: CullMode DepthBufferEnable AlphaBlendEnable AlphaTestEnable AlphaBlendOperation SourceBlend DestinationBlend SeparateAlphaBlendEnabled AlphaFunction ReferenceAlpha Begin sets the following sampler states: AddressU AddressV MagFilter MinFilter MipFilter MipMapLevelOfDetailBias MaxMipLevel If Begin is called with SaveStateMode set to None , the caller must reset these states must be reset if they are used elsewhere. Calling Begin with SaveStateMode set to SaveState will reset these values properly, but performance may be adversely affected.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -214,6 +239,9 @@
             <parameter name="rasterizerState" type="RasterizerState"><![CDATA[Rasterization options.]]></parameter>
             <parameter name="effect" type="Effect"><![CDATA[Effect state options.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin has been called before calling End after the last call to Begin. Begin cannot be called again until End has been successfully called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method must be called before any calls to Draw . When all the sprites have been drawn, call End .]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -264,6 +292,10 @@
             <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle specifying, in screen coordinates, where the sprite will be drawn. If this rectangle is not the same size as sourcerectangle , the sprite is scaled to fit.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before Draw can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -295,6 +327,10 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply before rendering.]]></parameter>
             <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before Draw can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -314,6 +350,10 @@
             <parameter name="destinationRectangle" type="Rectangle"><![CDATA[A rectangle that specifies (in screen coordinates) the destination for drawing the sprite.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before you can call Draw.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -333,6 +373,10 @@
             <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before you can call Draw.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -360,6 +404,10 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
             <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before Draw can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -381,6 +429,10 @@
             <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[&lt; Rectangle &gt; A rectangle that specifies (in texels) the source texels from a texture. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before you can call Draw.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -400,6 +452,10 @@
             <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before Draw can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -431,6 +487,10 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Effects to apply.]]></parameter>
             <parameter name="layerDepth" type="Single"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before you can call Draw.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -460,6 +520,10 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Effects to apply.]]></parameter>
             <parameter name="layerDepth" type="Single"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before you can call Draw.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -479,6 +543,10 @@
             <parameter name="sourceRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[A rectangle specifying, in texels, which section of the rectangle to draw. Use null to draw the entire texture.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before Draw can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -498,6 +566,10 @@
             <parameter name="position" type="Vector2"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before you can call Draw.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -525,6 +597,10 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Effects to apply.]]></parameter>
             <parameter name="layerDepth" type="Single"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before you can call Draw.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before making any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End . If you are texture wrapping with a Reach profile or texture wrapping on Windows Phone, the texture must have power of 2 dimensions.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -542,6 +618,10 @@
             <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the sprite will be drawn.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color channel modulation to use. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before Draw can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -573,6 +653,10 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
             <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[texture is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[Draw was called, but Begin has not yet been called. Begin must be called successfully before Draw can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Before any calls to Draw , you must call Begin . Once all calls to Draw are complete, call End .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -599,6 +683,10 @@
             <parameter name="position" type="Vector2"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[One or more of the following is true: spriteFont is null text is null]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[DrawString was called, but Begin has not yet been called. Begin must be called successfully before you can call DrawString.]]></exception>
+          </exceptions>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -628,6 +716,10 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Effects to apply.]]></parameter>
             <parameter name="layerDepth" type="Single"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[One or more of the following is true: spriteFont is null text is null]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[DrawString was called, but Begin has not yet been called. Begin must be called successfully before you can call DrawString.]]></exception>
+          </exceptions>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -647,6 +739,11 @@
             <parameter name="position" type="Vector2"><![CDATA[The location, in screen coordinates, where the text will be drawn.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The desired color of the text.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[There is a character in text that was not imported by the SpriteFont. You must include all the characters in the character regions in the sprite font file. For more information, see How to: Extend the Font Description Processor to Support Additional Characters.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[spriteFont or text is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[DrawString was called, but Begin has not yet been called. Begin must be called successfully before DrawString can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -678,6 +775,10 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Effects to apply.]]></parameter>
             <parameter name="layerDepth" type="Single"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[One or more of the following is true: spriteFont is null text is null]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[DrawString was called, but Begin has not yet been called. Begin must be called successfully before you can call DrawString.]]></exception>
+          </exceptions>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -707,6 +808,10 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Effects to apply.]]></parameter>
             <parameter name="layerDepth" type="Single"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[One or more of the following is true: spriteFont is null text is null]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[DrawString was called, but Begin has not yet been called. Begin must be called successfully before you can call DrawString.]]></exception>
+          </exceptions>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -726,6 +831,10 @@
             <parameter name="position" type="Vector2"><![CDATA[The location (in screen coordinates) to draw the sprite.]]></parameter>
             <parameter name="color" type="Color"><![CDATA[The color to tint a sprite. Use Color.White for full color with no tinting.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[One or more of the following is true: spriteFont is null text is null]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[DrawString was called, but Begin has not yet been called. Begin must be called successfully before you can call DrawString.]]></exception>
+          </exceptions>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -755,6 +864,10 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Effects to apply.]]></parameter>
             <parameter name="layerDepth" type="Single"><![CDATA[The depth of a layer. By default, 0 represents the front layer and 1 represents a back layer. Use SpriteSortMode if you want sprites to be sorted during drawing.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[One or more of the following is true: spriteFont is null text is null]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[DrawString was called, but Begin has not yet been called. Begin must be called successfully before you can call DrawString.]]></exception>
+          </exceptions>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -784,6 +897,11 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
             <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[There is a character in text that was not imported by the SpriteFont. You must include all the characters in the character regions in the sprite font file. For more information, see How to: Extend the Font Description Processor to Support Additional Characters.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[spriteFont or text is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[DrawString was called, but Begin has not yet been called. Begin must be called successfully before DrawString can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -815,6 +933,11 @@
             <parameter name="effects" type="SpriteEffects"><![CDATA[Rotations to apply prior to rendering.]]></parameter>
             <parameter name="layerDepth" type="float"><![CDATA[The sorting depth of the sprite, between 0 (front) and 1 (back).]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[There is a character in text that was not imported by the SpriteFont. You must include all the characters in the character regions in the sprite font file. For more information, see How to: Extend the Font Description Processor to Support Additional Characters.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[spriteFont or text is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[DrawString was called, but Begin has not yet been called. Begin must be called successfully before DrawString can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[SpriteFont objects are loaded from the Content Manager. See the SpriteFont class for more information. Before any calls to DrawString , you must call Begin . Once all calls to DrawString are complete, call End . Use a newline character (\n) to draw more than one line of text.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -830,6 +953,9 @@
         <overload signature="End()">
           <summary><![CDATA[Flushes the sprite batch and restores the device state to how it was before Begin was called.]]></summary>
           <syntax><![CDATA[public void End ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[End was called, but Begin has not yet been called. Begin must be called successfully before End can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Call End after all calls to Draw are complete.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>

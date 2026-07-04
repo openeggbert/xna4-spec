@@ -36,6 +36,7 @@
     <property name="NewHost" type="NetworkGamer" access="get">
       <summary><![CDATA[Gets the new host of the session.]]></summary>
       <syntax><![CDATA[public NetworkGamer NewHost { get; }]]></syntax>
+      <value><![CDATA[The player who is the new host of the multiplayer session.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -46,6 +47,7 @@
     <property name="OldHost" type="NetworkGamer" access="get">
       <summary><![CDATA[Gets the player who was the previous session host.]]></summary>
       <syntax><![CDATA[public NetworkGamer OldHost { get; }]]></syntax>
+      <value><![CDATA[The player who was the previous session host.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

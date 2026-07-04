@@ -4,7 +4,8 @@
           name="NoMicrophoneConnectedException" kind="class"
           namespace="Microsoft.Xna.Framework.Audio"
           assembly="Microsoft.Xna.Framework.Audio"
-          baseClass="Exception">
+          baseClass="Exception"
+          modifier="sealed">
   <summary><![CDATA[The exception that is thrown when Microphone API calls are made on a disconnected microphone.]]></summary>
   <syntax><![CDATA[public sealed class NoMicrophoneConnectedException : Exception]]></syntax>
   <platforms>

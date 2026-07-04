@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ModelMesh" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Represents a mesh that is part of a Model.]]></summary>
   <syntax><![CDATA[public sealed class ModelMesh]]></syntax>
   <platforms>
@@ -17,6 +18,7 @@
     <property name="BoundingSphere" type="BoundingSphere" access="get">
       <summary><![CDATA[Gets the BoundingSphere that contains this mesh.]]></summary>
       <syntax><![CDATA[public BoundingSphere BoundingSphere { get; }]]></syntax>
+      <value><![CDATA[The BoundingSphere that contains this mesh.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +28,7 @@
     <property name="Effects" type="ModelEffectCollection" access="get">
       <summary><![CDATA[Gets a collection of effects associated with this mesh.]]></summary>
       <syntax><![CDATA[public ModelEffectCollection Effects { get; }]]></syntax>
+      <value><![CDATA[A collection of effects associated with this mesh.]]></value>
       <remarks><![CDATA[ModelMesh.Effects is a shortcut for iterating over the MeshParts property of the ModelMesh and looking up the ModelMeshPart.Effect property of each ModelMeshPart . ModelMesh.Effects is a collection of all the Effect properties of the for the MeshParts of this ModelMesh . Each ModelMeshPart has a single Effect which is a reference to one of the Effects of the parent ModelMesh property. By updating all the effects of the ModelMesh all of the effects of each ModelMeshPart are updated as well.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -36,6 +39,7 @@
     <property name="IndexBuffer" type="IndexBuffer" access="get">
       <summary><![CDATA[Gets the index buffer for this mesh.]]></summary>
       <syntax><![CDATA[public IndexBuffer IndexBuffer { get; }]]></syntax>
+      <value><![CDATA[The index buffer for this mesh.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -45,6 +49,7 @@
     <property name="MeshParts" type="ModelMeshPartCollection" access="get">
       <summary><![CDATA[Gets the ModelMeshPart objects that make up this mesh. Each part of a mesh is composed of a set of primitives that share the same material.]]></summary>
       <syntax><![CDATA[public ModelMeshPartCollection MeshParts { get; }]]></syntax>
+      <value><![CDATA[The ModelMeshPart objects that make up this mesh.]]></value>
       <remarks><![CDATA[It is not necessary to use this class directly. In advanced rendering scenarios, it is possible to draw using MeshParts properties in combination with the vertex and index buffers on ModelMesh . However, in most cases, ModelMesh.Draw will be sufficient.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -55,6 +60,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of this mesh.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of this mesh.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -64,6 +70,7 @@
     <property name="ParentBone" type="ModelBone" access="get">
       <summary><![CDATA[Gets the parent bone for this mesh. The parent bone of a mesh contains a transformation matrix that describes how the mesh is located relative to any parent meshes in a model.]]></summary>
       <syntax><![CDATA[public ModelBone ParentBone { get; }]]></syntax>
+      <value><![CDATA[The parent bone for this mesh.]]></value>
       <remarks><![CDATA[An array of transformation matrices for the meshes of any model can be obtained by calling CopyAbsoluteBoneTransformsTo or CopyBoneTransformsTo . The resulting array contains the transforms that describe how each ModelMesh is located relative to one another in the Model . The transformation matrix that should be applied to each ModelMesh can be obtained using the index of the ParentBone to retrieve a transformation matrix from this collection. For a demonstration of how to use the transforms for the parent bones of a model mesh to set the position of the mesh parts, please see How to: Render a Model .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -74,6 +81,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Gets or sets an object identifying this mesh.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[An object identifying this mesh.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -83,6 +91,7 @@
     <property name="VertexBuffer" type="VertexBuffer" access="get">
       <summary><![CDATA[Gets the vertex buffer used to render this mesh.]]></summary>
       <syntax><![CDATA[public VertexBuffer VertexBuffer { get; }]]></syntax>
+      <value><![CDATA[The vertex buffer used to render this mesh.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -102,6 +111,9 @@
           <parameters>
             <parameter name="saveStateMode" type="SaveStateMode"><![CDATA[The save state options to pass to each Effect .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Effect is a null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -111,6 +123,9 @@
         <overload signature="Draw()">
           <summary><![CDATA[Draws all the ModelMeshPart objects in this mesh, using their current Effect settings.]]></summary>
           <syntax><![CDATA[public void Draw ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Effect is a null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

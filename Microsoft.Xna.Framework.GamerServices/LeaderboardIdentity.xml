@@ -20,6 +20,7 @@
     <property name="GameMode" type="int" access="get;set">
       <summary><![CDATA[Provides access to the game mode for this leaderboard identity.]]></summary>
       <syntax><![CDATA[public int GameMode { get; set; }]]></syntax>
+      <value><![CDATA[The game mode for this leaderboard identity.]]></value>
       <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -32,6 +33,7 @@
     <property name="Key" type="string" access="get;set">
       <summary><![CDATA[The key string associated with this leaderboard identity.]]></summary>
       <syntax><![CDATA[public string Key { get; set; }]]></syntax>
+      <value><![CDATA[A string that represents the leaderboard identity key.]]></value>
       <remarks><![CDATA[Warning This class and all related methods and properties only retrieve a calculated result for titles approved to access Xbox LIVE Services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, the properties in this class will not return a calculated result, and related methods will report a NotSupportedException .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ContentTypeWriter" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
+          modifier="abstract">
   <summary><![CDATA[Provides methods and properties for compiling a specific managed type into a binary format.]]></summary>
   <syntax><![CDATA[public abstract class ContentTypeWriter]]></syntax>
   <platforms>
@@ -37,6 +38,7 @@
     <property name="CanDeserializeIntoExistingObject" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual bool CanDeserializeIntoExistingObject { get; }]]></syntax>
+      <value><![CDATA[true if the object can be deserialized into; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -46,6 +48,7 @@
     <property name="TargetType" type="Type" access="get">
       <summary><![CDATA[Gets the type handled by this compiler component.]]></summary>
       <syntax><![CDATA[public Type TargetType { get; }]]></syntax>
+      <value><![CDATA[The type handled by this compiler component.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -54,6 +57,7 @@
     <property name="TypeVersion" type="Object" access="get">
       <summary><![CDATA[Gets a format version number for this type.]]></summary>
       <syntax><![CDATA[public virtual int TypeVersion { get; }]]></syntax>
+      <value><![CDATA[A format version number for this type.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -61,7 +65,7 @@
     </property>
   </properties>
   <methods>
-    <method name="GetRuntimeReader" returnType="void">
+    <method name="GetRuntimeReader" returnType="string">
       <summary><![CDATA[Gets the assembly qualified name of the runtime loader for this type.]]></summary>
       <overloads>
         <overload signature="GetRuntimeReader()">
@@ -80,7 +84,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetRuntimeType" returnType="void">
+    <method name="GetRuntimeType" returnType="string">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="GetRuntimeType()">

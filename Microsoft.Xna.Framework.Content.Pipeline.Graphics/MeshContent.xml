@@ -26,6 +26,7 @@
     <property name="Geometry" type="GeometryContentCollection" access="get">
       <summary><![CDATA[Gets the list of geometry batches for the mesh.]]></summary>
       <syntax><![CDATA[public GeometryContentCollection Geometry { get; }]]></syntax>
+      <value><![CDATA[Collection of geometry batches.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -34,6 +35,7 @@
     <property name="Positions" type="PositionCollection" access="get">
       <summary><![CDATA[Gets the list of vertex position values.]]></summary>
       <syntax><![CDATA[public PositionCollection Positions { get; }]]></syntax>
+      <value><![CDATA[Collection of vertex positions.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

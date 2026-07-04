@@ -17,6 +17,7 @@
     <property name="SupportsAlphaGouraudBlend" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device can support an alpha component for Gouraud-blended transparency.]]></summary>
       <syntax><![CDATA[public bool SupportsAlphaGouraudBlend { get; }]]></syntax>
+      <value><![CDATA[true if can support an alpha component for Gouraud-blended transparency; false otherwise.]]></value>
       <remarks><![CDATA[In this mode, the alpha color component of a primitive is provided at vertices and interpolated across a face along with the other color components.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -27,6 +28,7 @@
     <property name="SupportsColorGouraudRgb" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device can support colored Gouraud shading.]]></summary>
       <syntax><![CDATA[public bool SupportsColorGouraudRgb { get; }]]></syntax>
+      <value><![CDATA[true if the device can support colored Gouraud shading; false otherwise.]]></value>
       <remarks><![CDATA[In this mode, the per-vertex color components (red, green, and blue) are interpolated across a triangle face.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -37,6 +39,7 @@
     <property name="SupportsFogGouraud" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device can support fog in the Gouraud shading mode.]]></summary>
       <syntax><![CDATA[public bool SupportsFogGouraud { get; }]]></syntax>
+      <value><![CDATA[true if the device can support fog in the Gouraud shading mode; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -46,6 +49,7 @@
     <property name="SupportsSpecularGouraudRgb" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports Gouraud shading of specular highlights.]]></summary>
       <syntax><![CDATA[public bool SupportsSpecularGouraudRgb { get; }]]></syntax>
+      <value><![CDATA[true if the device supports Gouraud shading of specular highlights; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -54,7 +58,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

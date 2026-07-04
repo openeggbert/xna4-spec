@@ -4,7 +4,8 @@
           name="ExternalReference" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
-          baseClass="ContentItem">
+          baseClass="ContentItem"
+          modifier="sealed">
   <summary><![CDATA[Specifies external references to a data file for the content item.]]></summary>
   <syntax><![CDATA[public sealed class ExternalReference<T> : ContentItem]]></syntax>
   <platforms>
@@ -30,6 +31,9 @@
         <parameter name="filename" type="string"><![CDATA[The name of the referenced file.]]></parameter>
         <parameter name="relativeToContent" type="ContentIdentity"><![CDATA[The content that the path specified in filename is relative to.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[filename, relativeToContent, or the SourceFilename property of relativeToContent is null.]]></exception>
+      </exceptions>
       <remarks><![CDATA[This method constructs a reference to the specified file. If the file name contains a relative path, it is made absolute based on the SourceFilename property of relativeToContent . This can be useful in a custom content processor for constructing references to texture or effect files relative to the Identity property of the mesh being processed.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -54,6 +58,7 @@
     <property name="Filename" type="string" access="get;set">
       <summary><![CDATA[Gets and sets the file name of an ExternalReference.]]></summary>
       <syntax><![CDATA[public string Filename { get; set; }]]></syntax>
+      <value><![CDATA[The absolute file name of the external data reference.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

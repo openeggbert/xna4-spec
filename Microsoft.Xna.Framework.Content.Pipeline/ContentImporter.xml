@@ -4,7 +4,8 @@
           name="ContentImporter" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
-          interfaces="IContentImporter">
+          interfaces="IContentImporter"
+          modifier="abstract">
   <summary><![CDATA[Implements a file format importer for use with game assets.]]></summary>
   <syntax><![CDATA[public abstract class ContentImporter<T> : IContentImporter]]></syntax>
   <platforms>
@@ -24,7 +25,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="Import" returnType="void">
+    <method name="Import" returnType="T">
       <summary><![CDATA[Called by the framework when importing a game asset. This is the method called by XNA when an asset is to be imported into an object that can be recognized by the Content Pipeline.]]></summary>
       <overloads>
         <overload signature="Import()">

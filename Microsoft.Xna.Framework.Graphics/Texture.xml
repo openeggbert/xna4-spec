@@ -4,7 +4,8 @@
           name="Texture" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="GraphicsResource">
+          baseClass="GraphicsResource"
+          modifier="abstract">
   <summary><![CDATA[Represents a texture resource.]]></summary>
   <syntax><![CDATA[public abstract class Texture : GraphicsResource]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="Format" type="SurfaceFormat" access="get">
       <summary><![CDATA[Gets the format of the texture data.]]></summary>
       <syntax><![CDATA[public SurfaceFormat Format { get; }]]></syntax>
+      <value><![CDATA[The data format.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -28,6 +30,7 @@
     <property name="LevelCount" type="int" access="get">
       <summary><![CDATA[Gets the number of texture levels in a multilevel texture.]]></summary>
       <syntax><![CDATA[public int LevelCount { get; }]]></syntax>
+      <value><![CDATA[The number of texture levels in the multilevel texture.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -37,6 +40,7 @@
     <property name="LevelOfDetail" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the most detailed level-of-detail for a managed texture.]]></summary>
       <syntax><![CDATA[public int LevelOfDetail { get; set; }]]></syntax>
+      <value><![CDATA[The most detailed level-of-detail for a managed texture.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -96,6 +100,15 @@
             <parameter name="filename" type="string"><![CDATA[The name of the file containing the texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[filename is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The filename parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in filename was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[filename is in an invalid format.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -115,6 +128,11 @@
             <parameter name="numberBytes" type="int"><![CDATA[The number of bytes in textureStream .]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -138,6 +156,15 @@
             <parameter name="depth" type="int"><![CDATA[The depth, in pixels, of the texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[filename is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The filename parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in filename was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[filename is in an invalid format.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -159,6 +186,11 @@
             <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[Parameters to use when creating the Texture .]]></parameter>
           </parameters>
           <returns><![CDATA[The created Texture.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -178,6 +210,15 @@
             <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[The parameters to use when creating this texture.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[filename is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The filename parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in filename was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[filename is in an invalid format.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -195,6 +236,11 @@
             <parameter name="textureStream" type="Stream"><![CDATA[Stream that contains the texture data.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture resource that has been created on the specified graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -214,6 +260,11 @@
             <parameter name="creationParameters" type="TextureCreationParameters"><![CDATA[Parameters to use when creating the Texture .]]></parameter>
           </parameters>
           <returns><![CDATA[The created Texture.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The supported texture image file formats are described by the ImageFileFormat enumeration.]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
@@ -233,6 +284,9 @@
           <parameters>
             <parameter name="filterType" type="TextureFilter"><![CDATA[Determines how the texture will be filtered for each mipmap level.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="NotSupportedException"><![CDATA[GenerateMipMaps is not supported on Xbox 360.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method is valid only if ResourceUsage.AutoGenerateMipMap is set when calling the constructor for a render target texture. Setting this flag indicates that mip levels should be generated, but not when they should be generated. For this case, GenerateMipMaps hints to the driver that it should generate sublevels if it has not done so already. Only the top texture level is accessible to the application, and as a result LevelCount will not be changed after a call to GenerateMipMaps . The texture sublevels are not accessible since the driver creates them only when needed.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -256,6 +310,11 @@
             <parameter name="textureStream" type="Stream"><![CDATA[Stream containing the texture creation data.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture creation parameters.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -272,6 +331,15 @@
             <parameter name="filename" type="string"><![CDATA[The name of the file to load the creation parameters from.]]></parameter>
           </parameters>
           <returns><![CDATA[The texture creation parameters.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[filename is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The filename parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in filename was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[filename is in an invalid format.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -290,6 +358,11 @@
             <parameter name="numberBytes" type="int"><![CDATA[The number of bytes in textureStream]]></parameter>
           </parameters>
           <returns><![CDATA[The texture creation parameters.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -297,7 +370,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -324,6 +397,15 @@
             <parameter name="filename" type="string"><![CDATA[File name of image.]]></parameter>
           </parameters>
           <returns><![CDATA[A description of the data in the source file.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[filename is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The filename parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in filename was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[filename is in an invalid format.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -338,6 +420,11 @@
             <parameter name="textureStream" type="Stream"><![CDATA[Stream containing the image data.]]></parameter>
           </parameters>
           <returns><![CDATA[A description of the data in the source file.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -354,6 +441,11 @@
             <parameter name="numberBytes" type="int"><![CDATA[The number of bytes in textureStream .]]></parameter>
           </parameters>
           <returns><![CDATA[A description of the data in the source file.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[textureStream is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[textureStream is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[textureStream does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>

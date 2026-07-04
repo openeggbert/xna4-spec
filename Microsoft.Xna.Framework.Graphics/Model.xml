@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="Model" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Represents a 3D model composed of multiple ModelMesh objects which may be moved independently.]]></summary>
   <syntax><![CDATA[public sealed class Model]]></syntax>
   <platforms>
@@ -26,6 +27,7 @@
     <property name="Bones" type="ModelBoneCollection" access="get">
       <summary><![CDATA[Gets a collection of ModelBone objects which describe how each mesh in the Meshes collection for this model relates to its parent mesh.]]></summary>
       <syntax><![CDATA[public ModelBoneCollection Bones { get; }]]></syntax>
+      <value><![CDATA[A collection of ModelBone objects used by this model.]]></value>
       <remarks><![CDATA[Warning Please note that the transforms contained in this collection of bones does not describe the cumulative relationship of each mesh relative to all of its parent meshes in the collection, just the immediate parent of the mesh. For this information, please see CopyAbsoluteBoneTransformsTo . The transforms of each ModelBone in Bones can also be obtained using the CopyBoneTransformsTo method. For a demonstration of how to use the transforms for the parent bones of a model mesh to set the position of the mesh parts, please see How to: Render a Model .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -36,6 +38,7 @@
     <property name="Meshes" type="ModelMeshCollection" access="get">
       <summary><![CDATA[Gets a collection of ModelMesh objects which compose the model. Each ModelMesh in a model may be moved independently and may be composed of multiple materials identified as ModelMeshPart objects.]]></summary>
       <syntax><![CDATA[public ModelMeshCollection Meshes { get; }]]></syntax>
+      <value><![CDATA[A collection of ModelMesh objects used by this model.]]></value>
       <remarks><![CDATA[For a demonstration of how to use the transforms for the parent bones of a model mesh to set the position of the mesh objects, please see How to: Render a Model .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -46,6 +49,7 @@
     <property name="Root" type="ModelBone" access="get">
       <summary><![CDATA[Gets the root bone for this model.]]></summary>
       <syntax><![CDATA[public ModelBone Root { get; }]]></syntax>
+      <value><![CDATA[The root bone for this model.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -55,6 +59,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Gets or sets an object identifying this model.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[An object identifying this model.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -74,6 +79,10 @@
           <parameters>
             <parameter name="destinationBoneTransforms" type="Matrix[]"><![CDATA[The array to receive bone transforms.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[destinationBoneTransforms is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[destinationBoneTransforms is not the same size as Bones]]></exception>
+          </exceptions>
           <remarks><![CDATA[In an absolute transform, each bone is transformed according to the position of all parent bones. This is the same as iterating the Bones collection and applying the transformation matrix of every parent of a ModelBone to the Transform property of each ModelBone and copying the results into an array that can be indexed into by the bone index. An array of transformation matrices for the meshes of any model can be obtained by calling CopyAbsoluteBoneTransformsTo or CopyBoneTransformsTo . The resulting array contains the transforms that describe how each ModelMesh is located relative to one another in the Model . The transformation matrix that should be applied to each ModelMesh can be obtained using the index of the to retrieve a transformation matrix from this collection. For a demonstration of how to use the transforms for the parent bones of a model mesh to set the position of the mesh parts, please see How to: Render a Model .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -94,6 +103,10 @@
           <parameters>
             <parameter name="sourceBoneTransforms" type="Matrix[]"><![CDATA[An array containing new bone transforms.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[sourceBoneTransforms is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[sourceBoneTransforms is not the same size as Bones]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -113,6 +126,10 @@
           <parameters>
             <parameter name="destinationBoneTransforms" type="Matrix[]"><![CDATA[The array to receive bone transforms.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[destinationBoneTransforms is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[destinationBoneTransforms is not the same size as Bones]]></exception>
+          </exceptions>
           <remarks><![CDATA[This is the same as iterating the Bones collection and copying the Transform property into an array that can be indexed into by the bone index. An array of transformation matrices for the meshes of any model can be obtained by calling CopyAbsoluteBoneTransformsTo or CopyBoneTransformsTo . The resulting array contains the transforms that describe how each ModelMesh is located relative to one another in the Model . The transformation matrix that should be applied to each ModelMesh can be obtained using the index of the to retrieve a transformation matrix from this collection. For a demonstration of how to use the transforms for the parent bones of a model mesh to set the position of the mesh parts, please see How to: Render a Model .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>

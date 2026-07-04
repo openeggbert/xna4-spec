@@ -17,6 +17,7 @@
     <property name="SupportsAlways" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether always passing the comparison test is supported.]]></summary>
       <syntax><![CDATA[public bool SupportsAlways { get; }]]></syntax>
+      <value><![CDATA[true if always passing the comparison test is supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="SupportsEqual" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value equals the current value are supported.]]></summary>
       <syntax><![CDATA[public bool SupportsEqual { get; }]]></syntax>
+      <value><![CDATA[true if comparison tests in which the new value equals the current value are supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +37,7 @@
     <property name="SupportsGreater" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value is greater than the current value are supported.]]></summary>
       <syntax><![CDATA[public bool SupportsGreater { get; }]]></syntax>
+      <value><![CDATA[true if comparison tests in which the new value is greater than the current value are supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +47,7 @@
     <property name="SupportsGreaterEqual" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value is greater than or equal to the current value are supported.]]></summary>
       <syntax><![CDATA[public bool SupportsGreaterEqual { get; }]]></syntax>
+      <value><![CDATA[true if comparison tests in which the new value is greater than or equal to the current value are supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +57,7 @@
     <property name="SupportsLess" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value is less than the current value are supported.]]></summary>
       <syntax><![CDATA[public bool SupportsLess { get; }]]></syntax>
+      <value><![CDATA[true if comparison tests in which the new value is less than the current value are supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,6 +67,7 @@
     <property name="SupportsLessEqual" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value is less than or equal to the current value are supported.]]></summary>
       <syntax><![CDATA[public bool SupportsLessEqual { get; }]]></syntax>
+      <value><![CDATA[true if comparison tests in which the new value is less than or equal to the current value are supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -71,6 +77,7 @@
     <property name="SupportsNever" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether never passing the comparison test is supported.]]></summary>
       <syntax><![CDATA[public bool SupportsNever { get; }]]></syntax>
+      <value><![CDATA[true if never passing the comparison test is supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -80,6 +87,7 @@
     <property name="SupportsNotEqual" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether comparison tests in which the new value does not equal the current value are supported.]]></summary>
       <syntax><![CDATA[public bool SupportsNotEqual { get; }]]></syntax>
+      <value><![CDATA[true if comparison tests in which the new value does not equal the current value are supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -88,7 +96,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

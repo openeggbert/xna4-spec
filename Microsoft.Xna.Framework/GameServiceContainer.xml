@@ -41,6 +41,10 @@
             <parameter name="type" type="Type"><![CDATA[The type of service to add.]]></parameter>
             <parameter name="provider" type="Object"><![CDATA[The service provider to add.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[The type or provider parameter is null.]]></exception>
+            <exception type="ArgumentException"><![CDATA[The container already contains a service of this type, or the service provider object of the type requested is not assignable to this service type.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Game services are a mechanism for maintaining loose coupling between objects that need to interact with each other. Services work through a mediator—in this case, Game.Services . Service providers register with Game.Services , and service consumers request services from Game.Services . This arrangement allows an object that requires a service to request the service without knowing the name of the service provider. Game services are defined by an interface. A class specifies the services it provides by implementing interfaces and registering the services with Game.Services . A service is registered by calling Game.Services.AddService specifying the type of service being implemented and a reference to the object providing the service. For example, to register an object that provides a service represented by the interface IMyService, you would use the following code. Services.AddService( typeof( IMyService ), myobject ); Once a service is registered, the object providing the service can be retrieved by Game.Services.GetService and specifying the desired service. For example, to retrieve IGraphicsDeviceService , you would use the following code. IGraphicsDeviceService graphicsservice = (IGraphicsDeviceService)Services.GetService( typeof(IGraphicsDeviceService) );]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -50,7 +54,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetService" returnType="void">
+    <method name="GetService" returnType="Object">
       <summary><![CDATA[Gets the object providing a specified service.]]></summary>
       <overloads>
         <overload signature="GetService()">
@@ -62,6 +66,9 @@
             <parameter name="type" type="Type"><![CDATA[The type of service.]]></parameter>
           </parameters>
           <returns><![CDATA[The object providing the service.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[The type parameter is null.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Game services are a mechanism for maintaining loose coupling between objects that need to interact with each other. Services work through a mediator—in this case, Game.Services . Service providers register with Game.Services , and service consumers request services from Game.Services . This arrangement allows an object that requires a service to request the service without knowing the name of the service provider. Game services are defined by an interface. A class specifies the services it provides by implementing interfaces and registering the services with Game.Services . A service is registered by calling Game.Services.AddService specifying the type of service being implemented and a reference to the object providing the service. For example, to register an object that provides a service represented by the interface IMyService, you would use the following code. Services.AddService( typeof( IMyService ), myobject ); Once a service is registered, the object providing the service can be retrieved by Game.Services.GetService and specifying the desired service. For example, to retrieve IGraphicsDeviceService , you would use the following code. IGraphicsDeviceService graphicsservice = (IGraphicsDeviceService)Services.GetService( typeof(IGraphicsDeviceService) );]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -82,6 +89,9 @@
           <parameters>
             <parameter name="type" type="Type"><![CDATA[The type of service.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[The type parameter is null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

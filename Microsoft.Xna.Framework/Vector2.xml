@@ -50,6 +50,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
     <property name="One" type="Vector2" access="get" isStatic="true">
       <summary><![CDATA[Returns a Vector2 with both of its components set to one.]]></summary>
       <syntax><![CDATA[public static Vector2 One { get; }]]></syntax>
+      <value><![CDATA[Vector2 with both of its components set to one.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -59,6 +60,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
     <property name="UnitX" type="Vector2" access="get" isStatic="true">
       <summary><![CDATA[Returns the unit vector for the x-axis.]]></summary>
       <syntax><![CDATA[public static Vector2 UnitX { get; }]]></syntax>
+      <value><![CDATA[The unit vector for the x-axis.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -68,6 +70,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
     <property name="UnitY" type="Vector2" access="get" isStatic="true">
       <summary><![CDATA[Returns the unit vector for the y-axis.]]></summary>
       <syntax><![CDATA[public static Vector2 UnitY { get; }]]></syntax>
+      <value><![CDATA[The unit vector for the y-axis.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -77,6 +80,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
     <property name="Zero" type="Vector2" access="get" isStatic="true">
       <summary><![CDATA[Returns a Vector2 with all of its components set to zero.]]></summary>
       <syntax><![CDATA[public static Vector2 Zero { get; }]]></syntax>
+      <value><![CDATA[A Vector2 with all of its components set to zero.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -505,7 +509,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code of the vector object.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -572,7 +576,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Length" returnType="void">
+    <method name="Length" returnType="float">
       <summary><![CDATA[Calculates the length of the vector.]]></summary>
       <overloads>
         <overload signature="Length()">
@@ -587,7 +591,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="LengthSquared" returnType="void">
+    <method name="LengthSquared" returnType="float">
       <summary><![CDATA[Calculates the length of the vector squared.]]></summary>
       <overloads>
         <overload signature="LengthSquared()">
@@ -1005,7 +1009,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of the current object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -1261,7 +1265,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Addition" returnType="void">
+    <method name="op_Addition" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Adds two vectors.]]></summary>
       <overloads>
         <overload signature="op_Addition()">
@@ -1323,7 +1327,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Tests vectors for equality.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -1345,7 +1349,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Tests vectors for inequality.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">
@@ -1424,7 +1428,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Subtraction" returnType="void">
+    <method name="op_Subtraction" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Subtracts a vector from a vector.]]></summary>
       <overloads>
         <overload signature="op_Subtraction()">
@@ -1446,7 +1450,7 @@ public struct Vector2 : IEquatable<Vector2>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_UnaryNegation" returnType="void">
+    <method name="op_UnaryNegation" returnType="Vector2" isStatic="true">
       <summary><![CDATA[Returns a vector pointing in the opposite direction.]]></summary>
       <overloads>
         <overload signature="op_UnaryNegation()">

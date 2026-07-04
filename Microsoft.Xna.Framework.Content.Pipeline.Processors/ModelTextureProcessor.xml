@@ -26,6 +26,7 @@ public class ModelTextureProcessor : ContentProcessor<TextureContent, TextureCon
     <property name="ColorKeyColor" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public override Color ColorKeyColor { get; }]]></syntax>
+      <value><![CDATA[Color value of the material to replace with transparent black.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -35,6 +36,7 @@ public class ModelTextureProcessor : ContentProcessor<TextureContent, TextureCon
     <property name="ColorKeyEnabled" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public override bool ColorKeyEnabled { get; }]]></syntax>
+      <value><![CDATA[true if color keying is enabled; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -44,6 +46,7 @@ public class ModelTextureProcessor : ContentProcessor<TextureContent, TextureCon
     <property name="GenerateMipmaps" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public override bool GenerateMipmaps { get; }]]></syntax>
+      <value><![CDATA[true if mipmap generation is enabled; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -53,6 +56,7 @@ public class ModelTextureProcessor : ContentProcessor<TextureContent, TextureCon
     <property name="ResizeToPowerOfTwo" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public override bool ResizeToPowerOfTwo { get; }]]></syntax>
+      <value><![CDATA[true if resizing is enabled; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -62,6 +66,7 @@ public class ModelTextureProcessor : ContentProcessor<TextureContent, TextureCon
     <property name="TextureFormat" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public override TextureProcessorOutputFormat TextureFormat { get; }]]></syntax>
+      <value><![CDATA[The texture format of the output.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -70,7 +75,7 @@ public class ModelTextureProcessor : ContentProcessor<TextureContent, TextureCon
     </property>
   </properties>
   <methods>
-    <method name="Process" returnType="void">
+    <method name="Process" returnType="TextureContent">
       <summary><![CDATA[Processes a texture.]]></summary>
       <overloads>
         <overload signature="Process()">

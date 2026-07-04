@@ -23,6 +23,9 @@
         <parameter name="serviceProvider" type="IServiceProvider"><![CDATA[The service provider the ContentManager should use to locate services.]]></parameter>
         <parameter name="resourceManager" type="ResourceManager"><![CDATA[The resource manager for the ResourceContentManager to read from.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[resourceManager is null.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -45,6 +48,9 @@
             <parameter name="assetName" type="string"><![CDATA[The name of the asset being read.]]></parameter>
           </parameters>
           <returns><![CDATA[The opened stream.]]></returns>
+          <exceptions>
+            <exception type="ContentLoadException"><![CDATA[Error loading assetName. The resource was not a binary resource, or the resource was not found.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

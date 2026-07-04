@@ -53,6 +53,7 @@
     <property name="Alpha" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the material alpha which determines its transparency. Range is between 1 (fully opaque) and 0 (fully transparent).]]></summary>
       <syntax><![CDATA[public float Alpha { get; set; }]]></syntax>
+      <value><![CDATA[The alpha value.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -64,6 +65,7 @@
     <property name="AmbientLightColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the ambient color for a light, the range of color values is from 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 AmbientLightColor { get; set; }]]></syntax>
+      <value><![CDATA[The ambient color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -75,6 +77,7 @@
     <property name="DiffuseColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the diffuse color for a material, the range of color values is from 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <value><![CDATA[The diffuse color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -86,6 +89,7 @@
     <property name="DirectionalLight0" type="DirectionalLight" access="get">
       <summary><![CDATA[Gets the first directional light.]]></summary>
       <syntax><![CDATA[public DirectionalLight DirectionalLight0 { get; }]]></syntax>
+      <value><![CDATA[The first light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -97,6 +101,7 @@
     <property name="DirectionalLight1" type="DirectionalLight" access="get">
       <summary><![CDATA[Gets the second directional light.]]></summary>
       <syntax><![CDATA[public DirectionalLight DirectionalLight1 { get; }]]></syntax>
+      <value><![CDATA[The second light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -108,6 +113,7 @@
     <property name="DirectionalLight2" type="DirectionalLight" access="get">
       <summary><![CDATA[Gets the third directional light.]]></summary>
       <syntax><![CDATA[public DirectionalLight DirectionalLight2 { get; }]]></syntax>
+      <value><![CDATA[The third light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -119,6 +125,7 @@
     <property name="EmissiveColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the emissive color for a material, the range of color values is from 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 EmissiveColor { get; set; }]]></syntax>
+      <value><![CDATA[The emissive color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -130,6 +137,7 @@
     <property name="EnvironmentMap" type="TextureCube" access="get;set">
       <summary><![CDATA[Gets or sets the current environment map texture.]]></summary>
       <syntax><![CDATA[public TextureCube EnvironmentMap { get; set; }]]></syntax>
+      <value><![CDATA[The environment map texture.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -141,6 +149,7 @@
     <property name="EnvironmentMapAmount" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the amount of the environment map color (RGB) that will be blended over the base texture. The value ranges from 0 to 1; the default value is 1.]]></summary>
       <syntax><![CDATA[public float EnvironmentMapAmount { get; set; }]]></syntax>
+      <value><![CDATA[The RGB blend factor.]]></value>
       <remarks><![CDATA[If set to zero, the RGB channels of the environment map will be completely ignored (the environment map alpha may still be visible if EnvironmentMapSpecular is greater than zero).]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -153,6 +162,7 @@
     <property name="EnvironmentMapSpecular" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the amount of the environment map alpha value that will be added to the base texture. The value ranges from 0 to 1; the default value is 0.]]></summary>
       <syntax><![CDATA[public Vector3 EnvironmentMapSpecular { get; set; }]]></syntax>
+      <value><![CDATA[The environment map alpha value.]]></value>
       <remarks><![CDATA[Use this value to implement cheap specular lighting, by encoding one or more specular highlight patterns into the environment map alpha channel, then setting the EnvironmentMapSpecular to the desired specular light color.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -165,6 +175,7 @@
     <property name="FogColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the fog color, the range of color values is from 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 FogColor { get; set; }]]></syntax>
+      <value><![CDATA[The fog color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -176,6 +187,7 @@
     <property name="FogEnabled" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets the fog enable flag.]]></summary>
       <syntax><![CDATA[public bool FogEnabled { get; set; }]]></syntax>
+      <value><![CDATA[True to enable fog; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -187,6 +199,7 @@
     <property name="FogEnd" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the maximum z value for fog, which ranges from 0 to 1.]]></summary>
       <syntax><![CDATA[public float FogEnd { get; set; }]]></syntax>
+      <value><![CDATA[The distance to stop adding fog.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -198,6 +211,7 @@
     <property name="FogStart" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the minimum z value for fog, which ranges from 0 to 1.]]></summary>
       <syntax><![CDATA[public float FogStart { get; set; }]]></syntax>
+      <value><![CDATA[The distance to begin adding fog.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -209,6 +223,7 @@
     <property name="FresnelFactor" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the Fresnel factor used for the environment map blending.]]></summary>
       <syntax><![CDATA[public float FresnelFactor { get; set; }]]></syntax>
+      <value><![CDATA[The Fresnel factor.]]></value>
       <remarks><![CDATA[The default value is 1. Use 0 to disable Fresnel lighting; this makes the environment map visible independent of the viewing angle. Use a higher value to make the environment map visible around silhouette edges; use a lower value to make the environment map visible everywhere. Fresnel lighting only affects the environment map color (RGB values), alpha is not affected. Control the intensity of the color values using EnvironmentMapAmount; control the intensity of the alpha value with EnvironmentMapSpecular.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -221,6 +236,7 @@
     <property name="Projection" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the projection matrix.]]></summary>
       <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <value><![CDATA[A matrix that contains a projection transform.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -232,6 +248,7 @@
     <property name="Texture" type="Texture2D" access="get;set">
       <summary><![CDATA[Gets or sets the current texture.]]></summary>
       <syntax><![CDATA[public Texture2D Texture { get; set; }]]></syntax>
+      <value><![CDATA[The current texture.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -243,6 +260,7 @@
     <property name="View" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the view matrix.]]></summary>
       <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <value><![CDATA[A matrix that contains a view transform.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -254,6 +272,7 @@
     <property name="World" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the world matrix.]]></summary>
       <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <value><![CDATA[A matrix that contains a world transform.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -264,7 +283,7 @@
     </property>
   </properties>
   <methods>
-    <method name="Clone" returnType="void">
+    <method name="Clone" returnType="Effect">
       <summary><![CDATA[Creates a clone of the current EnvironmentMapEffect instance.]]></summary>
       <overloads>
         <overload signature="Clone()">

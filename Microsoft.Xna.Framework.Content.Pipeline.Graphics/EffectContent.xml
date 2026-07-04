@@ -25,6 +25,7 @@
     <property name="EffectCode" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the effect program source code.]]></summary>
       <syntax><![CDATA[public string EffectCode { get; set; }]]></syntax>
+      <value><![CDATA[Current value of the Effect program source code or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

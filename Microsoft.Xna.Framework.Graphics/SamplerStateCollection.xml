@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="SamplerStateCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Collection of SamplerState objects.]]></summary>
   <syntax><![CDATA[public sealed class SamplerStateCollection]]></syntax>
   <platforms>
@@ -19,6 +20,10 @@
       <syntax><![CDATA[public SamplerState this [
          int index
 ] { get; }]]></syntax>
+      <value><![CDATA[The SamplerState object at the requested index.]]></value>
+      <exceptions>
+        <exception type="InvalidOperationException"><![CDATA[The index for this vertex stream is invalid.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="IntermediateReader" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
+          modifier="sealed">
   <summary><![CDATA[Provides an implementation of many of the methods of IntermediateSerializer. Deserializes and tracks state for shared resources and external references.]]></summary>
   <syntax><![CDATA[public sealed class IntermediateReader]]></syntax>
   <remarks><![CDATA[A new instance of IntermediateReader is constructed for each deserialize operation.]]></remarks>
@@ -17,6 +18,7 @@
     <property name="Serializer" type="IntermediateSerializer" access="get">
       <summary><![CDATA[Gets the parent serializer.]]></summary>
       <syntax><![CDATA[public IntermediateSerializer Serializer { get; }]]></syntax>
+      <value><![CDATA[The parent serializer.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -25,6 +27,7 @@
     <property name="Xml" type="XmlReader" access="get">
       <summary><![CDATA[Gets the XML input stream.]]></summary>
       <syntax><![CDATA[public XmlReader Xml { get; }]]></syntax>
+      <value><![CDATA[The XML input stream.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -32,7 +35,7 @@
     </property>
   </properties>
   <methods>
-    <method name="MoveToElement" returnType="void">
+    <method name="MoveToElement" returnType="bool">
       <summary><![CDATA[Moves to the specified element if the element name exists.]]></summary>
       <overloads>
         <overload signature="MoveToElement()">
@@ -51,7 +54,213 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadTypeName" returnType="void">
+    <method name="ReadExternalReference" returnType="void">
+      <summary><![CDATA[Reads an external reference ID and records it for subsequent operations.]]></summary>
+      <overloads>
+        <overload signature="ReadExternalReference()">
+          <summary><![CDATA[Reads an external reference ID and records it for subsequent operations.]]></summary>
+          <syntax><![CDATA[public void ReadExternalReference<T> (
+         ExternalReference<T> existingInstance
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of existingInstance .]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="existingInstance" type="ExternalReference&lt;T&gt;"><![CDATA[The object receiving the data, or null if a new instance of the object should be created.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadObject" returnType="T">
+      <summary><![CDATA[Reads a single object from the input XML stream, optionally specifying an existing instance to receive the data.]]></summary>
+      <overloads>
+        <overload signature="ReadObject(ContentSerializerAttribute, T)">
+          <summary><![CDATA[Reads a single object from the input XML stream, optionally specifying an existing instance to receive the data.]]></summary>
+          <syntax><![CDATA[public T ReadObject<T> (
+         ContentSerializerAttribute format,
+         T existingInstance
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format expected by the type serializer.]]></parameter>
+            <parameter name="existingInstance" type="T"><![CDATA[The object receiving the data, or null if a new instance should be created.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadObject(ContentSerializerAttribute)">
+          <summary><![CDATA[Reads a single object from the input XML stream.]]></summary>
+          <syntax><![CDATA[public T ReadObject<T> (
+         ContentSerializerAttribute format
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format expected by the type serializer.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadObject(ContentSerializerAttribute, ContentTypeSerializer, T)">
+          <summary><![CDATA[Reads a single object from the input XML stream using the specified type hint, optionally specifying an existing instance to receive the data.]]></summary>
+          <syntax><![CDATA[public T ReadObject<T> (
+         ContentSerializerAttribute format,
+         ContentTypeSerializer typeSerializer,
+         T existingInstance
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format of the XML.]]></parameter>
+            <parameter name="typeSerializer" type="ContentTypeSerializer"><![CDATA[The type serializer.]]></parameter>
+            <parameter name="existingInstance" type="T"><![CDATA[The object receiving the data, or null if a new instance should be created.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadObject(ContentSerializerAttribute, ContentTypeSerializer)">
+          <summary><![CDATA[Reads a single object from the input XML stream, using the specified type hint.]]></summary>
+          <syntax><![CDATA[public T ReadObject<T> (
+         ContentSerializerAttribute format,
+         ContentTypeSerializer typeSerializer
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format of the XML.]]></parameter>
+            <parameter name="typeSerializer" type="ContentTypeSerializer"><![CDATA[The type serializer.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadRawObject" returnType="T">
+      <summary><![CDATA[Reads a single object from the input XML stream as an instance of the specified type using the specified type hint.]]></summary>
+      <overloads>
+        <overload signature="ReadRawObject(ContentSerializerAttribute, ContentTypeSerializer)">
+          <summary><![CDATA[Reads a single object from the input XML stream as an instance of the specified type using the specified type hint.]]></summary>
+          <syntax><![CDATA[public T ReadRawObject<T> (
+         ContentSerializerAttribute format,
+         ContentTypeSerializer typeSerializer
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format of the XML.]]></parameter>
+            <parameter name="typeSerializer" type="ContentTypeSerializer"><![CDATA[The type serializer.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadRawObject(ContentSerializerAttribute)">
+          <summary><![CDATA[Reads a single object from the input XML stream as an instance of the specified type, optionally specifying an existing instance to receive the data.]]></summary>
+          <syntax><![CDATA[public T ReadRawObject<T> (
+         ContentSerializerAttribute format
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format of the XML.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadRawObject(ContentSerializerAttribute, ContentTypeSerializer, T)">
+          <summary><![CDATA[Reads a single object from the input XML stream as an instance of the specified type using the specified type hint, optionally specifying an existing instance to receive the data.]]></summary>
+          <syntax><![CDATA[public T ReadRawObject<T> (
+         ContentSerializerAttribute format,
+         ContentTypeSerializer typeSerializer,
+         T existingInstance
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format of the XML.]]></parameter>
+            <parameter name="typeSerializer" type="ContentTypeSerializer"><![CDATA[The type serializer.]]></parameter>
+            <parameter name="existingInstance" type="T"><![CDATA[The object receiving the data, or null if a new instance should be created.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadRawObject(ContentSerializerAttribute, T)">
+          <summary><![CDATA[Reads a single object from the input XML stream, as an instance of the specified type.]]></summary>
+          <syntax><![CDATA[public T ReadRawObject<T> (
+         ContentSerializerAttribute format,
+         T existingInstance
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The object.]]></parameter>
+            <parameter name="existingInstance" type="T"><![CDATA[The object receiving the data, or null if a new instance should be created.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The type of object read.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadSharedResource" returnType="void">
+      <summary><![CDATA[Reads a shared resource ID and records it for subsequent operations.]]></summary>
+      <overloads>
+        <overload signature="ReadSharedResource()">
+          <summary><![CDATA[Reads a shared resource ID and records it for subsequent operations.]]></summary>
+          <syntax><![CDATA[public void ReadSharedResource<T> (
+         ContentSerializerAttribute format,
+         Action<T> fixup
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type to read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format of the XML.]]></parameter>
+            <parameter name="fixup" type="Action&lt;T&gt;"><![CDATA[The fixup operation to perform.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadTypeName" returnType="Type">
       <summary><![CDATA[Reads and decodes a type descriptor from the XML input stream.]]></summary>
       <overloads>
         <overload signature="ReadTypeName()">

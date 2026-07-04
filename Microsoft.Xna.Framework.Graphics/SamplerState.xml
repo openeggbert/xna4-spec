@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="SamplerState" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Contains sampler states for the device.]]></summary>
   <syntax><![CDATA[public sealed class SamplerState]]></syntax>
   <platforms>
@@ -15,6 +16,9 @@
     <constructor signature="SamplerState()">
       <summary><![CDATA[Initializes a new instance of the sampler state class.]]></summary>
       <syntax><![CDATA[public SamplerState ()]]></syntax>
+      <exceptions>
+        <exception type="OutOfMemoryException"><![CDATA[There is not enough memory to create this resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -27,6 +31,7 @@
     <property name="AddressU" type="TextureAddressMode" access="get;set">
       <summary><![CDATA[Gets or sets the texture-address mode for the u-coordinate.]]></summary>
       <syntax><![CDATA[public TextureAddressMode AddressU { get; set; }]]></syntax>
+      <value><![CDATA[Texture-address mode to set or get.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -36,6 +41,7 @@
     <property name="AddressV" type="TextureAddressMode" access="get;set">
       <summary><![CDATA[Gets or sets the texture-address mode for the v-coordinate.]]></summary>
       <syntax><![CDATA[public TextureAddressMode AddressV { get; set; }]]></syntax>
+      <value><![CDATA[Texture-address mode to set or get.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -45,6 +51,7 @@
     <property name="AddressW" type="TextureAddressMode" access="get;set">
       <summary><![CDATA[Gets or sets the texture-address mode for the w-coordinate.]]></summary>
       <syntax><![CDATA[public TextureAddressMode AddressW { get; set; }]]></syntax>
+      <value><![CDATA[Texture-address mode to set or get.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -54,6 +61,7 @@
     <property name="BorderColor" type="Color" access="get;set">
       <summary><![CDATA[Gets or sets the border color.]]></summary>
       <syntax><![CDATA[public Color BorderColor { get; set; }]]></syntax>
+      <value><![CDATA[Border color to set or get.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -63,6 +71,7 @@
     <property name="Filter" type="TextureFilter" access="get;set">
       <summary><![CDATA[Gets or sets the type of filtering during sampling.]]></summary>
       <syntax><![CDATA[public TextureFilter Filter { get; set; }]]></syntax>
+      <value><![CDATA[The texture filter.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -73,6 +82,7 @@
     <property name="MagFilter" type="TextureFilter" access="get;set">
       <summary><![CDATA[Gets or sets a magnification filter.]]></summary>
       <syntax><![CDATA[public TextureFilter MagFilter { get; set; }]]></syntax>
+      <value><![CDATA[The magnification filter to set or get.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -82,6 +92,7 @@
     <property name="MaxAnisotropy" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the maximum anisotropy. The default value is 0.]]></summary>
       <syntax><![CDATA[public int MaxAnisotropy { get; set; }]]></syntax>
+      <value><![CDATA[The maximum anisotropy value to set or get.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -91,6 +102,7 @@
     <property name="MaxMipLevel" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the level of detail (LOD) index of the largest map to use.]]></summary>
       <syntax><![CDATA[public int MaxMipLevel { get; set; }]]></syntax>
+      <value><![CDATA[The maximum LOD to set or get. This index value can range from 0 to (n − 1), where n is the largest map.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -100,6 +112,7 @@
     <property name="MinFilter" type="TextureFilter" access="get;set">
       <summary><![CDATA[Gets or sets a minification filter.]]></summary>
       <syntax><![CDATA[public TextureFilter MinFilter { get; set; }]]></syntax>
+      <value><![CDATA[The minification filter to set or get.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -109,6 +122,7 @@
     <property name="MipFilter" type="TextureFilter" access="get;set">
       <summary><![CDATA[Gets or sets a mipmap filter to use during minification.]]></summary>
       <syntax><![CDATA[public TextureFilter MipFilter { get; set; }]]></syntax>
+      <value><![CDATA[The minification filter to set or get.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -118,6 +132,7 @@
     <property name="MipMapLevelOfDetailBias" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the mipmap level of detail (LOD) bias. The default value is 0.]]></summary>
       <syntax><![CDATA[public float MipMapLevelOfDetailBias { get; set; }]]></syntax>
+      <value><![CDATA[The mipmap bias to set or get.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -143,7 +158,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

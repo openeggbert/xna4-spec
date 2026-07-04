@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="EffectParameter" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Represents an Effect parameter.]]></summary>
   <syntax><![CDATA[public sealed class EffectParameter]]></syntax>
   <platforms>
@@ -17,6 +18,7 @@
     <property name="Annotations" type="EffectAnnotationCollection" access="get">
       <summary><![CDATA[Gets the collection of EffectAnnotation objects for this parameter.]]></summary>
       <syntax><![CDATA[public EffectAnnotationCollection Annotations { get; }]]></syntax>
+      <value><![CDATA[The collection of EffectAnnotation objects.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +28,7 @@
     <property name="ColumnCount" type="int" access="get">
       <summary><![CDATA[Gets the number of columns in the parameter description.]]></summary>
       <syntax><![CDATA[public int ColumnCount { get; }]]></syntax>
+      <value><![CDATA[The number of columns in the parameter description.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +38,7 @@
     <property name="Elements" type="EffectParameterCollection" access="get">
       <summary><![CDATA[Gets the collection of effect parameters.]]></summary>
       <syntax><![CDATA[public EffectParameterCollection Elements { get; }]]></syntax>
+      <value><![CDATA[The collection of effect parameters.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +48,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of the parameter.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of the parameter.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +58,7 @@
     <property name="ParameterClass" type="EffectParameterClass" access="get">
       <summary><![CDATA[Gets the class of the parameter.]]></summary>
       <syntax><![CDATA[public EffectParameterClass ParameterClass { get; }]]></syntax>
+      <value><![CDATA[The parameter class.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,6 +68,7 @@
     <property name="ParameterType" type="EffectParameterType" access="get">
       <summary><![CDATA[Gets the type of the parameter.]]></summary>
       <syntax><![CDATA[public EffectParameterType ParameterType { get; }]]></syntax>
+      <value><![CDATA[The parameter type.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -71,6 +78,7 @@
     <property name="RowCount" type="int" access="get">
       <summary><![CDATA[Gets the number of rows in the parameter description.]]></summary>
       <syntax><![CDATA[public int RowCount { get; }]]></syntax>
+      <value><![CDATA[The number of rows in the parameter description.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -80,6 +88,7 @@
     <property name="Semantic" type="string" access="get">
       <summary><![CDATA[Gets the semantic meaning, or usage, of the parameter.]]></summary>
       <syntax><![CDATA[public string Semantic { get; }]]></syntax>
+      <value><![CDATA[The semantic meaning of the parameter.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -89,6 +98,7 @@
     <property name="StructureMembers" type="EffectParameterCollection" access="get">
       <summary><![CDATA[Gets the collection of structure members.]]></summary>
       <syntax><![CDATA[public EffectParameterCollection StructureMembers { get; }]]></syntax>
+      <value><![CDATA[The collection of structure members.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -117,7 +127,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -132,13 +142,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueBoolean" returnType="void">
+    <method name="GetValueBoolean" returnType="bool">
       <summary><![CDATA[Gets the value of the EffectParameter as a Boolean.]]></summary>
       <overloads>
         <overload signature="GetValueBoolean()">
           <summary><![CDATA[Gets the value of the EffectParameter as a Boolean.]]></summary>
           <syntax><![CDATA[public bool GetValueBoolean ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as a Boolean.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Boolean.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -148,7 +161,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueBooleanArray" returnType="void">
+    <method name="GetValueBooleanArray" returnType="bool[]">
       <summary><![CDATA[Gets the value of the EffectParameter as an array of Boolean.]]></summary>
       <overloads>
         <overload signature="GetValueBooleanArray()">
@@ -160,6 +173,9 @@
             <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
           </parameters>
           <returns><![CDATA[The value of the EffectParameter as an array of Boolean.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Boolean.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -169,13 +185,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueInt32" returnType="void">
+    <method name="GetValueInt32" returnType="int">
       <summary><![CDATA[Gets the value of the EffectParameter as an Int32.]]></summary>
       <overloads>
         <overload signature="GetValueInt32()">
           <summary><![CDATA[Gets the value of the EffectParameter as an Int32.]]></summary>
           <syntax><![CDATA[public int GetValueInt32 ()]]></syntax>
           <returns><![CDATA[Gets the value of the EffectParameter as an Int32.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Int32.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -185,7 +204,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueInt32Array" returnType="void">
+    <method name="GetValueInt32Array" returnType="int[]">
       <summary><![CDATA[Gets the value of the EffectParameter as an array of Int32.]]></summary>
       <overloads>
         <overload signature="GetValueInt32Array()">
@@ -197,6 +216,9 @@
             <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
           </parameters>
           <returns><![CDATA[The value of the EffectParameter as an array of Int32.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Int32.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -206,13 +228,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueMatrix" returnType="void">
+    <method name="GetValueMatrix" returnType="Matrix">
       <summary><![CDATA[Gets the value of the EffectParameter as a Matrix.]]></summary>
       <overloads>
         <overload signature="GetValueMatrix()">
           <summary><![CDATA[Gets the value of the EffectParameter as a Matrix.]]></summary>
           <syntax><![CDATA[public Matrix GetValueMatrix ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as a Matrix.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Matrix.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -222,7 +247,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueMatrixArray" returnType="void">
+    <method name="GetValueMatrixArray" returnType="Matrix[]">
       <summary><![CDATA[Gets the value of the EffectParameter as an array of Matrix.]]></summary>
       <overloads>
         <overload signature="GetValueMatrixArray()">
@@ -234,6 +259,9 @@
             <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
           </parameters>
           <returns><![CDATA[The value of the EffectParameter as an array of Matrix.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Matrix.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -243,13 +271,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueMatrixTranspose" returnType="void">
+    <method name="GetValueMatrixTranspose" returnType="Matrix">
       <summary><![CDATA[Gets the value of the EffectParameter as a Matrix transpose.]]></summary>
       <overloads>
         <overload signature="GetValueMatrixTranspose()">
           <summary><![CDATA[Gets the value of the EffectParameter as a Matrix transpose.]]></summary>
           <syntax><![CDATA[public Matrix GetValueMatrixTranspose ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as a Matrix transpose.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Matrix.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -259,7 +290,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueMatrixTransposeArray" returnType="void">
+    <method name="GetValueMatrixTransposeArray" returnType="Matrix[]">
       <summary><![CDATA[Gets the value of the EffectParameter as an array of Matrix transpose.]]></summary>
       <overloads>
         <overload signature="GetValueMatrixTransposeArray()">
@@ -271,6 +302,10 @@
             <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
           </parameters>
           <returns><![CDATA[The value of the EffectParameter as an array of Matrix transpose.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[count is less than or equal to zero. count must be greater than our equal to one.]]></exception>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Matrix.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -280,13 +315,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueQuaternion" returnType="void">
+    <method name="GetValueQuaternion" returnType="Quaternion">
       <summary><![CDATA[Gets the value of the EffectParameter as a Quaternion.]]></summary>
       <overloads>
         <overload signature="GetValueQuaternion()">
           <summary><![CDATA[Gets the value of the EffectParameter as a Quaternion.]]></summary>
           <syntax><![CDATA[public Quaternion GetValueQuaternion ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as a Quaternion.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Quaternion.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -296,7 +334,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueQuaternionArray" returnType="void">
+    <method name="GetValueQuaternionArray" returnType="Quaternion[]">
       <summary><![CDATA[Gets the value of the EffectParameter as an array of Quaternion.]]></summary>
       <overloads>
         <overload signature="GetValueQuaternionArray()">
@@ -308,6 +346,10 @@
             <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
           </parameters>
           <returns><![CDATA[The value of the EffectParameter as an array of Quaternion.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[count is less than or equal to zero. count must be greater than or equal to one.]]></exception>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Quaternion.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -317,13 +359,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueSingle" returnType="void">
+    <method name="GetValueSingle" returnType="float">
       <summary><![CDATA[Gets the value of the EffectParameter as a Single.]]></summary>
       <overloads>
         <overload signature="GetValueSingle()">
           <summary><![CDATA[Gets the value of the EffectParameter as a Single.]]></summary>
           <syntax><![CDATA[public float GetValueSingle ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as a Single.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Single.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -333,7 +378,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueSingleArray" returnType="void">
+    <method name="GetValueSingleArray" returnType="float[]">
       <summary><![CDATA[Gets the value of the EffectParameter as an array of Single.]]></summary>
       <overloads>
         <overload signature="GetValueSingleArray()">
@@ -345,6 +390,10 @@
             <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
           </parameters>
           <returns><![CDATA[The value of the EffectParameter as an array of Single.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[count is less than or equal to zero. count must be greater than or equal to one.]]></exception>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Single.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -354,13 +403,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueString" returnType="void">
+    <method name="GetValueString" returnType="string">
       <summary><![CDATA[Gets the value of the EffectParameter as an String.]]></summary>
       <overloads>
         <overload signature="GetValueString()">
           <summary><![CDATA[Gets the value of the EffectParameter as an String.]]></summary>
           <syntax><![CDATA[public string GetValueString ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as an String.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type String.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -370,13 +422,17 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueTexture2D" returnType="void">
+    <method name="GetValueTexture2D" returnType="Texture2D">
       <summary><![CDATA[Gets the value of the EffectParameter as a Texture2D.]]></summary>
       <overloads>
         <overload signature="GetValueTexture2D()">
           <summary><![CDATA[Gets the value of the EffectParameter as a Texture2D.]]></summary>
           <syntax><![CDATA[public Texture2D GetValueTexture2D ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as a Texture2D.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The resource is not of type ResourceType.Texture2D.]]></exception>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Texture2D.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -386,13 +442,17 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueTexture3D" returnType="void">
+    <method name="GetValueTexture3D" returnType="Texture3D">
       <summary><![CDATA[Gets the value of the EffectParameter as a Texture3D.]]></summary>
       <overloads>
         <overload signature="GetValueTexture3D()">
           <summary><![CDATA[Gets the value of the EffectParameter as a Texture3D.]]></summary>
           <syntax><![CDATA[public Texture3D GetValueTexture3D ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as a Texture3D.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The resource is not of type ResourceType.Texture3D.]]></exception>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Texture3D.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -402,13 +462,17 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueTextureCube" returnType="void">
+    <method name="GetValueTextureCube" returnType="TextureCube">
       <summary><![CDATA[Gets the value of the EffectParameter as a TextureCube.]]></summary>
       <overloads>
         <overload signature="GetValueTextureCube()">
           <summary><![CDATA[Gets the value of the EffectParameter as a TextureCube.]]></summary>
           <syntax><![CDATA[public TextureCube GetValueTextureCube ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as a TextureCube.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The resource is not of type ResourceType.TextureCube.]]></exception>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type TextureCube.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -418,13 +482,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueVector2" returnType="void">
+    <method name="GetValueVector2" returnType="Vector2">
       <summary><![CDATA[Gets the value of the EffectParameter as a Vector2.]]></summary>
       <overloads>
         <overload signature="GetValueVector2()">
           <summary><![CDATA[Gets the value of the EffectParameter as a Vector2.]]></summary>
           <syntax><![CDATA[public Vector2 GetValueVector2 ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as a Vector2.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an object of type Vector2.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -434,7 +501,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueVector2Array" returnType="void">
+    <method name="GetValueVector2Array" returnType="Vector2[]">
       <summary><![CDATA[Gets the value of the EffectParameter as an array of Vector2.]]></summary>
       <overloads>
         <overload signature="GetValueVector2Array()">
@@ -446,6 +513,10 @@
             <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
           </parameters>
           <returns><![CDATA[The value of the EffectParameter as an array of Vector2.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[count is less than or equal to zero. count must be greater than or equal to one.]]></exception>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Vector2.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -455,13 +526,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueVector3" returnType="void">
+    <method name="GetValueVector3" returnType="Vector3">
       <summary><![CDATA[Gets the value of the EffectParameter as a Vector3.]]></summary>
       <overloads>
         <overload signature="GetValueVector3()">
           <summary><![CDATA[Gets the value of the EffectParameter as a Vector3.]]></summary>
           <syntax><![CDATA[public Vector3 GetValueVector3 ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as a Vector3.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an object of type Vector3.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -471,7 +545,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueVector3Array" returnType="void">
+    <method name="GetValueVector3Array" returnType="Vector3[]">
       <summary><![CDATA[Gets the value of the EffectParameter as an array of Vector3.]]></summary>
       <overloads>
         <overload signature="GetValueVector3Array()">
@@ -483,6 +557,10 @@
             <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
           </parameters>
           <returns><![CDATA[The value of the EffectParameter as an array of Vector3.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[count is less than or equal to zero. count must be greater than or equal to one.]]></exception>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Vector3.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -492,13 +570,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueVector4" returnType="void">
+    <method name="GetValueVector4" returnType="Vector4">
       <summary><![CDATA[Gets the value of the EffectParameter as a Vector4.]]></summary>
       <overloads>
         <overload signature="GetValueVector4()">
           <summary><![CDATA[Gets the value of the EffectParameter as a Vector4.]]></summary>
           <syntax><![CDATA[public Vector4 GetValueVector4 ()]]></syntax>
           <returns><![CDATA[The value of the EffectParameter as a Vector4.]]></returns>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Vector4.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -508,7 +589,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueVector4Array" returnType="void">
+    <method name="GetValueVector4Array" returnType="Vector4[]">
       <summary><![CDATA[Gets the value of the EffectParameter as an array of Vector4.]]></summary>
       <overloads>
         <overload signature="GetValueVector4Array()">
@@ -520,6 +601,10 @@
             <parameter name="count" type="int"><![CDATA[The number of elements in the array.]]></parameter>
           </parameters>
           <returns><![CDATA[The value of the EffectParameter as an array of Vector4.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[count is less than or equal to zero. count must be greater than or equal to one.]]></exception>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Vector4.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Getting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -561,6 +646,9 @@
           <parameters>
             <parameter name="value" type="Quaternion"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Quaternion.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -576,6 +664,9 @@
           <parameters>
             <parameter name="value" type="Vector3"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Vector3.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -591,6 +682,9 @@
           <parameters>
             <parameter name="value" type="bool"><![CDATA[[ MarshalAsAttribute (U1)] The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Boolean.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -606,6 +700,9 @@
           <parameters>
             <parameter name="value" type="Matrix[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Matrix.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -621,6 +718,10 @@
           <parameters>
             <parameter name="value" type="Texture"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[SetValue was called after value was disposed.]]></exception>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Texture.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -636,6 +737,9 @@
           <parameters>
             <parameter name="value" type="Quaternion[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Quaternion.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -651,6 +755,9 @@
           <parameters>
             <parameter name="value" type="int[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an arry of type Int32.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -666,6 +773,9 @@
           <parameters>
             <parameter name="value" type="float"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Single.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -681,6 +791,9 @@
           <parameters>
             <parameter name="value" type="Vector4"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Vector4.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -696,6 +809,9 @@
           <parameters>
             <parameter name="value" type="float[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Single.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -711,6 +827,9 @@
           <parameters>
             <parameter name="value" type="Matrix"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Matrix.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -726,6 +845,9 @@
           <parameters>
             <parameter name="value" type="Vector4[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Vector4.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -741,6 +863,9 @@
           <parameters>
             <parameter name="value" type="string"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type String.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -756,6 +881,9 @@
           <parameters>
             <parameter name="value" type="Vector2"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Vector2.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -771,6 +899,9 @@
           <parameters>
             <parameter name="value" type="Vector3[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Vector3.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -786,6 +917,9 @@
           <parameters>
             <parameter name="value" type="int"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to type Int32.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -801,6 +935,9 @@
           <parameters>
             <parameter name="value" type="Vector2[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Vector2.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -816,6 +953,9 @@
           <parameters>
             <parameter name="value" type="bool[]"><![CDATA[The value to assign to the EffectParameter .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[Unable to cast this EffectParameter to an array of type Boolean.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -836,6 +976,9 @@
           <parameters>
             <parameter name="value" type="Matrix"><![CDATA[The value.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[This EffectParameter is not a matrix of the correct size to contain the transpose of the matrix specified in value.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -851,6 +994,9 @@
           <parameters>
             <parameter name="value" type="Matrix[]"><![CDATA[The value.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidCastException"><![CDATA[This EffectParameter is not a matrix of the correct size to contain the transpose of the matrix specified in value.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Setting the value of an effect parameter is a slow operation. Avoid high-frequency calls.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -860,7 +1006,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -882,7 +1028,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

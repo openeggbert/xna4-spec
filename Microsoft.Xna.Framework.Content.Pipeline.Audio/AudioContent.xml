@@ -34,6 +34,7 @@
     <property name="Data" type="ReadOnlyCollection&lt;byte&gt;" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public ReadOnlyCollection<byte> Data { get; }]]></syntax>
+      <value><![CDATA[If unprocessed, the source data; otherwise, the processed data.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -42,6 +43,7 @@
     <property name="Duration" type="TimeSpan" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public TimeSpan Duration { get; }]]></syntax>
+      <value><![CDATA[Duration of the audio data.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -51,6 +53,7 @@
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[ContentSerializerAttribute]
 public string FileName { get; }]]></syntax>
+      <value><![CDATA[The name of the file containing this data.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -59,6 +62,7 @@ public string FileName { get; }]]></syntax>
     <property name="FileType" type="AudioFileType" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public AudioFileType FileType { get; }]]></syntax>
+      <value><![CDATA[The AudioFileType of this audio source.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -67,6 +71,7 @@ public string FileName { get; }]]></syntax>
     <property name="Format" type="AudioFormat" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public AudioFormat Format { get; }]]></syntax>
+      <value><![CDATA[The AudioFormat of this audio source.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -75,6 +80,7 @@ public string FileName { get; }]]></syntax>
     <property name="LoopLength" type="int" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public int LoopLength { get; }]]></syntax>
+      <value><![CDATA[The number of samples in the loop.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -83,6 +89,7 @@ public string FileName { get; }]]></syntax>
     <property name="LoopStart" type="int" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public int LoopStart { get; }]]></syntax>
+      <value><![CDATA[The start of the loop.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

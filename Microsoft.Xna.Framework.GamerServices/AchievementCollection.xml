@@ -4,7 +4,8 @@
           name="AchievementCollection" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
-          interfaces="IList&lt;Achievement&gt;, ICollection&lt;Achievement&gt;, IEnumerable&lt;Achievement&gt;, IEnumerable, IDisposable">
+          interfaces="IList&lt;Achievement&gt;, ICollection&lt;Achievement&gt;, IEnumerable&lt;Achievement&gt;, IEnumerable, IDisposable"
+          modifier="sealed">
   <summary><![CDATA[Collection holding the achievements belonging to a signed-in gamer.]]></summary>
   <syntax><![CDATA[public sealed class AchievementCollection : IList<Achievement>, ICollection<Achievement>, IEnumerable<Achievement>, IEnumerable, IDisposable]]></syntax>
   <remarks><![CDATA[This collection may be indexed by key string or integer order. When you are indexing achievements by integer order or iterating over the collection, achievements are ordered with earned achievements first. They are sorted by most-recently earned, then sorted by unearned non-hidden achievements in the order they were defined using XLAST, and finally sorted by any unearned hidden achievements in XLAST order.]]></remarks>
@@ -21,6 +22,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of objects in the collection.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[The number of objects in the collection.]]></value>
       <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -33,6 +35,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -47,6 +50,7 @@
       <syntax><![CDATA[public Achievement this [
          int index
 ] { get; }]]></syntax>
+      <value><![CDATA[The achievement at the specified index.]]></value>
       <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -75,7 +79,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="IEnumerator&lt;Achievement&gt;">
       <summary><![CDATA[Gets an enumerator that can iterate through this AchievementCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">

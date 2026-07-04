@@ -32,6 +32,7 @@ public struct CompiledShader]]></syntax>
     <property name="ErrorsAndWarnings" type="string" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public string ErrorsAndWarnings { get; }]]></syntax>
+      <value><![CDATA[The first compile error message that occurred. This includes effect compiler errors and high-level language compile errors.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -40,6 +41,7 @@ public struct CompiledShader]]></syntax>
     <property name="ShaderSize" type="int" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public int ShaderSize { get; }]]></syntax>
+      <value><![CDATA[The size of the shader byte code, in bytes.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -48,6 +50,7 @@ public struct CompiledShader]]></syntax>
     <property name="ShaderVersion" type="Version" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public Version ShaderVersion { get; }]]></syntax>
+      <value><![CDATA[The shader version of the compiled shader.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -56,6 +59,7 @@ public struct CompiledShader]]></syntax>
     <property name="Success" type="bool" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public bool Success { get; }]]></syntax>
+      <value><![CDATA[true if the shader compilation succeeds; false otherwise.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -63,7 +67,7 @@ public struct CompiledShader]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="GetInputSemantics" returnType="void">
+    <method name="GetInputSemantics" returnType="ShaderSemantic[]">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="GetInputSemantics()">
@@ -77,7 +81,7 @@ public struct CompiledShader]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetOutputSemantics" returnType="void">
+    <method name="GetOutputSemantics" returnType="ShaderSemantic[]">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="GetOutputSemantics()">
@@ -91,7 +95,7 @@ public struct CompiledShader]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetSamplers" returnType="void">
+    <method name="GetSamplers" returnType="string[]">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="GetSamplers()">
@@ -105,7 +109,7 @@ public struct CompiledShader]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetShaderCode" returnType="void">
+    <method name="GetShaderCode" returnType="byte[]">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="GetShaderCode()">
@@ -119,7 +123,7 @@ public struct CompiledShader]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="ToString()">

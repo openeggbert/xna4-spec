@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="TitleContainer" kind="class"
           namespace="Microsoft.Xna.Framework"
-          assembly="Microsoft.Xna.Framework">
+          assembly="Microsoft.Xna.Framework"
+          modifier="static">
   <summary><![CDATA[Provides file stream access to the title's default storage location.]]></summary>
   <syntax><![CDATA[public static class TitleContainer]]></syntax>
   <platforms>
@@ -18,7 +19,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="OpenStream" returnType="void">
+    <method name="OpenStream" returnType="Stream" isStatic="true">
       <summary><![CDATA[Returns a stream to an existing file in the default title storage location.]]></summary>
       <overloads>
         <overload signature="OpenStream()">

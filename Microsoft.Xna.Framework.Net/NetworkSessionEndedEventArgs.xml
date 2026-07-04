@@ -34,6 +34,7 @@
     <property name="EndReason" type="NetworkSessionEndReason" access="get">
       <summary><![CDATA[Gets the reason for ending a session.]]></summary>
       <syntax><![CDATA[public NetworkSessionEndReason EndReason { get; }]]></syntax>
+      <value><![CDATA[Reason for ending the session.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -4,7 +4,8 @@
           name="GameComponentCollection" kind="class"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          baseClass="Collection&lt;IGameComponent&gt;">
+          baseClass="Collection&lt;IGameComponent&gt;"
+          modifier="sealed">
   <summary><![CDATA[A collection of game components.]]></summary>
   <syntax><![CDATA[public sealed class GameComponentCollection : Collection<IGameComponent>]]></syntax>
   <platforms>

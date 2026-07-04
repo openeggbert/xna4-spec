@@ -4,7 +4,8 @@
           name="DeviceNotResetException" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ExternalException">
+          baseClass="ExternalException"
+          modifier="sealed">
   <summary><![CDATA[The exception that is thrown when the device has been lost but can be reset at this time.]]></summary>
   <syntax><![CDATA[[SerializableAttribute]
 public sealed class DeviceNotResetException : ExternalException]]></syntax>

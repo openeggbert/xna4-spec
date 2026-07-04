@@ -17,6 +17,7 @@
     <property name="RequiresCubeMapPower2" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device requires that cube texture maps have dimensions specified as powers of two.]]></summary>
       <syntax><![CDATA[public bool RequiresCubeMapPower2 { get; }]]></syntax>
+      <value><![CDATA[true if the device requires that cube texture maps have dimensions specified as powers of two; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="RequiresPower2" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device only supports textures that are powers of two.]]></summary>
       <syntax><![CDATA[public bool RequiresPower2 { get; }]]></syntax>
+      <value><![CDATA[true if the device only supports textures that are powers of two; false otherwise.]]></value>
       <remarks><![CDATA[If RequiresPower2 is false , all textures must have widths and heights specified as powers of two. This requirement does not apply to either cube textures or volume textures. If RequiresPower2 is true , the device conditionally supports the use of 2D textures with dimensions that are not powers of two. If this value is false, and RequiresPower2 is false , unconditional support is provided for 2D textures with dimensions that are not powers of two.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -36,6 +38,7 @@
     <property name="RequiresSquareOnly" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device requires all textures to be square.]]></summary>
       <syntax><![CDATA[public bool RequiresSquareOnly { get; }]]></syntax>
+      <value><![CDATA[true if the device requires all textures to be square; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -45,6 +48,7 @@
     <property name="RequiresVolumeMapPower2" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device requires that volume texture maps have dimensions specified as powers of two.]]></summary>
       <syntax><![CDATA[public bool RequiresVolumeMapPower2 { get; }]]></syntax>
+      <value><![CDATA[true if the device requires that volume texture maps have dimensions specified as powers of two; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -54,6 +58,7 @@
     <property name="SupportsAlpha" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports alpha in texture pixels.]]></summary>
       <syntax><![CDATA[public bool SupportsAlpha { get; }]]></syntax>
+      <value><![CDATA[true if the device supports alpha in texture pixels; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -63,6 +68,7 @@
     <property name="SupportsCubeMap" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports cube textures]]></summary>
       <syntax><![CDATA[public bool SupportsCubeMap { get; }]]></syntax>
+      <value><![CDATA[true if the device supports cube textures; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -72,6 +78,7 @@
     <property name="SupportsMipCubeMap" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports mipmapped cube textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMipCubeMap { get; }]]></syntax>
+      <value><![CDATA[true if the device supports mipmapped cube textures; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -81,6 +88,7 @@
     <property name="SupportsMipMap" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports mipmapped textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMipMap { get; }]]></syntax>
+      <value><![CDATA[true if the device supports mipmapped textures; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -90,6 +98,7 @@
     <property name="SupportsMipVolumeMap" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports mipmapped volume textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMipVolumeMap { get; }]]></syntax>
+      <value><![CDATA[true if the device supports mipmapped volume textures; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -99,6 +108,7 @@
     <property name="SupportsNoProjectedBumpEnvironment" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device does not support a projected bump-environment lookup operation in programmable and fixed-function shaders.]]></summary>
       <syntax><![CDATA[public bool SupportsNoProjectedBumpEnvironment { get; }]]></syntax>
+      <value><![CDATA[true if the device does not support a projected bump-environment lookup operation in programmable and fixed-function shaders; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -108,6 +118,7 @@
     <property name="SupportsNonPower2Conditional" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports the use of 2D textures with dimensions that are not powers of two, under certain conditions.]]></summary>
       <syntax><![CDATA[public bool SupportsNonPower2Conditional { get; }]]></syntax>
+      <value><![CDATA[true if the device supports the use of 2D textures with dimensions that are not powers of two, under certain conditions; false otherwise.]]></value>
       <remarks><![CDATA[The device can use a texture with dimensions that are not a power of two, as long as these conditions are met: The texture addressing mode for the texture stage is set to TextureAddressMode.Clamp . Texture wrapping for the texture stage is disabled ( Wrap1 - Wrap15 set to TextureWrapCoordinates.Zero ) Mipmapping is not in use (use magnification filter only). Texture formats must not be SurfaceFormat.Dxt1 through SurfaceFormat.Dxt5 . If this flag is not set, and . RequiresPower2 is also not set, then unconditional support is provided for 2D textures with dimensions that are not powers of two. A texture that is not a power of two cannot be set at a stage that will be read based on a shader computation (such as the bem - ps and texm3x3 - ps instructions in pixel shaders versions 1_0 to 1_3). For example, these textures can be used to store bumps that will be fed into texture reads, but not the environment maps that are used in texbem - ps, texbeml - ps, and texm3x3spec - ps. This means that a texture with dimensions that are not powers of two cannot be addressed or sampled using texture coordinates computed within the shader. This type of operation is known as a dependent read and cannot be performed on these types of textures.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -118,6 +129,7 @@
     <property name="SupportsPerspective" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports perspective correction texturing]]></summary>
       <syntax><![CDATA[public bool SupportsPerspective { get; }]]></syntax>
+      <value><![CDATA[true if the device supports perspective correction texturing; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -127,6 +139,7 @@
     <property name="SupportsProjected" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports per pixel projective divide.]]></summary>
       <syntax><![CDATA[public bool SupportsProjected { get; }]]></syntax>
+      <value><![CDATA[true if the device supports supports per pixel projective divide; false otherwise.]]></value>
       <remarks><![CDATA[When applied, the device divides transformed texture coordinates by the last texture coordinate. If this capability is present, the projective divide occurs per pixel. If this capability is not present, but the projective divide needs to occur anyway, it is performed on a per-vertex basis by the Direct3D runtime.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -137,6 +150,7 @@
     <property name="SupportsTextureRepeatNotScaledBySize" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device does not scale texture indices by the texture size prior to interpolation.]]></summary>
       <syntax><![CDATA[public bool SupportsTextureRepeatNotScaledBySize { get; }]]></syntax>
+      <value><![CDATA[true if the device does not scale texture indices by the texture size prior to interpolation; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -146,6 +160,7 @@
     <property name="SupportsVolumeMap" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports volume textures.]]></summary>
       <syntax><![CDATA[public bool SupportsVolumeMap { get; }]]></syntax>
+      <value><![CDATA[true if the device supports volume textures; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -154,7 +169,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

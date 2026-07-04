@@ -48,6 +48,9 @@
         <overload signature="Validate()">
           <summary><![CDATA[Validates that the required contents of this volume texture are present and valid. This method verifies that mip counts are correct down each individual 2D face, and that width and height are shrinking appropriately.]]></summary>
           <syntax><![CDATA[public override void Validate ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidContentException"><![CDATA[The texture is not a valid one.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>

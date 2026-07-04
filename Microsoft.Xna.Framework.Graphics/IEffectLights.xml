@@ -18,6 +18,7 @@
     <property name="AmbientLightColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the ambient light color for the current effect.]]></summary>
       <syntax><![CDATA[public Vector3 AmbientLightColor { get; set; }]]></syntax>
+      <value><![CDATA[Three-component color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -28,6 +29,7 @@
     <property name="DirectionalLight0" type="DirectionalLight" access="get">
       <summary><![CDATA[Gets the first directional light for the current effect.]]></summary>
       <syntax><![CDATA[public DirectionalLight DirectionalLight0 { get; }]]></syntax>
+      <value><![CDATA[The directional light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -38,6 +40,7 @@
     <property name="DirectionalLight1" type="DirectionalLight" access="get">
       <summary><![CDATA[Gets the second directional light for the current effect.]]></summary>
       <syntax><![CDATA[public DirectionalLight DirectionalLight1 { get; }]]></syntax>
+      <value><![CDATA[The directional light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -48,6 +51,7 @@
     <property name="DirectionalLight2" type="DirectionalLight" access="get">
       <summary><![CDATA[Gets the third directional light for the current effect.]]></summary>
       <syntax><![CDATA[public DirectionalLight DirectionalLight2 { get; }]]></syntax>
+      <value><![CDATA[The directional light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

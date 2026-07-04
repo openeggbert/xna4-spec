@@ -34,6 +34,7 @@
     <property name="Gamer" type="SignedInGamer" access="get">
       <summary><![CDATA[Gets the gamer who accepted the game invitation.]]></summary>
       <syntax><![CDATA[public SignedInGamer Gamer { get; }]]></syntax>
+      <value><![CDATA[The gamer accepting the game invitation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="MediaSource" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
-          assembly="Microsoft.Xna.Framework.Media">
+          assembly="Microsoft.Xna.Framework.Media"
+          modifier="sealed">
   <summary><![CDATA[Provides methods and properties to access the source or sources from which the media will be read.]]></summary>
   <syntax><![CDATA[public sealed class MediaSource]]></syntax>
   <remarks><![CDATA[MediaSource provides access to the source or sources from which the media will be read. A source can be either the local device, or a device connected through Windows Media Connect. On Windows and Zune, the only available MediaSource is the local device. On Xbox 360, a MediaSource can either be the local device or a device connected through Windows Media Connect. Windows Media Connect is software that lets you connect your Xbox 360 console to a computer running Microsoft Windows. Connecting this way enables you to view media on the connected computer in the Xbox 360 dashboard.]]></remarks>
@@ -19,6 +20,7 @@
     <property name="MediaSourceType" type="MediaSourceType" access="get">
       <summary><![CDATA[Gets the MediaSourceType of this media source.]]></summary>
       <syntax><![CDATA[public MediaSourceType MediaSourceType { get; }]]></syntax>
+      <value><![CDATA[The MediaSourceType of this media source.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -29,6 +31,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of this media source.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The media source name.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -38,7 +41,7 @@
     </property>
   </properties>
   <methods>
-    <method name="GetAvailableMediaSources" returnType="void">
+    <method name="GetAvailableMediaSources" returnType="IList&lt;MediaSource&gt;" isStatic="true">
       <summary><![CDATA[Gets the available media sources.]]></summary>
       <overloads>
         <overload signature="GetAvailableMediaSources()">
@@ -55,7 +58,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns the name of this media source.]]></summary>
       <overloads>
         <overload signature="ToString()">

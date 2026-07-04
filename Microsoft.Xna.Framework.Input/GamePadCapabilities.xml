@@ -17,6 +17,7 @@
     <property name="GamePadType" type="GamePadType" access="get">
       <summary><![CDATA[Gets the type of controller.]]></summary>
       <syntax><![CDATA[public GamePadType GamePadType { get; }]]></syntax>
+      <value><![CDATA[Enumerated value describing the controller type.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="HasAButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has an A button.]]></summary>
       <syntax><![CDATA[public bool HasAButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +37,7 @@
     <property name="HasBButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a B button.]]></summary>
       <syntax><![CDATA[public bool HasBButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +47,7 @@
     <property name="HasBackButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a BACK button.]]></summary>
       <syntax><![CDATA[public bool HasBackButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +57,7 @@
     <property name="HasBigButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a BigButton button.]]></summary>
       <syntax><![CDATA[public bool HasBigButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -64,6 +69,7 @@
     <property name="HasDPadDownButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a directional pad DOWN button.]]></summary>
       <syntax><![CDATA[public bool HasDPadDownButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -73,6 +79,7 @@
     <property name="HasDPadLeftButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a directional pad LEFT button.]]></summary>
       <syntax><![CDATA[public bool HasDPadLeftButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -82,6 +89,7 @@
     <property name="HasDPadRightButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a directional pad RIGHT button.]]></summary>
       <syntax><![CDATA[public bool HasDPadRightButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -91,6 +99,7 @@
     <property name="HasDPadUpButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a directional pad UP button.]]></summary>
       <syntax><![CDATA[public bool HasDPadUpButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -100,6 +109,7 @@
     <property name="HasLeftShoulderButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a left bumper button.]]></summary>
       <syntax><![CDATA[public bool HasLeftShoulderButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -109,6 +119,7 @@
     <property name="HasLeftStickButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a digital button control on the left analog stick.]]></summary>
       <syntax><![CDATA[public bool HasLeftStickButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -118,6 +129,7 @@
     <property name="HasLeftTrigger" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a left analog trigger.]]></summary>
       <syntax><![CDATA[public bool HasLeftTrigger { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -127,6 +139,7 @@
     <property name="HasLeftVibrationMotor" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a low-frequency vibration motor.]]></summary>
       <syntax><![CDATA[public bool HasLeftVibrationMotor { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -136,6 +149,7 @@
     <property name="HasLeftXThumbStick" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller supports a left analog control with horizontal movement.]]></summary>
       <syntax><![CDATA[public bool HasLeftXThumbStick { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -145,6 +159,7 @@
     <property name="HasLeftYThumbStick" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller supports a left analog control with vertical movement.]]></summary>
       <syntax><![CDATA[public bool HasLeftYThumbStick { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -154,6 +169,7 @@
     <property name="HasRightShoulderButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a right bumper button.]]></summary>
       <syntax><![CDATA[public bool HasRightShoulderButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -163,6 +179,7 @@
     <property name="HasRightStickButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a digital button control on the right analog stick.]]></summary>
       <syntax><![CDATA[public bool HasRightStickButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -172,6 +189,7 @@
     <property name="HasRightTrigger" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a right analog trigger.]]></summary>
       <syntax><![CDATA[public bool HasRightTrigger { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -181,6 +199,7 @@
     <property name="HasRightVibrationMotor" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a high-frequency vibration motor.]]></summary>
       <syntax><![CDATA[public bool HasRightVibrationMotor { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -190,6 +209,7 @@
     <property name="HasRightXThumbStick" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller supports a right analog control with horizontal movement.]]></summary>
       <syntax><![CDATA[public bool HasRightXThumbStick { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -199,6 +219,7 @@
     <property name="HasRightYThumbStick" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller supports a right analog control with vertical movement.]]></summary>
       <syntax><![CDATA[public bool HasRightYThumbStick { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -208,6 +229,7 @@
     <property name="HasStartButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a START button.]]></summary>
       <syntax><![CDATA[public bool HasStartButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -217,6 +239,7 @@
     <property name="HasVoiceSupport" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller supports voice.]]></summary>
       <syntax><![CDATA[public bool HasVoiceSupport { get; }]]></syntax>
+      <value><![CDATA[true if the controller supports voice; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -226,6 +249,7 @@
     <property name="HasXButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has an X button.]]></summary>
       <syntax><![CDATA[public bool HasXButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -235,6 +259,7 @@
     <property name="HasYButton" type="bool" access="get">
       <summary><![CDATA[Indicates whether the controller has a Y button.]]></summary>
       <syntax><![CDATA[public bool HasYButton { get; }]]></syntax>
+      <value><![CDATA[true if the controller has this capability; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -244,6 +269,7 @@
     <property name="IsConnected" type="bool" access="get">
       <summary><![CDATA[Indicates whether the Xbox 360 Controller is connected.]]></summary>
       <syntax><![CDATA[public bool IsConnected { get; }]]></syntax>
+      <value><![CDATA[true if the controller is connected; false otherwise.]]></value>
       <remarks><![CDATA[When calling GetState or GetCapabilities , check the returned structure's IsConnected property value. If the controller has been disconnected, this value will be false . When a controller is disconnected, values for its state and/or capabilities will not be valid. The controller will also not be able to receive new vibration settings.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

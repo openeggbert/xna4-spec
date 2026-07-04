@@ -36,6 +36,7 @@
     <property name="Down" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the Down direction on the Xbox 360 Controller directional pad is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState Down { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -45,6 +46,7 @@
     <property name="Left" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the Left direction on the Xbox 360 Controller directional pad is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState Left { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -54,6 +56,7 @@
     <property name="Right" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the Right direction on the Xbox 360 Controller directional pad is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState Right { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -63,6 +66,7 @@
     <property name="Up" type="ButtonState" access="get">
       <summary><![CDATA[Identifies whether the Up direction on the Xbox 360 Controller directional pad is pressed.]]></summary>
       <syntax><![CDATA[public ButtonState Up { get; }]]></syntax>
+      <value><![CDATA[ButtonState.Pressed if the button is pressed; ButtonState.Released otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -91,7 +95,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -106,7 +110,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -121,7 +125,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two GamePadDPad instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -143,7 +147,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two GamePadDPad instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

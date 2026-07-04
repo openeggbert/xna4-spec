@@ -12,8 +12,8 @@
     <platform>Windows XP</platform>
   </platforms>
   <members>
-    <member name="Auto"><summary><![CDATA[0]]></summary></member>
-    <member name="Debug"><summary><![CDATA[1]]></summary></member>
-    <member name="Optimize"><summary><![CDATA[2]]></summary></member>
+    <member name="Auto" value="0"><summary><![CDATA[Enables effect debugging when built with Debug profile.]]></summary></member>
+    <member name="Debug" value="1"><summary><![CDATA[Enables effect debugging for all profiles. Will produce unoptimized shaders.]]></summary></member>
+    <member name="Optimize" value="2"><summary><![CDATA[Disables debugging for all profiles, produce optimized shaders.]]></summary></member>
   </members>
 </xna-type>

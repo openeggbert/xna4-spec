@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="IntermediateWriter" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate"
+          modifier="sealed">
   <summary><![CDATA[Provides an implementation of many of the methods of IntermediateSerializer including serialization and state tracking for shared resources and external references.]]></summary>
   <syntax><![CDATA[public sealed class IntermediateWriter]]></syntax>
   <remarks><![CDATA[A new instance of IntermediateWriter is constructed for each serialize operation.]]></remarks>
@@ -17,6 +18,7 @@
     <property name="Serializer" type="IntermediateSerializer" access="get">
       <summary><![CDATA[Gets the parent serializer.]]></summary>
       <syntax><![CDATA[public IntermediateSerializer Serializer { get; }]]></syntax>
+      <value><![CDATA[The parent serializer.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -25,6 +27,7 @@
     <property name="Xml" type="XmlWriter" access="get">
       <summary><![CDATA[Gets the XML output stream.]]></summary>
       <syntax><![CDATA[public XmlWriter Xml { get; }]]></syntax>
+      <value><![CDATA[The XML output stream.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -32,6 +35,138 @@
     </property>
   </properties>
   <methods>
+    <method name="WriteExternalReference" returnType="void">
+      <summary><![CDATA[Adds an external reference to the output XML, and records the filename to be serialized later.]]></summary>
+      <overloads>
+        <overload signature="WriteExternalReference()">
+          <summary><![CDATA[Adds an external reference to the output XML, and records the filename to be serialized later.]]></summary>
+          <syntax><![CDATA[public void WriteExternalReference<T> (
+         ExternalReference<T> value
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of external reference to add.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="value" type="ExternalReference&lt;T&gt;"><![CDATA[The external reference to add.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="WriteObject" returnType="void">
+      <summary><![CDATA[Writes a single object to the output XML stream.]]></summary>
+      <overloads>
+        <overload signature="WriteObject(T, ContentSerializerAttribute)">
+          <summary><![CDATA[Writes a single object to the output XML stream.]]></summary>
+          <syntax><![CDATA[public void WriteObject<T> (
+         T value,
+         ContentSerializerAttribute format
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of value to write.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="value" type="T"><![CDATA[The value to write.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format of the XML.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="WriteObject(T, ContentSerializerAttribute, ContentTypeSerializer)">
+          <summary><![CDATA[Writes a single object to the output XML stream, using the specified type hint.]]></summary>
+          <syntax><![CDATA[public void WriteObject<T> (
+         T value,
+         ContentSerializerAttribute format,
+         ContentTypeSerializer typeSerializer
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of value to write.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="value" type="T"><![CDATA[The value to write.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format of the XML.]]></parameter>
+            <parameter name="typeSerializer" type="ContentTypeSerializer"><![CDATA[The type serializer.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="WriteRawObject" returnType="void">
+      <summary><![CDATA[Writes a single object to the output XML stream using the specified serializer worker.]]></summary>
+      <overloads>
+        <overload signature="WriteRawObject(T, ContentSerializerAttribute)">
+          <summary><![CDATA[Writes a single object to the output XML stream using the specified serializer worker.]]></summary>
+          <syntax><![CDATA[public void WriteRawObject<T> (
+         T value,
+         ContentSerializerAttribute format
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of value to write.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="value" type="T"><![CDATA[The value to write.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format of the XML.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[This method does not write any type identifier, so it cannot support null or polymorphic values and the reader must specify an identical type while deserializing.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="WriteRawObject(T, ContentSerializerAttribute, ContentTypeSerializer)">
+          <summary><![CDATA[Writes a single object to the output XML stream as an instance of the specified type.]]></summary>
+          <syntax><![CDATA[public void WriteRawObject<T> (
+         T value,
+         ContentSerializerAttribute format,
+         ContentTypeSerializer typeSerializer
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of value to write.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="value" type="T"><![CDATA[The value to write.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format of the XML.]]></parameter>
+            <parameter name="typeSerializer" type="ContentTypeSerializer"><![CDATA[The type serializer.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[If you specify a base class of the actual object value, only data from this base type will be written. This method does not write any type identifier, so it cannot support null or polymorphic values and the reader must specify an identical type while deserializing.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="WriteSharedResource" returnType="void">
+      <summary><![CDATA[Adds a shared reference to the output XML and records the object to be serialized later.]]></summary>
+      <overloads>
+        <overload signature="WriteSharedResource()">
+          <summary><![CDATA[Adds a shared reference to the output XML and records the object to be serialized later.]]></summary>
+          <syntax><![CDATA[public void WriteSharedResource<T> (
+         T value,
+         ContentSerializerAttribute format
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of value to write.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="value" type="T"><![CDATA[The value to write.]]></parameter>
+            <parameter name="format" type="ContentSerializerAttribute"><![CDATA[The format of the XML.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
     <method name="WriteTypeName" returnType="void">
       <summary><![CDATA[Writes a managed type descriptor to the XML output stream.]]></summary>
       <overloads>

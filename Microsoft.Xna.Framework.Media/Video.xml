@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="Video" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
-          assembly="Microsoft.Xna.Framework.Media">
+          assembly="Microsoft.Xna.Framework.Media"
+          modifier="sealed">
   <summary><![CDATA[Represents a video.]]></summary>
   <syntax><![CDATA[public sealed class Video]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="Duration" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the duration of the Video.]]></summary>
       <syntax><![CDATA[public TimeSpan Duration { get; }]]></syntax>
+      <value><![CDATA[Duration of the video, as a TimeSpan structure.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -28,6 +30,7 @@
     <property name="FramesPerSecond" type="float" access="get">
       <summary><![CDATA[Gets the frame rate of this video.]]></summary>
       <syntax><![CDATA[public float FramesPerSecond { get; }]]></syntax>
+      <value><![CDATA[The number of frames this video displays per second.]]></value>
       <remarks><![CDATA[24, 30, and 29.97 are common frame rates.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -39,6 +42,7 @@
     <property name="Height" type="int" access="get">
       <summary><![CDATA[Gets the height of this video, in pixels.]]></summary>
       <syntax><![CDATA[public int Height { get; }]]></syntax>
+      <value><![CDATA[The height of this video, in pixels.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -49,6 +53,7 @@
     <property name="VideoSoundtrackType" type="VideoSoundtrackType" access="get">
       <summary><![CDATA[Gets the VideoSoundtrackType for this video.]]></summary>
       <syntax><![CDATA[public VideoSoundtrackType VideoSoundtrackType { get; }]]></syntax>
+      <value><![CDATA[The type of soundtrack used in the video: dialog, music, or both.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -59,6 +64,7 @@
     <property name="Width" type="int" access="get">
       <summary><![CDATA[Gets the width of this video, in pixels.]]></summary>
       <syntax><![CDATA[public int Width { get; }]]></syntax>
+      <value><![CDATA[The width of this video resource, in pixels.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="TextureCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Represents a collection of Texture objects.]]></summary>
   <syntax><![CDATA[public sealed class TextureCollection]]></syntax>
   <platforms>
@@ -19,6 +20,11 @@
       <syntax><![CDATA[public Texture this [
          int index
 ] { get; set; }]]></syntax>
+      <value><![CDATA[The Texture at the specified index.]]></value>
+      <exceptions>
+        <exception type="InvalidOperationException"><![CDATA[The sampler number is invalid. It is either less than zero or greater than the maximum number of textures available for the graphics device.]]></exception>
+        <exception type="ObjectDisposedException"><![CDATA[Item was called after the GraphicsDevice was disposed.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -4,7 +4,8 @@
           name="IndexCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="Collection&lt;int&gt;">
+          baseClass="Collection&lt;int&gt;"
+          modifier="sealed">
   <summary><![CDATA[Provides methods for maintaining a list of index values.]]></summary>
   <syntax><![CDATA[public sealed class IndexCollection : Collection<int>]]></syntax>
   <platforms>

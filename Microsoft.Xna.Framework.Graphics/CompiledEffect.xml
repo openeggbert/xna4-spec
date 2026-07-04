@@ -32,6 +32,7 @@ public struct CompiledEffect]]></syntax>
     <property name="ErrorsAndWarnings" type="string" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public string ErrorsAndWarnings { get; }]]></syntax>
+      <value><![CDATA[A string containing errors and warnings from compiling the effect.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -40,6 +41,7 @@ public struct CompiledEffect]]></syntax>
     <property name="Success" type="bool" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public bool Success { get; }]]></syntax>
+      <value><![CDATA[true if the effect was compiled successfully; false otherwise.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -47,7 +49,7 @@ public struct CompiledEffect]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="GetEffectCode" returnType="void">
+    <method name="GetEffectCode" returnType="byte[]">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="GetEffectCode()">
@@ -61,7 +63,7 @@ public struct CompiledEffect]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="ToString()">

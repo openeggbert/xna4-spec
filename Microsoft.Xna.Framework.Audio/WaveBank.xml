@@ -27,6 +27,10 @@
         <parameter name="offset" type="int"><![CDATA[Offset within the wave bank data file. This offset must be DVD sector aligned.]]></parameter>
         <parameter name="packetsize" type="short"><![CDATA[Stream packet size, in sectors, to use for each stream. The minimum value is 2.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[The audioEngine or nonStreamingWaveBankFilenameparameter is null.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create the WaveBank resource.]]></exception>
+      </exceptions>
       <remarks><![CDATA[This constructor constructs a streaming wave bank whose contents are streamed from storage as needed. When setting packetsize , note that the size of a DVD sector is 2,048 bytes. Therefore, setting this value to 2 would result in a packet size of 4,096 bytes. Setting it to 3 would specify packets of 6,144 bytes, setting it to 4 would specify packets of 8,192 bytes, and so on. The optimal DVD size is a multiple of 16 (1 DVD block = 16 DVD sectors). After creating a streaming wave bank, you must call Update at least once from the AudioEngine that was used to create the streaming wave bank before attempting to play a wave from the wave bank. This properly prepares the wave bank for use. Attempts to play waves out of any wave bank before the wave bank is prepared will result in an error.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -44,6 +48,10 @@
         <parameter name="audioEngine" type="AudioEngine"><![CDATA[Instance of an AudioEngine to associate this wave bank with.]]></parameter>
         <parameter name="nonStreamingWaveBankFilename" type="string"><![CDATA[Path to the wave bank file to load.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[The audioEngine or nonStreamingWaveBankFilenameparameter is null.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create the WaveBank resource.]]></exception>
+      </exceptions>
       <remarks><![CDATA[This constructor generates an in-memory version of a wave bank. The entire wave bank contents are held in memory.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -56,6 +64,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -65,6 +74,7 @@
     <property name="IsInUse" type="bool" access="get">
       <summary><![CDATA[Returns whether the wave bank is currently in use.]]></summary>
       <syntax><![CDATA[public bool IsInUse { get; }]]></syntax>
+      <value><![CDATA[true if the wave bank is in use; false otherwise.]]></value>
       <remarks><![CDATA[This value will return true if the wave bank is currently referenced by at least one valid cue instance or other client. For example, the game itself might reference the wave bank.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -75,6 +85,7 @@
     <property name="IsPrepared" type="bool" access="get">
       <summary><![CDATA[Returns whether the wave bank is prepared to play.]]></summary>
       <syntax><![CDATA[public bool IsPrepared { get; }]]></syntax>
+      <value><![CDATA[true if the wave bank is prepared; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -142,7 +153,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -157,7 +168,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -179,7 +190,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

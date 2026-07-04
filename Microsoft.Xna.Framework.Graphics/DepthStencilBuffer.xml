@@ -32,6 +32,12 @@
         <parameter name="multiSampleType" type="MultiSampleType"><![CDATA[The levels of full-scene multisampling that the device can apply.]]></parameter>
         <parameter name="multiSampleQuality" type="int"><![CDATA[The number of quality stops available for a given multisample type.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[width and height are less than or equal to zero. width and height must be greater than zero.]]></exception>
+        <exception type="ArgumentException"><![CDATA[One of the following conditions is true: The device does not support creating a depth buffer of the given format. format is DepthFormat.Unknown. Textures cannot be created using DepthFormat.Unknown. width is larger than MaxTextureWidth. height is larger than MaxTextureHeight.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create this DepthStencilBuffer resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -52,6 +58,12 @@
         <parameter name="height" type="int"><![CDATA[Height, in pixels, of the depth stencil buffer.]]></parameter>
         <parameter name="format" type="DepthFormat"><![CDATA[The format of the data to be placed in this depth stencil buffer.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[width and height are less than or equal to zero. width and height must be greater than zero.]]></exception>
+        <exception type="ArgumentException"><![CDATA[One of the following conditions is true: The device does not support creating a depth buffer of the given format. format is DepthFormat.Unknown. Textures cannot be created using DepthFormat.Unknown. width is larger than MaxTextureWidth. height is larger than MaxTextureHeight.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create this DepthStencilBuffer resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -63,6 +75,7 @@
     <property name="Format" type="DepthFormat" access="get">
       <summary><![CDATA[Gets the data format of this depth stencil buffer.]]></summary>
       <syntax><![CDATA[public DepthFormat Format { get; }]]></syntax>
+      <value><![CDATA[The data format of this depth stencil buffer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -72,6 +85,7 @@
     <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the graphics device associated with this depth stencil buffer.]]></summary>
       <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[The graphics device associated with this depth stencil buffer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -81,6 +95,7 @@
     <property name="Height" type="int" access="get">
       <summary><![CDATA[Gets the height, in pixels, of the surface.]]></summary>
       <syntax><![CDATA[public int Height { get; }]]></syntax>
+      <value><![CDATA[The height, in pixels, of the surface.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -90,6 +105,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed. false if the object is not disposed.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -99,6 +115,7 @@
     <property name="MultiSampleQuality" type="int" access="get">
       <summary><![CDATA[Gets the number of quality stops available for a given multisample type.]]></summary>
       <syntax><![CDATA[public int MultiSampleQuality { get; }]]></syntax>
+      <value><![CDATA[The number of quality stops available for a given multisample type.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -108,6 +125,7 @@
     <property name="MultiSampleType" type="MultiSampleType" access="get">
       <summary><![CDATA[Gets the levels of full-scene multisampling that the device can apply.]]></summary>
       <syntax><![CDATA[public MultiSampleType MultiSampleType { get; }]]></syntax>
+      <value><![CDATA[The levels of full-scene multisampling that the device can apply.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -117,6 +135,7 @@
     <property name="Name" type="string" access="get;set">
       <summary><![CDATA[Gets the name of this depth stencil buffer.]]></summary>
       <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <value><![CDATA[The name of this depth stencil buffer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -126,6 +145,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Gets the resource tag for this depth stencil buffer.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[The resource tag for this depth stencil buffer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -135,6 +155,7 @@
     <property name="Width" type="int" access="get">
       <summary><![CDATA[Returns the width, in pixels, of this DepthStencilBuffer.]]></summary>
       <syntax><![CDATA[public int Width { get; }]]></syntax>
+      <value><![CDATA[The width, in pixels, of this DepthStencilBuffer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -204,7 +225,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -219,7 +240,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -241,7 +262,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

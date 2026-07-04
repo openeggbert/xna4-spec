@@ -26,6 +26,7 @@
     <property name="Channels" type="AnimationChannelDictionary" access="get">
       <summary><![CDATA[Gets the collection of animation data channels. Each channel describes the movement of a single bone or rigid object.]]></summary>
       <syntax><![CDATA[public AnimationChannelDictionary Channels { get; }]]></syntax>
+      <value><![CDATA[Collection of animation channels.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -34,6 +35,7 @@
     <property name="Duration" type="TimeSpan" access="get;set">
       <summary><![CDATA[Gets or sets the total length of the animation.]]></summary>
       <syntax><![CDATA[public TimeSpan Duration { get; set; }]]></syntax>
+      <value><![CDATA[Length of animation.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

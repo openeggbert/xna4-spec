@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="EffectTechnique" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Represents an effect technique.]]></summary>
   <syntax><![CDATA[public sealed class EffectTechnique]]></syntax>
   <platforms>
@@ -17,6 +18,7 @@
     <property name="Annotations" type="EffectAnnotationCollection" access="get">
       <summary><![CDATA[Gets the EffectAnnotation objects associated with this technique.]]></summary>
       <syntax><![CDATA[public EffectAnnotationCollection Annotations { get; }]]></syntax>
+      <value><![CDATA[The EffectAnnotation objects associated with this technique.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +28,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of this technique.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of this technique.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +38,7 @@
     <property name="Passes" type="EffectPassCollection" access="get">
       <summary><![CDATA[Gets the number of passes this rendering technique requires.]]></summary>
       <syntax><![CDATA[public EffectPassCollection Passes { get; }]]></syntax>
+      <value><![CDATA[The number of passes this rendering technique requires.]]></value>
       <remarks><![CDATA[Some video cards can render two textures in a single pass. However, if a card does not have this capability, it is often possible to render the same effect in two passes, using one texture for each pass.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -64,7 +68,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -79,7 +83,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="IsParameterUsed" returnType="void">
+    <method name="IsParameterUsed" returnType="bool">
       <summary><![CDATA[Determines whether a given EffectParameter is used by this technique.]]></summary>
       <overloads>
         <overload signature="IsParameterUsed()">
@@ -91,6 +95,9 @@
             <parameter name="parameter" type="EffectParameter"><![CDATA[The effect parameter to check.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the parameter is used by this technique; false otherwise.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[parameter is null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -99,7 +106,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Validate" returnType="void">
+    <method name="Validate" returnType="bool">
       <summary><![CDATA[Validates this technique.]]></summary>
       <overloads>
         <overload signature="Validate()">
@@ -114,7 +121,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -136,7 +143,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

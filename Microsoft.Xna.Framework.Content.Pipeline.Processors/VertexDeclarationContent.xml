@@ -27,6 +27,7 @@
     <property name="VertexElements" type="Collection&lt;VertexElement&gt;" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public Collection<VertexElement> VertexElements { get; }]]></syntax>
+      <value><![CDATA[The VertexElement object of the vertex declaration.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -36,6 +37,7 @@
     <property name="VertexStride" type="Nullable&lt;int&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public Nullable<int> VertexStride { get; set; }]]></syntax>
+      <value><![CDATA[The stride (in bytes).]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>

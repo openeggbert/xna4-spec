@@ -17,6 +17,7 @@
     <property name="Enabled" type="Object" access="get">
       <summary><![CDATA[Indicates whether the game component's Update method should be called in Game.Update.]]></summary>
       <syntax><![CDATA[public virtual abstract bool Enabled { get; }]]></syntax>
+      <value><![CDATA[true if Update should be called; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="UpdateOrder" type="Object" access="get">
       <summary><![CDATA[Indicates when the game component should be updated relative to other game components. Lower values are updated first.]]></summary>
       <syntax><![CDATA[public virtual abstract int UpdateOrder { get; }]]></syntax>
+      <value><![CDATA[When the game component should be updated.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

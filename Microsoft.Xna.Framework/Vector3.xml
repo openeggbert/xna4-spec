@@ -68,6 +68,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     <property name="Backward" type="Vector3" access="get" isStatic="true">
       <summary><![CDATA[Returns a unit Vector3 pointing backward (0, 0, 1).]]></summary>
       <syntax><![CDATA[public static Vector3 Backward { get; }]]></syntax>
+      <value><![CDATA[A unit Vector3 pointing backward.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -77,6 +78,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     <property name="Down" type="Vector3" access="get" isStatic="true">
       <summary><![CDATA[Returns a unit Vector3 pointing down (0, −1, 0).]]></summary>
       <syntax><![CDATA[public static Vector3 Down { get; }]]></syntax>
+      <value><![CDATA[A unit Vector3 pointing down.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -86,6 +88,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     <property name="Forward" type="Vector3" access="get" isStatic="true">
       <summary><![CDATA[Returns a unit Vector3 pointing forward (0, 0, −1).]]></summary>
       <syntax><![CDATA[public static Vector3 Forward { get; }]]></syntax>
+      <value><![CDATA[A unit Vector3 pointing forward.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -95,6 +98,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     <property name="Left" type="Vector3" access="get" isStatic="true">
       <summary><![CDATA[Returns a unit Vector3 pointing left (−1, 0, 0).]]></summary>
       <syntax><![CDATA[public static Vector3 Left { get; }]]></syntax>
+      <value><![CDATA[A unit Vector3 pointing left.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -104,6 +108,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     <property name="One" type="Vector3" access="get" isStatic="true">
       <summary><![CDATA[Returns a Vector3 with ones in all of its components.]]></summary>
       <syntax><![CDATA[public static Vector3 One { get; }]]></syntax>
+      <value><![CDATA[a Vector3 with ones in all of its components.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -113,6 +118,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     <property name="Right" type="Vector3" access="get" isStatic="true">
       <summary><![CDATA[Returns a unit Vector3 pointing to the right (1, 0, 0).]]></summary>
       <syntax><![CDATA[public static Vector3 Right { get; }]]></syntax>
+      <value><![CDATA[A unit Vector3 pointing to the right.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -122,6 +128,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     <property name="UnitX" type="Vector3" access="get" isStatic="true">
       <summary><![CDATA[Returns the x unit Vector3 (1, 0, 0).]]></summary>
       <syntax><![CDATA[public static Vector3 UnitX { get; }]]></syntax>
+      <value><![CDATA[Returns the x unit Vector3 .]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -131,6 +138,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     <property name="UnitY" type="Vector3" access="get" isStatic="true">
       <summary><![CDATA[Returns the y unit Vector3 (0, 1, 0).]]></summary>
       <syntax><![CDATA[public static Vector3 UnitY { get; }]]></syntax>
+      <value><![CDATA[Returns the y unit Vector3.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -140,6 +148,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     <property name="UnitZ" type="Vector3" access="get" isStatic="true">
       <summary><![CDATA[Returns the z unit Vector3 (0, 0, 1).]]></summary>
       <syntax><![CDATA[public static Vector3 UnitZ { get; }]]></syntax>
+      <value><![CDATA[Returns the z unit Vector3.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -149,6 +158,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     <property name="Up" type="Vector3" access="get" isStatic="true">
       <summary><![CDATA[Returns a unit Vector3 pointing up (0, 1, 0).]]></summary>
       <syntax><![CDATA[public static Vector3 Up { get; }]]></syntax>
+      <value><![CDATA[A unit Vector3 pointing up.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -158,6 +168,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
     <property name="Zero" type="Vector3" access="get" isStatic="true">
       <summary><![CDATA[Returns a Vector3 with all of its components set to zero.]]></summary>
       <syntax><![CDATA[public static Vector3 Zero { get; }]]></syntax>
+      <value><![CDATA[A Vector3 with all of its components set to zero.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -627,7 +638,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code of the vector object.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -694,7 +705,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Length" returnType="void">
+    <method name="Length" returnType="float">
       <summary><![CDATA[Calculates the length of the vector.]]></summary>
       <overloads>
         <overload signature="Length()">
@@ -709,7 +720,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="LengthSquared" returnType="void">
+    <method name="LengthSquared" returnType="float">
       <summary><![CDATA[Calculates the length of the vector squared.]]></summary>
       <overloads>
         <overload signature="LengthSquared()">
@@ -1133,7 +1144,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of the current object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -1389,7 +1400,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Addition" returnType="void">
+    <method name="op_Addition" returnType="Vector3" isStatic="true">
       <summary><![CDATA[Adds two vectors.]]></summary>
       <overloads>
         <overload signature="op_Addition()">
@@ -1451,7 +1462,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Tests vectors for equality.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -1473,7 +1484,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Tests vectors for inequality.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">
@@ -1552,7 +1563,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Subtraction" returnType="void">
+    <method name="op_Subtraction" returnType="Vector3" isStatic="true">
       <summary><![CDATA[Subtracts a vector from a vector.]]></summary>
       <overloads>
         <overload signature="op_Subtraction()">
@@ -1574,7 +1585,7 @@ public struct Vector3 : IEquatable<Vector3>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_UnaryNegation" returnType="void">
+    <method name="op_UnaryNegation" returnType="Vector3" isStatic="true">
       <summary><![CDATA[Returns a vector pointing in the opposite direction.]]></summary>
       <overloads>
         <overload signature="op_UnaryNegation()">

@@ -4,7 +4,8 @@
           name="VertexChannel" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          interfaces="IList, ICollection, IEnumerable">
+          interfaces="IList, ICollection, IEnumerable"
+          modifier="abstract">
   <summary><![CDATA[Provides methods and properties for maintaining a vertex channel.]]></summary>
   <syntax><![CDATA[public abstract class VertexChannel : IList, ICollection, IEnumerable]]></syntax>
   <platforms>
@@ -17,6 +18,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of elements in the vertex channel]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[Number of elements.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -25,7 +27,35 @@
     <property name="ElementType" type="Object" access="get">
       <summary><![CDATA[Gets the type of data contained in this channel.]]></summary>
       <syntax><![CDATA[public virtual abstract Type ElementType { get; }]]></syntax>
+      <value><![CDATA[Type of data stored in the vertex channel.]]></value>
       <remarks><![CDATA[To access strongly typed content data, cast the VertexChannel object to a VertexChannel&lt;T&gt; before calling ElementType . This causes a generic enumerator interface to be returned.]]></remarks>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsFixedSize" type="Object" access="get">
+      <summary><![CDATA[Gets a value indicating whether this list has a fixed size.]]></summary>
+      <syntax><![CDATA[private bool System.Collections.IList.IsFixedSize { get; }]]></syntax>
+      <value><![CDATA[true if the list has a fixed size; false otherwise.]]></value>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsReadOnly" type="Object" access="get">
+      <summary><![CDATA[Gets a value indicating whether this object is read-only.]]></summary>
+      <syntax><![CDATA[private bool System.Collections.IList.IsReadOnly { get; }]]></syntax>
+      <value><![CDATA[true if this object is read-only; false otherwise.]]></value>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="IsSynchronized" type="Object" access="get">
+      <summary><![CDATA[Gets a value indicating whether access to the collection is synchronized (thread safe).]]></summary>
+      <syntax><![CDATA[private bool System.Collections.ICollection.IsSynchronized { get; }]]></syntax>
+      <value><![CDATA[true if access to the collection is synchronized (thread safe); falseotherwise.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -36,6 +66,7 @@
       <syntax><![CDATA[public T this [
          int index
 ] { get; set; }]]></syntax>
+      <value><![CDATA[Element at the specified index.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -44,6 +75,16 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of the vertex channel.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[Name of the channel.]]></value>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="SyncRoot" type="Object" access="get">
+      <summary><![CDATA[Gets an object that can be used to synchronize access to the collection.]]></summary>
+      <syntax><![CDATA[private Object System.Collections.ICollection.SyncRoot { get; }]]></syntax>
+      <value><![CDATA[An object that can be used to synchronize access to the collection.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -90,7 +131,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="IEnumerator">
       <summary><![CDATA[Gets an enumerator interface for reading channel content.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">
@@ -117,6 +158,24 @@
             <parameter name="item" type="T"><![CDATA[Item whose index is to be retrieved.]]></parameter>
           </parameters>
           <returns><![CDATA[Index of specified item.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadConvertedContent" returnType="IEnumerable&lt;TargetType&gt;">
+      <summary><![CDATA[Reads channel content and automatically converts it to the specified vector format.]]></summary>
+      <overloads>
+        <overload signature="ReadConvertedContent()">
+          <summary><![CDATA[Reads channel content and automatically converts it to the specified vector format.]]></summary>
+          <syntax><![CDATA[public virtual abstract IEnumerable<TargetType> ReadConvertedContent<TargetType> ()]]></syntax>
+          <type-parameters>
+            <type-parameter name="TargetType"><![CDATA[]]></type-parameter>
+          </type-parameters>
+          <returns><![CDATA[Vector format to convert returned data to.]]></returns>
+          <remarks><![CDATA[The following formats are supported: Single Vector2 Structure Vector3 Structure Vector4 Structure Any implementation of IPackedVector Interface .]]></remarks>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>

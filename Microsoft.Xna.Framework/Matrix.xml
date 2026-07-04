@@ -65,6 +65,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
     <property name="Backward" type="Vector3" access="get;set">
       <summary><![CDATA[Gets and sets the backward vector of the Matrix.]]></summary>
       <syntax><![CDATA[public Vector3 Backward { get; set; }]]></syntax>
+      <value><![CDATA[The backward vector of the Matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -74,6 +75,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
     <property name="Down" type="Vector3" access="get;set">
       <summary><![CDATA[Gets and sets the down vector of the Matrix.]]></summary>
       <syntax><![CDATA[public Vector3 Down { get; set; }]]></syntax>
+      <value><![CDATA[The down vector of the Matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -83,6 +85,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
     <property name="Forward" type="Vector3" access="get;set">
       <summary><![CDATA[Gets and sets the forward vector of the Matrix.]]></summary>
       <syntax><![CDATA[public Vector3 Forward { get; set; }]]></syntax>
+      <value><![CDATA[The forward vector of the Matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -92,6 +95,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
     <property name="Identity" type="Matrix" access="get" isStatic="true">
       <summary><![CDATA[Returns an instance of the identity matrix.]]></summary>
       <syntax><![CDATA[public static Matrix Identity { get; }]]></syntax>
+      <value><![CDATA[The identity matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -101,6 +105,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
     <property name="Left" type="Vector3" access="get;set">
       <summary><![CDATA[Gets and sets the left vector of the Matrix.]]></summary>
       <syntax><![CDATA[public Vector3 Left { get; set; }]]></syntax>
+      <value><![CDATA[The left vector of the Matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -110,6 +115,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
     <property name="Right" type="Vector3" access="get;set">
       <summary><![CDATA[Gets and sets the right vector of the Matrix.]]></summary>
       <syntax><![CDATA[public Vector3 Right { get; set; }]]></syntax>
+      <value><![CDATA[The right vector of the Matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -119,6 +125,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
     <property name="Translation" type="Vector3" access="get;set">
       <summary><![CDATA[Gets and sets the translation vector of the Matrix.]]></summary>
       <syntax><![CDATA[public Vector3 Translation { get; set; }]]></syntax>
+      <value><![CDATA[The translation vector of the Matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -128,6 +135,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
     <property name="Up" type="Vector3" access="get;set">
       <summary><![CDATA[Gets and sets the up vector of the Matrix.]]></summary>
       <syntax><![CDATA[public Vector3 Up { get; set; }]]></syntax>
+      <value><![CDATA[The up vector of the Matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -573,6 +581,9 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
             <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to the far view plane.]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The projection matrix.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: nearPlaneDistance or farPlaneDistance is a negative value. Specify a positive value for nearPlaneDistance or farPlaneDistance. nearPlaneDistance larger than farPlaneDistance. nearPlaneDistance must be smaller than farPlaneDistance.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -595,6 +606,9 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
             <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to the far view plane.]]></parameter>
           </parameters>
           <returns><![CDATA[The projection matrix.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: nearPlaneDistance or farPlaneDistance is a negative value. Specify a positive value for nearPlaneDistance or farPlaneDistance. nearPlaneDistance larger than farPlaneDistance. nearPlaneDistance must be smaller than farPlaneDistance.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -622,6 +636,9 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
             <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to the far view plane.]]></parameter>
           </parameters>
           <returns><![CDATA[The perspective projection matrix.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: fieldOfView is not between 0 and pi (180 degrees). Note that fieldOfView should be specified in radians. nearPlaneDistance or farPlaneDistance is a negative value. Specify a positive value for nearPlaneDistance or farPlaneDistance. nearPlaneDistance larger than farPlaneDistance. nearPlaneDistance must be smaller than farPlaneDistance.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -645,6 +662,9 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
             <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to the far view plane.]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The perspective projection matrix.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: fieldOfView is not between 0 and pi (180 degrees). Note that fieldOfView should be specified in radians. nearPlaneDistance or farPlaneDistance is a negative value. Specify a positive value for nearPlaneDistance or farPlaneDistance. nearPlaneDistance larger than farPlaneDistance. nearPlaneDistance must be smaller than farPlaneDistance.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -677,6 +697,9 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
             <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to of the far view plane.]]></parameter>
             <parameter name="result" type="Matrix"><![CDATA[[ OutAttribute ] The created projection matrix.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: nearPlaneDistance or farPlaneDistance is a negative value. Specify a positive value for nearPlaneDistance or farPlaneDistance. nearPlaneDistance larger than farPlaneDistance. nearPlaneDistance must be smaller than farPlaneDistance.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -703,6 +726,9 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
             <parameter name="farPlaneDistance" type="float"><![CDATA[Distance to of the far view plane.]]></parameter>
           </parameters>
           <returns><![CDATA[The created projection matrix.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: nearPlaneDistance or farPlaneDistance is a negative value. Specify a positive value for nearPlaneDistance or farPlaneDistance. nearPlaneDistance larger than farPlaneDistance. nearPlaneDistance must be smaller than farPlaneDistance.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Projection space refers to the space after applying projection transformation from view space. After the projection transformation, visible content has x- and y-coordinates ranging from −1 to 1, and a z-coordinate ranging from 0 to 1.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1125,7 +1151,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Decompose" returnType="void">
+    <method name="Decompose" returnType="bool">
       <summary><![CDATA[Extracts the scalar, translation, and rotation components from a 3D scale/rotate/translate (SRT) Matrix.]]></summary>
       <overloads>
         <overload signature="Decompose()">
@@ -1149,7 +1175,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Determinant" returnType="void">
+    <method name="Determinant" returnType="float">
       <summary><![CDATA[Calculates the determinant of the matrix.]]></summary>
       <overloads>
         <overload signature="Determinant()">
@@ -1274,7 +1300,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code of this object.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -1520,7 +1546,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of the current object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -1611,7 +1637,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Addition" returnType="void">
+    <method name="op_Addition" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Adds a matrix to another matrix.]]></summary>
       <overloads>
         <overload signature="op_Addition()">
@@ -1672,7 +1698,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares a matrix for equality with another matrix.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -1694,7 +1720,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Tests a matrix for inequality with another matrix.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">
@@ -1772,7 +1798,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Subtraction" returnType="void">
+    <method name="op_Subtraction" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Subtracts matrices.]]></summary>
       <overloads>
         <overload signature="op_Subtraction()">
@@ -1794,7 +1820,7 @@ public struct Matrix : IEquatable<Matrix>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_UnaryNegation" returnType="void">
+    <method name="op_UnaryNegation" returnType="Matrix" isStatic="true">
       <summary><![CDATA[Negates individual elements of a matrix.]]></summary>
       <overloads>
         <overload signature="op_UnaryNegation()">

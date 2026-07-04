@@ -4,7 +4,8 @@
           name="DeviceNotSupportedException" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ExternalException">
+          baseClass="ExternalException"
+          modifier="sealed">
   <summary><![CDATA[The exception that is thrown when the graphics device does not support the requested capabilities.]]></summary>
   <syntax><![CDATA[[SerializableAttribute]
 public sealed class DeviceNotSupportedException : ExternalException]]></syntax>

@@ -26,6 +26,7 @@ public class MaterialProcessor : ContentProcessor<MaterialContent, MaterialConte
     <property name="ColorKeyColor" type="Object" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual Color ColorKeyColor { get; set; }]]></syntax>
+      <value><![CDATA[Color value of the material to replace with transparent black.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -35,6 +36,7 @@ public class MaterialProcessor : ContentProcessor<MaterialContent, MaterialConte
     <property name="ColorKeyEnabled" type="Object" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual bool ColorKeyEnabled { get; set; }]]></syntax>
+      <value><![CDATA[true if color keying is enabled; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -44,6 +46,7 @@ public class MaterialProcessor : ContentProcessor<MaterialContent, MaterialConte
     <property name="DefaultEffect" type="Object" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual MaterialProcessorDefaultEffect DefaultEffect { get; set; }]]></syntax>
+      <value><![CDATA[The default effect type.]]></value>
       <remarks><![CDATA[When MaterialProcessor is instantiated, DefaultEffect is set to default to BasicEffect Class .]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -54,6 +57,7 @@ public class MaterialProcessor : ContentProcessor<MaterialContent, MaterialConte
     <property name="GenerateMipmaps" type="Object" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual bool GenerateMipmaps { get; set; }]]></syntax>
+      <value><![CDATA[true if mipmap generation is enabled; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -64,6 +68,7 @@ public class MaterialProcessor : ContentProcessor<MaterialContent, MaterialConte
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[DefaultValueAttribute(true)]
 public virtual bool PremultiplyTextureAlpha { get; set; }]]></syntax>
+      <value><![CDATA[true if alpha premultiply is enabled; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -73,6 +78,7 @@ public virtual bool PremultiplyTextureAlpha { get; set; }]]></syntax>
     <property name="ResizeTexturesToPowerOfTwo" type="Object" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual bool ResizeTexturesToPowerOfTwo { get; set; }]]></syntax>
+      <value><![CDATA[true if resizing is enabled; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -82,6 +88,7 @@ public virtual bool PremultiplyTextureAlpha { get; set; }]]></syntax>
     <property name="TextureFormat" type="Object" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual TextureProcessorOutputFormat TextureFormat { get; set; }]]></syntax>
+      <value><![CDATA[The texture format of the output.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -136,7 +143,7 @@ public virtual bool PremultiplyTextureAlpha { get; set; }]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Process" returnType="void">
+    <method name="Process" returnType="MaterialContent">
       <summary><![CDATA[Builds the texture and effect content for the material.]]></summary>
       <overloads>
         <overload signature="Process()">

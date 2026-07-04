@@ -18,6 +18,7 @@
     <property name="VertexDeclaration" type="VertexDeclaration" access="get">
       <summary><![CDATA[Vertex declaration, which defines per-vertex data.]]></summary>
       <syntax><![CDATA[public VertexDeclaration VertexDeclaration { get; }]]></syntax>
+      <value><![CDATA[Vertex declaration.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

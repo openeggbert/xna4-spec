@@ -53,6 +53,7 @@
     <property name="Alpha" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the material alpha which determines its transparency. Range is between 1 (fully opaque) and 0 (fully transparent).]]></summary>
       <syntax><![CDATA[public float Alpha { get; set; }]]></syntax>
+      <value><![CDATA[The material alpha value.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -64,6 +65,7 @@
     <property name="AmbientLightColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the ambient color for a light, the range of color values is from 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 AmbientLightColor { get; set; }]]></syntax>
+      <value><![CDATA[The ambient color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -75,6 +77,7 @@
     <property name="DiffuseColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the diffuse color for a material, the range of color values is from 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <value><![CDATA[The diffuse color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -86,6 +89,7 @@
     <property name="DirectionalLight0" type="DirectionalLight" access="get">
       <summary><![CDATA[Gets the first directional light.]]></summary>
       <syntax><![CDATA[public DirectionalLight DirectionalLight0 { get; }]]></syntax>
+      <value><![CDATA[The first light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -97,6 +101,7 @@
     <property name="DirectionalLight1" type="DirectionalLight" access="get">
       <summary><![CDATA[Gets the second directional light.]]></summary>
       <syntax><![CDATA[public DirectionalLight DirectionalLight1 { get; }]]></syntax>
+      <value><![CDATA[The second light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -108,6 +113,7 @@
     <property name="DirectionalLight2" type="DirectionalLight" access="get">
       <summary><![CDATA[Gets the third directional light.]]></summary>
       <syntax><![CDATA[public DirectionalLight DirectionalLight2 { get; }]]></syntax>
+      <value><![CDATA[The third light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -119,6 +125,7 @@
     <property name="EmissiveColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the emissive color for a material, the range of color values is from 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 EmissiveColor { get; set; }]]></syntax>
+      <value><![CDATA[The emissive color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -130,6 +137,7 @@
     <property name="FogColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the fog color, the range of color values is from 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 FogColor { get; set; }]]></syntax>
+      <value><![CDATA[The fog color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -141,6 +149,7 @@
     <property name="FogEnabled" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets the fog enable flag.]]></summary>
       <syntax><![CDATA[public bool FogEnabled { get; set; }]]></syntax>
+      <value><![CDATA[True to enable fog; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -152,6 +161,7 @@
     <property name="FogEnd" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the maximum z value for fog, which ranges from 0 to 1.]]></summary>
       <syntax><![CDATA[public float FogEnd { get; set; }]]></syntax>
+      <value><![CDATA[The distance to stop adding fog.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -163,6 +173,7 @@
     <property name="FogStart" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the minimum z value for fog, which ranges from 0 to 1.]]></summary>
       <syntax><![CDATA[public float FogStart { get; set; }]]></syntax>
+      <value><![CDATA[The distance to begin adding fog.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -174,6 +185,7 @@
     <property name="PreferPerPixelLighting" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets the per-pixel prefer lighting flag.]]></summary>
       <syntax><![CDATA[public bool PreferPerPixelLighting { get; set; }]]></syntax>
+      <value><![CDATA[True to prefer per-pixel lighting; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -185,6 +197,7 @@
     <property name="Projection" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the projection matrix.]]></summary>
       <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <value><![CDATA[A matrix that contains a projection transform.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -196,6 +209,7 @@
     <property name="SpecularColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the specular color for a material, the range of color values is from 0 to 1.]]></summary>
       <syntax><![CDATA[public Vector3 SpecularColor { get; set; }]]></syntax>
+      <value><![CDATA[The specular color.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -207,6 +221,7 @@
     <property name="SpecularPower" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the material specular power.]]></summary>
       <syntax><![CDATA[public float SpecularPower { get; set; }]]></syntax>
+      <value><![CDATA[The specular power.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -218,6 +233,7 @@
     <property name="Texture" type="Texture2D" access="get;set">
       <summary><![CDATA[Gets or sets the current texture.]]></summary>
       <syntax><![CDATA[public Texture2D Texture { get; set; }]]></syntax>
+      <value><![CDATA[The current texture.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -229,6 +245,7 @@
     <property name="View" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the view matrix.]]></summary>
       <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <value><![CDATA[A matrix that contains a view transform.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -240,6 +257,7 @@
     <property name="WeightsPerVertex" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the number of per-vertex skinning weights to evaluate, which is either 1, 2, or 4.]]></summary>
       <syntax><![CDATA[public int WeightsPerVertex { get; set; }]]></syntax>
+      <value><![CDATA[The number of per-vertex skinning weights.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -251,6 +269,7 @@
     <property name="World" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the world matrix.]]></summary>
       <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <value><![CDATA[A matrix that contains a world transform.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -261,7 +280,7 @@
     </property>
   </properties>
   <methods>
-    <method name="Clone" returnType="void">
+    <method name="Clone" returnType="Effect">
       <summary><![CDATA[Creates a clone of the current SkinnedEffect instance.]]></summary>
       <overloads>
         <overload signature="Clone()">
@@ -294,7 +313,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetBoneTransforms" returnType="void">
+    <method name="GetBoneTransforms" returnType="Matrix[]">
       <summary><![CDATA[Gets the bone transform matrices for a SkinnedEffect.]]></summary>
       <overloads>
         <overload signature="GetBoneTransforms()">
@@ -343,6 +362,10 @@
           <parameters>
             <parameter name="boneTransforms" type="Matrix[]"><![CDATA[An array of bone transformation matrices; the maximum number of bones (matrices) allowed is 72.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The number of matrices in boneTransforms exceeds the maximum number allowed.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[The boneTransforms parameter is null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows 7</platform>

@@ -22,6 +22,9 @@
       <parameters>
         <parameter name="gamer" type="SignedInGamer"><![CDATA[The gamer that just signed in.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[gamer is null.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -34,6 +37,7 @@
     <property name="Gamer" type="SignedInGamer" access="get">
       <summary><![CDATA[Gets the gamer that just signed in.]]></summary>
       <syntax><![CDATA[public SignedInGamer Gamer { get; }]]></syntax>
+      <value><![CDATA[The gamer that just signed in.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

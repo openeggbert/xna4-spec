@@ -18,6 +18,7 @@ public struct RasterStatus]]></syntax>
     <property name="InVerticalBlank" type="bool" access="get">
       <summary><![CDATA[Gets the status of the vertical blank period.]]></summary>
       <syntax><![CDATA[public bool InVerticalBlank { get; }]]></syntax>
+      <value><![CDATA[true if the raster is in the vertical blank period; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -27,6 +28,7 @@ public struct RasterStatus]]></syntax>
     <property name="ScanLine" type="int" access="get">
       <summary><![CDATA[Gets a value that roughly corresponds to the current scan line painted by the raster.]]></summary>
       <syntax><![CDATA[public int ScanLine { get; }]]></syntax>
+      <value><![CDATA[Integer that roughly corresponds to the current scan line to set or retrieve.]]></value>
       <remarks><![CDATA[If InVerticalBlank is false , this property's value is an integer that roughly corresponds to the current scan line painted by the raster. Scan lines are numbered in the same way as Microsoft Direct3D surface coordinates: 0 is the top of the primary surface, extending to the value (height of the surface − 1) at the bottom of the display. If InVerticalBlank is true , this value is set to 0 and can be ignored.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -36,7 +38,7 @@ public struct RasterStatus]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

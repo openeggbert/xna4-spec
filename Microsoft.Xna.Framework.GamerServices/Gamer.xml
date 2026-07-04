@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="Gamer" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
-          assembly="Microsoft.Xna.Framework.GamerServices">
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          modifier="abstract">
   <summary><![CDATA[Abstract base class for types that represent game players (profiles that have an associated gamertag). The concrete types SignedInGamer and NetworkGamer derive from this.]]></summary>
   <syntax><![CDATA[public abstract class Gamer]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="DisplayName" type="string" access="get;set">
       <summary><![CDATA[Gets the display name string for the gamer.]]></summary>
       <syntax><![CDATA[public string DisplayName { get; set; }]]></syntax>
+      <value><![CDATA[The display name for the gamer.]]></value>
       <remarks><![CDATA[Windows Phone Specific Information On Windows Phone this property always returns a localized string.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -29,6 +31,7 @@
     <property name="Gamertag" type="string" access="get">
       <summary><![CDATA[Gets the gamertag string.]]></summary>
       <syntax><![CDATA[public string Gamertag { get; }]]></syntax>
+      <value><![CDATA[Name of the gamertag.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -39,6 +42,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -49,6 +53,7 @@
     <property name="LeaderboardWriter" type="LeaderboardWriter" access="get">
       <summary><![CDATA[Gets an object that can be used to write leaderboard statistics for this gamer.]]></summary>
       <syntax><![CDATA[public LeaderboardWriter LeaderboardWriter { get; }]]></syntax>
+      <value><![CDATA[A LeaderboardWriter that can be used to write leaderboard statistics for this gamer. Will be null if leaderboards are not available for this gamer.]]></value>
       <remarks><![CDATA[Leaderboards can be written from local, player match, or ranked sessions, using the following rules: Ranked sessions can write to both arbitrated and non-arbitrated leaderboards. Other session types can only write to non-arbitrated leaderboards. Arbitrated statistics should be written by all machines for all gamers. Non-arbitrated statistics should only be written by their local machine. In ranked sessions, all machines should report TrueSkill for all gamers. In other session types, only the host should report TrueSkill data. Leaderboards can only be written when the session is actually playing the game, not when it is in the lobby state. This property will return null if leaderboards are not available for this gamer, which occurs in system link sessions, or if the gamer profile is a guest or not signed into Xbox LIVE, or if the game is in trial mode.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -60,6 +65,7 @@
     <property name="SignedInGamers" type="SignedInGamerCollection" access="get" isStatic="true">
       <summary><![CDATA[Represents a collection of all gamers on the local system. The collection is sorted by the gamer index, skipping non-existent gamer indices. For example, if gamers 1 and 3 are signed in, the collection contains two instances of SignedInGamer, with gamer 1 first in the collection.]]></summary>
       <syntax><![CDATA[public static SignedInGamerCollection SignedInGamers { get; }]]></syntax>
+      <value><![CDATA[Collection of current gamers on the local system.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -70,6 +76,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Gets or sets a custom object which can be used to attach arbitrary user defined data to the gamer.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[A custom object used to attach arbitrary user defined data to the gamer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -79,7 +86,7 @@
     </property>
   </properties>
   <methods>
-    <method name="BeginGetFromGamertag" returnType="void">
+    <method name="BeginGetFromGamertag" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Begins the process of getting a Gamer object for a specified gamertag.]]></summary>
       <overloads>
         <overload signature="BeginGetFromGamertag()">
@@ -102,7 +109,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="BeginGetPartnerToken" returnType="void">
+    <method name="BeginGetPartnerToken" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Begins the asynchronous process of getting the partner token for this gamer.]]></summary>
       <overloads>
         <overload signature="BeginGetPartnerToken()">
@@ -125,7 +132,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="BeginGetProfile" returnType="void">
+    <method name="BeginGetProfile" returnType="IAsyncResult">
       <summary><![CDATA[Starts an asynchronous profile read operation.]]></summary>
       <overloads>
         <overload signature="BeginGetProfile()">
@@ -139,6 +146,9 @@
             <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method. Call EndGetProfile to access these results.]]></returns>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[This object has already been disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -148,7 +158,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndGetFromGamertag" returnType="void">
+    <method name="EndGetFromGamertag" returnType="Gamer" isStatic="true">
       <summary><![CDATA[Ends the process of getting a Gamer object for a specified gamertag.]]></summary>
       <overloads>
         <overload signature="EndGetFromGamertag()">
@@ -171,7 +181,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndGetPartnerToken" returnType="void">
+    <method name="EndGetPartnerToken" returnType="string" isStatic="true">
       <summary><![CDATA[Retrieves the results from an asynchronous request for the partner token for this gamer.]]></summary>
       <overloads>
         <overload signature="EndGetPartnerToken()">
@@ -194,7 +204,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndGetProfile" returnType="void">
+    <method name="EndGetProfile" returnType="GamerProfile">
       <summary><![CDATA[Ends an asynchronous profile read operation.]]></summary>
       <overloads>
         <overload signature="EndGetProfile()">
@@ -212,7 +222,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetFromGamertag" returnType="void">
+    <method name="GetFromGamertag" returnType="Gamer" isStatic="true">
       <summary><![CDATA[Returns a Gamer object for the specified gamertag.]]></summary>
       <overloads>
         <overload signature="GetFromGamertag()">
@@ -231,7 +241,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPartnerToken" returnType="void">
+    <method name="GetPartnerToken" returnType="string" isStatic="true">
       <summary><![CDATA[Gets the partner token for this gamer.]]></summary>
       <overloads>
         <overload signature="GetPartnerToken()">
@@ -250,7 +260,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetProfile" returnType="void">
+    <method name="GetProfile" returnType="GamerProfile">
       <summary><![CDATA[Reads profile data for this gamer.]]></summary>
       <overloads>
         <overload signature="GetProfile()">
@@ -267,7 +277,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

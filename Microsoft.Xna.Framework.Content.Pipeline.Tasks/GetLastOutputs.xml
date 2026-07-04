@@ -28,6 +28,7 @@
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public string IntermediateDirectory { get; set; }]]></syntax>
+      <value><![CDATA[Path of the retrieved cache file.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -38,6 +39,7 @@ public string IntermediateDirectory { get; set; }]]></syntax>
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[OutputAttribute]
 public ITaskItem[] OutputContentFiles { get; }]]></syntax>
+      <value><![CDATA[Collection of cache file names.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -46,7 +48,7 @@ public ITaskItem[] OutputContentFiles { get; }]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Execute" returnType="void">
+    <method name="Execute" returnType="bool">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="Execute()">

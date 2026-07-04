@@ -36,6 +36,7 @@ public struct Point : IEquatable<Point>]]></syntax>
     <property name="Zero" type="Point" access="get" isStatic="true">
       <summary><![CDATA[Returns the point (0,0).]]></summary>
       <syntax><![CDATA[public static Point Zero { get; }]]></syntax>
+      <value><![CDATA[The point (0,0).]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -79,7 +80,7 @@ public struct Point : IEquatable<Point>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this object.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -94,7 +95,7 @@ public struct Point : IEquatable<Point>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a String that represents the current Point.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -109,7 +110,7 @@ public struct Point : IEquatable<Point>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two Point instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -131,7 +132,7 @@ public struct Point : IEquatable<Point>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two Point instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

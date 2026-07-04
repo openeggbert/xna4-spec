@@ -53,6 +53,7 @@
     <property name="CubeMapFace" type="CubeMapFace" access="get">
       <summary><![CDATA[Gets one face of a cubemap.]]></summary>
       <syntax><![CDATA[public CubeMapFace CubeMapFace { get; }]]></syntax>
+      <value><![CDATA[A cubemap face.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -64,6 +65,7 @@
     <property name="RenderTarget" type="Texture" access="get">
       <summary><![CDATA[Gets a 2D texture.]]></summary>
       <syntax><![CDATA[public Texture RenderTarget { get; }]]></syntax>
+      <value><![CDATA[A texture.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

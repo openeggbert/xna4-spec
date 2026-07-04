@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="EffectPass" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Represents an effect pass.]]></summary>
   <syntax><![CDATA[public sealed class EffectPass]]></syntax>
   <platforms>
@@ -17,6 +18,7 @@
     <property name="Annotations" type="EffectAnnotationCollection" access="get">
       <summary><![CDATA[Gets the set of EffectAnnotation objects for this EffectPass.]]></summary>
       <syntax><![CDATA[public EffectAnnotationCollection Annotations { get; }]]></syntax>
+      <value><![CDATA[The EffectAnnotationCollection containing EffectAnnotation objects for this EffectPass.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +28,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of this pass.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of this pass.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -55,6 +58,9 @@
         <overload signature="Begin()">
           <summary><![CDATA[Begins a pass within the active technique.]]></summary>
           <syntax><![CDATA[public void Begin ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin has been called before calling End after the last call to Begin. Begin cannot be called again until End has been successfully called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[An application sets one active pass (within one active technique) in the effect system by calling Begin . An application signals the end of the active pass by calling End . Begin and End must occur in a matching pair, within a matching pair of Effect.Begin and Effect.End calls. If the application changes any effect state using any of the Effect methods inside of a Begin / End matching pair, the application must call CommitChanges to set the update the device with the state changes. If no state changes occur within a Begin and End matching pair, it is not necessary to call CommitChanges .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -70,6 +76,9 @@
         <overload signature="End()">
           <summary><![CDATA[Ends a pass within the active technique.]]></summary>
           <syntax><![CDATA[public void End ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[End was called, but Begin has not yet been called. Begin must be called successfully before End can be called.]]></exception>
+          </exceptions>
           <remarks><![CDATA[An application signals the end of rendering an active pass by calling End . Each End must be part of a matching pair of Begin and End calls. Begin and End must occur in a matching pair, within a matching pair of Effect.Begin and Effect.End calls. If the application changes any effect state using any of the Effect methods inside of a Begin / End matching pair, the application must call CommitChanges to set the update the device with the state changes. If no state changes occur within a Begin and End matching pair, it is not necessary to call CommitChanges .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -99,7 +108,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -114,7 +123,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -136,7 +145,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

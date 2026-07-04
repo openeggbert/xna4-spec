@@ -35,7 +35,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetEffectCode" returnType="void">
+    <method name="GetEffectCode" returnType="byte[]">
       <summary><![CDATA[Retrieves the compiled byte code for this shader.]]></summary>
       <overloads>
         <overload signature="GetEffectCode()">

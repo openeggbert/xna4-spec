@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ContentImporterContext" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          modifier="sealed">
   <summary><![CDATA[Provides properties that define logging behavior for the importer.]]></summary>
   <syntax><![CDATA[public sealed class ContentImporterContext]]></syntax>
   <platforms>
@@ -25,6 +26,7 @@
     <property name="IntermediateDirectory" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract string IntermediateDirectory { get; }]]></syntax>
+      <value><![CDATA[The directory for storing temporary build files.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -34,6 +36,7 @@
     <property name="Logger" type="ContentBuildLogger" access="get">
       <summary><![CDATA[Gets the logger for an importer.]]></summary>
       <syntax><![CDATA[public ContentBuildLogger Logger { get; }]]></syntax>
+      <value><![CDATA[Logger that contains information on warnings and debug messages generated during importation.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -42,6 +45,7 @@
     <property name="OutputDirectory" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract string OutputDirectory { get; }]]></syntax>
+      <value><![CDATA[The output directory for the final build results.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>

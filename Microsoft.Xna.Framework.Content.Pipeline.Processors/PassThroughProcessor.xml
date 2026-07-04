@@ -26,7 +26,7 @@ public class PassThroughProcessor : ContentProcessor<Object, Object>]]></syntax>
   <properties>
   </properties>
   <methods>
-    <method name="Process" returnType="void">
+    <method name="Process" returnType="Object">
       <summary><![CDATA[No-operation process that simply returns the input argument.]]></summary>
       <overloads>
         <overload signature="Process()">

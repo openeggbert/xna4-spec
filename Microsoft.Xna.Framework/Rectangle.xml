@@ -40,6 +40,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
     <property name="Bottom" type="int" access="get">
       <summary><![CDATA[Returns the y-coordinate of the bottom of the rectangle.]]></summary>
       <syntax><![CDATA[public int Bottom { get; }]]></syntax>
+      <value><![CDATA[The y-coordinate of the bottom of the rectangle.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -49,6 +50,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
     <property name="Center" type="Point" access="get">
       <summary><![CDATA[Gets the Point that specifies the center of the rectangle.]]></summary>
       <syntax><![CDATA[public Point Center { get; }]]></syntax>
+      <value><![CDATA[The center of the rectangle.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -60,6 +62,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
     <property name="Empty" type="Rectangle" access="get" isStatic="true">
       <summary><![CDATA[Returns a Rectangle with all of its values set to zero.]]></summary>
       <syntax><![CDATA[public static Rectangle Empty { get; }]]></syntax>
+      <value><![CDATA[An empty Rectangle.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -69,6 +72,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
     <property name="IsEmpty" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the Rectangle is empty.]]></summary>
       <syntax><![CDATA[public bool IsEmpty { get; }]]></syntax>
+      <value><![CDATA[true if the rectangle is empty, otherwise false.]]></value>
       <remarks><![CDATA[An empty rectangle has all its values set to 0.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -81,6 +85,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
     <property name="Left" type="int" access="get">
       <summary><![CDATA[Returns the x-coordinate of the left side of the rectangle.]]></summary>
       <syntax><![CDATA[public int Left { get; }]]></syntax>
+      <value><![CDATA[The x-coordinate of the left side of the rectangle.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -90,6 +95,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
     <property name="Location" type="Point" access="get;set">
       <summary><![CDATA[Gets or sets the upper-left value of the Rectangle.]]></summary>
       <syntax><![CDATA[public Point Location { get; set; }]]></syntax>
+      <value><![CDATA[The new upper-left corner of the Rectangle.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -101,6 +107,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
     <property name="Right" type="int" access="get">
       <summary><![CDATA[Returns the x-coordinate of the right side of the rectangle.]]></summary>
       <syntax><![CDATA[public int Right { get; }]]></syntax>
+      <value><![CDATA[The x-coordinate of the right side of the rectangle.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -110,6 +117,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
     <property name="Top" type="int" access="get">
       <summary><![CDATA[Returns the y-coordinate of the top of the rectangle.]]></summary>
       <syntax><![CDATA[public int Top { get; }]]></syntax>
+      <value><![CDATA[The y-coordinate of the top of the rectangle.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -237,7 +245,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this object.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -383,7 +391,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of the current object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -434,7 +442,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two rectangles for equality.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -456,7 +464,7 @@ public struct Rectangle : IEquatable<Rectangle>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two rectangles for inequality.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

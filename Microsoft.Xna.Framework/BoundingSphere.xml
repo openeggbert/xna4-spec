@@ -25,6 +25,9 @@ public struct BoundingSphere : IEquatable<BoundingSphere>]]></syntax>
         <parameter name="center" type="Vector3"><![CDATA[Center point of the sphere.]]></parameter>
         <parameter name="radius" type="float"><![CDATA[Radius of the sphere.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentException"><![CDATA[radius is less than zero. radius must be greater than or equal to zero.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -184,7 +187,7 @@ public struct BoundingSphere : IEquatable<BoundingSphere>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateFromFrustum" returnType="void">
+    <method name="CreateFromFrustum" returnType="BoundingSphere" isStatic="true">
       <summary><![CDATA[Creates the smallest BoundingSphere that can contain a specified BoundingFrustum.]]></summary>
       <overloads>
         <overload signature="CreateFromFrustum()">
@@ -204,7 +207,7 @@ public struct BoundingSphere : IEquatable<BoundingSphere>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CreateFromPoints" returnType="void">
+    <method name="CreateFromPoints" returnType="BoundingSphere" isStatic="true">
       <summary><![CDATA[Creates a BoundingSphere that can contain a specified list of points.]]></summary>
       <overloads>
         <overload signature="CreateFromPoints()">
@@ -216,6 +219,10 @@ public struct BoundingSphere : IEquatable<BoundingSphere>]]></syntax>
             <parameter name="points" type="IEnumerable&lt;Vector3&gt;"><![CDATA[List of points the BoundingSphere must contain.]]></parameter>
           </parameters>
           <returns><![CDATA[The created BoundingSphere.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[There are no points in points.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[points is null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -299,7 +306,7 @@ public struct BoundingSphere : IEquatable<BoundingSphere>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -472,7 +479,7 @@ public struct BoundingSphere : IEquatable<BoundingSphere>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a String that represents the current BoundingSphere.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -525,7 +532,7 @@ public struct BoundingSphere : IEquatable<BoundingSphere>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two instances of BoundingSphere are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -547,7 +554,7 @@ public struct BoundingSphere : IEquatable<BoundingSphere>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two instances of BoundingSphere are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

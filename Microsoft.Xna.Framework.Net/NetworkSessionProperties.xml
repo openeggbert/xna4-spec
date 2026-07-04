@@ -29,6 +29,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of custom session properties.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[The number of custom session properties.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -41,6 +42,10 @@
       <syntax><![CDATA[public Nullable<int> this [
          int index
 ] { get; set; }]]></syntax>
+      <value><![CDATA[The custom session property value.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[index was out of range.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -50,7 +55,7 @@
     </property>
   </properties>
   <methods>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="IEnumerator&lt;Nullable&lt;int&gt;&gt;">
       <summary><![CDATA[Gets an enumerator for iterating over the custom property values.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">

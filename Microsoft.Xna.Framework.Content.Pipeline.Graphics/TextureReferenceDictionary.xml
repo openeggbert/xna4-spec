@@ -4,7 +4,8 @@
           name="TextureReferenceDictionary" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="NamedValueDictionary&lt;ExternalReference&lt;TextureContent&gt;&gt;">
+          baseClass="NamedValueDictionary&lt;ExternalReference&lt;TextureContent&gt;&gt;"
+          modifier="sealed">
   <summary><![CDATA[Provides a collection of named references to texture files.]]></summary>
   <syntax><![CDATA[public sealed class TextureReferenceDictionary : NamedValueDictionary<ExternalReference<TextureContent>>]]></syntax>
   <platforms>

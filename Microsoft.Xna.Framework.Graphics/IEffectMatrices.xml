@@ -18,6 +18,7 @@
     <property name="Projection" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the projection matrix in the current effect.]]></summary>
       <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <value><![CDATA[The projection transformation matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -28,6 +29,7 @@
     <property name="View" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the view matrix in the current effect.]]></summary>
       <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <value><![CDATA[The view transformation matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -38,6 +40,7 @@
     <property name="World" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the world matrix in the current effect.]]></summary>
       <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <value><![CDATA[The world transformation matrix.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

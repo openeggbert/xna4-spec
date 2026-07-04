@@ -19,6 +19,7 @@
     <property name="BoneTransforms" type="ReadOnlyCollection&lt;Matrix&gt;" access="get">
       <summary><![CDATA[Gets the current position of the bones at the time specified by CurrentPosition.]]></summary>
       <syntax><![CDATA[public ReadOnlyCollection<Matrix> BoneTransforms { get; }]]></syntax>
+      <value><![CDATA[Collection of bone transforms.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -29,6 +30,7 @@
     <property name="CurrentPosition" type="TimeSpan" access="get;set">
       <summary><![CDATA[Gets or sets the current time position in the animation.]]></summary>
       <syntax><![CDATA[public TimeSpan CurrentPosition { get; set; }]]></syntax>
+      <value><![CDATA[Current time position of the animation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -39,6 +41,7 @@
     <property name="Expression" type="AvatarExpression" access="get">
       <summary><![CDATA[Gets the expression of the related animation at the current time position.]]></summary>
       <syntax><![CDATA[public AvatarExpression Expression { get; }]]></syntax>
+      <value><![CDATA[Expression of the avatar.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -49,6 +52,7 @@
     <property name="Length" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the length of the current animation.]]></summary>
       <syntax><![CDATA[public TimeSpan Length { get; }]]></syntax>
+      <value><![CDATA[Length of the animation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

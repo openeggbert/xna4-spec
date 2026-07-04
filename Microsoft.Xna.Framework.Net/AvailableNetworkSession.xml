@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="AvailableNetworkSession" kind="class"
           namespace="Microsoft.Xna.Framework.Net"
-          assembly="Microsoft.Xna.Framework.Net">
+          assembly="Microsoft.Xna.Framework.Net"
+          modifier="sealed">
   <summary><![CDATA[Describes a multiplayer session that can be joined.]]></summary>
   <syntax><![CDATA[public sealed class AvailableNetworkSession]]></syntax>
   <remarks><![CDATA[Use the NetworkSession class to get a list of AvailableNetworkSession instances. Typically, the results populate some type of user interface, displayed by the game. The user then chooses a session, and the game adds the player to the chosen session with a call to Join .]]></remarks>
@@ -19,6 +20,7 @@
     <property name="CurrentGamerCount" type="int" access="get">
       <summary><![CDATA[Gets the number of gamers in the session.]]></summary>
       <syntax><![CDATA[public int CurrentGamerCount { get; }]]></syntax>
+      <value><![CDATA[Number of gamers currently in the session.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -29,6 +31,7 @@
     <property name="HostGamertag" type="string" access="get">
       <summary><![CDATA[Gets the gamertag of the session host.]]></summary>
       <syntax><![CDATA[public string HostGamertag { get; }]]></syntax>
+      <value><![CDATA[Name of the gamertag.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -39,6 +42,7 @@
     <property name="OpenPrivateGamerSlots" type="int" access="get">
       <summary><![CDATA[Gets the number of private player slots. These slots are reserved for people joining by invitation or friend presence.]]></summary>
       <syntax><![CDATA[public int OpenPrivateGamerSlots { get; }]]></syntax>
+      <value><![CDATA[Number of reserved private slots.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -49,6 +53,7 @@
     <property name="OpenPublicGamerSlots" type="int" access="get">
       <summary><![CDATA[Gets the number of public player slots. These slots are reserved for people joining by a matchmaking service.]]></summary>
       <syntax><![CDATA[public int OpenPublicGamerSlots { get; }]]></syntax>
+      <value><![CDATA[Number of public slots.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -59,6 +64,7 @@
     <property name="QualityOfService" type="QualityOfService" access="get">
       <summary><![CDATA[Gets an estimate of the quality of network service between this local machine and the remote session.]]></summary>
       <syntax><![CDATA[public QualityOfService QualityOfService { get; }]]></syntax>
+      <value><![CDATA[An estimate of the quality of network service between this local machine and the remote session. Initially the IsAvailable property will be set to false, and all the other properties of the returned QualityOfService instance will be zero, but after the probing finishes this will become true and the other properties will be filled in with some actual data.]]></value>
       <remarks><![CDATA[This measurement can take some time to complete, so the data may not be available when the search result is first returned to you.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -70,6 +76,7 @@
     <property name="SessionProperties" type="NetworkSessionProperties" access="get">
       <summary><![CDATA[Gets any custom properties that have been attached to the session.]]></summary>
       <syntax><![CDATA[public NetworkSessionProperties SessionProperties { get; }]]></syntax>
+      <value><![CDATA[Any custom properties that have been attached to the session.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -42,6 +42,9 @@
             <parameter name="destinationType" type="Type"><![CDATA[The destination type.]]></parameter>
           </parameters>
           <returns><![CDATA[The converted value.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[destinationType is null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>

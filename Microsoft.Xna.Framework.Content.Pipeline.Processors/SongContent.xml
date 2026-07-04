@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="SongContent" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          modifier="sealed">
   <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
   <syntax><![CDATA[public sealed class SongContent]]></syntax>
   <platforms>

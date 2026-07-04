@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="GamerPresence" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
-          assembly="Microsoft.Xna.Framework.GamerServices">
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          modifier="sealed">
   <summary><![CDATA[Provides properties to set the rich presence state for a locally signed-in gamer profile.]]></summary>
   <syntax><![CDATA[public sealed class GamerPresence]]></syntax>
   <remarks><![CDATA[Zune Specific Information Setting presence information is not supported on the Zune platform. On the Zune platform, setting presence information for a signed-in gamer will not change the presence information on Xbox LIVE.]]></remarks>
@@ -19,6 +20,7 @@
     <property name="PresenceMode" type="GamerPresenceMode" access="get;set">
       <summary><![CDATA[Gets or sets the current presence mode for this gamer. You will see this status string when you view a friend through the Guide or on Xbox.com.]]></summary>
       <syntax><![CDATA[public GamerPresenceMode PresenceMode { get; set; }]]></syntax>
+      <value><![CDATA[The current presence mode for this gamer.]]></value>
       <remarks><![CDATA[Zune Specific Information Setting presence information is not supported on the Zune platform. On the Zune platform, setting presence information for a signed-in gamer will not change the presence information on Xbox LIVE. Some of the presence mode options include a number that can be set using the PresenceValue property: GamerPresenceMode.Stage GamerPresenceMode.Level GamerPresenceMode.Score GamerPresenceMode.CoopStage GamerPresenceMode.CoopLevel GamerPresenceMode.VersusScore Note Game titles will not be displayed in a player's presence information on the Xbox LIVE service until the game passes peer review. Once a game passes peer review, the presence information for a player will show three things: a confirmation the player is playing an Xbox LIVE Community Game, the game's title, and finally the presence information set by SignedInGamer.Presence . Xbox LIVE Community Game My Game Title Fighting the Boss While a game is in development, but before the game passes peer review, the presence information indicates the developer is using the XNA Creators Club. XNA Creators Club creators.xna.com Fighting the Boss]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -30,6 +32,7 @@
     <property name="PresenceValue" type="int" access="get;set">
       <summary><![CDATA[Gets or sets a custom presence value. You can insert this into the presence string if you select one of the presence modes that includes a value. For example, you might select GamerPresenceMode.Score or GamerPresenceMode.Level.]]></summary>
       <syntax><![CDATA[public int PresenceValue { get; set; }]]></syntax>
+      <value><![CDATA[A custom presence value, which indicates a stage, score, or level to display as a part of the presence string.]]></value>
       <remarks><![CDATA[Zune Specific Information Setting presence information is not supported on the Zune platform. On the Zune platform, setting presence information for a signed-in gamer will not change the presence information on Xbox LIVE. The following GamerPresenceMode settings, specified in PresenceMode , may include a numeric value as specified by PresenceValue : GamerPresenceMode.Stage GamerPresenceMode.Level GamerPresenceMode.Score GamerPresenceMode.CoopStage GamerPresenceMode.CoopLevel GamerPresenceMode.VersusScore]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

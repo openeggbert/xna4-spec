@@ -25,6 +25,7 @@
     <property name="BuildConfiguration" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the content build configuration name.]]></summary>
       <syntax><![CDATA[public string BuildConfiguration { get; set; }]]></syntax>
+      <value><![CDATA[Current name of the build configuration or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -34,6 +35,7 @@
       <summary><![CDATA[Gets or sets the directory for storing temporary build files.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public string IntermediateDirectory { get; set; }]]></syntax>
+      <value><![CDATA[Current directory for temporary build files or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -43,6 +45,7 @@ public string IntermediateDirectory { get; set; }]]></syntax>
       <summary><![CDATA[Gets the names of the intermediate files used internally by the build.]]></summary>
       <syntax><![CDATA[[OutputAttribute]
 public ITaskItem[] IntermediateFiles { get; }]]></syntax>
+      <value><![CDATA[Intermediate file names produced by the build.]]></value>
       <remarks><![CDATA[When combined with OutputXactFiles , this property gives the complete list of generated files that should be removed by a Clean build operation.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -52,6 +55,7 @@ public ITaskItem[] IntermediateFiles { get; }]]></syntax>
     <property name="LoggerRootDirectory" type="string" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public string LoggerRootDirectory { get; set; }]]></syntax>
+      <value><![CDATA[Current name of the base directory or the value to be set.]]></value>
       <remarks><![CDATA[When building XACT content, all errors are displayed in the Error List Window of Visual Studio. Along with the data that triggered the error, the Error List displays the path and filename where the offending data was encountered. By default, the path of the offending file that is reported in the Error List is always expressed as relative to the location of the project file that references it. When set, the LoggerRootDirectory property specifies an explicit base path for error reporting that overrides the default operation. All offending files reported in the Error List will be expressed as relative to the base path set in LoggerRootDirectory.]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -63,6 +67,7 @@ public ITaskItem[] IntermediateFiles { get; }]]></syntax>
       <summary><![CDATA[Gets or sets the directory for the final build results.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public string OutputDirectory { get; set; }]]></syntax>
+      <value><![CDATA[Current directory for the final build results or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -72,6 +77,7 @@ public string OutputDirectory { get; set; }]]></syntax>
       <summary><![CDATA[Gets the names of all files produced by the build, regardless of any incremental optimizations.]]></summary>
       <syntax><![CDATA[[OutputAttribute]
 public ITaskItem[] OutputXactFiles { get; }]]></syntax>
+      <value><![CDATA[File names produced by the build or the value to be set.]]></value>
       <remarks><![CDATA[Pass this property value to a subsequent packfile generator task or combine with the IntermediateFiles property to get a complete list of generated files that should be removed by a Clean build operation.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -81,6 +87,7 @@ public ITaskItem[] OutputXactFiles { get; }]]></syntax>
     <property name="RebuildAll" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets the force rebuild flag.]]></summary>
       <syntax><![CDATA[public bool RebuildAll { get; set; }]]></syntax>
+      <value><![CDATA[If true, all XACT target files are rebuilt; otherwise only modified files are rebuilt. Default value is false.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -90,6 +97,7 @@ public ITaskItem[] OutputXactFiles { get; }]]></syntax>
       <summary><![CDATA[Gets the names of files modified by an incremental rebuild.]]></summary>
       <syntax><![CDATA[[OutputAttribute]
 public ITaskItem[] RebuiltXactFiles { get; }]]></syntax>
+      <value><![CDATA[File names modified by an incremental build.]]></value>
       <remarks><![CDATA[Optimize your deploy or reload process by passing the current value of RebuiltXactFiles to a subsequent incremental deploy or reload notification task.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -99,6 +107,7 @@ public ITaskItem[] RebuiltXactFiles { get; }]]></syntax>
     <property name="RootDirectory" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the base directory for the entire content build process.]]></summary>
       <syntax><![CDATA[public string RootDirectory { get; set; }]]></syntax>
+      <value><![CDATA[Current name of the base directory or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -108,6 +117,7 @@ public ITaskItem[] RebuiltXactFiles { get; }]]></syntax>
       <summary><![CDATA[Gets or sets the content build target platform.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public string TargetPlatform { get; set; }]]></syntax>
+      <value><![CDATA[Current platform or the value to be set. Can be one of the following values: Windows or Xbox360]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -117,6 +127,7 @@ public string TargetPlatform { get; set; }]]></syntax>
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public string TargetProfile { get; set; }]]></syntax>
+      <value><![CDATA[Target graphics profile of the content build. For a list of possible values, see GraphicsProfile Enumeration.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -127,6 +138,7 @@ public string TargetProfile { get; set; }]]></syntax>
       <summary><![CDATA[Gets or sets the XACT project files to be built.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public ITaskItem[] XactProjects { get; set; }]]></syntax>
+      <value><![CDATA[Current XACT project files to be built or value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -136,6 +148,7 @@ public ITaskItem[] XactProjects { get; set; }]]></syntax>
       <summary><![CDATA[Gets or sets XNA framework version, used to determine the xactbld.exe path.]]></summary>
       <syntax><![CDATA[[RequiredAttribute]
 public string XnaFrameworkVersion { get; set; }]]></syntax>
+      <value><![CDATA[Version of the XNA framework or the value to be set. Currently, 1.0 is the only valid value.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -143,7 +156,7 @@ public string XnaFrameworkVersion { get; set; }]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Execute" returnType="void">
+    <method name="Execute" returnType="bool">
       <summary><![CDATA[Executes the BuildXact task.]]></summary>
       <overloads>
         <overload signature="Execute()">

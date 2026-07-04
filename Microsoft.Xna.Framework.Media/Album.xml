@@ -4,7 +4,8 @@
           name="Album" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&lt;Album&gt;">
+          interfaces="IEquatable&lt;Album&gt;"
+          modifier="sealed">
   <summary><![CDATA[Provides access to an album in the media library.]]></summary>
   <syntax><![CDATA[public sealed class Album : IEquatable<Album>]]></syntax>
   <remarks><![CDATA[The Album class provides information about an album, including the album's Name , Artist , and Songs . You can obtain an Album object through the AlbumCollection.Item indexer and the Song.Album property.]]></remarks>
@@ -20,6 +21,7 @@
     <property name="Artist" type="Artist" access="get">
       <summary><![CDATA[Gets the Artist of the Album.]]></summary>
       <syntax><![CDATA[public Artist Artist { get; }]]></syntax>
+      <value><![CDATA[Artist of this Album.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -30,6 +32,7 @@
     <property name="Duration" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the duration of the Album.]]></summary>
       <syntax><![CDATA[public TimeSpan Duration { get; }]]></syntax>
+      <value><![CDATA[Duration of the album, as a TimeSpan structure.]]></value>
       <remarks><![CDATA[The duration is the total duration of all of the album's songs that are present on the device. This may be less than the duration attributed to the entire album.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -41,6 +44,7 @@
     <property name="Genre" type="Genre" access="get">
       <summary><![CDATA[Gets the Genre of the Album.]]></summary>
       <syntax><![CDATA[public Genre Genre { get; }]]></syntax>
+      <value><![CDATA[Genre of this Album.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -51,6 +55,7 @@
     <property name="HasArt" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the Album has associated album art.]]></summary>
       <syntax><![CDATA[public bool HasArt { get; }]]></syntax>
+      <value><![CDATA[true if this Album has associated album art, false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -61,6 +66,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -72,6 +78,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of the Album.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of this Album.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -82,6 +89,7 @@
     <property name="Songs" type="SongCollection" access="get">
       <summary><![CDATA[Gets a SongCollection that contains the songs on the album.]]></summary>
       <syntax><![CDATA[public SongCollection Songs { get; }]]></syntax>
+      <value><![CDATA[SongCollection containing the songs on this album.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -159,7 +167,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetAlbumArt" returnType="void">
+    <method name="GetAlbumArt" returnType="Stream">
       <summary><![CDATA[Returns the stream that contains the album art image data.]]></summary>
       <overloads>
         <overload signature="GetAlbumArt()">
@@ -176,7 +184,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -192,7 +200,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetThumbnail" returnType="void">
+    <method name="GetThumbnail" returnType="Texture2D">
       <summary><![CDATA[Gets the album art thumbnail as a texture.]]></summary>
       <overloads>
         <overload signature="GetThumbnail()">
@@ -213,7 +221,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a String representation of this Album.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -229,7 +237,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified Album instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -252,7 +260,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified Album instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

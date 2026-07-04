@@ -98,6 +98,7 @@
     <property name="ElapsedGameTime" type="TimeSpan" access="get;set">
       <summary><![CDATA[The amount of elapsed game time since the last update.]]></summary>
       <syntax><![CDATA[public TimeSpan ElapsedGameTime { get; set; }]]></syntax>
+      <value><![CDATA[Elapsed game time since the last update.]]></value>
       <remarks><![CDATA[Fixed-step clocks update by a fixed time span upon every clock step. This results in uniform clock steps that may not actually track the wall clock time. Fixed-step clocks were popular on console systems where one had tight control over code and a fixed system performance. Fixed-step clocks are also useful when trying to achieve deterministic updates for debugging, offline rendering, or other such scenarios.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -108,6 +109,7 @@
     <property name="ElapsedRealTime" type="TimeSpan" access="get;set">
       <summary><![CDATA[The amount of elapsed real time (wall clock) since the last frame.]]></summary>
       <syntax><![CDATA[public TimeSpan ElapsedRealTime { get; set; }]]></syntax>
+      <value><![CDATA[Elapsed real time since the last frame.]]></value>
       <remarks><![CDATA[Variable-step clocks automatically track the difference in real-time (wall clock) that transpired since the last clock step. This type of game timing is popular on PC games where the variable PC configurations affect update time.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -118,6 +120,7 @@
     <property name="IsRunningSlowly" type="bool" access="get;set">
       <summary><![CDATA[Gets a value indicating that the game loop is taking longer than its TargetElapsedTime. In this case, the game loop can be considered to be running too slowly and should do something to "catch up."]]></summary>
       <syntax><![CDATA[public bool IsRunningSlowly { get; set; }]]></syntax>
+      <value><![CDATA[true if the game loop is taking too long; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -127,6 +130,7 @@
     <property name="TotalGameTime" type="TimeSpan" access="get;set">
       <summary><![CDATA[The amount of game time since the start of the game.]]></summary>
       <syntax><![CDATA[public TimeSpan TotalGameTime { get; set; }]]></syntax>
+      <value><![CDATA[Game time since the start of the game.]]></value>
       <remarks><![CDATA[Fixed-step clocks update by a fixed time span upon every clock step. This results in uniform clock steps that may not actually track the wall clock time. Fixed step clocks were popular on console systems where one had tight control over code and a fixed system performance. Fixed-step clocks are also useful when trying to achieve deterministic updates for debugging, offline rendering, or other such scenarios.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -137,6 +141,7 @@
     <property name="TotalRealTime" type="TimeSpan" access="get;set">
       <summary><![CDATA[The amount of real time (wall clock) since the start of the game.]]></summary>
       <syntax><![CDATA[public TimeSpan TotalRealTime { get; set; }]]></syntax>
+      <value><![CDATA[Real time since the start of the game.]]></value>
       <remarks><![CDATA[Variable-step clocks automatically track the difference in real-time (wall clock) that transpired since the last clock step. This type of game timing is popular on PC games where the variable PC configurations affect update time.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

@@ -31,6 +31,7 @@
     <property name="VideoSoundtrackType" type="VideoSoundtrackType" access="get;set">
       <summary><![CDATA[Gets or sets the VideoSoundtrackType for this video.]]></summary>
       <syntax><![CDATA[public VideoSoundtrackType VideoSoundtrackType { get; set; }]]></syntax>
+      <value><![CDATA[The new VideoSoundtrackType for the video.]]></value>
       <platforms>
         <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
         <platform>Xbox 360</platform>
@@ -41,7 +42,7 @@
     </property>
   </properties>
   <methods>
-    <method name="Process" returnType="void">
+    <method name="Process" returnType="VideoContent">
       <summary><![CDATA[Processes a video.]]></summary>
       <overloads>
         <overload signature="Process()">

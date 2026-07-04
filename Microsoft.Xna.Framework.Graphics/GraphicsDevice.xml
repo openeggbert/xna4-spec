@@ -29,6 +29,12 @@
         <parameter name="creationOptions" type="CreateOptions"><![CDATA[Combination of one or more options that control the global behavior of the device.]]></parameter>
         <parameter name="presentationParameters" type="PresentationParameters"><![CDATA[The presentation parameters for the device to be created.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[adapter or presentationParameters is null.]]></exception>
+        <exception type="ArgumentException"><![CDATA[One of the following conditions is true: PresentationParameters.MultiSampleType contains an invalid value. The only valid MultiSampleType values on the Xbox 360 are MultiSampleType.None, MultiSampleType.TwoSamples, or MultiSampleType.FourSamples. For Windows-based applications, CheckDeviceMultiSampleType may be used to find valid values for this parameter. The back-buffer dimensions requested in PresentationParameters.BackBufferWidth and PresentationParameters.BackBufferHeight are too large for this graphics adapter.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[PresentationParameters.EnableAutoDepthStencil is true, but PresentationParameters.AutoDepthStencilFormat is not a valid value.]]></exception>
+        <exception type="DeviceNotSupportedException"><![CDATA[The graphics adapter does not support the requested capabilities. For Xbox 360, DeviceType.Hardware is the only device type supported on this platform.]]></exception>
+      </exceptions>
       <remarks><![CDATA[When you create a new XNA Framework game using XNA Game Studio Express, the game derives from Game and contains a member variable that is a GraphicsDeviceManager . This GraphicsDeviceManager automatically creates the best device that is available for the application and exposes it as the GraphicsDeviceManager.GraphicsDevice property. If you wish to change the settings used to create the device, you can create a custom PreparingDeviceSettings event handler for the graphics device manager with the settings you require for your application. For more information on using the PreparingDeviceSettings event handler, see GraphicsDeviceManager . Note If a graphics device has been constructed without the GraphicsDeviceManager , it is necessary to manually call Present subsequent to any draw calls to present the back buffer.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -48,6 +54,10 @@
         <parameter name="graphicsProfile" type="GraphicsProfile"><![CDATA[The graphics profile.]]></parameter>
         <parameter name="presentationParameters" type="PresentationParameters"><![CDATA[The presentation options.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="NoSuitableGraphicsDeviceException"><![CDATA[The graphics adapter does not support the requested capabilities.]]></exception>
+        <exception type="NotSupportedException"><![CDATA[Could not find a graphics device that supports the profile.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -57,6 +67,7 @@
     <property name="Adapter" type="GraphicsAdapter" access="get">
       <summary><![CDATA[Gets the graphics adapter.]]></summary>
       <syntax><![CDATA[public GraphicsAdapter Adapter { get; }]]></syntax>
+      <value><![CDATA[The graphics adapter.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -67,6 +78,7 @@
     <property name="BlendFactor" type="Color" access="get;set">
       <summary><![CDATA[Gets or sets the color used for a constant-blend factor during alpha blending. The default value is Color.White.]]></summary>
       <syntax><![CDATA[public Color BlendFactor { get; set; }]]></syntax>
+      <value><![CDATA[The color used for a constant-blend factor during alpha blending.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -77,6 +89,10 @@
     <property name="BlendState" type="BlendState" access="get;set">
       <summary><![CDATA[Gets or sets a system-defined instance of a blend state object initialized for alpha blending. The default value is BlendState.Opaque.]]></summary>
       <syntax><![CDATA[public BlendState BlendState { get; set; }]]></syntax>
+      <value><![CDATA[A BlendState instance.]]></value>
+      <exceptions>
+        <exception type="NotSupportedException"><![CDATA[One or more of the following is true: ColorSourceBlend, ColorDestinationBlend, and AlphaSourceBlend must be set to the same value. ColorBlendFunction and AlphaBlendFunction must be set to the same value. ColorDestinationBlend must be set to Blend. AlphaDestinationBlend must be set to Blend. ColorSourceBlend and ColorDestinationBlend must be set to Blend.One when using BlendFunction.Min or BlendFunction.Max. AlphaSourceBlend and AlphaDestinationBlend must be set to Blend.One when using BlendFunction.Min or BlendFunction.Max.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -87,6 +103,7 @@
     <property name="ClipPlanes" type="ClipPlaneCollection" access="get">
       <summary><![CDATA[Retrieves the clipping planes of the current GraphicsDevice.]]></summary>
       <syntax><![CDATA[public ClipPlaneCollection ClipPlanes { get; }]]></syntax>
+      <value><![CDATA[The clipping planes.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -96,6 +113,7 @@
     <property name="CreationParameters" type="GraphicsDeviceCreationParameters" access="get">
       <summary><![CDATA[Retrieves the creation parameters of the GraphicsDevice.]]></summary>
       <syntax><![CDATA[public GraphicsDeviceCreationParameters CreationParameters { get; }]]></syntax>
+      <value><![CDATA[The creation parameters.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -105,6 +123,10 @@
     <property name="DepthStencilBuffer" type="DepthStencilBuffer" access="get;set">
       <summary><![CDATA[Gets or sets the depth stencil surface of this GraphicsDevice.]]></summary>
       <syntax><![CDATA[public DepthStencilBuffer DepthStencilBuffer { get; set; }]]></syntax>
+      <value><![CDATA[The depth stencil buffer. If no depth stencil buffer is associated with the GraphicsDevice, the return value is null.]]></value>
+      <exceptions>
+        <exception type="ObjectDisposedException"><![CDATA[DepthStencilBuffer was called after the GraphicsDevice was disposed.]]></exception>
+      </exceptions>
       <remarks><![CDATA[The following restrictions apply when using this property. The multisample type must be the same for the render target and the depth stencil surface. The formats for the render target and depth stencil surface must be compatible. For more information, see CheckDepthStencilMatch . The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -115,6 +137,7 @@
     <property name="DepthStencilState" type="DepthStencilState" access="get;set">
       <summary><![CDATA[Gets or sets a system-defined instance of a depth-stencil state object. The default value is DepthStencilState.Default.]]></summary>
       <syntax><![CDATA[public DepthStencilState DepthStencilState { get; set; }]]></syntax>
+      <value><![CDATA[A DepthStencilState instance.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -125,6 +148,7 @@
     <property name="DisplayMode" type="DisplayMode" access="get">
       <summary><![CDATA[Retrieves the display mode's spatial resolution, color resolution, and refresh frequency.]]></summary>
       <syntax><![CDATA[public DisplayMode DisplayMode { get; }]]></syntax>
+      <value><![CDATA[Data describing the display mode of the adapter (as opposed to the display mode of the GraphicsDevice, which might not be active if the GraphicsDevice does not own full-screen mode).]]></value>
       <remarks><![CDATA[For a list of all supported display modes for an adapter, see the SupportedDisplayModes property.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -135,6 +159,7 @@
     <property name="DriverLevel" type="int" access="get">
       <summary><![CDATA[Returns the driver level.]]></summary>
       <syntax><![CDATA[public int DriverLevel { get; }]]></syntax>
+      <value><![CDATA[This method returns the driver version, which is one of the following:]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -144,6 +169,7 @@
     <property name="GraphicsDeviceCapabilities" type="GraphicsDeviceCapabilities" access="get">
       <summary><![CDATA[Gets the capabilities of the graphics device.]]></summary>
       <syntax><![CDATA[public GraphicsDeviceCapabilities GraphicsDeviceCapabilities { get; }]]></syntax>
+      <value><![CDATA[The capabilities.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -153,6 +179,7 @@
     <property name="GraphicsDeviceStatus" type="GraphicsDeviceStatus" access="get">
       <summary><![CDATA[Retrieves the status of the device]]></summary>
       <syntax><![CDATA[public GraphicsDeviceStatus GraphicsDeviceStatus { get; }]]></syntax>
+      <value><![CDATA[The status of the device]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -162,6 +189,7 @@
     <property name="GraphicsProfile" type="GraphicsProfile" access="get">
       <summary><![CDATA[Gets the graphics profile. The default value is GraphicsProfile.Reach.]]></summary>
       <syntax><![CDATA[public GraphicsProfile GraphicsProfile { get; }]]></syntax>
+      <value><![CDATA[The graphics profile.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -172,6 +200,10 @@
     <property name="Indices" type="IndexBuffer" access="get;set">
       <summary><![CDATA[Gets or sets index data.]]></summary>
       <syntax><![CDATA[public IndexBuffer Indices { get; set; }]]></syntax>
+      <value><![CDATA[The index data.]]></value>
+      <exceptions>
+        <exception type="ObjectDisposedException"><![CDATA[Indices was called after this GraphicsDevice was disposed.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -181,6 +213,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -190,6 +223,7 @@
     <property name="MultiSampleMask" type="int" access="get;set">
       <summary><![CDATA[Gets or sets a bitmask controlling modification of the samples in a multisample render target. The default value is -1 (0xffffffff).]]></summary>
       <syntax><![CDATA[public int MultiSampleMask { get; set; }]]></syntax>
+      <value><![CDATA[A bitmask value controlling write enables for the samples. Each bit in this mask, starting at the least-significant bit, controls modification of one of the samples in a multisample render target. This render state has no effect when rendering to a single sample buffer.]]></value>
       <remarks><![CDATA[This render state enables use of a multisample buffer as an accumulation buffer, doing multipass rendering of geometry where each pass updates a subset of samples. Given n multisamples and k -enabled samples, the resulting intensity of the rendered image should be k / n . Each component RGB of every pixel is factored by k / n .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -201,6 +235,10 @@
     <property name="PixelShader" type="PixelShader" access="get;set">
       <summary><![CDATA[Gets or sets the current pixel shader.]]></summary>
       <syntax><![CDATA[public PixelShader PixelShader { get; set; }]]></syntax>
+      <value><![CDATA[The current pixel shader or a pixel shader object to set.]]></value>
+      <exceptions>
+        <exception type="ObjectDisposedException"><![CDATA[PixelShader was called after this GraphicsDevice was disposed.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -210,6 +248,7 @@
     <property name="PresentationParameters" type="PresentationParameters" access="get">
       <summary><![CDATA[Gets the presentation parameters associated with this graphics device.]]></summary>
       <syntax><![CDATA[public PresentationParameters PresentationParameters { get; }]]></syntax>
+      <value><![CDATA[The presentation parameters associated with this graphics device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -219,6 +258,7 @@
     <property name="RasterStatus" type="RasterStatus" access="get">
       <summary><![CDATA[Retrieves information that describes the raster of the monitor on which the swap chain is presented.]]></summary>
       <syntax><![CDATA[public RasterStatus RasterStatus { get; }]]></syntax>
+      <value><![CDATA[Information about the position or other status of the raster on the monitor driven by the current adapter.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -228,6 +268,7 @@
     <property name="RasterizerState" type="RasterizerState" access="get;set">
       <summary><![CDATA[Gets or sets rasterizer state. The default value is RasterizerState.CullCounterClockwise.]]></summary>
       <syntax><![CDATA[public RasterizerState RasterizerState { get; set; }]]></syntax>
+      <value><![CDATA[Rasterizer state.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -238,6 +279,7 @@
     <property name="ReferenceStencil" type="int" access="get;set">
       <summary><![CDATA[Gets or sets a reference value for stencil testing. The default value is zero.]]></summary>
       <syntax><![CDATA[public int ReferenceStencil { get; set; }]]></syntax>
+      <value><![CDATA[The stencil reference value.]]></value>
       <remarks><![CDATA[The reference value is compared (using the comparison function specified by StencilFunction ) to the pixel data in the stencil buffer using the equation: ReferenceStencil StencilFunction (stencil buffer entry) This comparison applies only to the bits marked enabled by the stencil mask. If the comparison is true, the stencil test passes and the pass operation (specified by the DepthStencilState.StencilPass Property ) is performed.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -249,6 +291,7 @@
     <property name="RenderState" type="RenderState" access="get">
       <summary><![CDATA[Retrieves a render-state value for a GraphicsDevice.]]></summary>
       <syntax><![CDATA[public RenderState RenderState { get; }]]></syntax>
+      <value><![CDATA[The render state.]]></value>
       <remarks><![CDATA[This method returns the last render state that was set for the GraphicsDevice, or the default GraphicsDevice render state, if not previously set.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -259,6 +302,7 @@
     <property name="SamplerStates" type="SamplerStateCollection" access="get">
       <summary><![CDATA[Retrieves a collection of SamplerState objects for the current GraphicsDevice.]]></summary>
       <syntax><![CDATA[public SamplerStateCollection SamplerStates { get; }]]></syntax>
+      <value><![CDATA[The sample states of this GraphicsDevice.]]></value>
       <remarks><![CDATA[This method returns the last sampler state that was set for the GraphicsDevice , or the default GraphicsDevice sampler state, if not previously set. Programmable shaders reference textures using the sampler number, which is set as the index of a GraphicsDevice.Textures .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -269,6 +313,7 @@
     <property name="ScissorRectangle" type="Rectangle" access="get;set">
       <summary><![CDATA[Gets or sets the rectangle used for scissor testing.]]></summary>
       <syntax><![CDATA[public Rectangle ScissorRectangle { get; set; }]]></syntax>
+      <value><![CDATA[Defines the rendering area within the render target, if scissor testing is enabled.]]></value>
       <remarks><![CDATA[The scissor rectangle is used as a rectangular clipping region. Use ScissorTestEnable to enable scissor testing.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -279,6 +324,7 @@
     <property name="SoftwareVertexProcessing" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets the vertex processing mode.]]></summary>
       <syntax><![CDATA[public bool SoftwareVertexProcessing { get; set; }]]></syntax>
+      <value><![CDATA[true for software vertex processing; false for hardware vertex processing.]]></value>
       <remarks><![CDATA[The following restrictions apply when changing modes. If a GraphicsDevice is created with CreateOptions.SoftwareVertexProcessing , vertex processing is done in software and cannot be changed. If a GraphicsDevice is created with CreateOptions.HardwareVertexProcessing , vertex processing is done in hardware and cannot be changed. If a GraphicsDevice is created with CreateOptions.MixedVertexProcessing , vertex processing is done in hardware by default, and can be switched between software and hardware. An application can create a mixed-mode GraphicsDevice to use both software and hardware vertex processing. Use this property to switch between the two vertex processing modes.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -289,6 +335,7 @@
     <property name="Textures" type="TextureCollection" access="get">
       <summary><![CDATA[Returns the collection of textures that have been assigned to the texture stages of the device.]]></summary>
       <syntax><![CDATA[public TextureCollection Textures { get; }]]></syntax>
+      <value><![CDATA[The texture collection.]]></value>
       <remarks><![CDATA[The collection of texture stage on the device contains one or more textures (all of the same type and dimensions) that can be accessed by shaders. Note At draw time, a texture cannot be simultaneously set as a render target and a texture at a stage.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -299,6 +346,10 @@
     <property name="VertexDeclaration" type="VertexDeclaration" access="get;set">
       <summary><![CDATA[Gets or sets a vertex shader declaration.]]></summary>
       <syntax><![CDATA[public VertexDeclaration VertexDeclaration { get; set; }]]></syntax>
+      <value><![CDATA[The vertex shader declaration.]]></value>
+      <exceptions>
+        <exception type="ObjectDisposedException"><![CDATA[VertexDeclaration was called after this GraphicsDevice was disposed.]]></exception>
+      </exceptions>
       <remarks><![CDATA[A vertex shader declaration is made up of an array of vertex elements.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -309,6 +360,7 @@
     <property name="VertexSamplerStates" type="SamplerStateCollection" access="get">
       <summary><![CDATA[Gets the collection of vertex sampler states.]]></summary>
       <syntax><![CDATA[public SamplerStateCollection VertexSamplerStates { get; }]]></syntax>
+      <value><![CDATA[The collection of vertex sampler states.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -318,6 +370,10 @@
     <property name="VertexShader" type="VertexShader" access="get;set">
       <summary><![CDATA[Gets or sets the current vertex shader.]]></summary>
       <syntax><![CDATA[public VertexShader VertexShader { get; set; }]]></syntax>
+      <value><![CDATA[The GraphicsDevice's current vertex shader or a vertex shader object to set.]]></value>
+      <exceptions>
+        <exception type="ObjectDisposedException"><![CDATA[VertexShader was called after this GraphicsDevice was disposed.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -327,6 +383,7 @@
     <property name="VertexTextures" type="TextureCollection" access="get">
       <summary><![CDATA[Gets the collection of vertex textures that support texture lookup in the vertex shader using the texldl - vs texture load statement. The vertex engine contains four texture sampler stages.]]></summary>
       <syntax><![CDATA[public TextureCollection VertexTextures { get; }]]></syntax>
+      <value><![CDATA[The collection of vertex textures.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -336,6 +393,7 @@
     <property name="Vertices" type="VertexStreamCollection" access="get">
       <summary><![CDATA[Gets the vertex stream collection.]]></summary>
       <syntax><![CDATA[public VertexStreamCollection Vertices { get; }]]></syntax>
+      <value><![CDATA[The vertex stream collection.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -345,6 +403,7 @@
     <property name="Viewport" type="Viewport" access="get;set">
       <summary><![CDATA[Gets or sets a viewport identifying the portion of the render target to receive draw calls.]]></summary>
       <syntax><![CDATA[public Viewport Viewport { get; set; }]]></syntax>
+      <value><![CDATA[The viewport to set or get.]]></value>
       <remarks><![CDATA[Viewport can be used to draw on part of the screen. It should be set before any geometry is drawn so the viewport parameters will take effect. To draw multiple views within a scene, repeat setting Viewport and draw a geometry sequence for each view.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -373,6 +432,10 @@
             <parameter name="stencil" type="int"><![CDATA[Integer value to store in each stencil-buffer entry. This parameter can be in the range of 0 through 2 n −1, where n is the bit depth of the stencil buffer.]]></parameter>
             <parameter name="regions" type="Rectangle[]"><![CDATA[The regions to clear.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[No DepthStencilBuffer surface exists, or the active render target and depth stencil surface do not have the same pixel size and multisampling type. Unable to clear the depth or stencil buffer.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[Clear was called after this GraphicsDevice was disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -405,6 +468,10 @@
             <parameter name="depth" type="float"><![CDATA[New depth value that this method stores in the depth buffer. This parameter can be in the range of 0.0 through 1.0 (for z-based or w-based depth buffers). A value of 0.0 represents the nearest distance to the viewer; a value of 1.0 represents the farthest distance.]]></parameter>
             <parameter name="stencil" type="int"><![CDATA[Integer value to store in each stencil-buffer entry. This parameter can be in the range of 0 through 2 n −1, where n is the bit depth of the stencil buffer.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[No DepthStencilBuffer surface exists, or the active render target and depth stencil surface do not have the same pixel size and multisampling type. Unable to clear the depth or stencil buffer.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[Clear was called after this GraphicsDevice was disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -437,6 +504,9 @@
           <parameters>
             <parameter name="color" type="Color"><![CDATA[Color value to which the render target surface is cleared.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[Clear was called after this GraphicsDevice was disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -459,6 +529,10 @@
             <parameter name="stencil" type="int"><![CDATA[Integer value to store in each stencil-buffer entry. This parameter can be in the range of 0 through 2 n −1, where n is the bit depth of the stencil buffer.]]></parameter>
             <parameter name="regions" type="Rectangle[]"><![CDATA[The regions to clear.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[No DepthStencilBuffer surface exists, or the active render target and depth stencil surface do not have the same pixel size and multisampling type. Unable to clear the depth or stencil buffer.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[Clear was called after this GraphicsDevice was disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -479,6 +553,10 @@
             <parameter name="depth" type="float"><![CDATA[New z value that this method stores in the depth buffer. This parameter can be in the range of 0.0 through 1.0 (for z-based or w-based depth buffers). A value of 0.0 represents the nearest distance to the viewer; a value of 1.0 represents the farthest distance.]]></parameter>
             <parameter name="stencil" type="int"><![CDATA[Integer value to store in each stencil-buffer entry. This parameter can be in the range of 0 through 2 n −1, where n is the bit depth of the stencil buffer.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[No DepthStencilBuffer surface exists, or the active render target and depth stencil surface do not have the same pixel size and multisampling type. Unable to clear the depth or stencil buffer.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[Clear was called after this GraphicsDevice was disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -535,6 +613,10 @@
             <parameter name="startIndex" type="int"><![CDATA[Location in the index array at which to start reading vertices.]]></parameter>
             <parameter name="primitiveCount" type="int"><![CDATA[A number of primitives to render. The number of vertices used is a function of and primitiveType . To determine the maximum number of primitives allowed, check the MaxPrimitiveCount property member of the Capabilities structure.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[primitiveCount is less than or equal to zero. When drawing, at least one primitive must be drawn.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: VertexDeclaration is not a valid value. A valid vertex declaration must be set on the device before any draw operations can be performed. A valid vertex shader and pixel shader was not set before calling DrawIndexedPrimitives. Both a valid vertex shader and pixel shader (or valid effect) must be set on the device before any draw operations may be performed. See How to: Use BasicEffect or How to: Create and Apply Custom Effects for more information on applying effects. Vertices is not a valid vertex buffer, or Indices is not a valid index buffer. A valid vertex buffer and a valid index buffer must be set on the device before any draw operations may be performed. The active render target and depth stencil surface do not have the same pixel size and multisampling type.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method draws indexed primitives from the current set of data input streams. The minVertexIndex and numVertices parameters specify the range of vertex indices used for each call to DrawIndexedPrimitives . These vertex indices are used to optimize vertex processing of indexed primitives by processing a sequential range of vertices prior to indexing into them. Indices used during this call cannot reference any vertices outside this range. If no index array is set, DrawIndexedPrimitives fails.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -567,6 +649,9 @@
             <parameter name="primitiveCount" type="Int32"><![CDATA[Number of primitives to render. The number of vertices used is a function of and primitiveType .]]></parameter>
             <parameter name="instanceCount" type="Int32"><![CDATA[Number of primitives to render.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="NotImplementedException"><![CDATA[This method is not implemented for Windows Phone, which does not support instancing.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method provides a mechanism for gathering vertex shader input data from different streams at different frequencies (typically by interpreting one data stream as a per-instance world transform); this approach requires a custom shader to interpret the input data. For more information, see DrawInstancedPrimitives in XNA Game Studio 4.0 .]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -589,11 +674,197 @@
             <parameter name="startVertex" type="int"><![CDATA[Index of the first vertex to load. Beginning at , the correct number of vertices is read out of the vertex buffer.]]></parameter>
             <parameter name="primitiveCount" type="int"><![CDATA[Number of primitives to render. To determine the maximum number of primitives allowed, check MaxPrimitiveCount . The is the number of primitives as determined by the primitive type. If it is a line list, each primitive has two vertices. If it is a triangle list, each primitive has three vertices.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[primitiveCount is less than or equal to zero. When drawing, at least one primitive must be drawn.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: VertexDeclaration is not a valid value. A valid vertex declaration must be set on the device before any draw operations can be performed. A valid vertex shader and pixel shader was not set before calling DrawPrimitives. Both a valid vertex shader and pixel shader (or valid effect) must be set on the device before any draw operations may be performed. See How to: Use BasicEffect or How to: Create and Apply Custom Effects for more information on applying effects. Vertices is not a valid vertex buffer. A valid vertex buffer must be set on the device before any draw operations may be performed. The active render target and depth stencil surface do not have the same pixel size and multisampling type.]]></exception>
+          </exceptions>
           <remarks><![CDATA[DrawPrimitives should not be called with a single triangle at a time.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DrawUserIndexedPrimitives" returnType="void">
+      <summary><![CDATA[Renders geometric primitives with indexed data specified by the user, specifying an index buffer as an array of type Int32.]]></summary>
+      <overloads>
+        <overload signature="DrawUserIndexedPrimitives(PrimitiveType, T[], Int32, Int32, Int32 , Int32, Int32)">
+          <summary><![CDATA[Renders geometric primitives with indexed data specified by the user, specifying an index buffer as an array of type Int32.]]></summary>
+          <syntax><![CDATA[public void DrawUserIndexedPrimitives<T> (
+         PrimitiveType primitiveType,
+         T[] vertexData,
+         int vertexOffset,
+         int numVertices,
+         int[] indexData,
+         int indexOffset,
+         int primitiveCount
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of vertex in vertexData .]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="primitiveType" type="PrimitiveType"><![CDATA[Describes the type of primitive to render.]]></parameter>
+            <parameter name="vertexData" type="T[]"><![CDATA[The vertex buffer indexed by indexData.]]></parameter>
+            <parameter name="vertexOffset" type="int"><![CDATA[Offset to add to each vertex index in the index buffer.]]></parameter>
+            <parameter name="numVertices" type="int"><![CDATA[Number of vertices used during this call. The first vertex is located at index minVertexIndex.]]></parameter>
+            <parameter name="indexData" type="int[]"><![CDATA[A list of indices into the vertex buffer, given in the order that you want the vertices to render. Using an array of type Int32 , which uses 32 bits per element, allows you to index a greater number of elements in the vertex buffer.]]></parameter>
+            <parameter name="indexOffset" type="int"><![CDATA[Location in the index array at which to start reading vertices.]]></parameter>
+            <parameter name="primitiveCount" type="int"><![CDATA[Number of primitives to render. The maximum number of primitives allowed is determined by checking MaxPrimitiveCount . (The number of indices is a function of the primitive count and the primitive type.)]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[One of the following conditions is true: vertexOffset + numVertices is outside of the range of vertexData. There are not enough indices in indexData based on the number of primitives requested by primitiveCount.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[vertexData or indexData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: indexOffset or vertexOffset is not in a range allowed by indexData or vertexData. primitiveCount or numVertices is less than or equal to zero. When drawing, at least one primitive must be drawn.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: VertexDeclaration is not a valid value. A valid vertex declaration must be set on the device before any draw operations can be performed. A valid vertex shader and pixel shader was not set before calling DrawUserIndexedPrimitives. Both a valid vertex shader and pixel shader (or valid effect) must be set on the device before any draw operations may be performed. See How to: Use BasicEffect or How to: Create and Apply Custom Effects for more information on applying effects. vertexData is not a valid vertex buffer, or indexData is not a valid index buffer. A valid vertex buffer (and a valid index buffer if you are using indexed primitives) must be set on the device before any draw operations may be performed. The active render target and depth stencil surface do not have the same pixel size and multisampling type.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="DrawUserIndexedPrimitives(PrimitiveType, T[], Int32, Int32, Int16 , Int32, Int32)">
+          <summary><![CDATA[Renders geometric primitives with indexed data specified by the user, specifying an index buffer as an array of type Int16.]]></summary>
+          <syntax><![CDATA[public void DrawUserIndexedPrimitives<T> (
+         PrimitiveType primitiveType,
+         T[] vertexData,
+         int vertexOffset,
+         int numVertices,
+         short[] indexData,
+         int indexOffset,
+         int primitiveCount
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of vertex in vertexData .]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="primitiveType" type="PrimitiveType"><![CDATA[Describes the type of primitive to render.]]></parameter>
+            <parameter name="vertexData" type="T[]"><![CDATA[The vertex buffer indexed by indexData.]]></parameter>
+            <parameter name="vertexOffset" type="int"><![CDATA[Offset to add to each vertex index in the index buffer.]]></parameter>
+            <parameter name="numVertices" type="int"><![CDATA[Number of vertices used during this call. The first vertex is located at index minVertexIndex.]]></parameter>
+            <parameter name="indexData" type="short[]"><![CDATA[A list of indices into the vertex buffer, given in the order that you want the vertices to render. Using an array of type Int16 , which uses 16 bits per element, allows you conserve resources if the index buffer does not require a 32-bit depth array.]]></parameter>
+            <parameter name="indexOffset" type="int"><![CDATA[Location in the index array at which to start reading vertices.]]></parameter>
+            <parameter name="primitiveCount" type="int"><![CDATA[Number of primitives to render. The maximum number of primitives allowed is determined by checking MaxPrimitiveCount . (The number of indices is a function of the primitive count and the primitive type.)]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[One of the following conditions is true: vertexOffset + numVertices is outside of the range of vertexData. There are not enough indices in indexData based on the number of primitives requested by primitiveCount.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[vertexData or indexData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: indexOffset or vertexOffset is not in a range allowed by indexData or vertexData. primitiveCount or numVertices is less than or equal to zero. When drawing, at least one primitive must be drawn.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: VertexDeclaration is not a valid value. A valid vertex declaration must be set on the device before any draw operations can be performed. A valid vertex shader and pixel shader was not set before calling DrawUserIndexedPrimitives. Both a valid vertex shader and pixel shader (or valid effect) must be set on the device before any draw operations may be performed. See How to: Use BasicEffect or How to: Create and Apply Custom Effects for more information on applying effects. vertexData is not a valid vertex buffer, or indexData is not a valid index buffer. A valid vertex buffer (and a valid index buffer if you are using indexed primitives) must be set on the device before any draw operations may be performed. The active render target and depth stencil surface do not have the same pixel size and multisampling type.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="DrawUserIndexedPrimitives(PrimitiveType, T[], Int32, Int32, Int16 , Int32, Int32, VertexDeclaration)">
+          <summary><![CDATA[Renders indexed primitives from a 16-bit index buffer, a vertex declaration, and other related input parameters.]]></summary>
+          <syntax><![CDATA[public void DrawUserIndexedPrimitives<T> (
+         PrimitiveType primitiveType,
+         T[] vertexData,
+         int vertexOffset,
+         int numVertices,
+         short[] indexData,
+         int indexOffset,
+         int primitiveCount,
+         VertexDeclaration vertexDeclaration
+) where T : struct]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[Per-vertex data type.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="primitiveType" type="PrimitiveType"><![CDATA[The primitive type.]]></parameter>
+            <parameter name="vertexData" type="T"><![CDATA[The vertex data.]]></parameter>
+            <parameter name="vertexOffset" type="Int32"><![CDATA[Offset (in vertices) from the beginning of the vertex buffer to the first vertex to draw.]]></parameter>
+            <parameter name="numVertices" type="Int32"><![CDATA[Number of vertices to draw.]]></parameter>
+            <parameter name="indexData" type="Int16"><![CDATA[The index data.]]></parameter>
+            <parameter name="indexOffset" type="Int32"><![CDATA[Offset (in indices) from the beginning of the index buffer to the first index to use.]]></parameter>
+            <parameter name="primitiveCount" type="Int32"><![CDATA[Number of primitives to render.]]></parameter>
+            <parameter name="vertexDeclaration" type="VertexDeclaration"><![CDATA[The vertex declaration.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[One of the following conditions is true: vertexOffset + numVertices is outside of the range of vertexData. There are not enough indices in indexData based on the number of primitives requested by primitiveCount.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[vertexData or indexData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: indexOffset or vertexOffset is not in a range allowed by indexData or vertexData. primitiveCount or numVertices is less than or equal to zero. When drawing, at least one primitive must be drawn.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: A valid VertexDeclaration must be set on the device before any draw operations can be performed. A valid vertex shader was not set before calling DrawUserIndexedPrimitives. A valid vertex shader or valid effect must be set on the device before any draw operations may be performed. See Creating a Basic Effect for more information about using an effect. vertexData is not a valid vertex buffer, or indexData is not a valid index buffer. A valid vertex buffer (and a valid index buffer if you are using indexed primitives) must be set on the device before any draw operations may be performed.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[The profile does not support an elementSize of IndexElementSize.ThirtyTwoBits; use IndexElementSize.SixteenBits or a type that has a size of two bytes.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="DrawUserIndexedPrimitives(PrimitiveType, T[], Int32, Int32, Int32 , Int32, Int32, VertexDeclaration)">
+          <summary><![CDATA[Renders indexed primitives from a 32-bit index buffer, a vertex declaration, and other related input parameters.]]></summary>
+          <syntax><![CDATA[public void DrawUserIndexedPrimitives<T> (
+         PrimitiveType primitiveType,
+         T[] vertexData,
+         int vertexOffset,
+         int numVertices,
+         int[] indexData,
+         int indexOffset,
+         int primitiveCount,
+         VertexDeclaration vertexDeclaration
+) where T : struct]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[Per-vertex data type.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="primitiveType" type="PrimitiveType"><![CDATA[The primitive type.]]></parameter>
+            <parameter name="vertexData" type="T"><![CDATA[The vertex data.]]></parameter>
+            <parameter name="vertexOffset" type="Int32"><![CDATA[Offset (in vertices) from the beginning of the vertex buffer to the first vertex to draw.]]></parameter>
+            <parameter name="numVertices" type="Int32"><![CDATA[Number of vertices to draw.]]></parameter>
+            <parameter name="indexData" type="Int32"><![CDATA[The index data.]]></parameter>
+            <parameter name="indexOffset" type="Int32"><![CDATA[Offset (in indices) from the beginning of the index buffer to the first index to use.]]></parameter>
+            <parameter name="primitiveCount" type="Int32"><![CDATA[Number of primitives to render.]]></parameter>
+            <parameter name="vertexDeclaration" type="VertexDeclaration"><![CDATA[The vertex declaration.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[One of the following conditions is true: vertexOffset + numVertices is outside of the range of vertexData. There are not enough indices in indexData based on the number of primitives requested by primitiveCount.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[vertexData or indexData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: indexOffset or vertexOffset is not in a range allowed by indexData or vertexData. primitiveCount or numVertices is less than or equal to zero. When drawing, at least one primitive must be drawn.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: A valid VertexDeclaration must be set on the device before any draw operations can be performed. A valid vertex shader was not set before calling DrawUserIndexedPrimitives. A valid vertex shader or valid effect must be set on the device before any draw operations may be performed. See Creating a Basic Effect for more information about using an effect. vertexData is not a valid vertex buffer, or indexData is not a valid index buffer. A valid vertex buffer (and a valid index buffer if you are using indexed primitives) must be set on the device before any draw operations may be performed.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[The profile does not support an elementSize of IndexElementSize.ThirtyTwoBits; use IndexElementSize.SixteenBits or a type that has a size of two bytes.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="DrawUserPrimitives" returnType="void">
+      <summary><![CDATA[Renders the given geometric primitive with data specified by the user.]]></summary>
+      <overloads>
+        <overload signature="DrawUserPrimitives(PrimitiveType, T , Int32, Int32, VertexDeclaration)">
+          <summary><![CDATA[Draws primitives.]]></summary>
+          <syntax><![CDATA[public void DrawUserPrimitives<T> (
+         PrimitiveType primitiveType,
+         T[] vertexData,
+         int vertexOffset,
+         int primitiveCount,
+         VertexDeclaration vertexDeclaration
+) where T : struct]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[Per-vertex data type.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="primitiveType" type="PrimitiveType"><![CDATA[Describes the type of primitive to render.]]></parameter>
+            <parameter name="vertexData" type="T"><![CDATA[The vertex data.]]></parameter>
+            <parameter name="vertexOffset" type="Int32"><![CDATA[Offset (in vertices) from the beginning of the buffer to start reading data.]]></parameter>
+            <parameter name="primitiveCount" type="Int32"><![CDATA[Number of primitives to render.]]></parameter>
+            <parameter name="vertexDeclaration" type="VertexDeclaration"><![CDATA[The vertex declaration, which defines per-vertex data.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[vertexOffset + numVertices is outside of the range of vertexData.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[vertexData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: primitiveCount is less than or equal to zero. When drawing, at least one primitive must be drawn. vertexOffset is less than zero or greater than the length of vertexData.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: A valid vertex shader and pixel shader was not set before calling DrawUserPrimitives. Both a valid vertex shader and pixel shader (or valid effect) must be set on the device before any draw operations may be performed. vertexData is not a valid vertex buffer. A valid vertex buffer must be set on the device before any draw operations may be performed.]]></exception>
+          </exceptions>
+          <remarks><![CDATA[This method is intended for use when drawing dynamic geometry specified by the user. It supports only a single vertex stream. The effect of this call is to use the provided vertex data pointer and stride for vertex stream 0. It is invalid to have the declaration of the current vertex shader refer to vertex streams other than stream 0. The vertex data passed to DrawUserPrimitives does not need to persist after the call. Access to the data is completed before returning from the call.]]></remarks>
+          <platforms>
+            <platform>Windows Phone</platform>
           </platforms>
         </overload>
       </overloads>
@@ -624,6 +895,9 @@
         <overload signature="EvictManagedResources()">
           <summary><![CDATA[Evicts all managed resources, including Microsoft Direct3D resources and those that are driver managed.]]></summary>
           <syntax><![CDATA[public void EvictManagedResources ()]]></syntax>
+          <exceptions>
+            <exception type="OutOfVideoMemoryException"><![CDATA[Direct3D does not have enough display memory to perform the operation.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -647,7 +921,70 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetGammaRamp" returnType="void">
+    <method name="GetBackBufferData" returnType="void">
+      <summary><![CDATA[Gets the contents of the back buffer.]]></summary>
+      <overloads>
+        <overload signature="GetBackBufferData(T , Int32, Int32)">
+          <summary><![CDATA[Gets the contents of the back buffer.]]></summary>
+          <syntax><![CDATA[public void GetBackBufferData<T> (
+         T[] data,
+         int startIndex,
+         int elementCount
+) where T : struct]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="data" type="T"><![CDATA[Array of data.]]></parameter>
+            <parameter name="startIndex" type="Int32"><![CDATA[The first element to use.]]></parameter>
+            <parameter name="elementCount" type="Int32"><![CDATA[The number of elements to use.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="GetBackBufferData(Nullable&lt;Rectangle&gt;, T , Int32, Int32)">
+          <summary><![CDATA[Gets the contents of the back buffer.]]></summary>
+          <syntax><![CDATA[public void GetBackBufferData<T> (
+         Nullable<Rectangle> rect,
+         T[] data,
+         int startIndex,
+         int elementCount
+) where T : struct]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="rect" type="Nullable&lt;Rectangle&gt;"><![CDATA[&lt; Rectangle &gt; The section of the back buffer to copy. null indicates the data will be copied from the entire back buffer.]]></parameter>
+            <parameter name="data" type="T"><![CDATA[Array of data.]]></parameter>
+            <parameter name="startIndex" type="Int32"><![CDATA[The first element to use.]]></parameter>
+            <parameter name="elementCount" type="Int32"><![CDATA[The number of elements to use.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="NotSupportedException"><![CDATA[Profile does not support getting back buffer data.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+        <overload signature="GetBackBufferData(T )">
+          <summary><![CDATA[Gets the contents of the back buffer.]]></summary>
+          <syntax><![CDATA[public void GetBackBufferData<T> (
+         T[] data
+) where T : struct]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the elements in the array.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="data" type="T"><![CDATA[Array of data.]]></parameter>
+          </parameters>
+          <platforms>
+            <platform>Windows Phone</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetGammaRamp" returnType="GammaRamp">
       <summary><![CDATA[Gets the gamma correction ramp.]]></summary>
       <overloads>
         <overload signature="GetGammaRamp()">
@@ -662,7 +999,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -677,7 +1014,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderBooleanConstant" returnType="void">
+    <method name="GetPixelShaderBooleanConstant" returnType="bool[]">
       <summary><![CDATA[Gets an array of Boolean values from the pixel shader constant Boolean registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderBooleanConstant()">
@@ -691,6 +1028,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Boolean values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Boolean values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -699,7 +1039,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderInt32Constant" returnType="void">
+    <method name="GetPixelShaderInt32Constant" returnType="int[]">
       <summary><![CDATA[Gets an array of Int32 values from the pixel shader constant integer registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderInt32Constant()">
@@ -713,6 +1053,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Int32 values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Int32 values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -721,7 +1064,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderMatrixArrayConstant" returnType="void">
+    <method name="GetPixelShaderMatrixArrayConstant" returnType="Matrix[]">
       <summary><![CDATA[Gets an array of Matrix values from the pixel shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderMatrixArrayConstant()">
@@ -735,6 +1078,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Matrix values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Matrix values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -743,7 +1089,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderMatrixConstant" returnType="void">
+    <method name="GetPixelShaderMatrixConstant" returnType="Matrix">
       <summary><![CDATA[Gets a Matrix value from the pixel shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderMatrixConstant()">
@@ -755,6 +1101,9 @@
             <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
           </parameters>
           <returns><![CDATA[Matrix value retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -763,7 +1112,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderQuaternionArrayConstant" returnType="void">
+    <method name="GetPixelShaderQuaternionArrayConstant" returnType="Quaternion[]">
       <summary><![CDATA[Gets an array of Quaternion values from the pixel shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderQuaternionArrayConstant()">
@@ -777,6 +1126,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Quaternion values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Quaternion values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -785,7 +1137,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderQuaternionConstant" returnType="void">
+    <method name="GetPixelShaderQuaternionConstant" returnType="Quaternion">
       <summary><![CDATA[Gets a Quaternion value from the pixel shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderQuaternionConstant()">
@@ -797,6 +1149,9 @@
             <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
           </parameters>
           <returns><![CDATA[Quaternion value retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -805,7 +1160,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderSingleConstant" returnType="void">
+    <method name="GetPixelShaderSingleConstant" returnType="float[]">
       <summary><![CDATA[Gets an array of Single values from the pixel shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderSingleConstant()">
@@ -819,6 +1174,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Single values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Single values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -827,7 +1185,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderVector2ArrayConstant" returnType="void">
+    <method name="GetPixelShaderVector2ArrayConstant" returnType="Vector2[]">
       <summary><![CDATA[Gets an array of Vector2 values from the pixel shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderVector2ArrayConstant()">
@@ -841,6 +1199,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Vector2 values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Vector2 values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -849,7 +1210,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderVector2Constant" returnType="void">
+    <method name="GetPixelShaderVector2Constant" returnType="Vector2">
       <summary><![CDATA[Gets a Vector2 value from the pixel shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderVector2Constant()">
@@ -861,6 +1222,9 @@
             <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
           </parameters>
           <returns><![CDATA[Vector2 value retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -869,7 +1233,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderVector3ArrayConstant" returnType="void">
+    <method name="GetPixelShaderVector3ArrayConstant" returnType="Vector3[]">
       <summary><![CDATA[Gets an array of Vector3 values from the pixel shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderVector3ArrayConstant()">
@@ -883,6 +1247,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Vector3 values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Vector3 values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -891,7 +1258,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderVector3Constant" returnType="void">
+    <method name="GetPixelShaderVector3Constant" returnType="Vector3">
       <summary><![CDATA[Gets a Vector3 value from the pixel shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderVector3Constant()">
@@ -903,6 +1270,9 @@
             <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
           </parameters>
           <returns><![CDATA[Vector3 value retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -911,7 +1281,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderVector4ArrayConstant" returnType="void">
+    <method name="GetPixelShaderVector4ArrayConstant" returnType="Vector4[]">
       <summary><![CDATA[Gets an array of Vector4 values from the pixel shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderVector4ArrayConstant()">
@@ -925,6 +1295,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Vector4 values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Vector4 values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -933,7 +1306,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelShaderVector4Constant" returnType="void">
+    <method name="GetPixelShaderVector4Constant" returnType="Vector4">
       <summary><![CDATA[Gets a Vector4 value from the pixel shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetPixelShaderVector4Constant()">
@@ -945,6 +1318,9 @@
             <parameter name="startRegister" type="int"><![CDATA[Pixel shader constant float register of the first constant.]]></parameter>
           </parameters>
           <returns><![CDATA[Vector4 value retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -953,7 +1329,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetRenderTarget" returnType="void">
+    <method name="GetRenderTarget" returnType="RenderTarget">
       <summary><![CDATA[Gets a render target surface.]]></summary>
       <overloads>
         <overload signature="GetRenderTarget()">
@@ -965,6 +1341,9 @@
             <parameter name="renderTargetIndex" type="int"><![CDATA[Index of the render target.]]></parameter>
           </parameters>
           <returns><![CDATA[The render target surface of the current graphics device.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[An invalid render target index was requested. On Xbox 360, there is only one render target available and renderTargetIndex must be zero.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The GraphicsDevice can support multiple render targets. The number of render targets supported by a GraphicsDevice is contained in NumberSimultaneousRenderTargets .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -974,13 +1353,16 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetRenderTargets" returnType="void">
+    <method name="GetRenderTargets" returnType="RenderTargetBinding[]">
       <summary><![CDATA[Gets a render target surface.]]></summary>
       <overloads>
         <overload signature="GetRenderTargets()">
           <summary><![CDATA[Gets a render target surface.]]></summary>
           <syntax><![CDATA[public RenderTargetBinding[] GetRenderTargets ()]]></syntax>
           <returns><![CDATA[An array of bound render targets.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[An invalid render target index was requested. On Xbox 360, there is only one render target available and renderTargetIndex must be zero.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The GraphicsDevice can support multiple render targets.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -991,7 +1373,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexBuffers" returnType="void">
+    <method name="GetVertexBuffers" returnType="VertexBufferBinding[]">
       <summary><![CDATA[Gets the vertex buffers.]]></summary>
       <overloads>
         <overload signature="GetVertexBuffers()">
@@ -1007,7 +1389,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderBooleanConstant" returnType="void">
+    <method name="GetVertexShaderBooleanConstant" returnType="bool[]">
       <summary><![CDATA[Gets an array of Boolean values from the vertex shader constant Boolean registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderBooleanConstant()">
@@ -1021,6 +1403,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Boolean values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Boolean values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1029,7 +1414,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderInt32Constant" returnType="void">
+    <method name="GetVertexShaderInt32Constant" returnType="int[]">
       <summary><![CDATA[Gets an array of Int32 values from the vertex shader constant integer registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderInt32Constant()">
@@ -1043,6 +1428,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Int32 values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Int32 values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1051,7 +1439,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderMatrixArrayConstant" returnType="void">
+    <method name="GetVertexShaderMatrixArrayConstant" returnType="Matrix[]">
       <summary><![CDATA[Gets an array of Matrix values from the vertex shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderMatrixArrayConstant()">
@@ -1065,6 +1453,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Matrix values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Matrix values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1073,7 +1464,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderMatrixConstant" returnType="void">
+    <method name="GetVertexShaderMatrixConstant" returnType="Matrix">
       <summary><![CDATA[Gets a Matrix value from the vertex shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderMatrixConstant()">
@@ -1085,6 +1476,9 @@
             <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
           </parameters>
           <returns><![CDATA[Matrix value retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1093,7 +1487,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderQuaternionArrayConstant" returnType="void">
+    <method name="GetVertexShaderQuaternionArrayConstant" returnType="Quaternion[]">
       <summary><![CDATA[Gets an array of Quaternion values from the vertex shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderQuaternionArrayConstant()">
@@ -1107,6 +1501,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Quaternion values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Quaternion values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1115,7 +1512,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderQuaternionConstant" returnType="void">
+    <method name="GetVertexShaderQuaternionConstant" returnType="Quaternion">
       <summary><![CDATA[Gets a Quaternion value from the vertex shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderQuaternionConstant()">
@@ -1127,6 +1524,9 @@
             <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
           </parameters>
           <returns><![CDATA[Quaternion value retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1135,7 +1535,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderSingleConstant" returnType="void">
+    <method name="GetVertexShaderSingleConstant" returnType="float[]">
       <summary><![CDATA[Gets an array of Single values from the vertex shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderSingleConstant()">
@@ -1149,6 +1549,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Single values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Single values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1157,7 +1560,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderVector2ArrayConstant" returnType="void">
+    <method name="GetVertexShaderVector2ArrayConstant" returnType="Vector2[]">
       <summary><![CDATA[Gets an array of Vector2 values from the vertex shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderVector2ArrayConstant()">
@@ -1171,6 +1574,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Vector2 values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Vector2 values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1179,7 +1585,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderVector2Constant" returnType="void">
+    <method name="GetVertexShaderVector2Constant" returnType="Vector2">
       <summary><![CDATA[Gets a Vector2 value from the vertex shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderVector2Constant()">
@@ -1191,6 +1597,9 @@
             <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
           </parameters>
           <returns><![CDATA[Vector2 value retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1199,7 +1608,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderVector3ArrayConstant" returnType="void">
+    <method name="GetVertexShaderVector3ArrayConstant" returnType="Vector3[]">
       <summary><![CDATA[Gets an array of Vector3 values from the vertex shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderVector3ArrayConstant()">
@@ -1213,6 +1622,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Vector3 values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Vector3 values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1221,7 +1633,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderVector3Constant" returnType="void">
+    <method name="GetVertexShaderVector3Constant" returnType="Vector3">
       <summary><![CDATA[Gets a Vector3 value from the vertex shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderVector3Constant()">
@@ -1233,6 +1645,9 @@
             <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
           </parameters>
           <returns><![CDATA[Vector3 value retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1241,7 +1656,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderVector4ArrayConstant" returnType="void">
+    <method name="GetVertexShaderVector4ArrayConstant" returnType="Vector4[]">
       <summary><![CDATA[Gets an array of Vector4 values from the vertex shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderVector4ArrayConstant()">
@@ -1255,6 +1670,9 @@
             <parameter name="constantCount" type="int"><![CDATA[Number of Vector4 values to retrieve.]]></parameter>
           </parameters>
           <returns><![CDATA[Array of Vector4 values retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1263,7 +1681,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetVertexShaderVector4Constant" returnType="void">
+    <method name="GetVertexShaderVector4Constant" returnType="Vector4">
       <summary><![CDATA[Gets a Vector4 value from the vertex shader constant float registers.]]></summary>
       <overloads>
         <overload signature="GetVertexShaderVector4Constant()">
@@ -1275,6 +1693,9 @@
             <parameter name="startRegister" type="int"><![CDATA[Vertex shader constant float register of the first constant.]]></parameter>
           </parameters>
           <returns><![CDATA[Vector4 value retrieved from the constant registers.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1289,6 +1710,11 @@
         <overload signature="Present()">
           <summary><![CDATA[Presents the display with the contents of the next buffer in the sequence of back buffers owned by the GraphicsDevice.]]></summary>
           <syntax><![CDATA[public void Present ()]]></syntax>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[Present was called after the GraphicsDevice was disposed.]]></exception>
+            <exception type="DriverInternalErrorException"><![CDATA[Internal driver error. Applications should generally shut down when receiving this error.]]></exception>
+            <exception type="DeviceLostException"><![CDATA[The GraphicsDevice is lost but cannot be reset at this time. Therefore, rendering is not possible.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1308,6 +1734,11 @@
             <parameter name="destinationRectangle" type="Nullable&lt;Rectangle&gt;"><![CDATA[The destination rectangle, in window client coordinates. If null , the entire client area is filled. If the rectangle exceeds the destination client area, the rectangle is clipped to the destination client area. This parameter must be null unless the swap chain was created with SwapEffect.Copy .]]></parameter>
             <parameter name="overrideWindowHandle" type="IntPtr"><![CDATA[Destination window containing the client area that is the target for this presentation. If not specified, this is DeviceWindowHandle .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[Present was called after the GraphicsDevice was disposed.]]></exception>
+            <exception type="DriverInternalErrorException"><![CDATA[Internal driver error. Applications should generally shut down when receiving this error.]]></exception>
+            <exception type="DeviceLostException"><![CDATA[The GraphicsDevice is lost but cannot be reset at this time. Therefore, rendering is not possible.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1323,6 +1754,11 @@
           <parameters>
             <parameter name="overrideWindowHandle" type="IntPtr"><![CDATA[Destination window containing the client area that is the target for this presentation. If not specified, this is DeviceWindowHandle .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[Present was called after the GraphicsDevice was disposed.]]></exception>
+            <exception type="DriverInternalErrorException"><![CDATA[Internal driver error. Applications should generally shut down when receiving this error.]]></exception>
+            <exception type="DeviceLostException"><![CDATA[The GraphicsDevice is lost but cannot be reset at this time. Therefore, rendering is not possible.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1338,6 +1774,12 @@
         <overload signature="Reset()">
           <summary><![CDATA[Resets the presentation parameters for the current GraphicsDevice.]]></summary>
           <syntax><![CDATA[public void Reset ()]]></syntax>
+          <exceptions>
+            <exception type="DeviceLostException"><![CDATA[The GraphicsDevice is lost but cannot be reset at this time. Therefore, rendering is not possible.]]></exception>
+            <exception type="DriverInternalErrorException"><![CDATA[Internal driver error. Applications should generally shut down when receiving this error.]]></exception>
+            <exception type="OutOfVideoMemoryException"><![CDATA[Direct3D does not have enough display memory to perform the operation.]]></exception>
+            <exception type="OutOfMemoryException"><![CDATA[Direct3D could not allocate sufficient memory to complete the call."]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1352,6 +1794,13 @@
           <parameters>
             <parameter name="presentationParameters" type="PresentationParameters"><![CDATA[Describes the new presentation parameters. This value cannot be null .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[presentationParameters is null.]]></exception>
+            <exception type="DeviceLostException"><![CDATA[The GraphicsDevice is lost but cannot be reset at this time. Therefore, rendering is not possible.]]></exception>
+            <exception type="DriverInternalErrorException"><![CDATA[Internal driver error. Applications should generally shut down when receiving this error.]]></exception>
+            <exception type="OutOfVideoMemoryException"><![CDATA[Direct3D does not have enough display memory to perform the operation.]]></exception>
+            <exception type="OutOfMemoryException"><![CDATA[Direct3D could not allocate sufficient memory to complete the call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1368,6 +1817,11 @@
             <parameter name="presentationParameters" type="PresentationParameters"><![CDATA[Describes the new presentation parameters. This value cannot be null .]]></parameter>
             <parameter name="graphicsAdapter" type="GraphicsAdapter"><![CDATA[The graphics device being reset.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[presentationParameters is null.]]></exception>
+            <exception type="DeviceLostException"><![CDATA[The GraphicsDevice is lost but cannot be reset at this time. Therefore, rendering is not possible.]]></exception>
+            <exception type="OutOfMemoryException"><![CDATA[Direct3D could not allocate sufficient memory to complete the call."]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
@@ -1385,6 +1839,9 @@
           <parameters>
             <parameter name="resolveTarget" type="Texture2D"><![CDATA[Texture to update with the resolved back buffer. This texture must be created with a usage type of ResourceUsage.ResolveTarget .]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[ResolveBackBuffer may not be called when the current render target is null. Use ResolveBackBuffer instead.]]></exception>
+          </exceptions>
           <remarks><![CDATA[On Xbox 360, the back buffer is cleared when ResolveBackBuffer is called. Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1402,6 +1859,11 @@
             <parameter name="resolveTarget" type="Texture2D"><![CDATA[Texture to update with the resolved back buffer. This texture must be created with a usage type of ResourceUsage.ResolveTarget .]]></parameter>
             <parameter name="backBufferIndex" type="int"><![CDATA[Index of the back buffer to resolve.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[One of the following conditions is true: resolveTarget was not created with ResourceUsage.ResolveTarget. backBufferIndex is not valid. Note that on Xbox 360, there is only one back buffer available and backBufferIndex must be zero.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[resolveTarget is null]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[ResolveBackBuffer may not be called when the current render target is null. Use ResolveBackBuffer instead.]]></exception>
+          </exceptions>
           <remarks><![CDATA[On Xbox 360, the back buffer is cleared when ResolveBackBuffer is called. Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1422,6 +1884,10 @@
           <parameters>
             <parameter name="index" type="int"><![CDATA[Index of the render target to resolve.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[An invalid render target index was requested. Note that on Xbox 360, there is only one render target available and index must be zero.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[ResolveRenderTarget may not be called when the current render target is null. Use ResolveBackBuffer instead.]]></exception>
+          </exceptions>
           <remarks><![CDATA[On Windows, non-multisampled render targets are not cleared when ResolveRenderTarget is called. Multisampled render targets, and all render targets on the Xbox 360, are cleared when ResolveRenderTarget is called. Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1444,6 +1910,10 @@
             <parameter name="calibrate" type="bool"><![CDATA[[ MarshalAsAttribute (U1)] true to indicate that correction should be applied. false to indicate that no gamma correction should be applied. The supplied gamma table is transferred directly to the GraphicsDevice .]]></parameter>
             <parameter name="ramp" type="GammaRamp"><![CDATA[The gamma correction ramp to set.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[ramp is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The arrays used in the red, green, and blue components of ramp do not have an array length of 256. Arrays used for gamma ramps must have a length of 256.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Gamma correction results in a more consistent display, but can incur processing overhead and should not be used frequently. Short-duration effects, such as flashing the entire screen red, should not be calibrated, but long-duration gamma changes should be. If a gamma calibrator is installed, the ramp is modified before being sent to the GraphicsDevice to account for the system and monitor response curves. If no calibrator is installed, the ramp is passed directly to the GraphicsDevice . The gamma ramp takes effect immediately. No wait for a vertical sync operation is performed. If the GraphicsDevice does not support gamma ramps in the current presentation mode (full-screen or windowed), no error is returned. Applications can check SupportsFullScreenGamma and CanCalibrateGamma to determine the capabilities of the GraphicsDevice and whether a calibrator is installed.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1466,6 +1936,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Quaternion"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1482,6 +1956,11 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Matrix[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1498,6 +1977,11 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Matrix"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1514,6 +1998,11 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector4[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1530,6 +2019,11 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant Boolean register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="bool[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1546,6 +2040,11 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector4"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1562,6 +2061,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector3"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector3 containing (1,2,3) will fill the register with (1,2,3,0).]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1579,6 +2082,12 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant integer register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="int[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentException"><![CDATA[When setting integer shader constant data, constantData must have a length that is a multiple of four.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1595,6 +2104,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector2"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector2 containing (1,2) will fill the register with (1,2,0,0).]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1612,6 +2125,12 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="float[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentException"><![CDATA[When setting float shader constant data, constantData must have a length that is a multiple of four.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1628,6 +2147,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector2[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to an array of Vector2 values containing (1,2) and (3,4) will fill register 0 with (1,2,0,0) and register 1 with (3,4,0,0).]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1645,6 +2168,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Quaternion[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1661,6 +2188,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the pixel shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector3[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to an array of Vector3 values containing (1,2,3) and (4,5,6) will fill register 0 with (1,2,3,0) and register 1 with (4,5,6,0).]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1683,6 +2214,10 @@
             <parameter name="renderTargetIndex" type="int"><![CDATA[Index of the render target. The number of render targets supported by a GraphicsDevice is contained in NumberSimultaneousRenderTargets .]]></parameter>
             <parameter name="renderTarget" type="RenderTarget2D"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[An invalid render target index was requested. On Xbox 360, there is only one render target available and renderTargetIndex must be zero.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[SetRenderTarget was called after this renderTarget was disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve. The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. For more information, see CheckDepthStencilMatch . The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1698,6 +2233,11 @@
           <parameters>
             <parameter name="renderTarget" type="RenderTarget2D"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[An invalid render target index was requested.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[The render target index must be within the valid range for this device.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[SetRenderTarget was called after this renderTarget was disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -1715,6 +2255,10 @@
             <parameter name="renderTarget" type="RenderTargetCube"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
             <parameter name="faceType" type="CubeMapFace"><![CDATA[The cube map face type.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[An invalid render target index was requested. On Xbox 360, there is only one render target available and renderTargetIndex must be zero.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[SetRenderTarget was called after this renderTarget was disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Warning On Xbox 360, all render targets (including the back buffer) share the same memory. Because of this, the previous content of any render target is lost when the render target is changed with SetRenderTarget or when Present is called, which has the same effect as swapping the render target. To preserve the data in a render target, it is necessary to resolve it, either with ResolveRenderTarget or ResolveBackBuffer . Just remember to resolve the render target before switching the render target to avoid losing data that you want to preserve. The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. For more information, see CheckDepthStencilMatch . The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1732,6 +2276,11 @@
             <parameter name="renderTarget" type="RenderTargetCube"><![CDATA[A new render target for the device, or null to set the device render target to the back buffer of the device.]]></parameter>
             <parameter name="cubeMapFace" type="CubeMapFace"><![CDATA[The cube map face type.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[An invalid render target index was requested.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[The render target index must be within the valid range for this device.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[SetRenderTarget was called after this renderTarget was disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The following restrictions apply when using this method. The multisample type must be the same for the render target and the depth stencil surface. The formats must be compatible for the render target and the depth stencil surface. The size of the depth stencil surface must be greater than or equal to the size of the render target. These restrictions are validated only when using the debug runtime when any of the GraphicsDevice drawing methods are called.]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -1750,6 +2299,9 @@
           <parameters>
             <parameter name="renderTargets" type="RenderTargetBinding"><![CDATA[[ ParamArrayAttribute ] An array of render targets.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="NotSupportedException"><![CDATA[The profile supports a maximum of 1 simultaneous render targets.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
@@ -1798,6 +2350,9 @@
           <parameters>
             <parameter name="vertexBuffers" type="VertexBufferBinding"><![CDATA[[ ParamArrayAttribute ] An array of vertex buffers.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="NotSupportedException"><![CDATA[The profile does not support the vertex texture format.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows Phone</platform>
           </platforms>
@@ -1817,6 +2372,11 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector4"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1833,6 +2393,12 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="float[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentException"><![CDATA[When setting float shader constant data, constantData must have a length that is a multiple of four.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1849,6 +2415,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector3"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector3 of (1,2,3) will fill the register with (1,2,3,0).]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1866,6 +2436,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Quaternion[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1882,6 +2456,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector2"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float register, the constant data will be padded to fill the register. This means that setting register 0 to a Vector2 of of (1,2) will fill the register with (1,2,0,0).]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1899,6 +2477,11 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector4[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1915,6 +2498,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Quaternion"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1931,6 +2518,12 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant integer register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="int[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentException"><![CDATA[When setting integer shader constant data, constantData must have a length that is a multiple of four.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1947,6 +2540,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector3[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Because the data in the Vector3 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to to an array of Vector3 values containing (1,2,3) and (4,5,6) will fill register 0 with (1,2,3,0) and register 1 with (4,5,6,0).]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -1964,6 +2561,11 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Matrix"><![CDATA[The constant data. This value will be transposed when the vertex shader constant is set.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1980,6 +2582,11 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant Boolean register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="bool[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -1996,6 +2603,11 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Matrix[]"><![CDATA[The constant data. This value will be transposed when the vertex shader constant is set.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[constantData is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -2012,6 +2624,10 @@
             <parameter name="startRegister" type="int"><![CDATA[Zero-based index of the vertex shader constant float register at which to begin setting values.]]></parameter>
             <parameter name="constantData" type="Vector2[]"><![CDATA[The constant data.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[constantData is outside the allowable range of values as defined by the invoked method.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The method call is invalid. For example, a method's parameter may have an invalid value.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Because the data in the Vector2 type is not large enough to fill the constant float registers, the constant data will be padded to fill the registers. This means that setting register 0 to an array of Vector2 values containing (1,2) and (3,4) will fill register 0 with (1,2,0,0) and register 1 with (3,4,0,0).]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -2021,7 +2637,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -2036,7 +2652,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -2058,7 +2674,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

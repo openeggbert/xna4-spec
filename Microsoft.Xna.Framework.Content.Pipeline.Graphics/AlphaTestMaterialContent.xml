@@ -27,6 +27,7 @@
     <property name="Alpha" type="Nullable&lt;float&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public Nullable<float> Alpha { get; set; }]]></syntax>
+      <value><![CDATA[The material's alpha value.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -36,6 +37,7 @@
     <property name="AlphaFunction" type="Nullable&lt;CompareFunction&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public Nullable<CompareFunction> AlphaFunction { get; set; }]]></syntax>
+      <value><![CDATA[The comparison function.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -45,6 +47,7 @@
     <property name="DiffuseColor" type="Nullable&lt;Vector3&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public Nullable<Vector3> DiffuseColor { get; set; }]]></syntax>
+      <value><![CDATA[The material's diffuse color.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -54,6 +57,7 @@
     <property name="ReferenceAlpha" type="Nullable&lt;int&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public Nullable<int> ReferenceAlpha { get; set; }]]></syntax>
+      <value><![CDATA[The reference alpha value.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -63,6 +67,7 @@
     <property name="Texture" type="ExternalReference&lt;TextureContent&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public ExternalReference<TextureContent> Texture { get; set; }]]></syntax>
+      <value><![CDATA[The current texture.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -72,6 +77,7 @@
     <property name="VertexColorEnabled" type="Nullable&lt;bool&gt;" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public Nullable<bool> VertexColorEnabled { get; set; }]]></syntax>
+      <value><![CDATA[True to enable per-vertex color; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>

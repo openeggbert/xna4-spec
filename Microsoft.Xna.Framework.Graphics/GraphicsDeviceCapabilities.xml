@@ -4,7 +4,8 @@
           name="GraphicsDeviceCapabilities" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="sealed">
   <summary><![CDATA[Represents the capabilities of the hardware.]]></summary>
   <syntax><![CDATA[[SerializableAttribute]
 public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
@@ -19,6 +20,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="AdapterOrdinalInGroup" type="int" access="get">
       <summary><![CDATA[Gets the number indicating the order in which heads are referenced by the API.]]></summary>
       <syntax><![CDATA[public int AdapterOrdinalInGroup { get; }]]></syntax>
+      <value><![CDATA[The number indicating the order in which heads are referenced by the API.]]></value>
       <remarks><![CDATA[The value for the master adapter is always 0. These values do not correspond to the adapter ordinals. They apply only to heads within a group.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -29,6 +31,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="AlphaCompareCapabilities" type="CompareCaps" access="get">
       <summary><![CDATA[Gets the alpha-test comparison capabilities.]]></summary>
       <syntax><![CDATA[public CompareCaps AlphaCompareCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.CompareCaps representing the alpha-test comparison capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -38,6 +41,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="CubeTextureFilterCapabilities" type="FilterCaps" access="get">
       <summary><![CDATA[Gets texture-filtering capabilities for a cube texture.]]></summary>
       <syntax><![CDATA[public FilterCaps CubeTextureFilterCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.FilterCaps representing the texture-filtering capabilities for a cube texture of a device.]]></value>
       <remarks><![CDATA[Per-stage filtering capabilities reflect which filtering modes are supported for texture stages when performing multiple-texture blending. This member can be any combination of the per-stage texture-filtering flags defined in GraphicsDeviceCapabilities.FilterCaps .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -48,6 +52,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="CursorCapabilities" type="CursorCaps" access="get">
       <summary><![CDATA[Gets hardware cursor capabilties.]]></summary>
       <syntax><![CDATA[public CursorCaps CursorCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.CursorCaps representing the hardware cursor capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -57,6 +62,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="DeclarationTypeCapabilities" type="DeclarationTypeCaps" access="get">
       <summary><![CDATA[Gets vertex data type capabilities.]]></summary>
       <syntax><![CDATA[public DeclarationTypeCaps DeclarationTypeCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.DeclarationTypeCaps representing the vertex data type capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -66,6 +72,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="DepthBufferCompareCapabilities" type="CompareCaps" access="get">
       <summary><![CDATA[Gets depth buffer comparision capabilities.]]></summary>
       <syntax><![CDATA[public CompareCaps DepthBufferCompareCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.CompareCaps representing the z-buffer comparison capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -75,6 +82,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="DestinationBlendCapabilities" type="BlendCaps" access="get">
       <summary><![CDATA[Gets destination-blending capabilities.]]></summary>
       <syntax><![CDATA[public BlendCaps DestinationBlendCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.BlendCaps representing the destination-blending capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -84,6 +92,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="DeviceCapabilities" type="DeviceCaps" access="get">
       <summary><![CDATA[Gets graphics device capabilities.]]></summary>
       <syntax><![CDATA[public DeviceCaps DeviceCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.DeviceCaps representing the graphics capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -93,6 +102,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="DeviceType" type="DeviceType" access="get">
       <summary><![CDATA[Returns the type of the current GraphicsDevice.]]></summary>
       <syntax><![CDATA[public DeviceType DeviceType { get; }]]></syntax>
+      <value><![CDATA[The type of the current GraphicsDevice.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -102,6 +112,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="DriverCapabilities" type="DriverCaps" access="get">
       <summary><![CDATA[Gets device driver capabilities.]]></summary>
       <syntax><![CDATA[public DriverCaps DriverCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.DriverCaps representing the driver capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -111,6 +122,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="ExtentsAdjust" type="float" access="get">
       <summary><![CDATA[Gets the number of pixels to adjust the extents rectangle outward to accommodate antialiasing kernels.]]></summary>
       <syntax><![CDATA[public float ExtentsAdjust { get; }]]></syntax>
+      <value><![CDATA[Size of adjustment, in pixels.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -120,6 +132,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="GuardBandBottom" type="float" access="get">
       <summary><![CDATA[Gets the bottom screen-space coordinate of the guard-band clipping region.]]></summary>
       <syntax><![CDATA[public float GuardBandBottom { get; }]]></syntax>
+      <value><![CDATA[The bottom coordinate of the guard-band clipping region.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -129,6 +142,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="GuardBandLeft" type="float" access="get">
       <summary><![CDATA[Gets the left screen-space coordinate of the guard-band clipping region.]]></summary>
       <syntax><![CDATA[public float GuardBandLeft { get; }]]></syntax>
+      <value><![CDATA[The left coordinate of the guard-band clipping region.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -138,6 +152,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="GuardBandRight" type="float" access="get">
       <summary><![CDATA[Gets the right coordinate of the guard-band clipping region.]]></summary>
       <syntax><![CDATA[public float GuardBandRight { get; }]]></syntax>
+      <value><![CDATA[The right coordinate of the guard-band clipping region.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -147,6 +162,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="GuardBandTop" type="float" access="get">
       <summary><![CDATA[Gets the top screen-space coordinate of the guard-band clipping region.]]></summary>
       <syntax><![CDATA[public float GuardBandTop { get; }]]></syntax>
+      <value><![CDATA[The top coordinate of the guard-band clipping region.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -156,6 +172,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="LineCapabilities" type="LineCaps" access="get">
       <summary><![CDATA[Gets line-drawing primitives capabilities.]]></summary>
       <syntax><![CDATA[public LineCaps LineCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.LineCaps representing the line-drawing primitives capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -165,6 +182,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MasterAdapterOrdinal" type="int" access="get">
       <summary><![CDATA[Gets the master device for this subordinate.]]></summary>
       <syntax><![CDATA[public int MasterAdapterOrdinal { get; }]]></syntax>
+      <value><![CDATA[Number indicating the master device. This number is taken from the same space as the adapter values.]]></value>
       <remarks><![CDATA[For multi-head support, one head will be denoted the master head, and all other heads on the same card will be denoted subordinate heads. If more than one multi-head adapter is present in a system, the master and its subordinates from one multi-head adapter are called a group.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -175,6 +193,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxAnisotropy" type="int" access="get">
       <summary><![CDATA[Gets the maximum valid value for the MaxAnisotropy texture-stage state.]]></summary>
       <syntax><![CDATA[public int MaxAnisotropy { get; }]]></syntax>
+      <value><![CDATA[The maximum valid value for MaxAnisotropy.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -184,6 +203,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxPixelShader30InstructionSlots" type="int" access="get">
       <summary><![CDATA[Gets the maximum number of pixel shader instruction slots supported.]]></summary>
       <syntax><![CDATA[public int MaxPixelShader30InstructionSlots { get; }]]></syntax>
+      <value><![CDATA[The maximum number of pixel shader instruction slots supported.]]></value>
       <remarks><![CDATA[The maximum value that can be set on this capability is 32,768. Devices that support ps_3_0 are required to support at least 512 instruction slots.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -194,6 +214,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxPixelShaderProfile" type="ShaderProfile" access="get">
       <summary><![CDATA[Returns the maximum pixel shader profile for this GraphicsDevice.]]></summary>
       <syntax><![CDATA[public ShaderProfile MaxPixelShaderProfile { get; }]]></syntax>
+      <value><![CDATA[The maximum pixel shader profile for this GraphicsDevice.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -203,6 +224,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxPointSize" type="float" access="get">
       <summary><![CDATA[Gets the maximum size of a point primitive.]]></summary>
       <syntax><![CDATA[public float MaxPointSize { get; }]]></syntax>
+      <value><![CDATA[The maximum size of a point primitive. The range is greater than or equal to 1.0f.]]></value>
       <remarks><![CDATA[If the size is set to 1.0f, the device does not support point size control.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -213,6 +235,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxPrimitiveCount" type="int" access="get">
       <summary><![CDATA[Gets the maximum number of primitives for each DrawPrimitives call.]]></summary>
       <syntax><![CDATA[public int MaxPrimitiveCount { get; }]]></syntax>
+      <value><![CDATA[The maximum number of primitives.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -222,6 +245,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxSimultaneousRenderTargets" type="int" access="get">
       <summary><![CDATA[Gets the maximum number of simultaneous render targets.]]></summary>
       <syntax><![CDATA[public int MaxSimultaneousRenderTargets { get; }]]></syntax>
+      <value><![CDATA[The maximum number of simultaneous render targets supported by the device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -232,6 +256,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxSimultaneousTextures" type="int" access="get">
       <summary><![CDATA[Gets the maximum number of textures that can be simultaneously bound to the fixed-function pipeline sampler stages.]]></summary>
       <syntax><![CDATA[public int MaxSimultaneousTextures { get; }]]></syntax>
+      <value><![CDATA[The maximum number of textures that can be simultaneously bound to the fixed-function pipeline sampler stages.]]></value>
       <remarks><![CDATA[If the same texture is bound to two sampler stages, it counts as two textures. This value has no meaning in the programmable pipeline where the number of sampler stages is determined by each pixel shader version. Each pixel shader version also determines the number of texture declaration instructions.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -242,6 +267,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxStreamStride" type="int" access="get">
       <summary><![CDATA[Gets the maximum stride.]]></summary>
       <syntax><![CDATA[public int MaxStreamStride { get; }]]></syntax>
+      <value><![CDATA[The maximum stride.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -251,6 +277,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxStreams" type="int" access="get">
       <summary><![CDATA[Gets the maximum number of concurrent data streams.]]></summary>
       <syntax><![CDATA[public int MaxStreams { get; }]]></syntax>
+      <value><![CDATA[The maximum number of concurrent data streams. The valid range is 1 to 16.]]></value>
       <remarks><![CDATA[If this value is 0, then the driver is not a Direct3D 9 driver.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -261,6 +288,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxTextureAspectRatio" type="int" access="get">
       <summary><![CDATA[Gets the maximum texture aspect ratio supported by the hardware.]]></summary>
       <syntax><![CDATA[public int MaxTextureAspectRatio { get; }]]></syntax>
+      <value><![CDATA[The maximum texture aspect ratio supported by the hardware, typically a power of 2.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -270,6 +298,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxTextureHeight" type="int" access="get">
       <summary><![CDATA[Gets the maximum texture height for this device.]]></summary>
       <syntax><![CDATA[public int MaxTextureHeight { get; }]]></syntax>
+      <value><![CDATA[The maximum texture height for this device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -279,6 +308,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxTextureRepeat" type="int" access="get">
       <summary><![CDATA[Gets the maximum range of the integer bits of the post-normalized texture coordinates.]]></summary>
       <syntax><![CDATA[public int MaxTextureRepeat { get; }]]></syntax>
+      <value><![CDATA[The maximum range of the integer bits of the post-normalized texture coordinates.]]></value>
       <remarks><![CDATA[A texture coordinate is stored as a 32-bit signed integer using 27 bits to store the integer part and 5 bits for the floating-point fraction. The maximum integer index, 227, is used to determine the maximum texture coordinate, depending on how the hardware does texture-coordinate scaling. Some hardware reports the cap TextureCaps.SupportsTextureRepeatNotScaledBySize . For this case, the device defers scaling texture coordinates by the texture size until after interpolation and application of the texture address mode, so the number of times a texture can be wrapped is given by the integer value in MaxTextureRepeat . Less desirably, on some hardware TextureCaps.SupportsTextureRepeatNotScaledBySize is not set and the device scales the texture coordinates by the texture size (using the highest level of detail) prior to interpolation. This limits the number of times a texture can be wrapped to MaxTextureRepeat / texture size. For example, assume that MaxTextureRepeat is equal to 32K and the size of the texture is 4K. If the hardware sets TextureCaps.SupportsTextureRepeatNotScaledBySize , then the number of times a texture can be wrapped is equal to MaxTextureRepeat (32K, in this example). Otherwise, the number of times a texture can be wrapped is equal to MaxTextureRepeat divided by texture size, which, in this example, is 32K/4K, or 8.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -289,6 +319,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxTextureWidth" type="int" access="get">
       <summary><![CDATA[Gets the maximum texture width for this device.]]></summary>
       <syntax><![CDATA[public int MaxTextureWidth { get; }]]></syntax>
+      <value><![CDATA[The maximum texture width for this device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -298,6 +329,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxUserClipPlanes" type="int" access="get">
       <summary><![CDATA[Gets the maximum number of user-defined clipping planes supported.]]></summary>
       <syntax><![CDATA[public int MaxUserClipPlanes { get; }]]></syntax>
+      <value><![CDATA[The maximum number of user-defined clipping planes supported. This number can be 0.]]></value>
       <remarks><![CDATA[For a given physical device, this capability might vary across Direct3D devices, depending on the parameters supplied to the Device constructor.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -308,6 +340,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxVertexIndex" type="int" access="get">
       <summary><![CDATA[Gets the maximum size of indices supported for hardware vertex processing.]]></summary>
       <syntax><![CDATA[public int MaxVertexIndex { get; }]]></syntax>
+      <value><![CDATA[The maximum size of indices supported for hardware vertex processing.]]></value>
       <remarks><![CDATA[It is possible to create 32-bit index buffers; however, you will not be able to render with the index buffer unless this value is greater than 0x0000FFFF.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -318,6 +351,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxVertexShader30InstructionSlots" type="int" access="get">
       <summary><![CDATA[Gets the maximum number of vertex shader instruction slots supported.]]></summary>
       <syntax><![CDATA[public int MaxVertexShader30InstructionSlots { get; }]]></syntax>
+      <value><![CDATA[The maximum number of vertex shader instruction slots supported.]]></value>
       <remarks><![CDATA[The maximum value that can be set on this cap is 32,768. Devices that support vs_3_0 are required to support at least 512 instruction slots.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -328,6 +362,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxVertexShaderConstants" type="int" access="get">
       <summary><![CDATA[Gets the number of vertex shader registers that are reserved for constants.]]></summary>
       <syntax><![CDATA[public int MaxVertexShaderConstants { get; }]]></syntax>
+      <value><![CDATA[The number of vertex shader registers that are reserved for constants.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -337,6 +372,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxVertexShaderProfile" type="ShaderProfile" access="get">
       <summary><![CDATA[Returns the maximum vertex shader profile for this GraphicsDevice.]]></summary>
       <syntax><![CDATA[public ShaderProfile MaxVertexShaderProfile { get; }]]></syntax>
+      <value><![CDATA[The maximum vertex shader profile for this GraphicsDevice.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -346,6 +382,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxVertexW" type="float" access="get">
       <summary><![CDATA[Gets the maximum W-based depth value that the device supports.]]></summary>
       <syntax><![CDATA[public float MaxVertexW { get; }]]></syntax>
+      <value><![CDATA[The maximum W-based depth value that the device supports.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -355,6 +392,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="MaxVolumeExtent" type="int" access="get">
       <summary><![CDATA[Gets the maximum value for any of the three dimensions (width, height, and depth) of a volume texture.]]></summary>
       <syntax><![CDATA[public int MaxVolumeExtent { get; }]]></syntax>
+      <value><![CDATA[The maximum value for any of the three dimensions (width, height, and depth) of a volume texture.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -364,6 +402,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="NumberOfAdaptersInGroup" type="int" access="get">
       <summary><![CDATA[Gets the number of adapters in this adapter group (only if master).]]></summary>
       <syntax><![CDATA[public int NumberOfAdaptersInGroup { get; }]]></syntax>
+      <value><![CDATA[The number of adapters in this adapter group (only if master).]]></value>
       <remarks><![CDATA[NumberOfAdaptersInGroup will be 1 for conventional adapters, greater than 1 for the master adapter of a multi-head card, or 0 for a subordinate adapter of a multihead card. Each card can have at most one master, but may have many subordinates.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -374,6 +413,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="NumberSimultaneousRenderTargets" type="int" access="get">
       <summary><![CDATA[Gets the number of simultaneous render targets.]]></summary>
       <syntax><![CDATA[public int NumberSimultaneousRenderTargets { get; }]]></syntax>
+      <value><![CDATA[The number of simultaneous render targets. This number must be at least one.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -383,6 +423,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="PixelShader1xMaxValue" type="float" access="get">
       <summary><![CDATA[Gets the maximum value of pixel shader arithmetic component.]]></summary>
       <syntax><![CDATA[public float PixelShader1xMaxValue { get; }]]></syntax>
+      <value><![CDATA[The maximum value of pixel shader arithmetic component.]]></value>
       <remarks><![CDATA[PixelShader1xMaxValue indicates the internal range of values supported for pixel color blending operations. Within the range that they report to, implementations must allow data to pass through pixel processing unmodified (unclamped). Normally, the value of this member is an absolute value. For example, a 1.0 indicates that the range is −1.0 to 1, and an 8.0 indicates that the range is −8.0 to 8.0. The value must be greater than or equal to 1.0 for any hardware that supports pixel shaders.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -393,6 +434,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="PixelShaderCapabilities" type="PixelShaderCaps" access="get">
       <summary><![CDATA[Gets the pixel shader 2.0 capabilities.]]></summary>
       <syntax><![CDATA[public PixelShaderCaps PixelShaderCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.PixelShaderCaps representing the pixel shader 2.0 capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -402,6 +444,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="PixelShaderVersion" type="Version" access="get">
       <summary><![CDATA[Gets the pixel shader main and sub versions.]]></summary>
       <syntax><![CDATA[public Version PixelShaderVersion { get; }]]></syntax>
+      <value><![CDATA[The pixel shader main and sub versions.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -411,6 +454,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="PresentInterval" type="PresentInterval" access="get">
       <summary><![CDATA[Gets the rate at which the swap chain's back buffers are presented to the front buffer.]]></summary>
       <syntax><![CDATA[public PresentInterval PresentInterval { get; }]]></syntax>
+      <value><![CDATA[The rate at which the swap chain's back buffers are presented to the front buffer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -420,6 +464,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="PrimitiveCapabilities" type="PrimitiveCaps" access="get">
       <summary><![CDATA[Gets driver primitive capabilities.]]></summary>
       <syntax><![CDATA[public PrimitiveCaps PrimitiveCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.PrimitiveCaps representing the primitive capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -429,6 +474,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="RasterCapabilities" type="RasterCaps" access="get">
       <summary><![CDATA[Gets information on raster-drawing capabilities.]]></summary>
       <syntax><![CDATA[public RasterCaps RasterCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.RasterCaps representing the raster capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -438,6 +484,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="ShadingCapabilities" type="ShadingCaps" access="get">
       <summary><![CDATA[Gets shading operations capabilities.]]></summary>
       <syntax><![CDATA[public ShadingCaps ShadingCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.ShadingCaps representing the shading capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -447,6 +494,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="SourceBlendCapabilities" type="BlendCaps" access="get">
       <summary><![CDATA[Gets source-blending capabilities.]]></summary>
       <syntax><![CDATA[public BlendCaps SourceBlendCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.BlendCaps representing the source-blending capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -456,6 +504,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="StencilCapabilities" type="StencilCaps" access="get">
       <summary><![CDATA[Gets the supported stencil-buffer operations.]]></summary>
       <syntax><![CDATA[public StencilCaps StencilCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.StencilCaps representing the stencil-buffer capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -465,6 +514,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="TextureAddressCapabilities" type="AddressCaps" access="get">
       <summary><![CDATA[Gets texture-addressing capabilities for texture objects.]]></summary>
       <syntax><![CDATA[public AddressCaps TextureAddressCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.AddressCaps representing the texture-addressing capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -474,6 +524,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="TextureCapabilities" type="TextureCaps" access="get">
       <summary><![CDATA[Gets miscellaneous texture-mapping capabilities.]]></summary>
       <syntax><![CDATA[public TextureCaps TextureCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.TextureCaps representing the texture-mapping capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -483,6 +534,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="TextureFilterCapabilities" type="FilterCaps" access="get">
       <summary><![CDATA[Gets texture-filtering capabilities for a texture.]]></summary>
       <syntax><![CDATA[public FilterCaps TextureFilterCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.FilterCaps representing the texture-filtering capabilities of a device.]]></value>
       <remarks><![CDATA[Per-stage filtering capabilities reflect which filtering modes are supported for texture stages when performing multiple-texture blending. This member can be any combination of the per-stage texture-filtering flags defined in GraphicsDeviceCapabilities.FilterCaps .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -493,6 +545,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="VertexFormatCapabilities" type="VertexFormatCaps" access="get">
       <summary><![CDATA[Gets flexible vertex format capabilities.]]></summary>
       <syntax><![CDATA[public VertexFormatCaps VertexFormatCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.VertexFormatCaps representing the flexible vertex format capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -502,6 +555,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="VertexProcessingCapabilities" type="VertexProcessingCaps" access="get">
       <summary><![CDATA[Gets vertex processing capabilities.]]></summary>
       <syntax><![CDATA[public VertexProcessingCaps VertexProcessingCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.VertexProcessingCaps representing the vertex processing capabilities of a device.]]></value>
       <remarks><![CDATA[For a given physical device, this capability might vary across Direct3D devices, depending on the parameters supplied to the Device constructor.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -512,6 +566,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="VertexShaderCapabilities" type="VertexShaderCaps" access="get">
       <summary><![CDATA[Gets vertex shader version 2.0 extended capabilities.]]></summary>
       <syntax><![CDATA[public VertexShaderCaps VertexShaderCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.VertexShaderCaps representing the vertex shader 2.0 capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -521,6 +576,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="VertexShaderVersion" type="Version" access="get">
       <summary><![CDATA[Gets the vertex shader main and sub versions.]]></summary>
       <syntax><![CDATA[public Version VertexShaderVersion { get; }]]></syntax>
+      <value><![CDATA[The vertex shader main and sub versions.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -530,6 +586,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="VertexTextureFilterCapabilities" type="FilterCaps" access="get">
       <summary><![CDATA[Gets vertex shader texture filter capabilities.]]></summary>
       <syntax><![CDATA[public FilterCaps VertexTextureFilterCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.FilterCaps representing the vertex shader filter capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -539,6 +596,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="VolumeTextureAddressCapabilities" type="AddressCaps" access="get">
       <summary><![CDATA[Gets texture-addressing capabilities for a volume texture]]></summary>
       <syntax><![CDATA[public AddressCaps VolumeTextureAddressCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.AddressCaps representing the texture-addressing capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -548,6 +606,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
     <property name="VolumeTextureFilterCapabilities" type="FilterCaps" access="get">
       <summary><![CDATA[Gets texture-filtering capabilities for a volume texture.]]></summary>
       <syntax><![CDATA[public FilterCaps VolumeTextureFilterCapabilities { get; }]]></syntax>
+      <value><![CDATA[A GraphicsDeviceCapabilities.FilterCaps representing the texture-filtering capabilities of a device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -591,7 +650,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -606,7 +665,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -621,7 +680,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -643,7 +702,7 @@ public sealed class GraphicsDeviceCapabilities : IDisposable]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

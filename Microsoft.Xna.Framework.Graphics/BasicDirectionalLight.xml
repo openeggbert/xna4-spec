@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="BasicDirectionalLight" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Provides methods for manipulating the directional lights used by the BasicEffect class.]]></summary>
   <syntax><![CDATA[public sealed class BasicDirectionalLight]]></syntax>
   <platforms>
@@ -17,6 +18,7 @@
     <property name="DiffuseColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the diffuse color of this light.]]></summary>
       <syntax><![CDATA[public Vector3 DiffuseColor { get; set; }]]></syntax>
+      <value><![CDATA[The diffuse color of this light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +28,7 @@
     <property name="Direction" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets light direciton.]]></summary>
       <syntax><![CDATA[public Vector3 Direction { get; set; }]]></syntax>
+      <value><![CDATA[Gets or sets the light direciton. This value must be a unit vector.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +38,7 @@
     <property name="Enabled" type="bool" access="get;set">
       <summary><![CDATA[Enables this light.]]></summary>
       <syntax><![CDATA[public bool Enabled { get; set; }]]></syntax>
+      <value><![CDATA[true to enable this light; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +48,7 @@
     <property name="SpecularColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the specular color of the light.]]></summary>
       <syntax><![CDATA[public Vector3 SpecularColor { get; set; }]]></syntax>
+      <value><![CDATA[The specular color of the light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

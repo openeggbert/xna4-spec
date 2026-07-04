@@ -17,6 +17,7 @@
     <property name="SupportsBlendFactor" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.BlendFactor blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsBlendFactor { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.BlendFactor blend mode; false otherwise.]]></value>
       <remarks><![CDATA[Constant color blending factor used by the frame-buffer blender.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -27,6 +28,7 @@
     <property name="SupportsBothInverseSourceAlpha" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.BothInverseSourceAlpha blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsBothInverseSourceAlpha { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.BothInverseSourceAlpha blend mode; false otherwise.]]></value>
       <remarks><![CDATA[Source blend factor is (1 − As, 1 − As, 1 − As, 1 − As), and destination blend factor is (As, As, As, As); the destination blend selection is overridden. This blend mode is supported only for the SourceBlend render state.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -37,6 +39,7 @@
     <property name="SupportsBothSourceAlpha" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.BothSourceAlpha blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsBothSourceAlpha { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.BothSourceAlpha blend mode; false otherwise.]]></value>
       <remarks><![CDATA[This mode is obsolete. For DirectX 6 and later, you can achieve the same effect by setting the source and destination blend factors to Blend.SourceAlpha and Blend.InverseSourceAlpha in separate calls.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -47,6 +50,7 @@
     <property name="SupportsDestinationAlpha" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.DestinationAlpha blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsDestinationAlpha { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.DestinationAlpha blend mode; false otherwise.]]></value>
       <remarks><![CDATA[The Blend.DestinationAlpha blend factor is (Ad, Ad, Ad, Ad), where Ad is the destination alpha value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -57,6 +61,7 @@
     <property name="SupportsDestinationColor" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.DestinationColor blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsDestinationColor { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.DestinationColor blend mode; false otherwise.]]></value>
       <remarks><![CDATA[The Blend.DestinationColor blend factor is (Rd, Gd, Bd, Ad), where R, G, B, and A respectively stand for red, green, blue, and alpha destination values.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -67,6 +72,7 @@
     <property name="SupportsInverseDestinationAlpha" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.InverseDestinationAlpha blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsInverseDestinationAlpha { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.InverseDestinationAlpha blend mode; false otherwise.]]></value>
       <remarks><![CDATA[The Blend.InverseDestinationAlpha blend factor is (1 − Ad, 1 − Ad, 1 − Ad, 1 − Ad), where Ad is the alpha destination value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -77,6 +83,7 @@
     <property name="SupportsInverseDestinationColor" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.InverseDestinationColor blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsInverseDestinationColor { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.InverseDestinationColor blend mode; false otherwise.]]></value>
       <remarks><![CDATA[The Blend.InverseDestinationColor blend factor is (1 − Rd, 1 − Gd, 1 − Bd, 1 − Ad), where Rd, Gd, Bd, and Ad respectively stand for the red, green, blue, and alpha destination values.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -87,6 +94,7 @@
     <property name="SupportsInverseSourceAlpha" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.InverseSourceAlpha blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsInverseSourceAlpha { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.InverseSourceAlpha blend mode; false otherwise.]]></value>
       <remarks><![CDATA[The Blend.InverseSourceAlpha blend factor is (1 − As, 1 − As, 1 − As, 1 − As), where As is the alpha destination value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -97,6 +105,7 @@
     <property name="SupportsInverseSourceColor" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.InverseSourceColor blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsInverseSourceColor { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.InverseSourceColor blend mode; false otherwise.]]></value>
       <remarks><![CDATA[The Blend.InverseSourceColor blend factor is (1 − Rs, 1 − Gs, 1 − Bs, 1 − As) where R, G, B, and A respectively stand for the red, green, blue, and alpha destination values.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -107,6 +116,7 @@
     <property name="SupportsOne" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.One blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsOne { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.One blend mode; false otherwise.]]></value>
       <remarks><![CDATA[The Blend.One blend factor is (1, 1, 1, 1).]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -117,6 +127,7 @@
     <property name="SupportsSourceAlpha" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.SourceAlpha blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsSourceAlpha { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.SourceAlpha blend mode; false otherwise.]]></value>
       <remarks><![CDATA[The Blend.SourceAlpha blend factor is (As, As, As, As), where As is the alpha source value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -127,6 +138,7 @@
     <property name="SupportsSourceAlphaSat" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.SourceAlphaSat blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsSourceAlphaSat { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.SourceAlphaSat blend mode; false otherwise.]]></value>
       <remarks><![CDATA[The Blend.SourceAlphaSat blend factor is ( f , f , f , 1), where f = min (A, 1 − Ad).]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -137,6 +149,7 @@
     <property name="SupportsSourceColor" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.SourceColor blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsSourceColor { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.SourceColor blend mode; false otherwise.]]></value>
       <remarks><![CDATA[The Blend.SourceColor blend factor is (Rs, Gs, Bs, As), where R, G, B, and A respectively stand for the red, green, blue, and alpha source values.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -147,6 +160,7 @@
     <property name="SupportsZero" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating that the driver supports the Blend.Zero blend mode.]]></summary>
       <syntax><![CDATA[public bool SupportsZero { get; }]]></syntax>
+      <value><![CDATA[true if the driver supports the Blend.Zero blend mode; false otherwise.]]></value>
       <remarks><![CDATA[The Blend.Zero blend factor is (0, 0, 0, 0).]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -156,7 +170,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

@@ -4,7 +4,8 @@
           name="VideoPlayer" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="sealed">
   <summary><![CDATA[Provides methods and properties to play back, pause, resume, and stop video. VideoPlayer also exposes repeat, volume, and play position information.]]></summary>
   <syntax><![CDATA[public sealed class VideoPlayer : IDisposable]]></syntax>
   <platforms>
@@ -29,6 +30,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -39,6 +41,7 @@
     <property name="IsLooped" type="bool" access="get;set">
       <summary><![CDATA[Gets a value that indicates whether the player is playing video in a loop.]]></summary>
       <syntax><![CDATA[public bool IsLooped { get; set; }]]></syntax>
+      <value><![CDATA[true if the player is playing video in a loop; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -49,6 +52,7 @@
     <property name="IsMuted" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets the muted setting for the video player.]]></summary>
       <syntax><![CDATA[public bool IsMuted { get; set; }]]></syntax>
+      <value><![CDATA[true if sound is muted; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -59,6 +63,7 @@
     <property name="PlayPosition" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the play position within the currently playing video.]]></summary>
       <syntax><![CDATA[public TimeSpan PlayPosition { get; }]]></syntax>
+      <value><![CDATA[Play position within the current song, as a TimeSpan structure.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -69,6 +74,7 @@
     <property name="State" type="MediaState" access="get">
       <summary><![CDATA[Gets the media playback state, MediaState.]]></summary>
       <syntax><![CDATA[public MediaState State { get; }]]></syntax>
+      <value><![CDATA[The media playback state, MediaState.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -79,6 +85,7 @@
     <property name="Video" type="Video" access="get">
       <summary><![CDATA[Gets the Video that is currently playing.]]></summary>
       <syntax><![CDATA[public Video Video { get; }]]></syntax>
+      <value><![CDATA[The currently playing Video.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -89,6 +96,7 @@
     <property name="Volume" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the video player volume.]]></summary>
       <syntax><![CDATA[public float Volume { get; set; }]]></syntax>
+      <value><![CDATA[Video player volume, from 0.0f (silence) to 1.0f (full volume relative to the current device volume).]]></value>
       <remarks><![CDATA[Volume adjustment is based on a decibel, not multiplicative, scale. For example, when the device volume is half of maximum (about 7 in the Windows Phone user interface), setting Volume to 0.6f or less is silent or nearly so, not volume 4 as you would expect from a multiplicative adjustment. Setting Volume to 0.0 subtracts 96 dB from the volume. Setting Volume to 1.0 subtracts 0 dB from the volume. Values in between 0.0f and 1.0f subtract dB from the volume proportionally.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -114,7 +122,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetTexture" returnType="void">
+    <method name="GetTexture" returnType="Texture2D">
       <summary><![CDATA[Retrieves a Texture2D containing the current frame of video being played.]]></summary>
       <overloads>
         <overload signature="GetTexture()">
@@ -157,6 +165,9 @@
           <parameters>
             <parameter name="video" type="Video"><![CDATA[Video to play.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[video is null.]]></exception>
+          </exceptions>
           <remarks><![CDATA[After calling Play , call GetTexture to get the current frame of video.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>

@@ -4,7 +4,8 @@
           name="GraphicsAdapter" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="sealed">
   <summary><![CDATA[Provides methods to retrieve and manipulate graphics adapters.]]></summary>
   <syntax><![CDATA[public sealed class GraphicsAdapter : IDisposable]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="Adapters" type="ReadOnlyCollection&lt;GraphicsAdapter&gt;" access="get" isStatic="true">
       <summary><![CDATA[Collection of available adapters on the system.]]></summary>
       <syntax><![CDATA[public static ReadOnlyCollection<GraphicsAdapter> Adapters { get; }]]></syntax>
+      <value><![CDATA[The collection of adapters.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -27,6 +29,7 @@
     <property name="CurrentDisplayMode" type="DisplayMode" access="get">
       <summary><![CDATA[Gets the current display mode.]]></summary>
       <syntax><![CDATA[public DisplayMode CurrentDisplayMode { get; }]]></syntax>
+      <value><![CDATA[The current display mode.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -36,6 +39,7 @@
     <property name="DefaultAdapter" type="GraphicsAdapter" access="get" isStatic="true">
       <summary><![CDATA[Gets the default adapter.]]></summary>
       <syntax><![CDATA[public static GraphicsAdapter DefaultAdapter { get; }]]></syntax>
+      <value><![CDATA[The default adapter.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -45,6 +49,7 @@
     <property name="Description" type="string" access="get">
       <summary><![CDATA[Retrieves a string used for presentation to the user.]]></summary>
       <syntax><![CDATA[public string Description { get; }]]></syntax>
+      <value><![CDATA[Description of the adapter.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -54,6 +59,7 @@
     <property name="DeviceId" type="int" access="get">
       <summary><![CDATA[Retrieves a value that is used to help identify a particular chip set.]]></summary>
       <syntax><![CDATA[public int DeviceId { get; }]]></syntax>
+      <value><![CDATA[Value that helps identify the chip set. The returned value may be zero if it is unknown.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -63,6 +69,7 @@
     <property name="DeviceIdentifier" type="Guid" access="get">
       <summary><![CDATA[Retrieves a globally unique identifier (GUID) object that can be used to check changes in the driver and chip set.]]></summary>
       <syntax><![CDATA[public Guid DeviceIdentifier { get; }]]></syntax>
+      <value><![CDATA[A unique identifier for the driver and chip set pair.]]></value>
       <remarks><![CDATA[Use this member to track changes to the driver and chip set to generate a new profile for the graphics subsystem. It also can be used to identify problematic drivers.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -73,6 +80,7 @@
     <property name="DeviceName" type="string" access="get">
       <summary><![CDATA[Retrieves a string that contains the device name for a Microsoft Windows Graphics Device Interface (GDI).]]></summary>
       <syntax><![CDATA[public string DeviceName { get; }]]></syntax>
+      <value><![CDATA[The name of the device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -82,6 +90,7 @@
     <property name="DriverDll" type="string" access="get">
       <summary><![CDATA[Retrieves a string that is used to present the driver name to the user.]]></summary>
       <syntax><![CDATA[public string DriverDll { get; }]]></syntax>
+      <value><![CDATA[The driver name]]></value>
       <remarks><![CDATA[This member should not be used to identify particular drivers, because many different strings might be associated with the same device and driver from different vendors.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -92,6 +101,7 @@
     <property name="DriverVersion" type="Version" access="get">
       <summary><![CDATA[Retrieves a value that identifies the version of the Microsoft Direct3D driver.]]></summary>
       <syntax><![CDATA[public Version DriverVersion { get; }]]></syntax>
+      <value><![CDATA[The driver version.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -101,6 +111,7 @@
     <property name="IsDefaultAdapter" type="bool" access="get">
       <summary><![CDATA[Determines if this instance of GraphicsAdapter is the default adapter.]]></summary>
       <syntax><![CDATA[public bool IsDefaultAdapter { get; }]]></syntax>
+      <value><![CDATA[true if this instance of GraphicsAdapter is the default adapter, false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -110,6 +121,7 @@
     <property name="IsWideScreen" type="bool" access="get">
       <summary><![CDATA[Determines if the graphics adapter is in widescreen mode.]]></summary>
       <syntax><![CDATA[public bool IsWideScreen { get; }]]></syntax>
+      <value><![CDATA[true if the graphics adapter is in widescreen mode; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -120,6 +132,7 @@
     <property name="MonitorHandle" type="IntPtr" access="get">
       <summary><![CDATA[Retrieves the handle of the monitor associated with the Microsoft Direct3D object.]]></summary>
       <syntax><![CDATA[public IntPtr MonitorHandle { get; }]]></syntax>
+      <value><![CDATA[The handle of the monitor.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -129,6 +142,7 @@
     <property name="Revision" type="int" access="get">
       <summary><![CDATA[Retrieves a value used to help identify the revision level of a particular chip set.]]></summary>
       <syntax><![CDATA[public int Revision { get; }]]></syntax>
+      <value><![CDATA[Value used to help identify the revision level of the chip set. This value may be zero if it is unknown.]]></value>
       <remarks><![CDATA[The VendorId , DeviceId , SubSystemId , and Revision members can be used in tandem to identify particular chip sets. However, these members should be used with caution.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -139,6 +153,7 @@
     <property name="SubSystemId" type="int" access="get">
       <summary><![CDATA[Retrieves a value used to identify the subsystem.]]></summary>
       <syntax><![CDATA[public int SubSystemId { get; }]]></syntax>
+      <value><![CDATA[Value used to identify the subsystem, typically the particular board. This value may be zero if it is unknown.]]></value>
       <remarks><![CDATA[The VendorId , DeviceId , SubSystemId , and Revision members can be used in tandem to identify particular chip sets. However, these members should be used with caution.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -149,6 +164,7 @@
     <property name="SupportedDisplayModes" type="DisplayModeCollection" access="get">
       <summary><![CDATA[Returns a collection of supported display modes for the current adapter.]]></summary>
       <syntax><![CDATA[public DisplayModeCollection SupportedDisplayModes { get; }]]></syntax>
+      <value><![CDATA[The supported display modes for the adapter.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -158,6 +174,7 @@
     <property name="UseNullDevice" type="bool" access="get;set" isStatic="true">
       <summary><![CDATA[Gets or sets a NULL device.]]></summary>
       <syntax><![CDATA[public static bool UseNullDevice { get; set; }]]></syntax>
+      <value><![CDATA[True to enable a NULL device; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -168,6 +185,7 @@
     <property name="UseReferenceDevice" type="bool" access="get;set" isStatic="true">
       <summary><![CDATA[Gets or sets a reference device.]]></summary>
       <syntax><![CDATA[public static bool UseReferenceDevice { get; set; }]]></syntax>
+      <value><![CDATA[True to enable a reference device; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -178,6 +196,7 @@
     <property name="VendorId" type="int" access="get">
       <summary><![CDATA[Retrieves a value used to identify the manufacturer.]]></summary>
       <syntax><![CDATA[public int VendorId { get; }]]></syntax>
+      <value><![CDATA[Value used to identify the manufacturer. This value may be zero if it is unknown.]]></value>
       <remarks><![CDATA[The VendorId , DeviceId , SubSystemId , and Revision members can be used in tandem to identify particular chip sets. However, these members should be used with caution.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -187,7 +206,7 @@
     </property>
   </properties>
   <methods>
-    <method name="CheckDepthStencilMatch" returnType="void">
+    <method name="CheckDepthStencilMatch" returnType="bool">
       <summary><![CDATA[Tests whether a depth stencil format is compatible with a render target format in a particular display mode.]]></summary>
       <overloads>
         <overload signature="CheckDepthStencilMatch()">
@@ -205,6 +224,9 @@
             <parameter name="depthStencilFormat" type="DepthFormat"><![CDATA[The format of the depth stencil surface to be tested.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the format is compatible; false otherwise.]]></returns>
+          <exceptions>
+            <exception type="DeviceNotSupportedException"><![CDATA[(Xbox 360) Hardware is the only device type supported on this platform.]]></exception>
+          </exceptions>
           <remarks><![CDATA[CheckDepthStencilMatch enables applications to work with hardware that requires that certain depth formats work only with certain render target formats. Note The following surface formats are not supported on the Xbox 360 platform for any ResourceType , including textures: SurfaceFormat.Bgr24 SurfaceFormat.Bgra2338 SurfaceFormat.Bgr233 SurfaceFormat.NormalizedByte2Computed SurfaceFormat.LuminanceAlpha8 SurfaceFormat.Palette8 SurfaceFormat.PaletteAlpha16 SurfaceFormat.Multi2Bgra32 SurfaceFormat.Depth15Stencil1 SurfaceFormat.Depth24Stencil4]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -236,6 +258,9 @@
             <parameter name="checkFormat" type="DepthFormat"><![CDATA[The format of the depth buffer surface identified by usage .]]></parameter>
           </parameters>
           <returns><![CDATA[true if the surface format is available as the specified resource and format type; false otherwise.]]></returns>
+          <exceptions>
+            <exception type="DeviceNotSupportedException"><![CDATA[(Xbox 360) Hardware is the only device type supported on this platform.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Note The following surface formats are not supported on the Xbox 360 platform for any ResourceType , including textures: SurfaceFormat.Bgr24 SurfaceFormat.Bgra2338 SurfaceFormat.Bgr233 SurfaceFormat.NormalizedByte2Computed SurfaceFormat.LuminanceAlpha8 SurfaceFormat.Palette8 SurfaceFormat.PaletteAlpha16 SurfaceFormat.Multi2Bgra32 SurfaceFormat.Depth15Stencil1 SurfaceFormat.Depth24Stencil4]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -262,6 +287,9 @@
             <parameter name="checkFormat" type="SurfaceFormat"><![CDATA[The format of the surface identified by usage .]]></parameter>
           </parameters>
           <returns><![CDATA[true if the surface format is available as the specified resource and format type; false otherwise.]]></returns>
+          <exceptions>
+            <exception type="DeviceNotSupportedException"><![CDATA[(Xbox 360) Hardware is the only device type supported on this platform.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Note The following surface formats are not supported on the Xbox 360 platform for any ResourceType , including textures: SurfaceFormat.Bgr24 SurfaceFormat.Bgra2338 SurfaceFormat.Bgr233 SurfaceFormat.NormalizedByte2Computed SurfaceFormat.LuminanceAlpha8 SurfaceFormat.Palette8 SurfaceFormat.PaletteAlpha16 SurfaceFormat.Multi2Bgra32 SurfaceFormat.Depth15Stencil1 SurfaceFormat.Depth24Stencil4]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -271,7 +299,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="CheckDeviceFormatConversion" returnType="void">
+    <method name="CheckDeviceFormatConversion" returnType="bool">
       <summary><![CDATA[Tests a device to determine whether it supports conversion from one display format to another.]]></summary>
       <overloads>
         <overload signature="CheckDeviceFormatConversion()">
@@ -287,6 +315,9 @@
             <parameter name="targetFormat" type="SurfaceFormat"><![CDATA[Target adapter format.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the method succeeds; false if it fails.]]></returns>
+          <exceptions>
+            <exception type="DeviceNotSupportedException"><![CDATA[(Xbox 360) Hardware is the only device type supported on this platform.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Using CheckDeviceFormatConversion to test for compatibility between a back buffer and the display format returns appropriate values. This means that the call reflects device capabilities. If the device cannot render to the requested back buffer format, the call still returns false . If the device can render to the format but cannot perform the color-converting presentation, the return value is also false . Applications can discover hardware support for the presentation itself by calling CheckDeviceFormatConversion . No software emulation for the color-converting presentation itself is offered. Color conversion is restricted to certain source and target formats. The source format must be a four-character code (FOURCC) format or a valid back-buffer format, and the target format must be one of the following unsigned formats. SurfaceFormat.Bgr555 SurfaceFormat.Bgra5551 SurfaceFormat.Bgr565 SurfaceFormat.Bgr24 SurfaceFormat.Bgr32 SurfaceFormat.Color SurfaceFormat.Bgra1010102 SurfaceFormat.Rgba64 SurfaceFormat.Rgba1010102 SurfaceFormat.Rgba32 SurfaceFormat.Rgb32 SurfaceFormat.HalfVector4 SurfaceFormat.Vector4 &nbsp; &nbsp;]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -316,6 +347,9 @@
             <parameter name="qualityLevels" type="int"><![CDATA[[ OutAttribute ] Number of quality stops available for a given multisample type; can be null if it is not necessary to return the values.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the technique is available; false otherwise.]]></returns>
+          <exceptions>
+            <exception type="DeviceNotSupportedException"><![CDATA[(Xbox 360) Hardware is the only device type supported on this platform.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -337,6 +371,9 @@
             <parameter name="sampleType" type="MultiSampleType"><![CDATA[The multisampling technique to test.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the technique is available; false otherwise.]]></returns>
+          <exceptions>
+            <exception type="DeviceNotSupportedException"><![CDATA[(Xbox 360) Hardware is the only device type supported on this platform.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -345,7 +382,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="CheckDeviceType" returnType="void">
+    <method name="CheckDeviceType" returnType="bool">
       <summary><![CDATA[Determines whether a hardware-accelerated device type can be used on the current adapter.]]></summary>
       <overloads>
         <overload signature="CheckDeviceType()">
@@ -363,6 +400,9 @@
             <parameter name="isFullScreen" type="bool"><![CDATA[[ MarshalAsAttribute (U1)] true if the device type will be used in windowed mode; false if the device type will be used in full-screen mode.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the method succeeds and the device can be used on this adapter; false if the method fails. If the method fails, you may check the result code returned by Manager.CheckDeviceTypeResult to determine the specific reason.]]></returns>
+          <exceptions>
+            <exception type="DeviceNotSupportedException"><![CDATA[(Xbox 360) Hardware is the only device type supported on this platform.]]></exception>
+          </exceptions>
           <remarks><![CDATA[A hardware abstraction layer (HAL) device type requires hardware acceleration. Applications can use CheckDeviceType to determine whether the hardware and drivers necessary to support a HAL device are present. Full-screen applications should not specify a displayFormat that contains an alpha channel; doing so results in a failed call. Note that an alpha channel can be present in the back buffer, but the two display formats must be identical in all other respects. For example, if displayFormat = SurfaceFormat.Bgr555 , valid values for backBufferFormat include SurfaceFormat.Bgr555 and SurfaceFormat.Bgra5551 , but exclude SurfaceFormat.Bgr565 . Using CheckDeviceType to test for compatibility between a back buffer that differs from the display format returns appropriate values. This means that the call reflects device capabilities. No software emulation for the color-converting presentation itself is offered.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -407,7 +447,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetCapabilities" returnType="void">
+    <method name="GetCapabilities" returnType="GraphicsDeviceCapabilities">
       <summary><![CDATA[Returns the capabilities of a device.]]></summary>
       <overloads>
         <overload signature="GetCapabilities()">
@@ -419,6 +459,9 @@
             <parameter name="deviceType" type="DeviceType"><![CDATA[The device to query.]]></parameter>
           </parameters>
           <returns><![CDATA[The capabilities of the specified device.]]></returns>
+          <exceptions>
+            <exception type="DeviceNotSupportedException"><![CDATA[(Xbox 360) Hardware is the only device type supported on this platform.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -427,7 +470,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -442,7 +485,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="IsDeviceTypeAvailable" returnType="void">
+    <method name="IsDeviceTypeAvailable" returnType="bool">
       <summary><![CDATA[Determines whether a requested device type is available.]]></summary>
       <overloads>
         <overload signature="IsDeviceTypeAvailable()">
@@ -462,7 +505,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="IsProfileSupported" returnType="void">
+    <method name="IsProfileSupported" returnType="bool">
       <summary><![CDATA[Tests to see if the adapter supports the requested profile.]]></summary>
       <overloads>
         <overload signature="IsProfileSupported()">
@@ -484,7 +527,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="QueryBackBufferFormat" returnType="void">
+    <method name="QueryBackBufferFormat" returnType="bool">
       <summary><![CDATA[Queries the adapter for support for the requested back buffer format.]]></summary>
       <overloads>
         <overload signature="QueryBackBufferFormat()">
@@ -518,7 +561,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="QueryRenderTargetFormat" returnType="void">
+    <method name="QueryRenderTargetFormat" returnType="bool">
       <summary><![CDATA[Queries the adapter for support for the requested render target format.]]></summary>
       <overloads>
         <overload signature="QueryRenderTargetFormat()">
@@ -552,7 +595,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -574,7 +617,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

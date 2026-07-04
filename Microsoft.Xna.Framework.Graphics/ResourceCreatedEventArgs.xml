@@ -4,7 +4,8 @@
           name="ResourceCreatedEventArgs" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="EventArgs">
+          baseClass="EventArgs"
+          modifier="sealed">
   <summary><![CDATA[Contains event data.]]></summary>
   <syntax><![CDATA[public sealed class ResourceCreatedEventArgs : EventArgs]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="Resource" type="Object" access="get">
       <summary><![CDATA[The object raising the event.]]></summary>
       <syntax><![CDATA[public Object Resource { get; }]]></syntax>
+      <value><![CDATA[The object raising the event.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

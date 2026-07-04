@@ -21,6 +21,9 @@
       <parameters>
         <parameter name="serviceProvider" type="IServiceProvider"><![CDATA[The service provider that the ContentManager should use to locate services.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[The serviceProvider parameter is null.]]></exception>
+      </exceptions>
       <remarks><![CDATA[Warning When creating a new ContentManager , if no instance of Game is otherwise required by the application, it is often better to create a new class that implements the IServiceProvider interface rather than creating an instance of Game just to create a new instance of GraphicsDeviceManager . By default, the ContentManager searches for content in the directory where the executable is located.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -38,6 +41,9 @@
         <parameter name="serviceProvider" type="IServiceProvider"><![CDATA[The service provider the ContentManager should use to locate services.]]></parameter>
         <parameter name="rootDirectory" type="string"><![CDATA[The root directory to search for content.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[The serviceProvider or rootDirectory parameter is null.]]></exception>
+      </exceptions>
       <remarks><![CDATA[Warning When creating a new ContentManager , if no instance of Game is otherwise required by the application, it is often better to create a new class that implements the IServiceProvider interface rather than creating an instance of Game just to create a new instance of GraphicsDeviceManager .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -50,6 +56,7 @@
     <property name="RootDirectory" type="string" access="get">
       <summary><![CDATA[Gets the root directory associated with this ContentManager.]]></summary>
       <syntax><![CDATA[public string RootDirectory { get; }]]></syntax>
+      <value><![CDATA[The root directory associated with this ContentManager.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -59,6 +66,7 @@
     <property name="ServiceProvider" type="IServiceProvider" access="get">
       <summary><![CDATA[Gets the service provider associated with the ContentManager.]]></summary>
       <syntax><![CDATA[public IServiceProvider ServiceProvider { get; }]]></syntax>
+      <value><![CDATA[The service provider associated with the ContentManager.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -95,6 +103,35 @@
         </overload>
       </overloads>
     </method>
+    <method name="Load" returnType="T">
+      <summary><![CDATA[Loads an asset that has been processed by the Content Pipeline.]]></summary>
+      <overloads>
+        <overload signature="Load()">
+          <summary><![CDATA[Loads an asset that has been processed by the Content Pipeline.]]></summary>
+          <syntax><![CDATA[public virtual T Load<T> (
+         string assetName
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of asset to load. Model , Effect , SpriteFont , Texture , Texture2D and TextureCube are all supported by default by the standard Content Pipeline processor, but additional types may be loaded by extending the processor.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="assetName" type="string"><![CDATA[Asset name, relative to the loader root directory, and not including the .xnb file extension.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The loaded asset. Repeated calls to load the same asset will return the same object instance.]]></returns>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[Load was called after the ContentManager was disposed.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[The assetName argument is null.]]></exception>
+            <exception type="ContentLoadException"><![CDATA[The type of the assetName in the file does not match the type of asset requested as specified by T.]]></exception>
+          </exceptions>
+          <remarks><![CDATA[Before a ContentManager can load an asset, you need to add the asset to your game project using the steps described in How to: Add a Resource to the Content Pipeline . The following are the Content Pipeline run-time classes supported by Load and the file formats they are associated with. Effect Class .fx Model Class .fbx, .x SpriteFont Class .bmp, .spritefont Note The default content processor for .bmp files is the texture processor. To process a .bmp file for use as a Sprite Font, click Sprite Font Texture - XNA Framework in the Properties pane for the .bmp file after it has been added to the project. Texture Class , Texture2D Class , TextureCube Class .bmp, .dds, .dib, .hdr, .jpg, .pfm, .png, .ppm, and .tga Note that these are the formats of the original assets; after processing, all assets will be .xnb files.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
     <method name="OpenStream" returnType="void">
       <summary><![CDATA[Opens a stream for reading the specified asset. Derived classes can replace this to implement pack files or asset compression.]]></summary>
       <overloads>
@@ -107,6 +144,39 @@
             <parameter name="assetName" type="string"><![CDATA[The name of the asset being read.]]></parameter>
           </parameters>
           <returns><![CDATA[The opened stream.]]></returns>
+          <exceptions>
+            <exception type="ContentLoadException"><![CDATA[Unable to open the file containing assetName, or the file was not found.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadAsset" returnType="void">
+      <summary><![CDATA[Low-level worker method that reads asset data.]]></summary>
+      <overloads>
+        <overload signature="ReadAsset()">
+          <summary><![CDATA[Low-level worker method that reads asset data.]]></summary>
+          <syntax><![CDATA[protected T ReadAsset<T> (
+         string assetName,
+         Action<IDisposable> recordDisposableObject
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[Type of the asset specified for loading.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="assetName" type="string"><![CDATA[The name of the asset to be loaded from disk.]]></parameter>
+            <parameter name="recordDisposableObject" type="Action&lt;IDisposable&gt;"><![CDATA[Delegate function for handling the disposition of assets. If is null , the default lifespan tracking and management is used, so unloading or disposing of the content manager frees everything that has been loaded through it. If specifies a valid delegate, that delegate is used instead of the default lifespan tracking and is called every time the loader encounters a type that implements IDisposable . You must use your own code to unload assets loaded in this fashion, since ContentManager 's Unload method will not be aware of them.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Returns the loaded asset.]]></returns>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[ReadAsset was called after the ContentManager was disposed.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[The assetName argument is null.]]></exception>
+          </exceptions>
+          <remarks><![CDATA[This protected method loads an .xnb file from disk. Unlike ContentManager 's public Load method, it always returns a new copy of the specified asset, even if the asset has been loaded previously. You can customize how shared assets are managed by overriding ContentManager 's Load method. In your own Load method, keep track of what has been loaded, and call ReadAsset when you need a new asset from disk.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -121,6 +191,9 @@
         <overload signature="Unload()">
           <summary><![CDATA[Disposes all data that was loaded by this ContentManager.]]></summary>
           <syntax><![CDATA[public virtual void Unload ()]]></syntax>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[Unload was called after the ContentManager was disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

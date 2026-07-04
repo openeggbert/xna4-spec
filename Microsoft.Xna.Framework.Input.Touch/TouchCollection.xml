@@ -36,6 +36,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the current number of touch locations for the touch screen.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[Number of current locations. Eight is the maximum number of trackable locations.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -47,6 +48,7 @@
     <property name="IsConnected" type="bool" access="get">
       <summary><![CDATA[Indicates if the touch screen is available for use.]]></summary>
       <syntax><![CDATA[public bool IsConnected { get; }]]></syntax>
+      <value><![CDATA[The value is true if the touch screen is available; otherwise it is false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -58,6 +60,7 @@
     <property name="IsReadOnly" type="bool" access="get">
       <summary><![CDATA[Determines if the touch location array is read-only.]]></summary>
       <syntax><![CDATA[public bool IsReadOnly { get; }]]></syntax>
+      <value><![CDATA[The value is true if the array is read-only; otherwise it is false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -71,6 +74,7 @@
       <syntax><![CDATA[public TouchLocation this [
          int index
 ] { get; set; }]]></syntax>
+      <value><![CDATA[Touch location.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -118,7 +122,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Contains" returnType="void">
+    <method name="Contains" returnType="bool">
       <summary><![CDATA[Checks if the current touch collection contains the specified touch location.]]></summary>
       <overloads>
         <overload signature="Contains()">
@@ -163,7 +167,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="FindById" returnType="void">
+    <method name="FindById" returnType="bool">
       <summary><![CDATA[Retrieves the touch location matching the specified ID.]]></summary>
       <overloads>
         <overload signature="FindById()">
@@ -187,7 +191,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="Enumerator">
       <summary><![CDATA[Returns an enumerator that iterates through the TouchCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">
@@ -204,7 +208,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="IndexOf" returnType="void">
+    <method name="IndexOf" returnType="int">
       <summary><![CDATA[Determines the index of a TouchLocation in the TouchCollection.]]></summary>
       <overloads>
         <overload signature="IndexOf()">
@@ -249,7 +253,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Remove" returnType="void">
+    <method name="Remove" returnType="bool">
       <summary><![CDATA[Removes the specified TouchLocation from the TouchCollection.]]></summary>
       <overloads>
         <overload signature="Remove()">

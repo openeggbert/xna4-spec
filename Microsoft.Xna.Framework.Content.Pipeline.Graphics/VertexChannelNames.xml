@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="VertexChannelNames" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
+          modifier="static">
   <summary><![CDATA[Provides properties for managing a collection of vertex channel names.]]></summary>
   <syntax><![CDATA[public static class VertexChannelNames]]></syntax>
   <remarks><![CDATA[These vertex channel names can be passed to VertexChannelCollection.Add and looked up using the Name property of a specific vertex channel. The names are stored in the VertexChannel.Name property.]]></remarks>
@@ -16,7 +17,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="Binormal" returnType="void">
+    <method name="Binormal" returnType="string" isStatic="true">
       <summary><![CDATA[Gets the name of a binormal vector channel with the specified index.]]></summary>
       <overloads>
         <overload signature="Binormal()">
@@ -35,7 +36,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Color" returnType="void">
+    <method name="Color" returnType="string" isStatic="true">
       <summary><![CDATA[Gets the name of a color channel with the specified index.]]></summary>
       <overloads>
         <overload signature="Color()">
@@ -54,7 +55,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="DecodeBaseName" returnType="void">
+    <method name="DecodeBaseName" returnType="string" isStatic="true">
       <summary><![CDATA[Gets a channel base name stub from the encoded string format.]]></summary>
       <overloads>
         <overload signature="DecodeBaseName()">
@@ -73,7 +74,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="DecodeUsageIndex" returnType="void">
+    <method name="DecodeUsageIndex" returnType="int" isStatic="true">
       <summary><![CDATA[Gets a channel usage index from the encoded format.]]></summary>
       <overloads>
         <overload signature="DecodeUsageIndex()">
@@ -157,7 +158,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Tangent" returnType="void">
+    <method name="Tangent" returnType="string" isStatic="true">
       <summary><![CDATA[Gets the name of the tangent vector channel with the specified index.]]></summary>
       <overloads>
         <overload signature="Tangent()">
@@ -176,7 +177,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TextureCoordinate" returnType="void">
+    <method name="TextureCoordinate" returnType="string" isStatic="true">
       <summary><![CDATA[Gets the name of the texture coordinate channel with the specified index.]]></summary>
       <overloads>
         <overload signature="TextureCoordinate()">
@@ -195,7 +196,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TryDecodeUsage" returnType="void">
+    <method name="TryDecodeUsage" returnType="bool" isStatic="true">
       <summary><![CDATA[Gets a vertex declaration usage enumeration from the encoded string format.]]></summary>
       <overloads>
         <overload signature="TryDecodeUsage()">

@@ -19,6 +19,7 @@
     <property name="IsConnected" type="bool" access="get;set">
       <summary><![CDATA[Indicates if the touch panel device is available for use.]]></summary>
       <syntax><![CDATA[public bool IsConnected { get; set; }]]></syntax>
+      <value><![CDATA[true if the touch input device is available; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -30,6 +31,7 @@
     <property name="MaximumTouchCount" type="int" access="get;set">
       <summary><![CDATA[Gets the maximum number of touch locations that can be tracked by the touch pad device.]]></summary>
       <syntax><![CDATA[public int MaximumTouchCount { get; set; }]]></syntax>
+      <value><![CDATA[The maximum number of touch locations that can be tracked by the touch pad device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

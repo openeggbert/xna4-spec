@@ -33,6 +33,7 @@
     <property name="Element" type="UIElement" access="get">
       <summary><![CDATA[A UIElement for rendering.]]></summary>
       <syntax><![CDATA[public UIElement Element { get; }]]></syntax>
+      <value><![CDATA[Type: UIElement A UIElement for rendering.]]></value>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -40,6 +41,7 @@
     <property name="Texture" type="Texture2D" access="get">
       <summary><![CDATA[Texture which contains a rendered UIElement.]]></summary>
       <syntax><![CDATA[public Texture2D Texture { get; }]]></syntax>
+      <value><![CDATA[Type: Texture2D The output texture that contains a rendered UIElement.]]></value>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>

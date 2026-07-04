@@ -29,6 +29,7 @@ public class CurveKeyCollection : ICollection<CurveKey>, IEnumerable<CurveKey>, 
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of elements contained in the CurveKeyCollection.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[The number of elements in the CurveKeyCollection.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -38,6 +39,7 @@ public class CurveKeyCollection : ICollection<CurveKey>, IEnumerable<CurveKey>, 
     <property name="IsReadOnly" type="bool" access="get">
       <summary><![CDATA[Returns a value indicating whether the CurveKeyCollection is read-only.]]></summary>
       <syntax><![CDATA[public bool IsReadOnly { get; }]]></syntax>
+      <value><![CDATA[true if the CurveKeyCollection is read-only; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -49,6 +51,10 @@ public class CurveKeyCollection : ICollection<CurveKey>, IEnumerable<CurveKey>, 
       <syntax><![CDATA[public CurveKey this [
          int index
 ] { get; set; }]]></syntax>
+      <value><![CDATA[The CurveKey at the specified index.]]></value>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[Item is null.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -68,6 +74,9 @@ public class CurveKeyCollection : ICollection<CurveKey>, IEnumerable<CurveKey>, 
           <parameters>
             <parameter name="item" type="CurveKey"><![CDATA[The CurveKey to add.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[item is null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -90,7 +99,7 @@ public class CurveKeyCollection : ICollection<CurveKey>, IEnumerable<CurveKey>, 
         </overload>
       </overloads>
     </method>
-    <method name="Clone" returnType="void">
+    <method name="Clone" returnType="CurveKeyCollection">
       <summary><![CDATA[Creates a copy of the CurveKeyCollection.]]></summary>
       <overloads>
         <overload signature="Clone()">
@@ -105,7 +114,7 @@ public class CurveKeyCollection : ICollection<CurveKey>, IEnumerable<CurveKey>, 
         </overload>
       </overloads>
     </method>
-    <method name="Contains" returnType="void">
+    <method name="Contains" returnType="bool">
       <summary><![CDATA[Determines whether the CurveKeyCollection contains a specific CurveKey.]]></summary>
       <overloads>
         <overload signature="Contains()">
@@ -146,7 +155,7 @@ public class CurveKeyCollection : ICollection<CurveKey>, IEnumerable<CurveKey>, 
         </overload>
       </overloads>
     </method>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="IEnumerator&lt;CurveKey&gt;">
       <summary><![CDATA[Returns an enumerator that iterates through the CurveKeyCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">
@@ -161,7 +170,7 @@ public class CurveKeyCollection : ICollection<CurveKey>, IEnumerable<CurveKey>, 
         </overload>
       </overloads>
     </method>
-    <method name="IndexOf" returnType="void">
+    <method name="IndexOf" returnType="int">
       <summary><![CDATA[Determines the index of a CurveKey in the CurveKeyCollection.]]></summary>
       <overloads>
         <overload signature="IndexOf()">
@@ -181,7 +190,7 @@ public class CurveKeyCollection : ICollection<CurveKey>, IEnumerable<CurveKey>, 
         </overload>
       </overloads>
     </method>
-    <method name="Remove" returnType="void">
+    <method name="Remove" returnType="bool">
       <summary><![CDATA[Removes the first occurrence of a specific CurveKey from the CurveKeyCollection.]]></summary>
       <overloads>
         <overload signature="Remove()">

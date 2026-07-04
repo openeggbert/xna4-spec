@@ -34,6 +34,7 @@
     <property name="Gamer" type="NetworkGamer" access="get">
       <summary><![CDATA[Gets the gamer who just left the session.]]></summary>
       <syntax><![CDATA[public NetworkGamer Gamer { get; }]]></syntax>
+      <value><![CDATA[The gamer who just left the session.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -61,7 +61,7 @@ public class XImporter : ContentImporter<NodeContent>, IDisposable]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Import" returnType="void">
+    <method name="Import" returnType="NodeContent">
       <summary><![CDATA[Called by the XNA Framework when importing a DirectX Object (.x) file to be used as a game asset. This is the method called by the XNA Framework when an asset is to be imported into an object that can be recognized by the Content Pipeline.]]></summary>
       <overloads>
         <overload signature="Import()">

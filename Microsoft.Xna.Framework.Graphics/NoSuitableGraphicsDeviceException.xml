@@ -4,7 +4,8 @@
           name="NoSuitableGraphicsDeviceException" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="Exception">
+          baseClass="Exception"
+          modifier="sealed">
   <summary><![CDATA[Thrown when no available graphics device fits the given device preferences.]]></summary>
   <syntax><![CDATA[public sealed class NoSuitableGraphicsDeviceException : Exception]]></syntax>
   <platforms>

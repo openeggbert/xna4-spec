@@ -40,7 +40,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetPixel" returnType="void">
+    <method name="GetPixel" returnType="T">
       <summary><![CDATA[Gets the pixel value at the specified location in the bitmap.]]></summary>
       <overloads>
         <overload signature="GetPixel()">
@@ -61,7 +61,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPixelData" returnType="void">
+    <method name="GetPixelData" returnType="byte[]">
       <summary><![CDATA[Gets the bitmap content as an array of encoded bytes.]]></summary>
       <overloads>
         <overload signature="GetPixelData()">
@@ -75,7 +75,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetRow" returnType="void">
+    <method name="GetRow" returnType="T[]">
       <summary><![CDATA[Gets an array containing a single row of bitmap data.]]></summary>
       <overloads>
         <overload signature="GetRow()">
@@ -155,7 +155,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Gets a string description of the bitmap.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -215,7 +215,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TryGetFormat" returnType="void">
+    <method name="TryGetFormat" returnType="bool">
       <summary><![CDATA[Gets the GPU texture format that corresponds to the specified bitmap type.]]></summary>
       <overloads>
         <overload signature="TryGetFormat()">

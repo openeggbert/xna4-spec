@@ -34,6 +34,7 @@ public struct VertexPositionTexture]]></syntax>
     <property name="SizeInBytes" type="int" access="get" isStatic="true">
       <summary><![CDATA[Gets the size of the VertexPositionTexture class.]]></summary>
       <syntax><![CDATA[public static int SizeInBytes { get; }]]></syntax>
+      <value><![CDATA[The size of the vertex, in bytes.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,7 +63,7 @@ public struct VertexPositionTexture]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -77,7 +78,7 @@ public struct VertexPositionTexture]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -92,7 +93,7 @@ public struct VertexPositionTexture]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -114,7 +115,7 @@ public struct VertexPositionTexture]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

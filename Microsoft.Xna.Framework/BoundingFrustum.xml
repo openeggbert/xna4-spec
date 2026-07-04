@@ -36,6 +36,7 @@ public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
     <property name="Bottom" type="Plane" access="get">
       <summary><![CDATA[Gets the bottom plane of the BoundingFrustum.]]></summary>
       <syntax><![CDATA[public Plane Bottom { get; }]]></syntax>
+      <value><![CDATA[Returns the bottom plane of the BoundingFrustum.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -45,6 +46,7 @@ public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
     <property name="Far" type="Plane" access="get">
       <summary><![CDATA[Gets the far plane of the BoundingFrustum.]]></summary>
       <syntax><![CDATA[public Plane Far { get; }]]></syntax>
+      <value><![CDATA[Returns the far plane of the BoundingFrustum.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -54,6 +56,7 @@ public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
     <property name="Left" type="Plane" access="get">
       <summary><![CDATA[Gets the left plane of the BoundingFrustum.]]></summary>
       <syntax><![CDATA[public Plane Left { get; }]]></syntax>
+      <value><![CDATA[Returns the left plane of the BoundingFrustum.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -63,6 +66,7 @@ public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
     <property name="Matrix" type="Matrix" access="get;set">
       <summary><![CDATA[Gets the Matrix that was used to instantiate this bounding frustum.]]></summary>
       <syntax><![CDATA[public Matrix Matrix { get; set; }]]></syntax>
+      <value><![CDATA[the Matrix that was used to instantiate this bounding frustum.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -72,6 +76,7 @@ public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
     <property name="Near" type="Plane" access="get">
       <summary><![CDATA[Gets the near plane of the BoundingFrustum.]]></summary>
       <syntax><![CDATA[public Plane Near { get; }]]></syntax>
+      <value><![CDATA[Returns the near plane of the BoundingFrustum.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -81,6 +86,7 @@ public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
     <property name="Right" type="Plane" access="get">
       <summary><![CDATA[Gets the right plane of the BoundingFrustum.]]></summary>
       <syntax><![CDATA[public Plane Right { get; }]]></syntax>
+      <value><![CDATA[Returns the right plane of the BoundingFrustum.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -90,6 +96,7 @@ public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
     <property name="Top" type="Plane" access="get">
       <summary><![CDATA[Gets the top plane of the BoundingFrustum.]]></summary>
       <syntax><![CDATA[public Plane Top { get; }]]></syntax>
+      <value><![CDATA[Returns the top plane of the BoundingFrustum.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -277,7 +284,7 @@ public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -450,7 +457,7 @@ public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a String that represents the current BoundingFrustum.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -465,7 +472,7 @@ public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two instances of BoundingFrustum are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -487,7 +494,7 @@ public class BoundingFrustum : IEquatable<BoundingFrustum>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two instances of BoundingFrustum are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

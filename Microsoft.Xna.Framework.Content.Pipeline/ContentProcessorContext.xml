@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ContentProcessorContext" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          modifier="sealed">
   <summary><![CDATA[Provides access to custom processor parameters, methods for converting member data, and triggering nested builds.]]></summary>
   <syntax><![CDATA[public sealed class ContentProcessorContext]]></syntax>
   <remarks><![CDATA[The context object, passed into a content processor, indicates any custom parameters or requests. For instance, a mesh processor could use this to force any textures used by the processor to be built when the mesh object is built.]]></remarks>
@@ -26,6 +27,7 @@
     <property name="BuildConfiguration" type="string" access="get">
       <summary><![CDATA[Gets the name of the current content build configuration.]]></summary>
       <syntax><![CDATA[public string BuildConfiguration { get; }]]></syntax>
+      <value><![CDATA[Name of the build configuration.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -34,6 +36,7 @@
     <property name="IntermediateDirectory" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract string IntermediateDirectory { get; }]]></syntax>
+      <value><![CDATA[The path of the directory that will contain any intermediate files that the content processor will produce.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -43,6 +46,7 @@
     <property name="Logger" type="ContentBuildLogger" access="get">
       <summary><![CDATA[Gets the logger interface used for status messages or warnings.]]></summary>
       <syntax><![CDATA[public ContentBuildLogger Logger { get; }]]></syntax>
+      <value><![CDATA[Logger interface used by the processor.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -51,6 +55,7 @@
     <property name="OutputDirectory" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract string OutputDirectory { get; }]]></syntax>
+      <value><![CDATA[The directory path of the output file that the content processor will produce.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -60,6 +65,7 @@
     <property name="OutputFilename" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract string OutputFilename { get; }]]></syntax>
+      <value><![CDATA[The name of the output file that the content processor will produce.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -69,6 +75,7 @@
     <property name="Parameters" type="OpaqueDataDictionary" access="get">
       <summary><![CDATA[Gets the collection of parameters used by the content processor.]]></summary>
       <syntax><![CDATA[public OpaqueDataDictionary Parameters { get; }]]></syntax>
+      <value><![CDATA[Collection of content processor parameters.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -77,6 +84,7 @@
     <property name="TargetPlatform" type="TargetPlatform" access="get">
       <summary><![CDATA[Gets the current content build target platform.]]></summary>
       <syntax><![CDATA[public TargetPlatform TargetPlatform { get; }]]></syntax>
+      <value><![CDATA[Name of the target platform for the current content build.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -85,6 +93,7 @@
     <property name="TargetProfile" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract GraphicsProfile TargetProfile { get; }]]></syntax>
+      <value><![CDATA[The enumeration that identifies the graphics profile of the device.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -123,6 +132,138 @@
           <parameters>
             <parameter name="filename" type="String"><![CDATA[The name of the file.]]></parameter>
           </parameters>
+          <platforms>
+            <platform>Windows 7</platform>
+            <platform>Windows Vista</platform>
+            <platform>Windows XP</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BuildAndLoadAsset" returnType="TOutput">
+      <summary><![CDATA[Initiates a nested build of the specified asset and then loads the result into memory.]]></summary>
+      <overloads>
+        <overload signature="BuildAndLoadAsset(Generic ExternalReference, String)">
+          <summary><![CDATA[Initiates a nested build of the specified asset and then loads the result into memory.]]></summary>
+          <syntax><![CDATA[public TOutput BuildAndLoadAsset<TInput,TOutput> (
+         ExternalReference<TInput> sourceAsset,
+         string processorName
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="TInput"><![CDATA[Type of the input.]]></type-parameter>
+            <type-parameter name="TOutput"><![CDATA[Type of the converted output.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="sourceAsset" type="ExternalReference&lt;TInput&gt;"><![CDATA[Reference to the source asset.]]></parameter>
+            <parameter name="processorName" type="string"><![CDATA[Optional processor for this content.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Copy of the final converted content.]]></returns>
+          <remarks><![CDATA[An example of usage would be a mesh processor calling BuildAndLoadAsset to build any associated textures and replace the original .tga file references with an embedded copy of the converted texture.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="BuildAndLoadAsset(Generic ExternalReference, String, OpaqueDataDictionary, String)">
+          <summary><![CDATA[Initiates a nested build of the specified asset and then loads the result into memory.]]></summary>
+          <syntax><![CDATA[public TOutput BuildAndLoadAsset<TInput,TOutput> (
+         ExternalReference<TInput> sourceAsset,
+         string processorName,
+         OpaqueDataDictionary processorParameters,
+         string importerName
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="TInput"><![CDATA[Type of the input.]]></type-parameter>
+            <type-parameter name="TOutput"><![CDATA[Type of the converted output.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="sourceAsset" type="ExternalReference&lt;TInput&gt;"><![CDATA[Reference to the source asset.]]></parameter>
+            <parameter name="processorName" type="string"><![CDATA[Optional processor for this content.]]></parameter>
+            <parameter name="processorParameters" type="OpaqueDataDictionary"><![CDATA[Optional collection of named values available as input to the content processor.]]></parameter>
+            <parameter name="importerName" type="string"><![CDATA[Optional importer for this content.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Copy of the final converted content.]]></returns>
+          <remarks><![CDATA[An example of usage would be a mesh processor calling BuildAndLoadAsset to build any associated textures and replace the original .tga file references with an embedded copy of the converted texture.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="BuildAsset" returnType="ExternalReference&lt;TOutput&gt;">
+      <summary><![CDATA[Initiates a nested build of an additional asset.]]></summary>
+      <overloads>
+        <overload signature="BuildAsset(Generic ExternalReference, String, OpaqueDataDictionary, String, String)">
+          <summary><![CDATA[Initiates a nested build of an additional asset.]]></summary>
+          <syntax><![CDATA[public ExternalReference<TOutput> BuildAsset<TInput,TOutput> (
+         ExternalReference<TInput> sourceAsset,
+         string processorName,
+         OpaqueDataDictionary processorParameters,
+         string importerName,
+         string assetName
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="TInput"><![CDATA[Type of the input.]]></type-parameter>
+            <type-parameter name="TOutput"><![CDATA[Type of the output.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="sourceAsset" type="ExternalReference&lt;TInput&gt;"><![CDATA[Reference to the source asset.]]></parameter>
+            <parameter name="processorName" type="string"><![CDATA[Optional processor for this content.]]></parameter>
+            <parameter name="processorParameters" type="OpaqueDataDictionary"><![CDATA[Optional collection of named values available as input to the content processor.]]></parameter>
+            <parameter name="importerName" type="string"><![CDATA[Optional importer for this content.]]></parameter>
+            <parameter name="assetName" type="string"><![CDATA[Optional name of the final compiled content.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Reference to the final compiled content. The build work is not required to complete before returning. Therefore, this file may not be up to date when BuildAsset returns but it will be available for loading by the game at runtime.]]></returns>
+          <remarks><![CDATA[An example of usage for BuildAsset is being called by a mesh processor to request that any related textures used are also built, replacing the original TGA file references with new references to the converted texture files.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="BuildAsset(Generic ExternalReference, String)">
+          <summary><![CDATA[Initiates a nested build of an additional asset.]]></summary>
+          <syntax><![CDATA[public ExternalReference<TOutput> BuildAsset<TInput,TOutput> (
+         ExternalReference<TInput> sourceAsset,
+         string processorName
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="TInput"><![CDATA[Type of the input.]]></type-parameter>
+            <type-parameter name="TOutput"><![CDATA[Type of the output.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="sourceAsset" type="ExternalReference&lt;TInput&gt;"><![CDATA[Reference to the source asset.]]></parameter>
+            <parameter name="processorName" type="string"><![CDATA[Optional processor for this content.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Reference to the final compiled content. The build work is not required to complete before returning. Therefore, this file may not be up to date when BuildAsset returns but it will be available for loading by the game at runtime.]]></returns>
+          <remarks><![CDATA[An example of usage for BuildAsset is being called by a mesh processor to request that any related textures used are also built, replacing the original TGA file references with new references to the converted texture files.]]></remarks>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Convert" returnType="TOutput">
+      <summary><![CDATA[Converts a content item object using the specified content processor.]]></summary>
+      <overloads>
+        <overload signature="Convert(TInput, String, OpaqueDataDictionary)">
+          <summary><![CDATA[This generic method is available only when developing for Windows.]]></summary>
+          <syntax><![CDATA[public abstract TOutput Convert<TInput,TOutput> (
+         TInput input,
+         string processorName,
+         OpaqueDataDictionary processorParameters
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="TInput"><![CDATA[Type of the input content.]]></type-parameter>
+            <type-parameter name="TOutput"><![CDATA[Type of the converted output.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="input" type="TInput"><![CDATA[Source content to be converted.]]></parameter>
+            <parameter name="processorName" type="String"><![CDATA[Optional processor for this content.]]></parameter>
+            <parameter name="processorParameters" type="OpaqueDataDictionary"><![CDATA[Optional paramters for the processor.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type: TOutput Reference of the final converted content.]]></returns>
           <platforms>
             <platform>Windows 7</platform>
             <platform>Windows Vista</platform>

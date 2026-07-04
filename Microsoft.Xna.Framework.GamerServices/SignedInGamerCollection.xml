@@ -4,7 +4,8 @@
           name="SignedInGamerCollection" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
           assembly="Microsoft.Xna.Framework.GamerServices"
-          baseClass="GamerCollection&lt;SignedInGamer&gt;">
+          baseClass="GamerCollection&lt;SignedInGamer&gt;"
+          modifier="sealed">
   <summary><![CDATA[Represents a collection of gamers on the local system.]]></summary>
   <syntax><![CDATA[public sealed class SignedInGamerCollection : GamerCollection<SignedInGamer>]]></syntax>
   <platforms>
@@ -21,6 +22,7 @@
       <syntax><![CDATA[public SignedInGamer this [
          PlayerIndex index
 ] { get; }]]></syntax>
+      <value><![CDATA[The local gamer at the specified PlayerIndex.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -26,6 +26,9 @@
         <parameter name="width" type="Int32"><![CDATA[Width, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferWidth to get the current screen width.]]></parameter>
         <parameter name="height" type="Int32"><![CDATA[Height, in pixels, of the render target. You can use graphicsDevice.PresentationParameters.BackBufferHeight to get the current screen height.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="OutOfMemoryException"><![CDATA[There is not enough memory to create this resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -48,6 +51,9 @@
         <parameter name="preferredFormat" type="SurfaceFormat"><![CDATA[Preferred format for the surface data. This is the format preferred by the application, which may or may not be available from the hardware.]]></parameter>
         <parameter name="preferredDepthFormat" type="DepthFormat"><![CDATA[Preferred format for the depth buffer. This is the format preferred by the application, which may or may not be available from the hardware.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="OutOfMemoryException"><![CDATA[There is not enough memory to create this resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -68,6 +74,12 @@
         <parameter name="numberLevels" type="int"><![CDATA[The number of downsampled surfaces to create when preprocessing the texture. These smaller versions of the texture, known as mip levels, are used when the texture is minified to fit a smaller area than the original texture size. The chain of downsampled surfaces associated with a texture is sometimes called a mipmap chain. If this is zero, all texture sublevels down to 1×1 pixels will be generated for hardware that supports mipmapped textures.]]></parameter>
         <parameter name="format" type="SurfaceFormat"><![CDATA[Surface format of the render target.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentException"><![CDATA[One of the following conditions is true: width is larger than MaxTextureWidth. height is larger than MaxTextureHeight. The graphics device does not support creating a render target of type format. CheckDeviceFormat may be used to verify if a surface format is supported. format is SurfaceFormat.Unknown. Textures cannot be created using SurfaceFormat.Unknown. numberLevels is greater than 32. Textures have a maximum of 32 levels.]]></exception>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[width or height is less than or equal to zero. width and height must be greater than zero.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create this RenderTarget2D resource on the graphics device.]]></exception>
+      </exceptions>
       <remarks><![CDATA[After a render pass the render target contains the color information of a rendered image. Render targets represent a linear area of display memory and usually resides in the display memory of the display card. Because of this, objects must be recreated when the device is reset.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -95,6 +107,12 @@
         <parameter name="multiSampleType" type="MultiSampleType"><![CDATA[The levels of full-scene multisampling that the device can apply.]]></parameter>
         <parameter name="multiSampleQuality" type="int"><![CDATA[The number of quality stops available for a given multisample type.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentException"><![CDATA[One of the following conditions is true: width is larger than MaxTextureWidth. height is larger than MaxTextureHeight. The graphics device does not support creating a render target of type format. CheckDeviceFormat may be used to verify if a surface format is supported. format is SurfaceFormat.Unknown. Textures cannot be created using SurfaceFormat.Unknown. numberLevels is greater than 32. Textures have a maximum of 32 levels.]]></exception>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[width or height is less than or equal to zero. width and height must be greater than zero.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create this RenderTarget2D resource on the graphics device.]]></exception>
+      </exceptions>
       <remarks><![CDATA[After a render pass the render target contains the color information of a rendered image. Render targets represent a linear area of display memory and usually resides in the display memory of the display card. Because of this, objects must be recreated when the device is reset.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -124,6 +142,9 @@
         <parameter name="preferredMultiSampleCount" type="Int32"><![CDATA[The preferred number of multisample locations.]]></parameter>
         <parameter name="usage" type="RenderTargetUsage"><![CDATA[Behavior options.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="OutOfMemoryException"><![CDATA[There is not enough memory to create this resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -133,6 +154,7 @@
     <property name="DepthStencilFormat" type="DepthFormat" access="get">
       <summary><![CDATA[Gets the data format for the depth stencil data.]]></summary>
       <syntax><![CDATA[public DepthFormat DepthStencilFormat { get; }]]></syntax>
+      <value><![CDATA[The data format of the depth data.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -143,6 +165,7 @@
     <property name="IsContentLost" type="bool" access="get">
       <summary><![CDATA[Determines if the index buffer data has been lost due to a lost device event.]]></summary>
       <syntax><![CDATA[public bool IsContentLost { get; }]]></syntax>
+      <value><![CDATA[True if the content was lost; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -153,6 +176,7 @@
     <property name="MultiSampleCount" type="int" access="get">
       <summary><![CDATA[Gets the number of sample locations during multisampling.]]></summary>
       <syntax><![CDATA[public int MultiSampleCount { get; }]]></syntax>
+      <value><![CDATA[The number of sample locations]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -163,6 +187,7 @@
     <property name="RenderTargetUsage" type="RenderTargetUsage" access="get">
       <summary><![CDATA[Gets or sets the render target usage.]]></summary>
       <syntax><![CDATA[public RenderTargetUsage RenderTargetUsage { get; }]]></syntax>
+      <value><![CDATA[The usage which detemines how data is used.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -172,13 +197,16 @@
     </property>
   </properties>
   <methods>
-    <method name="GetTexture" returnType="void">
+    <method name="GetTexture" returnType="Texture2D">
       <summary><![CDATA[Gets a copy of the 2D texture associated with this render target.]]></summary>
       <overloads>
         <overload signature="GetTexture()">
           <summary><![CDATA[Gets a copy of the 2D texture associated with this render target.]]></summary>
           <syntax><![CDATA[public Texture2D GetTexture ()]]></syntax>
           <returns><![CDATA[A copy of the 2D texture associated with this render target.]]></returns>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[A render target must be resolved using ResolveRenderTarget before calling GetTexture.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

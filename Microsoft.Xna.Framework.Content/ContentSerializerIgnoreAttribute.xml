@@ -4,7 +4,8 @@
           name="ContentSerializerIgnoreAttribute" kind="class"
           namespace="Microsoft.Xna.Framework.Content"
           assembly="Microsoft.Xna.Framework.Content"
-          baseClass="Attribute">
+          baseClass="Attribute"
+          modifier="sealed">
   <summary><![CDATA[A custom Attribute that marks public fields or properties to prevent them from being serialized.]]></summary>
   <syntax><![CDATA[[AttributeUsageAttribute(384)]
 public sealed class ContentSerializerIgnoreAttribute : Attribute]]></syntax>

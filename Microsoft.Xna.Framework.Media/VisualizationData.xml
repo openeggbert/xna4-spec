@@ -28,6 +28,7 @@
     <property name="Frequencies" type="ReadOnlyCollection&lt;float&gt;" access="get">
       <summary><![CDATA[Returns a collection of floats that contain frequency data.]]></summary>
       <syntax><![CDATA[public ReadOnlyCollection<float> Frequencies { get; }]]></syntax>
+      <value><![CDATA[A collection of floats that contain frequency data.]]></value>
       <remarks><![CDATA[Each value in the collection is a float value from 0.0f to 1.0f, and is the logarithmic scaled power level for that frequency band.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -39,6 +40,7 @@
     <property name="Samples" type="ReadOnlyCollection&lt;float&gt;" access="get">
       <summary><![CDATA[Returns a collection of floats that contain sample data.]]></summary>
       <syntax><![CDATA[public ReadOnlyCollection<float> Samples { get; }]]></syntax>
+      <value><![CDATA[A collection of floats that contain sample data.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

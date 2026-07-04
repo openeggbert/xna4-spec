@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="GamerPrivileges" kind="class"
           namespace="Microsoft.Xna.Framework.GamerServices"
-          assembly="Microsoft.Xna.Framework.GamerServices">
+          assembly="Microsoft.Xna.Framework.GamerServices"
+          modifier="sealed">
   <summary><![CDATA[Describes what operations a gamer is allowed to perform.]]></summary>
   <syntax><![CDATA[public sealed class GamerPrivileges]]></syntax>
   <remarks><![CDATA[GamerPrivileges can be defined by parental control settings, and will also be set automatically in response to things like age, region, and whether the gamer has a LIVE Gold or LIVE Silver account. Games do not need to explicitly check privileges, because a GamerPrivilegeException will be thrown if they try to perform an unsupported operation, but these privilege bits may be useful to detect that an operation is unavailable before calling it so as to grey-out the relevant menu option.]]></remarks>
@@ -19,6 +20,7 @@
     <property name="AllowCommunication" type="GamerPrivilegeSetting" access="get">
       <summary><![CDATA[Checks whether this gamer is allowed to send and receive communications using voice, text, messaging, or game invites.]]></summary>
       <syntax><![CDATA[public GamerPrivilegeSetting AllowCommunication { get; }]]></syntax>
+      <value><![CDATA[true if this gamer is allowed to send and receive communications using voice, text, messaging, or game invites; false otherwise.]]></value>
       <remarks><![CDATA[Titles do not need to do anything special to disable voice if this privilege is disabled. The framework will handle that automatically.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -30,6 +32,7 @@
     <property name="AllowOnlineSessions" type="bool" access="get">
       <summary><![CDATA[Checks whether this gamer is allowed to play in online multiplayer sessions.]]></summary>
       <syntax><![CDATA[public bool AllowOnlineSessions { get; }]]></syntax>
+      <value><![CDATA[true if this gamer is allowed to play in online multiplayer sessions; false otherwise.]]></value>
       <remarks><![CDATA[This may be disabled based on parental control settings. Also, it is disabled if the gamer does not have a Xbox LIVE Gold or LIVE Silver membership. This property does not affect system link sessions, which are always available. While in limited trial mode, this property will return false , which means gamers won't be able to use the Xbox LIVE servers to connect to other machines over the Internet. It is possible that the game may change from trial mode at any time, including during actual gameplay. For more information, please see Guide.IsTrialMode .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -41,6 +44,7 @@
     <property name="AllowPremiumContent" type="bool" access="get">
       <summary><![CDATA[Checks if this gamer is allowed to access premium content.]]></summary>
       <syntax><![CDATA[public bool AllowPremiumContent { get; }]]></syntax>
+      <value><![CDATA[Returns true if the gamer is allowed to access premium content, false otherwise.]]></value>
       <remarks><![CDATA[Windows Phone Specific Information This property is always false on Windows Phone.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -52,6 +56,7 @@
     <property name="AllowProfileViewing" type="GamerPrivilegeSetting" access="get">
       <summary><![CDATA[Checks whether this gamer is allowed to view the profiles of other gamers.]]></summary>
       <syntax><![CDATA[public GamerPrivilegeSetting AllowProfileViewing { get; }]]></syntax>
+      <value><![CDATA[true if this gamer is allowed to view the profiles of other gamers; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,6 +67,7 @@
     <property name="AllowPurchaseContent" type="bool" access="get">
       <summary><![CDATA[Checks if this gamer is allowed to purchase content from LIVE Marketplace.]]></summary>
       <syntax><![CDATA[public bool AllowPurchaseContent { get; }]]></syntax>
+      <value><![CDATA[true if this gamer is allowed to purchase content from LIVE Marketplace; false otherwise.]]></value>
       <remarks><![CDATA[Windows Phone Specific Information This property is always true on Windows Phone.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -73,6 +79,7 @@
     <property name="AllowTradeContent" type="bool" access="get">
       <summary><![CDATA[Checks whether this gamer is allowed to trade content with other gamers.]]></summary>
       <syntax><![CDATA[public bool AllowTradeContent { get; }]]></syntax>
+      <value><![CDATA[true if this gamer is allowed to trade content with other gamers; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -83,6 +90,7 @@
     <property name="AllowUserCreatedContent" type="GamerPrivilegeSetting" access="get">
       <summary><![CDATA[Checks whether this gamer is allowed to access user content that was created by other gamers.]]></summary>
       <syntax><![CDATA[public GamerPrivilegeSetting AllowUserCreatedContent { get; }]]></syntax>
+      <value><![CDATA[true if this gamer is allowed to access user content that was created by other gamers; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -32,6 +32,7 @@
     <property name="GraphicsDeviceInformation" type="GraphicsDeviceInformation" access="get">
       <summary><![CDATA[Information about the GraphicsDevice.]]></summary>
       <syntax><![CDATA[public GraphicsDeviceInformation GraphicsDeviceInformation { get; }]]></syntax>
+      <value><![CDATA[Information about the GraphicsDevice.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

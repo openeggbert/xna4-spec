@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="GameWindow" kind="class"
           namespace="Microsoft.Xna.Framework"
-          assembly="Microsoft.Xna.Framework">
+          assembly="Microsoft.Xna.Framework"
+          modifier="abstract">
   <summary><![CDATA[The system window associated with a Game.]]></summary>
   <syntax><![CDATA[public abstract class GameWindow]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
       <summary><![CDATA[Specifies whether to allow the user to resize the game window.]]></summary>
       <syntax><![CDATA[[DefaultValueAttribute(false)]
 public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
+      <value><![CDATA[true if user resizing is allowed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -27,6 +29,7 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
     <property name="ClientBounds" type="Object" access="get">
       <summary><![CDATA[The screen dimensions of the game window's client rectangle.]]></summary>
       <syntax><![CDATA[public virtual abstract Rectangle ClientBounds { get; }]]></syntax>
+      <value><![CDATA[Screen dimensions of the game window's client rectangle.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -36,6 +39,7 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
     <property name="CurrentOrientation" type="Object" access="get">
       <summary><![CDATA[Gets the current display orientation, which reflects the physical orientation of the phone in the user's hand.]]></summary>
       <syntax><![CDATA[public abstract DisplayOrientation CurrentOrientation { get; }]]></syntax>
+      <value><![CDATA[The current display orientation.]]></value>
       <remarks><![CDATA[Windows Phone Specific Information Orientation settings apply only to Windows Phone-based games.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -47,6 +51,7 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
     <property name="Handle" type="Object" access="get">
       <summary><![CDATA[Gets the handle to the system window.]]></summary>
       <syntax><![CDATA[public virtual abstract IntPtr Handle { get; }]]></syntax>
+      <value><![CDATA[The handle to the system window.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -56,6 +61,7 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
     <property name="ScreenDeviceName" type="Object" access="get">
       <summary><![CDATA[Gets the device name of the screen the window is currently in.]]></summary>
       <syntax><![CDATA[public virtual abstract string ScreenDeviceName { get; }]]></syntax>
+      <value><![CDATA[The device name of the screen.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -65,6 +71,10 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
     <property name="Title" type="string" access="get;set">
       <summary><![CDATA[Gets and sets the title of the system window.]]></summary>
       <syntax><![CDATA[public string Title { get; set; }]]></syntax>
+      <value><![CDATA[The title of the system window.]]></value>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[Title is null. Use an empty string instead.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

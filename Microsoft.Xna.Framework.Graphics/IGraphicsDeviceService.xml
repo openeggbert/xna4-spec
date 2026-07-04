@@ -17,6 +17,7 @@
     <property name="GraphicsDevice" type="Object" access="get">
       <summary><![CDATA[Retrieves a graphcs device.]]></summary>
       <syntax><![CDATA[public virtual abstract GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[A graphics device.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

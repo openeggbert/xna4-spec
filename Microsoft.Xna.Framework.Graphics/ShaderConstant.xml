@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ShaderConstant" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Describes a shader constant.]]></summary>
   <syntax><![CDATA[public sealed class ShaderConstant]]></syntax>
   <platforms>
@@ -17,6 +18,7 @@
     <property name="ColumnCount" type="int" access="get">
       <summary><![CDATA[Gets the number of columns in the ShaderConstant.]]></summary>
       <syntax><![CDATA[public int ColumnCount { get; }]]></syntax>
+      <value><![CDATA[The number of columns in the ShaderConstant.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +28,7 @@
     <property name="ElementCount" type="int" access="get">
       <summary><![CDATA[Gets the number of elements in the ShaderConstant.]]></summary>
       <syntax><![CDATA[public int ElementCount { get; }]]></syntax>
+      <value><![CDATA[The number of elements in the ShaderConstant.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +38,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of the ShaderConstant.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of the ShaderConstant.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +48,7 @@
     <property name="ParameterClass" type="EffectParameterClass" access="get">
       <summary><![CDATA[Gets the EffectParameterClass of the ShaderConstant.]]></summary>
       <syntax><![CDATA[public EffectParameterClass ParameterClass { get; }]]></syntax>
+      <value><![CDATA[The EffectParameterClass of the ShaderConstant.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +58,7 @@
     <property name="ParameterType" type="EffectParameterType" access="get">
       <summary><![CDATA[Gets the EffectParameterType of the ShaderConstant.]]></summary>
       <syntax><![CDATA[public EffectParameterType ParameterType { get; }]]></syntax>
+      <value><![CDATA[The EffectParameterType of the ShaderConstant.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,6 +68,7 @@
     <property name="RegisterCount" type="int" access="get">
       <summary><![CDATA[Gets the number of registers that contain data.]]></summary>
       <syntax><![CDATA[public int RegisterCount { get; }]]></syntax>
+      <value><![CDATA[The number of registers that contain data.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -71,6 +78,7 @@
     <property name="RegisterIndex" type="int" access="get">
       <summary><![CDATA[Gets the index of the ShaderConstant in the constant table.]]></summary>
       <syntax><![CDATA[public int RegisterIndex { get; }]]></syntax>
+      <value><![CDATA[The index of the ShaderConstant in the constant table.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -80,6 +88,7 @@
     <property name="RegisterSet" type="ShaderRegisterSet" access="get">
       <summary><![CDATA[Gets the data type of the shader register.]]></summary>
       <syntax><![CDATA[public ShaderRegisterSet RegisterSet { get; }]]></syntax>
+      <value><![CDATA[The data type of the shader register.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -89,6 +98,7 @@
     <property name="RowCount" type="int" access="get">
       <summary><![CDATA[Gets the number of rows in the ShaderConstant.]]></summary>
       <syntax><![CDATA[public int RowCount { get; }]]></syntax>
+      <value><![CDATA[The number of rows in the ShaderConstant.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -98,6 +108,7 @@
     <property name="SamplerIndex" type="int" access="get">
       <summary><![CDATA[Gets the sampler index number of the ShaderConstant from the constant table.]]></summary>
       <syntax><![CDATA[public int SamplerIndex { get; }]]></syntax>
+      <value><![CDATA[The sampler index number of the ShaderConstant from the constant table.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -107,6 +118,7 @@
     <property name="StructureMemberCount" type="int" access="get">
       <summary><![CDATA[Gets the number of structure member subparameters.]]></summary>
       <syntax><![CDATA[public int StructureMemberCount { get; }]]></syntax>
+      <value><![CDATA[The number of structure member subparameters.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

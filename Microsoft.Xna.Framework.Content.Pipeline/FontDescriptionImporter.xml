@@ -25,7 +25,7 @@ public class FontDescriptionImporter : ContentImporter<FontDescription>]]></synt
   <properties>
   </properties>
   <methods>
-    <method name="Import" returnType="void">
+    <method name="Import" returnType="FontDescription">
       <summary><![CDATA[Called by the XNA Framework when importing a .spritefont file to be used as a game asset. This is the method called by the XNA Framework when an asset is to be imported into an object that can be recognized by the Content Pipeline.]]></summary>
       <overloads>
         <overload signature="Import()">
@@ -39,6 +39,13 @@ public class FontDescriptionImporter : ContentImporter<FontDescription>]]></synt
             <parameter name="context" type="ContentImporterContext"><![CDATA[Contains information for importing a game asset, such as a logger interface.]]></parameter>
           </parameters>
           <returns><![CDATA[Resulting game asset.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[filename is null.]]></exception>
+            <exception type="SecurityException"><![CDATA[Sufficient permissions are not available to access filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file identified by the filename does not exist.]]></exception>
+            <exception type="UriFormatException"><![CDATA[The format of filename is not correct.]]></exception>
+            <exception type="InvalidContentException"><![CDATA[The XML in filename is either badly formed or does not represent a FontDescription object.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>

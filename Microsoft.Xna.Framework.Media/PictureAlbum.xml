@@ -4,7 +4,8 @@
           name="PictureAlbum" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&lt;PictureAlbum&gt;">
+          interfaces="IEquatable&lt;PictureAlbum&gt;"
+          modifier="sealed">
   <summary><![CDATA[Provides access to a picture album in the media library.]]></summary>
   <syntax><![CDATA[public sealed class PictureAlbum : IEquatable<PictureAlbum>]]></syntax>
   <remarks><![CDATA[The PictureAlbum class provides information about a picture album, including the picture album's Name , Pictures , and Parent . A PictureAlbum can contain both pictures and other picture albums. Obtain PictureAlbum objects through the PictureAlbumCollection.Item indexer.]]></remarks>
@@ -20,6 +21,7 @@
     <property name="Albums" type="PictureAlbumCollection" access="get">
       <summary><![CDATA[Gets the collection of picture albums that are contained within the picture album (that is, picture albums that are children of the picture album).]]></summary>
       <syntax><![CDATA[public PictureAlbumCollection Albums { get; }]]></syntax>
+      <value><![CDATA[PictureAlbumCollection that contains the picture albums that are children of this picture album.]]></value>
       <remarks><![CDATA[A PictureAlbum can contain pictures as well as other picture albums. This property returns the collection of picture albums that are contained within this picture album, if any. If this picture album has no child picture albums, an empty collection is returned.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -31,6 +33,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -42,6 +45,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of the PictureAlbum.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of this PictureAlbum.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -52,6 +56,7 @@
     <property name="Parent" type="PictureAlbum" access="get">
       <summary><![CDATA[Gets the parent picture album.]]></summary>
       <syntax><![CDATA[public PictureAlbum Parent { get; }]]></syntax>
+      <value><![CDATA[PictureAlbum that is the parent of this picture album.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,6 +67,7 @@
     <property name="Pictures" type="PictureCollection" access="get">
       <summary><![CDATA[Gets the collection of pictures in this picture album.]]></summary>
       <syntax><![CDATA[public PictureCollection Pictures { get; }]]></syntax>
+      <value><![CDATA[PictureCollection that contains the pictures in this picture album.]]></value>
       <remarks><![CDATA[A PictureAlbum can contain pictures as well as other picture albums. This property returns the collection of pictures in this picture album, if any. If this picture album has no pictures, an empty collection is returned.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -140,7 +146,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -156,7 +162,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a String representation of the PictureAlbum.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -172,7 +178,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified PictureAlbum instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -195,7 +201,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified PictureAlbum instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

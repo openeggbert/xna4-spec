@@ -4,7 +4,8 @@
           name="ModelBoneCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ReadOnlyCollection&lt;ModelBone&gt;">
+          baseClass="ReadOnlyCollection&lt;ModelBone&gt;"
+          modifier="sealed">
   <summary><![CDATA[Represents a set of bones associated with a model.]]></summary>
   <syntax><![CDATA[public sealed class ModelBoneCollection : ReadOnlyCollection<ModelBone>]]></syntax>
   <platforms>
@@ -20,6 +21,10 @@
       <syntax><![CDATA[public ModelBone this [
          string boneName
 ] { get; }]]></syntax>
+      <value><![CDATA[The ModelBone identified by boneName.]]></value>
+      <exceptions>
+        <exception type="KeyNotFoundException"><![CDATA[boneName was not found in this ModelBoneCollection.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -28,7 +33,7 @@
     </property>
   </properties>
   <methods>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="Enumerator">
       <summary><![CDATA[Returns a ModelBoneCollection.Enumerator that can iterate through a ModelBoneCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">
@@ -44,7 +49,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TryGetValue" returnType="void">
+    <method name="TryGetValue" returnType="bool">
       <summary><![CDATA[Finds a bone with a given name if it exists in the collection.]]></summary>
       <overloads>
         <overload signature="TryGetValue()">
@@ -58,6 +63,9 @@
             <parameter name="value" type="ModelBone"><![CDATA[[ OutAttribute ] The bone named boneName , if found.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the named bone is found, otherwise false.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[boneName is null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

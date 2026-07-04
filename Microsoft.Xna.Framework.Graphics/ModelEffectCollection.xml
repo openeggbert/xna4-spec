@@ -4,7 +4,8 @@
           name="ModelEffectCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ReadOnlyCollection&lt;Effect&gt;">
+          baseClass="ReadOnlyCollection&lt;Effect&gt;"
+          modifier="sealed">
   <summary><![CDATA[Represents a collection of effects associated with a model.]]></summary>
   <syntax><![CDATA[public sealed class ModelEffectCollection : ReadOnlyCollection<Effect>]]></syntax>
   <platforms>
@@ -17,7 +18,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="Enumerator">
       <summary><![CDATA[Returns a ModelEffectCollection.Enumerator that can iterate through a ModelEffectCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">

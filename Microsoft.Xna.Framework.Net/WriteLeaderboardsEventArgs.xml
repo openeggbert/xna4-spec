@@ -4,7 +4,8 @@
           name="WriteLeaderboardsEventArgs" kind="class"
           namespace="Microsoft.Xna.Framework.Net"
           assembly="Microsoft.Xna.Framework.Net"
-          baseClass="EventArgs">
+          baseClass="EventArgs"
+          modifier="sealed">
   <summary><![CDATA[Represents the arguments passed to a WriteArbitratedLeaderboard. WriteUnarbitratedLeaderboard, or WriteTrueSkill event.]]></summary>
   <syntax><![CDATA[public sealed class WriteLeaderboardsEventArgs : EventArgs]]></syntax>
   <platforms>
@@ -19,6 +20,7 @@
     <property name="Gamer" type="NetworkGamer" access="get">
       <summary><![CDATA[Gets the gamer whose statistics need to be written to the leaderboard.]]></summary>
       <syntax><![CDATA[public NetworkGamer Gamer { get; }]]></syntax>
+      <value><![CDATA[The gamer whose statistics should be written.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -29,6 +31,7 @@
     <property name="IsLeaving" type="bool" access="get">
       <summary><![CDATA[Indicates whether or not the player is leaving the session early.]]></summary>
       <syntax><![CDATA[public bool IsLeaving { get; }]]></syntax>
+      <value><![CDATA[When true, the player is leaving the session early.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

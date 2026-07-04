@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ModelBone" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="sealed">
   <summary><![CDATA[Represents bone data for a model.]]></summary>
   <syntax><![CDATA[public sealed class ModelBone]]></syntax>
   <platforms>
@@ -17,6 +18,7 @@
     <property name="Children" type="ModelBoneCollection" access="get">
       <summary><![CDATA[Gets a collection of bones that are children of this bone.]]></summary>
       <syntax><![CDATA[public ModelBoneCollection Children { get; }]]></syntax>
+      <value><![CDATA[A collection of bones that are children of this bone.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +28,7 @@
     <property name="Index" type="int" access="get">
       <summary><![CDATA[Gets the index of this bone in the Bones collection.]]></summary>
       <syntax><![CDATA[public int Index { get; }]]></syntax>
+      <value><![CDATA[The index of this bone in the Bones collection.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +38,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of this bone.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of this bone.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +48,7 @@
     <property name="Parent" type="ModelBone" access="get">
       <summary><![CDATA[Gets the parent of this bone.]]></summary>
       <syntax><![CDATA[public ModelBone Parent { get; }]]></syntax>
+      <value><![CDATA[The parent of this bone.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +58,7 @@
     <property name="Transform" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the matrix used to transform this bone relative to its parent bone.]]></summary>
       <syntax><![CDATA[public Matrix Transform { get; set; }]]></syntax>
+      <value><![CDATA[The matrix used to transform this bone relative only to its parent bone.]]></value>
       <remarks><![CDATA[Warning Please note that the transform described by Transform does not describe the cumulative relationship of each mesh relative to all of its parent meshes in a Model , just the immediate parent of the mesh. For this information, please see CopyAbsoluteBoneTransformsTo . For a demonstration of how to use the transforms for the parent bones of a model mesh to set the position of the mesh parts, please see How to: Render a Model .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

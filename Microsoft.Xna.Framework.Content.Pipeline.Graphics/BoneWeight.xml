@@ -32,6 +32,7 @@
     <property name="BoneName" type="string" access="get">
       <summary><![CDATA[Gets the name of the bone.]]></summary>
       <syntax><![CDATA[public string BoneName { get; }]]></syntax>
+      <value><![CDATA[Name of the bone.]]></value>
       <remarks><![CDATA[The bone can be located by searching for a BoneContent object with a matching Name property.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -41,6 +42,7 @@
     <property name="Weight" type="float" access="get">
       <summary><![CDATA[Gets the amount of bone influence, ranging from zero to one. The complete set of weights in a BoneWeightCollection should sum to one.]]></summary>
       <syntax><![CDATA[public float Weight { get; }]]></syntax>
+      <value><![CDATA[Influence of the bone.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

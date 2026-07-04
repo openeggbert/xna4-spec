@@ -25,6 +25,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of items in the dictionary.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[Number of items.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -33,6 +34,7 @@
     <property name="DefaultSerializerType" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[protected internal virtual Type DefaultSerializerType { get; }]]></syntax>
+      <value><![CDATA[The type used by the serializer.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -44,6 +46,7 @@
       <syntax><![CDATA[public T this [
          string key
 ] { get; set; }]]></syntax>
+      <value><![CDATA[Identity of a key.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -52,6 +55,7 @@
     <property name="Keys" type="ICollection&lt;string&gt;" access="get">
       <summary><![CDATA[Gets all keys contained in the dictionary.]]></summary>
       <syntax><![CDATA[public ICollection<string> Keys { get; }]]></syntax>
+      <value><![CDATA[Collection of keys for the dictionary.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -60,6 +64,7 @@
     <property name="Values" type="ICollection&lt;T&gt;" access="get">
       <summary><![CDATA[Gets all values contained in the dictionary.]]></summary>
       <syntax><![CDATA[public ICollection<T> Values { get; }]]></syntax>
+      <value><![CDATA[Collection of values for the dictionary.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -133,7 +138,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ContainsKey" returnType="void">
+    <method name="ContainsKey" returnType="bool">
       <summary><![CDATA[Determines whether the specified key is present in the dictionary.]]></summary>
       <overloads>
         <overload signature="ContainsKey()">
@@ -166,7 +171,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Remove" returnType="void">
+    <method name="Remove" returnType="bool">
       <summary><![CDATA[Removes the specified key and value from the dictionary.]]></summary>
       <overloads>
         <overload signature="Remove()">
@@ -224,7 +229,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TryGetValue" returnType="void">
+    <method name="TryGetValue" returnType="bool">
       <summary><![CDATA[Gets the value associated with the specified key.]]></summary>
       <overloads>
         <overload signature="TryGetValue()">

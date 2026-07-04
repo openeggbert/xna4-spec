@@ -26,6 +26,7 @@ public class EffectProcessor : ContentProcessor<EffectContent, CompiledEffect>]]
     <property name="DebugMode" type="Object" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual EffectProcessorDebugMode DebugMode { get; set; }]]></syntax>
+      <value><![CDATA[The debug mode to use when compiling effects.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -35,6 +36,7 @@ public class EffectProcessor : ContentProcessor<EffectContent, CompiledEffect>]]
     <property name="Defines" type="Object" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual string Defines { get; set; }]]></syntax>
+      <value><![CDATA[A list of define assignments delimited by semicolons.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -43,7 +45,7 @@ public class EffectProcessor : ContentProcessor<EffectContent, CompiledEffect>]]
     </property>
   </properties>
   <methods>
-    <method name="Process" returnType="void">
+    <method name="Process" returnType="CompiledEffect">
       <summary><![CDATA[Processes the string representation of the specified effect into a platform-specific binary format using the specified context.]]></summary>
       <overloads>
         <overload signature="Process()">

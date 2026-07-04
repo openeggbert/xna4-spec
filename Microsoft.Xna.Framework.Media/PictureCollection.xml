@@ -4,7 +4,8 @@
           name="PictureCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEnumerable&lt;Picture&gt;, IEnumerable">
+          interfaces="IEnumerable&lt;Picture&gt;, IEnumerable"
+          modifier="sealed">
   <summary><![CDATA[A collection of pictures in the media library.]]></summary>
   <syntax><![CDATA[public sealed class PictureCollection : IEnumerable<Picture>, IEnumerable]]></syntax>
   <remarks><![CDATA[The PictureCollection class provides access to pictures in the device's media library. Use the MediaLibrary.Pictures property to obtain a collection of all pictures in the media library, and use the PictureAlbum.Pictures property to obtain a collection of pictures in a particular picture album. The PictureCollection does not immediately instantiate instances of all pictures in the collection. Instead, individual Picture objects are created each time a picture is accessed through the collection's Item indexer. See the Remarks section of Item for the resource implications of maintaining references to multiple Picture objects.]]></remarks>
@@ -20,6 +21,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of Picture objects in the PictureCollection.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[Number of Picture objects in this PictureCollection.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -30,6 +32,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -43,6 +46,7 @@
       <syntax><![CDATA[public Picture this [
          int index
 ] { get; }]]></syntax>
+      <value><![CDATA[A new Picture representing the picture at the specified index in this PictureCollection.]]></value>
       <remarks><![CDATA[Each call returns a new Picture instance. Picture resources such as the picture texture and thumbnail are cached in each Picture instance. Retrieving and maintaining references to multiple instances of the same picture, and then accessing the picture texture or thumbnail on each of those instances, creates multiple copies of the texture or thumbnail. Large numbers of picture textures can consume considerable memory, so it is not advisable to hold a large number of Picture objects on which GetTexture has been called.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -84,7 +88,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="IEnumerator&lt;Picture&gt;">
       <summary><![CDATA[Returns an enumerator that iterates through the PictureCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">

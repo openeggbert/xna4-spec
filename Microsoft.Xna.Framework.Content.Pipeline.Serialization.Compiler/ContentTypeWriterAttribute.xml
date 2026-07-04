@@ -4,7 +4,8 @@
           name="ContentTypeWriterAttribute" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
-          baseClass="Attribute">
+          baseClass="Attribute"
+          modifier="sealed">
   <summary><![CDATA[Identifies the components of a type writer. Custom content writers must apply this attribute to their class as well as extend the ContentTypeWriter class.]]></summary>
   <syntax><![CDATA[[AttributeUsageAttribute(4)]
 public sealed class ContentTypeWriterAttribute : Attribute]]></syntax>

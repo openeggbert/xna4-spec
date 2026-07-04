@@ -4,7 +4,8 @@
           name="DxtBitmapContent" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          baseClass="BitmapContent">
+          baseClass="BitmapContent"
+          modifier="abstract">
   <summary><![CDATA[Provides methods and properties for managing compressed textures (DXT1, DXT3, DXT5). This is the base class for all compressed textures.]]></summary>
   <syntax><![CDATA[public abstract class DxtBitmapContent : BitmapContent]]></syntax>
   <platforms>
@@ -46,7 +47,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetPixelData" returnType="void">
+    <method name="GetPixelData" returnType="byte[]">
       <summary><![CDATA[Gets the bitmap content as an array of encoded bytes.]]></summary>
       <overloads>
         <overload signature="GetPixelData()">

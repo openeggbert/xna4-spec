@@ -32,6 +32,7 @@
     <property name="Left" type="float" access="get">
       <summary><![CDATA[Identifies the position of the left trigger on the Xbox 360 Controller.]]></summary>
       <syntax><![CDATA[public float Left { get; }]]></syntax>
+      <value><![CDATA[Position of the left trigger, as a value between 0.0 and 1.0.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -41,6 +42,7 @@
     <property name="Right" type="float" access="get">
       <summary><![CDATA[Identifies the position of the right trigger on the Xbox 360 Controller.]]></summary>
       <syntax><![CDATA[public float Right { get; }]]></syntax>
+      <value><![CDATA[Position of the right trigger, as a value between 0.0 and 1.0.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -69,7 +71,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -84,7 +86,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -99,7 +101,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two GamePadTriggers instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -121,7 +123,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two GamePadTriggers instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

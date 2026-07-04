@@ -17,6 +17,7 @@
     <property name="DynamicFlowControlDepth" type="int" access="get">
       <summary><![CDATA[Gets a value specifying the dynamic flow control depth.]]></summary>
       <syntax><![CDATA[public int DynamicFlowControlDepth { get; }]]></syntax>
+      <value><![CDATA[The dynamic flow control depth. Must be 0 or 24.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="NumberInstructionSlots" type="int" access="get">
       <summary><![CDATA[Gets a value specifying the number of instruction slots supported.]]></summary>
       <syntax><![CDATA[public int NumberInstructionSlots { get; }]]></syntax>
+      <value><![CDATA[The number of instruction slots supported.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +37,7 @@
     <property name="NumberTemps" type="int" access="get">
       <summary><![CDATA[Gets a value specifying the number of temporary registers supported.]]></summary>
       <syntax><![CDATA[public int NumberTemps { get; }]]></syntax>
+      <value><![CDATA[The number of temporary registers supported.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +47,7 @@
     <property name="StaticFlowControlDepth" type="int" access="get">
       <summary><![CDATA[Gets a value specifying the depth of nesting of the loop - vs/rep - vs and call - vs/callnz bool - vs instructions.]]></summary>
       <syntax><![CDATA[public int StaticFlowControlDepth { get; }]]></syntax>
+      <value><![CDATA[The static flow control depth.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +57,7 @@
     <property name="SupportsArbitrarySwizzle" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether arbitrary swizzling is supported.]]></summary>
       <syntax><![CDATA[public bool SupportsArbitrarySwizzle { get; }]]></syntax>
+      <value><![CDATA[true if arbitrary swizzling is supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,6 +67,7 @@
     <property name="SupportsGradientInstructions" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether gradient instructions are supported.]]></summary>
       <syntax><![CDATA[public bool SupportsGradientInstructions { get; }]]></syntax>
+      <value><![CDATA[true if gradient instructions are supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -71,6 +77,7 @@
     <property name="SupportsNoDependentReadLimit" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether there is a limit on the number of dependent reads per instruction.]]></summary>
       <syntax><![CDATA[public bool SupportsNoDependentReadLimit { get; }]]></syntax>
+      <value><![CDATA[true if there is no dependent read limit; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -80,6 +87,7 @@
     <property name="SupportsNoTextureInstructionLimit" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether there is a limit on the number of texture instructions.]]></summary>
       <syntax><![CDATA[public bool SupportsNoTextureInstructionLimit { get; }]]></syntax>
+      <value><![CDATA[true if there is no limit on the number of texture instructions; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -89,6 +97,7 @@
     <property name="SupportsPredication" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether instruction predication is supported.]]></summary>
       <syntax><![CDATA[public bool SupportsPredication { get; }]]></syntax>
+      <value><![CDATA[true if instruction predication is supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -97,7 +106,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

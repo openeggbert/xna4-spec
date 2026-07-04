@@ -25,6 +25,7 @@
     <property name="Quality" type="ConversionQuality" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public ConversionQuality Quality { get; set; }]]></syntax>
+      <value><![CDATA[The ConversionQuality of the sound effect data.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -32,7 +33,7 @@
     </property>
   </properties>
   <methods>
-    <method name="Process" returnType="void">
+    <method name="Process" returnType="SoundEffectContent">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="Process()">

@@ -4,7 +4,8 @@
           name="SoundEffect" kind="class"
           namespace="Microsoft.Xna.Framework.Audio"
           assembly="Microsoft.Xna.Framework.Audio"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="sealed">
   <summary><![CDATA[Provides a loaded sound resource. You can play multiple instances of the SoundEffect by calling Play.]]></summary>
   <syntax><![CDATA[public sealed class SoundEffect : IDisposable]]></syntax>
   <remarks><![CDATA[A SoundEffect contains the audio data and metadata (such as wave data and loop information) loaded from a sound file. You can create multiple SoundEffectInstance objects and play them from a single SoundEffect . These objects share the resources of that SoundEffect . You can create a SoundEffect by calling ContentManager.Load . When you make that call, use the type SoundEffect and the asset name of an audio file. The audio file must be part of the Content project. Be sure to use the SoundEffect - XNA Framework content processor. The only limit to the number of loaded SoundEffect objects is memory. A loaded SoundEffect will continue to hold its memory resources throughout its lifetime. All SoundEffectInstance objects created from a SoundEffect share memory resources. When a SoundEffect object is destroyed, all SoundEffectInstance objects previously created by that SoundEffect will stop playing and become invalid.]]></remarks>
@@ -35,6 +36,10 @@
         <parameter name="loopStart" type="int"><![CDATA[Loop start in samples.]]></parameter>
         <parameter name="loopLength" type="int"><![CDATA[Loop length in samples.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[The exception thrown when the following arguments are out of range: sampleRate is less than 8,000 Hz or is greater than 48,000 Hz. channels is something other than mono or stereo.]]></exception>
+        <exception type="ArgumentException"><![CDATA[The exception thrown when the following arguments are invalid: buffer is null, has zero length, or does not satisfy alignment requirements. offset is less than zero, is greater than or equal to the size of the buffer, or does not satisfy alignment requirements. The sum of count and offset is greater than the size of the buffer, count is less than or equal to zero, or does not satisfy alignment requirements. loopStart is less than zero, loopLength is less than zero, or loopStart + loopLength is greater than the sample size.]]></exception>
+      </exceptions>
       <remarks><![CDATA[For information regarding audio format using XNA Game Studio see Audio API Developers Guide .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -70,6 +75,7 @@
     <property name="DistanceScale" type="float" access="get;set" isStatic="true">
       <summary><![CDATA[Gets or sets a value that adjusts the effect of distance calculations on the sound (emitter).]]></summary>
       <syntax><![CDATA[public static float DistanceScale { get; set; }]]></syntax>
+      <value><![CDATA[A value that adjustments the effect of Distance and Doppler calculations on the sound (emitter).]]></value>
       <remarks><![CDATA[If sounds are attenuating too fast, which means the sounds get quiet too quickly as they move away from the listener, you need to increase the DistanceScale. If sounds are not attenuating fast enough, decrease the DistanceScale. Adjustment Effect DistanceScale = 0.0 Invalid (DistanceScale will be reset to default of 1.0) 0.0 &lt; DistanceScale &lt;= 1.0 Increases the effect of distance attenuation DistanceScale = 1.0 No scaling (this is the default setting) DistanceScale &gt; 1.0 Decrease the effect of distance attenuation Distance attenuation is calculated using the inverse square law: volume = 1.0 / distance Adding DistanceScale into the equations give: If (distance &gt; DistanceScale) volume = DistanceScale / distance else volume = 1.0]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -81,6 +87,7 @@
     <property name="DopplerScale" type="float" access="get;set" isStatic="true">
       <summary><![CDATA[Gets or sets a value that adjusts the effect of doppler calculations on the sound (emitter).]]></summary>
       <syntax><![CDATA[public static float DopplerScale { get; set; }]]></syntax>
+      <value><![CDATA[A value that adjusts the effect of doppler calculations on the sound (emitter).]]></value>
       <remarks><![CDATA[DopplerScale changes the relative velocities of emitters and listeners. If sounds are shifting (pitch) too much for the given relative velocity of the emitter and listener, decrease the DopplerScale. If sounds are not shifting enough for the given relative velocity of the emitter and listener, increase the DopplerScale. Adjustment Effect DopplerScale = 0 No Doppler will be applied 0.0 &lt; DopplerScale &lt;= 1.0 Decreases the effect of Doppler DopplerScale = 1.0 No scaling (default) DopplerScale &gt; 1.0 Increase the effect of Doppler]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -92,6 +99,7 @@
     <property name="Duration" type="TimeSpan" access="get">
       <summary><![CDATA[Gets or sets the duration of the SoundEffect.]]></summary>
       <syntax><![CDATA[public TimeSpan Duration { get; }]]></syntax>
+      <value><![CDATA[TimeSpan that is the duration of the SoundEffect.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -102,6 +110,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -112,6 +121,7 @@
     <property name="MasterVolume" type="float" access="get;set" isStatic="true">
       <summary><![CDATA[Gets or sets the master volume that affects all SoundEffectInstance sounds.]]></summary>
       <syntax><![CDATA[public static float MasterVolume { get; set; }]]></syntax>
+      <value><![CDATA[Volume, ranging from 0.0f (silence) to 1.0f (current device volume). 1.0f is full volume relative to the current device volume.]]></value>
       <remarks><![CDATA[The sound effect master volume affects all sound effect instances, including currently playing instances and newly created instances. Each SoundEffectInstance also has its own volume ( SoundEffectInstance.Volume ) that is relative to the master volume. You can adjust the volume of all sounds effects by changing MasterVolume . You can adjust the volume of an individual SoundEffectInstance by changing SoundEffectInstance.Volume , or by specifying an instance volume when you call Play to create the instance.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -123,6 +133,7 @@
     <property name="Name" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the asset name of the SoundEffect.]]></summary>
       <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <value><![CDATA[Asset name of the SoundEffect.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -133,6 +144,7 @@
     <property name="SpeedOfSound" type="float" access="get;set" isStatic="true">
       <summary><![CDATA[Returns the speed of sound: 343.5 meters per second.]]></summary>
       <syntax><![CDATA[public static float SpeedOfSound { get; set; }]]></syntax>
+      <value><![CDATA[The speed of sound: 343.5 meters per second.]]></value>
       <remarks><![CDATA[Use this value to simulate different environments. A smaller speed of sound will exaggerate the doppler effect. A higher speed of sound will reduce the doppler effect. Speed of sound has no impact on distance attenuation.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -143,7 +155,7 @@
     </property>
   </properties>
   <methods>
-    <method name="CreateInstance" returnType="void">
+    <method name="CreateInstance" returnType="SoundEffectInstance">
       <summary><![CDATA[Creates a new SoundEffectInstance for this SoundEffect.]]></summary>
       <overloads>
         <overload signature="CreateInstance()">
@@ -193,7 +205,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="FromStream" returnType="void">
+    <method name="FromStream" returnType="SoundEffect" isStatic="true">
       <summary><![CDATA[Creates a SoundEffect object based on the specified data stream.]]></summary>
       <overloads>
         <overload signature="FromStream()">
@@ -205,6 +217,9 @@
             <parameter name="stream" type="Stream"><![CDATA[Stream object that contains the data for this SoundEffect object.]]></parameter>
           </parameters>
           <returns><![CDATA[Type: SoundEffect SoundEffect object that this method creates.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[Stream parameter is NULL.]]></exception>
+          </exceptions>
           <remarks><![CDATA[The Stream object must point to the head of a valid PCM wave file. Also, this wave file must be in the RIFF bitstream format. The audio format has the following restrictions: Must be a PCM wave file Can only be mono or stereo Must be 8 or 16 bit Sample rate must be between 8,000 Hz and 48,000 Hz]]></remarks>
           <platforms>
             <platform>Windows Phone</platform>
@@ -212,7 +227,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetSampleDuration" returnType="void">
+    <method name="GetSampleDuration" returnType="TimeSpan" isStatic="true">
       <summary><![CDATA[Returns the sample duration based on the specified sample size and sample rate.]]></summary>
       <overloads>
         <overload signature="GetSampleDuration()">
@@ -234,7 +249,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetSampleSizeInBytes" returnType="void">
+    <method name="GetSampleSizeInBytes" returnType="int" isStatic="true">
       <summary><![CDATA[Returns the size of the audio sample based on duration, sample rate, and audio channels.]]></summary>
       <overloads>
         <overload signature="GetSampleSizeInBytes()">

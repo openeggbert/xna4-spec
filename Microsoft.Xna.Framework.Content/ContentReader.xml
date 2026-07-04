@@ -4,7 +4,8 @@
           name="ContentReader" kind="class"
           namespace="Microsoft.Xna.Framework.Content"
           assembly="Microsoft.Xna.Framework.Content"
-          baseClass="BinaryReader">
+          baseClass="BinaryReader"
+          modifier="sealed">
   <summary><![CDATA[A worker object that implements most of ContentManager.Load. A new ContentReader is constructed for each asset loaded.]]></summary>
   <syntax><![CDATA[public sealed class ContentReader : BinaryReader]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="AssetName" type="string" access="get">
       <summary><![CDATA[Gets the name of the asset currently being read by this ContentReader.]]></summary>
       <syntax><![CDATA[public string AssetName { get; }]]></syntax>
+      <value><![CDATA[Name of the asset currently being read by this ContentReader.]]></value>
       <remarks><![CDATA[AssetName can be useful to include in the exception message if a custom ContentTypeReader encounters an error.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -28,6 +30,7 @@
     <property name="ContentManager" type="ContentManager" access="get">
       <summary><![CDATA[Gets the ContentManager associated with the ContentReader.]]></summary>
       <syntax><![CDATA[public ContentManager ContentManager { get; }]]></syntax>
+      <value><![CDATA[The ContentManager associated with the ContentReader.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -36,7 +39,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ReadColor" returnType="void">
+    <method name="ReadColor" returnType="Color">
       <summary><![CDATA[Reads a Color value from the currently open stream.]]></summary>
       <overloads>
         <overload signature="ReadColor()">
@@ -53,7 +56,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadDouble" returnType="void">
+    <method name="ReadDouble" returnType="double">
       <summary><![CDATA[Reads a double value from the currently open stream.]]></summary>
       <overloads>
         <overload signature="ReadDouble()">
@@ -70,7 +73,25 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadMatrix" returnType="void">
+    <method name="ReadExternalReference" returnType="T">
+      <summary><![CDATA[Reads a link to an external file.]]></summary>
+      <overloads>
+        <overload signature="ReadExternalReference()">
+          <summary><![CDATA[Reads a link to an external file.]]></summary>
+          <syntax><![CDATA[public T ReadExternalReference<T> ()]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of asset stored in the external file.]]></type-parameter>
+          </type-parameters>
+          <returns><![CDATA[The asset stored in the external file.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadMatrix" returnType="Matrix">
       <summary><![CDATA[Reads a Matrix value from the currently open stream.]]></summary>
       <overloads>
         <overload signature="ReadMatrix()">
@@ -85,7 +106,81 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadQuaternion" returnType="void">
+    <method name="ReadObject" returnType="T">
+      <summary><![CDATA[Reads a single managed object from the current stream. Can be called recursively.]]></summary>
+      <overloads>
+        <overload signature="ReadObject()">
+          <summary><![CDATA[Reads a single managed object from the current stream. Can be called recursively.]]></summary>
+          <syntax><![CDATA[public T ReadObject<T> ()]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <returns><![CDATA[The object that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadObject(ContentTypeReader)">
+          <summary><![CDATA[Reads a single managed object from the current stream. Can be called recursively.]]></summary>
+          <syntax><![CDATA[public T ReadObject<T> (
+         ContentTypeReader typeReader
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="typeReader" type="ContentTypeReader"><![CDATA[The ContentTypeReader to use to read the object.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadObject(ContentTypeReader, T)">
+          <summary><![CDATA[Reads a single managed object from the current stream. Can be called recursively.]]></summary>
+          <syntax><![CDATA[public T ReadObject<T> (
+         ContentTypeReader typeReader,
+         T existingInstance
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="typeReader" type="ContentTypeReader"><![CDATA[The ContentTypeReader to use to read the object.]]></parameter>
+            <parameter name="existingInstance" type="T"><![CDATA[An existing object to write into.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadObject(T)">
+          <summary><![CDATA[Reads a single managed object from the current stream. Can be called recursively.]]></summary>
+          <syntax><![CDATA[public T ReadObject<T> (
+         T existingInstance
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="existingInstance" type="T"><![CDATA[An existing object to write into.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadQuaternion" returnType="Quaternion">
       <summary><![CDATA[Reads a Quaternion value from the current stream.]]></summary>
       <overloads>
         <overload signature="ReadQuaternion()">
@@ -100,7 +195,113 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadSingle" returnType="void">
+    <method name="ReadRawObject" returnType="T">
+      <summary><![CDATA[Reads a single managed object from the current stream as an instance of the specified type. If you specify a base class of the actual object type, the method reads data only from the base type.]]></summary>
+      <overloads>
+        <overload signature="ReadRawObject(T)">
+          <summary><![CDATA[Reads a single managed object from the current stream as an instance of the specified type. If you specify a base class of the actual object type, the method reads data only from the base type.]]></summary>
+          <syntax><![CDATA[public T ReadRawObject<T> (
+         T existingInstance
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="existingInstance" type="T"><![CDATA[An existing object to write into.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadRawObject(ContentTypeReader)">
+          <summary><![CDATA[Reads a single managed object from the current stream as an instance of the specified type. If a base class of the actual object type is specified only data from the base type will be read.]]></summary>
+          <syntax><![CDATA[public T ReadRawObject<T> (
+         ContentTypeReader typeReader
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="typeReader" type="ContentTypeReader"><![CDATA[The ContentTypeReader to use to read the object.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object that was read.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[typeReader is null.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadRawObject()">
+          <summary><![CDATA[Reads a single managed object from the current stream as an instance of the specified type. If you specify a base class of the actual object type, this method reads data only from the base type.]]></summary>
+          <syntax><![CDATA[public T ReadRawObject<T> ()]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <returns><![CDATA[The object that was read.]]></returns>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ReadRawObject(ContentTypeReader, T)">
+          <summary><![CDATA[Reads a single managed object from the current stream as an instance of the specified type. If you specify a base class of the actual object type, this method reads data only from the base type.]]></summary>
+          <syntax><![CDATA[public T ReadRawObject<T> (
+         ContentTypeReader typeReader,
+         T existingInstance
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of object to read.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="typeReader" type="ContentTypeReader"><![CDATA[The ContentTypeReader to use to read the object.]]></parameter>
+            <parameter name="existingInstance" type="T"><![CDATA[An existing object to write into.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The object that was read.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[typeReader is null.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadSharedResource" returnType="void">
+      <summary><![CDATA[Reads a shared resource ID, and records it for subsequent fix-up.]]></summary>
+      <overloads>
+        <overload signature="ReadSharedResource()">
+          <summary><![CDATA[Reads a shared resource ID, and records it for subsequent fix-up.]]></summary>
+          <syntax><![CDATA[public void ReadSharedResource<T> (
+         Action<T> fixup
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of the shared resource.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="fixup" type="Action&lt;T&gt;"><![CDATA[The fix-up action to perform.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[fixup is null.]]></exception>
+            <exception type="ContentLoadException"><![CDATA[Error loading the resource.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ReadSingle" returnType="float">
       <summary><![CDATA[Reads a float value from the currently open stream.]]></summary>
       <overloads>
         <overload signature="ReadSingle()">
@@ -117,7 +318,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadVector2" returnType="void">
+    <method name="ReadVector2" returnType="Vector2">
       <summary><![CDATA[Reads a Vector2 value from the current stream.]]></summary>
       <overloads>
         <overload signature="ReadVector2()">
@@ -132,7 +333,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadVector3" returnType="void">
+    <method name="ReadVector3" returnType="Vector3">
       <summary><![CDATA[Reads a Vector3 value from the current stream.]]></summary>
       <overloads>
         <overload signature="ReadVector3()">
@@ -147,7 +348,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadVector4" returnType="void">
+    <method name="ReadVector4" returnType="Vector4">
       <summary><![CDATA[Reads a Vector4 value from the current stream.]]></summary>
       <overloads>
         <overload signature="ReadVector4()">

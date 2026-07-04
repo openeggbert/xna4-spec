@@ -4,7 +4,8 @@
           name="ResourceDestroyedEventArgs" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="EventArgs">
+          baseClass="EventArgs"
+          modifier="sealed">
   <summary><![CDATA[Arguments for a ResourceDestroyed event.]]></summary>
   <syntax><![CDATA[public sealed class ResourceDestroyedEventArgs : EventArgs]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of the destroyed resource.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of the destroyed resource.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -27,6 +29,7 @@
     <property name="Tag" type="Object" access="get">
       <summary><![CDATA[Gets the resource manager tag of the destroyed resource.]]></summary>
       <syntax><![CDATA[public Object Tag { get; }]]></syntax>
+      <value><![CDATA[The resource manager tag of the destroyed resource.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

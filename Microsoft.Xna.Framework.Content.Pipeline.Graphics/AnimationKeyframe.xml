@@ -4,7 +4,8 @@
           name="AnimationKeyframe" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          interfaces="IComparable&lt;AnimationKeyframe&gt;">
+          interfaces="IComparable&lt;AnimationKeyframe&gt;"
+          modifier="sealed">
   <summary><![CDATA[Provides methods and properties for managing a keyframe. A keyframe describes the position of an animation channel at a single point in time.]]></summary>
   <syntax><![CDATA[public sealed class AnimationKeyframe : IComparable<AnimationKeyframe>]]></syntax>
   <platforms>
@@ -32,6 +33,7 @@
     <property name="Time" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the time offset from the start of the animation to the position described by this keyframe.]]></summary>
       <syntax><![CDATA[public TimeSpan Time { get; }]]></syntax>
+      <value><![CDATA[Offset from the animation start time.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -40,6 +42,7 @@
     <property name="Transform" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the position described by this keyframe.]]></summary>
       <syntax><![CDATA[public Matrix Transform { get; set; }]]></syntax>
+      <value><![CDATA[Position of keyframe.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -47,7 +50,7 @@
     </property>
   </properties>
   <methods>
-    <method name="CompareTo" returnType="void">
+    <method name="CompareTo" returnType="int">
       <summary><![CDATA[Compares this instance of a keyframe to another.]]></summary>
       <overloads>
         <overload signature="CompareTo()">

@@ -4,7 +4,8 @@
           name="VertexChannelCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          interfaces="IList&lt;VertexChannel&gt;, ICollection&lt;VertexChannel&gt;, IEnumerable&lt;VertexChannel&gt;, IEnumerable">
+          interfaces="IList&lt;VertexChannel&gt;, ICollection&lt;VertexChannel&gt;, IEnumerable&lt;VertexChannel&gt;, IEnumerable"
+          modifier="sealed">
   <summary><![CDATA[Provides methods and properties for managing a list of vertex data channels.]]></summary>
   <syntax><![CDATA[public sealed class VertexChannelCollection : IList<VertexChannel>, ICollection<VertexChannel>, IEnumerable<VertexChannel>, IEnumerable]]></syntax>
   <platforms>
@@ -17,6 +18,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of vertex channels in the collection.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[Number of vertex channels.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -27,6 +29,7 @@
       <syntax><![CDATA[public VertexChannel this [
          int index
 ] { get; set; }]]></syntax>
+      <value><![CDATA[A vertex channel object.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -34,9 +37,28 @@
     </property>
   </properties>
   <methods>
-    <method name="Add" returnType="VertexChannel">
+    <method name="Add" returnType="VertexChannel&lt;ElementType&gt;">
       <summary><![CDATA[Adds a new vertex channel to the end of the collection.]]></summary>
       <overloads>
+        <overload signature="Add(String, Generic IEnumerable)">
+          <summary><![CDATA[Adds a new vertex channel to the end of the collection.]]></summary>
+          <syntax><![CDATA[public VertexChannel<ElementType> Add<ElementType> (
+         string name,
+         IEnumerable<ElementType> channelData
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="ElementType"><![CDATA[Type of the channel.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="name" type="string"><![CDATA[Name of the new channel.]]></parameter>
+            <parameter name="channelData" type="IEnumerable&lt;ElementType&gt;"><![CDATA[Initial data for the new channel. If null, the channel is filled with the default value for that type.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The newly added vertex channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
         <overload signature="Add(String, Type, IEnumerable)">
           <summary><![CDATA[Adds a new vertex channel to the end of the collection.]]></summary>
           <syntax><![CDATA[public VertexChannel Add (
@@ -103,7 +125,85 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetEnumerator" returnType="void">
+    <method name="ConvertChannelContent" returnType="VertexChannel&lt;TargetType&gt;">
+      <summary><![CDATA[Converts the channel, at the specified index, to another vector format.]]></summary>
+      <overloads>
+        <overload signature="ConvertChannelContent(Int32)">
+          <summary><![CDATA[Converts the channel, at the specified index, to another vector format.]]></summary>
+          <syntax><![CDATA[public VertexChannel<TargetType> ConvertChannelContent<TargetType> (
+         int index
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="TargetType"><![CDATA[Type of the target format. Can be one of the following: Single]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[Index of the channel to be converted.]]></parameter>
+          </parameters>
+          <returns><![CDATA[New channel in the specified format.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="ConvertChannelContent(String)">
+          <summary><![CDATA[Converts the channel, specified by name to another vector format.]]></summary>
+          <syntax><![CDATA[public VertexChannel<TargetType> ConvertChannelContent<TargetType> (
+         string name
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="TargetType"><![CDATA[Type of the target format. Can be one of the following: Single]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="name" type="string"><![CDATA[Name of the channel to be converted.]]></parameter>
+          </parameters>
+          <returns><![CDATA[New channel in the specified format.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="Get" returnType="VertexChannel&lt;T&gt;">
+      <summary><![CDATA[Gets the vertex channel with the specified index and content type.]]></summary>
+      <overloads>
+        <overload signature="Get(Int32)">
+          <summary><![CDATA[Gets the vertex channel with the specified index and content type.]]></summary>
+          <syntax><![CDATA[public VertexChannel<T> Get<T> (
+         int index
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[Index of a vertex channel.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type of a vertex channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Get(String)">
+          <summary><![CDATA[Gets the vertex channel with the specified name and content type.]]></summary>
+          <syntax><![CDATA[public VertexChannel<T> Get<T> (
+         string name
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[Type of the content.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="name" type="string"><![CDATA[Name of a vertex channel.]]></parameter>
+          </parameters>
+          <returns><![CDATA[Type of a vertex channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetEnumerator" returnType="IEnumerator&lt;VertexChannel&gt;">
       <summary><![CDATA[Gets an enumerator that iterates through the vertex channels of a collection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">
@@ -166,6 +266,27 @@
             <parameter name="name" type="string"><![CDATA[Name of the new channel.]]></parameter>
             <parameter name="elementType" type="Type"><![CDATA[Type of the new channel.]]></parameter>
             <parameter name="channelData" type="IEnumerable"><![CDATA[Initial data for the new channel. If null, it is filled with the default value.]]></parameter>
+          </parameters>
+          <returns><![CDATA[The inserted vertex channel.]]></returns>
+          <platforms>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="Insert(Int32, String, Generic IEnumerable)">
+          <summary><![CDATA[Inserts a new vertex channel at the specified position.]]></summary>
+          <syntax><![CDATA[public VertexChannel<ElementType> Insert<ElementType> (
+         int index,
+         string name,
+         IEnumerable<ElementType> channelData
+)]]></syntax>
+          <type-parameters>
+            <type-parameter name="ElementType"><![CDATA[]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="index" type="int"><![CDATA[Index for channel insertion.]]></parameter>
+            <parameter name="name" type="string"><![CDATA[Name of the new channel.]]></parameter>
+            <parameter name="channelData" type="IEnumerable&lt;ElementType&gt;"><![CDATA[Type of the new channel.]]></parameter>
           </parameters>
           <returns><![CDATA[The inserted vertex channel.]]></returns>
           <platforms>

@@ -53,7 +53,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetBlue" returnType="void">
+    <method name="GetBlue" returnType="short[]">
       <summary><![CDATA[Retrieves the blue component of the gamma ramp.]]></summary>
       <overloads>
         <overload signature="GetBlue()">
@@ -68,7 +68,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetGreen" returnType="void">
+    <method name="GetGreen" returnType="short[]">
       <summary><![CDATA[Retrieves the green component of the gamma ramp.]]></summary>
       <overloads>
         <overload signature="GetGreen()">
@@ -83,7 +83,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetRed" returnType="void">
+    <method name="GetRed" returnType="short[]">
       <summary><![CDATA[Retrieves the red component of the gamma ramp.]]></summary>
       <overloads>
         <overload signature="GetRed()">
@@ -109,6 +109,9 @@
           <parameters>
             <parameter name="value" type="short[]"><![CDATA[A 256-element integer array that represents the blue component.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The value parameter is not a 256-element integer array. The arrays used in gamma ramps must have a length of 256.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -128,6 +131,9 @@
           <parameters>
             <parameter name="value" type="short[]"><![CDATA[A 256-element integer array that represents the green component.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The value parameter is not a 256-element integer array. The arrays used in gamma ramps must have a length of 256.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -147,6 +153,9 @@
           <parameters>
             <parameter name="value" type="short[]"><![CDATA[A 256-element integer array that represents the red component.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[The value parameter is not a 256-element integer array. The arrays used in gamma ramps must have a length of 256.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

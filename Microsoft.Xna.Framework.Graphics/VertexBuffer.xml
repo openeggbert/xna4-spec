@@ -29,6 +29,11 @@
         <parameter name="usage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this vertex buffer resource. It is good practice to match the parameter with the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
         <parameter name="resourceManagementMode" type="ResourceManagementMode"><![CDATA[The resource management mode to use for this vertex buffer resource.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[sizeInBytes is less than or equal to zero. sizeInBytes must be greater than zero.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create this VertexBuffer resource on the graphics device.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -47,6 +52,11 @@
         <parameter name="sizeInBytes" type="int"><![CDATA[The number of bytes to allocate for this vertex buffer.]]></parameter>
         <parameter name="usage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this vertex buffer resource. It is good practice to match the parameter with the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[sizeInBytes is less than or equal to zero. sizeInBytes must be greater than zero.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create this VertexBuffer resource on the graphics device.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -67,6 +77,11 @@
         <parameter name="elementCount" type="int"><![CDATA[The number of elements in this vertex buffer.]]></parameter>
         <parameter name="usage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this vertex buffer resource. It is good practice to match the parameter with the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[sizeInBytes is less than or equal to zero. sizeInBytes must be greater than zero.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create this VertexBuffer resource on the graphics device.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -87,6 +102,9 @@
         <parameter name="vertexCount" type="Int32"><![CDATA[The number of vertices.]]></parameter>
         <parameter name="usage" type="BufferUsage"><![CDATA[Behavior options; it is good practice for this to match the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="OutOfMemoryException"><![CDATA[There is not enough memory to create this resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -105,6 +123,11 @@
         <parameter name="usage" type="ResourceUsage"><![CDATA[A set of options identifying the behaviors of this vertex buffer resource. It is good practice to match the parameter with the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
         <parameter name="resourceManagementMode" type="ResourceManagementMode"><![CDATA[The resource management mode to use for this vertex buffer resource.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[sizeInBytes is less than or equal to zero. sizeInBytes must be greater than zero.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create this VertexBuffer resource on the graphics device.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -125,6 +148,9 @@
         <parameter name="vertexCount" type="Int32"><![CDATA[The number of vertices.]]></parameter>
         <parameter name="usage" type="BufferUsage"><![CDATA[Behavior options; it is good practice for this to match the createOptions parameter in the GraphicsDevice constructor.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="OutOfMemoryException"><![CDATA[There is not enough memory to create this resource.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -134,6 +160,7 @@
     <property name="BufferUsage" type="BufferUsage" access="get">
       <summary><![CDATA[Gets the state of the related BufferUsage enumeration.]]></summary>
       <syntax><![CDATA[public BufferUsage BufferUsage { get; }]]></syntax>
+      <value><![CDATA[Indicates how the application uses buffer contents.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -143,6 +170,7 @@
     <property name="ResourceManagementMode" type="ResourceManagementMode" access="get">
       <summary><![CDATA[Gets the memory management mode to use for this vertex buffer resource.]]></summary>
       <syntax><![CDATA[public ResourceManagementMode ResourceManagementMode { get; }]]></syntax>
+      <value><![CDATA[The memory management mode to use for this vertex buffer resource. If this value is ResourceManagementMode.Automatic, the runtime will recreate the resource when the graphics device is reset. If this value is ResourceManagementMode.Manual, this resource should be re-initialized when the graphics device is reset.]]></value>
       <remarks><![CDATA[If this value is ResourceManagementMode.Automatic , ResourceUsage cannot be ResourceUsage.Dynamic .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -153,6 +181,7 @@
     <property name="ResourceUsage" type="ResourceUsage" access="get">
       <summary><![CDATA[Gets a set of options identifying the behaviors of this resource.]]></summary>
       <syntax><![CDATA[public ResourceUsage ResourceUsage { get; }]]></syntax>
+      <value><![CDATA[A set of options identifying the behaviors of this resource.]]></value>
       <remarks><![CDATA[If ResourceManagementMode is ResourceManagementMode.Automatic , this value cannot be ResourceUsage.Dynamic .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -163,6 +192,7 @@
     <property name="SizeInBytes" type="int" access="get">
       <summary><![CDATA[Gets the size, in bytes, of this vertex buffer.]]></summary>
       <syntax><![CDATA[public int SizeInBytes { get; }]]></syntax>
+      <value><![CDATA[The size, in bytes, of the vertex buffer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -172,6 +202,7 @@
     <property name="VertexCount" type="int" access="get">
       <summary><![CDATA[Gets the number of vertices.]]></summary>
       <syntax><![CDATA[public int VertexCount { get; }]]></syntax>
+      <value><![CDATA[The number of vertices.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -182,6 +213,7 @@
     <property name="VertexDeclaration" type="VertexDeclaration" access="get">
       <summary><![CDATA[Defines per-vertex data in a buffer.]]></summary>
       <syntax><![CDATA[public VertexDeclaration VertexDeclaration { get; }]]></syntax>
+      <value><![CDATA[Defines per-vertex data.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -228,7 +260,87 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetData" returnType="void">
+      <summary><![CDATA[Gets a copy of the vertex buffer data, specifying the start index and number of elements in the vertex buffer.]]></summary>
+      <overloads>
+        <overload signature="GetData(T , Int32, Int32)">
+          <summary><![CDATA[Gets a copy of the vertex buffer data, specifying the start index and number of elements in the vertex buffer.]]></summary>
+          <syntax><![CDATA[public void GetData<T> (
+         T[] data,
+         int startIndex,
+         int elementCount
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data in the vertex buffer.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="data" type="T[]"><![CDATA[The array into which to copy the vertex buffer data.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[Index of the element in the array at which to start copying.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[Number of elements in the array.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[data must be of sufficient length to receive the data.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[This VertexBuffer was created with a usage type of ResourceUsage.WriteOnly. Calling GetData on a resource that was created with ResourceUsage.WriteOnly is not supported.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GetData(Int32, T , Int32, Int32, Int32)">
+          <summary><![CDATA[Gets a copy of the vertex buffer data, specifying the start index, starting offset, number of elements, and size of the vertex buffer elements.]]></summary>
+          <syntax><![CDATA[public void GetData<T> (
+         int offsetInBytes,
+         T[] data,
+         int startIndex,
+         int elementCount,
+         int vertexStride
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data in the vertex buffer.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="offsetInBytes" type="int"><![CDATA[Starting offset.]]></parameter>
+            <parameter name="data" type="T[]"><![CDATA[The array into which to copy the vertex buffer data.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[Index of the element in the array at which to start copying.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[Number of elements in the array.]]></parameter>
+            <parameter name="vertexStride" type="int"><![CDATA[Size, in bytes, of an element in the vertex buffer.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[data must be of sufficient length to receive the data.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[This VertexBuffer was created with a usage type of ResourceUsage.WriteOnly. Calling GetData on a resource that was created with ResourceUsage.WriteOnly is not supported.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="GetData(T )">
+          <summary><![CDATA[Gets a copy of the vertex buffer data.]]></summary>
+          <syntax><![CDATA[public void GetData<T> (
+         T[] data
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data in the vertex buffer.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="data" type="T[]"><![CDATA[The array into which to copy the vertex buffer data.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[data must be of sufficient length to receive the data.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[This VertexBuffer was created with a usage type of ResourceUsage.WriteOnly. Calling GetData on a resource that was created with ResourceUsage.WriteOnly is not supported.]]></exception>
+          </exceptions>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -243,7 +355,140 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="SetData" returnType="void">
+      <summary><![CDATA[Sets the vertex buffer data.]]></summary>
+      <overloads>
+        <overload signature="SetData(T , Int32, Int32)">
+          <summary><![CDATA[Sets the vertex buffer data.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         T[] data,
+         int startIndex,
+         int elementCount
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data in the vertex buffer.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="data" type="T[]"><![CDATA[Array from which to copy the vertex buffer data.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[Index of the element in the array at which to start copying.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[Number of elements to copy.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[data is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: The vertex stride is larger than the vertex buffer. The vertex stride is too small for the type of data requested.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The array is not the correct size for the amount of data requested.]]></exception>
+          </exceptions>
+          <remarks><![CDATA[An InvalidOperationException is thrown if an attempt is made to modify (for example, calls to the SetData method) a resource that is currently set on a graphics device.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(Int32, T , Int32, Int32, Int32)">
+          <summary><![CDATA[Sets the vertex buffer data.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         int offsetInBytes,
+         T[] data,
+         int startIndex,
+         int elementCount,
+         int vertexStride
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data in the vertex buffer.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="offsetInBytes" type="int"><![CDATA[Starting offset.]]></parameter>
+            <parameter name="data" type="T[]"><![CDATA[Array from which to copy the vertex buffer data.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[Index of the element in the array at which to start copying.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[Number of elements to copy.]]></parameter>
+            <parameter name="vertexStride" type="int"><![CDATA[Size, in bytes, of an element in the vertex buffer.]]></parameter>
+          </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[data is null.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: The vertex stride is larger than the vertex buffer. The vertex stride is too small for the type of data requested.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The array is not the correct size for the amount of data requested.]]></exception>
+          </exceptions>
+          <remarks><![CDATA[An InvalidOperationException is thrown if an attempt is made to modify (for example, calls to the SetData method) a resource that is currently set on a graphics device.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(Int32, T , Int32, Int32, Int32, SetDataOptions)">
+          <summary><![CDATA[Sets the vertex buffer data, specifying the start index, starting offset, number of elements, and size of the vertex buffer elements.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         int offsetInBytes,
+         T[] data,
+         int startIndex,
+         int elementCount,
+         int vertexStride,
+         SetDataOptions options
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data in the vertex buffer.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="offsetInBytes" type="int"><![CDATA[Starting offset.]]></parameter>
+            <parameter name="data" type="T[]"><![CDATA[The array from which to copy the vertex buffer data.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[Index of the element in the array at which to start copying.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[Number of elements in the array.]]></parameter>
+            <parameter name="vertexStride" type="int"><![CDATA[Size, in bytes, of an element in the vertex buffer.]]></parameter>
+            <parameter name="options" type="SetDataOptions"><![CDATA[Option that specifies whether existing data in the buffer will be kept after this operation. Discard is not valid on Xbox 360, but dynamic geometry may be rendered on the Xbox 360 by using DrawUserPrimitives or DrawUserIndexedPrimitives instead of setting the data for the vertex buffer.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning In the Draw method of an Xbox 360 game, vertex buffers, index buffers, and textures should not be written using when they are intended to be used for rendering. This condition may lead to graphics corruption or crashes. To avoid this potential issue, use DrawUserPrimitives or DrawUserIndexedPrimitives as the preferred alternative to VertexBuffer.SetData for dynamic vertex generation. This is because, in cases where the size of the back buffer and depth stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. When predicated tiling has been triggered, the drawing commands contained in the Draw function are not submitted until Present is called. (Note that Draw implicitly calls Present at the end of this method.) In this case, these resources are not available for modification until the GPU is finished with presenting the entire frame.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(T , Int32, Int32, SetDataOptions)">
+          <summary><![CDATA[Sets the vertex buffer data, specifying the start index and number of elements in the vertex buffer.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         T[] data,
+         int startIndex,
+         int elementCount,
+         SetDataOptions options
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data in the vertex buffer.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="data" type="T[]"><![CDATA[The array from which to copy the vertex buffer data.]]></parameter>
+            <parameter name="startIndex" type="int"><![CDATA[Index of the element in the array at which to start copying.]]></parameter>
+            <parameter name="elementCount" type="int"><![CDATA[Number of elements in the array.]]></parameter>
+            <parameter name="options" type="SetDataOptions"><![CDATA[Option that specifies whether existing data in the buffer will be kept after this operation. Discard is not valid on Xbox 360, but dynamic geometry may be rendered on the Xbox 360 by using DrawUserPrimitives or DrawUserIndexedPrimitives instead of setting the data for the vertex buffer.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning In the Draw method of an Xbox 360 game, vertex buffers, index buffers, and textures should not be written using when they are intended to be used for rendering. This condition may lead to graphics corruption or crashes. To avoid this potential issue, use DrawUserPrimitives or DrawUserIndexedPrimitives as the preferred alternative to VertexBuffer.SetData for dynamic vertex generation. This is because, in cases where the size of the back buffer and depth stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. When predicated tiling has been triggered, the drawing commands contained in the Draw function are not submitted until Present is called. (Note that Draw implicitly calls Present at the end of this method.) In this case, these resources are not available for modification until the GPU is finished with presenting the entire frame.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+        <overload signature="SetData(T )">
+          <summary><![CDATA[Sets the vertex buffer data.]]></summary>
+          <syntax><![CDATA[public void SetData<T> (
+         T[] data
+) where T : ValueType]]></syntax>
+          <type-parameters>
+            <type-parameter name="T"><![CDATA[The type of data in the vertex buffer.]]></type-parameter>
+          </type-parameters>
+          <parameters>
+            <parameter name="data" type="T[]"><![CDATA[The array from which to copy the vertex buffer data.]]></parameter>
+          </parameters>
+          <remarks><![CDATA[Warning In the Draw method of an Xbox 360 game, vertex buffers, index buffers, and textures should not be written using SetData when they are intended to be used for rendering. This condition may lead to graphics corruption or crashes. To avoid this potential issue, use DrawUserPrimitives or DrawUserIndexedPrimitives as the preferred alternative to VertexBuffer.SetData for dynamic vertex generation. This is because, in cases where the size of the back buffer and depth stencil buffer exceed the size of the Xbox 360 10 MB of embedded memory (EDRAM), predicated tiling is utilized on this platform to compensate for the additional memory requirements. Predicated tiling is a process by which scene rendering is performed multiple times on subsections of the final render target dimensions. When predicated tiling has been triggered, the drawing commands contained in the Draw function are not submitted until Present is called. (Note that Draw implicitly calls Present at the end of this method.) In this case, these resources are not available for modification until the GPU is finished with presenting the entire frame.]]></remarks>
+          <platforms>
+            <platform>Xbox 360</platform>
+            <platform>Windows XP SP2</platform>
+            <platform>Windows Vista</platform>
+          </platforms>
+        </overload>
+      </overloads>
+    </method>
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

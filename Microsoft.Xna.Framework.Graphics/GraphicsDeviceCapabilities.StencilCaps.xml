@@ -17,6 +17,7 @@
     <property name="SupportsDecrement" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports decrementing the stencil-buffer entry, wrapping to the maximum value if the new value is less than zero.]]></summary>
       <syntax><![CDATA[public bool SupportsDecrement { get; }]]></syntax>
+      <value><![CDATA[true if the device supports decrementing the stencil-buffer entry; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -26,6 +27,7 @@
     <property name="SupportsDecrementSaturation" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports decrementing the stencil-buffer entry, clamping to zero.]]></summary>
       <syntax><![CDATA[public bool SupportsDecrementSaturation { get; }]]></syntax>
+      <value><![CDATA[true if the device supports the stencil-buffer entry, clamping to zero; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -35,6 +37,7 @@
     <property name="SupportsIncrement" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports incrementing the stencil-buffer entry, wrapping to zero if the new value exceeds the maximum value.]]></summary>
       <syntax><![CDATA[public bool SupportsIncrement { get; }]]></syntax>
+      <value><![CDATA[true if the device supports incrementing the stencil-buffer entry, wrapping to zero if the new value exceeds the maximum value; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -44,6 +47,7 @@
     <property name="SupportsIncrementSaturation" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports incrementing the stencil-buffer entry, clamping to the maximum value.]]></summary>
       <syntax><![CDATA[public bool SupportsIncrementSaturation { get; }]]></syntax>
+      <value><![CDATA[true if the device supports incrementing the stencil-buffer entry, clamping to the maximum value; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -53,6 +57,7 @@
     <property name="SupportsInvert" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports inverting the bits in the stencil-buffer entry.]]></summary>
       <syntax><![CDATA[public bool SupportsInvert { get; }]]></syntax>
+      <value><![CDATA[true if the device supports inverting the bits in the stencil-buffer entry; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -62,6 +67,7 @@
     <property name="SupportsKeep" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device does not update the entry in the stencil buffer.]]></summary>
       <syntax><![CDATA[public bool SupportsKeep { get; }]]></syntax>
+      <value><![CDATA[true if the device does not update the entry in the stencil buffer; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -71,6 +77,7 @@
     <property name="SupportsReplace" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports replacing the stencil-buffer entry with a reference value.]]></summary>
       <syntax><![CDATA[public bool SupportsReplace { get; }]]></syntax>
+      <value><![CDATA[true if the device supports replacing the stencil-buffer entry with a reference value; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -80,6 +87,7 @@
     <property name="SupportsTwoSided" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports two-sided stencil.]]></summary>
       <syntax><![CDATA[public bool SupportsTwoSided { get; }]]></syntax>
+      <value><![CDATA[true if the device supports two-sided stencil; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -89,6 +97,7 @@
     <property name="SupportsZero" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports setting the stencil-buffer entry to 0.]]></summary>
       <syntax><![CDATA[public bool SupportsZero { get; }]]></syntax>
+      <value><![CDATA[true if the device supports setting the stencil-buffer entry to 0; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -97,7 +106,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

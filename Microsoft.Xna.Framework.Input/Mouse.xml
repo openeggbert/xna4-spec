@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="Mouse" kind="class"
           namespace="Microsoft.Xna.Framework.Input"
-          assembly="Microsoft.Xna.Framework.Input">
+          assembly="Microsoft.Xna.Framework.Input"
+          modifier="static">
   <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
   <syntax><![CDATA[public static class Mouse]]></syntax>
   <platforms>
@@ -16,6 +17,7 @@
     <property name="WindowHandle" type="IntPtr" access="get;set" isStatic="true">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public static IntPtr WindowHandle { get; set; }]]></syntax>
+      <value><![CDATA[Handle to a window.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -23,7 +25,7 @@
     </property>
   </properties>
   <methods>
-    <method name="GetState" returnType="void">
+    <method name="GetState" returnType="MouseState" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="GetState()">
@@ -37,7 +39,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="SetPosition" returnType="void">
+    <method name="SetPosition" returnType="void" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="SetPosition()">

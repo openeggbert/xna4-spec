@@ -57,6 +57,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
     <property name="Identity" type="Quaternion" access="get" isStatic="true">
       <summary><![CDATA[Returns a Quaternion representing no rotation.]]></summary>
       <syntax><![CDATA[public static Quaternion Identity { get; }]]></syntax>
+      <value><![CDATA[The identity Quaternion (0,0,0,1).]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -425,7 +426,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Get the hash code of this object.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -476,7 +477,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="Length" returnType="void">
+    <method name="Length" returnType="float">
       <summary><![CDATA[Calculates the length of a Quaternion.]]></summary>
       <overloads>
         <overload signature="Length()">
@@ -491,7 +492,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="LengthSquared" returnType="void">
+    <method name="LengthSquared" returnType="float">
       <summary><![CDATA[Calculates the length squared of a Quaternion.]]></summary>
       <overloads>
         <overload signature="LengthSquared()">
@@ -790,7 +791,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retireves a string representation of the current object.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -805,7 +806,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Addition" returnType="void">
+    <method name="op_Addition" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Adds two Quaternions.]]></summary>
       <overloads>
         <overload signature="op_Addition()">
@@ -827,7 +828,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Division" returnType="void">
+    <method name="op_Division" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Divides a Quaternion by another Quaternion.]]></summary>
       <overloads>
         <overload signature="op_Division()">
@@ -849,7 +850,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two Quaternions for equality.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -871,7 +872,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compare two Quaternions for inequality.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">
@@ -932,7 +933,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Subtraction" returnType="void">
+    <method name="op_Subtraction" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Subtracts a quaternion from another quaternion.]]></summary>
       <overloads>
         <overload signature="op_Subtraction()">
@@ -954,7 +955,7 @@ public struct Quaternion : IEquatable<Quaternion>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_UnaryNegation" returnType="void">
+    <method name="op_UnaryNegation" returnType="Quaternion" isStatic="true">
       <summary><![CDATA[Flips the sign of each component of the quaternion.]]></summary>
       <overloads>
         <overload signature="op_UnaryNegation()">

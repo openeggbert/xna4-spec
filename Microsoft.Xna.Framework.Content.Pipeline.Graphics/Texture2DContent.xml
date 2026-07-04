@@ -25,6 +25,7 @@
     <property name="Mipmaps" type="MipmapChain" access="get;set">
       <summary><![CDATA[Gets or sets the collection of mipmaps containing the texture image data.]]></summary>
       <syntax><![CDATA[public MipmapChain Mipmaps { get; set; }]]></syntax>
+      <value><![CDATA[Mipmap chain containing the texture images of an object.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -43,6 +44,9 @@
           <parameters>
             <parameter name="targetProfile" type="Nullable&lt;GraphicsProfile&gt;"><![CDATA[&lt; GraphicsProfile &gt; The profile identifier that defines the capabilities of the device.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="InvalidContentException"><![CDATA[The texture is not a valid one.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows 7</platform>
             <platform>Windows Vista</platform>

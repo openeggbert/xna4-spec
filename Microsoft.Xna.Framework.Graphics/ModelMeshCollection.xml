@@ -4,7 +4,8 @@
           name="ModelMeshCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ReadOnlyCollection&lt;ModelMesh&gt;">
+          baseClass="ReadOnlyCollection&lt;ModelMesh&gt;"
+          modifier="sealed">
   <summary><![CDATA[Represents a collection of ModelMesh objects.]]></summary>
   <syntax><![CDATA[public sealed class ModelMeshCollection : ReadOnlyCollection<ModelMesh>]]></syntax>
   <platforms>
@@ -20,6 +21,10 @@
       <syntax><![CDATA[public ModelMesh this [
          string meshName
 ] { get; }]]></syntax>
+      <value><![CDATA[The ModelMesh identified by meshName.]]></value>
+      <exceptions>
+        <exception type="KeyNotFoundException"><![CDATA[meshName was not found in this ModelMeshCollection.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -28,7 +33,7 @@
     </property>
   </properties>
   <methods>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="Enumerator">
       <summary><![CDATA[Returns a ModelMeshCollection.Enumerator that can iterate through a ModelMeshCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">
@@ -44,7 +49,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TryGetValue" returnType="void">
+    <method name="TryGetValue" returnType="bool">
       <summary><![CDATA[Finds a mesh with a given name if it exists in the collection.]]></summary>
       <overloads>
         <overload signature="TryGetValue()">
@@ -58,6 +63,9 @@
             <parameter name="value" type="ModelMesh"><![CDATA[[ OutAttribute ] The mesh named meshName , if found.]]></parameter>
           </parameters>
           <returns><![CDATA[true if the named mesh is found; false otherwise.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[meshName is null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

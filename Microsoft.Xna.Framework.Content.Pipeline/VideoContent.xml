@@ -37,6 +37,7 @@
     <property name="BitsPerSecond" type="int" access="get">
       <summary><![CDATA[Gets the bit rate for this video.]]></summary>
       <syntax><![CDATA[public int BitsPerSecond { get; }]]></syntax>
+      <value><![CDATA[The number of bits per second encoded in this video.]]></value>
       <platforms>
         <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
         <platform>Xbox 360</platform>
@@ -48,6 +49,7 @@
     <property name="Duration" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the duration of this video.]]></summary>
       <syntax><![CDATA[public TimeSpan Duration { get; }]]></syntax>
+      <value><![CDATA[The length of this video.]]></value>
       <platforms>
         <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
         <platform>Xbox 360</platform>
@@ -60,6 +62,7 @@
       <summary><![CDATA[Gets or sets the file name for this video.]]></summary>
       <syntax><![CDATA[[ContentSerializerAttribute]
 public string Filename { get; set; }]]></syntax>
+      <value><![CDATA[The file name for this video.]]></value>
       <platforms>
         <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
         <platform>Xbox 360</platform>
@@ -71,6 +74,7 @@ public string Filename { get; set; }]]></syntax>
     <property name="FramesPerSecond" type="float" access="get">
       <summary><![CDATA[Gets the frame rate for this video.]]></summary>
       <syntax><![CDATA[public float FramesPerSecond { get; }]]></syntax>
+      <value><![CDATA[The number of frames per second encoded for this video.]]></value>
       <platforms>
         <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
         <platform>Xbox 360</platform>
@@ -82,6 +86,7 @@ public string Filename { get; set; }]]></syntax>
     <property name="Height" type="int" access="get">
       <summary><![CDATA[Gets the height of this video.]]></summary>
       <syntax><![CDATA[public int Height { get; }]]></syntax>
+      <value><![CDATA[The height of this video, in pixels.]]></value>
       <platforms>
         <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
         <platform>Xbox 360</platform>
@@ -94,6 +99,7 @@ public string Filename { get; set; }]]></syntax>
       <summary><![CDATA[Gets or sets the type of soundtrack accompanying the video.]]></summary>
       <syntax><![CDATA[[ContentSerializerAttribute]
 public VideoSoundtrackType VideoSoundtrackType { get; set; }]]></syntax>
+      <value><![CDATA[The soundtrack type.]]></value>
       <platforms>
         <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
         <platform>Xbox 360</platform>
@@ -105,6 +111,7 @@ public VideoSoundtrackType VideoSoundtrackType { get; set; }]]></syntax>
     <property name="Width" type="int" access="get">
       <summary><![CDATA[Gets the width of this video.]]></summary>
       <syntax><![CDATA[public int Width { get; }]]></syntax>
+      <value><![CDATA[The width of this video, in pixels.]]></value>
       <platforms>
         <platform>Build content in XNA Game Studio for Windows Phone 7</platform>
         <platform>Xbox 360</platform>

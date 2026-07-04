@@ -231,7 +231,7 @@ public struct Plane : IEquatable<Plane>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this object.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -373,7 +373,7 @@ public struct Plane : IEquatable<Plane>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a String that represents the current Plane.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -463,7 +463,7 @@ public struct Plane : IEquatable<Plane>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two instances of Plane are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -485,7 +485,7 @@ public struct Plane : IEquatable<Plane>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two instances of Plane are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

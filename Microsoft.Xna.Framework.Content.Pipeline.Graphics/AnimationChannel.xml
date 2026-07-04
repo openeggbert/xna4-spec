@@ -4,7 +4,8 @@
           name="AnimationChannel" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
           assembly="Microsoft.Xna.Framework.Content.Pipeline.Graphics"
-          interfaces="ICollection&lt;AnimationKeyframe&gt;, IEnumerable&lt;AnimationKeyframe&gt;, IEnumerable">
+          interfaces="ICollection&lt;AnimationKeyframe&gt;, IEnumerable&lt;AnimationKeyframe&gt;, IEnumerable"
+          modifier="sealed">
   <summary><![CDATA[Provides methods and properties for maintaining an animation channel. An animation channel is a collection of keyframes describing the movement of a single bone or rigid object.]]></summary>
   <syntax><![CDATA[public sealed class AnimationChannel : ICollection<AnimationKeyframe>, IEnumerable<AnimationKeyframe>, IEnumerable]]></syntax>
   <platforms>
@@ -25,6 +26,7 @@
     <property name="Count" type="int" access="get">
       <summary><![CDATA[Gets the number of keyframes in the collection.]]></summary>
       <syntax><![CDATA[public int Count { get; }]]></syntax>
+      <value><![CDATA[Number of keyframes.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -35,6 +37,7 @@
       <syntax><![CDATA[public AnimationKeyframe this [
          int index
 ] { get; }]]></syntax>
+      <value><![CDATA[Retrieved keyframe.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -42,7 +45,7 @@
     </property>
   </properties>
   <methods>
-    <method name="Add" returnType="void">
+    <method name="Add" returnType="int">
       <summary><![CDATA[Adds a new keyframe to the collection, automatically sorting the contents according to keyframe times.]]></summary>
       <overloads>
         <overload signature="Add()">
@@ -74,7 +77,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Contains" returnType="void">
+    <method name="Contains" returnType="bool">
       <summary><![CDATA[Searches the collection for the specified keyframe.]]></summary>
       <overloads>
         <overload signature="Contains()">
@@ -93,7 +96,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="IEnumerator&lt;AnimationKeyframe&gt;">
       <summary><![CDATA[Returns an enumerator that iterates through the keyframes.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">
@@ -107,7 +110,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="IndexOf" returnType="void">
+    <method name="IndexOf" returnType="int">
       <summary><![CDATA[Determines the index for the specified keyframe.]]></summary>
       <overloads>
         <overload signature="IndexOf()">
@@ -126,7 +129,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Remove" returnType="void">
+    <method name="Remove" returnType="bool">
       <summary><![CDATA[Removes the specified keyframe from the collection.]]></summary>
       <overloads>
         <overload signature="Remove()">

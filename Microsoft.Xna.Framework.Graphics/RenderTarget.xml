@@ -4,7 +4,8 @@
           name="RenderTarget" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="abstract">
   <summary><![CDATA[Represents a resource that will be written to at the end of a render pass.]]></summary>
   <syntax><![CDATA[public abstract class RenderTarget : IDisposable]]></syntax>
   <remarks><![CDATA[After a render pass the render target contains the color information of a rendered image. Render targets represent a linear area of display memory and usually resides in the display memory of the display card. Because of this, RenderTarget objects must be recreated when the device is reset.]]></remarks>
@@ -19,6 +20,7 @@
     <property name="Format" type="SurfaceFormat" access="get">
       <summary><![CDATA[Gets the format of the render target.]]></summary>
       <syntax><![CDATA[public SurfaceFormat Format { get; }]]></syntax>
+      <value><![CDATA[The format of the render target.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -28,6 +30,7 @@
     <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the graphics device associated with this render target resource.]]></summary>
       <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[The graphics device associated with this render target resource.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -37,6 +40,7 @@
     <property name="Height" type="int" access="get">
       <summary><![CDATA[Gets the height, in pixels, of this render target.]]></summary>
       <syntax><![CDATA[public int Height { get; }]]></syntax>
+      <value><![CDATA[The height, in pixels, of this render target.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -46,6 +50,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -55,6 +60,7 @@
     <property name="MultiSampleQuality" type="int" access="get">
       <summary><![CDATA[Gets the number of quality stops available for a given multisample type.]]></summary>
       <syntax><![CDATA[public int MultiSampleQuality { get; }]]></syntax>
+      <value><![CDATA[The number of quality stops available for a given multisample type.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -64,6 +70,7 @@
     <property name="MultiSampleType" type="MultiSampleType" access="get">
       <summary><![CDATA[Gets the levels of full-scene multisampling that the device can apply.]]></summary>
       <syntax><![CDATA[public MultiSampleType MultiSampleType { get; }]]></syntax>
+      <value><![CDATA[The levels of full-scene multisampling that the device can apply.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -73,6 +80,7 @@
     <property name="Name" type="string" access="get;set">
       <summary><![CDATA[Gets the name of this render-target resource.]]></summary>
       <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <value><![CDATA[The name of this render-target resource.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -82,6 +90,7 @@
     <property name="ResourceManagementMode" type="ResourceManagementMode" access="get">
       <summary><![CDATA[Gets the memory management mode for this render-target resource.]]></summary>
       <syntax><![CDATA[public ResourceManagementMode ResourceManagementMode { get; }]]></syntax>
+      <value><![CDATA[The memory management mode for this render-target resource.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -91,6 +100,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Gets the resource tags for this render target.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[The resource tags for this render target.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -100,6 +110,7 @@
     <property name="Width" type="int" access="get">
       <summary><![CDATA[Gets the width, in pixels, of this render target.]]></summary>
       <syntax><![CDATA[public int Width { get; }]]></syntax>
+      <value><![CDATA[The width, in pixels, of this render target.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -169,7 +180,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -184,7 +195,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -206,7 +217,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

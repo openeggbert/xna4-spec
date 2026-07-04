@@ -4,7 +4,8 @@
           name="Playlist" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&lt;Playlist&gt;">
+          interfaces="IEquatable&lt;Playlist&gt;"
+          modifier="sealed">
   <summary><![CDATA[Provides access to a playlist in the media library.]]></summary>
   <syntax><![CDATA[public sealed class Playlist : IEquatable<Playlist>]]></syntax>
   <remarks><![CDATA[The Playlist class provides information about a playlist, including the playlist's Name , Duration , and Songs . Obtain Playlist objects through the PlaylistCollection.Item indexer.]]></remarks>
@@ -20,6 +21,7 @@
     <property name="Duration" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the duration of the Playlist.]]></summary>
       <syntax><![CDATA[public TimeSpan Duration { get; }]]></syntax>
+      <value><![CDATA[Duration of the playlist, as a TimeSpan structure.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -30,6 +32,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -41,6 +44,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of the Playlist.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of this Playlist.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -51,6 +55,7 @@
     <property name="Songs" type="SongCollection" access="get">
       <summary><![CDATA[Gets a SongCollection that contains the songs in the playlist.]]></summary>
       <syntax><![CDATA[public SongCollection Songs { get; }]]></syntax>
+      <value><![CDATA[SongCollection containing the songs in this playlist.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -128,7 +133,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -144,7 +149,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a String representation of the Playlist.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -160,7 +165,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified Playlist instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -183,7 +188,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified Playlist instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

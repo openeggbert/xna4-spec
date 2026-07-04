@@ -26,6 +26,7 @@ public class SpriteTextureProcessor : ContentProcessor<TextureContent, TextureCo
     <property name="ColorKeyColor" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public override Color ColorKeyColor { get; }]]></syntax>
+      <value><![CDATA[Color value of the material to replace with transparent black.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -35,6 +36,7 @@ public class SpriteTextureProcessor : ContentProcessor<TextureContent, TextureCo
     <property name="ColorKeyEnabled" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public override bool ColorKeyEnabled { get; }]]></syntax>
+      <value><![CDATA[true if color keying is enabled; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -44,6 +46,7 @@ public class SpriteTextureProcessor : ContentProcessor<TextureContent, TextureCo
     <property name="GenerateMipmaps" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public override bool GenerateMipmaps { get; }]]></syntax>
+      <value><![CDATA[true if mipmap generation is enabled; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -54,6 +57,7 @@ public class SpriteTextureProcessor : ContentProcessor<TextureContent, TextureCo
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[BrowsableAttribute(false)]
 public override bool ResizeToPowerOfTwo { get; }]]></syntax>
+      <value><![CDATA[true if resizing is enabled; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -63,6 +67,7 @@ public override bool ResizeToPowerOfTwo { get; }]]></syntax>
     <property name="TextureFormat" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public override TextureProcessorOutputFormat TextureFormat { get; }]]></syntax>
+      <value><![CDATA[The texture format of the output.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -71,7 +76,7 @@ public override bool ResizeToPowerOfTwo { get; }]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Process" returnType="void">
+    <method name="Process" returnType="TextureContent">
       <summary><![CDATA[Processes a texture for use as 2D sprites or user interface components.]]></summary>
       <overloads>
         <overload signature="Process()">

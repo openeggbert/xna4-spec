@@ -78,6 +78,7 @@ public class CurveKey : IEquatable<CurveKey>, IComparable<CurveKey>]]></syntax>
     <property name="Continuity" type="CurveContinuity" access="get;set">
       <summary><![CDATA[Describes whether the segment between this point and the next point in the curve is discrete or continuous.]]></summary>
       <syntax><![CDATA[public CurveContinuity Continuity { get; set; }]]></syntax>
+      <value><![CDATA[Describes the continuity between this point and the next.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -87,6 +88,7 @@ public class CurveKey : IEquatable<CurveKey>, IComparable<CurveKey>]]></syntax>
     <property name="Position" type="float" access="get">
       <summary><![CDATA[Position of the CurveKey in the curve.]]></summary>
       <syntax><![CDATA[public float Position { get; }]]></syntax>
+      <value><![CDATA[Position of the CurveKey in the curve.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -96,6 +98,7 @@ public class CurveKey : IEquatable<CurveKey>, IComparable<CurveKey>]]></syntax>
     <property name="TangentIn" type="float" access="get;set">
       <summary><![CDATA[Describes the tangent when approaching this point from the previous point in the curve.]]></summary>
       <syntax><![CDATA[public float TangentIn { get; set; }]]></syntax>
+      <value><![CDATA[The tangent when approaching.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -105,6 +108,7 @@ public class CurveKey : IEquatable<CurveKey>, IComparable<CurveKey>]]></syntax>
     <property name="TangentOut" type="float" access="get;set">
       <summary><![CDATA[Describes the tangent when leaving this point to the next point in the curve.]]></summary>
       <syntax><![CDATA[public float TangentOut { get; set; }]]></syntax>
+      <value><![CDATA[The tangent when leaving.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -114,6 +118,7 @@ public class CurveKey : IEquatable<CurveKey>, IComparable<CurveKey>]]></syntax>
     <property name="Value" type="float" access="get;set">
       <summary><![CDATA[Describes the value of this point.]]></summary>
       <syntax><![CDATA[public float Value { get; set; }]]></syntax>
+      <value><![CDATA[The value of the point.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -122,7 +127,7 @@ public class CurveKey : IEquatable<CurveKey>, IComparable<CurveKey>]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="Clone" returnType="void">
+    <method name="Clone" returnType="CurveKey">
       <summary><![CDATA[Creates a copy of the CurveKey.]]></summary>
       <overloads>
         <overload signature="Clone()">
@@ -137,7 +142,7 @@ public class CurveKey : IEquatable<CurveKey>, IComparable<CurveKey>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="CompareTo" returnType="void">
+    <method name="CompareTo" returnType="int">
       <summary><![CDATA[Compares this instance to another CurveKey and returns an indication of their relative values.]]></summary>
       <overloads>
         <overload signature="CompareTo()">
@@ -192,7 +197,7 @@ public class CurveKey : IEquatable<CurveKey>, IComparable<CurveKey>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Returns the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -207,7 +212,7 @@ public class CurveKey : IEquatable<CurveKey>, IComparable<CurveKey>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two CurveKey instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -229,7 +234,7 @@ public class CurveKey : IEquatable<CurveKey>, IComparable<CurveKey>]]></syntax>
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether two CurveKey instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

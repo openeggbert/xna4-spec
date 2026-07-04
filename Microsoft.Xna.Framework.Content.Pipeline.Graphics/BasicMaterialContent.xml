@@ -25,6 +25,7 @@
     <property name="Alpha" type="Nullable&lt;float&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the alpha property.]]></summary>
       <syntax><![CDATA[public Nullable<float> Alpha { get; set; }]]></syntax>
+      <value><![CDATA[Current alpha value or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -33,6 +34,7 @@
     <property name="DiffuseColor" type="Nullable&lt;Vector3&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the diffuse color property.]]></summary>
       <syntax><![CDATA[public Nullable<Vector3> DiffuseColor { get; set; }]]></syntax>
+      <value><![CDATA[Current diffuse color value or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -41,6 +43,7 @@
     <property name="EmissiveColor" type="Nullable&lt;Vector3&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the emissive color property.]]></summary>
       <syntax><![CDATA[public Nullable<Vector3> EmissiveColor { get; set; }]]></syntax>
+      <value><![CDATA[Current diffuse color value or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -49,6 +52,7 @@
     <property name="SpecularColor" type="Nullable&lt;Vector3&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the specular color property.]]></summary>
       <syntax><![CDATA[public Nullable<Vector3> SpecularColor { get; set; }]]></syntax>
+      <value><![CDATA[Current specular color value or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -57,6 +61,7 @@
     <property name="SpecularPower" type="Nullable&lt;float&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the specular power property.]]></summary>
       <syntax><![CDATA[public Nullable<float> SpecularPower { get; set; }]]></syntax>
+      <value><![CDATA[Current specular power value or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -65,6 +70,7 @@
     <property name="Texture" type="ExternalReference&lt;TextureContent&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the diffuse texture property.]]></summary>
       <syntax><![CDATA[public ExternalReference<TextureContent> Texture { get; set; }]]></syntax>
+      <value><![CDATA[Current diffuse texture value or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -73,6 +79,7 @@
     <property name="VertexColorEnabled" type="Nullable&lt;bool&gt;" access="get;set">
       <summary><![CDATA[Gets or sets the vertex color property.]]></summary>
       <syntax><![CDATA[public Nullable<bool> VertexColorEnabled { get; set; }]]></syntax>
+      <value><![CDATA[Current vertex color or the value to be set.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

@@ -35,6 +35,7 @@
     <property name="BoneTransforms" type="ReadOnlyCollection&lt;Matrix&gt;" access="get">
       <summary><![CDATA[Gets the current position of the bones at the time specified by CurrentPosition. The positions are in local bone space relative to their parent bones.]]></summary>
       <syntax><![CDATA[public ReadOnlyCollection<Matrix> BoneTransforms { get; }]]></syntax>
+      <value><![CDATA[Collection of bone transforms.]]></value>
       <remarks><![CDATA[You can pass this matrix list to AvatarRenderer.Draw using the bones parameter. This allows the developer to modify the position of one or more avatar bones before rendering the model.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -46,6 +47,7 @@
     <property name="CurrentPosition" type="TimeSpan" access="get;set">
       <summary><![CDATA[Gets or sets the current time position in the animation.]]></summary>
       <syntax><![CDATA[public TimeSpan CurrentPosition { get; set; }]]></syntax>
+      <value><![CDATA[Current time position of the animation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -56,6 +58,7 @@
     <property name="Expression" type="AvatarExpression" access="get">
       <summary><![CDATA[Gets the expression of the related animation at the current time position.]]></summary>
       <syntax><![CDATA[public AvatarExpression Expression { get; }]]></syntax>
+      <value><![CDATA[Expression of the avatar.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -66,6 +69,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets the disposed state of the avatar animation.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the animation has been disposed; otherwise, false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -76,6 +80,7 @@
     <property name="Length" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the length of the current animation.]]></summary>
       <syntax><![CDATA[public TimeSpan Length { get; }]]></syntax>
+      <value><![CDATA[Length of the animation.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

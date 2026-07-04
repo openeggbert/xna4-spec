@@ -20,7 +20,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="GamerCollectionEnumerator">
       <summary><![CDATA[Returns a strongly typed GamerCollection.GamerCollectionEnumerator Generic Structure that can iterate through a GamerCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">

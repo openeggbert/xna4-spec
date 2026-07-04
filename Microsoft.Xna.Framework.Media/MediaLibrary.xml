@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="MediaLibrary" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
-          assembly="Microsoft.Xna.Framework.Media">
+          assembly="Microsoft.Xna.Framework.Media"
+          modifier="sealed">
   <summary><![CDATA[Provides access to songs, playlists, and pictures in the device's media library.]]></summary>
   <syntax><![CDATA[public sealed class MediaLibrary]]></syntax>
   <remarks><![CDATA[MediaLibrary provides the following properties that return media collections: Albums , Artists , Genres , Pictures , Playlists , and Songs . Each property returns a collection object that can be enumerated and indexed. The collection object represents all media of that type in the device's media library. The media collections do not retrieve or instantiate all media objects immediately. Instead, when needed, you can use the collections later to retrieve individual media objects, such as Song and Artist objects. On Windows, MediaLibrary cannot find any songs unless the Windows Media Player previously found songs on the system. That means that Windows Media Player must first search the system for music before any songs can be accessed through MediaLibrary .]]></remarks>
@@ -44,6 +45,7 @@
     <property name="Albums" type="AlbumCollection" access="get">
       <summary><![CDATA[Gets the AlbumCollection that contains all albums in the media library.]]></summary>
       <syntax><![CDATA[public AlbumCollection Albums { get; }]]></syntax>
+      <value><![CDATA[AlbumCollection that contains all albums in the device's media library.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -54,6 +56,7 @@
     <property name="Artists" type="ArtistCollection" access="get">
       <summary><![CDATA[Gets the ArtistCollection that contains all artists in the media library.]]></summary>
       <syntax><![CDATA[public ArtistCollection Artists { get; }]]></syntax>
+      <value><![CDATA[ArtistCollection that contains all artists in the device's media library.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -64,6 +67,7 @@
     <property name="Genres" type="GenreCollection" access="get">
       <summary><![CDATA[Gets the GenreCollection that contains all genres in the media library.]]></summary>
       <syntax><![CDATA[public GenreCollection Genres { get; }]]></syntax>
+      <value><![CDATA[GenreCollection that contains all genres in the device's media library.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -74,6 +78,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -85,6 +90,7 @@
     <property name="MediaSource" type="MediaSource" access="get">
       <summary><![CDATA[Gets the MediaSource with which this media library was constructed.]]></summary>
       <syntax><![CDATA[public MediaSource MediaSource { get; }]]></syntax>
+      <value><![CDATA[The MediaSource with which this media library was constructed.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -95,6 +101,7 @@
     <property name="Pictures" type="PictureCollection" access="get">
       <summary><![CDATA[Gets the PictureCollection that contains all pictures in the media library.]]></summary>
       <syntax><![CDATA[public PictureCollection Pictures { get; }]]></syntax>
+      <value><![CDATA[PictureCollection that contains all pictures in the device's media library.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -105,6 +112,7 @@
     <property name="Playlists" type="PlaylistCollection" access="get">
       <summary><![CDATA[Gets the PlaylistCollection that contains all playlists in the media library.]]></summary>
       <syntax><![CDATA[public PlaylistCollection Playlists { get; }]]></syntax>
+      <value><![CDATA[PlaylistCollection that contains all playlists in the device's media library.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -115,6 +123,7 @@
     <property name="RootPictureAlbum" type="PictureAlbum" access="get">
       <summary><![CDATA[Gets the root PictureAlbum for all pictures in the media library.]]></summary>
       <syntax><![CDATA[public PictureAlbum RootPictureAlbum { get; }]]></syntax>
+      <value><![CDATA[The root PictureAlbum for all pictures in the device's media library.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -125,6 +134,7 @@
     <property name="SavedPictures" type="PictureCollection" access="get">
       <summary><![CDATA[Returns the collection of all saved pictures in the device's media library.]]></summary>
       <syntax><![CDATA[public PictureCollection SavedPictures { get; }]]></syntax>
+      <value><![CDATA[PictureCollection object that contains the collection of all saved pictures in the media library.]]></value>
       <remarks><![CDATA[SavedPictures is only supported on Windows Phone, and returns an empty PictureCollection on Windows and Xbox 360.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -137,6 +147,7 @@
     <property name="Songs" type="SongCollection" access="get">
       <summary><![CDATA[Gets the SongCollection that contains all songs in the media library.]]></summary>
       <syntax><![CDATA[public SongCollection Songs { get; }]]></syntax>
+      <value><![CDATA[SongCollection that contains all songs in the device's media library.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -178,7 +189,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetPictureFromToken" returnType="void">
+    <method name="GetPictureFromToken" returnType="Picture">
       <summary><![CDATA[Retrieves a picture from the device's media library based on a picture token.]]></summary>
       <overloads>
         <overload signature="GetPictureFromToken()">

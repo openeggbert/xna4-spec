@@ -17,6 +17,7 @@
     <property name="SupportsMagnifyAnisotropic" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates that the device supports per-stage anisotropic filtering for magnifying textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMagnifyAnisotropic { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage anisotropic filtering for magnifying textures; false otherwise.]]></value>
       <remarks><![CDATA[Anisotropic filters compensate for distortion caused by the difference in angle between the texture polygon and the plane of the screen. The anisotropic magnification filter is represented by the TextureFilter.Anisotropic enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -27,6 +28,7 @@
     <property name="SupportsMagnifyGaussianQuad" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports per-stage Gaussian quad filtering for magnifying textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMagnifyGaussianQuad { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage Gaussian quad filtering for magnifying textures; false otherwise.]]></value>
       <remarks><![CDATA[The Gaussian quad filter is represented by the TextureFilter.GaussianQuad enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -37,6 +39,7 @@
     <property name="SupportsMagnifyLinear" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates that the device supports per-stage bilinear interpolation filtering for magnifying textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMagnifyLinear { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage bilinear interpolation filtering for magnifying textures; false otherwise.]]></value>
       <remarks><![CDATA[The bilinear interpolation mipmapping filter is represented by the TextureFilter.Linear enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -47,6 +50,7 @@
     <property name="SupportsMagnifyPoint" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates that the device supports per-stage point-sample filtering for magnifying textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMagnifyPoint { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage point-sample filtering for magnifying textures; false otherwise.]]></value>
       <remarks><![CDATA[The point-sample magnification filter is represented by the TextureFilter.Point enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -57,6 +61,7 @@
     <property name="SupportsMagnifyPyramidalQuad" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates that the device supports per-stage pyramidal sample filtering for magnifying textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMagnifyPyramidalQuad { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage pyramidal sample filtering for magnifying textures; false otherwise.]]></value>
       <remarks><![CDATA[The pyramidal sample filter is represented by the TextureFilter.PyramidalQuad enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -67,6 +72,7 @@
     <property name="SupportsMinifyAnisotropic" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates that the device supports per-stage anisotropic filtering for minifying textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMinifyAnisotropic { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage anisotropic filtering for minifying textures; false otherwise.]]></value>
       <remarks><![CDATA[The anisotropic minification filter is represented by the TextureFilter.Anisotropic enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -77,6 +83,7 @@
     <property name="SupportsMinifyGaussianQuad" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the device supports per-stage Gaussian quad filtering for minifying textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMinifyGaussianQuad { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage Gaussian quad filtering for magnifying textures; false otherwise.]]></value>
       <remarks><![CDATA[The Gaussian quad filter is represented by the TextureFilter.GaussianQuad enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -87,6 +94,7 @@
     <property name="SupportsMinifyLinear" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates that the device supports per-stage bilinear interpolation filtering for minifying textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMinifyLinear { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage bilinear interpolation filtering for minifying textures; false otherwise.]]></value>
       <remarks><![CDATA[The linear minification filter is represented by the TextureFilter.Linear enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -97,6 +105,7 @@
     <property name="SupportsMinifyPoint" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the device supports per-stage point-sample filtering for minifying textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMinifyPoint { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage point-sample filtering for minifying textures; false otherwise.]]></value>
       <remarks><![CDATA[The point-sample minification filter is represented by the TextureFilter.Point enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -107,6 +116,7 @@
     <property name="SupportsMinifyPyramidalQuad" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates that the device supports per-stage pyramidal sample filtering for minifying textures.]]></summary>
       <syntax><![CDATA[public bool SupportsMinifyPyramidalQuad { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage pyramidal sample filtering for minifying textures; false otherwise.]]></value>
       <remarks><![CDATA[The pyramidal sample filter is represented by the TextureFilter.PyramidalQuad enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -117,6 +127,7 @@
     <property name="SupportsMipMapLinear" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates that the device supports per-stage trilinear interpolation filtering for mipmaps.]]></summary>
       <syntax><![CDATA[public bool SupportsMipMapLinear { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage trilinear interpolation filtering for mipmaps; false otherwise.]]></value>
       <remarks><![CDATA[The bilinear interpolation mipmapping filter is represented by the TextureFilter.Linear enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -127,6 +138,7 @@
     <property name="SupportsMipMapPoint" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates that the device supports per-stage point-sample filtering for mipmaps.]]></summary>
       <syntax><![CDATA[public bool SupportsMipMapPoint { get; }]]></syntax>
+      <value><![CDATA[true if the device supports per-stage point-sample filtering for mipmaps; false otherwise.]]></value>
       <remarks><![CDATA[The point-sample mipmapping filter is represented by the TextureFilter.Point enumerated value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -136,7 +148,7 @@
     </property>
   </properties>
   <methods>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

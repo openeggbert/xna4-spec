@@ -4,7 +4,8 @@
           name="NetworkSession" kind="class"
           namespace="Microsoft.Xna.Framework.Net"
           assembly="Microsoft.Xna.Framework.Net"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="sealed">
   <summary><![CDATA[Represents a multiplayer game session.]]></summary>
   <syntax><![CDATA[public sealed class NetworkSession : IDisposable]]></syntax>
   <remarks><![CDATA[An XNA Framework game can only initiate a single multiplayer session at a time. To start a multiplayer session, make a call to Create or use Find or BeginFind to search for and join an existing network session.]]></remarks>
@@ -20,6 +21,7 @@
     <property name="AllGamers" type="GamerCollection&lt;NetworkGamer&gt;" access="get">
       <summary><![CDATA[Gets the collection of gamers currently in the session. This is the union of everything in LocalGamers and RemoteGamers.]]></summary>
       <syntax><![CDATA[public GamerCollection<NetworkGamer> AllGamers { get; }]]></syntax>
+      <value><![CDATA[Collection of gamers in the session.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -30,6 +32,11 @@
     <property name="AllowHostMigration" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets whether host migration is allowed. This can be read by any machine in the session, but can only be changed by the host. The default value is false indicating that host migration is disabled.]]></summary>
       <syntax><![CDATA[public bool AllowHostMigration { get; set; }]]></syntax>
+      <value><![CDATA[true to enable host migration; false to disable host migration. The default value is false.]]></value>
+      <exceptions>
+        <exception type="InvalidOperationException"><![CDATA[This session is not the host, and cannot change the value of AllowHostMigration.]]></exception>
+        <exception type="ObjectDisposedException"><![CDATA[The session has been disposed.]]></exception>
+      </exceptions>
       <remarks><![CDATA[When host migration is disabled (the default state), the session will be ended if the host leaves the game or there is a network disconnect. If the host enables this setting, after they leave or disconnect a new host will automatically be selected from the machines remaining in the session, and the HostChanged event will be raised to notify you of the change. Note that game simulation state is not automatically transferred during the migration process. It is usually relatively easy for peer-to-peer games to support host migration, but rather more difficult to make this work in a client/server architecture.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -41,6 +48,12 @@
     <property name="AllowJoinInProgress" type="bool" access="get;set">
       <summary><![CDATA[Gets or sets whether join-in-progress is allowed. If the host enables this setting, new machines will be able to join at any time. The default value is false, indicating that join-in-progress is disabled. AllowJoinInProgress can be read by any machine in the session, but can only be changed by the host.]]></summary>
       <syntax><![CDATA[public bool AllowJoinInProgress { get; set; }]]></syntax>
+      <value><![CDATA[true to enable join-in-progress, false otherwise. The default value is false.]]></value>
+      <exceptions>
+        <exception type="NotSupportedException"><![CDATA[Join-in-progress is not supported for multiplayer sessions of type NetworkSessionType.Ranked.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[This session is not the host, and cannot change the value of AllowJoinInProgress.]]></exception>
+        <exception type="ObjectDisposedException"><![CDATA[The session has been disposed.]]></exception>
+      </exceptions>
       <remarks><![CDATA[When join-in-progress is disabled (the default state), new machines are only able to join while the session is in the lobby. The session will not be visible to matchmaking queries while in the actual gameplay state.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -52,6 +65,7 @@
     <property name="BytesPerSecondReceived" type="int" access="get">
       <summary><![CDATA[Gets a performance counter recording the amount of data being received from the network.]]></summary>
       <syntax><![CDATA[public int BytesPerSecondReceived { get; }]]></syntax>
+      <value><![CDATA[A performance counter recording the amount of data being received from the network.]]></value>
       <remarks><![CDATA[Developers can use this to monitor how much network bandwidth their game is using.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -63,6 +77,7 @@
     <property name="BytesPerSecondSent" type="int" access="get">
       <summary><![CDATA[Gets a performance counter recording the amount of data being sent over the network.]]></summary>
       <syntax><![CDATA[public int BytesPerSecondSent { get; }]]></syntax>
+      <value><![CDATA[A performance counter recording the amount of data being sent over the network.]]></value>
       <remarks><![CDATA[Developers can use this to monitor how much network bandwidth their game is using.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -74,6 +89,7 @@
     <property name="Host" type="NetworkGamer" access="get">
       <summary><![CDATA[Gets the current host of the multiplayer session.]]></summary>
       <syntax><![CDATA[public NetworkGamer Host { get; }]]></syntax>
+      <value><![CDATA[The gamer currently hosting the session.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -84,6 +100,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -94,6 +111,7 @@
     <property name="IsEveryoneReady" type="bool" access="get">
       <summary><![CDATA[Determines whether all gamers are ready to enter the session.]]></summary>
       <syntax><![CDATA[public bool IsEveryoneReady { get; }]]></syntax>
+      <value><![CDATA[true if all gamers are ready to leave the lobby screen and begin gameplay. This state is indicated by a setting of true for the IsReady property.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -104,6 +122,7 @@
     <property name="IsHost" type="bool" access="get">
       <summary><![CDATA[Determines whether this machine is the session host.]]></summary>
       <syntax><![CDATA[public bool IsHost { get; }]]></syntax>
+      <value><![CDATA[true if this machine is the session host; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -114,6 +133,7 @@
     <property name="LocalGamers" type="GamerCollection&lt;LocalNetworkGamer&gt;" access="get">
       <summary><![CDATA[Get the collection of local gamers for a multiplayer session.]]></summary>
       <syntax><![CDATA[public GamerCollection<LocalNetworkGamer> LocalGamers { get; }]]></syntax>
+      <value><![CDATA[Collection of local gamers of a network session. For a complete collection of gamers, access the AllGamers property.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -124,6 +144,12 @@
     <property name="MaxGamers" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the maximum number of players able to join this multiplayer session. The Zune platform supports up to eight players. All other platforms support up to 31 players.]]></summary>
       <syntax><![CDATA[public int MaxGamers { get; set; }]]></syntax>
+      <value><![CDATA[Maximum number of players supported by the multiplayer session. Only the host can modify this value.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[MaxGamers must be between 2 and 31 players for Windows-based and Xbox 360–based games, and between 2 and 8 for Zune-based games.]]></exception>
+        <exception type="ObjectDisposedException"><![CDATA[This NetworkSession is disposed.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[This NetworkSession is not the host; therefore, it cannot set the property MaxGamers.]]></exception>
+      </exceptions>
       <remarks><![CDATA[Zune Specific Information For Zune-based games, MaxGamers must be between 2 and 8, where 8 is the maximum number of players supported in the session. Windows Specific Information For Windows-based games, MaxGamers must be between 2 and 31, where 31 is the maximum number of players supported in a session. Xbox 360 Specific Information For Xbox 360–based games, MaxGamers must be between 2 and 31, where 31 is the maximum number of players supported in a session.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -135,6 +161,7 @@
     <property name="PreviousGamers" type="GamerCollection&lt;NetworkGamer&gt;" access="get">
       <summary><![CDATA[A collection of previous gamers in the network session.]]></summary>
       <syntax><![CDATA[public GamerCollection<NetworkGamer> PreviousGamers { get; }]]></syntax>
+      <value><![CDATA[A collection of gamers who once belonged to the current network session, but have since left.]]></value>
       <remarks><![CDATA[The number of gamers in the PreviousGamers collection will be equal to or less than the value of MaxPreviousGamers . You can use this collection to include previous gamers in Guide calls that take a Gamer parameter.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -146,6 +173,12 @@
     <property name="PrivateGamerSlots" type="int" access="get;set">
       <summary><![CDATA[Gets or sets the number of private slots reserved for gamers who join using an invitation.]]></summary>
       <syntax><![CDATA[public int PrivateGamerSlots { get; set; }]]></syntax>
+      <value><![CDATA[Number of private slots.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[There are not enough slots available to support this new value.]]></exception>
+        <exception type="ObjectDisposedException"><![CDATA[This NetworkSession is disposed.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[This NetworkSession is not the host, therefore it cannot set the property PrivateGamerSlots.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -156,6 +189,7 @@
     <property name="RemoteGamers" type="GamerCollection&lt;NetworkGamer&gt;" access="get">
       <summary><![CDATA[Gets the collection of remote gamers for a multiplayer session.]]></summary>
       <syntax><![CDATA[public GamerCollection<NetworkGamer> RemoteGamers { get; }]]></syntax>
+      <value><![CDATA[Collection of remote gamers of a network session. For a complete collection of gamers, access the AllGamers property.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -166,6 +200,7 @@
     <property name="SessionProperties" type="NetworkSessionProperties" access="get">
       <summary><![CDATA[Gets any custom properties that have been attached to the session.]]></summary>
       <syntax><![CDATA[public NetworkSessionProperties SessionProperties { get; }]]></syntax>
+      <value><![CDATA[Any custom properties that have been attached to the session.]]></value>
       <remarks><![CDATA[This NetworkSessionProperties is automatically synchronized across all the machines in the session, and can only be modified by the host. It can be used to filter sessions during matchmaking operations by passing in a set of required property values to Find or BeginFind .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -177,6 +212,7 @@
     <property name="SessionState" type="NetworkSessionState" access="get">
       <summary><![CDATA[Gets the current state of a multiplayer session.]]></summary>
       <syntax><![CDATA[public NetworkSessionState SessionState { get; }]]></syntax>
+      <value><![CDATA[Current state of the session.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -187,6 +223,7 @@
     <property name="SessionType" type="NetworkSessionType" access="get">
       <summary><![CDATA[Gets the current multiplayer session type.]]></summary>
       <syntax><![CDATA[public NetworkSessionType SessionType { get; }]]></syntax>
+      <value><![CDATA[The type of the multiplayer session.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -197,6 +234,7 @@
     <property name="SimulatedLatency" type="TimeSpan" access="get;set">
       <summary><![CDATA[Gets or sets the amount of simulated network latency.]]></summary>
       <syntax><![CDATA[public TimeSpan SimulatedLatency { get; set; }]]></syntax>
+      <value><![CDATA[The amount of simulated network latency, in milliseconds. The default value is 0.]]></value>
       <remarks><![CDATA[SimulatedLatency is useful if you are testing a system link game on a fast local network and want to make sure it will also work correctly over the Internet. Xbox games are typically expected to work with up to 200 milliseconds of latency. The latency simulation is applied on the sending machine, so if you set this property differently on each machine, only outgoing packets will be affected by the local value of the property. Latency introduced through this setting is not included in the RoundtripTime property, which always just reports the physical network latency. Packets sent without any ordering guarantee will be given a random latency normally distributed around the specified value, introducing packet reordering as well as raw latency. Packets sent using SendDataOptions.InOrder will be delayed without reordering. Warning The packet loss and latency simulation in the XNA Framework applies to messages that are sent to all players, including local players. In game designs where data to local players is sent and received using the network session SendData methods, local players will experience the set values for simulated packet loss and latency. To work around this issue, avoid broadcasting messages to all users and set SimulatedPacketLoss and SimulatedLatency on a per-send basis.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -208,6 +246,7 @@
     <property name="SimulatedPacketLoss" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the amount of simulated packet loss.]]></summary>
       <syntax><![CDATA[public float SimulatedPacketLoss { get; set; }]]></syntax>
+      <value><![CDATA[The amount of simulated packet loss, expressed as any fractional probability in the range 0 to 1, with 1 causing 100% packet loss. The default value is zero.]]></value>
       <remarks><![CDATA[SimulatedPacketLoss is useful if you are testing a system link game on a fast local network and want to make sure it will also work correctly over the Internet. Xbox games are typically expected to work with up to 0.1 (10%) packet loss. The packet loss simulation is applied on the sending machine, so if you set this property differently on each machine, only outgoing packets will be affected by the local value of the property. Packets sent using SendDataOptions.Reliable are not affected by this setting. Warning The packet loss and latency simulation in the XNA Framework applies to messages that are sent to all players, including local players. In game designs where data to local players is sent and received using the network session SendData methods, local players will experience the set values for simulated packet loss and latency. To work around this issue, avoid broadcasting messages to all users and set SimulatedPacketLoss and SimulatedLatency on a per-send basis.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -258,6 +297,11 @@
             <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: maxGamers is not in range of gamers that are supported in a network session. The XNA Framework supports multiplayer sessions between 2 and 31 players in a session for a Windows- or an Xbox 360-based game. On Zune, the XNA Framework supports a multiplayer session between 2 and 8 players in a session. privateGamerSlots is less than 0 or greater than maximumGamers.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: A different session already exists. There can only be one NetworkSession or AvailableNetworkSessionCollection in use at a time. You must dispose any previous session before you create a new one. One of the following methods has been called, but has not yet returned results: NetworkSession.Create NetworkSession.BeginCreate NetworkSession.Find NetworkSession.BeginFind NetworkSession.Join NetworkSession.BeginJoin Note that you must wait for any of these methods to return before you can create a new network session. To support this, you may use the asynchronous methods BeginCreate, BeginFind, BeginJoin, and the corresponding EndCreate, EndFind, EndJoin methods to detect when the operation is complete.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[This NetworkSession is disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Call EndCreate to get results of the call to BeginCreate . Zune Specific Information For Zune-based games, maxGamers must be between 2 and 8; 8 is the maximum number of players supported in the session. Windows Specific Information For Windows-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session. Xbox 360 Specific Information For Xbox 360-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -287,6 +331,11 @@
             <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method. Call EndCreate to access these results.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: maxGamers is not in range of gamers that are supported in a network session. The XNA Framework supports multiplayer sessions between 2 and 31 players in a session for a Windows- or an Xbox 360-based game. On Zune, the XNA Framework supports a multiplayer session between 2 and 8 players in a session. privateGamerSlots is less than 0 or greater than maximumGamers.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: A different session already exists. There can only be one NetworkSession or AvailableNetworkSessionCollection in use at a time. You must dispose any previous session before you create a new one. One of the following methods has been called, but has not yet returned results: NetworkSession.Create NetworkSession.BeginCreate NetworkSession.Find NetworkSession.BeginFind NetworkSession.Join NetworkSession.BeginJoin Note that you must wait for any of these methods to return before you can create a new network session. To support this, you may use the asynchronous methods BeginCreate, BeginFind, BeginJoin, and the corresponding EndCreate, EndFind, EndJoin methods to detect when the operation is complete.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[This NetworkSession is disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Call EndCreate to get results of the call to BeginCreate . Zune Specific Information For Zune-based games, maxGamers must be between 2 and 8; 8 is the maximum number of players supported in the session. Windows Specific Information For Windows-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session. Xbox 360 Specific Information For Xbox 360-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -316,6 +365,11 @@
             <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: maxGamers is not in range of gamers that are supported in a network session. The XNA Framework supports multiplayer sessions between 2 and 31 players in a session for a Windows- or an Xbox 360-based game. On Zune, the XNA Framework supports a multiplayer session between 2 and 8 players in a session. privateGamerSlots is less than 0 or greater than maximumGamers.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: A different session already exists. There can only be one NetworkSession or AvailableNetworkSessionCollection in use at a time. You must dispose any previous session before you create a new one. One of the following methods has been called, but has not yet returned results: NetworkSession.Create NetworkSession.BeginCreate NetworkSession.Find NetworkSession.BeginFind NetworkSession.Join NetworkSession.BeginJoin Note that you must wait for any of these methods to return before you can create a new network session. To support this, you may use the asynchronous methods BeginCreate, BeginFind, BeginJoin, and the corresponding EndCreate, EndFind, EndJoin methods to detect when the operation is complete.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[This NetworkSession is disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Call EndCreate to get results of the call to BeginCreate . Zune Specific Information For Zune-based games, maxGamers must be between 2 and 8; 8 is the maximum number of players supported in the session. Windows Specific Information For Windows-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session. Xbox 360 Specific Information For Xbox 360-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -346,6 +400,10 @@
             <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[BeginFind cannot be used from NetworkSession objects of session type NetworkSessionType.Local.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[maxLocalGamers must be between 1 and 4.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -370,6 +428,10 @@
             <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[BeginFind cannot be used from NetworkSession objects of session type NetworkSessionType.Local.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[maxLocalGamers must be between 1 and 4.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -379,7 +441,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="BeginJoin" returnType="void">
+    <method name="BeginJoin" returnType="IAsyncResult" isStatic="true">
       <summary><![CDATA[Starts a join operation for the specified multiplayer session.]]></summary>
       <overloads>
         <overload signature="BeginJoin()">
@@ -395,6 +457,10 @@
             <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method. Call EndJoin to access these results.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[availableSession is null.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[availableSession is disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -420,6 +486,9 @@
             <parameter name="asyncState" type="Object"><![CDATA[State of the asynchronous operation.]]></parameter>
           </parameters>
           <returns><![CDATA[An IAsyncResult used to track the progress of the method.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[maxLocalGamers must be between 1 and 4.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Note When someone accepts an invitation for Xbox LIVE Community Games, but the game is not installed already on his or her computer, the invited player will be taken to the game offer. The offer enables the invited player to download the game and accept the invitation to start the game. For creator games still waiting to pass peer review, the game invitation will be sent over the Xbox LIVE service to the other player. If the game is not installed the invited player will be prompted with a message indicating that he or she can get the game from the game creator.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -467,6 +536,11 @@
             <parameter name="maxGamers" type="int"><![CDATA[Maximum number of players allowed in this network session. For Windows- or Xbox 360-based games, this value must be between 2 and 31; 31 is the maximum number of players supported in a session. For Zune-based games, this value must be between 2 and 8; 8 is the maximum number of players supported in the session.]]></parameter>
           </parameters>
           <returns><![CDATA[The newly hosted session.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: maxGamers is not in range of gamers that are supported in a network session. The XNA Framework supports multiplayer sessions between 2 and 31 players in a session for a Windows- or an Xbox 360-based game. On Zune, the XNA Framework supports a multiplayer session between 2 and 8 players in a session. privateGamerSlots is less than 0 or greater than maximumGamers.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: A different session already exists. There can only be one NetworkSession or AvailableNetworkSessionCollection in use at a time. You must dispose any previous session before you create a new one. One of the following methods has been called, but has not yet returned results: NetworkSession.Create NetworkSession.BeginCreate NetworkSession.Find NetworkSession.BeginFind NetworkSession.Join NetworkSession.BeginJoin Note that you must wait for any of these methods to return before you can create a new network session. To support this, you may use the asynchronous methods BeginCreate, BeginFind, BeginJoin, and the corresponding EndCreate, EndFind, EndJoin methods to detect when the operation is complete.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[This NetworkSession is disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Zune Specific Information For Zune-based games, maxGamers must be between 2 and 8; 8 is the maximum number of players supported in the session. Windows Specific Information For Windows-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session. Xbox 360 Specific Information For Xbox 360-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -492,6 +566,11 @@
             <parameter name="sessionProperties" type="NetworkSessionProperties"><![CDATA[Properties of the session being created.]]></parameter>
           </parameters>
           <returns><![CDATA[The newly hosted session.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: maxGamers is not in range of gamers that are supported in a network session. The XNA Framework supports multiplayer sessions between 2 and 31 players in a session for a Windows- or an Xbox 360-based game. On Zune, the XNA Framework supports a multiplayer session between 2 and 8 players in a session. privateGamerSlots is less than 0 or greater than maximumGamers.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: A different session already exists. There can only be one NetworkSession or AvailableNetworkSessionCollection in use at a time. You must dispose any previous session before you create a new one. One of the following methods has been called, but has not yet returned results: NetworkSession.Create NetworkSession.BeginCreate NetworkSession.Find NetworkSession.BeginFind NetworkSession.Join NetworkSession.BeginJoin Note that you must wait for any of these methods to return before you can create a new network session. To support this, you may use the asynchronous methods BeginCreate, BeginFind, BeginJoin, and the corresponding EndCreate, EndFind, EndJoin methods to detect when the operation is complete.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[This NetworkSession is disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Zune Specific Information For Zune-based games, maxGamers must be between 2 and 8; 8 is the maximum number of players supported in the session. Windows Specific Information For Windows-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session. Xbox 360 Specific Information For Xbox 360-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -517,6 +596,11 @@
             <parameter name="sessionProperties" type="NetworkSessionProperties"><![CDATA[Properties of the session being created.]]></parameter>
           </parameters>
           <returns><![CDATA[The newly hosted session.]]></returns>
+          <exceptions>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[One of the following conditions is true: maxGamers is not in range of gamers that are supported in a network session. The XNA Framework supports multiplayer sessions between 2 and 31 players in a session for a Windows- or an Xbox 360-based game. On Zune, the XNA Framework supports a multiplayer session between 2 and 8 players in a session. privateGamerSlots is less than 0 or greater than maximumGamers.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[One of the following conditions is true: A different session already exists. There can only be one NetworkSession or AvailableNetworkSessionCollection in use at a time. You must dispose any previous session before you create a new one. One of the following methods has been called, but has not yet returned results: NetworkSession.Create NetworkSession.BeginCreate NetworkSession.Find NetworkSession.BeginFind NetworkSession.Join NetworkSession.BeginJoin Note that you must wait for any of these methods to return before you can create a new network session. To support this, you may use the asynchronous methods BeginCreate, BeginFind, BeginJoin, and the corresponding EndCreate, EndFind, EndJoin methods to detect when the operation is complete.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[This NetworkSession is disposed.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Zune Specific Information For Zune-based games, maxGamers must be between 2 and 8; 8 is the maximum number of players supported in the session. Windows Specific Information For Windows-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session. Xbox 360 Specific Information For Xbox 360-based games, maxGamers must be between 2 and 31; 31 is the maximum number of players supported in a session.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -542,7 +626,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndCreate" returnType="void">
+    <method name="EndCreate" returnType="NetworkSession" isStatic="true">
       <summary><![CDATA[Gets the result from a BeginCreate asynchronous call.]]></summary>
       <overloads>
         <overload signature="EndCreate()">
@@ -563,7 +647,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndFind" returnType="void">
+    <method name="EndFind" returnType="AvailableNetworkSessionCollection" isStatic="true">
       <summary><![CDATA[Gets the result from a BeginFind asynchronous call.]]></summary>
       <overloads>
         <overload signature="EndFind()">
@@ -590,6 +674,10 @@
         <overload signature="EndGame()">
           <summary><![CDATA[Changes the session state from NetworkSessionState.Playing to NetworkSessionState.Lobby.]]></summary>
           <syntax><![CDATA[public void EndGame ()]]></syntax>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[This is disposed.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[This NetworkSession is not the host, or is in an invalid state to call this method.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -599,7 +687,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndJoin" returnType="void">
+    <method name="EndJoin" returnType="NetworkSession" isStatic="true">
       <summary><![CDATA[Gets the result from a BeginJoin asynchronous call.]]></summary>
       <overloads>
         <overload signature="EndJoin()">
@@ -611,6 +699,9 @@
             <parameter name="result" type="IAsyncResult"><![CDATA[An IAsyncResult used to track the progress of the operation.]]></parameter>
           </parameters>
           <returns><![CDATA[The session being joined by the gamer.]]></returns>
+          <exceptions>
+            <exception type="NetworkSessionJoinException"><![CDATA[The session either is full, is not joinable, or cannot be found. If the session is full, the specified session does not have enough open slots for all the local gamers signed in to this machine. If it is not joinable, you must wait for the host to return to the lobby before joining. If it cannot be found, the session may have ended, or there may be no network connectivity between the local machine and session host.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -620,7 +711,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="EndJoinInvited" returnType="void">
+    <method name="EndJoinInvited" returnType="NetworkSession" isStatic="true">
       <summary><![CDATA[Gets the result from a BeginJoinInvited asynchronous call.]]></summary>
       <overloads>
         <overload signature="EndJoinInvited()">
@@ -632,6 +723,9 @@
             <parameter name="result" type="IAsyncResult"><![CDATA[An IAsyncResult used to track the progress of the operation.]]></parameter>
           </parameters>
           <returns><![CDATA[The session being joined by the gamer.]]></returns>
+          <exceptions>
+            <exception type="NetworkSessionJoinException"><![CDATA[The session either is full, is not joinable, or cannot be found. If the session is full, the specified session does not have enough open slots for all the local gamers signed in to this machine. If it is not joinable, you must wait for the host to return to the lobby before joining. If it cannot be found, the session may have ended, or there may be no network connectivity between the local machine and session host.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Note When someone accepts an invitation for Xbox LIVE Community Games, but the game is not installed already on his or her computer, the invited player will be taken to the game offer. The offer enables the invited player to download the game and accept the invitation to start the game. For creator games still waiting to pass peer review, the game invitation will be sent over the Xbox LIVE service to the other player. If the game is not installed the invited player will be prompted with a message indicating that he or she can get the game from the game creator.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -674,6 +768,10 @@
             <parameter name="searchProperties" type="NetworkSessionProperties"><![CDATA[Optional session properties to match during the search. If this argument is null , the query results will not be filtered based on the session properties of available sessions. If any of the search property values in are specified, only sessions with matching properties will be returned by the query. null items in the collection will match to any value for that session property.]]></parameter>
           </parameters>
           <returns><![CDATA[Collection of available network multiplayer sessions.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[Find cannot be used from NetworkSession objects of session type NetworkSessionType.Local.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[maxLocalGamers must be between 1 and 4.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -694,6 +792,10 @@
             <parameter name="searchProperties" type="NetworkSessionProperties"><![CDATA[Optional session properties to match during the search. If this argument is null , the query results will not be filtered based on the session properties of available sessions. If any of the search property values in are specified, only sessions with matching properties will be returned by the query. null items in the collection will match to any value for that session property.]]></parameter>
           </parameters>
           <returns><![CDATA[Collection of available network multiplayer sessions.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[Find cannot be used from NetworkSession objects of session type NetworkSessionType.Local.]]></exception>
+            <exception type="ArgumentOutOfRangeException"><![CDATA[maxLocalGamers must be between 1 and 4.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -703,7 +805,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="FindGamerById" returnType="void">
+    <method name="FindGamerById" returnType="NetworkGamer">
       <summary><![CDATA[Looks up the network gamer with the specified ID. Returns null if the session contains no matching gamer.]]></summary>
       <overloads>
         <overload signature="FindGamerById()">
@@ -724,7 +826,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Join" returnType="void">
+    <method name="Join" returnType="NetworkSession" isStatic="true">
       <summary><![CDATA[Joins an existing multiplayer session. This method blocks until the operation has completed.]]></summary>
       <overloads>
         <overload signature="Join()">
@@ -736,6 +838,11 @@
             <parameter name="availableSession" type="AvailableNetworkSession"><![CDATA[An existing multiplayer session.]]></parameter>
           </parameters>
           <returns><![CDATA[Session joined by the gamer.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[availableSession is null.]]></exception>
+            <exception type="ObjectDisposedException"><![CDATA[availableSession is disposed.]]></exception>
+            <exception type="NetworkSessionJoinException"><![CDATA[The session either is full, is not joinable, or cannot be found. If the session is full, the specified session does not have enough open slots for all the local gamers signed in to this machine. If it is not joinable, you must wait for the host to return to the lobby before joining. If it cannot be found, the session may have ended, or there may be no network connectivity between the local machine and session host.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Use the Find or BeginFind methods to search for available sessions.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -758,6 +865,9 @@
             <parameter name="localGamers" type="IEnumerable&lt;SignedInGamer&gt;"><![CDATA[Collection of local gamers to participate in the network session. The first gamer in the collection becomes the host, and the others are added to the session.]]></parameter>
           </parameters>
           <returns><![CDATA[The network session.]]></returns>
+          <exceptions>
+            <exception type="NetworkSessionJoinException"><![CDATA[The session either is full, is not joinable, or cannot be found. If the session is full, the specified session does not have enough open slots for all the local gamers signed in to this machine. If it is not joinable, you must wait for the host to return to the lobby before joining. If it cannot be found, the session may have ended, or there may be no network connectivity between the local machine and session host.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method blocks until the operation has completed. For an asynchronous version of this method, see BeginJoinInvited . Note When someone accepts an invitation for Xbox LIVE Community Games, but the game is not installed already on his or her computer, the invited player will be taken to the game offer. The offer enables the invited player to download the game and accept the invitation to start the game. For creator games still waiting to pass peer review, the game invitation will be sent over the Xbox LIVE service to the other player. If the game is not installed the invited player will be prompted with a message indicating that he or she can get the game from the game creator.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -775,6 +885,9 @@
             <parameter name="maxLocalGamers" type="int"><![CDATA[Maximum number of local players on the same gaming machine in this network session.]]></parameter>
           </parameters>
           <returns><![CDATA[The network session.]]></returns>
+          <exceptions>
+            <exception type="NetworkSessionJoinException"><![CDATA[The session either is full, is not joinable, or cannot be found. If the session is full, the specified session does not have enough open slots for all the local gamers signed in to this machine. If it is not joinable, you must wait for the host to return to the lobby before joining. If it cannot be found, the session may have ended, or there may be no network connectivity between the local machine and session host.]]></exception>
+          </exceptions>
           <remarks><![CDATA[This method blocks until the operation has completed. For an asynchronous version of this method, see BeginJoinInvited . Note When someone accepts an invitation for Xbox LIVE Community Games, but the game is not installed already on his or her computer, the invited player will be taken to the game offer. The offer enables the invited player to download the game and accept the invitation to start the game. For creator games still waiting to pass peer review, the game invitation will be sent over the Xbox LIVE service to the other player. If the game is not installed the invited player will be prompted with a message indicating that he or she can get the game from the game creator.]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>
@@ -791,6 +904,10 @@
         <overload signature="ResetReady()">
           <summary><![CDATA[Resets the IsReady property of all session gamers.]]></summary>
           <syntax><![CDATA[public void ResetReady ()]]></syntax>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[This is disposed.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[This NetworkSession is not the host, or is in an invalid state to call this method.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -806,6 +923,10 @@
         <overload signature="StartGame()">
           <summary><![CDATA[Changes the session state from NetworkSessionState.Lobby to NetworkSessionState.Playing.]]></summary>
           <syntax><![CDATA[public void StartGame ()]]></syntax>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[This is disposed.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[This NetworkSession is not the host, or is in an invalid state to call this method.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -821,6 +942,9 @@
         <overload signature="Update()">
           <summary><![CDATA[Updates the state of the multiplayer session. Call this method at regular intervals—for example, from the Game.Update method.]]></summary>
           <syntax><![CDATA[public void Update ()]]></syntax>
+          <exceptions>
+            <exception type="ObjectDisposedException"><![CDATA[This object has already been disposed.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>

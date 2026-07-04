@@ -4,7 +4,8 @@
           name="CompilerIncludeHandler" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="abstract">
   <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
   <syntax><![CDATA[public abstract class CompilerIncludeHandler : IDisposable]]></syntax>
   <platforms>
@@ -60,7 +61,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Open" returnType="void">
+    <method name="Open" returnType="Stream">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="Open()">

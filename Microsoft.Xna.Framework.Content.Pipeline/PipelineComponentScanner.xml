@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="PipelineComponentScanner" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline"
+          modifier="sealed">
   <summary><![CDATA[Implements a scanner object containing the available importers and processors for an application. Designed for internal use only.]]></summary>
   <syntax><![CDATA[public sealed class PipelineComponentScanner]]></syntax>
   <platforms>
@@ -24,6 +25,7 @@
     <property name="Errors" type="IList&lt;string&gt;" access="get">
       <summary><![CDATA[Gets the list of error messages produced by the last call to Update.]]></summary>
       <syntax><![CDATA[public IList<string> Errors { get; }]]></syntax>
+      <value><![CDATA[Collection of the latest error descriptions.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -32,6 +34,7 @@
     <property name="ImporterAttributes" type="Object" access="get">
       <summary><![CDATA[Gets a dictionary that maps importer names to their associated metadata attributes.]]></summary>
       <syntax><![CDATA[public IDictionary<string, ContentImporterAttribute> ImporterAttributes { get; }]]></syntax>
+      <value><![CDATA[Importer names and their related metadata values.]]></value>
       <remarks><![CDATA[Call ImporterAttributes to look up the DisplayName value for an importer object and which file extensions are supported.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -41,6 +44,7 @@
     <property name="ImporterNames" type="IEnumerable&lt;string&gt;" access="get">
       <summary><![CDATA[Gets the names of all available importers.]]></summary>
       <syntax><![CDATA[public IEnumerable<string> ImporterNames { get; }]]></syntax>
+      <value><![CDATA[List of available importer names.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -49,6 +53,7 @@
     <property name="ImporterOutputTypes" type="Object" access="get">
       <summary><![CDATA[Gets a dictionary that maps importer names to the fully qualified name of their return types.]]></summary>
       <syntax><![CDATA[public IDictionary<string, string> ImporterOutputTypes { get; }]]></syntax>
+      <value><![CDATA[Importer names and their related return types.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -57,6 +62,7 @@
     <property name="ProcessorAttributes" type="Object" access="get">
       <summary><![CDATA[Gets a dictionary that maps processor names to their associated metadata attributes.]]></summary>
       <syntax><![CDATA[public IDictionary<string, ContentProcessorAttribute> ProcessorAttributes { get; }]]></syntax>
+      <value><![CDATA[Processor names and their related metadata values.]]></value>
       <remarks><![CDATA[Call ProcessorAttributes to look up the DisplayName value for an processor object.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -66,6 +72,7 @@
     <property name="ProcessorInputTypes" type="Object" access="get">
       <summary><![CDATA[Gets a dictionary that maps processor names to the fully qualified name of supported input types.]]></summary>
       <syntax><![CDATA[public IDictionary<string, string> ProcessorInputTypes { get; }]]></syntax>
+      <value><![CDATA[Processor names and the input types they support.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -74,6 +81,7 @@
     <property name="ProcessorNames" type="IEnumerable&lt;string&gt;" access="get">
       <summary><![CDATA[Gets the names of all available importers.]]></summary>
       <syntax><![CDATA[public IEnumerable<string> ProcessorNames { get; }]]></syntax>
+      <value><![CDATA[List of available processor names.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -82,6 +90,7 @@
     <property name="ProcessorOutputTypes" type="Object" access="get">
       <summary><![CDATA[Gets a dictionary that maps processor names to the fully qualified name of their output types.]]></summary>
       <syntax><![CDATA[public IDictionary<string, string> ProcessorOutputTypes { get; }]]></syntax>
+      <value><![CDATA[Processor names and their related output types.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -90,6 +99,7 @@
     <property name="ProcessorParameters" type="Object" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public IDictionary<string, ProcessorParameterCollection> ProcessorParameters { get; }]]></syntax>
+      <value><![CDATA[Collection of processor parameters.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>

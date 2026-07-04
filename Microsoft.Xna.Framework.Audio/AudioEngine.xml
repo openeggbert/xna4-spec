@@ -25,6 +25,11 @@
         <parameter name="lookAheadTime" type="TimeSpan"><![CDATA[Interactive audio and branch event look-ahead time, in milliseconds.]]></parameter>
         <parameter name="rendererId" type="Guid"><![CDATA[ID that specifies the audio renderer to use.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[The settingsFile parameter is null.]]></exception>
+        <exception type="ArgumentException"><![CDATA[XACT could not load the data provided. Make sure you are using the correct version of the XACT tool.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[The engine could not be created.]]></exception>
+      </exceptions>
       <remarks><![CDATA[The lookAheadTime parameter specifies how far ahead the audio engine will look when determining when to transition to another sound. For sounds linked to Play events that use a wave variation list, this parameter should be set to greater than 250 milliseconds. Doing so should give the audio engine enough time to prepare streamed data before it is needed for the loop iteration.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -44,6 +49,11 @@
         <parameter name="lookAheadTime" type="TimeSpan"><![CDATA[Interactive audio and branch event look-ahead time, in milliseconds.]]></parameter>
         <parameter name="rendererId" type="String"><![CDATA[A string that specifies the audio renderer to use.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[The settingsFile parameter is null.]]></exception>
+        <exception type="ArgumentException"><![CDATA[XACT could not load the data provided. Make sure you are using the correct version of the XACT tool.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[The engine could not be created.]]></exception>
+      </exceptions>
       <remarks><![CDATA[The lookAheadTime parameter specifies how far ahead the audio engine will look when determining when to transition to another sound. For sounds linked to Play events that use a wave variation list, this parameter should be set to greater than 250 milliseconds. Doing so should give the audio engine enough time to prepare streamed data before it is needed for the loop iteration.]]></remarks>
       <platforms>
         <platform>Windows Phone</platform>
@@ -57,6 +67,11 @@
       <parameters>
         <parameter name="settingsFile" type="string"><![CDATA[Path to a global settings file.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[The settingsFile parameter is null.]]></exception>
+        <exception type="ArgumentException"><![CDATA[XACT could not load the data provided. Make sure you are using the correct version of the XACT tool.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[The engine could not be created.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -68,6 +83,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -77,6 +93,7 @@
     <property name="RendererDetails" type="ReadOnlyCollection&lt;RendererDetail&gt;" access="get">
       <summary><![CDATA[Gets a collection of audio renderers.]]></summary>
       <syntax><![CDATA[public ReadOnlyCollection<RendererDetail> RendererDetails { get; }]]></syntax>
+      <value><![CDATA[Collection of audio renderers.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -144,7 +161,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetCategory" returnType="void">
+    <method name="GetCategory" returnType="AudioCategory">
       <summary><![CDATA[Gets an audio category.]]></summary>
       <overloads>
         <overload signature="GetCategory()">
@@ -164,7 +181,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetGlobalVariable" returnType="void">
+    <method name="GetGlobalVariable" returnType="float">
       <summary><![CDATA[Gets the value of a global variable.]]></summary>
       <overloads>
         <overload signature="GetGlobalVariable()">
@@ -176,6 +193,9 @@
             <parameter name="name" type="string"><![CDATA[Friendly name of the variable.]]></parameter>
           </parameters>
           <returns><![CDATA[Value of the variable.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[The name parameter is null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -184,7 +204,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -212,6 +232,9 @@
             <parameter name="name" type="string"><![CDATA[Value of the global variable.]]></parameter>
             <parameter name="value" type="float"><![CDATA[Friendly name of the global variable.]]></parameter>
           </parameters>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[The name parameter is null.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -235,7 +258,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -257,7 +280,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

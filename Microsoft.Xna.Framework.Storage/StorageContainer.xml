@@ -4,7 +4,8 @@
           name="StorageContainer" kind="class"
           namespace="Microsoft.Xna.Framework.Storage"
           assembly="Microsoft.Xna.Framework.Storage"
-          interfaces="IDisposable">
+          interfaces="IDisposable"
+          modifier="sealed">
   <summary><![CDATA[Represents a logical collection of storage files.]]></summary>
   <syntax><![CDATA[public sealed class StorageContainer : IDisposable]]></syntax>
   <platforms>
@@ -18,6 +19,7 @@
     <property name="DisplayName" type="string" access="get">
       <summary><![CDATA[Gets the name of the title.]]></summary>
       <syntax><![CDATA[public string DisplayName { get; }]]></syntax>
+      <value><![CDATA[The name of the title.]]></value>
       <remarks><![CDATA[This is the same as the displayName passed to BeginOpenContainer .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -29,6 +31,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -38,6 +41,7 @@
     <property name="Path" type="string" access="get">
       <summary><![CDATA[Gets the file path to the location of the user's save game files.]]></summary>
       <syntax><![CDATA[public string Path { get; }]]></syntax>
+      <value><![CDATA[The file path to the location of the user's save game files.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -47,6 +51,7 @@
     <property name="StorageDevice" type="StorageDevice" access="get">
       <summary><![CDATA[Gets the StorageDevice that holds the files in this container.]]></summary>
       <syntax><![CDATA[public StorageDevice StorageDevice { get; }]]></syntax>
+      <value><![CDATA[The StorageDevice that holds the files in this container.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -56,6 +61,7 @@
     <property name="TitleLocation" type="string" access="get" isStatic="true">
       <summary><![CDATA[Gets the file path to the location of the title storage space.]]></summary>
       <syntax><![CDATA[public static string TitleLocation { get; }]]></syntax>
+      <value><![CDATA[The title's install location based on the current platform.]]></value>
       <remarks><![CDATA[Use this member to create full paths to files in the same location as the game executable. For example: private static FileStream OpenTitleFile( string filename, FileMode mode, FileAccess access ) { string fullpath = Path.Combine( StorageContainer.TitleLocation, filename ); return File.Open( fullpath, mode, access ); }]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -66,6 +72,7 @@
     <property name="TitleName" type="string" access="get">
       <summary><![CDATA[Gets the name of the title.]]></summary>
       <syntax><![CDATA[public string TitleName { get; }]]></syntax>
+      <value><![CDATA[The name of the title.]]></value>
       <remarks><![CDATA[This is the same as the titleName passed to OpenContainer .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -95,7 +102,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="CreateFile" returnType="void">
+    <method name="CreateFile" returnType="Stream">
       <summary><![CDATA[Creates a file at a specified path in the StorageContainer.]]></summary>
       <overloads>
         <overload signature="CreateFile()">
@@ -122,6 +129,10 @@
         <overload signature="Delete()">
           <summary><![CDATA[Deletes the storage container.]]></summary>
           <syntax><![CDATA[public void Delete ()]]></syntax>
+          <exceptions>
+            <exception type="StorageDeviceNotConnectedException"><![CDATA[The storage device bound to the container is not connected.]]></exception>
+            <exception type="IOException"><![CDATA[An I/O error has occurred.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -170,7 +181,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="DirectoryExists" returnType="void">
+    <method name="DirectoryExists" returnType="bool">
       <summary><![CDATA[Determines whether the specified path refers to an existing directory in the StorageContainer.]]></summary>
       <overloads>
         <overload signature="DirectoryExists()">
@@ -206,7 +217,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="FileExists" returnType="void">
+    <method name="FileExists" returnType="bool">
       <summary><![CDATA[Determines whether the specified path refers to an existing file in the StorageContainer.]]></summary>
       <overloads>
         <overload signature="FileExists()">

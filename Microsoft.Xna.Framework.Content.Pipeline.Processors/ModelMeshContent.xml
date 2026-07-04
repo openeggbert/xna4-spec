@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ModelMeshContent" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Processors"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Processors"
+          modifier="sealed">
   <summary><![CDATA[Stores design-time data for a ModelMesh asset.]]></summary>
   <syntax><![CDATA[public sealed class ModelMeshContent]]></syntax>
   <platforms>
@@ -16,6 +17,7 @@
     <property name="BoundingSphere" type="BoundingSphere" access="get">
       <summary><![CDATA[Gets the bounding sphere for this mesh.]]></summary>
       <syntax><![CDATA[public BoundingSphere BoundingSphere { get; }]]></syntax>
+      <value><![CDATA[The bounding sphere for this mesh.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -24,6 +26,7 @@
     <property name="IndexBuffer" type="IndexCollection" access="get">
       <summary><![CDATA[Gets the index buffer associated with this mesh.]]></summary>
       <syntax><![CDATA[public IndexCollection IndexBuffer { get; }]]></syntax>
+      <value><![CDATA[The index buffer associated with this mesh.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -32,6 +35,7 @@
     <property name="MeshParts" type="ModelMeshPartContentCollection" access="get">
       <summary><![CDATA[Gets the children mesh parts associated with this mesh.]]></summary>
       <syntax><![CDATA[public ModelMeshPartContentCollection MeshParts { get; }]]></syntax>
+      <value><![CDATA[The children mesh parts associated with this mesh.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -40,6 +44,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the mesh name.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The mesh name.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -48,6 +53,7 @@
     <property name="ParentBone" type="ModelBoneContent" access="get">
       <summary><![CDATA[Gets the parent bone.]]></summary>
       <syntax><![CDATA[public ModelBoneContent ParentBone { get; }]]></syntax>
+      <value><![CDATA[The parent bone.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -56,6 +62,7 @@
     <property name="SourceMesh" type="MeshContent" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public MeshContent SourceMesh { get; }]]></syntax>
+      <value><![CDATA[The source mesh.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>
@@ -65,6 +72,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Gets a user-defined tag object.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[User-defined tag object.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -73,6 +81,7 @@
     <property name="VertexBuffer" type="VertexBufferContent" access="get">
       <summary><![CDATA[Gets the vertex buffer associated with this mesh.]]></summary>
       <syntax><![CDATA[public VertexBufferContent VertexBuffer { get; }]]></syntax>
+      <value><![CDATA[The vertex buffer associated with this mesh.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

@@ -4,7 +4,8 @@
           name="Genre" kind="class"
           namespace="Microsoft.Xna.Framework.Media"
           assembly="Microsoft.Xna.Framework.Media"
-          interfaces="IEquatable&lt;Genre&gt;">
+          interfaces="IEquatable&lt;Genre&gt;"
+          modifier="sealed">
   <summary><![CDATA[Provides access to genre information in the media library.]]></summary>
   <syntax><![CDATA[public sealed class Genre : IEquatable<Genre>]]></syntax>
   <remarks><![CDATA[The Genre class provides information about a genre, including the genre's Name , and the Albums and Songs in that genre that are on the device. You can obtain a Genre object through the GenreCollection.Item indexer and the Album.Genre and Song.Genre properties.]]></remarks>
@@ -20,6 +21,7 @@
     <property name="Albums" type="AlbumCollection" access="get">
       <summary><![CDATA[Gets the AlbumCollection for the Genre.]]></summary>
       <syntax><![CDATA[public AlbumCollection Albums { get; }]]></syntax>
+      <value><![CDATA[AlbumCollection for this Genre.]]></value>
       <remarks><![CDATA[The returned AlbumCollection contains all albums in the device's media library that are associated with this Genre .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -31,6 +33,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -42,6 +45,7 @@
     <property name="Name" type="string" access="get">
       <summary><![CDATA[Gets the name of the Genre.]]></summary>
       <syntax><![CDATA[public string Name { get; }]]></syntax>
+      <value><![CDATA[The name of this Genre.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -52,6 +56,7 @@
     <property name="Songs" type="SongCollection" access="get">
       <summary><![CDATA[Gets the SongCollection for the Genre.]]></summary>
       <syntax><![CDATA[public SongCollection Songs { get; }]]></syntax>
+      <value><![CDATA[SongCollection for this Genre.]]></value>
       <remarks><![CDATA[The returned SongCollection contains all songs in the device's media library that are associated with this Genre .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -130,7 +135,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -146,7 +151,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Returns a String representation of the Genre.]]></summary>
       <overloads>
         <overload signature="ToString()">
@@ -162,7 +167,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified Genre instances are equal.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -185,7 +190,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Determines whether the specified Genre instances are not equal.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

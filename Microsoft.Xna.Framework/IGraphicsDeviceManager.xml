@@ -16,7 +16,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="BeginDraw" returnType="void">
+    <method name="BeginDraw" returnType="bool">
       <summary><![CDATA[Starts the drawing of a frame.]]></summary>
       <overloads>
         <overload signature="BeginDraw()">

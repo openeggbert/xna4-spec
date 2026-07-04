@@ -52,6 +52,7 @@
     <property name="AmbientLightColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the color of the ambient light used by the avatar renderer.]]></summary>
       <syntax><![CDATA[public Vector3 AmbientLightColor { get; set; }]]></syntax>
+      <value><![CDATA[Color of the ambient light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -62,6 +63,7 @@
     <property name="BindPose" type="ReadOnlyCollection&lt;Matrix&gt;" access="get">
       <summary><![CDATA[Gets the collection of bind pose positions for each bone of the avatar model. These positions are in local space, and are relative to the parent bone.]]></summary>
       <syntax><![CDATA[public ReadOnlyCollection<Matrix> BindPose { get; }]]></syntax>
+      <value><![CDATA[Collection of bind pose positions for the bones of the avatar model.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -72,6 +74,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets the disposed state of the avatar renderer.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the renderer has been disposed; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -82,6 +85,7 @@
     <property name="LightColor" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the color of the directional light used by the avatar renderer.]]></summary>
       <syntax><![CDATA[public Vector3 LightColor { get; set; }]]></syntax>
+      <value><![CDATA[Color of the directional light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -92,6 +96,7 @@
     <property name="LightDirection" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the color of the directional light used by the avatar renderer.]]></summary>
       <syntax><![CDATA[public Vector3 LightDirection { get; set; }]]></syntax>
+      <value><![CDATA[Vector of the directional light.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -102,6 +107,7 @@
     <property name="ParentBones" type="ReadOnlyCollection&lt;int&gt;" access="get">
       <summary><![CDATA[Collection of the parent indices for each bone in the related BindPose collection.]]></summary>
       <syntax><![CDATA[public ReadOnlyCollection<int> ParentBones { get; }]]></syntax>
+      <value><![CDATA[Collection of parent bone indices.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -112,6 +118,7 @@
     <property name="Projection" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the projection matrix for the avatar.]]></summary>
       <syntax><![CDATA[public Matrix Projection { get; set; }]]></syntax>
+      <value><![CDATA[Projection matrix used by the avatar renderer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -122,6 +129,7 @@
     <property name="State" type="AvatarRendererState" access="get">
       <summary><![CDATA[Gets the state of the avatar.]]></summary>
       <syntax><![CDATA[public AvatarRendererState State { get; }]]></syntax>
+      <value><![CDATA[Avatar state.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -132,6 +140,7 @@
     <property name="View" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the view matrix for the avatar.]]></summary>
       <syntax><![CDATA[public Matrix View { get; set; }]]></syntax>
+      <value><![CDATA[View matrix used by the avatar renderer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -142,6 +151,7 @@
     <property name="World" type="Matrix" access="get;set">
       <summary><![CDATA[Gets or sets the world matrix for the avatar.]]></summary>
       <syntax><![CDATA[public Matrix World { get; set; }]]></syntax>
+      <value><![CDATA[World matrix used by the avatar renderer.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>

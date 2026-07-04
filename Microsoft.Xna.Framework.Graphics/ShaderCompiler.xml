@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ShaderCompiler" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
-          assembly="Microsoft.Xna.Framework.Graphics">
+          assembly="Microsoft.Xna.Framework.Graphics"
+          modifier="static">
   <summary><![CDATA[This class is available only when developing for Windows.]]></summary>
   <syntax><![CDATA[public static class ShaderCompiler]]></syntax>
   <platforms>
@@ -35,6 +36,15 @@
             <parameter name="platform" type="TargetPlatform"><![CDATA[Target platform for the compilation.]]></parameter>
           </parameters>
           <returns><![CDATA[The compiled shader.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[shaderFileName is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[shaderFileName is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The shaderFileName parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in shaderFileName was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[shaderFileName is in an invalid format.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -57,6 +67,11 @@
             <parameter name="platform" type="TargetPlatform"><![CDATA[Target platform for the compilation.]]></parameter>
           </parameters>
           <returns><![CDATA[The compiled shader.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[shaderSourceCode is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[shaderSourceCode is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[shaderSourceCode does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -81,6 +96,11 @@
             <parameter name="platform" type="TargetPlatform"><![CDATA[Target platform for the compilation.]]></parameter>
           </parameters>
           <returns><![CDATA[The compiled shader.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[shaderSourceCode is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[shaderSourceCode is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[shaderSourceCode does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -88,7 +108,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="AssembleFromSource" returnType="void">
+    <method name="AssembleFromSource" returnType="CompiledShader" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="AssembleFromSource()">
@@ -141,6 +161,11 @@
             <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for compilation.]]></parameter>
           </parameters>
           <returns><![CDATA[The compiled shader.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[shaderSourceCode is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[shaderSourceCode is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[shaderSourceCode does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -167,6 +192,15 @@
             <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for compilation.]]></parameter>
           </parameters>
           <returns><![CDATA[The compiled shader.]]></returns>
+          <exceptions>
+            <exception type="ArgumentException"><![CDATA[shaderFileName is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[shaderFileName is null.]]></exception>
+            <exception type="PathTooLongException"><![CDATA[The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.]]></exception>
+            <exception type="DirectoryNotFoundException"><![CDATA[The specified path is invalid (for example, it is on an unmapped drive).]]></exception>
+            <exception type="UnauthorizedAccessException"><![CDATA[The shaderFileName parameter specifies a directory, or the caller does not have the required permission to access the file specified by filename.]]></exception>
+            <exception type="FileNotFoundException"><![CDATA[The file specified in shaderFileName was not found.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[shaderFileName is in an invalid format.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -193,6 +227,11 @@
             <parameter name="platform" type="TargetPlatform"><![CDATA[The target platform for compilation.]]></parameter>
           </parameters>
           <returns><![CDATA[The compiled shader.]]></returns>
+          <exceptions>
+            <exception type="ArgumentNullException"><![CDATA[shaderSourceCode is null. The stream passed into this method cannot be null.]]></exception>
+            <exception type="NotSupportedException"><![CDATA[shaderSourceCode is not readable. Streams passed into this method must be readable.]]></exception>
+            <exception type="EndOfStreamException"><![CDATA[shaderSourceCode does not contain enough data to support this call.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Windows XP SP2</platform>
             <platform>Windows Vista</platform>
@@ -200,7 +239,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="CompileFromSource" returnType="void">
+    <method name="CompileFromSource" returnType="CompiledShader" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="CompileFromSource()">
@@ -231,7 +270,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Disassemble" returnType="void">
+    <method name="Disassemble" returnType="string" isStatic="true">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="Disassemble()">

@@ -24,6 +24,7 @@
     <property name="Identity" type="ContentIdentity" access="get;set">
       <summary><![CDATA[Gets or sets the identity of the content item.]]></summary>
       <syntax><![CDATA[public ContentIdentity Identity { get; set; }]]></syntax>
+      <value><![CDATA[The identity of the content item.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -32,6 +33,7 @@
     <property name="Name" type="string" access="get;set">
       <summary><![CDATA[Gets or sets the name of the content item.]]></summary>
       <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <value><![CDATA[The name of the content item.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -40,6 +42,7 @@
     <property name="OpaqueData" type="OpaqueDataDictionary" access="get">
       <summary><![CDATA[Gets the opaque data of the content item.]]></summary>
       <syntax><![CDATA[public OpaqueDataDictionary OpaqueData { get; }]]></syntax>
+      <value><![CDATA[The opaque data of the content item, stored as a set of key/value pairs.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>

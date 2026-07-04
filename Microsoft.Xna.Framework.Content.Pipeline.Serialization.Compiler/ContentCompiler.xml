@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ContentCompiler" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
-          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler">
+          assembly="Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler"
+          modifier="sealed">
   <summary><![CDATA[Provides methods for writing compiled binary format.]]></summary>
   <syntax><![CDATA[public sealed class ContentCompiler]]></syntax>
   <platforms>
@@ -15,7 +16,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetTypeWriter" returnType="void">
+    <method name="GetTypeWriter" returnType="ContentTypeWriter">
       <summary><![CDATA[Retrieves the worker writer for the specified type.]]></summary>
       <overloads>
         <overload signature="GetTypeWriter()">

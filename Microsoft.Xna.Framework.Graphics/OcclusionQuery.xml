@@ -22,6 +22,10 @@
       <parameters>
         <parameter name="graphicsDevice" type="GraphicsDevice"><![CDATA[The graphics device to associate with this query.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[graphicsDevice is null.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[This resource could not be created.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -33,6 +37,7 @@
     <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the graphics device being queried.]]></summary>
       <syntax><![CDATA[public GraphicsDevice GraphicsDevice { get; }]]></syntax>
+      <value><![CDATA[The related graphics device queried the occlusion query.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -42,6 +47,7 @@
     <property name="IsComplete" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates if the occlusion query has completed.]]></summary>
       <syntax><![CDATA[public bool IsComplete { get; }]]></syntax>
+      <value><![CDATA[true if the query completed; otherwise false.]]></value>
       <remarks><![CDATA[If predicated tiling has been triggered for an Xbox 360 game, calls to IsComplete from within the tiling bracket always fail. Access this data by switching to a different render target or end the frame. This condition does not apply to games targeting the Windows platform.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -52,6 +58,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; otherwise false.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -61,6 +68,7 @@
     <property name="IsSupported" type="bool" access="get">
       <summary><![CDATA[Specifies if occlusion queries are supported on the related graphics device.]]></summary>
       <syntax><![CDATA[public bool IsSupported { get; }]]></syntax>
+      <value><![CDATA[true if occlusion queries are supported; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -70,6 +78,7 @@
     <property name="Name" type="string" access="get;set">
       <summary><![CDATA[Gets the name of this occlusion query]]></summary>
       <syntax><![CDATA[public string Name { get; set; }]]></syntax>
+      <value><![CDATA[Name of the query.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -79,6 +88,10 @@
     <property name="PixelCount" type="int" access="get">
       <summary><![CDATA[Gets the number of visible pixels.]]></summary>
       <syntax><![CDATA[public int PixelCount { get; }]]></syntax>
+      <value><![CDATA[Number of visible pixels. Zero indicates full occlusion, which means the pixels are not visible from the current camera position.]]></value>
+      <exceptions>
+        <exception type="InvalidOperationException"><![CDATA[The query data is not yet available. Use the IsComplete property to determine if the data is available before attempting to retrieve it.]]></exception>
+      </exceptions>
       <remarks><![CDATA[The number of non-occluded pixels (indicated by PixelCount ) can differ based on the platform. For Xbox 360 games, PixelCount represents the number of pixels modified by drawing. This includes GraphicsDevice.Clear calls and any drawing associated with sprite batches. For Windows games, PixelCount represents the number of pixels that passed the depth and stencil tests. This does not include sprite batch drawing (because the depth test is turned off) or calls to GraphicsDevice.Clear . To achieve consistent results across all platforms, use occlusion queries only when the depth buffer is enabled. In addition, avoid calling Clear or changing the assigned render target inside an occlusion query begin/end block.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -89,6 +102,7 @@
     <property name="Tag" type="Object" access="get;set">
       <summary><![CDATA[Gets the resource tag for this occlusion query.]]></summary>
       <syntax><![CDATA[public Object Tag { get; set; }]]></syntax>
+      <value><![CDATA[The resource tag for this query.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -103,6 +117,9 @@
         <overload signature="Begin()">
           <summary><![CDATA[Begins application of the query.]]></summary>
           <syntax><![CDATA[public void Begin ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin cannot be called again until End has been successfully called. Begin may not be called on this query object again before IsComplete has been checked.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -142,6 +159,9 @@
         <overload signature="End()">
           <summary><![CDATA[Ends the application of the query.]]></summary>
           <syntax><![CDATA[public void End ()]]></syntax>
+          <exceptions>
+            <exception type="InvalidOperationException"><![CDATA[Begin must be called successfully before End can be called.]]></exception>
+          </exceptions>
           <platforms>
             <platform>Xbox 360</platform>
             <platform>Windows XP SP2</platform>
@@ -164,7 +184,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ToString" returnType="void">
+    <method name="ToString" returnType="string">
       <summary><![CDATA[Retrieves a string representation of this object.]]></summary>
       <overloads>
         <overload signature="ToString()">

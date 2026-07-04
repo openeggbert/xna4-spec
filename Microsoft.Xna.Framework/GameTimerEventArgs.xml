@@ -4,7 +4,8 @@
           name="GameTimerEventArgs" kind="class"
           namespace="Microsoft.Xna.Framework"
           assembly="Microsoft.Xna.Framework"
-          baseClass="EventArgs">
+          baseClass="EventArgs"
+          modifier="sealed">
   <summary><![CDATA[A snapshot of the game timing state based on game time and not real time.]]></summary>
   <syntax><![CDATA[public sealed class GameTimerEventArgs : EventArgs]]></syntax>
   <platforms>
@@ -37,6 +38,7 @@
     <property name="ElapsedTime" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the amount of elapsed time.]]></summary>
       <syntax><![CDATA[public TimeSpan ElapsedTime { get; }]]></syntax>
+      <value><![CDATA[Type: TimeSpan A time interval.]]></value>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>
@@ -44,6 +46,7 @@
     <property name="TotalTime" type="TimeSpan" access="get">
       <summary><![CDATA[Gets the amount of total time since the start of the game.]]></summary>
       <syntax><![CDATA[public TimeSpan TotalTime { get; }]]></syntax>
+      <value><![CDATA[Type: TimeSpan Total time since the start of the game.]]></value>
       <platforms>
         <platform>Windows Phone</platform>
       </platforms>

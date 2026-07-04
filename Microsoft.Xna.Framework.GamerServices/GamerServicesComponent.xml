@@ -23,6 +23,11 @@
       <parameters>
         <parameter name="game" type="Game"><![CDATA[The game that will be associated with this component.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="GamerServicesNotAvailableException"><![CDATA[If the current game uses the XNA Framework Redistributable. This file does not include Games for Windows – LIVE functionality. If another Games for Windows – LIVE title is running already.]]></exception>
+        <exception type="ArgumentNullException"><![CDATA[serviceProvider is null.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[The gamer services functionality is already initialized.]]></exception>
+      </exceptions>
       <remarks><![CDATA[Important Games for Windows - LIVE is not available to finished games. This functionality is not included in the redistributable version of the XNA Framework, and a game that attempts to use these components without XNA Game Studio installed will result in a GamerServicesNotAvailableException .]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>
@@ -41,6 +46,11 @@
         <overload signature="Initialize()">
           <summary><![CDATA[Initializes the GamerServicesDispatcher.]]></summary>
           <syntax><![CDATA[public override void Initialize ()]]></syntax>
+          <exceptions>
+            <exception type="GamerServicesNotAvailableException"><![CDATA[If the current game uses the XNA Framework Redistributable. This file does not include Games for Windows – LIVE functionality. If another Games for Windows – LIVE title is running already.]]></exception>
+            <exception type="ArgumentNullException"><![CDATA[serviceProvider is null.]]></exception>
+            <exception type="InvalidOperationException"><![CDATA[The gamer services functionality is already initialized.]]></exception>
+          </exceptions>
           <remarks><![CDATA[Important Games for Windows - LIVE is not available to finished games. This functionality is not included in the redistributable version of the XNA Framework, and a game that attempts to use these components without XNA Game Studio installed will result in a GamerServicesNotAvailableException .]]></remarks>
           <platforms>
             <platform>Xbox 360</platform>

@@ -26,6 +26,10 @@
         <parameter name="spacing" type="float"><![CDATA[The amount of space, in pixels, to insert between letters in a string.]]></parameter>
         <parameter name="fontStyle" type="FontDescriptionStyle"><![CDATA[The font style for the font.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[fontName is null or an empty string.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[size is less than or equal to zero. Specify a value for this parameter that is greater than zero.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -65,6 +69,10 @@
         <parameter name="size" type="float"><![CDATA[The size, in points, of the font.]]></parameter>
         <parameter name="spacing" type="float"><![CDATA[The amount of space, in pixels, to insert between letters in a string.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[fontName is null or an empty string.]]></exception>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[size is less than or equal to zero. Specify a value for this parameter that is greater than zero.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -76,6 +84,7 @@
       <summary><![CDATA[Gets the collection of characters provided by this FontDescription.]]></summary>
       <syntax><![CDATA[[ContentSerializerIgnoreAttribute]
 public ICollection<char> Characters { get; }]]></syntax>
+      <value><![CDATA[The collection of characters.]]></value>
       <remarks><![CDATA[Characters can be used to change the characters provided by this FontDescription . The Characters collection keeps track of duplicates automatically. It is not necessary for the user to make sure that each letter is added only once. The Characters collection will contain only one instance of each character, no matter how many times you call Add . This collection of characters can be used to implement processing for a message file. A custom processor could read the message file, which would contain all of the text that the game will need to print, and add each character it finds to Characters .]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
@@ -86,6 +95,7 @@ public ICollection<char> Characters { get; }]]></syntax>
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[ContentSerializerAttribute]
 public Nullable<char> DefaultCharacter { get; set; }]]></syntax>
+      <value><![CDATA[The default character for this font.]]></value>
       <remarks><![CDATA[If set to anything other than null, this character will be automatically substituted any time an attempt is made to draw or measure characters that are not in the font. If set to null, missing characters will produce an exception.]]></remarks>
       <platforms>
         <platform>Windows 7</platform>
@@ -97,6 +107,10 @@ public Nullable<char> DefaultCharacter { get; set; }]]></syntax>
       <summary><![CDATA[Gets or sets the name of the font, such as "Times New Roman" or "Arial". This value cannot be null or empty.]]></summary>
       <syntax><![CDATA[[ContentSerializerAttribute]
 public string FontName { get; set; }]]></syntax>
+      <value><![CDATA[The name of the font.]]></value>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[FontName is null or an empty string.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -105,6 +119,10 @@ public string FontName { get; set; }]]></syntax>
     <property name="Size" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the size, in points, of the font.]]></summary>
       <syntax><![CDATA[public float Size { get; set; }]]></syntax>
+      <value><![CDATA[The size, in points, of the font.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[Size is less than or equal to zero. Specify a value for this property that is greater than zero.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -113,6 +131,10 @@ public string FontName { get; set; }]]></syntax>
     <property name="Spacing" type="float" access="get;set">
       <summary><![CDATA[Gets or sets the amount of space, in pixels, to insert between letters in a string.]]></summary>
       <syntax><![CDATA[public float Spacing { get; set; }]]></syntax>
+      <value><![CDATA[The amount of space, in pixels, to insert between letters in a string.]]></value>
+      <exceptions>
+        <exception type="ArgumentOutOfRangeException"><![CDATA[Spacing is less than or equal to zero. Specify a value for this property that is greater than zero.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -121,6 +143,7 @@ public string FontName { get; set; }]]></syntax>
     <property name="Style" type="FontDescriptionStyle" access="get;set">
       <summary><![CDATA[Gets or sets the style of the font, expressed as a combination of one or more FontDescriptionStyle flags.]]></summary>
       <syntax><![CDATA[public FontDescriptionStyle Style { get; set; }]]></syntax>
+      <value><![CDATA[The style of the font, expressed as a combination of one or more FontDescriptionStyle flags.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
@@ -130,6 +153,7 @@ public string FontName { get; set; }]]></syntax>
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[ContentSerializerAttribute]
 public bool UseKerning { get; set; }]]></syntax>
+      <value><![CDATA[true if kerning information should be used when drawing characters; false otherwise.]]></value>
       <platforms>
         <platform>Windows 7</platform>
         <platform>Windows Vista</platform>

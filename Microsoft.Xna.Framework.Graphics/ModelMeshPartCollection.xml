@@ -4,7 +4,8 @@
           name="ModelMeshPartCollection" kind="class"
           namespace="Microsoft.Xna.Framework.Graphics"
           assembly="Microsoft.Xna.Framework.Graphics"
-          baseClass="ReadOnlyCollection&lt;ModelMeshPart&gt;">
+          baseClass="ReadOnlyCollection&lt;ModelMeshPart&gt;"
+          modifier="sealed">
   <summary><![CDATA[Represents a collection of ModelMeshPart objects.]]></summary>
   <syntax><![CDATA[public sealed class ModelMeshPartCollection : ReadOnlyCollection<ModelMeshPart>]]></syntax>
   <platforms>
@@ -17,7 +18,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="Enumerator">
       <summary><![CDATA[Returns a ModelMeshPartCollection.Enumerator that can iterate through a ModelMeshPartCollection.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">

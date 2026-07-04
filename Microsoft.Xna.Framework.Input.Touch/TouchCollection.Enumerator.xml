@@ -20,6 +20,7 @@
     <property name="Current" type="TouchLocation" access="get">
       <summary><![CDATA[Gets the current element in the TouchCollection.]]></summary>
       <syntax><![CDATA[public TouchLocation Current { get; }]]></syntax>
+      <value><![CDATA[The current TouchLocation in the collection.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows 7</platform>
@@ -46,7 +47,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="MoveNext" returnType="void">
+    <method name="MoveNext" returnType="bool">
       <summary><![CDATA[Advances the enumerator to the next element of the TouchCollection.]]></summary>
       <overloads>
         <overload signature="MoveNext()">

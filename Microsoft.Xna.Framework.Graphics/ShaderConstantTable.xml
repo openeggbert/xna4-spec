@@ -21,6 +21,10 @@
       <parameters>
         <parameter name="code" type="byte[]"><![CDATA[The shader byte code.]]></parameter>
       </parameters>
+      <exceptions>
+        <exception type="ArgumentNullException"><![CDATA[code is null.]]></exception>
+        <exception type="InvalidOperationException"><![CDATA[Unable to create the ShaderConstantTable.]]></exception>
+      </exceptions>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -32,6 +36,7 @@
     <property name="Constants" type="ShaderConstantCollection" access="get">
       <summary><![CDATA[Gets a collection of the constants in the ShaderConstantTable.]]></summary>
       <syntax><![CDATA[public ShaderConstantCollection Constants { get; }]]></syntax>
+      <value><![CDATA[The collection of constants in the ShaderConstantTable.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -41,6 +46,7 @@
     <property name="Creator" type="string" access="get">
       <summary><![CDATA[Gets the name of the constant table creator.]]></summary>
       <syntax><![CDATA[public string Creator { get; }]]></syntax>
+      <value><![CDATA[The name of the constant table creator.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -50,6 +56,7 @@
     <property name="IsDisposed" type="bool" access="get">
       <summary><![CDATA[Gets a value that indicates whether the object is disposed.]]></summary>
       <syntax><![CDATA[public bool IsDisposed { get; }]]></syntax>
+      <value><![CDATA[true if the object is disposed; false otherwise.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -59,6 +66,7 @@
     <property name="Version" type="Version" access="get">
       <summary><![CDATA[Gets the shader version.]]></summary>
       <syntax><![CDATA[public Version Version { get; }]]></syntax>
+      <value><![CDATA[The shader version.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>
@@ -127,7 +135,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetHashCode" returnType="void">
+    <method name="GetHashCode" returnType="int">
       <summary><![CDATA[Gets the hash code for this instance.]]></summary>
       <overloads>
         <overload signature="GetHashCode()">
@@ -161,7 +169,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Equality" returnType="void">
+    <method name="op_Equality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are the same.]]></summary>
       <overloads>
         <overload signature="op_Equality()">
@@ -183,7 +191,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="op_Inequality" returnType="void">
+    <method name="op_Inequality" returnType="bool" isStatic="true">
       <summary><![CDATA[Compares two objects to determine whether they are different.]]></summary>
       <overloads>
         <overload signature="op_Inequality()">

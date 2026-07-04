@@ -4,7 +4,8 @@
           name="ContentProcessor" kind="class"
           namespace="Microsoft.Xna.Framework.Content.Pipeline"
           assembly="Microsoft.Xna.Framework.Content.Pipeline"
-          interfaces="IContentProcessor">
+          interfaces="IContentProcessor"
+          modifier="abstract">
   <summary><![CDATA[Provides a base class to use when developing custom processor components. All processors must derive from this class.]]></summary>
   <syntax><![CDATA[public abstract class ContentProcessor<TInput,TOutput> : IContentProcessor]]></syntax>
   <platforms>
@@ -22,9 +23,27 @@
     </constructor>
   </constructors>
   <properties>
+    <property name="InputType" type="Object" access="get">
+      <summary><![CDATA[Gets the expected object type of the input parameter to IContentProcessor.Process.]]></summary>
+      <syntax><![CDATA[private Type Microsoft.Xna.Framework.Content.Pipeline.IContentProcessor.InputType { get; }]]></syntax>
+      <value><![CDATA[Object type of the input parameter.]]></value>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="OutputType" type="Object" access="get">
+      <summary><![CDATA[Gets the object type returned by IContentProcessor.Process.]]></summary>
+      <syntax><![CDATA[private Type Microsoft.Xna.Framework.Content.Pipeline.IContentProcessor.OutputType { get; }]]></syntax>
+      <value><![CDATA[Type of object returned by the processor.]]></value>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
   </properties>
   <methods>
-    <method name="Process" returnType="void">
+    <method name="Process" returnType="TOutput">
       <summary><![CDATA[Processes the specified input data and returns the result.]]></summary>
       <overloads>
         <overload signature="Process()">

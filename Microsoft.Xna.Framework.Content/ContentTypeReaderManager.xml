@@ -3,7 +3,8 @@
           xsi:noNamespaceSchemaLocation="../../xna.xsd"
           name="ContentTypeReaderManager" kind="class"
           namespace="Microsoft.Xna.Framework.Content"
-          assembly="Microsoft.Xna.Framework.Content">
+          assembly="Microsoft.Xna.Framework.Content"
+          modifier="sealed">
   <summary><![CDATA[A manager that constructs and keeps track of type reader objects.]]></summary>
   <syntax><![CDATA[public sealed class ContentTypeReaderManager]]></syntax>
   <platforms>
@@ -16,7 +17,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetTypeReader" returnType="void">
+    <method name="GetTypeReader" returnType="ContentTypeReader">
       <summary><![CDATA[Looks up a reader for the specified type.]]></summary>
       <overloads>
         <overload signature="GetTypeReader()">
