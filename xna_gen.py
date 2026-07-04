@@ -234,6 +234,13 @@ def classify_page(h1):
         for i, s in enumerate(segs):
             if s in ('Microsoft', 'System'):
                 type_name = '.'.join(segs[:i])
+                # Qualify the member name with its interface (e.g.
+                # "IEnumerator.Current") so it doesn't collide in the
+                # constructors/properties/methods/fields/events dicts (keyed
+                # by name) with an unrelated regular member of the same short
+                # name — e.g. GamerCollectionEnumerator has both its own
+                # generic "Current" and an explicit "IEnumerator.Current".
+                member_name = f'{segs[-1]}.{member_name}'
                 break
         return ('member', type_name, kind_word.lower(), member_name, sig, False)
     return None

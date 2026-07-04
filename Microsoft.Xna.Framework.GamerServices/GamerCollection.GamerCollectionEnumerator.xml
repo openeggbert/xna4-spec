@@ -27,6 +27,17 @@
         <platform>Zune</platform>
       </platforms>
     </property>
+    <property name="IEnumerator.Current" type="Object" access="get">
+      <summary><![CDATA[Gets the current element in the GamerCollection as a Object.]]></summary>
+      <syntax><![CDATA[private Object System.Collections.IEnumerator.Current { get; }]]></syntax>
+      <value><![CDATA[The current element in the GamerCollection as a Object.]]></value>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+        <platform>Zune</platform>
+      </platforms>
+    </property>
   </properties>
   <methods>
     <method name="Dispose" returnType="void">
