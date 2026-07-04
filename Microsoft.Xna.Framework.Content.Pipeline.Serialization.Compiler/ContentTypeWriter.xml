@@ -35,7 +35,7 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="CanDeserializeIntoExistingObject" type="Object" access="get">
+    <property name="CanDeserializeIntoExistingObject" type="bool" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual bool CanDeserializeIntoExistingObject { get; }]]></syntax>
       <value><![CDATA[true if the object can be deserialized into; false otherwise.]]></value>
@@ -54,7 +54,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="TypeVersion" type="Object" access="get">
+    <property name="TypeVersion" type="int" access="get">
       <summary><![CDATA[Gets a format version number for this type.]]></summary>
       <syntax><![CDATA[public virtual int TypeVersion { get; }]]></syntax>
       <value><![CDATA[A format version number for this type.]]></value>
@@ -122,7 +122,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShouldCompressContent" returnType="void">
+    <method name="ShouldCompressContent" returnType="bool">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="ShouldCompressContent()">

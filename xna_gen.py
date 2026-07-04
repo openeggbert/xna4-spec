@@ -245,20 +245,40 @@ def classify_page(h1):
         return ('member', type_name, kind_word.lower(), member_name, sig, False)
     return None
 
+# A type token, allowing one level of nested generic arguments with internal
+# commas/spaces (e.g. "IDictionary<string, ContentImporterAttribute>",
+# "IEnumerable<KeyValuePair<string, T>>") — a plain \S+ capture stops at the
+# first space, truncating any multi-argument generic at its first comma.
+_TYPE_TOKEN = r'[\w.\[\]]+(?:<(?:[^<>]|<[^<>]*>)*>)?'
+# Explicit interface implementations are declared "private" with no other
+# modifier; everything else in this API is "public". protected/internal
+# members (e.g. DrawableGameComponent.GraphicsDevice) also occur.
+_ACCESS = r'(?:public|private|protected(?:\s+internal)?|internal)'
+
 def extract_prop_type(syn, pname):
-    m = re.search(r'public(?:\s+static)?\s+(\S+)\s+'+re.escape(pname), syn)
+    # An explicit interface implementation (pname qualified as "IFoo.Bar") is
+    # declared "private" and its syntax spells out the full interface path,
+    # e.g. "private Type Microsoft.Xna.Framework...IContentProcessor.InputType"
+    # — only the last segment ("InputType") actually needs to match, with the
+    # qualifying path in between as a tolerated prefix.
+    short = pname.rsplit('.', 1)[-1]
+    # Indexers are declared as "public T this [...]", not "public T Item" —
+    # the doc's member name ("Item") never actually appears in the syntax.
+    name_pat = r'this\s*\[' if short == 'Item' else re.escape(short)
+    m = re.search(_ACCESS+r'(?:\s+(?:static|virtual|override|new|abstract|sealed))*'
+                  r'\s+('+_TYPE_TOKEN+r')\s+(?:[\w.]+\.)?'+name_pat, syn)
     return m.group(1) if m else 'Object'
 
 def extract_field_type(syn, fname):
-    m = re.search(r'public(?:\s+(?:static|const|readonly|new))*\s+(\S+)\s+'+re.escape(fname), syn)
+    m = re.search(_ACCESS+r'(?:\s+(?:static|const|readonly|new))*\s+('+_TYPE_TOKEN+r')\s+'+re.escape(fname), syn)
     return m.group(1) if m else 'Object'
 
 def extract_method_return(syn, mname):
-    m = re.search(r'public(?:\s+(?:static|override|virtual|new|abstract))*\s+(\S+)\s+'+re.escape(mname), syn)
+    m = re.search(_ACCESS+r'(?:\s+(?:static|override|virtual|new|abstract))*\s+('+_TYPE_TOKEN+r')\s+'+re.escape(mname), syn)
     return m.group(1) if m else 'void'
 
 def extract_event_type(syn, ename):
-    m = re.search(r'event\s+(\S+)\s+'+re.escape(ename), syn)
+    m = re.search(r'event\s+('+_TYPE_TOKEN+r')\s+'+re.escape(ename), syn)
     return m.group(1) if m else 'EventHandler'
 
 def build_ctor_sig(type_name, params):
@@ -303,7 +323,7 @@ def gen_xml(type_name, kind, ns, main_c, members):
     modifier = get_modifier(syn_main)
 
     ctors  = defaultdict(list)
-    props  = {}
+    props  = defaultdict(list)
     meths  = defaultdict(list)
     mlist  = {}
     flds   = {}
@@ -313,7 +333,20 @@ def gen_xml(type_name, kind, ns, main_c, members):
         if mk == 'constructor':
             ctors[sig or ''].append(c)
         elif mk == 'property':
-            props.setdefault(mn, c)
+            # A property name can resolve to more than one real declaration:
+            # an overloaded indexer (this[int]/this[string], disambiguated by
+            # sig) or, rarely, the same name declared both abstract in a base
+            # class and overridden in a subclass under an identical title (no
+            # sig to tell them apart). Keep one page per distinct sig so
+            # indexer overloads aren't collapsed into a single Object-typed
+            # property; for a same-sig clash, prefer a concrete override over
+            # an abstract stub.
+            dupe = props[mn] and props[mn][-1][0] == sig
+            if dupe and re.search(r'\babstract\b', get_syntax(props[mn][-1][1])) \
+                    and not re.search(r'\babstract\b', get_syntax(c)):
+                props[mn][-1] = (sig, c)
+            elif not dupe:
+                props[mn].append((sig, c))
         elif mk == 'method':
             if sig is None: mlist[mn] = c
             else: meths[mn].append((sig, c))
@@ -380,7 +413,8 @@ def gen_xml(type_name, kind, ns, main_c, members):
 
         out.append('  <properties>')
         for pn in sorted(props):
-            c = props[pn]; syn = get_syntax(c); acc = prop_access(syn)
+          for sig, c in props[pn]:
+            syn = get_syntax(c); acc = prop_access(syn)
             pt = extract_prop_type(syn, pn)
             is_s = 'public static' in syn
             a2 = f'name="{e(pn)}" type="{e(pt)}" access="{acc}"'

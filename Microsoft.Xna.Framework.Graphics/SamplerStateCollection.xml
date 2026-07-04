@@ -15,7 +15,7 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="SamplerState" access="get">
       <summary><![CDATA[Gets a specific SamplerState object using an index value.]]></summary>
       <syntax><![CDATA[public SamplerState this [
          int index

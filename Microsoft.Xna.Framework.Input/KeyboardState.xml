@@ -27,7 +27,7 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="KeyState" access="get">
       <summary><![CDATA[Returns the state of a particular key.]]></summary>
       <syntax><![CDATA[public KeyState this [
          Keys key

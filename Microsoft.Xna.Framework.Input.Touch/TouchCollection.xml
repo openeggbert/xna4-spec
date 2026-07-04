@@ -69,7 +69,7 @@
         <platform>Windows Phone 7</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get;set">
+    <property name="Item" type="TouchLocation" access="get;set">
       <summary><![CDATA[Gets or sets the information of the specified touch location.]]></summary>
       <syntax><![CDATA[public TouchLocation this [
          int index

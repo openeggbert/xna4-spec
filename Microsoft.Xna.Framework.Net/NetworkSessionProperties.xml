@@ -37,7 +37,7 @@
         <platform>Zune</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get;set">
+    <property name="Item" type="Nullable&lt;int&gt;" access="get;set">
       <summary><![CDATA[Gets or sets a custom session property value at the specified index]]></summary>
       <syntax><![CDATA[public Nullable<int> this [
          int index

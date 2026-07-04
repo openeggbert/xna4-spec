@@ -14,7 +14,7 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="DrawOrder" type="Object" access="get">
+    <property name="DrawOrder" type="int" access="get">
       <summary><![CDATA[The order in which to draw this object relative to other objects. Objects with a lower value are drawn first.]]></summary>
       <syntax><![CDATA[public virtual abstract int DrawOrder { get; }]]></syntax>
       <value><![CDATA[Order in which to draw this object relative to other objects.]]></value>
@@ -24,7 +24,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Visible" type="Object" access="get">
+    <property name="Visible" type="bool" access="get">
       <summary><![CDATA[Indicates whether IDrawable.Draw should be called in Game.Draw for this game component.]]></summary>
       <syntax><![CDATA[public virtual abstract bool Visible { get; }]]></syntax>
       <value><![CDATA[true if Draw should be called; false otherwise.]]></value>

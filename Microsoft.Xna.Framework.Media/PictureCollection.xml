@@ -41,7 +41,7 @@
         <platform>Windows Phone</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="Picture" access="get">
       <summary><![CDATA[Gets the Picture at the specified index in the PictureCollection.]]></summary>
       <syntax><![CDATA[public Picture this [
          int index

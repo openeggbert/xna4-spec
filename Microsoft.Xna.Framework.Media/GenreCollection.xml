@@ -41,7 +41,7 @@
         <platform>Windows Phone</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="Genre" access="get">
       <summary><![CDATA[Gets the Genre at the specified index in the GenreCollection.]]></summary>
       <syntax><![CDATA[public Genre this [
          int index

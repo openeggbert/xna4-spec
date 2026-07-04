@@ -68,7 +68,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="IEnumerator&lt;KeyValuePair&lt;string, Object&gt;&gt;">
       <summary><![CDATA[Returns an enumerator that iterates through a collection of key/value pairs that represent elements in the PropertyDictionary.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">

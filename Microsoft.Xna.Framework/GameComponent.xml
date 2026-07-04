@@ -41,7 +41,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Game" type="Object" access="get">
+    <property name="Game" type="Game" access="get">
       <summary><![CDATA[Gets and sets the Game associated with this GameComponent.]]></summary>
       <syntax><![CDATA[protected Game Game { get; }]]></syntax>
       <value><![CDATA[The Game associated with this GameComponent.]]></value>

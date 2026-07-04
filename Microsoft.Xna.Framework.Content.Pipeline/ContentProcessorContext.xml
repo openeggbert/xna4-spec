@@ -33,7 +33,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="IntermediateDirectory" type="Object" access="get">
+    <property name="IntermediateDirectory" type="string" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract string IntermediateDirectory { get; }]]></syntax>
       <value><![CDATA[The path of the directory that will contain any intermediate files that the content processor will produce.]]></value>
@@ -52,7 +52,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="OutputDirectory" type="Object" access="get">
+    <property name="OutputDirectory" type="string" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract string OutputDirectory { get; }]]></syntax>
       <value><![CDATA[The directory path of the output file that the content processor will produce.]]></value>
@@ -62,7 +62,7 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="OutputFilename" type="Object" access="get">
+    <property name="OutputFilename" type="string" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract string OutputFilename { get; }]]></syntax>
       <value><![CDATA[The name of the output file that the content processor will produce.]]></value>
@@ -90,7 +90,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="TargetProfile" type="Object" access="get">
+    <property name="TargetProfile" type="GraphicsProfile" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract GraphicsProfile TargetProfile { get; }]]></syntax>
       <value><![CDATA[The enumeration that identifies the graphics profile of the device.]]></value>

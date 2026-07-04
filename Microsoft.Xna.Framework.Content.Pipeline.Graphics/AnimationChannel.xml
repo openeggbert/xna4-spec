@@ -32,7 +32,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="AnimationKeyframe" access="get">
       <summary><![CDATA[Gets the keyframe at the specified index position.]]></summary>
       <syntax><![CDATA[public AnimationKeyframe this [
          int index

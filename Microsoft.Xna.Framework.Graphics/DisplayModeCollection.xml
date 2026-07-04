@@ -15,7 +15,7 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="IEnumerable&lt;DisplayMode&gt;" access="get">
       <summary><![CDATA[Retrieves the DisplayMode structure with the specified format.]]></summary>
       <syntax><![CDATA[public IEnumerable<DisplayMode> this [
          SurfaceFormat format

@@ -46,7 +46,7 @@ public class CurveKeyCollection : ICollection<CurveKey>, IEnumerable<CurveKey>, 
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get;set">
+    <property name="Item" type="CurveKey" access="get;set">
       <summary><![CDATA[Gets or sets the element at the specified index.]]></summary>
       <syntax><![CDATA[public CurveKey this [
          int index

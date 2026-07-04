@@ -15,7 +15,7 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="AllowUserResizing" type="Object" access="get;set">
+    <property name="AllowUserResizing" type="bool" access="get;set">
       <summary><![CDATA[Specifies whether to allow the user to resize the game window.]]></summary>
       <syntax><![CDATA[[DefaultValueAttribute(false)]
 public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
@@ -26,7 +26,7 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="ClientBounds" type="Object" access="get">
+    <property name="ClientBounds" type="Rectangle" access="get">
       <summary><![CDATA[The screen dimensions of the game window's client rectangle.]]></summary>
       <syntax><![CDATA[public virtual abstract Rectangle ClientBounds { get; }]]></syntax>
       <value><![CDATA[Screen dimensions of the game window's client rectangle.]]></value>
@@ -36,7 +36,7 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="CurrentOrientation" type="Object" access="get">
+    <property name="CurrentOrientation" type="DisplayOrientation" access="get">
       <summary><![CDATA[Gets the current display orientation, which reflects the physical orientation of the phone in the user's hand.]]></summary>
       <syntax><![CDATA[public abstract DisplayOrientation CurrentOrientation { get; }]]></syntax>
       <value><![CDATA[The current display orientation.]]></value>
@@ -48,7 +48,7 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="Handle" type="Object" access="get">
+    <property name="Handle" type="IntPtr" access="get">
       <summary><![CDATA[Gets the handle to the system window.]]></summary>
       <syntax><![CDATA[public virtual abstract IntPtr Handle { get; }]]></syntax>
       <value><![CDATA[The handle to the system window.]]></value>
@@ -58,7 +58,7 @@ public virtual abstract bool AllowUserResizing { get; set; }]]></syntax>
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="ScreenDeviceName" type="Object" access="get">
+    <property name="ScreenDeviceName" type="string" access="get">
       <summary><![CDATA[Gets the device name of the screen the window is currently in.]]></summary>
       <syntax><![CDATA[public virtual abstract string ScreenDeviceName { get; }]]></syntax>
       <value><![CDATA[The device name of the screen.]]></value>

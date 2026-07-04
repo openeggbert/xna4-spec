@@ -169,7 +169,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TryCopyFrom" returnType="void">
+    <method name="TryCopyFrom" returnType="bool">
       <summary><![CDATA[Attempts to copy a region from the specified bitmap.]]></summary>
       <overloads>
         <overload signature="TryCopyFrom()">
@@ -192,7 +192,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="TryCopyTo" returnType="void">
+    <method name="TryCopyTo" returnType="bool">
       <summary><![CDATA[Attempts to copy a region to the specified bitmap.]]></summary>
       <overloads>
         <overload signature="TryCopyTo()">

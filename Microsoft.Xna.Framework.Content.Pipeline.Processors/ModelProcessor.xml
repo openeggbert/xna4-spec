@@ -22,7 +22,7 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="ColorKeyColor" type="Object" access="get;set">
+    <property name="ColorKeyColor" type="Color" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual Color ColorKeyColor { get; set; }]]></syntax>
       <value><![CDATA[Color value of the material to replace with transparent black.]]></value>
@@ -32,7 +32,7 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="ColorKeyEnabled" type="Object" access="get;set">
+    <property name="ColorKeyEnabled" type="bool" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual bool ColorKeyEnabled { get; set; }]]></syntax>
       <value><![CDATA[true if color keying is enabled; false otherwise.]]></value>
@@ -42,7 +42,7 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="DefaultEffect" type="Object" access="get;set">
+    <property name="DefaultEffect" type="MaterialProcessorDefaultEffect" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual MaterialProcessorDefaultEffect DefaultEffect { get; set; }]]></syntax>
       <value><![CDATA[The default effect type.]]></value>
@@ -53,7 +53,7 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="GenerateMipmaps" type="Object" access="get;set">
+    <property name="GenerateMipmaps" type="bool" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual bool GenerateMipmaps { get; set; }]]></syntax>
       <value><![CDATA[true if mipmap generation is enabled; false otherwise.]]></value>
@@ -63,7 +63,7 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="GenerateTangentFrames" type="Object" access="get;set">
+    <property name="GenerateTangentFrames" type="bool" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual bool GenerateTangentFrames { get; set; }]]></syntax>
       <value><![CDATA[true if binormals and tangents should be generated if none are found; otherwise false.]]></value>
@@ -73,7 +73,7 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="PremultiplyTextureAlpha" type="Object" access="get;set">
+    <property name="PremultiplyTextureAlpha" type="bool" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[DefaultValueAttribute(true)]
 public virtual bool PremultiplyTextureAlpha { get; set; }]]></syntax>
@@ -84,7 +84,7 @@ public virtual bool PremultiplyTextureAlpha { get; set; }]]></syntax>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="PremultiplyVertexColors" type="Object" access="get;set">
+    <property name="PremultiplyVertexColors" type="bool" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[[DefaultValueAttribute(true)]
 public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
@@ -95,7 +95,7 @@ public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="ResizeTexturesToPowerOfTwo" type="Object" access="get;set">
+    <property name="ResizeTexturesToPowerOfTwo" type="bool" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual bool ResizeTexturesToPowerOfTwo { get; set; }]]></syntax>
       <value><![CDATA[true if resizing is enabled; false otherwise.]]></value>
@@ -105,7 +105,7 @@ public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="RotationX" type="Object" access="get;set">
+    <property name="RotationX" type="float" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual float RotationX { get; set; }]]></syntax>
       <value><![CDATA[The amount of rotation, in degrees, around the X axis.]]></value>
@@ -115,7 +115,7 @@ public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="RotationY" type="Object" access="get;set">
+    <property name="RotationY" type="float" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual float RotationY { get; set; }]]></syntax>
       <value><![CDATA[The amount of rotation, in degrees, around the X axis.]]></value>
@@ -125,7 +125,7 @@ public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="RotationZ" type="Object" access="get;set">
+    <property name="RotationZ" type="float" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual float RotationZ { get; set; }]]></syntax>
       <value><![CDATA[The amount of rotation, in degrees, around the Z axis.]]></value>
@@ -135,7 +135,7 @@ public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="Scale" type="Object" access="get;set">
+    <property name="Scale" type="float" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual float Scale { get; set; }]]></syntax>
       <value><![CDATA[The scaling factor to be applied.]]></value>
@@ -145,7 +145,7 @@ public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="SwapWindingOrder" type="Object" access="get;set">
+    <property name="SwapWindingOrder" type="bool" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual bool SwapWindingOrder { get; set; }]]></syntax>
       <value><![CDATA[true if the winding order of the model should be swapped; otherwise false. This is useful for models that appear to be drawn inside-out.]]></value>
@@ -155,7 +155,7 @@ public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="TextureFormat" type="Object" access="get;set">
+    <property name="TextureFormat" type="TextureProcessorOutputFormat" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual TextureProcessorOutputFormat TextureFormat { get; set; }]]></syntax>
       <value><![CDATA[The texture format of the output.]]></value>
@@ -167,7 +167,7 @@ public virtual bool PremultiplyVertexColors { get; set; }]]></syntax>
     </property>
   </properties>
   <methods>
-    <method name="ConvertMaterial" returnType="void">
+    <method name="ConvertMaterial" returnType="MaterialContent">
       <summary><![CDATA[Called by the framework when the MaterialContent property of a GeometryContent object is encountered in the input node collection.]]></summary>
       <overloads>
         <overload signature="ConvertMaterial()">

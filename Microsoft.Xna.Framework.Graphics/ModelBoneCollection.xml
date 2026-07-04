@@ -16,7 +16,7 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="ModelBone" access="get">
       <summary><![CDATA[Retrieves a ModelBone from the collection, given the name of the bone.]]></summary>
       <syntax><![CDATA[public ModelBone this [
          string boneName

@@ -23,7 +23,7 @@ public class EffectProcessor : ContentProcessor<EffectContent, CompiledEffect>]]
     </constructor>
   </constructors>
   <properties>
-    <property name="DebugMode" type="Object" access="get;set">
+    <property name="DebugMode" type="EffectProcessorDebugMode" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual EffectProcessorDebugMode DebugMode { get; set; }]]></syntax>
       <value><![CDATA[The debug mode to use when compiling effects.]]></value>
@@ -33,7 +33,7 @@ public class EffectProcessor : ContentProcessor<EffectContent, CompiledEffect>]]
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="Defines" type="Object" access="get;set">
+    <property name="Defines" type="string" access="get;set">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public virtual string Defines { get; set; }]]></syntax>
       <value><![CDATA[A list of define assignments delimited by semicolons.]]></value>

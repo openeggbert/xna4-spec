@@ -17,7 +17,7 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="SignedInGamer" access="get">
       <summary><![CDATA[Gets a specific local gamer based on that player's PlayerIndex on the local system.]]></summary>
       <syntax><![CDATA[public SignedInGamer this [
          PlayerIndex index

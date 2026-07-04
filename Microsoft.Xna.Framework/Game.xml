@@ -156,7 +156,7 @@
     </property>
   </properties>
   <methods>
-    <method name="BeginDraw" returnType="void">
+    <method name="BeginDraw" returnType="bool">
       <summary><![CDATA[Starts the drawing of a frame. This method is followed by calls to Draw and EndDraw.]]></summary>
       <overloads>
         <overload signature="BeginDraw()">
@@ -461,7 +461,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ShowMissingRequirementMessage" returnType="void">
+    <method name="ShowMissingRequirementMessage" returnType="bool">
       <summary><![CDATA[This is used to display an error message if there is no suitable graphics device or sound card.]]></summary>
       <overloads>
         <overload signature="ShowMissingRequirementMessage()">

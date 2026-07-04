@@ -43,7 +43,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetParent" returnType="void">
+    <method name="GetParent" returnType="TParent">
       <summary><![CDATA[Gets the parent of a child object.]]></summary>
       <overloads>
         <overload signature="GetParent()">

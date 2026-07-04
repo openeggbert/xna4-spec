@@ -36,7 +36,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="OpenStream" returnType="void">
+    <method name="OpenStream" returnType="Stream">
       <summary><![CDATA[Opens a stream for reading the specified resource. Derived classes can replace this to implement pack files or asset compression.]]></summary>
       <overloads>
         <overload signature="OpenStream()">

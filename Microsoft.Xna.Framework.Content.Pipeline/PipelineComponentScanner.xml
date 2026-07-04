@@ -31,7 +31,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="ImporterAttributes" type="Object" access="get">
+    <property name="ImporterAttributes" type="IDictionary&lt;string, ContentImporterAttribute&gt;" access="get">
       <summary><![CDATA[Gets a dictionary that maps importer names to their associated metadata attributes.]]></summary>
       <syntax><![CDATA[public IDictionary<string, ContentImporterAttribute> ImporterAttributes { get; }]]></syntax>
       <value><![CDATA[Importer names and their related metadata values.]]></value>
@@ -50,7 +50,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="ImporterOutputTypes" type="Object" access="get">
+    <property name="ImporterOutputTypes" type="IDictionary&lt;string, string&gt;" access="get">
       <summary><![CDATA[Gets a dictionary that maps importer names to the fully qualified name of their return types.]]></summary>
       <syntax><![CDATA[public IDictionary<string, string> ImporterOutputTypes { get; }]]></syntax>
       <value><![CDATA[Importer names and their related return types.]]></value>
@@ -59,7 +59,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="ProcessorAttributes" type="Object" access="get">
+    <property name="ProcessorAttributes" type="IDictionary&lt;string, ContentProcessorAttribute&gt;" access="get">
       <summary><![CDATA[Gets a dictionary that maps processor names to their associated metadata attributes.]]></summary>
       <syntax><![CDATA[public IDictionary<string, ContentProcessorAttribute> ProcessorAttributes { get; }]]></syntax>
       <value><![CDATA[Processor names and their related metadata values.]]></value>
@@ -69,7 +69,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="ProcessorInputTypes" type="Object" access="get">
+    <property name="ProcessorInputTypes" type="IDictionary&lt;string, string&gt;" access="get">
       <summary><![CDATA[Gets a dictionary that maps processor names to the fully qualified name of supported input types.]]></summary>
       <syntax><![CDATA[public IDictionary<string, string> ProcessorInputTypes { get; }]]></syntax>
       <value><![CDATA[Processor names and the input types they support.]]></value>
@@ -87,7 +87,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="ProcessorOutputTypes" type="Object" access="get">
+    <property name="ProcessorOutputTypes" type="IDictionary&lt;string, string&gt;" access="get">
       <summary><![CDATA[Gets a dictionary that maps processor names to the fully qualified name of their output types.]]></summary>
       <syntax><![CDATA[public IDictionary<string, string> ProcessorOutputTypes { get; }]]></syntax>
       <value><![CDATA[Processor names and their related output types.]]></value>
@@ -96,7 +96,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="ProcessorParameters" type="Object" access="get">
+    <property name="ProcessorParameters" type="IDictionary&lt;string, ProcessorParameterCollection&gt;" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public IDictionary<string, ProcessorParameterCollection> ProcessorParameters { get; }]]></syntax>
       <value><![CDATA[Collection of processor parameters.]]></value>

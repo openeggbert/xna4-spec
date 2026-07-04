@@ -15,7 +15,7 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="VertexStream" access="get">
       <summary><![CDATA[Returns the VertexStream at the specified index.]]></summary>
       <syntax><![CDATA[public VertexStream this [
          int index

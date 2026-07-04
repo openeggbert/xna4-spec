@@ -34,7 +34,7 @@
     </property>
   </properties>
   <methods>
-    <method name="GetReferenceTypeProperty" returnType="void">
+    <method name="GetReferenceTypeProperty" returnType="T">
       <summary><![CDATA[Gets a reference type from the OpaqueDataDictionary collection.]]></summary>
       <overloads>
         <overload signature="GetReferenceTypeProperty()">
@@ -56,7 +56,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetTexture" returnType="void">
+    <method name="GetTexture" returnType="ExternalReference&lt;TextureContent&gt;">
       <summary><![CDATA[Gets a value from the Textures collection.]]></summary>
       <overloads>
         <overload signature="GetTexture()">
@@ -75,7 +75,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetValueTypeProperty" returnType="void">
+    <method name="GetValueTypeProperty" returnType="Nullable&lt;T&gt;">
       <summary><![CDATA[Gets a value type from the OpaqueDataDictionary collection.]]></summary>
       <overloads>
         <overload signature="GetValueTypeProperty()">

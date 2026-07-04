@@ -16,7 +16,7 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="ModelMesh" access="get">
       <summary><![CDATA[Retrieves a ModelMesh from the collection, given the name of the mesh.]]></summary>
       <syntax><![CDATA[public ModelMesh this [
          string meshName

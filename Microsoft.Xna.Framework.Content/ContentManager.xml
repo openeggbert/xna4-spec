@@ -132,7 +132,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="OpenStream" returnType="void">
+    <method name="OpenStream" returnType="Stream">
       <summary><![CDATA[Opens a stream for reading the specified asset. Derived classes can replace this to implement pack files or asset compression.]]></summary>
       <overloads>
         <overload signature="OpenStream()">
@@ -155,7 +155,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="ReadAsset" returnType="void">
+    <method name="ReadAsset" returnType="T">
       <summary><![CDATA[Low-level worker method that reads asset data.]]></summary>
       <overloads>
         <overload signature="ReadAsset()">

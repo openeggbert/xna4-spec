@@ -24,17 +24,16 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="ElementType" type="Object" access="get">
+    <property name="ElementType" type="Type" access="get">
       <summary><![CDATA[Gets the type of data contained in this channel.]]></summary>
-      <syntax><![CDATA[public virtual abstract Type ElementType { get; }]]></syntax>
+      <syntax><![CDATA[public virtual Type ElementType { get; }]]></syntax>
       <value><![CDATA[Type of data stored in the vertex channel.]]></value>
-      <remarks><![CDATA[To access strongly typed content data, cast the VertexChannel object to a VertexChannel&lt;T&gt; before calling ElementType . This causes a generic enumerator interface to be returned.]]></remarks>
       <platforms>
         <platform>Windows XP SP2</platform>
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="ICollection.IsSynchronized" type="Object" access="get">
+    <property name="ICollection.IsSynchronized" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether access to the collection is synchronized (thread safe).]]></summary>
       <syntax><![CDATA[private bool System.Collections.ICollection.IsSynchronized { get; }]]></syntax>
       <value><![CDATA[true if access to the collection is synchronized (thread safe); falseotherwise.]]></value>
@@ -52,7 +51,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="IList.IsFixedSize" type="Object" access="get">
+    <property name="IList.IsFixedSize" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether this list has a fixed size.]]></summary>
       <syntax><![CDATA[private bool System.Collections.IList.IsFixedSize { get; }]]></syntax>
       <value><![CDATA[true if the list has a fixed size; false otherwise.]]></value>
@@ -61,7 +60,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="IList.IsReadOnly" type="Object" access="get">
+    <property name="IList.IsReadOnly" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether this object is read-only.]]></summary>
       <syntax><![CDATA[private bool System.Collections.IList.IsReadOnly { get; }]]></syntax>
       <value><![CDATA[true if this object is read-only; false otherwise.]]></value>
@@ -70,7 +69,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get;set">
+    <property name="Item" type="T" access="get;set">
       <summary><![CDATA[Gets or sets the element at the specified index.]]></summary>
       <syntax><![CDATA[public T this [
          int index

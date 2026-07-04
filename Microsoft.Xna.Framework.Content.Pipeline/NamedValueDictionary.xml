@@ -31,7 +31,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="DefaultSerializerType" type="Object" access="get">
+    <property name="DefaultSerializerType" type="Type" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[protected internal virtual Type DefaultSerializerType { get; }]]></syntax>
       <value><![CDATA[The type used by the serializer.]]></value>
@@ -41,7 +41,7 @@
         <platform>Windows XP</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get;set">
+    <property name="Item" type="T" access="get;set">
       <summary><![CDATA[Gets or sets the specified item.]]></summary>
       <syntax><![CDATA[public T this [
          string key
@@ -157,7 +157,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="GetEnumerator" returnType="void">
+    <method name="GetEnumerator" returnType="IEnumerator&lt;KeyValuePair&lt;string, T&gt;&gt;">
       <summary><![CDATA[Gets an enumerator that iterates through items in a dictionary.]]></summary>
       <overloads>
         <overload signature="GetEnumerator()">
@@ -190,7 +190,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="RemoveItem" returnType="void">
+    <method name="RemoveItem" returnType="bool">
       <summary><![CDATA[Removes the specified element from the dictionary.]]></summary>
       <overloads>
         <overload signature="RemoveItem()">

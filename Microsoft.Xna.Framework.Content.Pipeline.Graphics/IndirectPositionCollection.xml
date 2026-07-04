@@ -25,7 +25,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get;set">
+    <property name="Item" type="Vector3" access="get;set">
       <summary><![CDATA[Gets or sets the position at the specified index.]]></summary>
       <syntax><![CDATA[public Vector3 this [
          int index

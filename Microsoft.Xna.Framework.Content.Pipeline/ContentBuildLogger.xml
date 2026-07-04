@@ -35,7 +35,7 @@
     </property>
   </properties>
   <methods>
-    <method name="GetCurrentFilename" returnType="void">
+    <method name="GetCurrentFilename" returnType="string">
       <summary><![CDATA[Gets the filename currently being processed, for use in warning and error messages.]]></summary>
       <overloads>
         <overload signature="GetCurrentFilename()">

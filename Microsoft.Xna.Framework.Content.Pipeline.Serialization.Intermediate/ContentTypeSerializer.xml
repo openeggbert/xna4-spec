@@ -63,7 +63,7 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="CanDeserializeIntoExistingObject" type="Object" access="get">
+    <property name="CanDeserializeIntoExistingObject" type="bool" access="get">
       <summary><![CDATA[Gets a value indicating whether this component may load data into an existing object or if it must it construct a new instance of the object before loading the data.]]></summary>
       <syntax><![CDATA[public virtual bool CanDeserializeIntoExistingObject { get; }]]></syntax>
       <value><![CDATA[true if this component can load data into an existing object; false if a new instance of the object must be constructed.]]></value>
@@ -92,7 +92,7 @@
     </property>
   </properties>
   <methods>
-    <method name="Deserialize" returnType="void">
+    <method name="Deserialize" returnType="T">
       <summary><![CDATA[This method is available only when developing for Windows.]]></summary>
       <overloads>
         <overload signature="Deserialize(IntermediateReader, ContentSerializerAttribute, T)">

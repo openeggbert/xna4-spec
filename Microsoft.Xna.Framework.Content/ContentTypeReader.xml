@@ -38,7 +38,7 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="CanDeserializeIntoExistingObject" type="Object" access="get">
+    <property name="CanDeserializeIntoExistingObject" type="bool" access="get">
       <summary><![CDATA[Determines if deserialization into an existing object is possible.]]></summary>
       <syntax><![CDATA[public virtual bool CanDeserializeIntoExistingObject { get; }]]></syntax>
       <value><![CDATA[true if the object can be deserialized into; false otherwise.]]></value>
@@ -60,7 +60,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="TypeVersion" type="Object" access="get">
+    <property name="TypeVersion" type="int" access="get">
       <summary><![CDATA[Gets a format version number for this type.]]></summary>
       <syntax><![CDATA[public virtual int TypeVersion { get; }]]></syntax>
       <value><![CDATA[The version number for this type.]]></value>
@@ -89,7 +89,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="Read" returnType="void">
+    <method name="Read" returnType="T">
       <summary><![CDATA[Reads a strongly typed object from the current stream.]]></summary>
       <overloads>
         <overload signature="Read(ContentReader, T)">

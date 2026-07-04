@@ -41,7 +41,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="GraphicsDevice" type="Object" access="get">
+    <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[The GraphicsDevice the DrawableGameComponent is associated with.]]></summary>
       <syntax><![CDATA[protected GraphicsDevice GraphicsDevice { get; }]]></syntax>
       <value><![CDATA[GraphicsDevice the DrawableGameComponent is associated with.]]></value>

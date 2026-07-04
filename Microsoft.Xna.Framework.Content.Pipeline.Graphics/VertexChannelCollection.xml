@@ -24,11 +24,22 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get;set">
+    <property name="Item" type="VertexChannel" access="get;set">
       <summary><![CDATA[Gets or sets the vertex channel at the specified index position.]]></summary>
       <syntax><![CDATA[public VertexChannel this [
          int index
 ] { get; set; }]]></syntax>
+      <value><![CDATA[A vertex channel object.]]></value>
+      <platforms>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="VertexChannel" access="get">
+      <summary><![CDATA[Gets or sets the vertex channel with the specified name.]]></summary>
+      <syntax><![CDATA[public VertexChannel this [
+         string name
+] { get; }]]></syntax>
       <value><![CDATA[A vertex channel object.]]></value>
       <platforms>
         <platform>Windows XP SP2</platform>

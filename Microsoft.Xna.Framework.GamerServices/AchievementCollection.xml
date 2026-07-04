@@ -45,12 +45,27 @@
         <platform>Windows Phone 7</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="Achievement" access="get">
       <summary><![CDATA[Gets a specific element in the collection using an index value.]]></summary>
       <syntax><![CDATA[public Achievement this [
          int index
 ] { get; }]]></syntax>
       <value><![CDATA[The achievement at the specified index.]]></value>
+      <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows 7</platform>
+        <platform>Windows Vista</platform>
+        <platform>Windows XP</platform>
+        <platform>Windows Phone 7</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="Achievement" access="get">
+      <summary><![CDATA[Retrieves the Achievement matching a specified achievement key string.]]></summary>
+      <syntax><![CDATA[public Achievement this [
+         string achievementKey
+] { get; }]]></syntax>
+      <value><![CDATA[The achievement matching the specified key.]]></value>
       <remarks><![CDATA[Warning This property retrieves a calculated result only for titles approved to access Xbox LIVE services through the Xbox LIVE Registered Developer Program . For Xbox LIVE Indie games, this property will return immediately with a predetermined default value.]]></remarks>
       <platforms>
         <platform>Xbox 360</platform>

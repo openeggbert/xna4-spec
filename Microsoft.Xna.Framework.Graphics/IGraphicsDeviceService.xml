@@ -14,7 +14,7 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="GraphicsDevice" type="Object" access="get">
+    <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Retrieves a graphcs device.]]></summary>
       <syntax><![CDATA[public virtual abstract GraphicsDevice GraphicsDevice { get; }]]></syntax>
       <value><![CDATA[A graphics device.]]></value>

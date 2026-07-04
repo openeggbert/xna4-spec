@@ -26,12 +26,24 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="EffectPass" access="get">
       <summary><![CDATA[Gets a specific element in the collection by using an index value.]]></summary>
       <syntax><![CDATA[public EffectPass this [
          int index
 ] { get; }]]></syntax>
       <value><![CDATA[The object at index index.]]></value>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="EffectPass" access="get">
+      <summary><![CDATA[Gets a specific element in the collection by using a name.]]></summary>
+      <syntax><![CDATA[public EffectPass this [
+         string name
+] { get; }]]></syntax>
+      <value><![CDATA[The object named name.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

@@ -14,7 +14,7 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="PackedValue" type="Object" access="get;set">
+    <property name="PackedValue" type="TPacked" access="get;set">
       <summary><![CDATA[Directly gets or sets the packed representation of the value.]]></summary>
       <syntax><![CDATA[public virtual abstract TPacked PackedValue { get; set; }]]></syntax>
       <value><![CDATA[The packed representation of the value.]]></value>

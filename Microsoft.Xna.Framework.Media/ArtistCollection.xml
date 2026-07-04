@@ -41,7 +41,7 @@
         <platform>Windows Phone</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="Artist" access="get">
       <summary><![CDATA[Gets the Artist at the specified index in the ArtistCollection.]]></summary>
       <syntax><![CDATA[public Artist this [
          int index

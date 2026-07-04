@@ -16,7 +16,7 @@
   <properties>
   </properties>
   <methods>
-    <method name="GetConverter" returnType="void" isStatic="true">
+    <method name="GetConverter" returnType="Converter&lt;TInput, TOutput&gt;" isStatic="true">
       <summary><![CDATA[Gets a Converter delegate that can convert one packed vector representation to another.]]></summary>
       <overloads>
         <overload signature="GetConverter()">

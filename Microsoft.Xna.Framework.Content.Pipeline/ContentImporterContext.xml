@@ -23,7 +23,7 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="IntermediateDirectory" type="Object" access="get">
+    <property name="IntermediateDirectory" type="string" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract string IntermediateDirectory { get; }]]></syntax>
       <value><![CDATA[The directory for storing temporary build files.]]></value>
@@ -42,7 +42,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="OutputDirectory" type="Object" access="get">
+    <property name="OutputDirectory" type="string" access="get">
       <summary><![CDATA[This property is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[public abstract string OutputDirectory { get; }]]></syntax>
       <value><![CDATA[The output directory for the final build results.]]></value>

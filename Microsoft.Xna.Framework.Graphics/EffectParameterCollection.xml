@@ -26,12 +26,24 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="Item" type="Object" access="get">
+    <property name="Item" type="EffectParameter" access="get">
       <summary><![CDATA[Gets a specific EffectParameter object by using an index value.]]></summary>
       <syntax><![CDATA[public EffectParameter this [
          int index
 ] { get; }]]></syntax>
       <value><![CDATA[The EffectParameter object at index index.]]></value>
+      <platforms>
+        <platform>Xbox 360</platform>
+        <platform>Windows XP SP2</platform>
+        <platform>Windows Vista</platform>
+      </platforms>
+    </property>
+    <property name="Item" type="EffectParameter" access="get">
+      <summary><![CDATA[Gets a specific EffectParameter by name.]]></summary>
+      <syntax><![CDATA[public EffectParameter this [
+         string name
+] { get; }]]></syntax>
+      <value><![CDATA[The EffectParameter object named name.]]></value>
       <platforms>
         <platform>Xbox 360</platform>
         <platform>Windows XP SP2</platform>

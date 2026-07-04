@@ -16,7 +16,7 @@
   <constructors>
   </constructors>
   <properties>
-    <property name="GraphicsDevice" type="virtual" access="get">
+    <property name="GraphicsDevice" type="GraphicsDevice" access="get">
       <summary><![CDATA[Gets the GraphicsDevice associated with this GraphicsResource.]]></summary>
       <syntax><![CDATA[public virtual GraphicsDevice GraphicsDevice { get; }]]></syntax>
       <value><![CDATA[The GraphicsDevice associated with this GraphicsResource.]]></value>
@@ -56,7 +56,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </property>
-    <property name="ResourceType" type="virtual" access="get">
+    <property name="ResourceType" type="ResourceType" access="get">
       <summary><![CDATA[Gets the type of this resource.]]></summary>
       <syntax><![CDATA[public virtual ResourceType ResourceType { get; }]]></syntax>
       <value><![CDATA[The resource type.]]></value>

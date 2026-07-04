@@ -40,7 +40,7 @@
     </constructor>
   </constructors>
   <properties>
-    <property name="IsLooped" type="Object" access="get;set">
+    <property name="IsLooped" type="bool" access="get;set">
       <summary><![CDATA[Indicates whether the audio playback of the DynamicSoundEffectInstance object is looped.]]></summary>
       <syntax><![CDATA[public override bool IsLooped { get; set; }]]></syntax>
       <value><![CDATA[Always returns false.]]></value>

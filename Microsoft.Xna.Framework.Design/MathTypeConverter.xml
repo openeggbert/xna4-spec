@@ -129,7 +129,7 @@
     </method>
   </methods>
   <fields>
-    <field name="propertyDescriptions" type="Object">
+    <field name="propertyDescriptions" type="PropertyDescriptorCollection">
       <summary><![CDATA[This field is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[protected PropertyDescriptorCollection propertyDescriptions]]></syntax>
       <platforms>
@@ -137,7 +137,7 @@
         <platform>Windows Vista</platform>
       </platforms>
     </field>
-    <field name="supportStringConvert" type="Object">
+    <field name="supportStringConvert" type="bool">
       <summary><![CDATA[This field is available only when developing for Windows.]]></summary>
       <syntax><![CDATA[protected bool supportStringConvert]]></syntax>
       <platforms>

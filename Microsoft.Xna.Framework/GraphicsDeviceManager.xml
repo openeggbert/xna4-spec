@@ -201,7 +201,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="CanResetDevice" returnType="void">
+    <method name="CanResetDevice" returnType="bool">
       <summary><![CDATA[Determines whether the given GraphicsDeviceInformation is compatible with the existing graphics device.]]></summary>
       <overloads>
         <overload signature="CanResetDevice()">
@@ -240,7 +240,7 @@
         </overload>
       </overloads>
     </method>
-    <method name="FindBestDevice" returnType="void">
+    <method name="FindBestDevice" returnType="GraphicsDeviceInformation">
       <summary><![CDATA[Finds the best device configuration that is compatible with the current device preferences.]]></summary>
       <overloads>
         <overload signature="FindBestDevice()">
