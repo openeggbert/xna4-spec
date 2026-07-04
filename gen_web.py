@@ -237,6 +237,30 @@ def params_html(el, path="parameters"):
     )
     return f'<div class="param-list">{rows}</div>'
 
+def type_params_html(el):
+    tps = el.findall("type-parameters/type-parameter")
+    if not tps: return ""
+    rows = "".join(
+        f'<div class="param-row">'
+        f'<span class="param-name">{esc(t.get("name",""))}</span>'
+        f'<span class="param-desc">{esc((t.text or "").strip())}</span>'
+        f'</div>'
+        for t in tps
+    )
+    return f'<div class="param-list"><strong style="font-size:12px;color:#7ec8e3">Type Parameters</strong>{rows}</div>'
+
+def exceptions_html(el):
+    excs = el.findall("exceptions/exception")
+    if not excs: return ""
+    rows = "".join(
+        f'<div class="param-row">'
+        f'<span class="param-type">{esc(x.get("type",""))}</span>'
+        f'<span class="param-desc">{esc((x.text or "").strip())}</span>'
+        f'</div>'
+        for x in excs
+    )
+    return f'<div class="param-list"><strong style="font-size:12px;color:#e8a070">Exceptions</strong>{rows}</div>'
+
 def kind_badge(kind):
     return f'<span class="kind-badge k-{esc(kind)}">{esc(kind)}</span>'
 
@@ -375,12 +399,15 @@ def render_type(xml_path, rel_html, all_types):
     members = root.findall("members/member")
     if members:
         parts.append('<h2>Members</h2>')
+        has_values = any(m.get("value") is not None for m in members)
         rows = "".join(
             f'<tr><td><code>{esc(m.get("name",""))}</code></td>'
-            f'<td>{esc(cdata_text(m, "summary"))}</td></tr>'
+            + (f'<td><code>{esc(m.get("value",""))}</code></td>' if has_values else '')
+            + f'<td>{esc(cdata_text(m, "summary"))}</td></tr>'
             for m in members
         )
-        parts.append(f'<table><tr><th>Name</th><th>Description</th></tr>{rows}</table>')
+        value_th = '<th>Value</th>' if has_values else ''
+        parts.append(f'<table><tr><th>Name</th>{value_th}<th>Description</th></tr>{rows}</table>')
 
     # ── Constructors ──
     ctors = root.findall("constructors/constructor")
@@ -396,6 +423,7 @@ def render_type(xml_path, rel_html, all_types):
             if ssum: parts.append(f'<div class="overload-summary">{esc(ssum)}</div>')
             if syn:  parts.append(syntax_html(syn))
             parts.append(params_html(c))
+            parts.append(exceptions_html(c))
             if rem:  parts.append(f'<p style="font-size:13px;color:#9aabbb">{esc(rem)}</p>')
             parts.append(platforms_html(c))
             parts.append('</div>')
@@ -404,16 +432,22 @@ def render_type(xml_path, rel_html, all_types):
     props = root.findall("properties/property")
     if props:
         parts.append('<h2>Properties</h2>')
-        rows = "".join(
-            f'<tr><td><code>{esc(p.get("name",""))}</code></td>'
-            f'<td><code>{esc(p.get("type",""))}</code></td>'
-            f'<td>{esc(p.get("access",""))}</td>'
-            f'<td>{"✓" if p.get("isStatic")=="true" else ""}</td>'
-            f'<td>{esc(cdata_text(p,"summary"))}</td></tr>'
-            for p in props
-        )
+        rows = []
+        for p in props:
+            desc = esc(cdata_text(p, "summary"))
+            val = cdata_text(p, "value")
+            if val: desc += f'<br><span style="color:#e8a070">{esc(val)}</span>'
+            excs = [x.get("type", "") for x in p.findall("exceptions/exception")]
+            if excs: desc += f'<br><span style="color:#7a8a99;font-size:12px">Throws: {esc(", ".join(excs))}</span>'
+            rows.append(
+                f'<tr><td><code>{esc(p.get("name",""))}</code></td>'
+                f'<td><code>{esc(p.get("type",""))}</code></td>'
+                f'<td>{esc(p.get("access",""))}</td>'
+                f'<td>{"✓" if p.get("isStatic")=="true" else ""}</td>'
+                f'<td>{desc}</td></tr>'
+            )
         parts.append(f'<table><tr><th>Name</th><th>Type</th><th>Access</th>'
-                     f'<th>Static</th><th>Description</th></tr>{rows}</table>')
+                     f'<th>Static</th><th>Description</th></tr>{"".join(rows)}</table>')
 
     # ── Methods ──
     methods = root.findall("methods/method")
@@ -436,8 +470,10 @@ def render_type(xml_path, rel_html, all_types):
                 parts.append(f'<div class="overload-sig">{esc(sig)}</div>')
                 if osum: parts.append(f'<div class="overload-summary">{esc(osum)}</div>')
                 if osyn: parts.append(syntax_html(osyn))
+                parts.append(type_params_html(ov))
                 parts.append(params_html(ov))
                 if oret: parts.append(f'<div class="returns-box">Returns: {esc(oret)}</div>')
+                parts.append(exceptions_html(ov))
                 if orem: parts.append(f'<p style="font-size:13px;color:#9aabbb">{esc(orem)}</p>')
                 parts.append(platforms_html(ov))
                 parts.append('</div>')
